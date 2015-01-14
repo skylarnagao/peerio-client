@@ -299,6 +299,8 @@
 <importContactsGoogleStep4 "Sélectionnez le format <strong>Google CSV</strong> pour exporter vos contacts.">
 <importContactsGoogleStep5 "Après avoir exporté vos contacts dans un fichier CSV, cliquez sur le bouton ci-dessous pour le télécharger sur Peerio.">
 <uploadCSV "Télécharger le fichier CSV">
+<importContactsConfirm "Peerio pourra envoyer des invitations en votre nom">
+<importContactsConfirmText "Si vous continuez, Peerio peut envoyer des invitations en votre nom aux contacts qui ne sont pas encore sur Peerio. Êtes-vous sûr que vous êtes d'accord avec cela?">
 <importContactsError "Impossible d'inviter vos contacts">
 <importContactsErrorText "Nous ne pouvions pas inviter vos contacts à ce moment. Veuillez vérifier vos informations et réessayer.">
 <importContactsSuccess "Invitations envoyées!">

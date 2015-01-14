@@ -299,6 +299,8 @@
 <importContactsGoogleStep4 "Select the <strong>Google CSV</strong> format for exporting your contacts.">
 <importContactsGoogleStep5 "After you have exported your contacts into a CSV file, click the button below to upload it to Peerio.">
 <uploadCSV "Upload CSV File">
+<importContactsConfirm "Peerio may send invites on your behalf">
+<importContactsConfirmText "If you proceed, Peerio may send invitations on your behalf to contacts that are not yet on Peerio. Are you sure you're okay with this?">
 <importContactsError "Could not invite contacts">
 <importContactsErrorText "We could not invite your contacts at this time. Please verify your information and try again.">
 <importContactsSuccess "Contact invites sent!">
