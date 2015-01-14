@@ -165,6 +165,7 @@
     <None Include="src\chrome\js\peerio\ui\UI.importContacts.js" />
     <None Include="src\chrome\js\lib\pouchdb.js" />
     <None Include="src\chrome\js\lib\papaparse.js" />
+    <None Include="CHANGELOG.md" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="src\chrome\img\splash.png">

@@ -67,6 +67,7 @@
     <None Include=".gitattributes" />
     <None Include=".gitignore" />
     <None Include=".jshintrc" />
+    <None Include="CHANGELOG.md" />
     <None Include="CONTRIBUTING.md" />
     <None Include="LICENSE.md" />
     <None Include="lint.cmd" />
