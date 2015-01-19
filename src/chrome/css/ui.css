@@ -425,7 +425,7 @@ div.loginScreen img.peerioLogotypeWhite {
 	margin: 40px auto 20px auto;
 }
 
-div.loginScreen form.loginForm {
+div.loginScreen div.loginForm {
 	width: 350px;
 	height: 100%;
 	background: #2C95CF;
@@ -434,20 +434,20 @@ div.loginScreen form.loginForm {
 	left: 0;
 }
 
-form.loginForm input[type=text],
-form.loginForm input[type=password] {
+div.loginForm input[type=text],
+div.loginForm input[type=password] {
 	margin: 10px auto;
 	width: 226px;
 	padding: 10px;
 	border: 5px solid #FFF;
 }
 
-form.loginForm input[type=text]:focus,
-form.loginForm input[type=password]:focus {
+div.loginForm input[type=text]:focus,
+div.loginForm input[type=password]:focus {
 	border: 5px solid #E5E4DF;
 }
 
-form.loginForm input[type=submit] {
+div.loginForm input[type=submit] {
 	background: #A5E593;
 	color: #FFF;
 	width: 256px;
@@ -484,19 +484,19 @@ button.loginFormSignup:active {
 	background: rgba(255, 255, 255, 0.4);
 }
 
-form.loginForm input[type=submit]:focus {
+div.loginForm input[type=submit]:focus {
 	background: #95D583;
 }
 
-form.loginForm input[type=submit]:hover {
+div.loginForm input[type=submit]:hover {
 	background: #95D583;
 }
 
-form.loginForm input[type=submit]:active {
+div.loginForm input[type=submit]:active {
 	background: #85C573;
 }
 
-form.loginForm input[type=submit]:disabled {
+div.loginForm input[type=submit]:disabled {
 	background: #2c7baf;
 }
 
@@ -525,7 +525,7 @@ span.loginShowPassphraseDisable {
 	display: none;
 }
 
-form.loginForm div.loginFormFooter {
+div.loginForm div.loginFormFooter {
 	background: rgba(255, 255, 255, 0.2);
 	padding: 5px 10px;
 	position: absolute;

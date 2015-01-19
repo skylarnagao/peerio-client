@@ -4,7 +4,7 @@ Peerio.UI.controller('loginForm', function($scope) {
 	$scope.login.version = Peerio.config.version
 	$scope.login.login = function() {
 		Peerio.storage.init($scope.login.username)
-		$('form.loginForm').find('input').attr('disabled', true)
+		$('div.loginForm form').find('input').attr('disabled', true)
 		$scope.login.username = $scope.login.username.toLowerCase()
 		$scope.$root.$broadcast('login', {
 			username: $scope.login.username,
@@ -42,8 +42,8 @@ Peerio.UI.controller('loginForm', function($scope) {
 				type: 'error',
 				confirmButtonText: document.l10n.getEntitySync('OK').value
 			}, function() {
-				$('form.loginForm').find('input').first().select()
-				$('form.loginForm').find('input').removeAttr('disabled')
+				$('div.loginForm form').find('input').first().select()
+				$('div.loginForm form').find('input').removeAttr('disabled')
 			})
 		})
 	})
@@ -58,13 +58,13 @@ Peerio.UI.controller('loginForm', function($scope) {
 		}, 700)
 	}
 	$scope.login.showPassphrase = function() {
-		if ($('form.loginForm [ng-model="login.passphrase"]').attr('type') === 'text') {
-			$('form.loginForm [ng-model="login.passphrase"]').attr('type', 'password')
+		if ($('div.loginForm form [ng-model="login.passphrase"]').attr('type') === 'text') {
+			$('div.loginForm form [ng-model="login.passphrase"]').attr('type', 'password')
 			$('span.loginShowPassphraseEnable').show()
 			$('span.loginShowPassphraseDisable').hide()
 		}
 		else {
-			$('form.loginForm [ng-model="login.passphrase"]').attr('type', 'text')
+			$('div.loginForm form [ng-model="login.passphrase"]').attr('type', 'text')
 			$('span.loginShowPassphraseEnable').hide()
 			$('span.loginShowPassphraseDisable').show()
 		}

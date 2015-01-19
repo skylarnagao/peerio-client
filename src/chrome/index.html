@@ -66,26 +66,28 @@
 <body>
 	<!-- Login Screen -->
 	<div class="loginScreen screen">
-		<form class="loginForm" ng-controller="loginForm" ng-submit="login.login()">
-			<img src="img/peerioLogotypeWhite.png" alt="Peerio" class="peerioLogotypeWhite" />
-			<input type="text"
-				   data-l10n-id="username"
-				   ng-model="login.username"
-				   maxlength="16" autofocus required />
-			<input type="password"
-				   data-l10n-id="passphraseOrPIN"
-				   ng-model="login.passphrase"
-				   maxlength="256" required />
-			<button type="button"
-					ng-click="login.showPassphrase()"
-					data-utip-l10n="showPassphrase"
-					class="clear loginShowPassphrase"
-					data-utip-gravity="sw">
-				<span class="loginShowPassphraseEnable fontAwesome">&#xf06e;</span>
-				<span class="loginShowPassphraseDisable fontAwesome">&#xf070;</span>
-			</button>
-			<input type="submit" value="Login" />
-			<span class="loginFormOr" data-l10n-id="or"></span>
+		<div class="loginForm" ng-controller="loginForm">
+			<form ng-submit="login.login()">
+				<img src="img/peerioLogotypeWhite.png" alt="Peerio" class="peerioLogotypeWhite" />
+				<input type="text"
+					   data-l10n-id="username"
+					   ng-model="login.username"
+					   maxlength="16" autofocus required />
+				<input type="password"
+					   data-l10n-id="passphraseOrPIN"
+					   ng-model="login.passphrase"
+					   maxlength="256" required />
+				<button type="button"
+						ng-click="login.showPassphrase()"
+						data-utip-l10n="showPassphrase"
+						class="clear loginShowPassphrase"
+						data-utip-gravity="sw">
+					<span class="loginShowPassphraseEnable fontAwesome">&#xf06e;</span>
+					<span class="loginShowPassphraseDisable fontAwesome">&#xf070;</span>
+				</button>
+				<input type="submit" value="Login" />
+				<span class="loginFormOr" data-l10n-id="or"></span>
+			</form>
 			<button class="loginFormSignup" ng-click="login.showSignupForm()" data-l10n-id="signup"></button>
 			<div class="loginFormFooter">
 				<img src="img/peerioLogoWhite.png" alt="" />
@@ -93,7 +95,7 @@
 				<a href="https://peerio.com" target="_blank">About</a>
 				<a href="http://support.peerio.com" target="_blank">Support</a>
 			</div>
-		</form>
+		</div>
 		<div class="signupForms" ng-controller="signupForms">
 			<div class="signupSplash" ng-style="resize()" resize="0,70">
 				<h1 data-l10n-id="signupHeader"></h1>
