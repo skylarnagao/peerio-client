@@ -203,6 +203,10 @@
 							   ng-if="signup.address.type === 'phone'"></p>
 						</div>
 					</div>
+					<div class="signupConfirmationCodeTime">
+						<span data-l10n-id="signupConfirmationCodeTimeText"></span>
+						<span ng-bind="signup.confirmationCodeCountdown"></span>
+					</div>
 					<input type="text" data-l10n-id="confirmationCode" ng-model="signup.confirmationCode" class="confirmationCode" />
 					<div class="signupConfirmationCodeValidity" data-l10n-id="invalidConfirmationCode"></div>
 					<button type="submit" data-l10n-id="confirmMyAccount"></button>

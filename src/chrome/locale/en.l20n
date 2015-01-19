@@ -45,6 +45,9 @@
 <accountConfirmation "Account Confirmation">
 <signupAccountConfirmationEmail "Please check your email for a Peerio account confirmation code and enter it below. If you do not see a message from us, please check your spam folder.">
 <signupAccountConfirmationPhone "We've sent an SMS to the phone number you have provided with a confirmation code. <strong>Please make sure your phone number contains your country code as well as an area code.</strong>">
+<signupConfirmationCodeTimeText "Seconds until your code expires: ">
+<signupConfirmationCodeExpired "Confirmation code expired">
+<signupConfirmationCodeExpiredText "You did not confirm your account on time. Please restart Peerio and try signing up again.">
 <code "Code">
 <confirmationCode "Confirmation code">
 <confirmMyAccount "Confirm My Account">

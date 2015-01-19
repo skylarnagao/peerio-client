@@ -167,6 +167,24 @@ Peerio.UI.controller('signupForms', function($scope) {
 		$('form.signupYourPassphrase').hide()
 		$('form.signupAccountConfirmation').show()
 		$('form.signupAccountConfirmation').find('input')[0].focus()
+		$scope.signup.confirmationCodeCountdown = 600
+		$scope.signup.confirmationCodeInterval = setInterval(function() {
+			$scope.signup.confirmationCodeCountdown = parseInt(
+				$scope.signup.confirmationCodeCountdown
+			) - 1
+			if ($scope.signup.confirmationCodeCountdown < 1) {
+				clearInterval($scope.signup.confirmationCodeInterval)
+				swal({
+					title: document.l10n.getEntitySync('signupConfirmationCodeExpired').value,
+					text: document.l10n.getEntitySync('signupConfirmationCodeExpiredText').value,
+					type: 'error',
+					confirmButtonText: document.l10n.getEntitySync('OK').value,
+				}, function() {
+					window.close()
+				})
+			}
+			$scope.$apply()
+		}, 1000)
 		Peerio.UI.applyDynamicElements()
 	}
 	$scope.signup.confirmAccount = function() {
@@ -180,6 +198,7 @@ Peerio.UI.controller('signupForms', function($scope) {
 				else {
 					$('div.signupConfirmationCodeValidity').removeClass('visible')
 					$('input.confirmationCode').removeClass('invalid')
+					clearInterval($scope.signup.confirmationCodeInterval)
 					$scope.signup.accountConfirmationContinue()
 				}
 			}

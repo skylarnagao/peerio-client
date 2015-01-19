@@ -656,6 +656,11 @@ div.signupConfirmationCodeValidity {
 	font-variant: small-caps;
 }
 
+div.signupConfirmationCodeTime * {
+	font-weight: bold;
+	color: #e07a66
+}
+
 div.signupUsernameAvailability.visible,
 div.signupAddressAvailability.visible,
 div.signupConfirmationCodeValidity.visible {
