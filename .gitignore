@@ -4,3 +4,5 @@ peerio.opensdf
 peerio.v12.suo
 peerio.sdf
 src/chrome/node_modules
+src/chrome/node_modules/*
+src/windows/package.nw
