@@ -1,0 +1,307 @@
+<title "Peerio">
+
+<signupHeader "Meddelanden och filer. Enkelt och säkert.">
+<signupIntro "Skicka meddelanden och dela filer enkelt och säkert mellan kontakter med Peerio. Live search hämtar dina meddelanden, filer och kontakter på begäran. Vårt världsomspännande moln låter dig arbeta var som helst, medan end-to-end-kryptering håller dina data säkra överallt.<br /><br /><strong>Peerio är för närvarande i Beta. <a href='https://peerio.com/pages/beta.html' target='_blank'>Ta reda på vad det innebär</a>.">
+
+<username "Användarnamn">
+<passphrase "Lösenfras">
+<passphraseOrPIN "Lösenfras eller PIN">
+<or "eller">
+<loginFailed "Inloggning misslyckades">
+<loginFailedText "Om du försökte logga in med din Peerio PIN, kan du försöka med lösenfrasen istället.">
+<ok "OK">
+<submit "Skicka">
+
+<signup "Registrera">
+<signupProgress "Registrerings">
+<basicInformation "Grundläggande information">
+<desiredUsername "Önskat användarnamn">
+<usernameNotAvailable "användarnamnet är redan upptaget.">
+<addressNotAvailable "adressen används redan.">
+<firstName "Förnamn">
+<lastName "Efternamn">
+<emailOrPhone "E-post eller telefon">
+<yourPassphrase "Din lösenfras">
+<infoAlertPassphrase "Peerio använder lösen<em>fraser</em> istället för lösen<em>ord</em>.<br />Din lösenfras måste vara <strong>lång</strong> och <strong>unik</strong>. Välj något som du kan komma ihåg: Om du skulle glömma din lösenfras är dina data borta för all framtid. <strong><a class='blue' href='https://www.youtube.com/watch?v=1jrtAnwHU14' target='_blank'>Behöver du hjälp? Titta på vår video om hur man väljer en bra lösenfras!</a>">
+<infoAlertPassphraseNote "<strong>Oroa dig inte</strong>, du behöver bara använda lösenfrasen när du ska logga in från en ny enhet. Du kan specificera en kortare <strong>Peerio-PIN</strong> för snabbåtkomst från enheter du använder regelmässigt.">
+<signupPassphraseConfirm "Är du säker på att du vill använda den här lösenfrasen?">
+<signupPassphraseConfirmText "Om du skulle glömma din lösenfras kommer du att låsas ute från kontot för all framtid. Se till att välja en lösenfras du lätt kan komma ihåg, och om du måste skriva ned den, förvara den säkert och inte åtkomlig från internet.">
+<error "Fel">
+<errorText "Din begäran kunde inte fullföljas.">
+<warning "Varning">
+<errorAlertBadPassphrase "<strong>Stopp!</strong> Lösenfrasen är inte stark nog. Peerio är beroende av att du anger en <strong>lång och unik lösenfras</strong> för att hålla dina meddelanden och filer skyddade.">
+<errorAlertBadPassphraseList1 "Försök använda en lösenfras som är unik för dig (kanske ett barndomsminne?)">
+<errorAlertBadPassphraseList2 "Välj något du lätt kan komma ihåg!">
+<errorAlertBadPassphraseList3 "Om du måste skriva ned lösenfrasen för att komma ihåg den, gör det inte på en dator eller mobil enhet som står i förbindelse med internet.">
+<confirmPassphrase "Bekräfta lösenfrasen">
+<showPassphrase "Visa lösenfrasen">
+<signupPassphraseHint1 "fortsätt skriva, frasen måste vara längre.">
+<signupPassphraseHint2 "nästan framme - bara några tecken till...">
+<signupPassphraseHint3 "ser bra ut. Din lösenfras är säker.">
+<continue "Fortsätt">
+<registerAccountError "Kunde inte registrera kontot">
+<registerAccountErrorText "Vi kunde tyvärr inte registrera kontot. Vänligen starta om Peerio och försök igen om någon minut.">
+<createMyAccount "Skapa mitt konto">
+<accountConfirmation "Kontobekräftelse">
+<signupAccountConfirmationEmail "Vi har skickat en bekräftelsekod till e-postadressen du angav. Ange den koden nedan. Ser du inget mejl, kolla skräppostmappen.">
+<signupAccountConfirmationPhone "Vi har SMS:at en bekräftelsekod till telefonnumret du angav. <strong>Försäkra dig om att du har angett både lands- och riktnummer.</strong>">
+<code "Kod">
+<confirmationCode "Bekräftelsekod">
+<confirmMyAccount "Bekräfta mitt konto">
+<invalidConfirmationCode "vänligen dubbelkolla koden.">
+<finishingUp "Färdigställer">
+<peerioPIN "Peerio-PIN">
+<setAPeerioPIN "Skapa en Peerio-PIN för den här enheten">
+<signupPeerioPIN "En Peerio-PIN är en kortare lösenkod som låter dig logga in snabbare från den här enheten. Du kan logga in utan att behöva ange den långa lösenfrasen varje gång du ska logga in genom att skapa en <strong>Peerio-PIN</strong> för den här enheten. Du kan ha olika PIN-kod för varje enhet du använder till Peerio.">
+<PINNotStrong "PIN-styrka: svag">
+<PINStrong "PIN-styrka: OK">
+<setPIN "Skapa PIN">
+<skip "skippa">
+
+<accountRateLimited "Vänligen vänta några minuter">
+<accountRateLimitedText "Det här kontot är tillfälligt otillgängligt eftersom det har mottagit för många serverförfrågningar. Vänligen vänta några minuter och försök igen.">
+<accountBlacklisted "Kontot otillgängligt">
+<accountBlacklistedText "Kontot är tillfälligt avstängt. Kontakta Peerios support genom att surfa till http://support.peerio.com för att återfå åtkomst till kontot.">
+
+<searchMessagesFilesAndContacts "Sök bland meddelanden, filer och kontakter">
+<messages "Meddelanden">
+<files "Filer">
+<contacts "Kontakter">
+<searchResultsClickToReset "sökresultat (klicka för att rensa)">
+
+<welcomeToAccount "Välkommen till ditt Peerio-konto.">
+<welcomeToAccountText "Med Peerio kan du både skicka meddelanden och lagra och hantera filer och dokument, allt på ett säkert sätt. Så här kan du komma igång.">
+<welcomeToAccountList1 "Lägg till kontakter genom att klicka på <strong>Kontakter</strong>-fliken. När du väl har lagt till kontakter är det sedan lätt att dela meddelanden och filer.">
+<welcomeToAccountList2 "Starta konversationer genom att klicka på <strong>Skapa meddelande</strong>-knappen till vänster. Konversationer kan pågå mellan hur många kontakter som helst -- och allt är krypterat från början till slut.">
+<welcomeToAccountList3 "Lagra dina filer på Peerio genom att klicka på <strong>Filer</strong>-fliken. Dina filer krypteras och blir redo att komma åt från dina andra enheter, eller delas med kontakter.">
+<welcomeToAccountListSearch "Peerios <strong>sökruta</strong> högst uppe i fönstret låter dig lätt gå igenom dina filer, meddelanden och kontakter i ett svep. Testa det!">
+
+<newMessage "Nytt meddelande">
+<uploadFile "Ladda upp filer">
+<filesSidebarUploadFileSubtitle "du kan även dra och släppa filer">
+<addContact "Lägg till kontakt">
+<allMessages "Alla meddelanden">
+<drafts "Utkast">
+<trash "Skräp">
+<settings "Inställningar">
+<account "Konto">
+<preferences "Inställningar">
+<logout "Logga ut">
+<logoutConfirm "Logga ut från Peerio?">
+<logoutConfirmText "Kontrollera att du har sparat alla data innan du loggar ut.">
+<show "Visa">
+<reply "Svara">
+<close "Stäng">
+<all "Alla">
+<forward "Vidarebefordra">
+<from "Från">
+<to "Till">
+<recipients "mottagare">
+<participantHasLeft "Deltagaren har lämnat konversationen.">
+<read "läst">
+<readBy "Läst av:">
+<expandConversation "Expandera konversationen">
+<encrypted "krypterad">
+<addToFolder "Lägg i mapp">
+<acknowledge "Bekräfta">
+<remove "Ta bort">
+<download "Ladda ned">
+<destroy "Förstör">
+<newMessages "Nya meddelanden">
+<noNewMessages "Inga nya meddelanden">
+<participantsWhoHaveLeft "Tidigare deltagare:">
+<acknowledgedThisOn "bekräftade detta den">
+<acknowledgedMessage "Meddelandet bekräftat">
+<acknowledgedMessageText "Du har skickat en bekräftelse till avsändaren av det sista meddelandet i konversationen.">
+<newMessageErrorText "Meddelandet kunde inte skickas.">
+<conversationHasNoFiles "Inga filer har delats ännu i den här konversationen.">
+<filesWillAppearHere "Filerna kommer att listas här för snabb åtkomst.">
+<messageCouldNotBeSentTo "Meddelandet kunde inte skickas till följande kontakter: ">
+<messageDecryptedError "Din kontakt försökte skicka ett meddelande, men det togs inte emot korrekt av ditt konto.">
+<removeConversationsQuestion "Ta bort konversationer?">
+<removeConversationsText "Varning: Du kommer inte att få några framtida meddelanden och/eller filer som delats i den här konversationen.">
+<newMessageRecipientsError "Meddelandet har ingen mottagare">
+<newMessageRecipientsErrorText "Vänligen ange minst en mottagare för att skicka meddelandet, alternativt spara det som ett utkast.">
+<typeYourReply "Skriv ditt svar...">
+
+<allDocuments "Alla dokument">
+<photos "Foton">
+<videos "Videor">
+<pdfDocuments "PDF-dokument">
+<wordDocuments "Word-dokument">
+<spreadsheets "Kalkylblad">
+<presentations "Presentationer">
+<other "Annat">
+<storage "Lagringsutrymme">
+<yourUsage "du använder:">
+<quotaError "Utrymmet fullt">
+<quotaErrorText "Du har inte nog med plats på ditt Peerio-konto. Försök att radera andra filer först, eller uppgradera ditt konto för mer utrymme.">
+<sizeError "Filen är för stor">
+<sizeErrorText "Peerio stödjer inte filer större än 400MB.">
+<removeFilesQuestion "Ta bort filer?">
+<removeFilesText "Filerna kommer att raderas permanent från ditt konto, men kommer fortfarande att kunna ses av andra som du har delat dem med.">
+<destroyFilesQuestion "Förstöra filer?">
+<destroyFilesText "Filerna kommer att tas bort - både från ditt eget konto och alla övriga konton som du eventuellt har delat dem med.">
+<destroyFilesOwnerError "Kan inte förstöra filer du inte äger">
+<destroyFilesOwnerErrorText "Att förstöra filer betyder att ta bort dem från alla konton de kan ha delats med. Endast filernas ägare kan utföra åtgärden. Försök radera filen istället.">
+<fileUploadError "Filuppladdning misslyckades">
+<fileUploadErrorText "Vänligen se över dina uppladdningsinställningar och försök igen.">
+<dragAndDropUploadTitle "Dra och släpp dina filer för att ladda upp dem till Peerio.">
+<dragAndDropUploadText "Filerna kommer att krypteras och laddas upp till ditt personliga moln.">
+
+<allFiles "Alla filer">
+<myFiles "Mina filer">
+<receivedFiles "Mottagna filer">
+<fileName "Filnamn">
+<date "Datum">
+<size "Storlek">
+<owner "Ägare">
+<actions "Åtgärder">
+<search "Sök">
+
+<attachSelectedFiles "Bifoga markerade filer">
+<or "eller">
+<uploadNewFile "Ladda upp nya filer">
+
+<downloading "Nedladdning">
+<downloadFileInfo "Dina filer sparas i mappen Nedladdat.">
+<downloadFileDangerous "Varning: Öppna inte filer om du inte litar på avsändaren.">
+<downloadFileComplete "Filen nedladdad och dekrypterad.">
+<downloadFileAlreadyDownloading "En annan nedladdning pågår för tillfället">
+<downloadFileAlreadyDownloadingText "Vänligen vänta tills den förra filen är nedladdad, spara den och försök igen.">
+<downloadFileError "Kunde inte ladda ned filen">
+<downloadFileErrorText "Ett fel har uppstått.">
+<save "spara">
+
+<allContacts "Alla kontakter">
+<confirmedContacts "Bekräftade kontakter">
+<pendingContacts "Väntande kontakter">
+<importContacts "Importera kontakter">
+<sortBy "Sortera efter">
+<sendMessage "Skicka meddelande">
+<latestMessages "Senaste meddelandena">
+<latestFiles "Senaste filerna">
+<viewAllMessages "Visa alla meddelanden">
+<viewAllFiles "Visa alla filer">
+<avatarTooltip "Användaravatarer låter dig verifiera den kryptografiska identiteten på dina kontakter. Om en avatar skulle ändras, uppmanas du att kontakta personen för att säkerställa identiteten igen innan du fortsätter kommunicera med dem över Peerio.">
+<pending "Väntande">
+<you "Du">
+<accountDeleted "Kontot raderat">
+<block "Blockera">
+<noContacts "Ingen kontakt vald">
+<noContactsText "Välj en kontakt eller kom igång genom att lägga till en vän.">
+<addMyFirstContact "Lägg till ny kontakt">
+<acceptContactRequest "Acceptera vänförfrågning?">
+<acceptContactRequestText "Välj ifall du vill tillåta användaren att meddela sig och dela filer med dig, säkert, genom Peerio.">
+<accept "Acceptera">
+<decline "Neka">
+
+<addContactInfo "Lägga till vänner som kontakter">
+<addContactInfoText "För att kunna skicka meddelanden till och dela filer med dina vänner, måste du lägga till dem som kontakter först. Om dina vänner inte använder Peerio försöker vi skicka en inbjudan till deras e-postadresser. Du kan lägga till användare genom att specificera deras <strong>användarnamn</strong>, <strong>e-postadress</strong> eller <strong>mobilnummer</strong>.">
+<addContactInfoAvatar "Om kontaktavataren">
+<addContactInfoAvatarText "Alla Peerio-användare har en speciell avatar som identifierar dem - som ett digitalt fingeravtryck. Om en avtar ändrats kan det bero på att de har bytt lösenfras, eller att deras konto har komprometterats.">
+<usernameEmailOrPhone "Användarnamn, e-post eller mobilnummer">
+<addContactRequestSent "Vänförfrågan skickad">
+<addContactRequestSentText "Vi har skickat en vänförfrågan till användarnamnet du angav.">
+<addContactInviteSent "Inbjudan skickad">
+<addContactInviteSentText "Vi har skickat en inbjudan till din kontakt...">
+<addContactErrorText "Vi kunde inte lägga till kontakten. Vänligen dubbelkolla informationen och försök igen.">
+<removeContact "Ta bort kontakt">
+<removeContactQuestion "Ta bort kontakt?">
+<removeContactText "Detta kommer att förhindra säker kommunikation mellan er via Peerio. Är du säker?">
+<cancel "Avbryt">
+<removeContactSuccess "Din kontakt togs bort.">
+<removeContactError "Vi kunde inte ta bort kontakten, vänligen försök igen.">
+
+<twoFactorAuth "Tvåstegsverifiering">
+<authenticate "Verifiera">
+<twoFactorAuthSetupHeading "Ställ in din mobila enhet">
+<twoFactorAuthSetupText "Använd din favoritapp för verifiering för att skanna streckkoden nedan och ställa in tvåstegsverifieringen. Peerio rekommenderar Google Authenticator till iPhone och Android, eller Microsoft Authenticator till Windows Phone.">
+<twoFactorAuthInfoHeading "Hjälp oss att skydda ditt konto">
+<twoFactorAuthInfoText "Tvåstegsverifiering håller ditt konto skyddat genom att kräva två olika typer av inloggningsinformation. Vänligen ange den sexsiffriga koden från din mobila enhet för att fortsätta.">
+<twoFactorAuthConfirm "Skanna av QR-koden och mata in den sexsiffriga koden som genererades av telefonen för att slutföra inställningen.">
+<twoFactorAuthIncorrect "Felaktig kod">
+<twoFactorAuthIncorrectText "Koden du matade in verkar inte stämma. Vänligen försök igen.">
+<twoFactorAuthConfirmedText "Fr.o.m. nu måste du använda koder från din mobila enhet för att kunna logga in. Se till att du inte förlorar den!">
+<twoFactorAuthCannotDisable "Vi kunde inte avbryta tvåstegsverifiering.">
+<twoFactorAuthDisabled "Tvåstegsverifieringen avstängd">
+<twoFactorAuthDisabledText "Nu kan du logga in med enbart ditt lösenord. För utökad säkerhet ber vi dig dock att överväga att slå på tvåstegsverifieringen igen i framtiden.">
+
+<to "Till">
+<subject "Ämne">
+<send "Skicka">
+<saveDraft "Spara utkast">
+<attachFile "Bifoga fil">
+<autoDestructSettings "Autoförstöringsinställningar...">
+
+<accountSettings "Kontoinställningar">
+<name "Namn">
+<primary "primär">
+<secondary "sekundär">
+<addresses "Adresser">
+<setPrimaryAddress "Ställ in som primär adress">
+<removeAddress "Ta bort adress">
+<addNewAddress "Lägg till adress">
+<couldNotConfirmAddress "Vänligen dubbelkolla verifieringskoden du angav.">
+<couldNotAddAddress "Vi kunde inte lägga till adressen. Vänligen dubbelkolla den.">
+<couldNotUpdateName "Vi kunde inte uppdatera namninformationen. Vänligen försök igen.">
+<confirmed "Bekräftad!">
+<confirmedText "Inställningarna har uppdaterats.">
+<confirmedLanguageText "Det nya språket finns tillgängligt efter en omstart av Peerio.">
+<confirmedAddressText "Tack för att du tog dig tid att bekräfta din nya Peerio-adress.">
+<confirmedNameText "Namninformationen har uppdaterats.">
+<email "E-post">
+<phoneNumber "Telefonnummer">
+<deleteAccount "Radera kontot">
+<deleteAccountText "När du raderar kontot kommer all angiven kontorelaterad information att förstöras, och du kommer inte heller att kunna använda det här användarnamnet i framtiden.">
+<deleteAccountConfirm "Bekräfta radering av kontot">
+<deleteAccountConfirmText "Är du helt säker? All information går förlorad och användarnamnet spärras för all framtid.">
+<changePassphrase "Byt lösenfras">
+<changePassphraseText "Om din lösenfras skulle komprometteras kommer Peerio att låte dig återta din föregående lösenfras för att skapa en ny. Funktionen kommer snart.">
+<newPassphrase "Ny lösenfras">
+<retypeNewPassphrase "Repetera lösenfrasen">
+<enableTwoFactorAuth "Aktivera tvåstegsverifiering">
+<disableTwoFactorAuth "Inaktivera tvåstegsverifiering">
+<accountSettingsTwoFactorAuthText "Peerio kan samarbeta med din smartphone för att höja kontosäkerheten ytterligare.">
+
+<preferences "Inställningar">
+<language "Språk">
+<notifications "Aviseringar">
+<notificationOptions "Aviseringsinställningar">
+<receiveMessageNotifications "Skicka meddelandeaviseringar <strong>till min primära adress</strong>.">
+<sendReadReceipts "Meddela min kontakter när jag läser deras meddelanden.">
+<readReceipts "Läskvitton">
+<peerioPINForThisDevice "Peerio-PIN för den här enheten">
+<peerioPINUpdated "Peerio-PIN Updaterad">
+<peerioPINUpdatedText "Din Peerio-PIN för enheten har uppdaterats.">
+<removeMyPeerioPIN "Ta bort min Peerio-PIN">
+<peerioPINRemoved "Peerio-PIN borttagen">
+<peerioPINRemovedText "Varje Peerio-PIN du haft på enheten har förstörts.">
+
+<ctrlEnter "Skicka svar">
+<pressEnterToSend "Tryck Enter för att skicka">
+
+<updateAvailable "Uppdatering tillgänglig!">
+<updateAvailableText "En ny uppdatering av Peerio är tillgänglig! Uppdateringar innehåller såväl nya funktioner som stabilitetsförbättringar. Vill du uppdatera nu?">
+<updateDownload "Ladda ned uppdatering">
+<later "Senare">
+<updateAvailableCritical "Kritisk uppdatering tillgänglig">
+<updateAvailableCriticalText "En kritisk uppdatering av Peerio finns tillgänglig. För din egen säkerhets skull bör du inte fortsätta förrän du har installerat den!">
+
+<TOFUNotMatchError "Ändrade kontaktidentiteter!">
+<TOFUNotMatchErrorText "Varning! Några av dina kontakter har ändra sina identiteter. Innan du kommunicerar med dem bör du verifiera deras Peerio-avatarer i deras respektive profil. Deras användarnamn är: ">
+
+<importContactsGoogle "Importera dina Doodle-kontakter till Peerio">
+<importContactsGoogleText "Importera enkelt dina Google-kontakter till Peerio genom att logga in på Gmail och följa de här stegen:">
+<importContactsGoogleStep1 "Klicka på <strong>Gmail</strong> i övre vänstra hörnet på Gmail-sidan och välj <strong>Kontakter</strong>.">
+<importContactsGoogleStep2 "Välj <strong>Mer</strong> i rullgardinsmenyn och välj <strong>Exportera</strong>....">
+<importContactsGoogleStep3 "Välj mellan att exporter alla kontakter, eller enskilda grupper.">
+<importContactsGoogleStep4 "Välj <strong>Google CSV</strong>-format för exporten.">
+<importContactsGoogleStep5 "När du har exporterat kontakterna till en CSV-fil klickar du på knappen nedan för att ladda upp den till Peerio.">
+<uploadCSV "Ladda upp CSV-fil">
+<importContactsConfirm "Peerio kan skicka inbjudningar för din räkning">
+<importContactsConfirmText "Om du fortsätter kan Peerio komma att skicka inbjudningar till de kontakter som ännu inte finns på Peerio. Är du säker på att du vill fortsätta?">
+<importContactsError "Kunde inte bjuda in kontakter">
+<importContactsErrorText "Vi kunde för närvarande inte bjuda in dina kontakter. Vänligen kontrollera din information och försök igen.">
+<importContactsSuccess "Kontaktinbjudningar skickade!">
+<importContactsSuccessText "Dina kontakter kommer att bjudas in för din räkning.">
