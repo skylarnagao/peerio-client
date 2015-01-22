@@ -15,9 +15,13 @@ Peerio.util = {};
 	 * @return {object} - With well-formatted date and time properties.
 	 */
 	Peerio.util.getDateFromTimestamp = function(timestamp) {
+		var months = [
+			'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+			'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+		]
 		var d = new Date(parseInt(timestamp))
 		var date = d.getDate() + '/'
-		date += (d.getMonth() + 1) + '/'
+		date += (months[d.getMonth()]) + '/'
 		date += d.getFullYear()
 		var time = (function() {
 			var hours = d.getHours()
