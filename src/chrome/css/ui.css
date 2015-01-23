@@ -2472,6 +2472,27 @@ button.importContactsUploadCSV {
 }
 
 div.importContacts h2 {
-	margin: 20px 0;
+	margin: 20px 0 5px 0;
 	font-size: 1.4em;
+}
+
+div.importContactsSelectContactsWrapper {
+	height: 380px;
+	overflow: auto;
+	margin-bottom: 20px;
+}
+
+table.importContactsSelectContacts {
+	margin: 5px 0px;
+	width: 710px;
+}
+
+table.importContactsSelectContacts td {
+	background: #FAFAFA;
+	border-bottom: 1px solid #FFF;
+	padding: 5px 0;
+}
+
+td.importContactsSelectContactsCheckboxCell {
+	padding: 10px 0 10px 10px !important;
 }

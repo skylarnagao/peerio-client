@@ -275,10 +275,10 @@
 					<span data-l10n-id="preferences"></span>
 				</button>
 				<hr />
-				<button class="clear">
+				<button class="clear" ng-click="mainTop.userMenu.logout()">
 					<span class="fontAwesome">&#xf08b;</span>
 					&nbsp;
-					<span data-l10n-id="logout" ng-click="mainTop.userMenu.logout()"></span>
+					<span data-l10n-id="logout"></span>
 				</button>
 			</div>
 			<div class="mainTopSectionSelect">
@@ -385,10 +385,10 @@
 				<br />
 				<hr />
 				<br />
-				<button class="clear">
+				<button class="clear" ng-click="contactsSidebar.importContacts()">
 					<span class="fontAwesome">&#xf007;</span>
 					&nbsp;
-					<!-- <span data-l10n-id="importContacts" ng-click="contactsSidebar.importContacts()"></span> -->
+					<span data-l10n-id="importContacts"></span>
 				</button>
 			</div>
 		</div>
@@ -1113,21 +1113,51 @@
 			</div>
 			<div class="importContacts frontModal" ng-controller="importContacts">
 				<h1 data-l10n-id="importContactsGoogle"></h1>
-				<p data-l10n-id="importContactsGoogleText"></p>
-				<div class="importContactsInstructions">
-					<ol>
-						<li data-l10n-id="importContactsGoogleStep1"></li>
-						<li data-l10n-id="importContactsGoogleStep2"></li>
-						<li data-l10n-id="importContactsGoogleStep3"></li>
-						<li data-l10n-id="importContactsGoogleStep4"></li>
-						<li data-l10n-id="importContactsGoogleStep5"></li>
-					</ol>
+				<div ng-show="!importContacts.addresses.length">
+					<p data-l10n-id="importContactsGoogleText"></p>
+					<div class="importContactsInstructions">
+						<ol>
+							<li data-l10n-id="importContactsGoogleStep1"></li>
+							<li data-l10n-id="importContactsGoogleStep2"></li>
+							<li data-l10n-id="importContactsGoogleStep3"></li>
+							<li data-l10n-id="importContactsGoogleStep4"></li>
+							<li data-l10n-id="importContactsGoogleStep5"></li>
+						</ol>
+					</div>
 				</div>
-				<form class="importContactsUploadForm">
+				<form class="importContactsUploadForm" ng-show="!importContacts.addresses.length">
 					<h2 data-l10n-id="uploadCSV"></h2>
 					<input type="file" name="file" class="importContactsFileSelectDialog" />
 					<input type="reset" value="reset" class="hidden" />
 				</form>
+				<h2 data-l10n-id="importContactsSelectToInvite" ng-show="importContacts.addresses.length"></h2>
+				<p data-l10n-id="importContactsSelectToInviteText" ng-show="importContacts.addresses.length"></p>
+				<div class="importContactsSelectContactsWrapper" ng-show="importContacts.addresses.length">
+					<table class="importContactsSelectContacts">
+						<tr class="importContactsContact" ng-repeat="address in importContacts.addresses | orderObjectBy:'lastTimestamp':true">
+							<td class="importContactsSelectContactsCheckboxCell">
+								<input type="checkbox"
+									   class="blueCheckbox importContactsSelectContactsCheckbox"
+									   ng-attr-id="{{'importContactsAddress' + address.address.value}}"
+									   ng-click="importContacts.onCheck(address, $event)" />
+								<label ng-attr-for="{{'importContactsAddress' + address.address.value}}" class="blueCheckboxLabel">&nbsp;</label>
+							</td>
+							<td>
+								<label ng-attr-for="{{'importContactsAddress' + address.address.value}}" ng-bind="address.address.value"></label>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<button class="clear" ng-click="importContacts.selectAll()" ng-show="importContacts.addresses.length">
+					<span class="fontAwesome">&#xf00c;</span>
+					&nbsp;
+					<span data-l10n-id="importContactsSelectAll"></span>
+				</button>
+				<button ng-click="importContacts.importContacts()" ng-show="importContacts.addresses.length">
+					<span class="fontAwesome">&#xf0c0;</span>
+					&nbsp;
+					<span data-l10n-id="importSelectedContacts"></span>
+				</button>
 			</div>
 		</div>
 	</div>

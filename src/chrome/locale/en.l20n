@@ -308,3 +308,7 @@
 <importContactsErrorText "We could not invite your contacts at this time. Please verify your information and try again.">
 <importContactsSuccess "Contact invites sent!">
 <importContactsSuccessText "Your contacts will be invited on your behalf.">
+<importContactsSelectToInvite "Select contacts to add/invite">
+<importContactsSelectToInviteText "If a contact is already on Peerio, they will be added to your account. Otherwise, we will send them an invitation on your behalf.">
+<importContactsSelectAll "Select all contacts">
+<importSelectedContacts "Import selected contacts">

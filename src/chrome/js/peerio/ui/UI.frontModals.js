@@ -6,6 +6,7 @@ Peerio.UI.controller('frontModals', function($scope) {
 	})
 	$scope.frontModals.close = function() {
 		$scope.$root.$broadcast('newMessageReset', null)
+		$scope.$root.$broadcast('importContactsReset', null)
 		$('div.frontModalsWrapper').removeClass('visible')
 		$('div.frontModal').removeClass('visible')
 		setTimeout(function() {
