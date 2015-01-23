@@ -417,6 +417,14 @@ Peerio.UI.controller('messagesSection', function($scope, $element, $sce, $filter
 			delete $scope.messagesSection.conversation
 		}
 		conversation.original.isModified = false
+		Peerio.storage.db.get('conversations', function(err, conversations) {
+			if (({}).hasOwnProperty.call(conversations, conversation.id)) {
+				var original = conversations[conversation.id].original
+				conversations[conversation.id].messages[original].isModified = false
+				Peerio.storage.db.put(conversations, function() {
+				})
+			}
+		})
 		var afterMessagesAreReceived = function(conversation) {
 			$scope.messagesSection.conversation = Peerio.user.conversations[conversation.id]
 			$scope.messagesSection.conversationIsLoading = false
