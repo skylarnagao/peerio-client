@@ -219,7 +219,7 @@
 <twoFactorAuth "Authentification à Deux Facteurs">
 <authenticate "Authentifier">
 <twoFactorAuthSetupHeading "Configurez votre appareil mobile">
-<twoFactorAuthSetupText "Utilisez votre application d'authentification favorite pour scanner le code à bar ci-dessous. Peerio vous recommende Google Authenticator pour iPhone et Android, ou Microsoft Authenticator.">
+<twoFactorAuthSetupText "Utilisez votre application d'authentification favorite pour scanner le code à bar ci-dessous. <a href='https://peerio.zendesk.com/hc/en-us/articles/204018305' target='_blank'>Apprenez comment l'authentification à deux facteurs marche sur Peerio</a>.">
 <twoFactorAuthInfoHeading "Aidez-nous à protéger votre compte.">
 <twoFactorAuthInfoText "L'authentification à deux facteurs aide à garder votre compte sécurisé en imposant 2 méthodes complémentaires pour vous connecter. Entrez le code à six chiffres généré par votre appareil mobile.">
 <twoFactorAuthConfirm "Après avoir scanné le code QR, entrez le code de six chiffres généré par votre appareil mobile pour confirmer l'intégration.">
@@ -266,6 +266,7 @@
 <enableTwoFactorAuth "Activer l'Authentification à Deux Facteurs">
 <disableTwoFactorAuth "Désactiver l'Authentification à Deux Facteurs">
 <accountSettingsTwoFactorAuthText "Peerio peut se pairer avec votre appareil intelligent afin d'ajouter un niveau de sécurité plus élevé.">
+<twoFactorAuthLearnMore "plus d'infos sur l'authentification à deux facteurs">
 
 <preferences "Préférences">
 <language "Langage">

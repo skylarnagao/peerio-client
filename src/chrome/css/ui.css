@@ -2345,6 +2345,12 @@ div.twoFactorAuth {
 
 }
 
+a.twoFactorAuthLearnMore {
+	font-variant: small-caps;
+	margin-top: 10px;
+	display: block;
+}
+
 div.twoFactorAuthQRCode {
 	width: 160px;
 	height: 160px;
