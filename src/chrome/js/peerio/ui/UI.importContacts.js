@@ -20,7 +20,6 @@ Peerio.UI.controller('importContacts', function($scope) {
 				$scope.importContacts.checkedAddresses.splice(index, 1)
 			}
 		}
-		console.log($scope.importContacts.checkedAddresses)
 	}
 
 	$scope.importContacts.selectAll = function() {
