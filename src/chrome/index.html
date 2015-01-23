@@ -1135,16 +1135,21 @@
 				<p data-l10n-id="importContactsSelectToInviteText" ng-show="importContacts.addresses.length"></p>
 				<div class="importContactsSelectContactsWrapper" ng-show="importContacts.addresses.length">
 					<table class="importContactsSelectContacts">
-						<tr class="importContactsContact" ng-repeat="address in importContacts.addresses | orderObjectBy:'lastTimestamp':true">
+						<tr class="importContactsContact" ng-repeat="address in importContacts.addresses | orderBy:'name':false">
 							<td class="importContactsSelectContactsCheckboxCell">
 								<input type="checkbox"
 									   class="blueCheckbox importContactsSelectContactsCheckbox"
-									   ng-attr-id="{{'importContactsAddress' + address.address.value}}"
-									   ng-click="importContacts.onCheck(address, $event)" />
-								<label ng-attr-for="{{'importContactsAddress' + address.address.value}}" class="blueCheckboxLabel">&nbsp;</label>
+									   ng-attr-id="{{'importContactsAddress' + address.parsed.address.value}}"
+									   ng-click="importContacts.onCheck(address.parsed, $event)" />
+								<label ng-attr-for="{{'importContactsAddress' + address.parsed.address.value}}" class="blueCheckboxLabel">&nbsp;</label>
 							</td>
 							<td>
-								<label ng-attr-for="{{'importContactsAddress' + address.address.value}}" ng-bind="address.address.value"></label>
+								<strong>
+									<label ng-attr-for="{{'importContactsAddress' + address.parsed.address.value}}" ng-bind="address.name"></label>
+								</strong>
+							</td>
+							<td>
+								<label ng-attr-for="{{'importContactsAddress' + address.parsed.address.value}}" ng-bind="address.parsed.address.value"></label>
 							</td>
 						</tr>
 					</table>

@@ -20,6 +20,7 @@ Peerio.UI.controller('importContacts', function($scope) {
 				$scope.importContacts.checkedAddresses.splice(index, 1)
 			}
 		}
+		console.log($scope.importContacts.checkedAddresses)
 	}
 
 	$scope.importContacts.selectAll = function() {
@@ -77,7 +78,10 @@ Peerio.UI.controller('importContacts', function($scope) {
 							var parsed = Peerio.util.parseAddress(contact[keys[i]])
 							if (parsed) {
 								$scope.importContacts.addresses.push({
-									address: parsed
+									name: contact['Name'],
+									parsed: {
+										address: parsed
+									}
 								})
 								continue
 							}
