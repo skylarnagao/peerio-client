@@ -289,21 +289,8 @@ Peerio.user = {};
 						Peerio.user.miniLockID = miniLock.crypto.getMiniLockID(
 							Peerio.user.keyPair.publicKey
 						)
-						Peerio.network.getAuthTokens(function(authTokens) {
-							if (
-								({}).hasOwnProperty.call(authTokens, 'error') &&
-								(authTokens.error === 424)
-							) {
-								Peerio.UI.twoFactorAuth(function() {
-									Peerio.user.login(username, passOrPIN, false, callback)
-								})
-							}
-							else {
-								Peerio.crypto.decryptAuthTokens(authTokens)
-								if (typeof(callback) === 'function') {
-									callback(Peerio.user.authTokens.length > 0)
-								}
-							}
+						Peerio.user.getAuthTokensAndHandleErrors(callback, function() {
+							Peerio.user.login(username, passOrPIN, false, callback)
 						})
 					}
 					else {
@@ -313,23 +300,32 @@ Peerio.user = {};
 			}
 			else {
 				Peerio.user.setKeyPair(passOrPIN, username, function() {
-					Peerio.network.getAuthTokens(function(authTokens) {
-						if (
-							({}).hasOwnProperty.call(authTokens, 'error') &&
-							(authTokens.error === 424)
-						) {
-							Peerio.UI.twoFactorAuth(function() {
-								Peerio.user.login(username, passOrPIN, true, callback)
-							})
-						}
-						else {
-							Peerio.crypto.decryptAuthTokens(authTokens)
-							if (typeof(callback) === 'function') {
-								callback(Peerio.user.authTokens.length > 0)
-							}
-						}
+					Peerio.user.getAuthTokensAndHandleErrors(callback, function() {
+						Peerio.user.login(username, passOrPIN, false, callback)
 					})
 				})
+			}
+		})
+	}
+
+	/**
+	 * Gets fresh authTokens, and prompts the user for two factor auth if a 424 error is returned.
+	 * @param defaultCallback {function}
+	 * @param twoFACallback {function}
+	 */
+	Peerio.user.getAuthTokensAndHandleErrors = function(defaultCallback, twoFACallback) {
+		Peerio.network.getAuthTokens(function(authTokens) {
+			if (
+				({}).hasOwnProperty.call(authTokens, 'error') &&
+				(authTokens.error === 424)
+			) {
+				Peerio.UI.twoFactorAuth(twoFACallback)
+			}
+			else {
+				Peerio.crypto.decryptAuthTokens(authTokens)
+				if (typeof(defaultCallback) === 'function') {
+					defaultCallback(Peerio.user.authTokens.length > 0)
+				}
 			}
 		})
 	}
@@ -343,7 +339,7 @@ Peerio.user = {};
 		// Automatically recharge authTokens if we're close to running out
 		if (Peerio.user.authTokens.length <= 10) {
 			for (var i = 0; i < 2; i++) {
-				Peerio.network.getAuthTokens(Peerio.crypto.decryptAuthTokens)
+				Peerio.user.getAuthTokensAndHandleErrors(Peerio.crypto.decryptAuthTokens, Peerio.crypto.decryptAuthTokens)
 			}
 		}
 		var authToken = Peerio.user.authTokens[0]
