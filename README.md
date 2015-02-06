@@ -1341,6 +1341,8 @@ Otherwise, the user is free to send a `updateSettings` message:
 	sendReadReceipts: boolean,
 	localeCode: 'locale code (String)',
 	receiveMessageNotifications: boolean,
+	useSounds: boolean,
+	enterToSend: boolean,
 	authToken: 'Decrypted authToken (String)',
 }
 ```
