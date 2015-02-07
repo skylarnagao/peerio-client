@@ -565,11 +565,13 @@
 								</button>
 								<!--<button class="fontAwesome clear" data-utip-l10n="autoDestructSettings" data-utip-gravity="sw">&#xf06d;</button>-->
 							</div>
-							<textarea ng-model="messagesSection.messageViewReply" data-l10n-id="typeYourReply"></textarea>
+							<textarea ng-model="messagesSection.messageViewReply" data-l10n-id="typeYourReply" ng-if="!messagesSection.isOnlyParticipant(messagesSection.conversation)"></textarea>
+							<div class="messagesSectionMessageViewOnlyParticipant" data-l10n-id="noParticipantsLeft" ng-if="messagesSection.isOnlyParticipant(messagesSection.conversation)"></div>
 							<div class="messagesSectionMessageViewReplyBottomBar">
 								<button data-l10n-id="send"
 										class="messagesSectionMessageViewReplySend"
-										ng-mousedown="messagesSection.replyToConversation(messagesSection.conversation)"></button>
+										ng-mousedown="messagesSection.replyToConversation(messagesSection.conversation)"
+										ng-disabled="messagesSection.isOnlyParticipant(messagesSection.conversation)"></button>
 								<button class="messagesSectionMessageViewAcknowledge fontAwesome"
 										data-utip-l10n="acknowledge"
 										data-utip-gravity="e"

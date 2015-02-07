@@ -126,6 +126,7 @@
 <newMessageRecipientsError "Message has no recipients">
 <newMessageRecipientsErrorText "Please enter at least one recipient to send your message, or save it as a draft.">
 <typeYourReply "Type your reply...">
+<noParticipantsLeft "There are no participants left in this conversation.">
 
 <allDocuments "All Documents">
 <photos "Photos">

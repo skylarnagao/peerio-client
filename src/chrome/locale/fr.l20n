@@ -126,6 +126,7 @@
 <newMessageRecipientsError "Message n'a pas de destinataires">
 <newMessageRecipientsErrorText "Veuillez entrer au moins un destinataire pour envoyer votre message, ou enregistrez-le comme brouillon.">
 <typeYourReply "Tapez votre réponse...">
+<noParticipantsLeft "Il n'y a aucun participant restant dans cette conversation.">
 
 <allDocuments "Tous les Documents">
 <photos "Photos">

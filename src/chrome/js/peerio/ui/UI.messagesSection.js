@@ -553,23 +553,45 @@ Peerio.UI.controller('messagesSection', function($scope, $element, $sce, $filter
 		$scope.messagesSection.messageViewReply = ':::peerioAck:::'
 		$scope.messagesSection.replyToConversation(conversation)
 	}
+	$scope.messagesSection.isOnlyParticipant = function(conversation) {
+		if (typeof(conversation) !== 'object') {
+			return false
+		}
+		var removeCount = 0
+		if (({}).hasOwnProperty(conversation, 'events')) {
+			for (var i in conversation.events) {
+				if (({}).hasOwnProperty(conversation.events, i)) {
+					if (conversation.events[i].type === 'remove') {
+						removeCount++
+					}
+				}
+			}
+		}
+		if (removeCount >= conversation.participants.length - 1) {
+			return true
+		}
+		return false
+	}
 	$scope.messagesSection.isAckButtonDisabled = function(conversation) {
+		if (typeof(conversation) !== 'object') {
+			return false
+		}
 		var message = $('div.messagesSectionMessageViewSingle')
 			.last().attr('data-messageid')
 		if (message) {
 			message = message.substring(1)
 		}
 		if (
-			(typeof(conversation) !== 'object') ||
 			!message ||
 			!({}).hasOwnProperty.call(conversation.messages, message) ||
 			(conversation.messages[message].sender === Peerio.user.username)
 		) {
 			return true
 		}
-		else {
-			return false
+		if ($scope.messagesSection.isOnlyParticipant(conversation)) {
+			return true
 		}
+		return false
 	}
 	$scope.messagesSection.attachFile = function(conversation) {
 		$scope.$root.$broadcast(
