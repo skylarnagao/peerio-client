@@ -147,6 +147,15 @@ Peerio.message = {};
 			decryptMessage(data.conversations[id].messages[keys[decryptedCount]])
 		}
 		var decryptMessage = function(message) {
+			console.log(message)
+			if (
+				(typeof(message) !== 'object') ||
+				!({}).hasOwnProperty(message, 'id')
+			) {
+				decryptedCount++
+				decryptMessage(Peerio.user.conversations[id].messages[keys[decryptedCount]])
+				return false
+			}
 			Peerio.crypto.decryptMessage(message, function(decrypted) {
 				Peerio.user.conversations[id].messages[message.id].decrypted = decrypted
 				decryptedCount++
