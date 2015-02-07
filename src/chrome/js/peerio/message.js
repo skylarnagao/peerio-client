@@ -148,11 +148,17 @@ Peerio.message = {};
 		}
 		var decryptMessage = function(message) {
 			if (
-				(typeof(message) !== 'object') ||
-				!({}).hasOwnProperty(message, 'id')
+				(typeof(message) !== 'object')
 			) {
 				decryptedCount++
-				decryptMessage(Peerio.user.conversations[id].messages[keys[decryptedCount]])
+				if (decryptedCount === keys.length) {
+					if (typeof(onComplete) === 'function') {
+						onComplete(Peerio.user.conversations[id])
+					}
+				}
+				else {
+					decryptMessage(Peerio.user.conversations[id].messages[keys[decryptedCount]])
+				}
 				return false
 			}
 			Peerio.crypto.decryptMessage(message, function(decrypted) {
