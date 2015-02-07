@@ -24,6 +24,15 @@ Peerio.socket = {};
 					Peerio.user.authTokens = []
 					Peerio.user.getAuthTokensAndHandleErrors(Peerio.crypto.decryptAuthTokens, Peerio.crypto.decryptAuthTokens)
 				}
+				else if (message.data.error === 424) {
+					Peerio.UI.twoFactorAuth(function() {
+						Peerio.socket.callbacks[message.callbackID](message.data)
+						setTimeout(function() {
+							delete Peerio.socket.callbacks[message.callbackID]
+						}, 1000)
+					})
+					return false
+				}
 				else if (message.data.error === 425) {
 					Peerio.UI.showRateLimitedAlert()
 					return false
