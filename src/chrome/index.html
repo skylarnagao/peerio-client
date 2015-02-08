@@ -951,7 +951,8 @@
 					<input type="text"
 						   data-l10n-id="usernameEmailOrPhone"
 						   ng-pattern="/^([-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+\.[a-zA-Z]{2,20})|(\+?(\d|\s|\-|\(|\)){6,20})|(\w{1,16})$/"
-						   ng-model="addContact.contact" />
+						   ng-model="addContact.contact"
+						   maxlength="16" required autofocus />
 					<button type="submit"
 							data-l10n-id="addContact"
 							ng-disabled="!addContact.contact"></button>

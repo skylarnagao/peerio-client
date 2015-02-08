@@ -375,23 +375,28 @@ Peerio.user = {};
 				}
 			})
 		}
-		else if (input.match(/^\w{1,16}$/)) {
-			Peerio.network.addContact([{username: input}], function(data) {
-				if (({}).hasOwnProperty.call(data, 'error')) {
-					if (typeof(callback) === 'function') {
+		else if (typeof(input) === 'string') {
+			if (input[0] === '@') {
+				input = input.substr(1)
+			}
+			if (input.match(/^\w{1,16}$/)) {
+				Peerio.network.addContact([{username: input}], function(data) {
+					if (({}).hasOwnProperty.call(data, 'error')) {
+						if (typeof(callback) === 'function') {
+							callback({
+								type: 'username',
+								success: false
+							})
+						}
+					}
+					else if (typeof(callback) === 'function') {
 						callback({
 							type: 'username',
-							success: false
+							success: true
 						})
 					}
-				}
-				else if (typeof(callback) === 'function') {
-					callback({
-						type: 'username',
-						success: true
-					})
-				}
-			})
+				})
+			}
 		}
 	}
 
