@@ -1082,6 +1082,13 @@
 					   ng-click="preferences.receiveMessageNotificationsOnCheck($event)" />
 				<label for="receiveMessageNotifications" class="blueCheckboxLabel" data-l10n-id="receiveMessageNotifications"></label>
 				<br />
+				<input type="checkbox"
+					   class="blueCheckbox"
+					   id="useSounds"
+					   ng-checked="preferences.useSounds()"
+					   ng-click="preferences.useSoundsOnCheck($event)" />
+				<label for="useSounds" class="blueCheckboxLabel" data-l10n-id="useSounds"></label>
+				<br />
 				<hr />
 				<h2 data-l10n-id="peerioPINForThisDevice"></h2>
 				<form ng-submit="preferences.peerioPINSet()">

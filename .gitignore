@@ -6,3 +6,5 @@ peerio.sdf
 src/chrome/node_modules
 src/chrome/node_modules/*
 src/windows/package.nw
+Debug/peerio.log
+Debug/peerio.tlog/peerio.lastbuildstate

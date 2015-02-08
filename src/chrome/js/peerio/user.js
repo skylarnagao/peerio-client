@@ -26,6 +26,7 @@ Peerio.user = {};
 		settings: {
 			localeCode: 'en',
 			receiveMessageNotifications: false,
+			useSounds: true,
 			sendReadReceipts: true,
 			twoFactorAuth: false
 		},

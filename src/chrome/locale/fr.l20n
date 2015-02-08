@@ -274,6 +274,7 @@
 <notifications "Notifications">
 <notificationOptions "Options de Notification">
 <receiveMessageNotifications "Envoyer les notifications <strong>à mon adresse primaire</strong>.">
+<useSounds "<strong>Émettre un son</strong> quand je reçois une nouvelle notification.">
 <sendReadReceipts "Envoyer une notification à mes contacts lorsque je lis leurs messages.">
 <readReceipts "Accusés de Réception">
 <peerioPINForThisDevice "NIP Peerio pour cet appareil">

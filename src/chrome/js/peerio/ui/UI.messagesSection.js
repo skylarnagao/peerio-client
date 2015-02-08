@@ -90,10 +90,14 @@ Peerio.UI.controller('messagesSection', function($scope, $element, $sce, $filter
 			modified.forEach(function(message) {
 				if (modified.length && (message.sender !== Peerio.user.username)) {
 					if ( message.decrypted.message === ':::peerioAck:::') {
-						Peerio.notification.playSound('ack')
+						if (Peerio.user.settings.useSounds) {
+							Peerio.notification.playSound('ack')
+						}
 					}
 					else {
-						Peerio.notification.playSound('received')
+						if (Peerio.user.settings.useSounds) {
+							Peerio.notification.playSound('received')
+						}
 					}
 				}		
 				if (({}).hasOwnProperty.call(Peerio.user.conversations, message.conversationID)) {
@@ -624,10 +628,14 @@ Peerio.UI.controller('messagesSection', function($scope, $element, $sce, $filter
 			sequence: Object.keys(conversation.messages).length
 		}, function(messageObject, failed) {
 			if (body === ':::peerioAck:::') {
-				Peerio.notification.playSound('ack')
+				if (Peerio.user.settings.useSounds) {
+					Peerio.notification.playSound('ack')
+				}
 			}
 			else {
-				Peerio.notification.playSound('sending')
+				if (Peerio.user.settings.useSounds) {
+					Peerio.notification.playSound('sending')
+				}
 			}
 			var temporaryID = 'sending' + Base58.encode(nacl.randomBytes(8))
 			Peerio.network.createMessage(messageObject, function(result) {
@@ -652,7 +660,9 @@ Peerio.UI.controller('messagesSection', function($scope, $element, $sce, $filter
 				}
 				Peerio.message.getMessages([result.id], function(data) {
 					if (body !== ':::peerioAck:::') {
-						Peerio.notification.playSound('sent')
+						if (Peerio.user.settings.useSounds) {
+							Peerio.notification.playSound('sent')
+						}
 					}
 					conversation.messages[result.id] = conversation.messages[temporaryID]
 					delete conversation.messages[temporaryID]

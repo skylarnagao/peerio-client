@@ -90,7 +90,8 @@ Peerio.network.getSettings = function(callback) {
 /**
  * Change settings. Uses an authtoken.
  * @param {object} settingsObject - With the optional parameters of:
- *	twoFactorAuth, firstName, lastName, sendReadReceipts, localeCode, receiveMessageNotifications
+ *	twoFactorAuth, firstName, lastName, sendReadReceipts,
+ *	localeCode, receiveMessageNotifications, useSounds, enterToSend
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.updateSettings = function(settingsObject, callback) {

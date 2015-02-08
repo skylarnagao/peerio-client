@@ -65,6 +65,9 @@ Peerio.UI.controller('preferences', function($scope) {
 	$scope.preferences.receiveMessageNotifications = function() {
 		return Peerio.user.settings.receiveMessageNotifications
 	}
+	$scope.preferences.useSounds = function() {
+		return Peerio.user.settings.useSounds
+	}
 	$scope.preferences.receiveMessageNotificationsOnCheck = function(event) {
 		if (event.target.checked) {
 			Peerio.user.settings.receiveMessageNotifications = true
@@ -75,6 +78,37 @@ Peerio.UI.controller('preferences', function($scope) {
 		Peerio.UI.twoFactorAuth(function() {
 			Peerio.network.updateSettings({
 				receiveMessageNotifications: Peerio.user.settings.receiveMessageNotifications
+			}, function(data) {
+				if (({}).hasOwnProperty.call(data, 'error')) {
+					swal({
+						title: document.l10n.getEntitySync('error').value,
+						text: document.l10n.getEntitySync('errorText').value,
+						type: 'error',
+						confirmButtonText: document.l10n.getEntitySync('OK').value
+					})
+					return false
+				}
+				else {
+					swal({
+						title: document.l10n.getEntitySync('confirmed').value,
+						text: document.l10n.getEntitySync('confirmedText').value,
+						type: 'success',
+						confirmButtonText: document.l10n.getEntitySync('OK').value
+					})
+				}
+			})
+		})
+	}
+	$scope.preferences.useSoundsOnCheck = function(event) {
+		if (event.target.checked) {
+			Peerio.user.settings.useSounds = true
+		}
+		else {
+			Peerio.user.settings.useSounds = false
+		}
+		Peerio.UI.twoFactorAuth(function() {
+			Peerio.network.updateSettings({
+				useSounds: Peerio.user.settings.useSounds
 			}, function(data) {
 				if (({}).hasOwnProperty.call(data, 'error')) {
 					swal({

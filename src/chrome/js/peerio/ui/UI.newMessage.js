@@ -121,7 +121,9 @@ Peerio.UI.controller('newMessage', function($scope) {
 			sequence: 0,
 			fileIDs: $scope.newMessage.attachFileIDs
 		}, function(messageObject, failed) {
-			Peerio.notification.playSound('sending')
+			if (Peerio.user.settings.useSounds) {
+				Peerio.notification.playSound('sending')
+			}
 			Peerio.network.createMessage(messageObject, function(result) {
 				$scope.$root.$broadcast('attachFileReset', null)
 				if (({}).hasOwnProperty.call(result, 'error')) {
@@ -155,7 +157,9 @@ Peerio.UI.controller('newMessage', function($scope) {
 						})
 					}
 					Peerio.message.getConversationPages(result.conversationID, true, function() {
-						Peerio.notification.playSound('sent')
+						if (Peerio.user.settings.useSounds) {
+							Peerio.notification.playSound('sent')
+						}
 						Peerio.UI.selectConversation(result.conversationID)
 						$scope.$root.$broadcast('messagesSectionRender', null)
 					})
