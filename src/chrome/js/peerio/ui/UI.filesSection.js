@@ -25,6 +25,9 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 	Peerio.UI.filesSectionScopeApply = function() {
 		$scope.$apply()
 	}
+	Peerio.UI.filesSectionPopulate = function() {
+		$scope.$root.$broadcast('filesSectionPopulate', null)
+	}
 	$scope.$on('filesSectionPopulate', function(event, callback) {
 		if (/Sidebar/.test($element[0].className)) {
 			return false

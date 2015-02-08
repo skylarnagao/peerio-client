@@ -226,6 +226,7 @@ Peerio.file = {
 	Peerio.file.downloadFile = function(id, header, progressHandler, callback) {
 		Peerio.network.downloadFile(id, function(data) {
 			if (!({}).hasOwnProperty.call(data, 'url')) {
+				callback(false)
 				return false
 			}
 			var xhr = new XMLHttpRequest()

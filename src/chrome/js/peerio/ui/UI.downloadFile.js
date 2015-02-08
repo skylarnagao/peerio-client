@@ -34,6 +34,7 @@ Peerio.UI.downloadFile = {};
 							type: 'error',
 							confirmButtonText: document.l10n.getEntitySync('OK').value
 						})
+						Peerio.UI.filesSectionPopulate()
 						return false
 					}
 					if (!Peerio.file.getFileExtension(fileEntry.name)) {
@@ -87,6 +88,7 @@ Peerio.UI.downloadFile = {};
 							type: 'error',
 							confirmButtonText: document.l10n.getEntitySync('OK').value
 						})
+						Peerio.UI.filesSectionPopulate()
 					}
 					if (!decryptedBlob) {
 						showSaveError()
