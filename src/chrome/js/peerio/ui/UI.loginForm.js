@@ -48,6 +48,8 @@ Peerio.UI.controller('loginForm', function($scope) {
 		})
 	})
 	$scope.login.showSignupForm = function() {
+		$scope.login.username   = ''
+		$scope.login.passphrase = ''
 		$('div.signupSplash').addClass('pullUp')
 		setTimeout(function() {
 			$('div.signupSplash').remove()
