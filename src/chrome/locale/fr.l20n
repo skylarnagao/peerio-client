@@ -71,6 +71,7 @@
 <files "Fichiers">
 <contacts "Contacts">
 <searchResultsClickToReset "résultats de recherche (cliquez ici pour repartir à zéro)">
+<connectionStatus "Connexion">
 
 <welcomeToAccount "Bienvenue dans votre compte Peerio.">
 <welcomeToAccountText "Peerio vous permet d'envoyer des messages ainsi que de sauvegarder et partager vos fichiers de façon sécurisée. Voici comment vous pouvez commencer.">
