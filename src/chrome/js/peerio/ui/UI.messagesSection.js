@@ -607,7 +607,6 @@ Peerio.UI.controller('messagesSection', function($scope, $element, $sce, $filter
 			
 		$('div.frontModalsWrapper').addClass('visible')
 		$('div.attachFile').addClass('visible')
-		$('button.frontModalsClose').hide()
 		setTimeout(function() {
 			$('input.attachFileSearch')[0].focus()
 		}, 100)
