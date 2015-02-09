@@ -558,24 +558,27 @@ Peerio.UI.controller('messagesSection', function($scope, $element, $sce, $filter
 		$scope.messagesSection.replyToConversation(conversation)
 	}
 	$scope.messagesSection.isOnlyParticipant = function(conversation) {
-		if (typeof(conversation) !== 'object') {
+		if (
+			(typeof(conversation) !== 'object') ||
+			!({}).hasOwnProperty.call(conversation, 'events')
+		) {
 			return false
 		}
 		var removeCount = 0
-		if (({}).hasOwnProperty(conversation, 'events')) {
-			for (var i in conversation.events) {
-				if (({}).hasOwnProperty(conversation.events, i)) {
-					if (conversation.events[i].type === 'remove') {
-						removeCount++
-					}
-				}
-			}
+		for (var i in conversation.events) {
 			if (
-				Object.keys(conversation.events).length &&
-				(removeCount >= conversation.participants.length - 1)
+				({}).hasOwnProperty.call(conversation.events, i) &&
+				({}).hasOwnProperty.call(conversation.events[i], 'type') &&
+				conversation.events[i].type === 'remove'
 			) {
-				return true
+				removeCount++
 			}
+		}
+		if (
+			(removeCount > 0) &&
+			(conversation.participants.length === 1)
+		) {
+			return true
 		}
 		return false
 	}
