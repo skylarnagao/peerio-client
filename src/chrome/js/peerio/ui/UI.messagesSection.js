@@ -571,7 +571,10 @@ Peerio.UI.controller('messagesSection', function($scope, $element, $sce, $filter
 				}
 			}
 		}
-		if (removeCount >= conversation.participants.length - 1) {
+		if (
+			Object.keys(conversation.events).length &&
+			(removeCount >= conversation.participants.length - 1)
+		) {
 			return true
 		}
 		return false
