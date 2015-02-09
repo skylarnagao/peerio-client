@@ -22,7 +22,7 @@ Peerio.socket = {};
 			if (({}).hasOwnProperty.call(message.data, 'error')) {
 				if (message.data.error === 423) {
 					Peerio.user.authTokens = []
-					Peerio.user.getAuthTokensAndHandleErrors(Peerio.crypto.decryptAuthTokens, Peerio.crypto.decryptAuthTokens)
+					Peerio.network.getAuthTokens(Peerio.crypto.decryptAuthTokens)
 				}
 				else if (message.data.error === 424) {
 					Peerio.UI.twoFactorAuth(function() {
