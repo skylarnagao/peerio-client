@@ -401,7 +401,12 @@ Peerio.message = {};
 				Peerio.crypto.decryptMessage(message, function(decrypted) {
 					count++
 					if (typeof(message) !== 'object') {
-						decryptNextMessage(count)
+						if (count === keys.length) {
+							callback(data)
+						}
+						else {
+							decryptNextMessage(count)
+						}
 						return false
 					}
 					message.decrypted = decrypted
