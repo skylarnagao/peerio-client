@@ -422,7 +422,10 @@ Peerio.UI.controller('messagesSection', function($scope, $element, $sce, $filter
 		}
 		conversation.original.isModified = false
 		Peerio.storage.db.get('conversations', function(err, conversations) {
-			if (({}).hasOwnProperty.call(conversations, conversation.id)) {
+			if (
+				(typeof(conversations) === 'object') &&
+				({}).hasOwnProperty.call(conversations, conversation.id)
+			) {
 				var original = conversations[conversation.id].original
 				conversations[conversation.id].messages[original].isModified = false
 				Peerio.storage.db.put(conversations, function() {

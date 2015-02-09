@@ -399,8 +399,12 @@ Peerio.message = {};
 			var decryptNextMessage = function(count) {
 				var message = data.messages[keys[count]]
 				Peerio.crypto.decryptMessage(message, function(decrypted) {
-					message.decrypted = decrypted
 					count++
+					if (typeof(message) !== 'object') {
+						decryptNextMessage(count)
+						return false
+					}
+					message.decrypted = decrypted
 					if (({}).hasOwnProperty.call(message.decrypted, 'fileIDs')) {
 						Peerio.file.getFile(message.decrypted.fileIDs, function(fileData) {
 							for (var file in fileData) {
