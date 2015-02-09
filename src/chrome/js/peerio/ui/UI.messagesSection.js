@@ -570,12 +570,12 @@ Peerio.UI.controller('messagesSection', function($scope, $element, $sce, $filter
 					}
 				}
 			}
-		}
-		if (
-			Object.keys(conversation.events).length &&
-			(removeCount >= conversation.participants.length - 1)
-		) {
-			return true
+			if (
+				Object.keys(conversation.events).length &&
+				(removeCount >= conversation.participants.length - 1)
+			) {
+				return true
+			}
 		}
 		return false
 	}
