@@ -1,10 +1,11 @@
 ##Peerio 1.0.3 (4)
 **February 9 2015**
 
+- Big improvements to the user interface: Better message viewing, more visible file attachments, and more.
+- Faster and more reliable messaging. 
 - Importing contacts is now available again, and is greatly improved.
 - Added an option to disable sound notifications.
-- A ton of various small improvements everywhere.
-- Various bug fixes.
+- A ton of various small improvements and bug fixes.
 - Improve window resizing functionality.
 
 ##Peerio 1.0.2 (3)
