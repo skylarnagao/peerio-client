@@ -677,6 +677,15 @@ Peerio.UI.controller('messagesSection', function($scope, $element, $sce, $filter
 					conversation.messages[result.id].timestamp = data.messages[result.id].timestamp
 					conversation.messages[result.id].id = result.id
 					conversation.messages[result.id].decrypted = data.messages[result.id].decrypted
+					conversation.lastTimestamp = data.messages[result.id].timestamp
+					Peerio.user.conversations[conversation.id].lastTimestamp = data.messages[result.id].timestamp
+					Peerio.storage.db.get('conversations', function(err, conversations) {
+						if (({}).hasOwnProperty.call(conversations, conversation.id)) {
+							conversations[conversation.id].lastTimestamp = data.messages[result.id].timestamp
+							Peerio.storage.db.put(conversations, function() {
+							})
+						}
+					})
 					$scope.messagesSection.attachFileIDs.forEach(function(fileID) {
 						if (conversation.fileIDs.indexOf(fileID) < 0) {
 							conversation.fileIDs.push(fileID)
@@ -709,7 +718,7 @@ Peerio.UI.controller('messagesSection', function($scope, $element, $sce, $filter
 				sequence: Object.keys(conversation.messages).length,
 				subject: conversation.original.decrypted.subject
 			}
-			conversation.messages[temporaryID] = (messageObject)
+			conversation.messages[temporaryID] = messageObject
 			$scope.$apply(Peerio.UI.applyDynamicElements)
 			$('div.messagesSectionMessageViewSingles').scrollTop(
 				$('div.messagesSectionMessageViewSingles')[0].scrollHeight + 1000
