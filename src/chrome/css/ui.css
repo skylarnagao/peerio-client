@@ -1541,7 +1541,7 @@ div.messagesSectionMessageViewSingle pre {
 	display: block;
 	padding: 10px;
 	font-family: sans-serif;
-	font-size: 0.9em;
+	font-size: 1em;
 	-webkit-user-select: text !important;
 	cursor: text;
 	z-index: 50;
@@ -1606,7 +1606,7 @@ div.messagesSectionMessageViewReply textarea {
 	margin: 5px 0 0 0;
 	font-family: sans-serif;
 	line-height: 1.7em;
-	font-size: 0.9em;
+	font-size: 1em;
 	white-space: pre-wrap;
 	word-wrap: break-word;
 	-webkit-hyphens: auto;
@@ -2242,6 +2242,8 @@ textarea.newMessageBody {
 	margin-bottom: 5px;
 	max-height: 300px;
 	font-family: sans-serif;
+	font-size: 1em;
+	line-height: 1.7em;
 }
 
 input.newMessageSend {
