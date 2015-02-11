@@ -402,6 +402,14 @@ Peerio.user = {};
 					}
 				})
 			}
+			else {
+				if (typeof(callback) === 'function') {
+					callback({
+						type: 'username',
+						success: false
+					})
+				}
+			}
 		}
 	}
 
