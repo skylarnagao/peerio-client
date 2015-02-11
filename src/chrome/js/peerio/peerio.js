@@ -4,7 +4,7 @@
 //
 // Peerio.
 
-Peerio = {}
+Peerio = window.Peerio || {}
 
 // Initialization code for some node-webkit features.
 if (typeof(require) === 'function') {
