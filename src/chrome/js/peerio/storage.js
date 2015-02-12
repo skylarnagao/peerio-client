@@ -6,7 +6,7 @@
 // in order to provide reliable long-term storage on various platforms.
 
 Peerio.storage = {};
-Peerio.storage.options = window.cordova ? {adapter: 'websql'} : null;
+Peerio.storage.options = Peerio.isMobile ? {adapter: 'websql'} : null;
 
 (function() {
 	'use strict';
