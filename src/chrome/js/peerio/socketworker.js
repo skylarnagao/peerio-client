@@ -21,8 +21,9 @@ var mySocket = (function() {
 		}
 		return parseFloat(result)
 	}
-	
-	var server = serverList[Math.floor(secureRandom() * serverList.length)]
+
+	var serverIndex = Math.floor( (self.crypto ? secureRandom() : Math.random()) * serverList.length)
+	var server = serverList[serverIndex];
 
 	return io.connect(server, { transports: ['websocket'] })
 }());

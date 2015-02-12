@@ -69,7 +69,7 @@ Peerio.user = {};
 				Peerio.user.keyPair.secretKey,
 				keyBytes
 			)
-			Peerio.storage.db = new PouchDB(username)
+			Peerio.storage.db = new PouchDB(username, Peerio.storage.options)
 			Peerio.storage.db.get('PIN', function(err, data) {
 				if (typeof(data) === 'object') {
 					Peerio.storage.db.remove(data, function() {
