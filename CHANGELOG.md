@@ -1,3 +1,7 @@
+##Peerio 1.0.3.1 (5)
+**February 12 2015**
+- Fixed a bug that prevent adding some contacts via their email address.
+
 ##Peerio 1.0.3 (4)
 **February 9 2015**
 
