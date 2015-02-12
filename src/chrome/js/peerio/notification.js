@@ -124,12 +124,13 @@ Peerio.notification = {};
 		}
 	})()
 
+	var soundDir = Peerio.isMobile ? "media/sound/" : "snd/";
 	Peerio.notification.sounds = {
-		sending: new Audio('snd/sending.ogg'),
-		sent: new Audio('snd/sent.ogg'),
-		received: new Audio('snd/received.ogg'),
-		destroy: new Audio('snd/destroy.ogg'),
-		ack: new Audio('snd/ack.ogg')
+		sending: new Audio(soundDir + 'sending.ogg'),
+		sent: new Audio(soundDir + 'sent.ogg'),
+		received: new Audio(soundDir + 'received.ogg'),
+		destroy: new Audio(soundDir + 'destroy.ogg'),
+		ack: new Audio(soundDir + 'ack.ogg')
 	}
 
 	/**
