@@ -4,9 +4,7 @@ importScripts('../lib/socket.js')
 
 var mySocket = (function() {
 	var serverList = [
-		'https://bubblegum.peerio.com:443',
-		'https://iceking.peerio.com:443',
-		'https://lsp.peerio.com:443'
+		'https://landofoo.peerio.com:443'
 	]
 
 	var secureRandom = function() {
