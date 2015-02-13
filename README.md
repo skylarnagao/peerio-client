@@ -1510,3 +1510,4 @@ Entering an inforrect two-factor authentication code more than 10 times may resu
 
 The client may use a normal `updateSettings` message for disabling two-factor authentication (though it may not use this call to _enable_ it). Updating settings is a protected operation, so two-factor authentication must be passed to complete disabling. 
 
+
