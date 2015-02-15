@@ -136,7 +136,7 @@
 */
 
 * {
-	color: #333;
+	color: #222;
 	outline: none;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -983,14 +983,14 @@ div.mainTopSectionSelect {
 	div.mainTopSectionSelect div.mainTopSectionTab {
 		background: #FFF;
 		font-weight: bold;
-		width: 110px;
-		height: 41px;
-		padding: 20px 0 0 0;
+		width: 101px;
+		height: 31px;
+		padding: 10px 0 0 0;
 		display: inline-block;
 		text-align: center;
 		margin-right: 5px;
 		position: relative;
-		font-size: 1.2em;
+		font-size: 1.1em;
 	}
 
 		div.mainTopSectionSelect div.mainTopSectionTab.active,
@@ -1039,7 +1039,7 @@ div.mainSidebar {
 	width: 200px;
 	padding: 10px;
 	float: left;
-	background: #333;
+	background: #345;
 }
 	div.mainSidebar img.peerioLogotypeWhite {
 		width: 120px;
