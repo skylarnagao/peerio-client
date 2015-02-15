@@ -251,79 +251,13 @@
 				<h3 data-l10n-id="dragAndDropUploadText"></h3>
 			</div>
 		</div>
-		<div class="mainTop" ng-controller="mainTop">
+		<div class="mainSidebar" ng-style="resize()" resize="0,20">
 			<img src="img/peerioLogotypeWhite.png" alt="Peerio" class="peerioLogotypeWhite" />
-			<form class="mainSearch">
-				<input type="text" ng-model="mainTop.searchInput" ng-change="mainTop.doSearch(mainTop.searchInput)" data-l10n-id="searchMessagesFilesAndContacts" />
-				<input type="submit" class="mainTopSearchSubmit" value="&#xf002;" />
-				<span class="mainTopSearchCount" ng-show="mainTop.searchInput.length">
-					<span ng-bind="mainTop.searchCount"></span>&nbsp;<span data-l10n-id="searchResultsClickToReset" ng-click="mainTop.searchInput='';mainTop.doSearch('')"></span>
-				</span>
-			</form>
-			<div class="mainTopUserMenu">
-				<span class="userFirstName" ng-bind="mainTop.userMenu.userFirstName"></span>
-				<span class="connectionStatus" data-utip-l10n="connectionStatus" data-utip-gravity="sw"></span>
-				<br />
-				<button class="clear" ng-mousedown="mainTop.userMenu.openAccountSettings()">
-					<span class="fontAwesome">&#xf007;</span>
-					&nbsp;
-					<span data-l10n-id="account"></span>
-				</button>
-				<button class="clear" ng-mousedown="mainTop.userMenu.openPreferences()">
-					<span class="fontAwesome">&#xf013;</span>
-					&nbsp;
-					<span data-l10n-id="preferences"></span>
-				</button>
-				<hr />
-				<button class="clear" ng-click="mainTop.userMenu.logout()">
-					<span class="fontAwesome">&#xf08b;</span>
-					&nbsp;
-					<span data-l10n-id="logout"></span>
-				</button>
-			</div>
-			<div class="mainTopSectionSelect">
-				<div class="mainTopSectionTab"
-					 ng-mousedown="mainTop.clickTab('messages')"
-					 data-sectionlink="messages">
-					<span data-l10n-id="messages"></span>
-					<span class="mainTopSectionTabNewCount"
-						  ng-bind="mainTop.getMessagesNewCount()"
-						  ng-show="!!mainTop.messagesNewCount">
-					</span>
-					<span class="mainTopSectionTabSearchCount"
-						  ng-bind="mainTop.messagesSearchCount"
-						  ng-show="!!mainTop.messagesSearchCount">
-					</span>
-				</div>
-				<div class="mainTopSectionTab"
-					 ng-mousedown="mainTop.clickTab('files')"
-					 data-sectionlink="files">
-					<span data-l10n-id="files"></span>
-					<span class="mainTopSectionTabSearchCount"
-						  ng-bind="mainTop.filesSearchCount"
-						  ng-show="!!mainTop.filesSearchCount">
-					</span>
-				</div>
-				<div class="mainTopSectionTab"
-					 ng-mousedown="mainTop.clickTab('contacts')"
-					 data-sectionlink="contacts">
-					<span data-l10n-id="contacts"></span>
-					<span class="mainTopSectionTabNewCount"
-						  ng-bind="mainTop.getContactsNewCount()"
-						  ng-show="!!mainTop.contactsNewCount">
-					</span>
-					<span class="mainTopSectionTabSearchCount"
-						  ng-bind="mainTop.contactsSearchCount"
-						  ng-show="!!mainTop.contactsSearchCount">
-					</span>
-				</div>
-			</div>
-		</div>
-		<div class="mainSidebar">
 			<div class="messagesSidebar sidebar" data-sectionlink="messages" ng-controller="messagesSection">
 				<button class="messagesSidebarNewMessage"
 						data-l10n-id="newMessage"
 						ng-mousedown="messagesSidebar.newMessage()"></button>
+				<h2><span data-l10n-id="inbox"></span>&nbsp;<span class="green" ng-bind="messagesSection.getMessagesNewCount()"></span></h2>
 				<ul class="messagesSidebarTypeFilters">
 					<li data-l10n-id="allMessages" class="active" ng-mousedown="messagesSection.setTypeFilter('all', $event)"></li>
 					<li data-l10n-id="newMessages" ng-mousedown="messagesSection.setTypeFilter('new', $event)"></li>
@@ -382,13 +316,80 @@
 					<li data-l10n-id="confirmedContacts" ng-mousedown="contactsSection.setTypeFilter('confirmed', $event)"></li>
 					<li data-l10n-id="pendingContacts" ng-mousedown="contactsSection.setTypeFilter('pending', $event)"></li>
 				</ul>
-				<br />
-				<hr />
-				<br />
-				<button class="clear" ng-click="contactsSidebar.importContacts()">
+				<!--
+					<br /><hr /><br />
+				-->
+				<button class="clear contactsSidebarImportContacts" ng-click="contactsSidebar.importContacts()">
 					<span class="fontAwesome">&#xf007;</span>
 					&nbsp;
 					<span data-l10n-id="importContacts"></span>
+				</button>
+			</div>
+		</div>
+		<div class="mainTop" ng-controller="mainTop" ng-style="resize()" resize="220,0">
+			<div class="mainTopSectionSelect">
+				<div class="mainTopSectionTab"
+					 ng-mousedown="mainTop.clickTab('messages')"
+					 data-sectionlink="messages">
+					<span data-l10n-id="messages"></span>
+					<span class="mainTopSectionTabNewCount"
+						  ng-bind="mainTop.getMessagesNewCount()"
+						  ng-show="!!mainTop.messagesNewCount">
+					</span>
+					<span class="mainTopSectionTabSearchCount"
+						  ng-bind="mainTop.messagesSearchCount"
+						  ng-show="!!mainTop.messagesSearchCount">
+					</span>
+				</div>
+				<div class="mainTopSectionTab"
+					 ng-mousedown="mainTop.clickTab('files')"
+					 data-sectionlink="files">
+					<span data-l10n-id="files"></span>
+					<span class="mainTopSectionTabSearchCount"
+						  ng-bind="mainTop.filesSearchCount"
+						  ng-show="!!mainTop.filesSearchCount">
+					</span>
+				</div>
+				<div class="mainTopSectionTab"
+					 ng-mousedown="mainTop.clickTab('contacts')"
+					 data-sectionlink="contacts">
+					<span data-l10n-id="contacts"></span>
+					<span class="mainTopSectionTabNewCount"
+						  ng-bind="mainTop.getContactsNewCount()"
+						  ng-show="!!mainTop.contactsNewCount">
+					</span>
+					<span class="mainTopSectionTabSearchCount"
+						  ng-bind="mainTop.contactsSearchCount"
+						  ng-show="!!mainTop.contactsSearchCount">
+					</span>
+				</div>
+			</div>
+			<form class="mainSearch">
+				<input type="text" ng-model="mainTop.searchInput" ng-change="mainTop.doSearch(mainTop.searchInput)" data-l10n-id="searchMessagesFilesAndContacts" />
+				<input type="submit" class="mainTopSearchSubmit" value="&#xf002;" />
+				<span class="mainTopSearchCount" ng-show="mainTop.searchInput.length" ng-click="mainTop.searchInput='';mainTop.doSearch('')">
+					<span ng-bind="mainTop.searchCount"></span>&nbsp;<span class="fontAwesome">&#xf00d;</span>
+				</span>
+			</form>
+			<div class="mainTopUserMenu">
+				<span class="userFirstName" ng-bind="mainTop.userMenu.userFirstName"></span>
+				<span class="connectionStatus" data-utip-l10n="connectionStatus" data-utip-gravity="sw"></span>
+				<br />
+				<button class="clear" ng-mousedown="mainTop.userMenu.openAccountSettings()">
+					<span class="fontAwesome">&#xf007;</span>
+					&nbsp;
+					<span data-l10n-id="account"></span>
+				</button>
+				<button class="clear" ng-mousedown="mainTop.userMenu.openPreferences()">
+					<span class="fontAwesome">&#xf013;</span>
+					&nbsp;
+					<span data-l10n-id="preferences"></span>
+				</button>
+				<hr />
+				<button class="clear" ng-click="mainTop.userMenu.logout()">
+					<span class="fontAwesome">&#xf08b;</span>
+					&nbsp;
+					<span data-l10n-id="logout"></span>
 				</button>
 			</div>
 		</div>
@@ -404,7 +405,7 @@
 							&#xf014;
 						</button>
 					</div>
-					<div class="messagesSectionListViewItems" ng-style="resize()" resize="0, 170">
+					<div class="messagesSectionListViewItems" ng-style="resize()" resize="0, 149">
 						<img ng-show="messagesSection.listIsLoading" src="img/loading.gif" class="messagesSectionListViewLoading" alt="" />
 						<div class="messageListItem"
 							 ng-repeat="conversation in messagesSection.conversations | orderObjectBy:'lastTimestamp':true"
@@ -427,7 +428,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="messagesSectionMessageView" ng-style="resize()" resize="580,135">
+				<div class="messagesSectionMessageView" ng-style="resize()" resize="590,145">
 					<div class="messagesSectionMessageViewIntro" ng-show="!messagesSection.conversation && !messagesSection.conversationIsLoading">
 						<img src="img/icon256.png" alt="" />
 						<h1 data-l10n-id="welcomeToAccount"></h1>
@@ -701,7 +702,7 @@
 						<button data-l10n-id="lastName" class="clear" ng-click="contactsSection.orderByProperty='lastName';contactsSection.orderByReverse=false"></button>
 						<button data-l10n-id="firstName" class="clear" ng-click="contactsSection.orderByProperty='firstName';contactsSection.orderByReverse=false"></button>
 					</div>
-					<div class="contactsSectionListViewItems">
+					<div class="contactsSectionListViewItems" ng-style="resize()" resize="0, 149">
 						<div class="contactListItem"
 							 ng-repeat="contact in contactsSection.contacts | orderObjectBy:contactsSection.orderByProperty:contactsSection.orderByReverse"
 							 ng-mousedown="contactsSection.expandContact(contact.username, $event)"

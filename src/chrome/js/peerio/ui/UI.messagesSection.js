@@ -62,6 +62,7 @@ Peerio.UI.controller('messagesSection', function($scope, $element, $sce, $filter
 	$scope.messagesSection.typeFilter = 'all'
 	$scope.messagesSection.checkedIDs = []
 	$scope.messagesSection.checkedReceipts = {}
+	$scope.messagesSection.messageNewCount = 0
 	$scope.$on('messagesSectionPopulate', function(event, callback) {
 		$scope.messagesSection.listIsLoading = true
 		if (/Sidebar/.test($element[0].className)) {
@@ -371,6 +372,13 @@ Peerio.UI.controller('messagesSection', function($scope, $element, $sce, $filter
 			return true
 		}
 		return false
+	}
+	$scope.messagesSection.getMessagesNewCount = function() {
+		var count = $('div.messageStatusIndicatorUnread:not(.ng-hide)').length
+		if (count !== $scope.messagesSection.messagesNewCount) {
+			$scope.messagesSection.messagesNewCount = count
+		}
+		return $scope.messagesSection.messagesNewCount
 	}
 	$scope.messagesSection.getFullName = function(username) {
 		return Peerio.util.getFullName(username)

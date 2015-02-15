@@ -81,6 +81,7 @@
 <welcomeToAccountListSearch "La <strong>barre de recherche</strong> située en haut de l'écran vous permet de rechercher facilement vos messages, fichiers et contacts d'un coup. Allez-y et essayez-la!">
 
 <newMessage "Composer Message">
+<inbox "Inbox">
 <uploadFile "Envoyer un Fichier">
 <filesSidebarUploadFileSubtitle "vous pouvez également glisser-déposer des fichiers">
 <addContact "Ajouter un Contact">

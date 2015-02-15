@@ -81,6 +81,7 @@
 <welcomeToAccountListSearch "Peerio's <strong>search bar</strong> at the top of the window makes it easy to go through your messages, files and contacts all in one swoop. Give it a shot!">
 
 <newMessage "Compose Message">
+<inbox "Inbox">
 <uploadFile "Upload Files">
 <filesSidebarUploadFileSubtitle "you can also drag and drop files">
 <addContact "Add Contact">
