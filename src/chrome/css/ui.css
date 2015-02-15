@@ -1106,9 +1106,9 @@ button.contactsSidebarAddContact {
 span.filesSidebarUploadFileSubtitle {
 	font-variant: small-caps;
 	text-align: center;
-	margin: -5px auto 0 auto;
+	margin: -50px auto 50px auto;
 	display: block;
-	opacity: 0.9;
+	color: #FFF;
 }
 
 div.sidebar h2 {
@@ -1152,19 +1152,21 @@ div.filesSidebar {
 }
 
 div.filesSidebarQuotaUsage {
-	margin: 15px 0 0 5px;
+	margin: 15px 0 0 0px;
 	font-variant: small-caps;
-	font-weight: bold;
 	padding: 10px;
-	font-size: 0.9em;
+	font-size: 1em;
+	color: #FFF;
 }
 
 	div.filesSidebarQuotaUsage h1 {
 		font-size: 1.2em;
 		font-variant: normal;
+		color: #FFF;
 	}
 
 	div.filesSidebarQuotaUsage span {
+		color: #FFF;
 	}
 
 form.fileUploadForm {
