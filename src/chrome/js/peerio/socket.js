@@ -57,6 +57,10 @@ Peerio.socket = {};
 				console.log('modifiedMessagesAvailable')
 				Peerio.UI.messagesSectionUpdate()
 			}
+			if (message.received === 'uploadedFilesAvailable') {
+				console.log('uploadedFilesAvailable')
+				Peerio.UI.filesSectionPopulate()
+			}
 			if (message.received === 'modifiedConversationsAvailable') {
 				console.log('modifiedConversationsAvailable')
 				Peerio.message.getAllConversations()
