@@ -395,7 +395,7 @@
 		</div>
 		<div class="mainSections">
 			<section class="messagesSection" ng-controller="messagesSection" data-sectionlink="messages">
-				<div class="messagesSectionListView" ng-style="resize()" resize="0,105">
+				<div class="messagesSectionListView" ng-style="resize()" resize="0,95">
 					<div class="messagesSectionListViewToolbar">
 						<!-- <button class="fontAwesome clear" data-utip-l10n="addToFolder" data-utip-gravity="ne">&#xf115;</button> -->
 						<button class="fontAwesome clear"
@@ -405,7 +405,7 @@
 							&#xf014;
 						</button>
 					</div>
-					<div class="messagesSectionListViewItems" ng-style="resize()" resize="0, 149">
+					<div class="messagesSectionListViewItems" ng-style="resize()" resize="0, 139">
 						<img ng-show="messagesSection.listIsLoading" src="img/loading.gif" class="messagesSectionListViewLoading" alt="" />
 						<div class="messageListItem"
 							 ng-repeat="conversation in messagesSection.conversations | orderObjectBy:'lastTimestamp':true"
@@ -428,7 +428,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="messagesSectionMessageView" ng-style="resize()" resize="590,145">
+				<div class="messagesSectionMessageView" ng-style="resize()" resize="590,135">
 					<div class="messagesSectionMessageViewIntro" ng-show="!messagesSection.conversation && !messagesSection.conversationIsLoading">
 						<img src="img/icon256.png" alt="" />
 						<h1 data-l10n-id="welcomeToAccount"></h1>
@@ -480,8 +480,8 @@
 						</span>
 					</h2>
 					<h3 ng-show="messagesSection.conversation" ng-bind="messagesSection.conversation.original.decrypted.subject"></h3>
-					<div ng-show="messagesSection.conversationIsLoading" class="messagesSectionMessageViewLoading" alt="" ng-style="resize()" resize="0,415"></div>
-					<div ng-show="messagesSection.conversation&&!messagesSection.conversationIsLoading" class="messagesSectionMessageViewSingles" ng-style="resize()" resize="0,415">
+					<div ng-show="messagesSection.conversationIsLoading" class="messagesSectionMessageViewLoading" alt="" ng-style="resize()" resize="0,405"></div>
+					<div ng-show="messagesSection.conversation&&!messagesSection.conversationIsLoading" class="messagesSectionMessageViewSingles" ng-style="resize()" resize="0,405">
 						<div ng-repeat="message in messagesSection.conversation.messages | orderObjectBy:'timestamp':false" ng-show="messagesSection.checkSearchFilter(message)">
 							<div class="messagesSectionMessageViewAcknowledgement"
 								 ng-if="messagesSection.messageIsAck(message)">
@@ -603,7 +603,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="filesSection" ng-controller="filesSection" data-sectionlink="files" ng-style="resize()" resize="270,145" ng-mousedown="filesSection.hideListingActions($event)">
+			<section class="filesSection" ng-controller="filesSection" data-sectionlink="files" ng-style="resize()" resize="270,135" ng-mousedown="filesSection.hideListingActions($event)">
 				<div class="filesSectionToolbar">
 					<div class="filesSectionToolbarActions">
 						<button class="fontAwesome clear" data-utip-l10n="send" data-utip-gravity="nw" ng-mousedown="filesSection.sendFiles(filesSection.checkedIDs)">&#xf1d9;</button>
@@ -696,13 +696,13 @@
 				</div>
 			</section>
 			<section class="contactsSection" ng-controller="contactsSection" data-sectionlink="contacts">
-				<div class="contactsSectionListView" ng-style="resize()" resize="0,105">
+				<div class="contactsSectionListView" ng-style="resize()" resize="0,95">
 					<div class="contactsSectionListViewToolbar">
 						<span data-l10n-id="sortBy"></span>:
 						<button data-l10n-id="lastName" class="clear" ng-click="contactsSection.orderByProperty='lastName';contactsSection.orderByReverse=false"></button>
 						<button data-l10n-id="firstName" class="clear" ng-click="contactsSection.orderByProperty='firstName';contactsSection.orderByReverse=false"></button>
 					</div>
-					<div class="contactsSectionListViewItems" ng-style="resize()" resize="0, 149">
+					<div class="contactsSectionListViewItems" ng-style="resize()" resize="0, 139">
 						<div class="contactListItem"
 							 ng-repeat="contact in contactsSection.contacts | orderObjectBy:contactsSection.orderByProperty:contactsSection.orderByReverse"
 							 ng-mousedown="contactsSection.expandContact(contact.username, $event)"
@@ -721,7 +721,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="contactsSectionContactView" ng-style="resize()" resize="595,145">
+				<div class="contactsSectionContactView" ng-style="resize()" resize="590,135">
 					<div ng-show="!contactsSection.contact">
 						<div class="noContacts">
 							<h1 data-l10n-id="noContacts"></h1>
@@ -865,7 +865,7 @@
 						</button>
 						<!--<button class="fontAwesome clear" data-utip-l10n="autoDestructSettings" data-utip-gravity="s">&#xf06d;</button>-->
 					</div>
-					<textarea class="newMessageBody" required="" ng-style="resize()" resize="0,410" ng-model="newMessage.body"></textarea>
+					<textarea class="newMessageBody" required="" ng-style="resize()" resize="0,400" ng-model="newMessage.body"></textarea>
 					<input type="submit"
 						   class="newMessageSend"
 						   data-l10n-id="send"
