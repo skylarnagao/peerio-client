@@ -66,7 +66,7 @@
 <accountBlacklisted "Compte Indisponible">
 <accountBlacklistedText "Ce compte est temporairement suspendu. Afin de retrouver l'accès, veuillez contacter le support Peerio en parcourant support.peerio.com.">
 
-<searchMessagesFilesAndContacts "Chercher des messages, fichiers et contacts">
+<searchMessagesFilesAndContacts "Recherchez vos données et contacts">
 <messages "Messages">
 <files "Fichiers">
 <contacts "Contacts">
@@ -91,6 +91,7 @@
 <settings "Paramètres">
 <account "Compte">
 <preferences "Préférences">
+<help "Aide">
 <logout "Se Déconnecter">
 <logoutConfirm "Se Déconnecter de Peerio?">
 <logoutConfirmText "Assurez-vous que vos documents sont sauvegardés avant de vous déconnecter.">
@@ -182,7 +183,7 @@
 <allContacts "Tous les Contacts">
 <confirmedContacts "Contacts Confirmés">
 <pendingContacts "Contacts en attente">
-<importContacts "Importer des Contacts">
+<importContacts "Importer Contacts">
 <sortBy "Classer par">
 <sendMessage "Envoyer un Message">
 <latestMessages "Messages Récents">

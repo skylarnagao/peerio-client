@@ -132,6 +132,7 @@
     <None Include="src\chrome\js\peerio\ui\UI.preferences.js" />
     <None Include="src\chrome\js\peerio\ui\UI.signupForms.js" />
     <None Include="src\chrome\js\peerio\ui\UI.twoFactorAuth.js" />
+    <None Include="src\chrome\js\peerio\ui\UI.userMenu.js" />
     <None Include="src\chrome\js\peerio\user.js" />
     <None Include="src\chrome\js\peerio\util.js" />
     <None Include="src\chrome\locale\en-US.l20n" />

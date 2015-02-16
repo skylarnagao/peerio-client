@@ -56,6 +56,7 @@
 	<script type="application/javascript" src="js/peerio/ui/UI.frontModals.js"></script>
 	<script type="application/javascript" src="js/peerio/ui/UI.loginForm.js"></script>
 	<script type="application/javascript" src="js/peerio/ui/UI.mainTop.js"></script>
+	<script type="application/javascript" src="js/peerio/ui/UI.userMenu.js"></script>
 	<script type="application/javascript" src="js/peerio/ui/UI.messagesSection.js"></script>
 	<script type="application/javascript" src="js/peerio/ui/UI.newMessage.js"></script>
 	<script type="application/javascript" src="js/peerio/ui/UI.preferences.js"></script>
@@ -257,7 +258,7 @@
 				<button class="messagesSidebarNewMessage"
 						data-l10n-id="newMessage"
 						ng-mousedown="messagesSidebar.newMessage()"></button>
-				<h2><span data-l10n-id="inbox"></span>&nbsp;<span class="green" ng-bind="messagesSection.getMessagesNewCount()"></span></h2>
+				<h2><span data-l10n-id="inbox"></span>&nbsp;<span class="green" ng-bind="messagesSection.getMessagesNewCount()" ng-show="!!messagesSection.getMessagesNewCount()"></span></h2>
 				<ul class="messagesSidebarTypeFilters">
 					<li data-l10n-id="allMessages" class="active" ng-mousedown="messagesSection.setTypeFilter('all', $event)"></li>
 					<li data-l10n-id="newMessages" ng-mousedown="messagesSection.setTypeFilter('new', $event)"></li>
@@ -325,6 +326,45 @@
 					<span data-l10n-id="importContacts"></span>
 				</button>
 			</div>
+			<div class="userMenu" ng-controller="userMenu">
+				<div class="userMenuAvatar">
+					<img ng-src="{{userMenu.avatarIcon1}}" alt="" />
+					<img ng-src="{{userMenu.avatarIcon2}}" alt="" />
+					<img ng-src="{{userMenu.avatarIcon3}}" alt="" />
+					<img ng-src="{{userMenu.avatarIcon4}}" alt="" />
+				</div>
+				<div class="userMenuStatus">
+					<span class="connectionStatus" data-utip-l10n="connectionStatus" data-utip-gravity="sw"></span>
+					<span class="userFirstName" ng-bind="userMenu.firstName"></span>
+				</div>
+				<div class="userMenuIcon fontAwesome">
+					&#xf077;
+				</div>
+				<br /><br />
+				<button class="clear" ng-mousedown="userMenu.openAccountSettings()">
+					<span class="fontAwesome">&#xf007;</span>
+					&nbsp;
+					<span data-l10n-id="account"></span>
+				</button>
+				<button class="clear" ng-mousedown="userMenu.openPreferences()">
+					<span class="fontAwesome">&#xf013;</span>
+					&nbsp;
+					<span data-l10n-id="preferences"></span>
+				</button>
+				<a href="http://support.peerio.com" target="_blank">
+					<button class="clear">
+						<span class="fontAwesome">&#xf1cd;</span>
+						&nbsp;
+						<span data-l10n-id="help"></span>
+					</button>
+				</a>
+				<hr />
+				<button class="clear" ng-click="userMenu.logout()">
+					<span class="fontAwesome">&#xf08b;</span>
+					&nbsp;
+					<span data-l10n-id="logout"></span>
+				</button>
+			</div>
 		</div>
 		<div class="mainTop" ng-controller="mainTop" ng-style="resize()" resize="220,0">
 			<div class="mainTopSectionSelect">
@@ -371,27 +411,6 @@
 					<span ng-bind="mainTop.searchCount"></span>&nbsp;<span class="fontAwesome">&#xf00d;</span>
 				</span>
 			</form>
-			<div class="mainTopUserMenu">
-				<span class="userFirstName" ng-bind="mainTop.userMenu.userFirstName"></span>
-				<span class="connectionStatus" data-utip-l10n="connectionStatus" data-utip-gravity="sw"></span>
-				<br />
-				<button class="clear" ng-mousedown="mainTop.userMenu.openAccountSettings()">
-					<span class="fontAwesome">&#xf007;</span>
-					&nbsp;
-					<span data-l10n-id="account"></span>
-				</button>
-				<button class="clear" ng-mousedown="mainTop.userMenu.openPreferences()">
-					<span class="fontAwesome">&#xf013;</span>
-					&nbsp;
-					<span data-l10n-id="preferences"></span>
-				</button>
-				<hr />
-				<button class="clear" ng-click="mainTop.userMenu.logout()">
-					<span class="fontAwesome">&#xf08b;</span>
-					&nbsp;
-					<span data-l10n-id="logout"></span>
-				</button>
-			</div>
 		</div>
 		<div class="mainSections">
 			<section class="messagesSection" ng-controller="messagesSection" data-sectionlink="messages">
@@ -411,6 +430,7 @@
 							 ng-repeat="conversation in messagesSection.conversations | orderObjectBy:'lastTimestamp':true"
 							 ng-attr-data-conversationid="{{'c' + conversation.id}}"
 							 ng-mousedown="messagesSection.selectConversation(conversation, $event)"
+							 ng-class="{'unread':conversation.original.isModified}"
 							 ng-show="messagesSection.checkSearchFilterConversation(conversation) && !!conversation.original.decrypted && messagesSection.checkTypeFilter(conversation)">
 							<div class="messageStatusIndicatorUnread" data-utip-l10n="newMessages" data-utip-gravity="se" ng-show="conversation.original.isModified"></div>
 							<div class="messageStatusIndicatorRead" data-utip-l10n="noNewMessages" data-utip-gravity="se" ng-show="!conversation.original.isModified"></div>

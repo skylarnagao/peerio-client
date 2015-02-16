@@ -844,14 +844,14 @@ div.mainTop {
 
 	div.mainTop form.mainSearch {
 		float: right;
-		margin: -10px 154px 0 50px;
+		margin: -10px 20px 0 50px;
 	}
 
 form.mainSearch input[type=text] {
 	display: inline-block;
 	margin: 0;
 	border: none;
-	width: 300px;
+	width: 400px;
 	color: #567;
 	font-size: 1.1em;
 	background: #EFEEEC;
@@ -906,49 +906,62 @@ span.mainTopSearchCount {
 		bottom: 5px;
 	}
 
-div.mainTopUserMenu {
+div.userMenu {
 	position: absolute;
-	right: 0;
-	top: 0;
-	padding: 15px 0px 10px 20px;
+	bottom: 0;
+	left: 0;
+	background: rgba(33, 33, 33, 0.4);
+	width: 210px;
+	padding: 20px 0px 20px 10px;
 	line-height: 40px;
-	transition: background 0.2s ease;
-	height: 25px;
+	transition: background 0.4s ease, height 0.4s ease;
+	height: 40px;
 }
 
-	div.mainTopUserMenu:hover {
+	div.userMenu:hover {
 		background: #F7F7F7;
 		box-shadow: -3px 3px rgba(50, 50, 50, 0.1);
 		z-index: 200;
-		height: 160px;
+		height: 210px;
 	}
 
-		div.mainTopUserMenu:hover * {
+		div.userMenu:hover * {
 			color: #333 !important;
 		}
 
-	div.mainTopUserMenu span.userFirstName {
-		font-weight: bold;
-		font-size: 1.2em;
-		text-align: right;
-		float: right;
-		margin-right: 50px;
-		color: #FFF;
+	div.userMenu a:hover, div.userMenu a:hover * {
+		text-decoration: none !important;
+	}
+	
+	div.userMenuAvatar {
+		border: 1px solid #EAEAEA;
+		float: left;
+		width: 60px;
+		height: 60px;
+		margin: -10px 10px 0 0;
 	}
 
-	div.mainTopUserMenu span.connectionStatus {
-		width: 14px;
-		height: 14px;
-		position: absolute;
-		right: 15px;
-		top: 24px;
+	div.userMenuAvatar img {
+		float: left;
+	}
+
+	div.userMenuStatus {
+		float: left;
+	}
+
+	div.userMenu span.connectionStatus {
+		width: 12px;
+		height: 12px;
+		position: relative;
+		top: 2px;
+		margin-right: 5px;
 		border-radius: 32px;
 		background-color: #a5e593;
-		border: 4px solid rgba(255, 255, 255, 0.5);
+		border: 3px solid rgba(255, 255, 255, 0.5);
 		display: inline-block;
 	}
 
-		div.mainTopUserMenu span.connectionStatus.reconnecting {
+		div.userMenu span.connectionStatus.reconnecting {
 			background-color: #e07a66;
 			-webkit-animation: redPulse 1s infinite;
 			-moz-animation: redPulse 1s infinite;
@@ -956,21 +969,37 @@ div.mainTopUserMenu {
 			animation: redPulse 1s infinite;
 		}
 
-	div.mainTopUserMenu button {
-		display: none;
-		text-align: left;
-		width: 100%;
+	div.userMenu span.userFirstName {
+		font-weight: bold;
+		font-size: 1.3em;
+		text-align: right;
+		color: #FFF;
+		margin: 0;
 	}
 
-	div.mainTopUserMenu hr {
+	div.userMenuIcon {
+		color: #FFF;
+		opacity: 0.8;
+		float: right;
+		font-size: 1.4em;
+		margin: 10px 10px 0 0;
+	}
+
+	div.userMenu button {
+		display: none;
+		text-align: left;
+		width: 180px;
+	}
+
+	div.userMenu hr {
 		display: none;
 		border: none;
 		border-top: 1px solid rgba(0, 0, 0, 0.1);
 		margin: 10px 0;
 	}
 
-	div.mainTopUserMenu:hover button,
-	div.mainTopUserMenu:hover hr {
+	div.userMenu:hover button,
+	div.userMenu:hover hr {
 		display: block;
 	}
 
@@ -984,8 +1013,8 @@ div.mainTopSectionSelect {
 		background: #FFF;
 		font-weight: bold;
 		width: 101px;
-		height: 31px;
-		padding: 10px 0 0 0;
+		height: 36px;
+		padding: 15px 0 0 0;
 		display: inline-block;
 		text-align: center;
 		margin-right: 5px;
@@ -1042,10 +1071,10 @@ div.mainSidebar {
 	background: #345;
 }
 	div.mainSidebar img.peerioLogotypeWhite {
-		width: 120px;
+		width: 150px;
 		height: auto;
 		display: block;
-		margin: 20px auto 30px auto;
+		margin: 18px auto 30px auto;
 	}
 
 	div.mainSidebar hr {
@@ -1235,6 +1264,9 @@ div.messageListItem {
 		background: #F0F0F0;
 	}
 
+	div.messageListItem.unread {
+		background: #FFF;
+	}
 
 	div.messageListItem.selected {
 		background: #2795D0;
@@ -1977,7 +2009,7 @@ div.contactsSectionContactView hr {
 }
 
 button.contactsSectionContactViewDelete {
-	font-size: 1.3em;
+	font-size: 1.4em;
 	position: absolute;
 	top: 0;
 	right: 0;

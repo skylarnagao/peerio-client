@@ -32,6 +32,7 @@ Peerio.UI.controller('loginForm', function($scope) {
 						$scope.$root.$broadcast('filesSectionPopulate', null)
 						$('div.loginScreen').addClass('slideUp')
 						$('div.mainScreen').show()
+						Peerio.UI.userMenuPopulate()
 					})
 				})
 				return false
