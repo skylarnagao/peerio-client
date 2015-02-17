@@ -108,10 +108,10 @@ The following JSON object should be sent to the Peerio server (using an `authTok
 	encrypted: 'miniLock container (Binary, Base64 String)'
 }
 ```
-The Peerio Server will organize messages into either an existing conversation, or create a new conversation if a message is not supplied. 
+The Peerio Server will organize messages into either an existing conversation, or create a new conversation if a message is not supplied.
 
 ###5. Receiving a Peerio Message
-Once a recipient receives a Peerio message, they decrypt it using their miniLock ID. The client then sanitizes and validates the content before displaying it in the user interface. The recipient is given the option to download the file attachments (using an `authToken`) for decryption. The recipient may also send an `encryptedReturnReceipt` using the procedure described in §A.4., *"About the receipt Value"*. 
+Once a recipient receives a Peerio message, they decrypt it using their miniLock ID. The client then sanitizes and validates the content before displaying it in the user interface. The recipient is given the option to download the file attachments (using an `authToken`) for decryption. The recipient may also send an `encryptedReturnReceipt` using the procedure described in §A.4., *"About the receipt Value"*.
 
 ###6. Deleting a Conversation
 A user can delete a conversation (and all of its messages) from their account using an `authToken`. It is the Peerio network's responsibility to keep track of when a conversation or message is removed from all accounts so that it may then purge it from its storage, which saves server disk spaces and helps guarantee user privacy. Messages may not be removed independently.
@@ -180,7 +180,7 @@ The Peerio Storage Service is some form of third-party infrastructure which is u
 Peerio's Storage Service has the sole responsibility of storing files and making them available for download.
 
 ##### Microsoft Azure Storage
-By default, Peerio will use Microsoft Azure Storage as the Peerio Storage Service. 
+By default, Peerio will use Microsoft Azure Storage as the Peerio Storage Service.
 
 Some terminology is necessary for understanding Azure Storage:
 
@@ -251,7 +251,7 @@ miniLock.util.validateID = function(id) {
 ```
 
 ####B. Communication Between User and Peerio Server Application
-Users communicate with the Peerio Server Application via a websockets connection using [socket.io](http://socket.io). JSON objects are passed back and forth via the WebSocket link. Most requests require an `authToken` to be processed. 
+Users communicate with the Peerio Server Application via a websockets connection using [socket.io](http://socket.io). JSON objects are passed back and forth via the WebSocket link. Most requests require an `authToken` to be processed.
 
 Here is a general template of a request accepted by the Peerio Server Application:
 ```javascript
@@ -262,13 +262,13 @@ Here is a general template of a request accepted by the Peerio Server Applicatio
 }
 ```
 
-`authTokens` may become invalid when a client connects to a different server and/or after a certain amount of time has passed. A client making repeated requests with invalid authTokens may be temporarily blocked from making any further requests. A client may also be blocked if making too many requests for authTokens (>60) within 5 seconds. 
+`authTokens` may become invalid when a client connects to a different server and/or after a certain amount of time has passed. A client making repeated requests with invalid authTokens may be temporarily blocked from making any further requests. A client may also be blocked if making too many requests for authTokens (>60) within 5 seconds.
 
 ####C. Error Messages
 The Peerio Server Application may respond to an unsuccessful request with the following error codes:
 
 **404**: Sent when a resource could not be found (either because it does not exist or the user us not allowed to access it)
-**413**: Sent when the user is not allowed to perform an operation due to having exceeded their storage quota. 
+**413**: Sent when the user is not allowed to perform an operation due to having exceeded their storage quota.
 **406**: Sent when the client's request is malformed (e.g. missing a required field, supplying fields in an incorrect format).
 **423**: Sent when there is an authentication problem (e.g. authToken unacceptable, too many authToken requests).
 **424**: Two-factor authentication required.
@@ -313,7 +313,7 @@ The server's response is as follows:
 }
 ```
 
-The server waits for a maximum of one minute until it receives an `accountCreationResponse` with a valid decrypted token, at which point it can create the account. 
+The server waits for a maximum of one minute until it receives an `accountCreationResponse` with a valid decrypted token, at which point it can create the account.
 
 ####Step 3. Client responds with decrypted `accountCreationToken`
 
@@ -339,7 +339,7 @@ If the `accountCreationToken` is valid, the server returns a confirmation with t
 }
 ```
 
-Otherwise, the server responds with <strong style="color:red"> { error: 400 }</strong> 
+Otherwise, the server responds with <strong style="color:red"> { error: 400 }</strong>
 
 ####Step 4. Confirming Email/Phone Number
 Once the account is created, we still require the user to confirm their email or phone number. An email/SMS is sent to the address containing a random 8-digit code.
@@ -419,7 +419,7 @@ If the provided miniLock ID matches the one the server has in store for that use
 
 The server will respond with <strong style="color:red">`{ error: 423 }`</strong> if a user makes too many requests for authTokens within a short period of time. The server may also respond with <strong style="color:red">`{ error: 426 } `</strong> if the user account has been blacklisted, or with <strong style="color:red">`{ error: 425 } `</strong> if the user's account has been temporarily throttled.
 
-Almost all other requests to the server will requie an `authToken`. Whenever an invalid `authToken` is received by the server, the server will respond with <strong style="color:red">`{ error: 423 } `</strong>. 
+Almost all other requests to the server will requie an `authToken`. Whenever an invalid `authToken` is received by the server, the server will respond with <strong style="color:red">`{ error: 423 } `</strong>.
 
 ###6. Contact Management and Lookup
 **Input Validation**: See §B.3.A.
@@ -543,7 +543,7 @@ If the user has no sentcontact requests, the `contactRequests` array will be emp
 
 ####Setting preferences for a contact
 
-The client may send the `updateContactSettings` message: 
+The client may send the `updateContactSettings` message:
 
 ```javascript
 {
@@ -556,7 +556,7 @@ The client may send the `updateContactSettings` message:
 }
 ```
 
-The server will respond with an empty object or an error. These settings will override the user's usual settings when in a conversation that *includes* the contact. 
+The server will respond with an empty object or an error. These settings will override the user's usual settings when in a conversation that *includes* the contact.
 
 ####Retrieving a Peerio Username from their Email/Phone Address
 Client sends `addressLookup` message:
@@ -584,28 +584,28 @@ The client may send an `addContact` message to either a username or an address.
 
 ```javascript
 {
-	contacts: [ 
+	contacts: [
 		{
-			username: 'Username of contact (String)', 
+			username: 'Username of contact (String)',
 			// OR
-			address: { 	
+			address: {
 					type: '"email" or "phone" (String)',
 					value: 'Email or phone number (String)'
 			}
 		},
 		// repeat
 	]
-	
+
 	authToken: 'Decrypted authToken (Base64 String)'
 }
 ```
 
-The server will respond with success and error arrays: 
+The server will respond with success and error arrays:
 
 ```javascript
 {
 	errors: [
-		{ 
+		{
 			'username (String)' : 'error code (Number)' // for each address or contact that could not be added or invited
 		}
 	],
@@ -613,7 +613,7 @@ The server will respond with success and error arrays:
 		added: 'Username of contact (String)', // for each contact that was added
 		invited: 'Address that was invited (String)' // for each address that was invited
 	]
-	
+
 }
 ```
 
@@ -627,10 +627,10 @@ If the address is not on Peerio, an invitation will be generated and the server 
 }
 ```
 
-A user addres will only be sent an invitation notification (via email or SMS) a maximum of three times, and never more than once by the same user. Inviting the same address more than once (by the same user) will return an <strong style="color:red">`{ error: 400 } `</strong>. An error response will *not* be generated if the maximum of invite notifications to be sent to an address has been exceeded and a notification is therefore not sent. 
+A user addres will only be sent an invitation notification (via email or SMS) a maximum of three times, and never more than once by the same user. Inviting the same address more than once (by the same user) will return an <strong style="color:red">`{ error: 400 } `</strong>. An error response will *not* be generated if the maximum of invite notifications to be sent to an address has been exceeded and a notification is therefore not sent.
 
 
-All invitations will be converted into contact requests by the server when an invited user creates a Peerio account, upon confirmation of the address the invites are associated with. 
+All invitations will be converted into contact requests by the server when an invited user creates a Peerio account, upon confirmation of the address the invites are associated with.
 
 ####Removing a Contact
 Client sends `removeContact` message:
@@ -715,16 +715,16 @@ The client initiates request with an `uploadFile` message:
 
 The server will respond with:
 ```javascript
-{ 
-	id: 'ID of the file (String)' 
+{
+	id: 'ID of the file (String)'
 }
 ```
 
-This ID is the ID by which the file will be accessible for other file-related operations. However, this ID will not be usable until the last chunk has finished uploading. 
+This ID is the ID by which the file will be accessible for other file-related operations. However, this ID will not be usable until the last chunk has finished uploading.
 
-The chunk sent with `uploadFile` will be assumed to be chunk 0 of `totalChunks`. Bytes 4-276 of this first chunk will be used as the file's ID. 
+The chunk sent with `uploadFile` will be assumed to be chunk 0 of `totalChunks`. Bytes 4-276 of this first chunk will be used as the file's ID.
 
-The server will check that the `clientFileID` is unique to the client and will return <strong style="color:red"> `{ error: 400 }`</strong> otherwise. 
+The server will check that the `clientFileID` is unique to the client and will return <strong style="color:red"> `{ error: 400 }`</strong> otherwise.
 
 All subsequent file chunks will be uploaded with an `uploadFileChunk` message:
 
@@ -738,21 +738,21 @@ All subsequent file chunks will be uploaded with an `uploadFileChunk` message:
 }
 ```
 
-Chunk 1 (and only chunk 1) is required to provide a `header` property. 
+Chunk 1 (and only chunk 1) is required to provide a `header` property.
 
 The server will check the size of these chunks, and that the `chunkNumber` is within the range of `totalChunks` previously provided. If any of these validations fail the server will return <strong style="color:red"> `{ error: 400 }`</strong>. `uploadFileChunks` calls with a `clientFileID` that has not been sent by an `uploadFile` message will be rejected similarly.
 
 If a chunk upload is successful, the server will respond with an empty object. When the last chunk is uploaded, the server will again respond with the ID of the file:
 
 ```javascript
-{ 
-	id: 'ID of the file (String)' 
+{
+	id: 'ID of the file (String)'
 }
 ```
 
 Any incomplete files (ie. missing chunks) will be discarded after 5 minutes.
 
-Chunks will be stored on disk until all chunks have been received (or 5 minutes pass). The file object is  then stored in Riak and the user's quota is updated. The ciphertext is saved to the Peerio Storage Service and removed from disk on the Peerio Server. 
+Chunks will be stored on disk until all chunks have been received (or 5 minutes pass). The file object is  then stored in Riak and the user's quota is updated. The ciphertext is saved to the Peerio Storage Service and removed from disk on the Peerio Server.
 
 If there is a `parentFolder` value in the `uploadFile` message, the filesystem for that file is updated accordingly.
 
@@ -767,7 +767,7 @@ If there is a `parentFolder` value in the `uploadFile` message, the filesystem f
 - A maximum of 50 recipients is allowed.
 - The field `conversationID` may be omitted. If the message has no `conversationID`, a new conversation will be created.
 - The fields `recipients` is required only when `conversationID` is omitted, ie for new conversations.
-- Members of the `recipients` array must be valid Peerio usernames. 
+- Members of the `recipients` array must be valid Peerio usernames.
 - The `header` must take the form of a miniLock header.
 
 Client submits `createMessage`:
@@ -784,7 +784,7 @@ Client submits `createMessage`:
 		{
 			id : 'iD of attached file (String)',
 			header: 'modified header of attached file (Object)'
-		}, 
+		},
 		...
 	],
 	authToken: 'Decrypted authToken (Base64 String)'
@@ -796,7 +796,7 @@ The server will throw a <strong style="color:red">`{ error: 400 }`</strong> if a
 Once the client creates a message, the server returns the following message:
 ```javascript
 {
-	id: 'Assigned ID of created message (String)', 
+	id: 'Assigned ID of created message (String)',
 	conversationID: 'Assigned conversation ID of created message (String)'
 }
 ```
@@ -820,6 +820,7 @@ Once the other participants decrypt this message, their clients detect the forma
 	username: 'Username of new participant (String)',
 	authToken 'Decrypted authToken (Base64String)'
 }
+```
 
 The server must make sure not to send the new participant `bob` any conversation messages dated from before his being added, as he will not be able to decrypt them.
 
@@ -829,20 +830,26 @@ A user may delete an original message (and all its children) from their account 
 
 ```javascript
 {
-	id: 'ID of conversation to remove (String)',
+	ids: [
+		'IDs of conversation to remove (String)',
+		// ...
+	],
 	authToken: 'Decrypted authToken (Base64 String)'
 }
 ```
 
 If the message does not exist, does not belong to the owner, the server will reply with `{error: 404}`. If the message is not an original message, the server will reply with `{error: 400}`
 
-When a conversation is removed by a user, other users in the conversation will have the conversation marked as modified so they may fetch the conversation object with its new removal event. 
+When a conversation is removed by a user, other users in the conversation will have the conversation marked as modified so they may fetch the conversation object with its new removal event.
 
 ####File Deletion
 A user may delete a message from their account with a `removeFile` message:
 ```javascript
 {
-	id: 'ID of file to remove (String)',
+	ids: [
+		'IDs of file to remove (String)',
+		// ...
+    ],
 	authToken: 'Decrypted authToken (Base64 String)'
 }
 ```
@@ -851,7 +858,10 @@ A user may delete a message from their account with a `removeFile` message:
 A user may ask the server to "nuke" a file (immediately delete it and remove it from all accounts it has been shared with) with a `nukeFile` message:
 ```javascript
 {
-	id: 'ID of file to nuke (String)',
+	ids: [
+		'IDs of file to nuke (String)',
+		// ...
+    ],
 	authToken: 'Decrypted authToken (Base64 String)'
 }
 ```
@@ -873,17 +883,17 @@ The client can also fetch the contents of a individual messages by sending a `ge
 }
 ```
 
-If a message does not exist, or if the user is not linked to the message (as a sender, recipient, or is removed, etc.) then the server sends a <strong style="color:red">`{ error: 404}`</strong>. Errors will be sent 
+If a message does not exist, or if the user is not linked to the message (as a sender, recipient, or is removed, etc.) then the server sends a <strong style="color:red">`{ error: 404}`</strong>. Errors will be sent
 
 The server will return the following:
 ```javascript
 	{
 		messages: {
-			'id of a message {string}' : { 
+			'id of a message {string}' : {
 				// message object as specified below
 			}
 		}, errors: {
-				'id of a message {string}' : { 
+				'id of a message {string}' : {
 					{ error: 'error code (Number)' }
 				}
 				//...
@@ -891,7 +901,7 @@ The server will return the following:
 	}
 ```
 
-The individual message structure will be as follows, if the user fetching it is the **sender** of the message: 
+The individual message structure will be as follows, if the user fetching it is the **sender** of the message:
 
 ```javascript
 {
@@ -916,7 +926,7 @@ The individual message structure will be as follows, if the user fetching it is 
 }
 ```
 
-The individual message structure will be as follows, if the user fetching it is the recipient of the message: 
+The individual message structure will be as follows, if the user fetching it is the recipient of the message:
 
 ```javascript
 {
@@ -952,7 +962,7 @@ In order to receive all messages for a certain user, the client sends a `getAllM
 }
 ```
 
-The server responds with: 
+The server responds with:
 ```javascript
 {
 	conversations: {
@@ -976,7 +986,7 @@ In order to receive all conversations and their first message for a certain user
 }
 ```
 
-The server responds with: 
+The server responds with:
 ```javascript
 {
 	conversations: {
@@ -993,23 +1003,23 @@ The server responds with:
 				}
 			},
 			events: [
-				{ 
-					type: 'type of event, e.g. "remove" (String)', 
-					username: 'ID of user', 
-					timestamp: 'timestamp of event (String)' 
+				{
+					type: 'type of event, e.g. "remove" (String)',
+					username: 'ID of user',
+					timestamp: 'timestamp of event (String)'
 				}
 			]
 		}
-		// ... 
+		// ...
 	}
 }
 ```
 
-The only event type at the moment is `remove`. The `participants` array may contain fewer participants than the `approvedParticipants` value, and an `event` will track the removal of a participant. 
+The only event type at the moment is `remove`. The `participants` array may contain fewer participants than the `approvedParticipants` value, and an `event` will track the removal of a participant.
 
 #### Fetching specific conversations
 
-The call `getConversationMessages` is **deprecated** and should no longer be used. 
+The call `getConversationMessages` is **deprecated** and should no longer be used.
 
 The client may also fetch conversations by ID with `getConversationPages` :
 
@@ -1017,7 +1027,7 @@ The client may also fetch conversations by ID with `getConversationPages` :
 {
 	authToken: 'Decrypted authToken (Base64 String)',
 	conversations: [
-		{ 
+		{
 			id: 'id of conversation (String)',
 			page: 'String, see below'
 		}
@@ -1041,7 +1051,7 @@ The format of the response will be similar to that for fetching all conversation
 			folderID: 'ID of folder (String)',
 			messageCount: 'number of messages in the conversation (Number)',
 			messages: {
-				'id of message' : { 
+				'id of message' : {
 					// message object
 				}
 				// ...
@@ -1053,24 +1063,24 @@ The format of the response will be similar to that for fetching all conversation
 				]
 			},
 			events: [
-				{ 
-					type: 'type of event, e.g. "remove" (String)', 
-					username: 'ID of user', 
-					timestamp: 'timestamp of event (String)' 
+				{
+					type: 'type of event, e.g. "remove" (String)',
+					username: 'ID of user',
+					timestamp: 'timestamp of event (String)'
 				}
 			]
 		}
-		// ... 
-	}, 
+		// ...
+	},
 	errors {
 		'ID of conversation (String)' : 'error code (Number)'
 	}
 }
 ```
 
-The structure of each individual message will follow that of individual messages (see above). 
+The structure of each individual message will follow that of individual messages (see above).
 
-If the requested conversation(s) do not exist, or if the user is not a participant in the conversation (anymore, or ever) then the server sends a <strong style="color:red">`{ error: 404}`</strong> for that conversation. 
+If the requested conversation(s) do not exist, or if the user is not a participant in the conversation (anymore, or ever) then the server sends a <strong style="color:red">`{ error: 404}`</strong> for that conversation.
 
 ### Fetching All Conversation IDs
 
@@ -1081,7 +1091,7 @@ In order to receive all conversation IDs for a certain user, the client sends a 
 }
 ```
 
-The server responds with: 
+The server responds with:
 ```javascript
 {
 	conversationIDs: [
@@ -1099,7 +1109,7 @@ In order to receive all conversation IDs for a certain user, the client sends a 
 }
 ```
 
-The server responds with: 
+The server responds with:
 ```javascript
 {
 	conversationIDs: [
@@ -1119,7 +1129,7 @@ In order to receive all messages for a certain user, the client sends a `getMess
 }
 ```
 
-The server responds with: 
+The server responds with:
 ```javascript
 {
 	messageIDs: [
@@ -1128,9 +1138,9 @@ The server responds with:
 }
 ```
 
-This includes the IDs of *all* messages the user has access to, including sent, received and drafts. 
+This includes the IDs of *all* messages the user has access to, including sent, received and drafts.
 
-If the user has no messages the server will respond with an emtpy array: 
+If the user has no messages the server will respond with an emtpy array:
 
 ```javascript
 {
@@ -1147,7 +1157,7 @@ In order to receive all modified messages for a certain user, the client sends a
 }
 ```
 
-The server responds with: 
+The server responds with:
 ```javascript
 {
 	messageIDs: [
@@ -1156,7 +1166,7 @@ The server responds with:
 }
 ```
 
-This includes the IDs of *all* messages the user has access to, including sent, received and drafts. 
+This includes the IDs of *all* messages the user has access to, including sent, received and drafts.
 
 If the user has no modified messages the server will respond with an empty array:
 
@@ -1180,7 +1190,7 @@ The server responds with :
 	files: {
 		'ID of file (String)' : {
 			id: 'ID of file (String)',
-			header: 'Header of file (JSON String)', 
+			header: 'Header of file (JSON String)',
 			timestamp: 'Integer',
 			size: 'Integer',
 			creator: 'Peerio username of file uploader (String)',
@@ -1192,7 +1202,7 @@ The server responds with :
 }
 ```
 
-The `sender` object contains information for the first user who shared the file with the requesting user, and may be the same as the `creator` object. will be omitted if the user requesting the file is the creator. 
+The `sender` object contains information for the first user who shared the file with the requesting user, and may be the same as the `creator` object. will be omitted if the user requesting the file is the creator.
 
 ####Fetching Information for a Single File
 
@@ -1205,12 +1215,12 @@ An individual file may be requested with `getFile`:
 }
 ```
 
-The server will respond with: 
+The server will respond with:
 
 ```javascript
 {
 	id: 'ID of file (String)',
-	header: 'Header of file (JSON String)', 
+	header: 'Header of file (JSON String)',
 	timestamp: 'Integer',
 	size: 'Integer',
 	creator: 'Peerio username of file uploader (String)',
@@ -1223,9 +1233,9 @@ If the user making the request does not have  permission to view the file, the s
 
 ### Fetching All File IDs
 
-The client may request an array of file IDs with `getFileIDs`. The response will be: 
+The client may request an array of file IDs with `getFileIDs`. The response will be:
 ```javascript
-{ 
+{
 	ids: [
 		'ID of file (String)'
 		...
@@ -1252,7 +1262,7 @@ If the file does not exist, or if the user is not linked to the message (as a se
 }
 ```
 
-If the file is market as auto-destruct, destruction will be triggered when this call is made. 
+If the file is market as auto-destruct, destruction will be triggered when this call is made.
 
 ####Moving a File
 When a user moves a file, the client will send the entire changed filesystem structure to the server.
@@ -1298,7 +1308,7 @@ The server will return with:
 ```javascript
 {
 	accountType: 'Account type of user (Peerio plan) (String)',
-	username: "username (String)", 
+	username: "username (String)",
 	firstName: 'User first name (String)',
 	lastName: 'User last name (String)',
 	paymentPlan: 'String (free, pro)'
@@ -1306,7 +1316,7 @@ The server will return with:
 		{
 			type: '"email" or "phone" (String)',
 			value: 'Email or phone number (String)',
-			isConfirmed: boolean, 
+			isConfirmed: boolean,
 			isPrimary: boolean
 		}
 		...
@@ -1325,7 +1335,7 @@ The server will return with:
 }
 ```
 
-The user's primary address will be listed first in the `addresses` array. 
+The user's primary address will be listed first in the `addresses` array.
 
 #### Updating user settings
 **Input Validation**: See §B.3.A.
@@ -1438,31 +1448,32 @@ A user may choose to close their Peerio account via a `closeAccount` message:
 }
 ```
 
-If a user has `twoFactorAuth` enabled, closing an account will require passing through two-factor authentication for a special operation. 
+If a user has `twoFactorAuth` enabled, closing an account will require passing through two-factor authentication for a special operation.
 
 After closing their account, the user will no longer be able to log on. Closing an account will remove the user's participation in all conversations, and remove their ownership from all files. All of their outgoing and incoming contact requests will be removed. Contact relationships will remain, but the user will be marked as `isDeleted` to their contacts. The user's confirmed addresses (emails and phone numbers) will be made available for future registration, but their username will stay blocked forever.
 
 ###13. Receiving updates
 
-When a client connects to the server, the server will start polling changes to certain data belonging to the user. When new data is available, it will send a message to the client, which will have to authenticate to request this new data. 
+When a client connects to the server, the server will start polling changes to certain data belonging to the user. When new data is available, it will send a message to the client, which will have to authenticate to request this new data.
 
-The server will push events to the client at different intervals based on priority. 
+The server will push events to the client at different intervals based on priority.
 
-High priority/frequency: 
+High priority/frequency:
 - `modifiedMessagesAvailable` - Sent when a new message has been received, or a receipt has been added to a message.
 
-Medium priority/frequency: 
+Medium priority/frequency:
 - `receivedContactRequestsAvailable` - Sent when someone has added the user as a contact.
 - `newContactsAvailable` - Sent when someone has accepted a contact request sent by the user.
 
 Low priority/frequency:
+- `uploadedFilesAvailable` - Sent when the number of files a user has uploaded (ie. not received from someone else) changes.
 - `sentContactRequestsAvailable` - Sent when the number of sent contact requests changes (generally means a new contact, or can mean a rejected contact request).
 - `contactsAvailable` - Sent when the number of contacts has changed, generally either the same as when a new contact has accepted a request OR also if someone has removed the user as a contact.
-- `modifiedConversationsAvailable` - Sent when the events in a conversation have changed, ie. a participant has removed/left the conversation. 
+- `modifiedConversationsAvailable` - Sent when the events in a conversation have changed, ie. a participant has removed/left the conversation.
 
-When the client receives these messages, it will request data from the server normally, ie. by sending `getReceivedContactRequests`, `getContacts` and `getModifiedMessageIDs` messages to the server respectively, with all necessary parameters (including a valid `authToken`). 
+When the client receives these messages, it will request data from the server normally, ie. by sending `getReceivedContactRequests`, `getContacts` and `getModifiedMessageIDs` messages to the server respectively, with all necessary parameters (including a valid `authToken`).
 
-The server will poll at regular intervals while the client is connected. 
+The server will poll at regular intervals while the client is connected.
 
 ###14. Two-Factor Authentication
 **Input Validation**: See §B.3.A.
@@ -1470,7 +1481,7 @@ The server will poll at regular intervals while the client is connected.
 Two-factor authentication uses the Time-Based One-time Password standard in order to mandate that the Peerio server periodically ask the user for an additional authentication vector before issuing `authToken`s.
 
 ####Enabling Two-Factor Authentication
-To enable two-factor authentication, the client sends a `setUp2FA` message with a valid authentication token. 
+To enable two-factor authentication, the client sends a `setUp2FA` message with a valid authentication token.
 
 The server **does not** immediately change the `2fa` settings record of the user from `false` to `true`. Instead, it first sends the client a response containing the TOTP secret:
 
@@ -1502,12 +1513,12 @@ A client can renew their two-factor authentication status simply by sending thei
 }
 ```
 
-If the code is correct, the server returns an empty object. If not, the server returns an object with an `error` property. Users will be required to authenticate using two-factor authentication once per week per IP address. When preforming "protected" operations, such as changing their settings or authorizing addresses, users will be required to have authenticated using two-factor authentication in the last minute. 
+If the code is correct, the server returns an empty object. If not, the server returns an object with an `error` property. Users will be required to authenticate using two-factor authentication once per week per IP address. When preforming "protected" operations, such as changing their settings or authorizing addresses, users will be required to have authenticated using two-factor authentication in the last minute.
 
-Entering an inforrect two-factor authentication code more than 10 times may result in a user's account being temporarily suspended from making any requests to the application. 
+Entering an incorrect two-factor authentication code more than 10 times may result in a user's account being temporarily suspended from making any requests to the application.
 
 #### Disabling Two-Factor Authentication
 
-The client may use a normal `updateSettings` message for disabling two-factor authentication (though it may not use this call to _enable_ it). Updating settings is a protected operation, so two-factor authentication must be passed to complete disabling. 
+The client may use a normal `updateSettings` message for disabling two-factor authentication (though it may not use this call to _enable_ it). Updating settings is a protected operation, so two-factor authentication must be passed to complete disabling.
 
 
