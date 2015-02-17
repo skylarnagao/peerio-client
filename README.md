@@ -838,7 +838,23 @@ A user may delete an original message (and all its children) from their account 
 }
 ```
 
-If the message does not exist, does not belong to the owner, the server will reply with `{error: 404}`. If the message is not an original message, the server will reply with `{error: 400}`
+The server will respond with: 
+
+```javascript 
+{
+	errors: {
+		'ID of conversation (string)' : 'error code (string)'
+		//...
+	}, 
+	success: [
+		'ID of conversation (string)',
+		//...	
+	]
+	
+}
+```
+
+If the conversation does not exist or does not belong to the owner, the code associated with the conversation ID will be `404`. If some other error occurred the error code will be `400`.
 
 When a conversation is removed by a user, other users in the conversation will have the conversation marked as modified so they may fetch the conversation object with its new removal event.
 
@@ -854,6 +870,24 @@ A user may delete a message from their account with a `removeFile` message:
 }
 ```
 
+The server will respond with: 
+
+```javascript 
+{
+	errors: {
+		'ID of file (string)' : 'error code (string)'
+		//...
+	}, 
+	success: [
+		'ID of file (string)',
+		//...	
+	]
+	
+}
+```
+
+If the file does not exist or does not belong to the owner, the code associated with the file ID will be `404`. If some other error occurred the error code will be `400`.
+
 ####Nuke a File
 A user may ask the server to "nuke" a file (immediately delete it and remove it from all accounts it has been shared with) with a `nukeFile` message:
 ```javascript
@@ -865,6 +899,25 @@ A user may ask the server to "nuke" a file (immediately delete it and remove it 
 	authToken: 'Decrypted authToken (Base64 String)'
 }
 ```
+
+The server will respond with: 
+
+```javascript 
+{
+	errors: {
+		'ID of file (string)' : 'error code (string)'
+		//...
+	}, 
+	success: [
+		'ID of file (string)',
+		//...	
+	]
+	
+}
+```
+
+If the file does not exist or does not belong to the owner, the code associated with the file ID will be `404`. If some other error occurred the error code will be `400`.
+
 
 ###9. Fetching a Message or File
 **Input Validation**: See §B.3.A.
