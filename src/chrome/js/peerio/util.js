@@ -20,8 +20,8 @@ Peerio.util = {};
 			'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
 		]
 		var d = new Date(parseInt(timestamp))
-		var date = d.getDate() + '/'
-		date += (months[d.getMonth()]) + '/'
+		var date = d.getDate() + ' '
+		date += (months[d.getMonth()]) + ' '
 		date += d.getFullYear()
 		var time = (function() {
 			var hours = d.getHours()

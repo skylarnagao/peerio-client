@@ -18,7 +18,12 @@ Peerio.UI.controller('userMenu', function($scope) {
 		$scope.userMenu.avatarIcon4 = 'data:image/png;base64,' + new Identicon(
 			avatar[1].substring(16, 32), 30
 		).toString()
-		$scope.userMenu.firstName = Peerio.user.firstName
+		if (Peerio.user.firstName.length >= 11) {
+			$scope.userMenu.firstName = Peerio.user.firstName.substring(0, 8) + '..'
+		}
+		else {
+			$scope.userMenu.firstName = Peerio.user.firstName
+		}
 		$scope.$apply()
 	}
 	$scope.userMenu.openAccountSettings = function() {
