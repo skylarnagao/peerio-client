@@ -342,10 +342,8 @@ Peerio.user = {};
 	 */
 	Peerio.user.popAuthToken = function() {
 		// Automatically recharge authTokens if we're close to running out
-		if (Peerio.user.authTokens.length <= 10) {
-			for (var i = 0; i < 2; i++) {
-				Peerio.network.getAuthTokens(Peerio.crypto.decryptAuthTokens)
-			}
+		if (Peerio.user.authTokens.length <= 32) {
+			Peerio.network.getAuthTokens(Peerio.crypto.decryptAuthTokens)
 		}
 		var authToken = Peerio.user.authTokens[0]
 		Peerio.user.authTokens.splice(0, 1)
