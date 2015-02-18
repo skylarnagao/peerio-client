@@ -16,8 +16,8 @@
 <signupProgress "signup progress">
 <basicInformation "Basic information">
 <desiredUsername "Desired username">
-<usernameNotAvailable "this username is already taken.">
-<addressNotAvailable "this address is already in use.">
+<usernameNotAvailable "username is invalid or unavailable.">
+<addressNotAvailable "address is invalid or unavailable.">
 <firstName "First name">
 <lastName "Last name">
 <emailOrPhone "Email or phone">

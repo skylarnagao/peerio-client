@@ -16,8 +16,8 @@
 <signupProgress "progrès d'abonnement">
 <basicInformation "Information de base">
 <desiredUsername "Nom d'utilisateur désiré">
-<usernameNotAvailable "ce nom d'utilisateur est déjà utilisé.">
-<addressNotAvailable "cette addresse est déjà utilisée">
+<usernameNotAvailable "nom d'utilisateur invalide ou indisponible.">
+<addressNotAvailable "addresse invalide ou indisponible">
 <firstName "Prénom">
 <lastName "Nom">
 <emailOrPhone "Courriel ou # de tél">
