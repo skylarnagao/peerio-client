@@ -502,7 +502,7 @@
 					<h3 ng-show="messagesSection.conversation" ng-bind="messagesSection.conversation.original.decrypted.subject"></h3>
 					<div ng-show="messagesSection.conversationIsLoading" class="messagesSectionMessageViewLoading" alt="" ng-style="resize()" resize="0,405"></div>
 					<div ng-show="messagesSection.conversation&&!messagesSection.conversationIsLoading" class="messagesSectionMessageViewSingles" ng-style="resize()" resize="0,405">
-						<div ng-repeat="message in messagesSection.conversation.messages | orderObjectBy:'timestamp':false" ng-show="messagesSection.checkSearchFilter(message)">
+						<div ng-repeat="message in messagesSection.conversation.messages | orderObjectBy:'timestamp':false">
 							<div class="messagesSectionMessageViewAcknowledgement"
 								 ng-if="messagesSection.messageIsAck(message)">
 								<span class="fontAwesome">&#xf087;</span>
