@@ -411,12 +411,12 @@ Peerio.network.readMessages = function(read, callback) {
 
 /**
  * Remove a conversation and optionally also remove files. Uses an authToken.
- * @param {string} id
+ * @param {array} ids
  * @param {function} callback - Callback function with server data.
  */
-Peerio.network.removeConversation = function(id, callback) {
+Peerio.network.removeConversation = function(ids, callback) {
 	Peerio.socket.emit('removeConversation', {
-		id: id,
+		ids: ids,
 		authToken: Peerio.user.popAuthToken()
 	}, callback)
 }
@@ -485,24 +485,24 @@ Peerio.network.downloadFile = function(id, callback) {
 
 /**
  * Delete a file. Uses an authToken.
- * @param {string} id
+ * @param {array} ids - Contains id strings.
  * @param {function} callback - Callback function with server data.
  */
-Peerio.network.removeFile = function(id, callback) {
+Peerio.network.removeFile = function(ids, callback) {
 	Peerio.socket.emit('removeFile', {
-		id: id,
+		ids: ids,
 		authToken: Peerio.user.popAuthToken()
 	}, callback)
 }
 
 /**
  * Nuke a file. Uses an authToken.
- * @param {string} id
+ * @param {array} ids - Contains id strings.
  * @param {function} callback - Callback function with server data.
  */
-Peerio.network.nukeFile = function(id, callback) {
+Peerio.network.nukeFile = function(ids, callback) {
 	Peerio.socket.emit('nukeFile', {
-		id: id,
+		ids: ids,
 		authToken: Peerio.user.popAuthToken()
 	}, callback)
 }

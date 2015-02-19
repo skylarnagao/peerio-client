@@ -68,8 +68,14 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 		}
 	}
 	$scope.filesSection.onCheck = function(id, event) {
+		if (/Sidebar/.test($element[0].className)) {
+			return false
+		}
 		if (event.target.checked) {
-			$scope.filesSection.checkedIDs.push(id)
+			var index = $scope.filesSection.checkedIDs.indexOf(id)
+			if (index < 0) {
+				$scope.filesSection.checkedIDs.push(id)
+			}
 		}
 		else {
 			var index = $scope.filesSection.checkedIDs.indexOf(id)
@@ -155,6 +161,9 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 		}, 100)
 	}
 	$scope.filesSection.removeFiles = function(ids) {
+		if (/Sidebar/.test($element[0].className)) {
+			return false
+		}
 		swal({
 			title: document.l10n.getEntitySync('removeFilesQuestion').value,
 			text: document.l10n.getEntitySync('removeFilesText').value,
@@ -165,22 +174,25 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 			confirmButtonText: document.l10n.getEntitySync('remove').value,
 			closeOnConfirm: false
 		}, function() {
-			ids.forEach(function(id) {
-				Peerio.file.removeFile(id, function() {
+			Peerio.file.removeFile(ids, function() {
+				ids.forEach(function(id) {
 					var index = $scope.filesSection.checkedIDs.indexOf(id)
 					if (index >= 0) {
 						$scope.filesSection.checkedIDs.splice(index, 1)
 					}
-					Peerio.network.getSettings(function(data) {
-						Peerio.user.quota = data.quota
-						$scope.$apply()
-					})
+				})
+				Peerio.network.getSettings(function(data) {
+					Peerio.user.quota = data.quota
+					$scope.$apply()
 				})
 			})
 			$scope.filesSection.hideListingActions('')
 		})
 	}
 	$scope.filesSection.nukeFiles = function(ids) {
+		if (/Sidebar/.test($element[0].className)) {
+			return false
+		}
 		var ownAllFiles = true
 		ids.forEach(function(id) {
 			if (Peerio.user.files[id].creator !== Peerio.user.username) {
@@ -206,16 +218,16 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 			confirmButtonText: document.l10n.getEntitySync('destroy').value,
 			closeOnConfirm: false
 		}, function() {
-			ids.forEach(function(id) {
-				Peerio.file.nukeFile(id, function() {
+			Peerio.file.nukeFile(ids, function() {
+				ids.forEach(function(id) {
 					var index = $scope.filesSection.checkedIDs.indexOf(id)
 					if (index >= 0) {
 						$scope.filesSection.checkedIDs.splice(index, 1)
 					}
-					Peerio.network.getSettings(function(data) {
-						Peerio.user.quota = data.quota
-						$scope.$apply()
-					})
+				})
+				Peerio.network.getSettings(function(data) {
+					Peerio.user.quota = data.quota
+					$scope.$apply()
 				})
 			})
 			$scope.filesSection.hideListingActions('')

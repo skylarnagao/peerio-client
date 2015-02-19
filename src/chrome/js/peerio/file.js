@@ -185,14 +185,20 @@ Peerio.file = {
 	}
 
 	/**
-	 * Remove a file from user's account and locally from Peerio.user.files.
-	 * @param {string} id
+	 * Remove files from user's account and locally from Peerio.user.files.
+	 * @param {array} ids
 	 * @param {function} callback - with server returned data.
 	 */
-	Peerio.file.removeFile = function(id, callback) {
-		Peerio.network.removeFile(id, function(data) {
-			if (!({}).hasOwnProperty.call(data, 'error')) {
-				delete Peerio.user.files[id]
+	Peerio.file.removeFile = function(ids, callback) {
+		Peerio.network.removeFile(ids, function(data) {
+			console.log(data)
+			console.log(ids)
+			if (({}).hasOwnProperty.call(data, 'success')) {
+				data.success.forEach(function(s) {
+					if (ids.indexOf(s) >= 0) {
+						delete Peerio.user.files[s]
+					}
+				})
 			}
 			if (typeof(callback) === 'function') {
 				callback(data)
@@ -202,13 +208,19 @@ Peerio.file = {
 
 	/**
 	 * Nuke a file from user's account and remove it locally from Peerio.user.files.
-	 * @param {string} id
+	 * @param {array} ids
 	 * @param {function} callback - with server returned data.
 	 */
-	Peerio.file.nukeFile = function(id, callback) {
-		Peerio.network.nukeFile(id, function(data) {
-			if (!({}).hasOwnProperty.call(data, 'error')) {
-				delete Peerio.user.files[id]
+	Peerio.file.nukeFile = function(ids, callback) {
+		Peerio.network.nukeFile(ids, function(data) {
+			console.log(data)
+			console.log(ids)
+			if (({}).hasOwnProperty.call(data, 'success')) {
+				data.success.forEach(function(s) {
+					if (ids.indexOf(s) >= 0) {
+						delete Peerio.user.files[s]
+					}
+				})
 			}
 			if (typeof(callback) === 'function') {
 				callback(data)

@@ -741,22 +741,27 @@ Peerio.UI.controller('messagesSection', function($scope, $element, $sce, $filter
 			Peerio.storage.db.get('conversations', function(err, conversations) {
 				Peerio.storage.db.remove(conversations, function() {
 					ids.forEach(function(id) {
-						delete conversations[id]
+						if (({}).hasOwnProperty.call(conversations, id)) {
+							delete conversations[id]
+						}
 					})
 					Peerio.storage.db.put(conversations, function() {
 					})
 				})
 			})
-			ids.forEach(function(id) {
-				Peerio.network.removeConversation(id, function(data) {
-					if (!({}).hasOwnProperty.call(data, 'error')) {
-						delete Peerio.user.conversations[id]
-						delete $scope.messagesSection.conversation
-						$scope.messagesSection.conversationIsLoading = false
-						$scope.messagesSection.checkedIDs = []
-						$scope.$apply()
-					}
-				})
+			Peerio.network.removeConversation(ids, function(data) {
+				console.log(data)
+				if (({}).hasOwnProperty.call(data, 'success')) {
+					data.success.forEach(function(s) {
+						if (ids.indexOf(s) >= 0) {
+							delete Peerio.user.conversations[s]
+						}
+					})
+					delete $scope.messagesSection.conversation
+					$scope.messagesSection.conversationIsLoading = false
+					$scope.messagesSection.checkedIDs = []
+					$scope.$apply()
+				}
 			})
 		}
 		var isDraft = false
