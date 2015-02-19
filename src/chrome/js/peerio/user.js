@@ -419,8 +419,8 @@ Peerio.user = {};
 
 	/**
 	 * Get all contacts and contact requests, organize them in an object, and return it.
-	 * Also stores the result as Peerio.user.contacts.
-	 * @param {function} callback - returned with contacts object.
+	 * Also stores the result as Peerio.user.contacts, and does TOFU checks.
+	 * @param {function} callback - returned with true or false in case of TOFU error.
 	 */
 	Peerio.user.getAllContacts = function(callback) {
 		var contacts = {}
@@ -472,9 +472,53 @@ Peerio.user = {};
 						request.isMe = false
 						contacts[request.username] = request
 					})
-					if (typeof(callback) === 'function') {
-						callback(contacts)
-					}
+					Peerio.user.getTOFU(Peerio.user.username, function(isTOFU) {
+						if (
+							isTOFU &&
+							(typeof(Peerio.user.TOFU) === 'object') &&
+							Object.keys(Peerio.user.TOFU).length
+						) {
+							var compareTOFU = Peerio.util.compareTOFU(Peerio.user.TOFU)
+							if (compareTOFU.notMatch.length) {
+								Peerio.user.contacts = contacts
+								Peerio.user.setTOFU(Peerio.util.getNewTOFU, Peerio.user.username)
+								if (typeof(callback) === 'function') {
+									callback(false)
+								}
+							}
+							else if (compareTOFU.notFound.length) {
+								Peerio.user.contacts = contacts
+								Peerio.user.setTOFU(Peerio.util.getNewTOFU, Peerio.user.username)
+								if (typeof(callback) === 'function') {
+									callback(true)
+								}
+							}
+							else {
+								Peerio.user.contacts = contacts
+								console.log('TOFU check passed')
+								if (typeof(callback) === 'function') {
+									callback(true)
+								}
+							}
+						}
+						if (!isTOFU) {
+							Peerio.user.contacts = contacts
+							Peerio.user.setTOFU(
+								Peerio.util.getNewTOFU(),
+								Peerio.user.username,
+								function() {}
+							)
+							if (typeof(callback) === 'function') {
+								callback(true)
+							}
+						}
+						else {
+							Peerio.user.contacts = contacts
+							if (typeof(callback) === 'function') {
+								callback(true)
+							}
+						}
+					})
 				})
 			})
 		})

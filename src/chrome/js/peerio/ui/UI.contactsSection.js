@@ -28,52 +28,21 @@ Peerio.UI.controller('contactsSection', function($scope, $element, $sce) {
 		if (/Sidebar/.test($element[0].className)) {
 			return false
 		}
-		Peerio.user.getAllContacts(function(contacts) {
-			$scope.contactsSection.contacts = contacts
+		Peerio.user.getAllContacts(function(success) {
+			if (!success) {
+				swal({
+					title: document.l10n.getEntitySync('TOFUNotMatchError').value,
+					text: document.l10n.getEntitySync('TOFUNotMatchErrorText').value + compareTOFU.notMatch.join(', '),
+					type: 'warning',
+					confirmButtonColor: '#e07a66',
+					confirmButtonText: document.l10n.getEntitySync('OK').value,
+				})
+			}
+			$scope.contactsSection.contacts = Peerio.user.contacts
 			$scope.contactsSection.conversations = Peerio.user.conversations
 			$scope.contactsSection.files = Peerio.user.files
 			$scope.$apply()
 			Peerio.UI.applyDynamicElements()
-			Peerio.user.getTOFU(Peerio.user.username, function(isTOFU) {
-				if (
-					isTOFU &&
-					(typeof(Peerio.user.TOFU) === 'object') &&
-					Object.keys(Peerio.user.TOFU).length
-				) {
-					var compareTOFU = Peerio.util.compareTOFU(Peerio.user.TOFU)
-					if (compareTOFU.notMatch.length) {
-						swal({
-							title: document.l10n.getEntitySync('TOFUNotMatchError').value,
-							text: document.l10n.getEntitySync('TOFUNotMatchErrorText').value + compareTOFU.notMatch.join(', '),
-							type: 'warning',
-							confirmButtonColor: '#e07a66',
-							confirmButtonText: document.l10n.getEntitySync('OK').value,
-						}, function() {
-							Peerio.user.contacts = contacts
-							Peerio.user.setTOFU(Peerio.util.getNewTOFU, Peerio.user.username)
-						})
-					}
-					else if (compareTOFU.notFound.length) {
-						Peerio.user.contacts = contacts
-						Peerio.user.setTOFU(Peerio.util.getNewTOFU, Peerio.user.username)
-					}
-					else {
-						Peerio.user.contacts = contacts
-						console.log('TOFU check passed')
-					}
-				}
-				if (!isTOFU) {
-					Peerio.user.contacts = contacts
-					Peerio.user.setTOFU(
-						Peerio.util.getNewTOFU(),
-						Peerio.user.username,
-						function() {}
-					)
-				}
-				else {
-					Peerio.user.contacts = contacts
-				}
-			})
 			if (typeof(callback) === 'function') {
 				callback()
 				$scope.$apply()
