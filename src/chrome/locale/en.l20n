@@ -91,7 +91,7 @@
 <settings "Settings">
 <account "Account">
 <preferences "Preferences">
-<"help" "Help">
+<help "Help">
 <logout "Logout">
 <logoutConfirm "Log out from Peerio?">
 <logoutConfirmText "Please make sure you do not have any unsaved data prior to logging out.">
