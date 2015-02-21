@@ -24,6 +24,7 @@ Peerio.UI.controller('loginForm', function($scope) {
 					Peerio.user.settings = data.settings
 					Peerio.user.quota = data.quota
 					$scope.$root.$broadcast('mainTopPopulate', null)
+					$scope.$root.$broadcast('preferencesOnLogin', null)
 					$scope.$root.$broadcast('contactsSectionPopulate', function() {
 						$scope.$root.$broadcast('accountSettingsPopulate', null)
 						$scope.$root.$broadcast('messagesSectionPopulate', function() {
