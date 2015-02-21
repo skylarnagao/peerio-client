@@ -421,8 +421,9 @@ Peerio.user = {};
 	 * Get all contacts and contact requests, organize them in an object, and return it.
 	 * Also stores the result as Peerio.user.contacts, and does TOFU checks.
 	 * @param {function} callback - returned with true or false in case of TOFU error.
+	 * @param {function} onContact - called dynamically for every received contact.
 	 */
-	Peerio.user.getAllContacts = function(callback) {
+	Peerio.user.getAllContacts = function(callback, onContact) {
 		var contacts = {}
 		contacts[Peerio.user.username] = {
 			firstName: Peerio.user.firstName,
@@ -447,6 +448,9 @@ Peerio.user = {};
 						if (({}).hasOwnProperty.call(contact, prop)) {
 							contacts[contact.username][prop] = contact[prop]
 						}
+					}
+					if (typeof(onContact) === 'function') {
+						onContact(contact)
 					}
 				}
 			})

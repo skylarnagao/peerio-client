@@ -51,7 +51,7 @@ Peerio.socket = {};
 		if (({}).hasOwnProperty.call(message, 'received')) {
 			if (message.received === 'receivedContactRequestsAvailable') {
 				console.log('receivedContactRequestsAvailable')
-				setTimeout(Peerio.UI.contactsSectionPopulate, 1000)
+				Peerio.UI.contactsSectionPopulate()
 			}
 			if (message.received === 'modifiedMessagesAvailable') {
 				console.log('modifiedMessagesAvailable')
@@ -67,15 +67,15 @@ Peerio.socket = {};
 			}
 			if (message.received === 'newContactsAvailable') {
 				console.log('newContactsAvailable')
-				setTimeout(Peerio.UI.contactsSectionPopulate, 1000)
+				Peerio.UI.contactsSectionPopulate()
 			}
 			if (message.received === 'sentContactRequestsAvailable') {
 				console.log('sentContactRequestsAvailable')
-				setTimeout(Peerio.UI.contactsSectionPopulate, 1000)
+				Peerio.UI.contactsSectionPopulate()
 			}
 			if (message.received === 'contactsAvailable') {
 				console.log('contactsAvailable')
-				setTimeout(Peerio.UI.contactsSectionPopulate, 1000)
+				Peerio.UI.contactsSectionPopulate()
 			}
 			if (message.received === 'error') {
 				console.log('Peerio.socket: Connection error.')

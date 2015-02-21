@@ -219,6 +219,8 @@
 <cancel "Annuler">
 <removeContactSuccess "Votre contact a été supprimé avec succès.">
 <removeContactError "Vous ne pouvez pas enlever ce contact pour le moment. Essayez de nouveau.">
+<newContact "New contact!">
+<newContactText "You are now contacts with">
 
 <twoFactorAuth "Authentification à Deux Facteurs">
 <authenticate "Authentifier">
