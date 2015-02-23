@@ -50,6 +50,12 @@ mySocket.on('modifiedMessagesAvailable', function() {
 	})
 })
 
+mySocket.on('uploadedFilesAvailable', function() {
+	postMessage({
+		received: 'uploadedFilesAvailable'
+	})
+})
+
 mySocket.on('modifiedConversationsAvailable', function() {
 	postMessage({
 		received: 'modifiedConversationsAvailable'
