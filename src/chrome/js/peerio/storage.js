@@ -6,7 +6,8 @@
 // in order to provide reliable long-term storage on various platforms.
 
 Peerio.storage = {};
-Peerio.storage.options = Peerio.isMobile ? {adapter: 'websql'} : null;
+// when running on device, mobile app uses sqlite adapter and cordova plugin for PouchDB
+Peerio.storage.options = (Peerio.isMobile && !Peerio.isMobileInBrowser) ? {adapter: 'websql'} : null;
 
 (function() {
 	'use strict';
