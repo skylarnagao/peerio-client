@@ -12,6 +12,8 @@ Peerio.socket = {};
 
 	Peerio.socket.worker = new Worker('js/peerio/socketworker.js')
 
+	Peerio.socket.callbacks = {}
+
 	Peerio.socket.worker.onmessage = function(message) {
 		message = message.data
 		if (
@@ -92,8 +94,6 @@ Peerio.socket = {};
 
 	}
 
-	Peerio.socket.callbacks = {}
-
 	Peerio.socket.emit = function(name, content, callback) {
 		var callbackID = null
 		if (typeof(callback) === 'function') {
@@ -112,7 +112,8 @@ Peerio.socket = {};
 		// Automatically recharge authTokens if we're close to running out.
 		if (
 			(name !== 'authTokenRequest') &&
-			(Peerio.user.authTokens.length <= 5)
+			(Peerio.user.authTokens.length < 5) &&
+			(Object.keys(Peerio.socket.callbacks).length < 3)
 		) {
 			Peerio.network.getAuthTokens(function(authTokens) {
 				Peerio.crypto.decryptAuthTokens(authTokens)
