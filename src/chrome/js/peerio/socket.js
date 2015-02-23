@@ -109,7 +109,19 @@ Peerio.socket = {};
 		if (name === 'uploadFileChunk') {
 			transfer.push(post.content.ciphertext)
 		}
-		Peerio.socket.worker.postMessage(post, transfer)
+		// Automatically recharge authTokens if we're close to running out.
+		if (
+			(name !== 'authTokenRequest') &&
+			(Peerio.user.authTokens.length <= 5)
+		) {
+			Peerio.network.getAuthTokens(function(authTokens) {
+				Peerio.crypto.decryptAuthTokens(authTokens)
+				Peerio.socket.worker.postMessage(post, transfer)
+			})
+		}
+		else {
+			Peerio.socket.worker.postMessage(post, transfer)
+		}
 	}
 
 })()

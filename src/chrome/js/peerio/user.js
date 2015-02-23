@@ -339,7 +339,7 @@ Peerio.user = {};
 						*/
 						Peerio.crypto.decryptAuthTokens(authTokens)
 						if (typeof(callback) === 'function') {
-							callback(Peerio.user.authTokens.length > 0)
+							callback(true)
 						}
 					})
 				})
@@ -353,10 +353,6 @@ Peerio.user = {};
 	 * @return {string} authToken - authToken in Base64 format.
 	 */
 	Peerio.user.popAuthToken = function() {
-		// Automatically recharge authTokens if we're close to running out
-		if (Peerio.user.authTokens.length <= 32) {
-			Peerio.network.getAuthTokens(Peerio.crypto.decryptAuthTokens)
-		}
 		var authToken = Peerio.user.authTokens[0]
 		Peerio.user.authTokens.splice(0, 1)
 		return authToken
