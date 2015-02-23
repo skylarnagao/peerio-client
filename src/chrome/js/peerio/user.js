@@ -321,6 +321,7 @@ Peerio.user = {};
 			else {
 				Peerio.user.setKeyPair(passOrPIN, username, function() {
 					Peerio.network.getAuthTokens(function(authTokens) {
+						/*
 						if (
 							({}).hasOwnProperty.call(authTokens, 'error') &&
 							(authTokens.error === 424)
@@ -334,6 +335,11 @@ Peerio.user = {};
 							if (typeof(callback) === 'function') {
 								callback(Peerio.user.authTokens.length > 0)
 							}
+						}
+						*/
+						Peerio.crypto.decryptAuthTokens(authTokens)
+						if (typeof(callback) === 'function') {
+							callback(Peerio.user.authTokens.length > 0)
 						}
 					})
 				})
