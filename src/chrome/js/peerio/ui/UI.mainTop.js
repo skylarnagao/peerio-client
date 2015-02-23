@@ -60,7 +60,7 @@ Peerio.UI.controller('mainTop', function($scope) {
 		return $scope.mainTop.messagesNewCount
 	}
 	$scope.mainTop.getContactsNewCount = function() {
-		var count = $('span[ng-show="contact.isReceivedRequest"]:not(.ng-hide)').length
+		var count = $('span[data-ng-show="contact.isReceivedRequest"]:not(.ng-hide)').length
 		if (count !== $scope.mainTop.contactsNewCount) {
 			$scope.mainTop.contactsNewCount = count
 		}

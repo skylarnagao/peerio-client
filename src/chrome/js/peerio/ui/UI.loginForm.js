@@ -62,13 +62,13 @@ Peerio.UI.controller('loginForm', function($scope) {
 		}, 700)
 	}
 	$scope.login.showPassphrase = function() {
-		if ($('div.loginForm form [ng-model="login.passphrase"]').attr('type') === 'text') {
-			$('div.loginForm form [ng-model="login.passphrase"]').attr('type', 'password')
+		if ($('div.loginForm form [data-ng-model="login.passphrase"]').attr('type') === 'text') {
+			$('div.loginForm form [data-ng-model="login.passphrase"]').attr('type', 'password')
 			$('span.loginShowPassphraseEnable').show()
 			$('span.loginShowPassphraseDisable').hide()
 		}
 		else {
-			$('div.loginForm form [ng-model="login.passphrase"]').attr('type', 'text')
+			$('div.loginForm form [data-ng-model="login.passphrase"]').attr('type', 'text')
 			$('span.loginShowPassphraseEnable').hide()
 			$('span.loginShowPassphraseDisable').show()
 		}

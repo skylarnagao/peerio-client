@@ -621,7 +621,6 @@ Peerio.UI.controller('messagesSection', function($scope, $element, $sce, $filter
 				opener: 'messagesSection'
 			}
 		)
-			
 		$('div.frontModalsWrapper').addClass('visible')
 		$('div.attachFile').addClass('visible')
 		setTimeout(function() {
