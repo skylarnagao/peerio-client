@@ -339,7 +339,7 @@ Peerio.user = {};
 						*/
 						Peerio.crypto.decryptAuthTokens(authTokens)
 						if (typeof(callback) === 'function') {
-							callback(true)
+							callback(Peerio.user.authTokens.length > 0)
 						}
 					})
 				})

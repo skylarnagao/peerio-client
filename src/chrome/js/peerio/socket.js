@@ -112,8 +112,7 @@ Peerio.socket = {};
 		// Automatically recharge authTokens if we're close to running out.
 		if (
 			(name !== 'authTokenRequest') &&
-			(Peerio.user.authTokens.length < 5) &&
-			(Object.keys(Peerio.socket.callbacks).length < 3)
+			(Peerio.user.authTokens.length < 5)
 		) {
 			Peerio.network.getAuthTokens(function(authTokens) {
 				Peerio.crypto.decryptAuthTokens(authTokens)
