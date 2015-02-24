@@ -9,11 +9,9 @@ Peerio.UI.controller('signupForms', function($scope) {
 			return false
 		}
 		$scope.signup.username = $scope.signup.username.toLowerCase()
-		console.log($scope.signup.username)
 		Peerio.network.validateUsername(
 			$scope.signup.username,
 			function(data) {
-				console.log(data)
 				if (({}).hasOwnProperty.call(data, 'error')) {
 					$('div.signupUsernameAvailability').addClass('visible')
 					$('input.signupDesiredUsername').addClass('invalid')
