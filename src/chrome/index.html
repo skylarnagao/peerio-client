@@ -763,7 +763,11 @@
 								<span data-ng-bind="contactsSection.contact.username" class="headingSmall"></span>
 							</h1>
 							<h2 data-ng-bind="contactsSection.contact.primaryAddress"></h2>
-							<h2 class="contactsViewMiniLockID" data-ng-bind="contactsSection.contact.miniLockID"></h2>
+							<h2 class="contactsViewMiniLockID">
+								<span data-l10n-id="miniLockID"></span>
+								&nbsp;
+								<span data-ng-bind="contactsSection.contact.miniLockID"></span>
+							</h2>
 							<h2 class="contactsViewSubheading">
 								<span data-ng-show="contactsSection.contact.isMe" data-l10n-id="You"></span>
 							</h2>

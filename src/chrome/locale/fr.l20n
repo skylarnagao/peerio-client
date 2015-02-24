@@ -221,6 +221,7 @@
 <removeContactError "Vous ne pouvez pas enlever ce contact pour le moment. Essayez de nouveau.">
 <newContact "New contact!">
 <newContactText "You are now contacts with">
+<miniLockID "miniLock ID:">
 
 <twoFactorAuth "Authentification à Deux Facteurs">
 <authenticate "Authentifier">
