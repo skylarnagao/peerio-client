@@ -13,8 +13,8 @@ Peerio.UI.controller('loginForm', function($scope) {
 		})
 	}
 	$scope.$on('login', function(event, args) {
-		Peerio.user.login(args.username, args.passOrPIN, args.skipPIN, function(loginResult) {
-			if (loginResult) {
+		Peerio.user.login(args.username, args.passOrPIN, args.skipPIN, function() {
+			if (Peerio.user.authTokens.length) {
 				Peerio.network.getSettings(function(data) {
 					$scope.login.username = ''
 					$scope.login.passphrase = ''
@@ -36,17 +36,18 @@ Peerio.UI.controller('loginForm', function($scope) {
 						Peerio.UI.userMenuPopulate()
 					})
 				})
-				return false
 			}
-			swal({
-				title: document.l10n.getEntitySync('loginFailed').value,
-				text: document.l10n.getEntitySync('loginFailedText').value,
-				type: 'error',
-				confirmButtonText: document.l10n.getEntitySync('OK').value
-			}, function() {
-				$('div.loginForm form').find('input').first().select()
-				$('div.loginForm form').find('input').removeAttr('disabled')
-			})
+			else {
+				swal({
+					title: document.l10n.getEntitySync('loginFailed').value,
+					text: document.l10n.getEntitySync('loginFailedText').value,
+					type: 'error',
+					confirmButtonText: document.l10n.getEntitySync('OK').value
+				}, function() {
+					$('div.loginForm form').find('input').first().select()
+					$('div.loginForm form').find('input').removeAttr('disabled')
+				})
+			}
 		})
 	})
 	$scope.login.showSignupForm = function() {

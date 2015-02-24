@@ -272,7 +272,7 @@ Peerio.user = {};
 	 * @param {string} username
 	 * @param {string} passOrPIN
 	 * @param {boolean} skipPIN - Skip PIN check
-	 * @param {function} callback - with boolean of whether login was successful
+	 * @param {function} callback
 	 */
 	Peerio.user.login = function(username, passOrPIN, skipPIN, callback) {
 		Peerio.user.getPIN(username, function(PINExists) {
@@ -290,19 +290,12 @@ Peerio.user = {};
 							Peerio.user.keyPair.publicKey
 						)
 						Peerio.network.getAuthTokens(function(authTokens) {
-							if (
-								({}).hasOwnProperty.call(authTokens, 'error') &&
-								(authTokens.error === 424)
-							) {
-								Peerio.UI.twoFactorAuth(function() {
-									Peerio.user.login(username, passOrPIN, false, callback)
+							Peerio.crypto.decryptAuthTokens(authTokens)
+							if (typeof(callback) === 'function') {
+								Peerio.network.getAuthTokens(function(authTokens) {
+									Peerio.crypto.decryptAuthTokens(authTokens)
+									callback()
 								})
-							}
-							else {
-								Peerio.crypto.decryptAuthTokens(authTokens)
-								if (typeof(callback) === 'function') {
-									callback(Peerio.user.authTokens.length > 0)
-								}
 							}
 						})
 					}
@@ -314,19 +307,12 @@ Peerio.user = {};
 			else {
 				Peerio.user.setKeyPair(passOrPIN, username, function() {
 					Peerio.network.getAuthTokens(function(authTokens) {
-						if (
-							({}).hasOwnProperty.call(authTokens, 'error') &&
-							(authTokens.error === 424)
-						) {
-							Peerio.UI.twoFactorAuth(function() {
-								Peerio.user.login(username, passOrPIN, true, callback)
+						Peerio.crypto.decryptAuthTokens(authTokens)
+						if (typeof(callback) === 'function') {
+							Peerio.network.getAuthTokens(function(authTokens) {
+								Peerio.crypto.decryptAuthTokens(authTokens)
+								callback()
 							})
-						}
-						else {
-							Peerio.crypto.decryptAuthTokens(authTokens)
-							if (typeof(callback) === 'function') {
-								callback(Peerio.user.authTokens.length > 0)
-							}
 						}
 					})
 				})
