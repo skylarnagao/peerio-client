@@ -251,7 +251,6 @@ Peerio.user = {};
 			miniLockID: accountInfo.miniLockID,
 			localeCode: 'en'
 		}, function(data) {
-			console.log(data)
 			if (({}).hasOwnProperty.call(data, 'error')) {
 				if (typeof(errorCallback) === 'function') {
 					errorCallback(data)

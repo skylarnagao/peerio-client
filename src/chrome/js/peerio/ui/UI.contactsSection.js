@@ -50,9 +50,7 @@ Peerio.UI.controller('contactsSection', function($scope, $element, $sce) {
 			}
 			$('input.mainTopSearchSubmit').trigger('click')
 		}, function(contact) {
-			console.log(contact)
 			if (contact.isNew) {
-				console.log('new!')
 				Peerio.notification.show(Base58.encode(nacl.randomBytes(16)), {
 					title: document.l10n.getEntitySync('newContact').value,
 					message: document.l10n.getEntitySync('newContactText').value + ' ' + contact.firstName + ' ' + contact.lastName,

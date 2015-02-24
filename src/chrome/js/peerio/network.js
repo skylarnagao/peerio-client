@@ -70,6 +70,7 @@ Peerio.network.sendAccountConfirmation = function(confirmationCode, callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.getAuthTokens = function(callback) {
+	console.log('authTokenRequest')
 	Peerio.socket.emit('authTokenRequest', {
 		username: Peerio.user.username,
 		miniLockID: Peerio.user.miniLockID,

@@ -191,8 +191,6 @@ Peerio.file = {
 	 */
 	Peerio.file.removeFile = function(ids, callback) {
 		Peerio.network.removeFile(ids, function(data) {
-			console.log(data)
-			console.log(ids)
 			if (({}).hasOwnProperty.call(data, 'success')) {
 				data.success.forEach(function(s) {
 					if (ids.indexOf(s) >= 0) {
@@ -213,8 +211,6 @@ Peerio.file = {
 	 */
 	Peerio.file.nukeFile = function(ids, callback) {
 		Peerio.network.nukeFile(ids, function(data) {
-			console.log(data)
-			console.log(ids)
 			if (({}).hasOwnProperty.call(data, 'success')) {
 				data.success.forEach(function(s) {
 					if (ids.indexOf(s) >= 0) {

@@ -175,12 +175,7 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 			closeOnConfirm: false
 		}, function() {
 			Peerio.file.removeFile(ids, function() {
-				ids.forEach(function(id) {
-					var index = $scope.filesSection.checkedIDs.indexOf(id)
-					if (index >= 0) {
-						$scope.filesSection.checkedIDs.splice(index, 1)
-					}
-				})
+				$scope.filesSection.checkedIDs = []
 				Peerio.network.getSettings(function(data) {
 					Peerio.user.quota = data.quota
 					$scope.$apply()
@@ -219,12 +214,7 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 			closeOnConfirm: false
 		}, function() {
 			Peerio.file.nukeFile(ids, function() {
-				ids.forEach(function(id) {
-					var index = $scope.filesSection.checkedIDs.indexOf(id)
-					if (index >= 0) {
-						$scope.filesSection.checkedIDs.splice(index, 1)
-					}
-				})
+				$scope.filesSection.checkedIDs = []
 				Peerio.network.getSettings(function(data) {
 					Peerio.user.quota = data.quota
 					$scope.$apply()

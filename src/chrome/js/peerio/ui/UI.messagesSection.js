@@ -749,7 +749,6 @@ Peerio.UI.controller('messagesSection', function($scope, $element, $sce, $filter
 				})
 			})
 			Peerio.network.removeConversation(ids, function(data) {
-				console.log(data)
 				if (({}).hasOwnProperty.call(data, 'success')) {
 					data.success.forEach(function(s) {
 						if (ids.indexOf(s) >= 0) {
