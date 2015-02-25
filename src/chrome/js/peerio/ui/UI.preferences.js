@@ -68,7 +68,7 @@ Peerio.UI.controller('preferences', function($scope) {
 		event.preventDefault()
 		Peerio.UI.twoFactorAuth(function() {
 			Peerio.network.updateSettings({
-				receiveMessageNotifications: Peerio.user.settings.receiveMessageNotifications
+				receiveMessageNotifications: !Peerio.user.settings.receiveMessageNotifications
 			}, function(data) {
 				if (({}).hasOwnProperty.call(data, 'error')) {
 					$scope.preferences.receiveMessageNotifications = Peerio.user.settings.receiveMessageNotifications
@@ -98,7 +98,7 @@ Peerio.UI.controller('preferences', function($scope) {
 		event.preventDefault()
 		Peerio.UI.twoFactorAuth(function() {
 			Peerio.network.updateSettings({
-				useSounds: Peerio.user.settings.useSounds
+				useSounds: !Peerio.user.settings.useSounds
 			}, function(data) {
 				if (({}).hasOwnProperty.call(data, 'error')) {
 					$scope.preferences.useSounds = Peerio.user.settings.useSounds
