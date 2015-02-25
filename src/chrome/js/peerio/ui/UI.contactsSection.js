@@ -134,6 +134,13 @@ Peerio.UI.controller('contactsSection', function($scope, $element, $sce) {
 				avatar[1].substring(32, 64), 46
 			).toString()
 		}
+		else {
+			$scope.contactsSection.contact.avatarIcon1 = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs'
+			$scope.contactsSection.contact.avatarIcon2 = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs'
+			$scope.contactsSection.contact.avatarIcon3 = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs'
+			$scope.contactsSection.contact.avatarIcon4 = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs'
+		}
+		$scope.$apply()
 		if (typeof(event) === 'object') {
 			$('div.contactListItem').removeClass('selected')
 			if ($(event.target).hasClass('contactListItem')) {
