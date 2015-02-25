@@ -122,16 +122,16 @@ Peerio.UI.controller('contactsSection', function($scope, $element, $sce) {
 				Peerio.user.contacts[username].miniLockID
 			)
 			$scope.contactsSection.contact.avatarIcon1 = 'data:image/png;base64,' + new Identicon(
-				avatar[0].substring(0, 16), 46
+				avatar[0].substring(0, 32), 46
 			).toString()
 			$scope.contactsSection.contact.avatarIcon2 = 'data:image/png;base64,' + new Identicon(
-				avatar[0].substring(16, 32), 46
+				avatar[0].substring(32, 64), 46
 			).toString()
 			$scope.contactsSection.contact.avatarIcon3 = 'data:image/png;base64,' + new Identicon(
-				avatar[1].substring(0, 16), 46
+				avatar[1].substring(0, 32), 46
 			).toString()
 			$scope.contactsSection.contact.avatarIcon4 = 'data:image/png;base64,' + new Identicon(
-				avatar[1].substring(16, 32), 46
+				avatar[1].substring(32, 64), 46
 			).toString()
 		}
 		if (typeof(event) === 'object') {
