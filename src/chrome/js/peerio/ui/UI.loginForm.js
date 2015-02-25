@@ -5,7 +5,6 @@ Peerio.UI.controller('loginForm', function($scope) {
 	$scope.login.showLoading = false
 	$scope.login.login = function() {
 		Peerio.storage.init($scope.login.username)
-		$('div.loginForm form').find('input').attr('disabled', true)
 		$scope.login.username = $scope.login.username.toLowerCase()
 		$scope.$root.$broadcast('login', {
 			username: $scope.login.username,
@@ -14,9 +13,9 @@ Peerio.UI.controller('loginForm', function($scope) {
 		})
 	}
 	$scope.$on('login', function(event, args) {
+		$scope.login.showLoading = true
+		$scope.$apply()
 		Peerio.user.login(args.username, args.passOrPIN, args.skipPIN, function() {
-			$scope.login.showLoading = true
-			$scope.$apply()
 			if (Peerio.user.authTokens.length) {
 				Peerio.network.getSettings(function(data) {
 					$scope.login.username = ''

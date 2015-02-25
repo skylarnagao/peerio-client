@@ -73,10 +73,12 @@
 				<input type="text"
 					   data-l10n-id="username"
 					   data-ng-model="login.username"
+					   data-ng-disabled="login.showLoading"
 					   maxlength="16" autofocus required />
 				<input type="password"
 					   data-l10n-id="passphraseOrPIN"
 					   data-ng-model="login.passphrase"
+					   data-ng-disabled="login.showLoading"
 					   maxlength="256" required />
 				<button type="button"
 						data-ng-click="login.showPassphrase()"
