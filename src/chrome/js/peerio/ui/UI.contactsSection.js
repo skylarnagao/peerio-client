@@ -140,7 +140,6 @@ Peerio.UI.controller('contactsSection', function($scope, $element, $sce) {
 			$scope.contactsSection.contact.avatarIcon3 = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs'
 			$scope.contactsSection.contact.avatarIcon4 = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs'
 		}
-		$scope.$apply()
 		if (typeof(event) === 'object') {
 			$('div.contactListItem').removeClass('selected')
 			if ($(event.target).hasClass('contactListItem')) {
