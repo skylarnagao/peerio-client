@@ -476,7 +476,7 @@ div.loginForm input[type=password] {
 		border: 5px solid #efeeec;
 	}
 
-div.loginForm input[type=submit] {
+div.loginForm button[type=submit] {
 	background: #A5E593;
 	color: #FFF;
 	width: 256px;
@@ -484,6 +484,29 @@ div.loginForm input[type=submit] {
 	padding: 10px 0;
 	margin: 20px auto 0 auto;
 	display: block;
+	height: 40px;
+}
+
+	div.loginForm button[type=submit]:focus {
+		background: #95D583;
+	}
+
+	div.loginForm button[type=submit]:hover {
+		background: #95D583;
+	}
+
+	div.loginForm button[type=submit]:active {
+		background: #85C573;
+	}
+
+	div.loginForm button[type=submit]:disabled {
+		background: #A5E593;
+	}
+
+div.loginForm button[type=submit] img {
+	height: 30px;
+	width: auto;
+	margin-top: -4px;
 }
 
 span.loginFormOr {
@@ -512,22 +535,6 @@ button.loginFormSignup {
 	button.loginFormSignup:active {
 		background: rgba(255, 255, 255, 0.4);
 	}
-
-div.loginForm input[type=submit]:focus {
-	background: #95D583;
-}
-
-div.loginForm input[type=submit]:hover {
-	background: #95D583;
-}
-
-div.loginForm input[type=submit]:active {
-	background: #85C573;
-}
-
-div.loginForm input[type=submit]:disabled {
-	background: #2c7baf;
-}
 
 button.loginShowPassphrase {
 	float: right;

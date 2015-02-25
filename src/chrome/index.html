@@ -86,7 +86,10 @@
 					<span class="loginShowPassphraseEnable fontAwesome">&#xf06e;</span>
 					<span class="loginShowPassphraseDisable fontAwesome">&#xf070;</span>
 				</button>
-				<input type="submit" value="Login" />
+				<button type="submit" data-ng-disabled="login.showLoading">
+					<span data-ng-show="!login.showLoading">Login</span>
+					<img data-ng-show="login.showLoading" src="img/loading.gif" alt="" />
+				</button>
 				<span class="loginFormOr" data-l10n-id="or"></span>
 			</form>
 			<button class="loginFormSignup" data-ng-click="login.showSignupForm()" data-l10n-id="signup"></button>

@@ -2,6 +2,7 @@ Peerio.UI.controller('loginForm', function($scope) {
 	'use strict';
 	$scope.login = {}
 	$scope.login.version = Peerio.config.version
+	$scope.login.showLoading = false
 	$scope.login.login = function() {
 		Peerio.storage.init($scope.login.username)
 		$('div.loginForm form').find('input').attr('disabled', true)
@@ -14,6 +15,8 @@ Peerio.UI.controller('loginForm', function($scope) {
 	}
 	$scope.$on('login', function(event, args) {
 		Peerio.user.login(args.username, args.passOrPIN, args.skipPIN, function() {
+			$scope.login.showLoading = true
+			$scope.$apply()
 			if (Peerio.user.authTokens.length) {
 				Peerio.network.getSettings(function(data) {
 					$scope.login.username = ''
@@ -38,6 +41,8 @@ Peerio.UI.controller('loginForm', function($scope) {
 				})
 			}
 			else {
+				$scope.login.showLoading = false
+				$scope.$apply()
 				swal({
 					title: document.l10n.getEntitySync('loginFailed').value,
 					text: document.l10n.getEntitySync('loginFailedText').value,
