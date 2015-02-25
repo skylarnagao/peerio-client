@@ -263,12 +263,16 @@
 				<button class="messagesSidebarNewMessage"
 						data-l10n-id="newMessage"
 						data-ng-mousedown="messagesSidebar.newMessage()"></button>
-				<h2><span data-l10n-id="inbox"></span>&nbsp;<span class="green" data-ng-bind="messagesSection.getMessagesNewCount()" data-ng-show="!!messagesSection.getMessagesNewCount()"></span></h2>
+				<h2>
+					<span data-l10n-id="inbox"></span>&nbsp;
+					<span class="green" data-ng-bind="messagesSection.getMessagesNewCount()" data-ng-show="!!messagesSection.getMessagesNewCount()"></span>
+				</h2>
 				<ul class="messagesSidebarTypeFilters">
 					<li data-l10n-id="allMessages" class="active" data-ng-mousedown="messagesSection.setTypeFilter('all', $event)"></li>
 					<li data-l10n-id="newMessages" data-ng-mousedown="messagesSection.setTypeFilter('new', $event)"></li>
 					<!-- <li data-l10n-id="drafts" data-ng-mousedown="messagesSection.setTypeFilter('drafts', $event)"></li> -->
 				</ul>
+				<!--
 				<ul class="folderView">
 					<li><span class="blue fontAwesome">&#xf07c;</span> Work</li>
 					<ul>
@@ -278,6 +282,7 @@
 					<li><span class="blue fontAwesome">&#xf07b;</span> Travel</li>
 					<li><span class="blue fontAwesome">&#xf07b;</span> Cats</li>
 				</ul>
+				-->
 			</div>
 			<div class="filesSidebar sidebar" data-sectionlink="files" data-ng-controller="filesSection">
 				<button class="filesSidebarUploadFile" data-l10n-id="uploadFile" data-ng-mousedown="filesSidebar.selectFile()"></button>
@@ -299,9 +304,12 @@
 				</ul>
 				<div class="filesSidebarQuotaUsage">
 					<h1 data-l10n-id="storage"></h1>
-					<span data-l10n-id="yourUsage"></span><br />
-					<span data-ng-bind="filesSidebar.getUserQuota()"></span>/<span data-ng-bind="filesSidebar.getTotalQuota()"></span>
-					(<span data-ng-bind="filesSidebar.getQuotaPercentage()"></span>)
+					<span data-l10n-id="yourUsage"></span>
+					<br />
+					<span data-ng-bind="filesSidebar.getUserQuota()"></span>/
+					<span data-ng-bind="filesSidebar.getTotalQuota()"></span>
+					(
+					<span data-ng-bind="filesSidebar.getQuotaPercentage()"></span>)
 				</div>
 				<ul class="folderView">
 					<li><span class="blue fontAwesome">&#xf07c;</span> Work</li>
@@ -345,7 +353,8 @@
 				<div class="userMenuIcon fontAwesome">
 					&#xf077;
 				</div>
-				<br /><br />
+				<br />
+				<br />
 				<button class="clear" data-ng-mousedown="userMenu.openAccountSettings()">
 					<span class="fontAwesome">&#xf007;</span>
 					&nbsp;
@@ -569,7 +578,8 @@
 								 data-ng-if="messagesSection.isExpandConversationVisible(message.id, messagesSection.conversation)"
 								 data-ng-click="messagesSection.expandConversation(messagesSection.conversation, true)">
 								<span data-l10n-id="expandConversation"></span>
-								(<span data-ng-bind="{{messagesSection.conversation.messageCount}}"></span>
+								(
+								<span data-ng-bind="{{messagesSection.conversation.messageCount}}"></span>
 								<span data-l10n-id="messages"></span>)
 							</div>
 						</div>
