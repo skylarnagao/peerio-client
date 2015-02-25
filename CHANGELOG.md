@@ -1,10 +1,21 @@
+##Peerio 1.0.4 (6)
+**February 25 2015**
+- Peerio's user interface is redesigned, offering better usability and an overall better experience.
+- Uploading files in one instance of Peerio will immediately make them available in a user's other logged in instances.
+- Two-factor authentication is now more reliable.
+- Fixed a bug that sometimes appeared when deleting or destroying multiple files at once.
+- Fixed a bug that sometimes appeared when modifying account preferences when two-factor authentication was enabled.
+- Contact request acceptance now offers desktop notifications for convenience.
+- For the security-conscious, public keys (miniLock IDs) are now available for quick viewing, as well as the original user avatars.
+- The display of user avatars was improved. Thanks to Steve Thomas for his contribution.
+- Many bug fixes and small improvements everywhere.
+
 ##Peerio 1.0.3.1 (5)
 **February 12 2015**
 - Fixed a bug that prevent adding some contacts via their email address.
 
 ##Peerio 1.0.3 (4)
 **February 9 2015**
-
 - Big improvements to the user interface: Better message viewing, more visible file attachments, and more.
 - Faster and more reliable messaging. 
 - Importing contacts is now available again, and is greatly improved.
@@ -14,15 +25,12 @@
 
 ##Peerio 1.0.2 (3)
 **January 15 2015**
-
 - Remove Import Contacts functionality pending bug fixes.
 
 ##Peerio 1.0.1 (2)
 **January 14 2015**
-
 - Added warnings and improvements to Import Contacts feature.
 
 ##Peerio 1.0 (1)
 **January 14 2015**
-
 - Initial release.
