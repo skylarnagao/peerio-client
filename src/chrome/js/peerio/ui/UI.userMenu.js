@@ -7,16 +7,16 @@ Peerio.UI.controller('userMenu', function($scope) {
 			Peerio.user.miniLockID
 		)
 		$scope.userMenu.avatarIcon1 = 'data:image/png;base64,' + new Identicon(
-			avatar[0].substring(0, 16), 30
+			avatar[0].substring(0, 32), 30
 		).toString()
 		$scope.userMenu.avatarIcon2 = 'data:image/png;base64,' + new Identicon(
-			avatar[0].substring(16, 32), 30
+			avatar[0].substring(32, 64), 30
 		).toString()
 		$scope.userMenu.avatarIcon3 = 'data:image/png;base64,' + new Identicon(
-			avatar[1].substring(0, 16), 30
+			avatar[1].substring(0, 32), 30
 		).toString()
 		$scope.userMenu.avatarIcon4 = 'data:image/png;base64,' + new Identicon(
-			avatar[1].substring(16, 32), 30
+			avatar[1].substring(32, 64), 30
 		).toString()
 		if (Peerio.user.firstName.length >= 11) {
 			$scope.userMenu.firstName = Peerio.user.firstName.substring(0, 8) + '..'
