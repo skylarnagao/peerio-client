@@ -334,11 +334,22 @@ Peerio.message = {};
 							missingConversations.push(ID)
 						}
 					})
-					missingConversations.forEach(function(missingConversation) {
-						console.log('Missing conversations detected')
-						console.log(missingConversation)
-						Peerio.message.getConversationPages(missingConversation, true, function() {})
-					})
+					if(missingConversations.length>0){
+						var i = missingConversations.length-1
+						var _getConversation = function() {
+							var missingConversation = missingConversations[i]
+							console.log('Missing conversations detected', missingConversation)
+							Peerio.message.getConversationPages(missingConversation, true, function() {})
+							if(i>0) setTimeout(_getConversation, 250)
+							i--;
+						}
+						_getConversation();
+					}
+					//missingConversations.forEach(function(missingConversation) {
+					//	console.log('Missing conversations detected')
+					//	console.log(missingConversation)
+					//	Peerio.message.getConversationPages(missingConversation, true, function() {})
+					//})
 					for (var i in conversations) {
 						if (
 							({}).hasOwnProperty.call(conversations, i) &&
