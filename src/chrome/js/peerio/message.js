@@ -128,25 +128,25 @@ Peerio.message = {};
 	/**
 	 * Retrieve and organize a single thread.
 	 * Progresively adds decrypted messages to Peerio.user.conversations[id].messages.
-	 * @param {string} id - Conversation ID
+	 * @param {array} ids - Conversation IDs
 	 * @param {boolean} getOnlyLastTenMessages - if false, gets all messages *except* last ten.
 	 * @param {function} onComplete
 	 */
-	Peerio.message.getConversationPages = function(id, getOnlyLastTenMessages, onComplete) {
+	Peerio.message.getConversationPages = function(ids, getOnlyLastTenMessages, onComplete) {
 		var decryptedCount = 0
 		var keys = []
 		var page = getOnlyLastTenMessages? 0 : 1
-		var beginDecrypt = function(data) {
-			for (var message in data.conversations[id].messages) {
-				if (({}).hasOwnProperty.call(data.conversations[id].messages, message)) {
-					Peerio.user.conversations[id].messages[message] = data.conversations[id].messages[message]
+		var beginDecrypt = function(data, id) {
+			for (var message in data.messages) {
+				if (({}).hasOwnProperty.call(data.messages, message)) {
+					Peerio.user.conversations[id].messages[message] = data.messages[message]
 				}
 			}
-			Peerio.user.conversations[id].messageCount = data.conversations[id].messageCount
-			keys = keys.concat(data.conversations[id].pagination.messageOrder)
-			decryptMessage(data.conversations[id].messages[keys[decryptedCount]])
+			Peerio.user.conversations[id].messageCount = data.messageCount
+			keys = keys.concat(data.pagination.messageOrder)
+			decryptMessage(data.messages[keys[decryptedCount]], id)
 		}
-		var decryptMessage = function(message) {
+		var decryptMessage = function(message, id) {
 			if (
 				(typeof(message) !== 'object')
 			) {
@@ -157,7 +157,7 @@ Peerio.message = {};
 					}
 				}
 				else {
-					decryptMessage(Peerio.user.conversations[id].messages[keys[decryptedCount]])
+					decryptMessage(Peerio.user.conversations[id].messages[keys[decryptedCount]], id)
 				}
 				return false
 			}
@@ -170,31 +170,39 @@ Peerio.message = {};
 					}
 				}
 				else {
-					decryptMessage(Peerio.user.conversations[id].messages[keys[decryptedCount]])
+					decryptMessage(Peerio.user.conversations[id].messages[keys[decryptedCount]], id)
 				}
 			})
 		}
-		Peerio.network.getConversationPages([
-			{
+		var requestArray = []
+		ids.forEach(function(id) {
+			requestArray.push({
 				id: id,
 				page: page
-			}
-		], function(data) {
-			if (!({}).hasOwnProperty.call(data.conversations, id)) {
+			})
+		})
+		Peerio.network.getConversationPages(requestArray, function(data) {
+			if (!({}).hasOwnProperty.call(data, 'conversations')) {
 				onComplete(false)
 				return false
 			}
-			if (!({}).hasOwnProperty.call(Peerio.user.conversations, id)) {
-				Peerio.user.conversations[id] = data.conversations[id]
-				Peerio.network.getMessages([data.conversations[id].original], function(original) {
-					Peerio.user.conversations[id].original = original.messages[data.conversations[id].original]
-					Peerio.user.conversations[id].messages[Peerio.user.conversations[id].original.id] = Peerio.user.conversations[id].original
-					keys.push(Peerio.user.conversations[id].original.id)
-					beginDecrypt(data)
-				})
-			}
-			else {
-				beginDecrypt(data)
+			for (var id in data.conversations) {
+				if (({}).hasOwnProperty.call(data.conversations, id)) {
+					if (
+						!({}).hasOwnProperty.call(Peerio.user.conversations, id)
+					) {
+						Peerio.user.conversations[id] = data.conversations[id]
+						Peerio.network.getMessages([data.conversations[id].original], function(original) {
+							Peerio.user.conversations[id].original = original.messages[data.conversations[id].original]
+							Peerio.user.conversations[id].messages[Peerio.user.conversations[id].original.id] = Peerio.user.conversations[id].original
+							keys.push(Peerio.user.conversations[id].original.id)
+							beginDecrypt(data.conversations[id], id)
+						})
+					}
+					else {
+						beginDecrypt(data.conversations[id], id)
+					}
+				}
 			}
 		})
 	}
@@ -334,11 +342,10 @@ Peerio.message = {};
 							missingConversations.push(ID)
 						}
 					})
-					missingConversations.forEach(function(missingConversation) {
+					if (missingConversations.length) {
 						console.log('Missing conversations detected')
-						console.log(missingConversation)
-						Peerio.message.getConversationPages(missingConversation, true, function() {})
-					})
+						Peerio.message.getConversationPages(missingConversations, true, function() {})
+					}
 					for (var i in conversations) {
 						if (
 							({}).hasOwnProperty.call(conversations, i) &&

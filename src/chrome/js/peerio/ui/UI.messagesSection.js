@@ -185,7 +185,7 @@ Peerio.UI.controller('messagesSection', function($scope, $element, $sce, $filter
 					}
 				}
 				else {
-					Peerio.message.getConversationPages(message.conversationID, true, function() {
+					Peerio.message.getConversationPages([message.conversationID], true, function() {
 						$scope.$root.$broadcast('messagesSectionRender', null)
 					})
 				}
@@ -480,7 +480,7 @@ Peerio.UI.controller('messagesSection', function($scope, $element, $sce, $filter
 			]
 		}
 		if (entireConversation) {
-			Peerio.message.getConversationPages(conversation.id, false, function() {
+			Peerio.message.getConversationPages([conversation.id], false, function() {
 				$scope.messagesSection.conversation = Peerio.user.conversations[conversation.id]
 				afterMessagesAreReceived(conversation)
 			})
@@ -488,7 +488,7 @@ Peerio.UI.controller('messagesSection', function($scope, $element, $sce, $filter
 		else {
 			$scope.messagesSection.messageViewReplyTabClick()
 			if ($scope.messagesSection.fetchedConversations.indexOf(conversation.id) < 0) {
-				Peerio.message.getConversationPages(conversation.id, true, function() {
+				Peerio.message.getConversationPages([conversation.id], true, function() {
 					$scope.messagesSection.conversation = Peerio.user.conversations[conversation.id]
 					$scope.messagesSection.conversationIsLoading = false
 					$scope.messagesSection.fetchedConversations.push(conversation.id)
