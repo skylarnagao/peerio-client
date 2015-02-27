@@ -480,7 +480,7 @@ Peerio.user = {};
 								}
 							}
 						}
-						if (!isTOFU) {
+						else if (!isTOFU) {
 							Peerio.user.contacts = contacts
 							Peerio.user.setTOFU(
 								Peerio.util.getNewTOFU(),
