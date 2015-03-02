@@ -155,7 +155,7 @@ Peerio.UI.controller('newMessage', function($scope) {
 							confirmButtonText: document.l10n.getEntitySync('OK').value
 						})
 					}
-					Peerio.message.getConversationPages(result.conversationID, true, function() {
+					Peerio.message.getConversationPages([result.conversationID], true, function() {
 						if (Peerio.user.settings.useSounds) {
 							Peerio.notification.playSound('sent')
 						}
