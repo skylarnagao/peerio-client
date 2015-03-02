@@ -33,6 +33,7 @@
 	<script type="application/javascript" src="js/lib/crypto/scrypt.js"></script>
 	<!-- miniLock -->
 	<script type="application/javascript" src="js/miniLock/miniLock.js"></script>
+	<script type="application/javascript" src="js/miniLock/phrase.js"></script>
 	<!-- Peerio -->
 	<script type="application/javascript" src="js/peerio/peerio.js"></script>
 	<script type="application/javascript" src="js/peerio/config.js"></script>
@@ -158,41 +159,18 @@
 							<p data-l10n-id="infoAlertPassphraseNote"></p>
 						</div>
 					</div>
-					<div class="errorAlert" style="display:none">
-						<span class="errorAlertIcon">&#xf071;</span>
-						<div class="errorAlertContent">
-							<p data-l10n-id="errorAlertBadPassphrase"></p>
-							<ul>
-								<li data-l10n-id="errorAlertBadPassphraseList1"></li>
-								<li data-l10n-id="errorAlertBadPassphraseList2"></li>
-								<li data-l10n-id="errorAlertBadPassphraseList3"></li>
-							</ul>
-						</div>
+					<div class="signupGeneratedPassphraseView">
+						<h2 data-l10n-id="signupYourGeneratedPassphrase"></h2>
+						<span class="signupGeneratedPassphrase" data-ng-bind="signup.passphrase"></span>
+						<button type="button" class="clear signupGeneratedPassphraseRefresh" data-ng-click="signup.generatedPassphraseRefresh()">
+							<span class="fontAwesome">&#xf021;</span>
+							&nbsp;
+							<span data-l10n-id="signupPassphraseRefresh"></span>
+						</button>
 					</div>
-					<input type="password"
-						   data-l10n-id="passphrase"
-						   maxlength="256"
-						   class="signupPassphrase"
-						   data-ng-change="signup.renderPassphraseHint()"
-						   data-ng-model="signup.passphrase" required />
-					<input type="password"
-						   data-l10n-id="confirmPassphrase"
-						   maxlength="256"
-						   class="signupConfirmPassphrase"
-						   data-ng-model="signup.confirmPassphrase" required />
-					<button type="button"
-							data-ng-click="signup.showPassphrase()"
-							data-utip-l10n="showPassphrase"
-							class="clear signupShowPassphrase"
-							data-utip-gravity="sw">
-						<span class="signupShowPassphraseEnable fontAwesome">&#xf06e;</span>
-						<span class="signupShowPassphraseDisable fontAwesome">&#xf070;</span>
-					</button>
 					<button type="submit"
 							data-l10n-id="createMyAccount"
-							data-ng-disabled="!signup.passphrase||!signup.confirmPassphrase||(signup.passphrase!==signup.confirmPassphrase)"
 							class="yourPassphraseContinue"></button>
-					<span class="signupPassphraseHint" data-ng-bind="signup.passphraseHint"></span>
 				</form>
 				<form class="signupAccountConfirmation" data-ng-submit="signup.confirmAccount()">
 					<h1 data-l10n-id="accountConfirmation"></h1>

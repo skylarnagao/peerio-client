@@ -328,10 +328,10 @@ div.infoAlert, div.errorAlert {
 	padding: 10px 20px 10px 10px;
 	border-top: 4px solid #2C95CF;
 	border-bottom: 4px solid #DDD;
-	font-size: 0.8em;
+	font-size: 0.9em;
 	position: relative;
 	margin-bottom: 20px;
-	max-width: 600px;
+	max-width: 650px;
 }
 
 	div.infoAlert a, div.errorAlert a {
@@ -724,24 +724,24 @@ form.signupYourPassphrase {
 		font-size: 0.8em;
 	}
 
-button.signupShowPassphrase {
-	float: right;
-	max-width: 50px;
-	height: 65px;
-	position: absolute;
-	left: 560px;
-	bottom: 45px;
+div.signupGeneratedPassphraseView {
+	margin: 30px 0 30px 0px;
 }
 
-span.signupShowPassphraseDisable {
-	display: none;
-}
-
-span.signupPassphraseHint {
+span.signupGeneratedPassphrase {
+	font-size: 1.7em;
 	font-weight: bold;
-	font-variant: small-caps;
-	margin-left: 20px;
-	font-size: 1.2em;
+	color: #2c95d0;
+	display: block;
+	width: 627px;
+	-webkit-user-select: text !important;
+	user-select: text !important;
+	cursor: text;
+}
+
+button.signupGeneratedPassphraseRefresh {
+	color: #FFF;
+	height: 40px;
 }
 
 form.signupAccountConfirmation {

@@ -1,6 +1,7 @@
 Peerio.UI.controller('signupForms', function($scope) {
 	'use strict';
 	$scope.signup = {}
+	$scope.signup.passphrase = miniLock.phrase.get(6)
 	$scope.signup.checkUsername = function() {
 		if (
 			(typeof($scope.signup.username) !== 'string') ||
@@ -38,6 +39,10 @@ Peerio.UI.controller('signupForms', function($scope) {
 			}
 		)
 	}
+	$scope.signup.generatedPassphraseRefresh = function() {
+		$scope.signup.passphrase = miniLock.phrase.get(6)
+		$scope.$apply()
+	}
 	$scope.signup.basicInformationContinue = function() {
 		if ($('input.invalid').length) { return false }
 		$('div.signupProgressBarFill').css({width: 100})
@@ -45,6 +50,7 @@ Peerio.UI.controller('signupForms', function($scope) {
 		$('form.signupYourPassphrase').show()
 		$('form.signupYourPassphrase').find('input')[0].focus()
 		Peerio.UI.applyDynamicElements()
+		$scope.signup.generatedPassphraseRefresh()
 		if (typeof(require) === 'function') {
 			$('a').unbind().on('click', function(e) {
 				e.preventDefault()
@@ -53,71 +59,8 @@ Peerio.UI.controller('signupForms', function($scope) {
 			})
 		}
 	}
-	$scope.signup.showPassphrase = function() {
-		if ($('input.signupPassphrase').attr('type') === 'text') {
-			$('input.signupPassphrase').attr('type', 'password')
-			$('input.signupConfirmPassphrase').attr('type', 'password')
-			$('span.signupShowPassphraseEnable').show()
-			$('span.signupShowPassphraseDisable').hide()
-		}
-		else {
-			$('input.signupPassphrase').attr('type', 'text')
-			$('input.signupConfirmPassphrase').attr('type', 'text')
-			$('span.signupShowPassphraseEnable').hide()
-			$('span.signupShowPassphraseDisable').show()
-		}
-	}
-	$scope.signup.renderPassphraseHint = function() {
-		if (!$scope.signup.passphrase) {
-			$scope.signup.passphraseHint = ''
-			return false
-		}
-		var entropy = zxcvbn($scope.signup.passphrase).entropy
-		if (entropy <= miniLock.settings.minKeyEntropy / 3) {
-			$scope.signup.passphraseHint = document.l10n.getEntitySync(
-				'signupPassphraseHint1'
-			).value
-			$('span.signupPassphraseHint').removeClass('green')
-			$('span.signupPassphraseHint').addClass('red')
-		}
-		else if (entropy <= miniLock.settings.minKeyEntropy / 2) {
-			$scope.signup.passphraseHint = document.l10n.getEntitySync(
-				'signupPassphraseHint1'
-			).value
-			$('span.signupPassphraseHint').removeClass('green')
-			$('span.signupPassphraseHint').addClass('red')
-		}
-		else if (entropy <= miniLock.settings.minKeyEntropy / 1.5) {
-			$scope.signup.passphraseHint = document.l10n.getEntitySync(
-				'signupPassphraseHint2'
-			).value
-			$('span.signupPassphraseHint').removeClass('green')
-			$('span.signupPassphraseHint').addClass('red')
-		}
-		else if (
-			miniLock.crypto.checkKeyStrength(
-				$scope.signup.passphrase,
-				$scope.signup.username
-			)
-		) {
-			$scope.signup.passphraseHint = document.l10n.getEntitySync(
-				'signupPassphraseHint3'
-			).value
-			$('span.signupPassphraseHint').removeClass('red')
-			$('span.signupPassphraseHint').addClass('green')
-		}
-	}
 	$scope.signup.checkPassphrase = function() {
 		$scope.signup.username = $scope.signup.username.toLowerCase()
-		var strengthIsOK = miniLock.crypto.checkKeyStrength(
-			$scope.signup.passphrase,
-			$scope.signup.username
-		)
-		if (!strengthIsOK) {
-			$('form.signupYourPassphrase').find('div.infoAlert').remove()
-			$('form.signupYourPassphrase').find('div.errorAlert').show()
-			return false
-		}
 		swal({
 			title: document.l10n.getEntitySync('signupPassphraseConfirm').value,
 			text: document.l10n.getEntitySync('signupPassphraseConfirmText').value,

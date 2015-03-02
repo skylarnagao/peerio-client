@@ -22,17 +22,15 @@
 <lastName "Last name">
 <emailOrPhone "Email or phone">
 <yourPassphrase "Your passphrase">
-<infoAlertPassphrase "Peerio uses pass<em>phrases</em> instead of pass<em>words</em>.<br />Your passphrase must be <strong>long</strong> and <strong>unique</strong>. Pick something you can remember: If you lose your passphrase, your data is gone forever. <strong><a class='blue' href='https://www.youtube.com/watch?v=1jrtAnwHU14' target='_blank'>Need help? Watch our tutorial on how to pick a good passphrase!</a>">
+<infoAlertPassphrase "Peerio uses pass<em>phrases</em> instead of pass<em>words</em>. To guarantee your security, Peerio generates a passphrase for you. We recommend you keep this passphrase in a password manager -- you'll need to enter it the first time you log into Peerio on a new device.">
 <infoAlertPassphraseNote "<strong>Don't worry</strong>, you only need to enter your full passphrase when logging in with a new device. You can specify a shorter <strong>Peerio PIN</strong> for quick access on the devices you use regularly.">
 <signupPassphraseConfirm "Are you sure you want to use this passphrase?">
 <signupPassphraseConfirmText "If you lose your passphrase you will be locked out of your account forever. Make sure you choose a passphrase that is easy for you to remember. If you need to write it down, keep it in a secure location and do not put it online.">
+<signupYourGeneratedPassphrase "Your generated passphrase:">
+<signupPassphraseRefresh "Change passphrase">
 <error "Error">
 <errorText "Your request could not be completed.">
 <warning "Warning">
-<errorAlertBadPassphrase "<strong>Hold up!</strong> This passphrase isn't strong enough. Peerio relies on you entering a <strong>long and unique passphrase</strong> to keep your messages and files secure.">
-<errorAlertBadPassphraseList1 "Try using a phrase that's unique to you (a childhood memory?)">
-<errorAlertBadPassphraseList2 "Pick something you will remember easily!">
-<errorAlertBadPassphraseList3 "If you need to write your passphrase down to remember, do not write it on a computer or mobile device that is connected to the Internet.">
 <confirmPassphrase "Confirm passphrase">
 <showPassphrase "Show Passphrase">
 <signupPassphraseHint1 "keep typing, your passphrase needs to be longer.">

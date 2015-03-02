@@ -22,17 +22,15 @@
 <lastName "Nom">
 <emailOrPhone "Courriel ou # de tél">
 <yourPassphrase "Votre phrase secrète">
-<infoAlertPassphrase "Peerio utilise des <em>phrases secrètes</em> au lieu d'utiliser des mots de passe.<br />Votre phrase secrète doit être <strong>longue</strong> et <strong>unique</strong>. Choisissez quelque chose de familier: si vous perdez cette phrase secrète, vos données sont perdues à jamais. <strong><a class='blue' href='https://www.youtube.com/watch?v=1jrtAnwHU14' target='_blank'>Besoin d'aide? Regardez notre tutoriel sur la façon de choisir une bonne phrases secrète!</a>"">
+<infoAlertPassphrase "Peerio utilise des <em>phrases secrètes</em> au lieu d'utiliser des mots de passe.<br /> Pour garantir votre sécurité, Peerio génère une phrase secrète pour vous. Nous vous conseillons de conserver cette phrase secrète dans un gestionnaire de mot de passe - vous aurez besoin de l'entrer la première fois vous vous connectez à Peerio sur un nouveau ordinateur.">
 <infoAlertPassphraseNote "<strong>Soyez sans craintes</strong>,vous n'aurez pas à entrer votre phrase secrète à chaque fois. Vous pouvez enregistrer un <strong>NIP</strong> sur chacun de vos ordinateurs, tablettes ou téléphones pour un accès rapide.">
 <signupPassphraseConfirm "Etes-vous sur vous voulez utiliser cette phrase secrète?">
 <signupPassphraseConfirmText "La perte de votre phrase secrète rendra votre compte inaccessible pour toujours.Assurez-vous que vous choisissez une phrase secrète qui est facile à mémoriser pour vous. Si vous avez besoin de l'écrire, gardez-la dans un endroit sûr et ne la mettez pas en ligne.">
+<signupYourGeneratedPassphrase "Votre phrase secrète générée:">
+<signupPassphraseRefresh "Changer phrase secrète">
 <error "Erreur">
 <errorText "Votre demande n'a pu être complétée.">
 <warning "Attention">
-<errorAlertBadPassphrase "<strong>Attention!</strong> Cette phrase secrète n'est pas assez complexe. Vous devez entrer une phrase secrète <strong>longue</strong> et <strong>unique</strong> afin de sécuriser vos messages et vos fichiers.">
-<errorAlertBadPassphraseList1 "Choisissez une phrase que seul vous connaissez. (Un souvenir d'enfance?)">
-<errorAlertBadPassphraseList2 "Choisissez une phrase facile à mémoriser!">
-<errorAlertBadPassphraseList3 "Si vous devez écrire votre phrase secrète pour vous en rappeler, nous vous conseillons de ne pas l'écrire sur un appareil connecté à internet.">
 <confirmPassphrase "Confirmez votre Phrase Secrète">
 <showPassphrase "Voir votre Phrase Secrète">
 <signupPassphraseHint1 "tapez encore plus, votre phrase secrète doit être plus longue.">
