@@ -1,3 +1,8 @@
+##Peerio 1.0.4.1 (7)
+**March 2 2015**
+- On signup, Peerio will now suggest passphrases for users instead of having them choose one.
+- Bug fixes and generally faster network performance.
+
 ##Peerio 1.0.4 (6)
 **February 25 2015**
 - Peerio's user interface is redesigned, offering better usability and an overall better experience.
