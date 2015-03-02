@@ -81,7 +81,7 @@ if (typeof(require) === 'function') {
 				)
 			}
 		})
-	}, 100)
+	}, 3000)
 
 	// Catch process errors
 	process.on('uncaughtException', function(e) { console.log(e) })
