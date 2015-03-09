@@ -77,7 +77,8 @@ Peerio.UI.controller('messagesSection', function($scope, $element, $sce, $filter
 				if (typeof(callback) === 'function') {
 					callback()
 				}
-			}, conversations)
+			})
+			// @todo kaepora ^
 		})
 	})
 	Peerio.UI.messagesSectionUpdate = function() {
