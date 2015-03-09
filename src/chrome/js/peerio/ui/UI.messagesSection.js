@@ -174,9 +174,6 @@ Peerio.UI.controller('messagesSection', function($scope, $element, $sce, $filter
 							if (document.hasFocus()) {
 								Peerio.message.readMessages(read, function() {
 									$scope.$root.$broadcast('messagesSectionRender', null)
-									$('div.messagesSectionMessageViewSingles').scrollTop(
-										$('div.messagesSectionMessageViewSingles')[0].scrollHeight + 1000
-									)
 								})
 							}
 							else {
@@ -193,9 +190,6 @@ Peerio.UI.controller('messagesSection', function($scope, $element, $sce, $filter
 			})
 			$scope.$root.$broadcast('messagesSectionRender', null)
 			if (modified.length) {
-				$('div.messagesSectionMessageViewSingles').scrollTop(
-					$('div.messagesSectionMessageViewSingles')[0].scrollHeight + 1000
-				)
 				$('input.mainTopSearchSubmit').trigger('click')
 				Peerio.network.getSettings(function(data) {
 					Peerio.user.quota = data.quota
@@ -210,6 +204,9 @@ Peerio.UI.controller('messagesSection', function($scope, $element, $sce, $filter
 		$scope.messagesSection.conversations = Peerio.user.conversations
 		$scope.$apply(Peerio.UI.applyDynamicElements)
 		$('input.mainTopSearchSubmit').trigger('click')
+		$('div.messagesSectionMessageViewSingles').scrollTop(
+			$('div.messagesSectionMessageViewSingles')[0].scrollHeight + 1000
+		)
 	})
 	$scope.$on('messagesSectionAttachFileIDs', function(event, ids) {
 		if (/Sidebar/.test($element[0].className)) {
@@ -871,9 +868,6 @@ Peerio.UI.controller('messagesSection', function($scope, $element, $sce, $filter
 			Peerio.message.readMessages($scope.messagesSection.readOnUnfocusedBuffer, function() {
 				$scope.messagesSection.readOnUnfocusedBuffer = []
 				$scope.$root.$broadcast('messagesSectionRender', null)
-				$('div.messagesSectionMessageViewSingles').scrollTop(
-					$('div.messagesSectionMessageViewSingles')[0].scrollHeight + 1000
-				)
 			})
 		}
 	})
