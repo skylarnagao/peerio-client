@@ -1,3 +1,8 @@
+##Peerio 1.0.4.2 (8)
+**March 9 2015**
+- Fixed an issue that could prevent message threads from synchronizing and appearing in clients.
+- Small bug fixes.
+
 ##Peerio 1.0.4.1 (7)
 **March 2 2015**
 - On signup, Peerio will now suggest passphrases for users instead of having them choose one.
