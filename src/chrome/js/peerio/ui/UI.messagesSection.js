@@ -392,15 +392,6 @@ Peerio.UI.controller('messagesSection', function($scope, $element, $sce, $filter
 			if (original.recipients.length === 1) {
 				return Peerio.util.getFullName(original.recipients[0].username)
 			}
-			else if (original.recipients.length <= 2) {
-				var username = ''
-				for (var i = 0; i < original.recipients.length; i++) {
-					if (original.recipients[i].username !== Peerio.user.username) {
-						username = original.recipients[i].username
-					}
-				}
-				return Peerio.util.getFullName(username)
-			}
 			else {
 				return (
 					original.recipients.length + ' ' +
