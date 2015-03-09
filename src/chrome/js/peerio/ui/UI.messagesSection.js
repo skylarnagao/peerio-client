@@ -469,10 +469,15 @@ Peerio.UI.controller('messagesSection', function($scope, $element, $sce, $filter
 			if (read.length) {
 				Peerio.message.readMessages(read, function() {
 					$scope.$root.$broadcast('messagesSectionRender', null)
+					$scope.$apply()
+					Peerio.UI.applyDynamicElements()
 				})
 			}
-			$scope.$apply()
-			Peerio.UI.applyDynamicElements()
+			else {
+				$scope.$root.$broadcast('messagesSectionRender', null)
+				$scope.$apply()
+				Peerio.UI.applyDynamicElements()
+			}
 		}
 		if (({}).hasOwnProperty.call($scope.messagesSection.replyBuffers, conversation.id)) {
 			$scope.messagesSection.messageViewReply = $scope.messagesSection.replyBuffers[

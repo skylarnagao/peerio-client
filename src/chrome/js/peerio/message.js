@@ -206,7 +206,6 @@ Peerio.message = {};
 							Peerio.user.conversations[missingOriginals[original]].messages[
 								Peerio.user.conversations[missingOriginals[original]].original.id
 							] = Peerio.user.conversations[missingOriginals[original]].original
-							keys.push(Peerio.user.conversations[id].original.id)
 						}
 					}
 					beginDecrypt(data.conversations[missingOriginals[original]], missingOriginals[original])
