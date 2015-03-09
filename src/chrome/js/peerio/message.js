@@ -159,20 +159,21 @@ Peerio.message = {};
 				else {
 					decryptMessage(Peerio.user.conversations[id].messages[keys[decryptedCount]], id)
 				}
-				return false
 			}
-			Peerio.crypto.decryptMessage(message, function(decrypted) {
-				Peerio.user.conversations[id].messages[message.id].decrypted = decrypted
-				decryptedCount++
-				if (decryptedCount === keys.length) {
-					if (typeof(onComplete) === 'function') {
-						onComplete(Peerio.user.conversations[id])
+			else {
+				Peerio.crypto.decryptMessage(message, function(decrypted) {
+					Peerio.user.conversations[id].messages[message.id].decrypted = decrypted
+					decryptedCount++
+					if (decryptedCount === keys.length) {
+						if (typeof(onComplete) === 'function') {
+							onComplete(Peerio.user.conversations[id])
+						}
 					}
-				}
-				else {
-					decryptMessage(Peerio.user.conversations[id].messages[keys[decryptedCount]], id)
-				}
-			})
+					else {
+						decryptMessage(Peerio.user.conversations[id].messages[keys[decryptedCount]], id)
+					}
+				})
+			}
 		}
 		var requestArray = []
 		ids.forEach(function(id) {
@@ -182,6 +183,7 @@ Peerio.message = {};
 			})
 		})
 		Peerio.network.getConversationPages(requestArray, function(data) {
+			var missingOriginals = {}
 			if (!({}).hasOwnProperty.call(data, 'conversations')) {
 				onComplete(false)
 				return false
@@ -192,17 +194,26 @@ Peerio.message = {};
 						!({}).hasOwnProperty.call(Peerio.user.conversations, id)
 					) {
 						Peerio.user.conversations[id] = data.conversations[id]
-						Peerio.network.getMessages([data.conversations[id].original], function(original) {
-							Peerio.user.conversations[id].original = original.messages[data.conversations[id].original]
-							Peerio.user.conversations[id].messages[Peerio.user.conversations[id].original.id] = Peerio.user.conversations[id].original
-							keys.push(Peerio.user.conversations[id].original.id)
-							beginDecrypt(data.conversations[id], id)
-						})
-					}
-					else {
-						beginDecrypt(data.conversations[id], id)
+						missingOriginals[data.conversations[id].original] = id
 					}
 				}
+			}
+			if (Object.keys(missingOriginals).length) {
+				Peerio.network.getMessages(Object.keys(missingOriginals), function(originals) {
+					for (var original in originals.messages) {
+						if (({}).hasOwnProperty.call(originals.messages, original)) {
+							Peerio.user.conversations[missingOriginals[original]].original = originals.messages[original]
+							Peerio.user.conversations[missingOriginals[original]].messages[
+								Peerio.user.conversations[missingOriginals[original]].original.id
+							] = Peerio.user.conversations[missingOriginals[original]].original
+							keys.push(Peerio.user.conversations[id].original.id)
+						}
+					}
+					beginDecrypt(data.conversations[missingOriginals[original]], missingOriginals[original])
+				})
+			}
+			else {
+				beginDecrypt(data.conversations[id], id)
 			}
 		})
 	}
