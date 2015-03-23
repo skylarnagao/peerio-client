@@ -28,14 +28,14 @@ Peerio.UI.controller('contactsSection', function($scope, $element, $sce) {
 		if (/Sidebar/.test($element[0].className)) {
 			return false
 		}
-		Peerio.user.getAllContacts(function(success) {
-			if (!success) {
+		Peerio.user.getAllContacts(function(compareTOFU) {
+			if (typeof compareTOFU === 'object') {
 				swal({
 					title: document.l10n.getEntitySync('TOFUNotMatchError').value,
 					text: document.l10n.getEntitySync('TOFUNotMatchErrorText').value + compareTOFU.notMatch.join(', '),
 					type: 'warning',
 					confirmButtonColor: '#e07a66',
-					confirmButtonText: document.l10n.getEntitySync('OK').value,
+					confirmButtonText: document.l10n.getEntitySync('OK').value
 				})
 			}
 			$scope.contactsSection.contacts = Peerio.user.contacts

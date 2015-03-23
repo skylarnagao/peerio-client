@@ -395,7 +395,7 @@ Peerio.user = {};
 	/**
 	 * Get all contacts and contact requests, organize them in an object, and return it.
 	 * Also stores the result as Peerio.user.contacts, and does TOFU checks.
-	 * @param {function} callback - returned with true or false in case of TOFU error.
+	 * @param {function} callback - returned with TOFU mismatch error if it exists, or false if there is no error.
 	 * @param {function} onContact - called dynamically for every received contact.
 	 */
 	Peerio.user.getAllContacts = function(callback, onContact) {
@@ -457,26 +457,24 @@ Peerio.user = {};
 							(typeof(Peerio.user.TOFU) === 'object') &&
 							Object.keys(Peerio.user.TOFU).length
 						) {
+							Peerio.user.contacts = contacts
 							var compareTOFU = Peerio.util.compareTOFU(Peerio.user.TOFU)
 							if (compareTOFU.notMatch.length) {
-								Peerio.user.contacts = contacts
-								Peerio.user.setTOFU(Peerio.util.getNewTOFU, Peerio.user.username)
+								Peerio.user.setTOFU(Peerio.util.getNewTOFU(), Peerio.user.username)
+								if (typeof(callback) === 'function') {
+									callback(compareTOFU)
+								}
+							}
+							else if (compareTOFU.notFound.length) {
+								Peerio.user.setTOFU(Peerio.util.getNewTOFU(), Peerio.user.username)
 								if (typeof(callback) === 'function') {
 									callback(false)
 								}
 							}
-							else if (compareTOFU.notFound.length) {
-								Peerio.user.contacts = contacts
-								Peerio.user.setTOFU(Peerio.util.getNewTOFU, Peerio.user.username)
-								if (typeof(callback) === 'function') {
-									callback(true)
-								}
-							}
 							else {
-								Peerio.user.contacts = contacts
 								console.log('TOFU check passed')
 								if (typeof(callback) === 'function') {
-									callback(true)
+									callback(false)
 								}
 							}
 						}
