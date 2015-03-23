@@ -647,6 +647,22 @@ Peerio.UI.controller('messagesSection', function($scope, $element, $sce, $filter
 				}
 			}
 			var temporaryID = 'sending' + Base58.encode(nacl.randomBytes(8))
+			messageObject.timestamp = Date.now() + 120000
+			messageObject.id = temporaryID
+			messageObject.isModified = false
+			messageObject.sender = Peerio.user.username
+			messageObject.decrypted = {
+				fileIDs: $scope.messagesSection.attachFileIDs,
+				message: body,
+				receipt: '',
+				sequence: Object.keys(conversation.messages).length,
+				subject: conversation.original.decrypted.subject
+			}
+			conversation.messages[temporaryID] = messageObject
+			$scope.$apply(Peerio.UI.applyDynamicElements)
+			$('div.messagesSectionMessageViewSingles').scrollTop(
+				$('div.messagesSectionMessageViewSingles')[0].scrollHeight + 1000
+			)
 			Peerio.network.createMessage(messageObject, function(result) {
 				if (({}).hasOwnProperty.call(result, 'error')) {
 					if (result.error === 413) {
@@ -708,22 +724,6 @@ Peerio.UI.controller('messagesSection', function($scope, $element, $sce, $filter
 					confirmButtonText: document.l10n.getEntitySync('OK').value
 				})
 			}
-			messageObject.timestamp = Date.now()
-			messageObject.id = temporaryID
-			messageObject.isModified = false
-			messageObject.sender = Peerio.user.username
-			messageObject.decrypted = {
-				fileIDs: $scope.messagesSection.attachFileIDs,
-				message: body,
-				receipt: '',
-				sequence: Object.keys(conversation.messages).length,
-				subject: conversation.original.decrypted.subject
-			}
-			conversation.messages[temporaryID] = messageObject
-			$scope.$apply(Peerio.UI.applyDynamicElements)
-			$('div.messagesSectionMessageViewSingles').scrollTop(
-				$('div.messagesSectionMessageViewSingles')[0].scrollHeight + 1000
-			)
 		})
 	}
 	$scope.messagesSection.removeConversations = function(ids) {
