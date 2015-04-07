@@ -296,7 +296,7 @@
 <updateDownload "Télécharger">
 <later "Plus tard">
 <updateAvailableCritical "Mise à jour urgente disponible">
-<updateAvailableCriticalText "Une mise à jour urgente est disponible Peerio. Pour votre propre sécurité, vous ne pouvez pas procéder jusqu'à ce que vous installez la dernière mise à jour.">
+<updateAvailableCriticalText "Une mise à jour obligatoire est disponible pour Peerio. Pour votre sécurité, vous devez l'installer avant de pouvoir continuer.">
 
 <TOFUNotMatchError "L'identité de certains contacts a changé!">
 <TOFUNotMatchErrorText "Attention! Certains de vos contacts ont changé leurs identités. Avant de communiquer avec eux, se il vous plaît assurez-vous de vérifier leur avatar icône Peerio dans leur profil. Les noms d'utilisateur sont: ">
