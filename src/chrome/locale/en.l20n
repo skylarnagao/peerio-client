@@ -1,7 +1,7 @@
 <title "Peerio">
 
 <signupHeader "Messages and files. Simple and secure.">
-<signupIntro "Message contacts and share files simply and securely with Peerio. Live search brings your messages, files, and contacts on demand. Our worldwide cloud let you work anywhere, while end-to-end encryption keeps your data safe everywhere.<br /><br /><strong>Peerio is currently in Beta. <a href='https://peerio.com/pages/beta.html' target='_blank'>Find out what this means</a>.">
+<signupIntro "Message contacts and share files simply and securely with Peerio. Live search brings your messages, files, and contacts on demand. Our worldwide cloud let you work anywhere, while end-to-end encryption keeps your data safe everywhere.<br /><br /><strong>Peerio is currently in Beta. <a href='https://peerio.com/pages/beta.shtml' target='_blank'>Find out what this means</a>.">
 
 <username "Username">
 <passphrase "Passphrase">
