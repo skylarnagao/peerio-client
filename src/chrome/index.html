@@ -250,17 +250,16 @@
 					<li data-l10n-id="newMessages" data-ng-mousedown="messagesSection.setTypeFilter('new', $event)"></li>
 					<!-- <li data-l10n-id="drafts" data-ng-mousedown="messagesSection.setTypeFilter('drafts', $event)"></li> -->
 				</ul>
-				<!--
+
 				<ul class="folderView">
-					<li><span class="blue fontAwesome">&#xf07c;</span> Work</li>
-					<ul>
-						<li>Quantum computers</li>
-						<li>More sushi</li>
-					</ul>
-					<li><span class="blue fontAwesome">&#xf07b;</span> Travel</li>
-					<li><span class="blue fontAwesome">&#xf07b;</span> Cats</li>
+					<li data-ng-repeat="folder in $root.folders.folders" data-ng-mousedown="messagesSection.setTypeFilter(folder.id, $event)">
+						<span class="blue fontAwesome">&#xf07c;</span>{{folder.name}}
+						<span class="fontAwesome action-icon" style="right:13px;top:-1px;"
+							  data-ng-click="$root.folders.renameFolder(folder)">&#xf044;</span>
+						<span class="fontAwesome action-icon" data-ng-click="$root.folders.removeFolder(folder)">&#xf00d;</span>
+					</li>
 				</ul>
-				-->
+                <a href="#" class="add-folder-btn" data-ng-click="$root.folders.addFolder()">Add a new folder</a>
 			</div>
 			<div class="filesSidebar sidebar" data-sectionlink="files" data-ng-controller="filesSection">
 				<button class="filesSidebarUploadFile" data-l10n-id="uploadFile" data-ng-mousedown="filesSidebar.selectFile()"></button>
@@ -453,11 +452,15 @@
 						<p data-l10n-id="welcomeToAccountListSearch"></p>
 					</div>
 					<div class="messagesSectionMessageViewTopIcons" data-ng-show="messagesSection.conversation">
-						<!-- <button
-							class="messagesSectionMessageViewAddToFolder clear fontAwesome"
-							data-utip-l10n="addToFolder"
-							data-utip-gravity="sw"
-							>&#xf115;</button> -->
+						 <span class="folder-selector">
+
+
+							 <select style="width:170px" data-ng-model="messagesSection.conversation.folderID"
+									 data-ng-options="folder.id as folder.name for folder in $root.folders.folders"
+									 data-ng-change="$root.folders.addToFolder(messagesSection.conversation)">
+								 <option value="">Inbox</option>
+							 </select>
+						 </span>
 						<button class="messagesSectionMessageViewDelete fontAwesome clear"
 								data-utip-l10n="remove"
 								data-ng-mousedown="messagesSection.removeConversations([messagesSection.conversation.id])"
