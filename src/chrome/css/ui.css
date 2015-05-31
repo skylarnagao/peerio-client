@@ -1115,6 +1115,8 @@ div.mainSidebar {
 			overflow: hidden;
 			white-space: nowrap;
 			position: relative;
+			transition: all .1s linear;
+			transform-origin: left;
 		}
 		div.mainSidebar ul.folderView li .action-icon {
 			display: none;

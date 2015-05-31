@@ -332,11 +332,15 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 	})
 	var dragCounter = 0
 	$(document).unbind()
+	function isFileDrag(e){
+		return e && e.dataTransfer && e.dataTransfer.types.length > 0 && e.dataTransfer.types[0]==="Files";
+	}
 	$(document).on('dragover', function(e) {
 		e.preventDefault()
 		return false
 	})
 	$(document).on('dragenter', function(e) {
+		if(!isFileDrag(e)) return;
 		e.preventDefault()
 		if (!Peerio.user.username) {
 			return false
@@ -345,7 +349,8 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 		$('div.dragAndDropUpload').addClass('visible')
 		return false
 	})
-	$(document).on('dragleave', function() {
+	$(document).on('dragleave', function(e) {
+		if(!isFileDrag(e)) return;
 		if (!Peerio.user.username) {
 			return false
 		}
@@ -357,6 +362,7 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 		return false
 	})
 	$(document).on('drop', function(e) {
+		if(!isFileDrag(e)) return;
 		e.preventDefault()
 		if (!Peerio.user.username) {
 			return false

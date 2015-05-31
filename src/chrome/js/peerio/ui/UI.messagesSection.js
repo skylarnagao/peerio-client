@@ -64,6 +64,8 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
     $scope.messagesSection.checkedIDs = []
     $scope.messagesSection.checkedReceipts = {}
     $scope.messagesSection.messageNewCount = 0
+
+
     if(!$scope.$root.folders) {
       var f = $scope.$root.folders = {};
 
@@ -173,6 +175,36 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
             $scope.$apply();
           });
         }, 500);
+      };
+
+      f.handleDragStart = function(conversation){
+        f.dragging = conversation;
+      };
+
+      f.handleDragEnd = function(conversation){
+        f.dragging = null;
+       // console.log('dragend');
+      };
+
+      f.handleDragEnter = function(folder){
+        //console.log('dragenter', folder);
+      };
+      f.handleDragLeave = function(folder){
+        //console.log('dragleave', folder);
+      };
+
+      f.handleDrop = function(folder){
+       // console.log('drop', folder);
+        if(!f.dragging) return;
+        var conversation = f.dragging;
+        Peerio.network.moveConversationIntoFolder(conversation.id, folder.id, function (response) {
+          if (response.error) {
+            swal("Error", "Filed to move conversation into folder.", "error");
+            return;
+          }
+          conversation.folderID = folder.id;
+          $scope.$apply();
+        });
       };
     }
     $scope.$on('messagesSectionPopulate', function (event, callback) {

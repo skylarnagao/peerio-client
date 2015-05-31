@@ -252,7 +252,10 @@
 				</ul>
 
 				<ul class="folderView">
-					<li data-ng-repeat="folder in $root.folders.folders" data-ng-mousedown="messagesSection.setTypeFilter(folder.id, $event)">
+					<li peerio-drag-enter="$root.folders.handleDragEnter(folder)"
+						peerio-drag-leave="$root.folders.handleDragLeave(folder)"
+						peerio-drop="$root.folders.handleDrop(folder)"
+						data-ng-repeat="folder in $root.folders.folders" data-ng-mousedown="messagesSection.setTypeFilter(folder.id, $event)">
 						<span class="blue fontAwesome">&#xf07c;</span>{{folder.name}}
 						<span class="fontAwesome action-icon" style="right:13px;top:-1px;"
 							  data-ng-click="$root.folders.renameFolder(folder)">&#xf044;</span>
@@ -417,7 +420,9 @@
 					</div>
 					<div class="messagesSectionListViewItems" data-ng-style="resize()" resize="0, 139">
 						<img data-ng-show="messagesSection.listIsLoading" src="img/loading.gif" class="messagesSectionListViewLoading" alt="" />
-						<div class="messageListItem"
+						<div class="messageListItem" draggable="true"
+							 peerio-drag-start="$root.folders.handleDragStart(conversation)"
+							 peerio-drag-end="$root.folders.handleDragEnd(conversation)"
 							 data-ng-repeat="conversation in messagesSection.conversations | orderObjectBy:'lastTimestamp':true"
 							 data-ng-attr-data-conversationid="{{'c' + conversation.id}}"
 							 data-ng-mousedown="messagesSection.selectConversation(conversation, $event)"
