@@ -67,7 +67,7 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
 
     if (!$scope.$root.folders) {
       var f = $scope.$root.folders = {};
-
+      var l = function(n){return document.l10n.getEntitySync(n).value};
       f.folders = [];
 
       f.loadFolders = function () {
@@ -77,7 +77,6 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
             return;
           }
           $scope.$root.$apply(function () {
-            console.log('folders loaded');
             f.folders = data.folders.sort();
           });
         });
@@ -85,26 +84,26 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
 
       f.addFolder = function () {
         swal({
-          title: "Adding new folder.",
-          text: "Write the new folder name:",
+          title: l('newFolderDialogTitle'),
+          text: l('newFolderDialogText'),
           type: "input",
           showCancelButton: true,
           closeOnConfirm: false,
           animation: "slide-from-top",
-          inputPlaceholder: "folder name"
+          inputPlaceholder: l('folderInputPlaceholder')
         }, function (inputValue) {
           if (inputValue === false) return false;
           if (inputValue === "") {
-            swal.showInputError("You need to write something!");
+            swal.showInputError(l("folderInputEmptyError"));
             return false
           }
           Peerio.network.createConversationFolder(inputValue, function (response) {
             if (response.error) {
               console.log(response);
-              swal("Error.", "Sorry, failed to create folder.", "error");
+              swal(l("error"), l('creatingFolderError'), "error");
             } else {
               f.loadFolders();
-              swal({title: "Success.", text: "Folder created.", type: "success"});
+              swal({title: l('success'), text: l('folderCreated'), type: "success"});
             }
           })
         });
@@ -112,27 +111,27 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
 
       f.renameFolder = function (folder) {
         swal({
-          title: "Rename folder",
-          text: "Write the new name for folder '" + folder.name + "'",
+          title: l("renameFolderDialogTitle"),
+          text: l('renameFolderDialogText'),
           type: "input",
           showCancelButton: true,
           closeOnConfirm: false,
           animation: "slide-from-top",
-          inputPlaceholder: "folder name",
+          inputPlaceholder: l('folderInputPlaceholder'),
           inputValue: folder.name
         }, function (inputValue) {
           if (inputValue === false) return false;
           if (inputValue === "") {
-            swal.showInputError("You need to write something!");
+            swal.showInputError(l("folderInputEmptyError"));
             return false
           }
           Peerio.network.renameConversationFolder(folder.id, inputValue, function (response) {
             if (response.error) {
               console.log(response);
-              swal("Error.", "Sorry, failed to rename folder.", "error");
+              swal(l('error'), l('renamingFolderError'), "error");
             } else {
               f.loadFolders();
-              swal({title: "Success.", text: "Folder renamed.", type: "success"});
+              swal({title: l('success'), text: l('folderRenamed'), type: "success"});
             }
           })
         });
@@ -140,12 +139,10 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
 
       f.removeFolder = function (folder) {
         swal({
-          title: "Removing folder",
-          text: "Are you sure you want to remove the folder '" + folder.name + "'. Conversations in this folder will be moved to inbox.",
+          title: l('removeFolderDialogTitle'),
+          text: l("removeFolderDialogText1")+" '" + folder.name + "'. "+l('removeFolderDialogText2'),
           type: "warning",
           confirmButtonColor: "#DD6B55",
-          confirmButtonText: "Yes, delete it!",
-          cancelButtonText: "No, cancel!",
           showCancelButton: true,
           closeOnConfirm: true,
           animation: "slide-from-top"
@@ -154,10 +151,10 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
           Peerio.network.removeConversationFolder(folder.id, function (response) {
             if (response.error) {
               console.log(response);
-              swal("Error.", "Sorry, failed to remove folder.", "error");
+              swal(l('error'), l('removingFolderError'), "error");
             } else {
               f.loadFolders();
-              swal({title: "Success.", text: "Folder removed.", type: "success"});
+              swal({title: l('success'), text: l('folderRemoved'), type: "success"});
             }
           })
         });
@@ -168,7 +165,7 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
         window.setTimeout(function () {
           Peerio.network.moveConversationIntoFolder(conversation.id, conversation.folderID, function (response) {
             if (response.error) {
-              swal("Error", "Filed to move conversation into folder.", "error");
+              swal(l('error'), l('conversationMoveError'), "error");
               conversation.folderID = previous;
               return;
             }
@@ -179,22 +176,20 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
 
       f.addToFolderBulk = function (ids) {
         if(ids.length===0){
-          swal("Move to folder", "Please select conversations first","info");
+          swal(l('moveConversationsDialogTitle'), l('conversationsNotSelectedError'),"info");
           return;
         }
-        var html = "Move <strong>"+ids.length+"</strong> conversations into folder:<br/>"
-          +"<select id='groupFolderSelect'><option value='' selected>Inbox</option>";
+        var html = "<strong>"+ids.length+"</strong> " +l('moveConversationsDialogText')+"<br/>"
+          +"<select id='groupFolderSelect'><option value='' selected>"+l('inbox')+"</option>";
 
         f.folders.forEach(function (folder) {
           html += "<option value='" + folder.id + "'>" + folder.name + "</option>";
         });
         html +="</select>";
         swal({
-          title: "Moving conversations to folder",
+          title: l('moveConversationsDialogTitle'),
           text: html,
           type: "warning",
-          confirmButtonText: "Ok!",
-          cancelButtonText: "Cancel!",
           showCancelButton: true,
           closeOnConfirm: false,
           html:true,
@@ -206,13 +201,13 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
           Peerio.network.moveConversationIntoFolder(ids, folderId, function (response) {
             if (response.error) {
               console.log(response);
-              swal("Error.", "Sorry, failed to move conversations to folder.", "error");
+              swal(l('error'), l('movingConversationsError'), "error");
             } else {
               ids.forEach(function(id){
                 Peerio.user.conversations[id].folderID = folderId;
               });
               $scope.$root.$apply();
-              swal({title: "Success.", text: ids.length +" conversations moved.", type: "success"});
+              swal({title: l('success'), text: ids.length +" " +l('conversations moved.'), type: "success"});
             }
           })
         });
@@ -235,13 +230,13 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
       };
 
       f.handleDrop = function (folder) {
-        if(!folder) folder = {id:null, name:'Inbox' };
+        if(!folder) folder = {id:null, name:l('inbox') };
         // console.log('drop', folder);
         if (!f.dragging) return;
         var conversation = f.dragging;
         Peerio.network.moveConversationIntoFolder(conversation.id, folder.id, function (response) {
           if (response.error) {
-            swal("Error", "Filed to move conversation into folder.", "error");
+            swal(l('error'), l('movingConversationsError'), "error");
             return;
           }
           conversation.folderID = folder.id;

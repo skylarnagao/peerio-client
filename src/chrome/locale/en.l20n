@@ -319,3 +319,27 @@
 <importContactsSelectToInviteText "If a contact is already on Peerio, they will be added to your account. Otherwise, we will send them an invitation on your behalf.">
 <importContactsSelectAll "Select all contacts">
 <importSelectedContacts "Import selected contacts">
+
+<newFolderDialogTitle "Adding new folder">
+<newFolderDialogText "Write the new folder name">
+<folderInputEmptyError "You need to write something!">
+<folderInputPlaceholder "folder name">
+<creatingFolderError "Sorry, failed to create folder">
+<success "Success">
+<folderCreated "Folder created">
+<renameFolderDialogTitle "Rename folder">
+<renameFolderDialogText "Write the new folder name">
+<renamingFolderError "Sorry, failed to rename folder">
+<folderRenamed 'Folder renamed'>
+<removeFolderDialogTitle "Removing folder">
+<removeFolderDialogText1 "Are you sure you want to remove the folder:">
+<removeFolderDialogText2 "Conversations in this folder will be moved to inbox.">
+<removingFolderError "Sorry, failed to remove folder">
+<folderRemoved "Folder removed.">
+<conversationMoveError "Filed to move conversation into folder.">
+<moveConversationsDialogTitle "Moving conversations into folder">
+<moveConversationsDialogText "conversations selected. Move them into folder:">
+<conversationsNotSelectedError "Please select conversations first">
+<movingConversationsError "Sorry, failed to move conversations to folder">
+<conversationsMoved "conversations moved.">
+<addNewFolder "Add a new folder">
