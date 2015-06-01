@@ -65,8 +65,7 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
     $scope.messagesSection.checkedReceipts = {}
     $scope.messagesSection.messageNewCount = 0
 
-
-    if(!$scope.$root.folders) {
+    if (!$scope.$root.folders) {
       var f = $scope.$root.folders = {};
 
       f.folders = [];
@@ -79,7 +78,7 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
           }
           $scope.$root.$apply(function () {
             console.log('folders loaded');
-            f.folders = data.folders;
+            f.folders = data.folders.sort();
           });
         });
       };
@@ -144,6 +143,7 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
           title: "Removing folder",
           text: "Are you sure you want to remove the folder '" + folder.name + "'. Conversations in this folder will be moved to inbox.",
           type: "warning",
+          confirmButtonColor: "#DD6B55",
           confirmButtonText: "Yes, delete it!",
           cancelButtonText: "No, cancel!",
           showCancelButton: true,
@@ -164,8 +164,8 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
       };
 
       f.addToFolder = function (conversation) {
-        var previous =  conversation.folderID;
-        window.setTimeout(function(){
+        var previous = conversation.folderID;
+        window.setTimeout(function () {
           Peerio.network.moveConversationIntoFolder(conversation.id, conversation.folderID, function (response) {
             if (response.error) {
               swal("Error", "Filed to move conversation into folder.", "error");
@@ -177,25 +177,67 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
         }, 500);
       };
 
-      f.handleDragStart = function(conversation){
+      f.addToFolderBulk = function (ids) {
+        if(ids.length===0){
+          swal("Move to folder", "Please select conversations first","info");
+          return;
+        }
+        var html = "Move <strong>"+ids.length+"</strong> conversations into folder:<br/>"
+          +"<select id='groupFolderSelect'><option value='' selected>Inbox</option>";
+
+        f.folders.forEach(function (folder) {
+          html += "<option value='" + folder.id + "'>" + folder.name + "</option>";
+        });
+        html +="</select>";
+        swal({
+          title: "Moving conversations to folder",
+          text: html,
+          type: "warning",
+          confirmButtonText: "Ok!",
+          cancelButtonText: "Cancel!",
+          showCancelButton: true,
+          closeOnConfirm: false,
+          html:true,
+          animation: "slide-from-top"
+        }, function (isConfirm) {
+          if (!isConfirm) return;
+          var folderId = $('#groupFolderSelect').val();
+          if(folderId=='') folderId=null;
+          Peerio.network.moveConversationIntoFolder(ids, folderId, function (response) {
+            if (response.error) {
+              console.log(response);
+              swal("Error.", "Sorry, failed to move conversations to folder.", "error");
+            } else {
+              ids.forEach(function(id){
+                Peerio.user.conversations[id].folderID = folderId;
+              });
+              $scope.$root.$apply();
+              swal({title: "Success.", text: ids.length +" conversations moved.", type: "success"});
+            }
+          })
+        });
+      };
+
+      f.handleDragStart = function (conversation) {
         f.dragging = conversation;
       };
 
-      f.handleDragEnd = function(conversation){
+      f.handleDragEnd = function (conversation) {
         f.dragging = null;
-       // console.log('dragend');
+        // console.log('dragend');
       };
 
-      f.handleDragEnter = function(folder){
+      f.handleDragEnter = function (folder) {
         //console.log('dragenter', folder);
       };
-      f.handleDragLeave = function(folder){
+      f.handleDragLeave = function (folder) {
         //console.log('dragleave', folder);
       };
 
-      f.handleDrop = function(folder){
-       // console.log('drop', folder);
-        if(!f.dragging) return;
+      f.handleDrop = function (folder) {
+        if(!folder) folder = {id:null, name:'Inbox' };
+        // console.log('drop', folder);
+        if (!f.dragging) return;
         var conversation = f.dragging;
         Peerio.network.moveConversationIntoFolder(conversation.id, folder.id, function (response) {
           if (response.error) {
@@ -417,6 +459,7 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
     $scope.messagesSection.setTypeFilter = function (type, event) {
       $('ul.messagesSidebarTypeFilters li').removeClass('active')
       $('ul.folderView li').removeClass('active')
+      $('.messagesSidebar h2').removeClass('active');
 
       $(event.target).addClass('active')
       $scope.$root.$broadcast('messagesSectionSetTypeFilter', type)
@@ -436,10 +479,11 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
         }
         return conversation.original.isModified
       }
-      if ($scope.messagesSection.typeFilter === 'drafts') {
-        return conversation.original.isDraft
-      }
-      if($scope.messagesSection.typeFilter === conversation.folderID) return true;
+     // if ($scope.messagesSection.typeFilter === 'drafts') {
+     //   return conversation.original.isDraft
+     // }
+       if ($scope.messagesSection.typeFilter === 'inbox') return !conversation.folderID;
+      if ($scope.messagesSection.typeFilter === conversation.folderID) return true;
 
     }
     $scope.messagesSection.onCheck = function (id, event) {

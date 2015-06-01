@@ -1095,7 +1095,7 @@ div.mainSidebar {
 	}
 
 	div.mainSidebar ul.folderView {
-		font-size: 0.9em;
+		font-size: 1em;
 		line-height: 1em;
 		padding: 0 0 10px 0;
 		overflow-x: hidden;
@@ -1145,6 +1145,11 @@ div.mainSidebar {
 	font-size: 0.9em;
 	margin-left: 10px;
 }
+#groupFolderSelect{
+	font-size: 1em;
+	width: 250px;
+	margin-top: 15px;
+}
 
 div.messagesSidebar {
 }
@@ -1170,6 +1175,8 @@ span.filesSidebarUploadFileSubtitle {
 div.sidebar h2 {
 	margin: 15px 0 0 10px;
 	font-weight: normal;
+	transform-origin: left;
+	transition: transform 0.1s linear;
 }
 
 	div.sidebar h2 span {
@@ -1200,10 +1207,14 @@ button.active {
 div.sidebar ul li:hover,
 div.sidebar ul li.active,
 div.sidebar ul li:hover *,
-div.sidebar ul li.active * {
+div.sidebar ul li.active *,
+.messagesSidebar h2.active,
+.messagesSidebar h2:hover{
 	opacity: 1;
 }
-
+.messagesSidebar h2 {
+	opacity: 0.6;
+}
 div.filesSidebar {
 }
 
