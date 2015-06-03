@@ -96,6 +96,7 @@
             <span class="loginFormOr" data-l10n-id="or"></span>
         </form>
         <button class="loginFormSignup" data-ng-click="login.showSignupForm()" data-l10n-id="signup"></button>
+
         <div class="loginFormFooter">
             <img src="img/peerioLogoWhite.png" alt=""/>
             <span class="loginFormVersion" data-ng-bind="login.version"></span>
@@ -333,7 +334,7 @@
                     peerio-drag-leave="$root.fileFolders.handleDragLeave(folder)"
                     peerio-drop="$root.fileFolders.handleDrop(folder)"
                     data-ng-repeat="folder in $root.fileFolders.folders"
-                    data-ng-mousedown="messagesSection.setTypeFilter(folder.id, $event)">
+                    data-ng-mousedown="filesSection.setTypeFilter(folder.id, $event)">
                     <span class="blue fontAwesome">&#xf07c;</span>{{folder.name}}
 						<span class="fontAwesome action-icon" style="right:13px;top:-1px;"
                               data-ng-click="$root.fileFolders.renameFolder(folder)">&#xf044;</span>

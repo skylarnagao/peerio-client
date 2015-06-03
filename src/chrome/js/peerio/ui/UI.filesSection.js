@@ -293,6 +293,7 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 	}
 	$scope.filesSection.setTypeFilter = function(type, event) {
 		$('ul.filesSidebarTypeFilters li').removeClass('active')
+		$('.filesSidebar ul.folderView li').removeClass('active')
 		$(event.target).addClass('active')
 		$scope.$root.$broadcast('filesSectionSetTypeFilter', type)
 	}

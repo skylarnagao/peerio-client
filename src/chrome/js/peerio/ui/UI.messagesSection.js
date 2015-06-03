@@ -473,7 +473,7 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
     }
     $scope.messagesSection.setTypeFilter = function (type, event) {
       $('ul.messagesSidebarTypeFilters li').removeClass('active')
-      $('ul.folderView li').removeClass('active')
+      $('.messagesSidebar ul.folderView li').removeClass('active')
       $('.messagesSidebar h2').removeClass('active');
 
       $(event.target).addClass('active')

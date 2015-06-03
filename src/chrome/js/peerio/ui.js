@@ -245,6 +245,6 @@ Peerio.UI = angular.module('PeerioUI', ['ngSanitize', 'cfp.hotkeys']);
     $('div.mainTopSectionSelect [data-sectionLink=messages]').trigger('mousedown')
   }
 
-  swal.setDefaults({ confirmButtonColor: '#2C95CF' });
+  swal.setDefaults({ confirmButtonColor: '#2C95CF', html:true });
 
 })()
