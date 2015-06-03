@@ -116,7 +116,7 @@
     <newMessageRecipientsErrorText "Please enter at least one recipient to send your message.">
     <typeYourReply "Type your reply...">
     <noParticipantsLeft "There are no participants left in this conversation.">
-    <allDocuments "All Files">
+    <allDocuments "All Documents">
     <photos "Photos">
     <videos "Videos">
     <pdfDocuments "PDF Documents">
@@ -125,7 +125,7 @@
     <presentations "Presentations">
     <other "Other">
     <storage "Storage">
-    <yourUsage "USAGE:">
+    <yourUsage "your usage:">
     <quotaError "Storage limit reached">
     <quotaErrorText "You do not have enough space in your Peerio account. Try deleting other files first, or upgrade your account to include more storage.">
     <sizeError "File is too big">
@@ -318,5 +318,3 @@
     <filesMoved "files moved.">
     <fileMoveError "Failed to move file into folder.">
     <removeFileFolderDialogText2 "Files in this folder are now in \"all files\".">
-    <folder "Folder">
-    <moveToFolder "Move to folder">
