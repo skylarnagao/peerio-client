@@ -1,0 +1,8 @@
+[main]
+host = https://www.transifex.com
+
+[peerio.client]
+file_filter = tmp/tx/<lang>.json
+source_file = tmp/tx/en.json
+source_lang = en
+type = JSON
