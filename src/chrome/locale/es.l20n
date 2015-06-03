@@ -1,0 +1,320 @@
+
+    <title "Peerio">
+    <signupHeader "Mensajes y archivos. Simple y seguro.">
+    <signupIntro "Peerio is a simple and secure way to send messages, share files, and store documents online. Everything gets encrypted before being sent to cloud, so nobody but you and those you share with ever have access to your data.<br /><br /><strong>Peerio is currently in Beta. <a href='https://peerio.com/pages/beta.html' target='_blank'>See what this means</a>.">
+    <username "Nombre de usuario">
+    <passphrase "Frase de acceso">
+    <passphraseOrPIN "Passphrase or Passcode">
+    <or "o">
+    <loginFailed "No se pudo ingresar">
+    <loginFailedText "If you are using a device passcode, please try using your account passphrase instead.">
+    <ok "OK">
+    <submit "Enviar">
+    <signup "Registrarse">
+    <signupProgress "progreso del registro">
+    <basicInformation "Información básica">
+    <desiredUsername "Nombre de usuario deseado">
+    <usernameNotAvailable "este nombre de usuario ya está siendo utilizado.">
+    <addressNotAvailable "esta dirección ya está siendo utilizada.">
+    <firstName "Nombre">
+    <lastName "Apellidos">
+    <emailOrPhone "Email or mobile">
+    <yourPassphrase "Tu frase de acceso">
+    <infoAlertPassphrase "For stronger security, Peerio uses <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'>randomly generated pass<i>phrases</i></a>. <strong>Your passphrase is the master key to your account!</strong>  You are the sole owner of your passphrase, and your account's security depends on you remembering and protecting it. You will need it to login to your account on new devices. If you lose your passphrase, you will permanently lose access to your account. We recommend writing your passphrase down on paper, or storing it in a secure password manager.">
+    <infoAlertPassphraseNote "<strong>Don't worry</strong>, in a moment you will be able to set a shorter pass<i>code</i> for quick access on this device.">
+    <signupPassphraseConfirm "Use this passphrase?">
+    <signupPassphraseConfirmText "<strong>Remember</strong>, you are the sole owner of this passphrase. <a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>If you lose your passphrase</a>, we cannot reset or recover it and your account will be lost. If you have not stored your passphrase somewhere safe, please go back and do so before continuing.">
+    <signupYourGeneratedPassphrase "Tu frase de acceso generada:">
+    <signupPassphraseRefresh "Cambiar frase de acceso">
+    <error "Error">
+    <errorText "Tu solicitud no pudo ser completada.">
+    <warning "Advertencia">
+    <confirmPassphrase "Confirma tu frase de acceso">
+    <showPassphrase "Mostrar Frase de acceso">
+    <continue "Continuar">
+    <registerAccountError "No se pudo registrar la cuenta">
+    <registerAccountErrorText "Sorry, we could not register your account right now. Please restart Peerio and try again in a few minutes.">
+    <createMyAccount "Crear Mi Cuenta">
+    <accountConfirmation "Confirmación de Cuenta">
+    <signupAccountConfirmationEmail "Please check your email for a Peerio account confirmation code and enter it below. If you do not see a message, please check your spam folder.">
+    <signupAccountConfirmationPhone "Hemos enviado un mensaje SMS con un código de confirmación al número de teléfono que suministraste. <strong>Por favor asegúrate que tu número de teléfono contiene tu código de país así como un código de área.</strong>">
+    <signupConfirmationCodeTimeText "Seconds until your code expires:">
+    <signupConfirmationCodeExpired "El código de confirmación expiró">
+    <signupConfirmationCodeExpiredText "Your confirmation code has expired. Please restart Peerio and try signing up again.">
+    <code "Código">
+    <confirmationCode "Confirmation code">
+    <confirmMyAccount "Confirmar Mi Cuenta">
+    <invalidConfirmationCode "por favor revisa este código.">
+    <finishingUp "Terminando">
+    <peerioPIN "Peerio Passcode">
+    <setAPeerioPIN "Set a passcode for this device?">
+    <signupPeerioPIN "Peerio passcodes allow for quicker login on specific devices. Instead of entering your passphrase each time you login, you can set a shorter passcode that will only work on this device. You can set different passcodes from your different devices. <br><br>User-chosen passcodes tend to be less secure than Peerio's passphrases, so you should <strong>only set passcodes on devices you trust and use regularly</strong>.">
+    <PINNotStrong "passcode strength: weak">
+    <PINStrong "passcode strength: ok!">
+    <setPIN "Set Passcode">
+    <skip "omitir">
+    <accountRateLimited "Please Wait A Few Minutes">
+    <accountRateLimitedText "Esta cuenta temporalmente no está disponible porque ha hecho demasiadas peticiones al servidor. Por favor espere unos minutos e intente de nuevo.">
+    <accountBlacklisted "Cuenta no Disponible">
+    <accountBlacklistedText "This account is temporarily suspended. In order to regain access, please contact Peerio support by at support@peerio.com.">
+    <searchMessagesFilesAndContacts "Buscar mensajes, archivos y contactos">
+    <messages "Mensajes">
+    <files "Archivos">
+    <contacts "Contactos">
+    <searchResultsClickToReset "resultados de búsqueda (click para limpiar)">
+    <connectionStatus "Connection Status">
+    <welcomeToAccount "Bienvenido a tu cuenta Peerio.">
+    <welcomeToAccountText "Peerio te permite enviar mensajes de forma segura, así como almacenar y administrar tus archivos y documentos. A continuación te mostramos cómo comenzar a usarlo.">
+    <welcomeToAccountList1 "Agrega contactos haciendo click en la sección <strong>Contactos</strong>. Una vez que los has agregado, compartir mensajes y archivos es fácil.">
+    <welcomeToAccountList2 "Start conversations by clicking the <strong>Compose Message</strong> button on the left. Conversations can include as many contacts as you like — and everything is encrypted end to end.">
+    <welcomeToAccountList3 "Almacena tus archivos en Peerio haciendo click en la sección <strong>Archivos</strong>. Tus archivos estarán cifrados y listos para acceder desde tus otros dispositivos o para compartir con tus contactos.">
+    <welcomeToAccountListSearch "Peerio's <strong>search bar</strong> at the top of the window makes it easy to go through your messages, files, and contacts all in one swoop. Give it a shot!">
+    <newMessage "Crear Mensaje">
+    <inbox "Inbox">
+    <uploadFile "Subir Archivos">
+    <filesSidebarUploadFileSubtitle "or drag and drop to upload">
+    <addContact "Agregar Contacto">
+    <allMessages "Todos los Mensajes">
+    <drafts "Borradores">
+    <trash "Basura">
+    <settings "Configuración">
+    <account "Cuenta">
+    <preferences "Preferencias">
+    <help "Help">
+    <logout "Salir">
+    <logoutConfirm "Salir de Peerio?">
+    <logoutConfirmText "Por favor asegúrate de no tener información sin guardar antes de salir.">
+    <show "Mostrar">
+    <reply "Responder">
+    <close "Cerrar">
+    <all "Todo">
+    <forward "Reenviar">
+    <from "De">
+    <to "Para">
+    <recipients "destinatarios">
+    <participantHasLeft "Este participante ha abandonado la conversación.">
+    <read "read">
+    <readBy "Read by:">
+    <expandConversation "Expandir Conversación">
+    <encrypted "cifrado">
+    <addToFolder "Agregar a Carpeta">
+    <acknowledge "Acknowledge">
+    <remove "Eliminar">
+    <download "Descargar">
+    <destroy "Destruir">
+    <newMessages "Mensajes Nuevos">
+    <noNewMessages "No hay Mensajes Nuevos">
+    <participantsWhoHaveLeft "Participantes anteriores:">
+    <newMessageErrorText "Tu mensaje no pudo enviarse.">
+    <conversationHasNoFiles "No se han compartido archivos en esta conversación.">
+    <filesWillAppearHere "Los archivos serán listados aquí para un acceso rápido.">
+    <messageCouldNotBeSentTo "Tu mensaje no pudo ser enviado a los siguientes contactos:">
+    <messageDecryptedError "Tu contacto intentó enviar un mensaje, pero no pudo ser recibido por tu cuenta.">
+    <removeConversationsQuestion "Borrar conversaciones?">
+    <removeConversationsText "Advertencia: Ya no podrás recibir ningún futuro mensaje ni archivo compartidos en la conversación.">
+    <newMessageRecipientsError "El mensaje no tiene destinatarios">
+    <newMessageRecipientsErrorText "Please enter at least one recipient to send your message.">
+    <typeYourReply "Escribe tu respuesta...">
+    <noParticipantsLeft "No quedan participantes en esta conversación.">
+    <allDocuments "Todos los Documentos">
+    <photos "Fotos">
+    <videos "Vídeos">
+    <pdfDocuments "Documentos PDF">
+    <wordDocuments "Documentos Word">
+    <spreadsheets "Hojas de cálculo">
+    <presentations "Presentaciones">
+    <other "Otros">
+    <storage "Almacenamiento">
+    <yourUsage "tu utilización:">
+    <quotaError "Límite de almacenamiento alcanzado">
+    <quotaErrorText "No tiene espacio suficiente en su cuenta Peerio. Intente eliminar otros archivos primero, o actualizar su cuenta para incluir más almacenamiento.">
+    <sizeError "El archivo es demasiado grande">
+    <sizeErrorText "Actualmente Peerio no cuenta con soporte para archivos mayores de 400MB.">
+    <removeFilesQuestion "Eliminar archivos?">
+    <removeFilesText "Los archivos serán borrados permanentemente de tu cuenta, pero seguirán siendo visibles para los usuarios con quienes los has compartido.">
+    <destroyFilesQuestion "Destruir los archivos?">
+    <destroyFilesText "Los archivos serán borrados de tu cuenta y de las cuentas de todos con quienes los has compartido.">
+    <destroyFilesOwnerError "Can’t destroy files you don’t own">
+    <destroyFilesOwnerErrorText "Destroying files removes them from every account they have been shared with. Only a file's owner can do that. Try deleting the file instead.">
+    <fileUploadError "Falló la transmisión del archivo">
+    <fileUploadErrorText "Por favor verifica tu configuración de subida de archivos, e intenta de nuevo.">
+    <dragAndDropUploadTitle "Drop to upload to Peerio.">
+    <dragAndDropUploadText "Tus archivos serán cifrados y subidos a tu nube personal.">
+    <allFiles "Todos los archivos">
+    <myFiles "Mis Archivos">
+    <receivedFiles "Archivos recibidos">
+    <fileName "Nombre del Archivo">
+    <date "Fecha">
+    <size "Tamaño">
+    <owner "Propietario">
+    <actions "Acciones">
+    <search "Búsqueda">
+    <attachSelectedFiles "Agregar Archivos Seleccionados">
+    <uploadNewFile "Subir Nuevos Archivos">
+    <downloading "Descargando">
+    <downloadFileInfo "Tu archivo será guardado en tu carpeta de Descargas.">
+    <downloadFileDangerous "Advertencia: No abras archivos a menos que confíes en el remitente.">
+    <downloadFileComplete "Your file has been successfully downloaded and decrypted.">
+    <downloadFileError "No se pudo descargar el archivo">
+    <downloadFileErrorText "An error has occurred.">
+    <save "guardar">
+    <allContacts "Todos los Contactos">
+    <confirmedContacts "Contactos Confirmados">
+    <pendingContacts "Contactos Pendientes">
+    <importContacts "Importar Contactos">
+    <sortBy "Ordenar Por">
+    <sendMessage "Enviar Mensaje">
+    <latestMessages "Últimos Mensajes">
+    <latestFiles "Últimos Archivos">
+    <viewAllMessages "Ver todos los mensajes">
+    <viewAllFiles "Ver todos los archivos">
+    <avatarTooltip "User avatars allow you to verify the cryptographic identity of your contacts. If a contact's avatar changes, please contact them to verify it again before communicating with them over Peerio.">
+    <pending "Pendientes">
+    <you "Tu">
+    <accountDeleted "Cuenta Borrada">
+    <block "Bloquear">
+    <noContacts "No se ha seleccionado un contacto">
+    <noContactsText "Selecciona un contacto, o comienza por agregar a un amigo.">
+    <addMyFirstContact "Agregar Contacto Nuevo">
+    <acceptContactRequest "Aceptar la solicitud de contacto?">
+    <acceptContactRequestText "Choose whether to allow this user to message you and share files with you securely over Peerio.">
+    <accept "Aceptar">
+    <decline "Declinar">
+    <addContactInfo "Agregando amigos como contactos">
+    <addContactInfoText "Sending messages and sharing files with your friends begins by adding them as contacts. If your friend is not a Peerio user, we'll try to send an invite to their address. You can add a user by specifying their <strong>username</strong>, <strong>email</strong> or <strong>mobile number</strong>.">
+    <addContactInfoAvatar "About the contact avatar">
+    <addContactInfoAvatarText "Every Peerio user has a special avatar that identifies them. Think of it as their digital fingerprint. If a Peerio user's avatar changes, they may have changed their passphrase, or their account may have been compromised.">
+    <usernameEmailOrPhone "Username, email, or mobile">
+    <addContactRequestSent "Solicitud de Contacto Enviada">
+    <addContactRequestSentText "We've sent a contact request to the username you have entered.">
+    <addContactInviteSent "Invitación Enviada">
+    <addContactInviteSentText "We have sent an invitation to your contact.">
+    <addContactErrorText "We couldn't add this contact. Please double-check the information and try again.">
+    <removeContact "Borrar Contacto">
+    <removeContactQuestion "Borrar Contacto?">
+    <removeContactText "Esto les impedirá comunicarse de forma segura con Peerio. Estás seguro?">
+    <cancel "Cancelar">
+    <removeContactSuccess "Tu contacto ha sido borrado con éxito.">
+    <removeContactError "We could not remove this contact right now. Please try again.">
+    <newContact "New contact!">
+    <newContactText "You are now contacts with">
+    <miniLockID "miniLock ID:">
+    <twoFactorAuth "Two-Factor Authentication">
+    <authenticate "Autenticar">
+    <twoFactorAuthSetupHeading "Set up your mobile device">
+    <twoFactorAuthSetupText "Use your favorite authenticator app to scan the barcode below. Peerio recommends Google Authenticator for iPhone and Android. <a href='https://peerio.zendesk.com/hc/en-us/articles/204018305' target='_blank'>See how two-factor authentication works with Peerio</a>.">
+    <twoFactorAuthInfoHeading "Help us protect your account">
+    <twoFactorAuthInfoText "Two-factor authentication helps keep your account safe by requiring two different kinds of login information. Please enter the six-digit code from your mobile device to continue.">
+    <twoFactorAuthConfirm "After scanning the QR code, enter the six-digit code generated by your mobile phone to confirm setup.">
+    <twoFactorAuthIncorrect "Incorrect Code">
+    <twoFactorAuthIncorrectText "The code you have entered is incorrect. Please try again.">
+    <twoFactorAuthConfirmedText "From now on, you will be asked to enter a code from your mobile device when you login for the first time in a day, or from a new location. Please make sure you do not lose your mobile device.">
+    <twoFactorAuthCannotDisable "We could not disable two-factor authentication.">
+    <twoFactorAuthDisabled "Two-Factor Authentication Disabled">
+    <twoFactorAuthDisabledText "You can now log in using only your password. For enhanced security, consider turning two-factor authentication back on in the future.">
+    <subject "Asunto">
+    <send "Enviar">
+    <saveDraft "Guardar Borrador">
+    <attachFile "Anexar Archivo">
+    <autoDestructSettings "Auto-Destruct Settings...">
+    <accountSettings "Account Settings">
+    <name "Name">
+    <primary "primary">
+    <secondary "secondary">
+    <addresses "Addresses">
+    <setPrimaryAddress "Set as Primary Address">
+    <removeAddress "Remove Address">
+    <addNewAddress "Add New Address">
+    <couldNotConfirmAddress "Please double-check the confirmation code you entered.">
+    <couldNotAddAddress "We couldn't add this address. Please double-check it.">
+    <couldNotUpdateName "We couldn't update your name. Please try again.">
+    <confirmed "Confirmed!">
+    <confirmedText "Your preferences have been updated.">
+    <confirmedLanguageText "Your new language will be available once you restart Peerio.">
+    <confirmedAddressText "Thank you for taking the time to confirm your new Peerio address.">
+    <confirmedNameText "Your name has been updated.">
+    <email "Correo electrónico">
+    <phoneNumber "Mobile Number">
+    <deleteAccount "Borrar Cuenta">
+    <deleteAccountText "Deleting your Peerio account will permanently destroy all your information, and you will not be able to reclaim this username in the future.">
+    <deleteAccountConfirm "Confirm Account Deletion">
+    <deleteAccountConfirmText "Are you sure? You will lose all your data and never be able to reclaim this username.">
+    <changePassphrase "Cambiar Frase de acceso">
+    <changePassphraseText "In case your passphrase gets compromised, Peerio will allow you to revoke your previous passphrase and set a new one. This feature is coming soon.">
+    <newPassphrase "Nueva Frase de acceso">
+    <retypeNewPassphrase "Reescribe Frase de acceso Nueva">
+    <enableTwoFactorAuth "Enable Two-Factor Authentication">
+    <disableTwoFactorAuth "Disable Two-Factor Authentication">
+    <accountSettingsTwoFactorAuthText "Peerio can pair with your smartphone to provide additional account security.">
+    <twoFactorAuthLearnMore "learn more about two-factor authentication">
+    <language "Idioma">
+    <notifications "Notificaciones">
+    <notificationOptions "Notification Options">
+    <receiveMessageNotifications "Send me message notifications <strong>to my primary address</strong>.">
+    <useSounds "<strong>Play a sound</strong> when I receive a new notification.">
+    <sendReadReceipts "Notify my contacts when I read their messages.">
+    <readReceipts "Read Receipts">
+    <peerioPINForThisDevice "Device Passcode">
+    <peerioPINUpdated "Device Passcode Updated">
+    <peerioPINUpdatedText "Your passcode for this device has been successfully updated.">
+    <removeMyPeerioPIN "Remove Device Passcode">
+    <peerioPINRemoved "Device Passcode Removed">
+    <peerioPINRemovedText "Passcodes assigned to this device have been destroyed.">
+    <ctrlEnter "Enviar Respuesta">
+    <pressEnterToSend "Oprime Enter para enviar">
+    <updateAvailable "Actualización disponible!">
+    <updateAvailableText "A new update is available for Peerio! Updates bring cool new features, as well as reliability improvements. Would you like to update now?">
+    <updateDownload "Download Update">
+    <later "Later">
+    <updateAvailableCritical "Critical Update Available">
+    <updateAvailableCriticalText "A critical Peerio update is available. For your security, you may not proceed until you install the latest update.">
+    <TOFUNotMatchError "Contact identities have changed!">
+    <TOFUNotMatchErrorText "Warning! Some of your contacts have changed their identities. Before communicating with them, please make sure to verify their Peerio avatar icon in their profile. The usernames are:">
+    <importContactsGoogle "Import your Google Contacts to Peerio">
+    <importContactsGoogleText "To get your Google contacts on Peerio, simply login to your Gmail account and follow these steps:">
+    <importContactsGoogleStep1 "Click <strong>Gmail</strong> at the top-left corner of your Gmail page, then choose <strong>Contacts</strong>.">
+    <importContactsGoogleStep2 "From the <strong>More</strong> drop-down menu, select <strong>Export</strong>...">
+    <importContactsGoogleStep3 "Choose whether to export all contacts or only one group.">
+    <importContactsGoogleStep4 "Select the <strong>Google CSV</strong> format for exporting your contacts.">
+    <importContactsGoogleStep5 "After you have exported your contacts into a CSV file, click the button below to upload it to Peerio.">
+    <uploadCSV "Upload CSV File">
+    <importContactsConfirm "Peerio may send invites on your behalf">
+    <importContactsConfirmText "If you proceed, Peerio may send invitations on your behalf to contacts that are not yet on Peerio. Are you sure you want to send invites to these contacts?">
+    <importContactsError "Could not invite contacts">
+    <importContactsErrorText "We could not invite your contacts at this time. Please verify your information and try again.">
+    <importContactsSuccess "Contact invites sent!">
+    <importContactsSuccessText "Your contacts will be invited on your behalf.">
+    <importContactsSelectToInvite "Select contacts to add/invite">
+    <importContactsSelectToInviteText "If a contact is already on Peerio, they will be added to your account. Otherwise, we will send them an invitation on your behalf.">
+    <importContactsSelectAll "Select all contacts">
+    <importSelectedContacts "Import selected contacts">
+    <newFolderDialogTitle "Add New Folder">
+    <newFolderDialogText "Enter the new folder’s name">
+    <folderInputEmptyError "You need to write something!">
+    <folderInputPlaceholder "enter folder name">
+    <creatingFolderError "Oops! Something went wrong and your folder was not created. Please try again.">
+    <success "Success">
+    <folderCreated "Folder created">
+    <renameFolderDialogTitle "Rename Folder">
+    <renameFolderDialogText "Enter the new folder name">
+    <renamingFolderError "Oops! Something went wrong and your folder was not renamed. Please try again.">
+    <folderRenamed "Folder renamed">
+    <removeFolderDialogTitle "Remove Folder">
+    <removeFolderDialogText1 "Are you sure you want to remove the folder">
+    <removeFolderDialogText2 "Conversations in this folder will be moved to \"inbox\".">
+    <removingFolderError "Oops! Something went wrong and your folder was not removed. Please try again.">
+    <folderRemoved "Folder removed.">
+    <conversationMoveError "Failed to move conversation into folder.">
+    <moveConversationsDialogTitle "Moving conversations into folder">
+    <moveConversationsDialogText "conversations selected. Move them into folder:">
+    <conversationsNotSelectedError "Please select conversations first">
+    <movingConversationsError "Sorry, failed to move conversations to folder">
+    <conversationsMoved "conversations moved.">
+    <addNewFolder "Add a new folder">
+    <moveFilesDialogTitle "Moving files into folder">
+    <moveFilesDialogText "files selected. Move them into folder">
+    <filesNotSelectedError "Please select files first">
+    <movingFilesError "Sorry, failed to move files to folder">
+    <filesMoved "files moved.">
+    <fileMoveError "Failed to move file into folder.">
+    <removeFileFolderDialogText2 "Files in this folder are now in \"all files\".">
