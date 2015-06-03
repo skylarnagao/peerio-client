@@ -137,6 +137,12 @@ Peerio.message = {};
 		var keys = []
 		var page = getOnlyLastTenMessages? 0 : 1
 		var beginDecrypt = function(data, id) {
+			if(Object.keys(data.messages).length===0){
+				if (typeof(onComplete) === 'function') {
+					onComplete(Peerio.user.conversations[id])
+				}
+				return false
+			}
 			for (var message in data.messages) {
 				if (({}).hasOwnProperty.call(data.messages, message)) {
 					Peerio.user.conversations[id].messages[message] = data.messages[message]

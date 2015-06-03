@@ -1095,38 +1095,61 @@ div.mainSidebar {
 	}
 
 	div.mainSidebar ul.folderView {
-		font-size: 0.8em;
+		font-size: 1em;
 		line-height: 1em;
-		height: 140px;
 		padding: 0 0 10px 0;
 		overflow-x: hidden;
 		overflow-y: auto;
 		list-style-type: none;
-		display: none;
+		max-height: 240px;
 	}
 
+		div.mainSidebar ul.folderView .fontAwesome {
+			display: inline-block;
+			width: 15px;
+			margin-right: 3px;
+		}
 		div.mainSidebar ul.folderView li {
-			margin-top: 5px;
+			line-height: normal;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+			position: relative;
+			transition: all .1s linear;
+			transform-origin: left;
+		}
+		div.mainSidebar ul.folderView li .action-icon {
+			display: none;
+			cursor: pointer;
+			color: #ccc;
+			position: absolute;
+			right: -6px;
+			top: -2px;
+			background-color: #345;
+			padding: 3px;
+		}
+		div.mainSidebar ul.folderView li:hover  .action-icon{
+			display: block;
+		}
+		div.mainSidebar ul.folderView li  .action-icon:hover{
+			color: white;
 		}
 
-		div.mainSidebar ul.folderView ul {
-			margin-top: 5px;
-			list-style-type: none;
-		}
 
-			div.mainSidebar ul.folderView ul:hover {
+			div.mainSidebar ul.folderView:hover {
 				background: transparent;
 				color: #2C95CF;
 			}
 
-			div.mainSidebar ul.folderView ul li {
-				margin: -5px 0 0 13px;
-			}
-
-				div.mainSidebar ul.folderView ul li:hover {
-					background: none;
-					color: #2C95CF;
-				}
+.add-folder-btn{
+	font-size: 0.9em;
+	margin-left: 10px;
+}
+#groupFolderSelect{
+	font-size: 1em;
+	width: 250px;
+	margin-top: 15px;
+}
 
 div.messagesSidebar {
 }
@@ -1152,6 +1175,8 @@ span.filesSidebarUploadFileSubtitle {
 div.sidebar h2 {
 	margin: 15px 0 0 10px;
 	font-weight: normal;
+	transform-origin: left;
+	transition: transform 0.1s linear;
 }
 
 	div.sidebar h2 span {
@@ -1159,12 +1184,12 @@ div.sidebar h2 {
 	}
 
 div.sidebar ul {
-	margin: 0px 0 0 10px;
+	margin: 3px 0 0 10px;
 	line-height: 2em;
 }
 
 	div.sidebar ul li {
-		width: 170px;
+
 		margin-top: 2px;
 		color: #FFF;
 		opacity: 0.6;
@@ -1182,10 +1207,14 @@ button.active {
 div.sidebar ul li:hover,
 div.sidebar ul li.active,
 div.sidebar ul li:hover *,
-div.sidebar ul li.active * {
+div.sidebar ul li.active *,
+.messagesSidebar h2.active,
+.messagesSidebar h2:hover{
 	opacity: 1;
 }
-
+.messagesSidebar h2 {
+	opacity: 0.6;
+}
 div.filesSidebar {
 }
 

@@ -1,488 +1,558 @@
 ﻿<!DOCTYPE html>
 <html data-ng-app="PeerioUI" data-ng-csp>
 <head>
-	<meta charset="UTF-8" />
-	<title data-l10n-id="title">Peerio</title>
-	<link rel="icon" type="image/png" href="img/icon32.png" />
-	<link rel="stylesheet" href="css/lib/reset.css" type="text/css" />
-	<link rel="stylesheet" href="css/lib/angular-csp.css" type="text/css" />
-	<link rel="stylesheet" href="css/lib/hotkeys.css" type="text/css" />
-	<link rel="stylesheet" href="css/lib/utip.css" type="text/css" />
-	<link rel="stylesheet" href="css/lib/sweet-alert.css" type="text/css" />
-	<link rel="stylesheet" href="css/ui.css" type="text/css" />
-	<!-- Dependencies -->
-	<script type="application/javascript" src="js/lib/l20n.js"></script>
-	<script type="application/javascript" src="js/lib/zepto.js"></script>
-	<script type="application/javascript" src="js/lib/angular.js"></script>
-	<script type="application/javascript" src="js/lib/angular-sanitize.js"></script>
-	<script type="application/javascript" src="js/lib/hotkeys.js"></script>
-	<script type="application/javascript" src="js/lib/base58.js"></script>
-	<!--<script type="application/javascript" src="js/lib/jszip.js"></script>-->
-	<script type="application/javascript" src="js/lib/pnglib.js"></script>
-	<script type="application/javascript" src="js/lib/identicon.js"></script>
-	<script type="application/javascript" src="js/lib/zxcvbn.js"></script>
-	<script type="application/javascript" src="js/lib/utip.js"></script>
-	<script type="application/javascript" src="js/lib/sweet-alert.js"></script>
-	<script type="application/javascript" src="js/lib/qrcode.js"></script>
-	<script type="application/javascript" src="js/lib/pouchdb.js"></script>
-	<script type="application/javascript" src="js/lib/papaparse.js"></script>
-	<!-- Cryptographic Libraries -->
-	<script type="application/javascript" src="js/lib/crypto/nacl.js"></script>
-	<script type="application/javascript" src="js/lib/crypto/nacl-stream.js"></script>
-	<script type="application/javascript" src="js/lib/crypto/blake2s.js"></script>
-	<script type="application/javascript" src="js/lib/crypto/scrypt.js"></script>
-	<!-- miniLock -->
-	<script type="application/javascript" src="js/miniLock/miniLock.js"></script>
-	<script type="application/javascript" src="js/miniLock/phrase.js"></script>
-	<!-- Peerio -->
-	<script type="application/javascript" src="js/peerio/peerio.js"></script>
-	<script type="application/javascript" src="js/peerio/config.js"></script>
-	<script type="application/javascript" src="js/peerio/storage.js"></script>
-	<script type="application/javascript" src="js/peerio/util.js"></script>
-	<script type="application/javascript" src="js/peerio/socket.js"></script>
-	<script type="application/javascript" src="js/peerio/network.js"></script>
-	<script type="application/javascript" src="js/peerio/crypto.js"></script>
-	<script type="application/javascript" src="js/peerio/message.js"></script>
-	<script type="application/javascript" src="js/peerio/file.js"></script>
-	<script type="application/javascript" src="js/peerio/notification.js"></script>
-	<script type="application/javascript" src="js/peerio/ui.js"></script>
-	<script type="application/javascript" src="js/peerio/user.js"></script>
-	<!-- Peerio UI -->
-	<script type="application/javascript" src="js/peerio/ui/UI.accountSettings.js"></script>
-	<script type="application/javascript" src="js/peerio/ui/UI.addContact.js"></script>
-	<script type="application/javascript" src="js/peerio/ui/UI.attachFile.js"></script>
-	<script type="application/javascript" src="js/peerio/ui/UI.contactsSection.js"></script>
-	<script type="application/javascript" src="js/peerio/ui/UI.downloadFile.js"></script>
-	<script type="application/javascript" src="js/peerio/ui/UI.filesSection.js"></script>
-	<script type="application/javascript" src="js/peerio/ui/UI.frontModals.js"></script>
-	<script type="application/javascript" src="js/peerio/ui/UI.loginForm.js"></script>
-	<script type="application/javascript" src="js/peerio/ui/UI.mainTop.js"></script>
-	<script type="application/javascript" src="js/peerio/ui/UI.userMenu.js"></script>
-	<script type="application/javascript" src="js/peerio/ui/UI.messagesSection.js"></script>
-	<script type="application/javascript" src="js/peerio/ui/UI.newMessage.js"></script>
-	<script type="application/javascript" src="js/peerio/ui/UI.preferences.js"></script>
-	<script type="application/javascript" src="js/peerio/ui/UI.signupForms.js"></script>
-	<script type="application/javascript" src="js/peerio/ui/UI.twoFactorAuth.js"></script>
-	<script type="application/javascript" src="js/peerio/ui/UI.importContacts.js"></script>
+    <meta charset="UTF-8"/>
+    <title data-l10n-id="title">Peerio</title>
+    <link rel="icon" type="image/png" href="img/icon32.png"/>
+    <link rel="stylesheet" href="css/lib/reset.css" type="text/css"/>
+    <link rel="stylesheet" href="css/lib/angular-csp.css" type="text/css"/>
+    <link rel="stylesheet" href="css/lib/hotkeys.css" type="text/css"/>
+    <link rel="stylesheet" href="css/lib/utip.css" type="text/css"/>
+    <link rel="stylesheet" href="css/lib/sweet-alert.css" type="text/css"/>
+    <link rel="stylesheet" href="css/ui.css" type="text/css"/>
+    <!-- Dependencies -->
+    <script type="application/javascript" src="js/lib/l20n.js"></script>
+    <script type="application/javascript" src="js/lib/zepto.js"></script>
+    <script type="application/javascript" src="js/lib/angular.js"></script>
+    <script type="application/javascript" src="js/lib/angular-sanitize.js"></script>
+    <script type="application/javascript" src="js/lib/hotkeys.js"></script>
+    <script type="application/javascript" src="js/lib/base58.js"></script>
+    <!--<script type="application/javascript" src="js/lib/jszip.js"></script>-->
+    <script type="application/javascript" src="js/lib/pnglib.js"></script>
+    <script type="application/javascript" src="js/lib/identicon.js"></script>
+    <script type="application/javascript" src="js/lib/zxcvbn.js"></script>
+    <script type="application/javascript" src="js/lib/utip.js"></script>
+    <script type="application/javascript" src="js/lib/sweet-alert.js"></script>
+    <script type="application/javascript" src="js/lib/qrcode.js"></script>
+    <script type="application/javascript" src="js/lib/pouchdb.js"></script>
+    <script type="application/javascript" src="js/lib/papaparse.js"></script>
+    <!-- Cryptographic Libraries -->
+    <script type="application/javascript" src="js/lib/crypto/nacl.js"></script>
+    <script type="application/javascript" src="js/lib/crypto/nacl-stream.js"></script>
+    <script type="application/javascript" src="js/lib/crypto/blake2s.js"></script>
+    <script type="application/javascript" src="js/lib/crypto/scrypt.js"></script>
+    <!-- miniLock -->
+    <script type="application/javascript" src="js/miniLock/miniLock.js"></script>
+    <script type="application/javascript" src="js/miniLock/phrase.js"></script>
+    <!-- Peerio -->
+    <script type="application/javascript" src="js/peerio/peerio.js"></script>
+    <script type="application/javascript" src="js/peerio/config.js"></script>
+    <script type="application/javascript" src="js/peerio/storage.js"></script>
+    <script type="application/javascript" src="js/peerio/util.js"></script>
+    <script type="application/javascript" src="js/peerio/socket.js"></script>
+    <script type="application/javascript" src="js/peerio/network.js"></script>
+    <script type="application/javascript" src="js/peerio/crypto.js"></script>
+    <script type="application/javascript" src="js/peerio/message.js"></script>
+    <script type="application/javascript" src="js/peerio/file.js"></script>
+    <script type="application/javascript" src="js/peerio/notification.js"></script>
+    <script type="application/javascript" src="js/peerio/ui.js"></script>
+    <script type="application/javascript" src="js/peerio/user.js"></script>
+    <!-- Peerio UI -->
+    <script type="application/javascript" src="js/peerio/ui/UI.accountSettings.js"></script>
+    <script type="application/javascript" src="js/peerio/ui/UI.addContact.js"></script>
+    <script type="application/javascript" src="js/peerio/ui/UI.attachFile.js"></script>
+    <script type="application/javascript" src="js/peerio/ui/UI.contactsSection.js"></script>
+    <script type="application/javascript" src="js/peerio/ui/UI.downloadFile.js"></script>
+    <script type="application/javascript" src="js/peerio/ui/UI.filesSection.js"></script>
+    <script type="application/javascript" src="js/peerio/ui/UI.frontModals.js"></script>
+    <script type="application/javascript" src="js/peerio/ui/UI.loginForm.js"></script>
+    <script type="application/javascript" src="js/peerio/ui/UI.mainTop.js"></script>
+    <script type="application/javascript" src="js/peerio/ui/UI.userMenu.js"></script>
+    <script type="application/javascript" src="js/peerio/ui/UI.messagesSection.js"></script>
+    <script type="application/javascript" src="js/peerio/ui/UI.newMessage.js"></script>
+    <script type="application/javascript" src="js/peerio/ui/UI.preferences.js"></script>
+    <script type="application/javascript" src="js/peerio/ui/UI.signupForms.js"></script>
+    <script type="application/javascript" src="js/peerio/ui/UI.twoFactorAuth.js"></script>
+    <script type="application/javascript" src="js/peerio/ui/UI.importContacts.js"></script>
 </head>
 <body>
-	<!-- Login Screen -->
-	<div class="loginScreen screen">
-		<div class="loginForm" data-ng-controller="loginForm">
-			<form data-ng-submit="login.login()">
-				<img src="img/peerioLogotypeWhite.png" alt="Peerio" class="peerioLogotypeWhite" />
-				<input type="text"
-					   data-l10n-id="username"
-					   data-ng-model="login.username"
-					   data-ng-disabled="login.showLoading"
-					   maxlength="16" autofocus required />
-				<input type="password"
-					   data-l10n-id="passphraseOrPIN"
-					   data-ng-model="login.passphrase"
-					   data-ng-disabled="login.showLoading"
-					   maxlength="256" required />
-				<button type="button"
-						data-ng-click="login.showPassphrase()"
-						data-utip-l10n="showPassphrase"
-						class="clear loginShowPassphrase"
-						data-utip-gravity="sw">
-					<span class="loginShowPassphraseEnable fontAwesome">&#xf06e;</span>
-					<span class="loginShowPassphraseDisable fontAwesome">&#xf070;</span>
-				</button>
-				<button type="submit" data-ng-disabled="login.showLoading">
-					<span data-ng-show="!login.showLoading">Login</span>
-					<img data-ng-show="login.showLoading" src="img/loading.gif" alt="" />
-				</button>
-				<span class="loginFormOr" data-l10n-id="or"></span>
-			</form>
-			<button class="loginFormSignup" data-ng-click="login.showSignupForm()" data-l10n-id="signup"></button>
-			<div class="loginFormFooter">
-				<img src="img/peerioLogoWhite.png" alt="" />
-				<span class="loginFormVersion" data-ng-bind="login.version"></span>
-				<a href="https://peerio.com" target="_blank">About</a>
-				<a href="http://support.peerio.com" target="_blank">Support</a>
-			</div>
-		</div>
-		<div class="signupForms" data-ng-controller="signupForms">
-			<div class="signupSplash" data-ng-style="resize()" resize="0,70">
-				<h1 data-l10n-id="signupHeader"></h1>
-				<p data-l10n-id="signupIntro"></p>
-			</div>
-			<div class="signupFields">
-				<div class="signupProgress">
-					<span data-l10n-id="signupProgress"></span>
-					<div class="signupProgressBar">
-						<div class="signupProgressBarFill"></div>
-					</div>
-				</div>
-				<h3 data-l10n-id="signup"></h3>
-				<form class="signupBasicInformation" data-ng-submit="signup.basicInformationContinue()">
-					<h1 data-l10n-id="basicInformation"></h1>
-					<input type="text"
-						   data-l10n-id="desiredUsername"
-						   maxlength="16"
-						   data-ng-model="signup.username"
-						   data-ng-change="signup.checkUsername()"
-						   class="signupDesiredUsername"
-						   required />
-					<div class="signupUsernameAvailability" data-l10n-id="usernameNotAvailable"></div>
-					<input type="text"
-						   data-l10n-id="firstName"
-						   maxlength="16"
-						   data-ng-model="signup.firstName"
-						   data-ng-pattern="/^[a-zãâàâåáéèêëîïôûùüÿýçñæœößøòôõóìîíùûúà .\-']{1,20}$/i" required />
-					<input type="text"
-						   data-l10n-id="lastName"
-						   maxlength="16"
-						   data-ng-model="signup.lastName"
-						   data-ng-pattern="/^[a-zãâàâåáéèêëîïôûùüÿýçñæœößøòôõóìîíùûúà .\-']{1,20}$/i" required />
-					<input type="text"
-						   data-l10n-id="emailOrPhone"
-						   maxlength="128"
-						   class="signupEmailOrPhone"
-						   data-ng-change="signup.checkAddress()"
-						   data-ng-pattern="/^([-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+\.[a-zA-Z]{2,20})|\+?(\d|\s|\-|\(|\)){6,20}$/"
-						   data-ng-model="signup.emailOrPhone" required />
-					<div class="signupAddressAvailability" data-l10n-id="addressNotAvailable"></div>
-					<button type="submit"
-							data-l10n-id="continue"
-							data-ng-disabled="!signup.username||!signup.firstName||!signup.lastName||!signup.emailOrPhone"
-							class="basicInformationContinue"></button>
-				</form>
-				<form class="signupYourPassphrase" data-ng-submit="signup.checkPassphrase()">
-					<h1 data-l10n-id="yourPassphrase"></h1>
-					<div class="infoAlert">
-						<span class="infoAlertIcon">&#xf05a;</span>
-						<div class="infoAlertContent">
-							<p data-l10n-id="infoAlertPassphrase"></p>
-							<br />
-							<p data-l10n-id="infoAlertPassphraseNote"></p>
-						</div>
-					</div>
-					<div class="signupGeneratedPassphraseView">
-						<h2 data-l10n-id="signupYourGeneratedPassphrase"></h2>
-						<span class="signupGeneratedPassphrase" data-ng-bind="signup.passphrase"></span>
-						<button type="button" class="clear signupGeneratedPassphraseRefresh" data-ng-click="signup.generatedPassphraseRefresh()">
-							<span class="fontAwesome">&#xf021;</span>
-							&nbsp;
-							<span data-l10n-id="signupPassphraseRefresh"></span>
-						</button>
-					</div>
-					<button type="submit"
-							data-l10n-id="createMyAccount"
-							class="yourPassphraseContinue"></button>
-				</form>
-				<form class="signupAccountConfirmation" data-ng-submit="signup.confirmAccount()">
-					<h1 data-l10n-id="accountConfirmation"></h1>
-					<div class="infoAlert">
-						<span class="infoAlertIcon">&#xf05a;</span>
-						<div class="infoAlertContent">
-							<strong data-ng-bind="signup.emailOrPhone"></strong>
-							<br />
-							<p class="signupAccountConfirmationEmail"
-							   data-l10n-id="signupAccountConfirmationEmail"
-							   data-ng-if="signup.address.type === 'email'"></p>
-							<p class="signupAccountConfirmationPhone"
-							   data-l10n-id="signupAccountConfirmationPhone"
-							   data-ng-if="signup.address.type === 'phone'"></p>
-						</div>
-					</div>
-					<div class="signupConfirmationCodeTime">
-						<span data-l10n-id="signupConfirmationCodeTimeText"></span>
-						<span data-ng-bind="signup.confirmationCodeCountdown"></span>
-					</div>
-					<input type="text" data-l10n-id="confirmationCode" data-ng-model="signup.confirmationCode" class="confirmationCode" />
-					<div class="signupConfirmationCodeValidity" data-l10n-id="invalidConfirmationCode"></div>
-					<button type="submit" data-l10n-id="confirmMyAccount"></button>
-				</form>
-				<form class="signupFinishingUp" data-ng-submit="signup.peerioPINSet()">
-					<h1 data-l10n-id="finishingUp"></h1>
-					<div class="infoAlert">
-						<span class="infoAlertIcon">&#xf05a;</span>
-						<div class="infoAlertContent">
-							<h1 data-l10n-id="setAPeerioPIN"></h1>
-							<p data-l10n-id="signupPeerioPIN"></p>
-						</div>
-					</div>
-					<input type="password"
-						   data-ng-model="signup.peerioPIN"
-						   data-l10n-id="peerioPIN"
-						   class="signupPeerioPINEntry" />
-					<div class="peerioPINStrength">
+<!-- Login Screen -->
+<div class="loginScreen screen">
+    <div class="loginForm" data-ng-controller="loginForm">
+        <form data-ng-submit="login.login()">
+            <img src="img/peerioLogotypeWhite.png" alt="Peerio" class="peerioLogotypeWhite"/>
+            <input type="text"
+                   data-l10n-id="username"
+                   data-ng-model="login.username"
+                   data-ng-disabled="login.showLoading"
+                   maxlength="16" autofocus required/>
+            <input type="password"
+                   data-l10n-id="passphraseOrPIN"
+                   data-ng-model="login.passphrase"
+                   data-ng-disabled="login.showLoading"
+                   maxlength="256" required/>
+            <button type="button"
+                    data-ng-click="login.showPassphrase()"
+                    data-utip-l10n="showPassphrase"
+                    class="clear loginShowPassphrase"
+                    data-utip-gravity="sw">
+                <span class="loginShowPassphraseEnable fontAwesome">&#xf06e;</span>
+                <span class="loginShowPassphraseDisable fontAwesome">&#xf070;</span>
+            </button>
+            <button type="submit" data-ng-disabled="login.showLoading">
+                <span data-ng-show="!login.showLoading">Login</span>
+                <img data-ng-show="login.showLoading" src="img/loading.gif" alt=""/>
+            </button>
+            <span class="loginFormOr" data-l10n-id="or"></span>
+        </form>
+        <button class="loginFormSignup" data-ng-click="login.showSignupForm()" data-l10n-id="signup"></button>
+        <div class="loginFormFooter">
+            <img src="img/peerioLogoWhite.png" alt=""/>
+            <span class="loginFormVersion" data-ng-bind="login.version"></span>
+            <a href="https://peerio.com" target="_blank">About</a>
+            <a href="http://support.peerio.com" target="_blank">Support</a>
+        </div>
+    </div>
+    <div class="signupForms" data-ng-controller="signupForms">
+        <div class="signupSplash" data-ng-style="resize()" resize="0,70">
+            <h1 data-l10n-id="signupHeader"></h1>
+
+            <p data-l10n-id="signupIntro"></p>
+        </div>
+        <div class="signupFields">
+            <div class="signupProgress">
+                <span data-l10n-id="signupProgress"></span>
+
+                <div class="signupProgressBar">
+                    <div class="signupProgressBarFill"></div>
+                </div>
+            </div>
+            <h3 data-l10n-id="signup"></h3>
+
+            <form class="signupBasicInformation" data-ng-submit="signup.basicInformationContinue()">
+                <h1 data-l10n-id="basicInformation"></h1>
+                <input type="text"
+                       data-l10n-id="desiredUsername"
+                       maxlength="16"
+                       data-ng-model="signup.username"
+                       data-ng-change="signup.checkUsername()"
+                       class="signupDesiredUsername"
+                       required/>
+
+                <div class="signupUsernameAvailability" data-l10n-id="usernameNotAvailable"></div>
+                <input type="text"
+                       data-l10n-id="firstName"
+                       maxlength="16"
+                       data-ng-model="signup.firstName"
+                       data-ng-pattern="/^[a-zãâàâåáéèêëîïôûùüÿýçñæœößøòôõóìîíùûúà .\-']{1,20}$/i" required/>
+                <input type="text"
+                       data-l10n-id="lastName"
+                       maxlength="16"
+                       data-ng-model="signup.lastName"
+                       data-ng-pattern="/^[a-zãâàâåáéèêëîïôûùüÿýçñæœößøòôõóìîíùûúà .\-']{1,20}$/i" required/>
+                <input type="text"
+                       data-l10n-id="emailOrPhone"
+                       maxlength="128"
+                       class="signupEmailOrPhone"
+                       data-ng-change="signup.checkAddress()"
+                       data-ng-pattern="/^([-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+\.[a-zA-Z]{2,20})|\+?(\d|\s|\-|\(|\)){6,20}$/"
+                       data-ng-model="signup.emailOrPhone" required/>
+
+                <div class="signupAddressAvailability" data-l10n-id="addressNotAvailable"></div>
+                <button type="submit"
+                        data-l10n-id="continue"
+                        data-ng-disabled="!signup.username||!signup.firstName||!signup.lastName||!signup.emailOrPhone"
+                        class="basicInformationContinue"></button>
+            </form>
+            <form class="signupYourPassphrase" data-ng-submit="signup.checkPassphrase()">
+                <h1 data-l10n-id="yourPassphrase"></h1>
+
+                <div class="infoAlert">
+                    <span class="infoAlertIcon">&#xf05a;</span>
+
+                    <div class="infoAlertContent">
+                        <p data-l10n-id="infoAlertPassphrase"></p>
+                        <br/>
+
+                        <p data-l10n-id="infoAlertPassphraseNote"></p>
+                    </div>
+                </div>
+                <div class="signupGeneratedPassphraseView">
+                    <h2 data-l10n-id="signupYourGeneratedPassphrase"></h2>
+                    <span class="signupGeneratedPassphrase" data-ng-bind="signup.passphrase"></span>
+                    <button type="button" class="clear signupGeneratedPassphraseRefresh"
+                            data-ng-click="signup.generatedPassphraseRefresh()">
+                        <span class="fontAwesome">&#xf021;</span>
+                        &nbsp;
+                        <span data-l10n-id="signupPassphraseRefresh"></span>
+                    </button>
+                </div>
+                <button type="submit"
+                        data-l10n-id="createMyAccount"
+                        class="yourPassphraseContinue"></button>
+            </form>
+            <form class="signupAccountConfirmation" data-ng-submit="signup.confirmAccount()">
+                <h1 data-l10n-id="accountConfirmation"></h1>
+
+                <div class="infoAlert">
+                    <span class="infoAlertIcon">&#xf05a;</span>
+
+                    <div class="infoAlertContent">
+                        <strong data-ng-bind="signup.emailOrPhone"></strong>
+                        <br/>
+
+                        <p class="signupAccountConfirmationEmail"
+                           data-l10n-id="signupAccountConfirmationEmail"
+                           data-ng-if="signup.address.type === 'email'"></p>
+
+                        <p class="signupAccountConfirmationPhone"
+                           data-l10n-id="signupAccountConfirmationPhone"
+                           data-ng-if="signup.address.type === 'phone'"></p>
+                    </div>
+                </div>
+                <div class="signupConfirmationCodeTime">
+                    <span data-l10n-id="signupConfirmationCodeTimeText"></span>
+                    <span data-ng-bind="signup.confirmationCodeCountdown"></span>
+                </div>
+                <input type="text" data-l10n-id="confirmationCode" data-ng-model="signup.confirmationCode"
+                       class="confirmationCode"/>
+
+                <div class="signupConfirmationCodeValidity" data-l10n-id="invalidConfirmationCode"></div>
+                <button type="submit" data-l10n-id="confirmMyAccount"></button>
+            </form>
+            <form class="signupFinishingUp" data-ng-submit="signup.peerioPINSet()">
+                <h1 data-l10n-id="finishingUp"></h1>
+
+                <div class="infoAlert">
+                    <span class="infoAlertIcon">&#xf05a;</span>
+
+                    <div class="infoAlertContent">
+                        <h1 data-l10n-id="setAPeerioPIN"></h1>
+
+                        <p data-l10n-id="signupPeerioPIN"></p>
+                    </div>
+                </div>
+                <input type="password"
+                       data-ng-model="signup.peerioPIN"
+                       data-l10n-id="peerioPIN"
+                       class="signupPeerioPINEntry"/>
+
+                <div class="peerioPINStrength">
 						<span data-l10n-id="PINNotStrong"
-							  class="PINNotStrong"
-							  data-ng-show="!signup.peerioPINStrength()"></span>
+                              class="PINNotStrong"
+                              data-ng-show="!signup.peerioPINStrength()"></span>
 						<span data-l10n-id="PINStrong"
-							  class="PINStrong"
-							  data-ng-show="signup.peerioPINStrength()"></span>
-					</div>
-					<button type="submit"
-							data-l10n-id="setPIN"
-							data-ng-disabled="!signup.peerioPINStrength()"
-							class="signupPeerioPINEntryContinue"></button>
-					<br /><br />
-					<a href="#" data-l10n-id="skip" class="smallLink" data-ng-click="signup.firstLogin()"></a>
-				</form>
-			</div>
-		</div>
-	</div>
-	<!-- Main Screen -->
-	<div class="mainScreen screen">
-		<div class="dragAndDropUpload">
-			<div class="dragAndDropUploadInfo">
-				<h1 class="fontAwesome">&#xf15b;</h1>
-				<h2 data-l10n-id="dragAndDropUploadTitle"></h2>
-				<h3 data-l10n-id="dragAndDropUploadText"></h3>
-			</div>
-		</div>
-		<div class="mainSidebar" data-ng-style="resize()" resize="0,20">
-			<img src="img/peerioLogotypeWhite.png" alt="Peerio" class="peerioLogotypeWhite" />
-			<div class="messagesSidebar sidebar" data-sectionlink="messages" data-ng-controller="messagesSection">
-				<button class="messagesSidebarNewMessage"
-						data-l10n-id="newMessage"
-						data-ng-mousedown="messagesSidebar.newMessage()"></button>
-				<h2>
-					<span data-l10n-id="inbox"></span>&nbsp;
-					<span class="green" data-ng-bind="messagesSection.getMessagesNewCount()" data-ng-show="!!messagesSection.getMessagesNewCount()"></span>
-				</h2>
-				<ul class="messagesSidebarTypeFilters">
-					<li data-l10n-id="allMessages" class="active" data-ng-mousedown="messagesSection.setTypeFilter('all', $event)"></li>
-					<li data-l10n-id="newMessages" data-ng-mousedown="messagesSection.setTypeFilter('new', $event)"></li>
-					<!-- <li data-l10n-id="drafts" data-ng-mousedown="messagesSection.setTypeFilter('drafts', $event)"></li> -->
-				</ul>
-				<!--
-				<ul class="folderView">
-					<li><span class="blue fontAwesome">&#xf07c;</span> Work</li>
-					<ul>
-						<li>Quantum computers</li>
-						<li>More sushi</li>
-					</ul>
-					<li><span class="blue fontAwesome">&#xf07b;</span> Travel</li>
-					<li><span class="blue fontAwesome">&#xf07b;</span> Cats</li>
-				</ul>
-				-->
-			</div>
-			<div class="filesSidebar sidebar" data-sectionlink="files" data-ng-controller="filesSection">
-				<button class="filesSidebarUploadFile" data-l10n-id="uploadFile" data-ng-mousedown="filesSidebar.selectFile()"></button>
-				<span class="filesSidebarUploadFileSubtitle" data-l10n-id="filesSidebarUploadFileSubtitle"></span>
-				<form class="fileUploadForm">
-					<input type="file" name="file" class="fileSelectDialog" multiple />
-					<input type="file" class="fileSelectDialogNodeWebkit" nwsaveas />
-					<input type="reset" value="reset" class="hidden" />
-				</form>
-				<ul class="filesSidebarTypeFilters">
-					<li class="active" data-l10n-id="allDocuments" data-ng-mousedown="filesSection.setTypeFilter('', $event)"></li>
-					<li data-l10n-id="photos" data-ng-mousedown="filesSection.setTypeFilter('image', $event)"></li>
-					<li data-l10n-id="videos" data-ng-mousedown="filesSection.setTypeFilter('video', $event)"></li>
-					<li data-l10n-id="pdfDocuments" data-ng-mousedown="filesSection.setTypeFilter('pdf', $event)"></li>
-					<li data-l10n-id="wordDocuments" data-ng-mousedown="filesSection.setTypeFilter('word', $event)"></li>
-					<li data-l10n-id="spreadsheets" data-ng-mousedown="filesSection.setTypeFilter('excel', $event)"></li>
-					<li data-l10n-id="presentations" data-ng-mousedown="filesSection.setTypeFilter('powerpoint', $event)"></li>
-					<li data-l10n-id="other" data-ng-mousedown="filesSection.setTypeFilter('other', $event)"></li>
-				</ul>
-				<div class="filesSidebarQuotaUsage">
-					<h1 data-l10n-id="storage"></h1>
-					<span data-l10n-id="yourUsage"></span>
-					<br />
-					<span data-ng-bind="filesSidebar.getUserQuota()"></span>/
-					<span data-ng-bind="filesSidebar.getTotalQuota()"></span>
-					(
-					<span data-ng-bind="filesSidebar.getQuotaPercentage()"></span>)
-				</div>
-				<ul class="folderView">
-					<li><span class="blue fontAwesome">&#xf07c;</span> Work</li>
-					<ul>
-						<li>Quantum computers</li>
-						<li>More sushi</li>
-					</ul>
-					<li><span class="blue fontAwesome">&#xf07b;</span> Travel</li>
-					<li><span class="blue fontAwesome">&#xf07b;</span> Cats</li>
-				</ul>
-			</div>
-			<div class="contactsSidebar sidebar" data-sectionlink="contacts" data-ng-controller="contactsSection">
-				<button class="contactsSidebarAddContact"
-						data-l10n-id="addContact"
-						data-ng-mousedown="contactsSidebar.addContact()"></button>
-				<ul class="contactsSidebarTypeFilters">
-					<li class="active" data-l10n-id="allContacts" data-ng-mousedown="contactsSection.setTypeFilter('all', $event)"></li>
-					<li data-l10n-id="confirmedContacts" data-ng-mousedown="contactsSection.setTypeFilter('confirmed', $event)"></li>
-					<li data-l10n-id="pendingContacts" data-ng-mousedown="contactsSection.setTypeFilter('pending', $event)"></li>
-				</ul>
-				<!--
-					<br /><hr /><br />
-				-->
-				<button class="clear contactsSidebarImportContacts" data-ng-click="contactsSidebar.importContacts()">
-					<span class="fontAwesome">&#xf007;</span>
-					&nbsp;
-					<span data-l10n-id="importContacts"></span>
-				</button>
-			</div>
-			<div class="userMenu" data-ng-controller="userMenu">
-				<div class="userMenuAvatar">
-					<img data-ng-src="{{userMenu.avatarIcon1}}" alt="" />
-					<img data-ng-src="{{userMenu.avatarIcon2}}" alt="" />
-					<img data-ng-src="{{userMenu.avatarIcon3}}" alt="" />
-					<img data-ng-src="{{userMenu.avatarIcon4}}" alt="" />
-				</div>
-				<div class="userMenuStatus">
-					<span class="connectionStatus" data-utip-l10n="connectionStatus" data-utip-gravity="sw"></span>
-					<span class="userFirstName" data-ng-bind="userMenu.firstName"></span>
-				</div>
-				<div class="userMenuIcon fontAwesome">
-					&#xf077;
-				</div>
-				<br />
-				<br />
-				<button class="clear" data-ng-mousedown="userMenu.openAccountSettings()">
-					<span class="fontAwesome">&#xf007;</span>
-					&nbsp;
-					<span data-l10n-id="account"></span>
-				</button>
-				<button class="clear" data-ng-mousedown="userMenu.openPreferences()">
-					<span class="fontAwesome">&#xf013;</span>
-					&nbsp;
-					<span data-l10n-id="preferences"></span>
-				</button>
-				<a href="http://support.peerio.com" target="_blank">
-					<button class="clear">
-						<span class="fontAwesome">&#xf1cd;</span>
-						&nbsp;
-						<span data-l10n-id="help"></span>
-					</button>
-				</a>
-				<hr />
-				<button class="clear" data-ng-click="userMenu.logout()">
-					<span class="fontAwesome">&#xf08b;</span>
-					&nbsp;
-					<span data-l10n-id="logout"></span>
-				</button>
-			</div>
-		</div>
-		<div class="mainTop" data-ng-controller="mainTop" data-ng-style="resize()" resize="220,0">
-			<div class="mainTopSectionSelect">
-				<div class="mainTopSectionTab"
-					 data-ng-mousedown="mainTop.clickTab('messages')"
-					 data-sectionlink="messages">
-					<span data-l10n-id="messages"></span>
+                              class="PINStrong"
+                              data-ng-show="signup.peerioPINStrength()"></span>
+                </div>
+                <button type="submit"
+                        data-l10n-id="setPIN"
+                        data-ng-disabled="!signup.peerioPINStrength()"
+                        class="signupPeerioPINEntryContinue"></button>
+                <br/><br/>
+                <a href="#" data-l10n-id="skip" class="smallLink" data-ng-click="signup.firstLogin()"></a>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Main Screen -->
+<div class="mainScreen screen">
+    <div class="dragAndDropUpload">
+        <div class="dragAndDropUploadInfo">
+            <h1 class="fontAwesome">&#xf15b;</h1>
+
+            <h2 data-l10n-id="dragAndDropUploadTitle"></h2>
+
+            <h3 data-l10n-id="dragAndDropUploadText"></h3>
+        </div>
+    </div>
+    <div class="mainSidebar" data-ng-style="resize()" resize="0,20">
+        <img src="img/peerioLogotypeWhite.png" alt="Peerio" class="peerioLogotypeWhite"/>
+
+        <div class="messagesSidebar sidebar" data-sectionlink="messages" data-ng-controller="messagesSection">
+            <button class="messagesSidebarNewMessage"
+                    data-l10n-id="newMessage"
+                    data-ng-mousedown="messagesSidebar.newMessage()"></button>
+
+            <h2 peerio-drag-enter="$root.folders.handleDragEnter()"
+                peerio-drag-leave="$root.folders.handleDragLeave()"
+                peerio-drop="$root.folders.handleDrop()"
+                data-ng-mousedown="messagesSection.setTypeFilter('inbox', $event)">
+                <span style="pointer-events: none;" data-l10n-id="inbox"></span>&nbsp;
+                <span style="pointer-events: none;" class="green"
+                      data-ng-bind="messagesSection.getMessagesNewCount()"
+                      data-ng-show="!!messagesSection.getMessagesNewCount()"></span>
+            </h2>
+
+            <ul class="messagesSidebarTypeFilters">
+                <li data-l10n-id="allMessages" class="active"
+                    data-ng-mousedown="messagesSection.setTypeFilter('all', $event)"></li>
+                <li data-l10n-id="newMessages" data-ng-mousedown="messagesSection.setTypeFilter('new', $event)"></li>
+                <!-- <li data-l10n-id="drafts" data-ng-mousedown="messagesSection.setTypeFilter('drafts', $event)"></li> -->
+            </ul>
+
+            <ul class="folderView">
+                <li peerio-drag-enter="$root.folders.handleDragEnter(folder)"
+                    peerio-drag-leave="$root.folders.handleDragLeave(folder)"
+                    peerio-drop="$root.folders.handleDrop(folder)"
+                    data-ng-repeat="folder in $root.folders.folders"
+                    data-ng-mousedown="messagesSection.setTypeFilter(folder.id, $event)">
+                    <span class="blue fontAwesome">&#xf07c;</span>{{folder.name}}
+						<span class="fontAwesome action-icon" style="right:13px;top:-1px;"
+                              data-ng-click="$root.folders.renameFolder(folder)">&#xf044;</span>
+                    <span class="fontAwesome action-icon"
+                          data-ng-click="$root.folders.removeFolder(folder)">&#xf00d;</span>
+                </li>
+            </ul>
+            <a href="#" class="add-folder-btn" data-ng-click="$root.folders.addFolder()" data-l10n-id="addNewFolder"></a>
+        </div>
+        <div class="filesSidebar sidebar" data-sectionlink="files" data-ng-controller="filesSection">
+            <button class="filesSidebarUploadFile" data-l10n-id="uploadFile"
+                    data-ng-mousedown="filesSidebar.selectFile()"></button>
+            <span class="filesSidebarUploadFileSubtitle" data-l10n-id="filesSidebarUploadFileSubtitle"></span>
+
+            <form class="fileUploadForm">
+                <input type="file" name="file" class="fileSelectDialog" multiple/>
+                <input type="file" class="fileSelectDialogNodeWebkit" nwsaveas/>
+                <input type="reset" value="reset" class="hidden"/>
+            </form>
+            <ul class="filesSidebarTypeFilters">
+                <li class="active" data-l10n-id="allDocuments"
+                    data-ng-mousedown="filesSection.setTypeFilter('', $event)"></li>
+                <li data-l10n-id="photos" data-ng-mousedown="filesSection.setTypeFilter('image', $event)"></li>
+                <li data-l10n-id="videos" data-ng-mousedown="filesSection.setTypeFilter('video', $event)"></li>
+                <li data-l10n-id="pdfDocuments" data-ng-mousedown="filesSection.setTypeFilter('pdf', $event)"></li>
+                <li data-l10n-id="wordDocuments" data-ng-mousedown="filesSection.setTypeFilter('word', $event)"></li>
+                <li data-l10n-id="spreadsheets" data-ng-mousedown="filesSection.setTypeFilter('excel', $event)"></li>
+                <li data-l10n-id="presentations"
+                    data-ng-mousedown="filesSection.setTypeFilter('powerpoint', $event)"></li>
+                <li data-l10n-id="other" data-ng-mousedown="filesSection.setTypeFilter('other', $event)"></li>
+            </ul>
+            <div class="filesSidebarQuotaUsage">
+                <h1 data-l10n-id="storage"></h1>
+                <span data-l10n-id="yourUsage"></span>
+                <br/>
+                <span data-ng-bind="filesSidebar.getUserQuota()"></span>/
+                <span data-ng-bind="filesSidebar.getTotalQuota()"></span>
+                (
+                <span data-ng-bind="filesSidebar.getQuotaPercentage()"></span>)
+            </div>
+            <ul class="folderView">
+                <li><span class="blue fontAwesome">&#xf07c;</span> Work</li>
+                <ul>
+                    <li>Quantum computers</li>
+                    <li>More sushi</li>
+                </ul>
+                <li><span class="blue fontAwesome">&#xf07b;</span> Travel</li>
+                <li><span class="blue fontAwesome">&#xf07b;</span> Cats</li>
+            </ul>
+        </div>
+        <div class="contactsSidebar sidebar" data-sectionlink="contacts" data-ng-controller="contactsSection">
+            <button class="contactsSidebarAddContact"
+                    data-l10n-id="addContact"
+                    data-ng-mousedown="contactsSidebar.addContact()"></button>
+            <ul class="contactsSidebarTypeFilters">
+                <li class="active" data-l10n-id="allContacts"
+                    data-ng-mousedown="contactsSection.setTypeFilter('all', $event)"></li>
+                <li data-l10n-id="confirmedContacts"
+                    data-ng-mousedown="contactsSection.setTypeFilter('confirmed', $event)"></li>
+                <li data-l10n-id="pendingContacts"
+                    data-ng-mousedown="contactsSection.setTypeFilter('pending', $event)"></li>
+            </ul>
+            <!--
+                <br /><hr /><br />
+            -->
+            <button class="clear contactsSidebarImportContacts" data-ng-click="contactsSidebar.importContacts()">
+                <span class="fontAwesome">&#xf007;</span>
+                &nbsp;
+                <span data-l10n-id="importContacts"></span>
+            </button>
+        </div>
+        <div class="userMenu" data-ng-controller="userMenu">
+            <div class="userMenuAvatar">
+                <img data-ng-src="{{userMenu.avatarIcon1}}" alt=""/>
+                <img data-ng-src="{{userMenu.avatarIcon2}}" alt=""/>
+                <img data-ng-src="{{userMenu.avatarIcon3}}" alt=""/>
+                <img data-ng-src="{{userMenu.avatarIcon4}}" alt=""/>
+            </div>
+            <div class="userMenuStatus">
+                <span class="connectionStatus" data-utip-l10n="connectionStatus" data-utip-gravity="sw"></span>
+                <span class="userFirstName" data-ng-bind="userMenu.firstName"></span>
+            </div>
+            <div class="userMenuIcon fontAwesome">
+                &#xf077;
+            </div>
+            <br/>
+            <br/>
+            <button class="clear" data-ng-mousedown="userMenu.openAccountSettings()">
+                <span class="fontAwesome">&#xf007;</span>
+                &nbsp;
+                <span data-l10n-id="account"></span>
+            </button>
+            <button class="clear" data-ng-mousedown="userMenu.openPreferences()">
+                <span class="fontAwesome">&#xf013;</span>
+                &nbsp;
+                <span data-l10n-id="preferences"></span>
+            </button>
+            <a href="http://support.peerio.com" target="_blank">
+                <button class="clear">
+                    <span class="fontAwesome">&#xf1cd;</span>
+                    &nbsp;
+                    <span data-l10n-id="help"></span>
+                </button>
+            </a>
+            <hr/>
+            <button class="clear" data-ng-click="userMenu.logout()">
+                <span class="fontAwesome">&#xf08b;</span>
+                &nbsp;
+                <span data-l10n-id="logout"></span>
+            </button>
+        </div>
+    </div>
+    <div class="mainTop" data-ng-controller="mainTop" data-ng-style="resize()" resize="220,0">
+        <div class="mainTopSectionSelect">
+            <div class="mainTopSectionTab"
+                 data-ng-mousedown="mainTop.clickTab('messages')"
+                 data-sectionlink="messages">
+                <span data-l10n-id="messages"></span>
 					<span class="mainTopSectionTabNewCount"
-						  data-ng-bind="mainTop.getMessagesNewCount()"
-						  data-ng-show="!!mainTop.messagesNewCount">
+                          data-ng-bind="mainTop.getMessagesNewCount()"
+                          data-ng-show="!!mainTop.messagesNewCount">
 					</span>
 					<span class="mainTopSectionTabSearchCount"
-						  data-ng-bind="mainTop.messagesSearchCount"
-						  data-ng-show="!!mainTop.messagesSearchCount">
+                          data-ng-bind="mainTop.messagesSearchCount"
+                          data-ng-show="!!mainTop.messagesSearchCount">
 					</span>
-				</div>
-				<div class="mainTopSectionTab"
-					 data-ng-mousedown="mainTop.clickTab('files')"
-					 data-sectionlink="files">
-					<span data-l10n-id="files"></span>
+            </div>
+            <div class="mainTopSectionTab"
+                 data-ng-mousedown="mainTop.clickTab('files')"
+                 data-sectionlink="files">
+                <span data-l10n-id="files"></span>
 					<span class="mainTopSectionTabSearchCount"
-						  data-ng-bind="mainTop.filesSearchCount"
-						  data-ng-show="!!mainTop.filesSearchCount">
+                          data-ng-bind="mainTop.filesSearchCount"
+                          data-ng-show="!!mainTop.filesSearchCount">
 					</span>
-				</div>
-				<div class="mainTopSectionTab"
-					 data-ng-mousedown="mainTop.clickTab('contacts')"
-					 data-sectionlink="contacts">
-					<span data-l10n-id="contacts"></span>
+            </div>
+            <div class="mainTopSectionTab"
+                 data-ng-mousedown="mainTop.clickTab('contacts')"
+                 data-sectionlink="contacts">
+                <span data-l10n-id="contacts"></span>
 					<span class="mainTopSectionTabNewCount"
-						  data-ng-bind="mainTop.getContactsNewCount()"
-						  data-ng-show="!!mainTop.contactsNewCount">
+                          data-ng-bind="mainTop.getContactsNewCount()"
+                          data-ng-show="!!mainTop.contactsNewCount">
 					</span>
 					<span class="mainTopSectionTabSearchCount"
-						  data-ng-bind="mainTop.contactsSearchCount"
-						  data-ng-show="!!mainTop.contactsSearchCount">
+                          data-ng-bind="mainTop.contactsSearchCount"
+                          data-ng-show="!!mainTop.contactsSearchCount">
 					</span>
-				</div>
-			</div>
-			<form class="mainSearch">
-				<input type="text" data-ng-model="mainTop.searchInput" data-ng-change="mainTop.doSearch(mainTop.searchInput)" data-l10n-id="searchMessagesFilesAndContacts" />
-				<input type="submit" class="mainTopSearchSubmit" value="&#xf002;" />
-				<span class="mainTopSearchCount" data-ng-show="mainTop.searchInput.length" data-ng-click="mainTop.searchInput='';mainTop.doSearch('')">
+            </div>
+        </div>
+        <form class="mainSearch">
+            <input type="text" data-ng-model="mainTop.searchInput"
+                   data-ng-change="mainTop.doSearch(mainTop.searchInput)"
+                   data-l10n-id="searchMessagesFilesAndContacts"/>
+            <input type="submit" class="mainTopSearchSubmit" value="&#xf002;"/>
+				<span class="mainTopSearchCount" data-ng-show="mainTop.searchInput.length"
+                      data-ng-click="mainTop.searchInput='';mainTop.doSearch('')">
 					<span data-ng-bind="mainTop.searchCount"></span>&nbsp;<span class="fontAwesome">&#xf00d;</span>
 				</span>
-			</form>
-		</div>
-		<div class="mainSections">
-			<section class="messagesSection" data-ng-controller="messagesSection" data-sectionlink="messages">
-				<div class="messagesSectionListView" data-ng-style="resize()" resize="0,95">
-					<div class="messagesSectionListViewToolbar">
-						<!-- <button class="fontAwesome clear" data-utip-l10n="addToFolder" data-utip-gravity="ne">&#xf115;</button> -->
-						<button class="fontAwesome clear"
-								data-utip-l10n="remove"
-								data-utip-gravity="ne"
-								data-ng-click="messagesSection.removeConversations(messagesSection.checkedIDs)">
-							&#xf014;
-						</button>
-					</div>
-					<div class="messagesSectionListViewItems" data-ng-style="resize()" resize="0, 139">
-						<img data-ng-show="messagesSection.listIsLoading" src="img/loading.gif" class="messagesSectionListViewLoading" alt="" />
-						<div class="messageListItem"
-							 data-ng-repeat="conversation in messagesSection.conversations | orderObjectBy:'lastTimestamp':true"
-							 data-ng-attr-data-conversationid="{{'c' + conversation.id}}"
-							 data-ng-mousedown="messagesSection.selectConversation(conversation, $event)"
-							 data-ng-class="{'unread':conversation.original.isModified}"
-							 data-ng-show="messagesSection.checkSearchFilterConversation(conversation) && !!conversation.original.decrypted && messagesSection.checkTypeFilter(conversation)">
-							<div class="messageStatusIndicatorUnread" data-utip-l10n="newMessages" data-utip-gravity="se" data-ng-show="conversation.original.isModified"></div>
-							<div class="messageStatusIndicatorRead" data-utip-l10n="noNewMessages" data-utip-gravity="se" data-ng-show="!conversation.original.isModified"></div>
-							<input type="checkbox" class="blueCheckbox" data-ng-attr-id="{{'messageCheckbox' + conversation.id}}" data-ng-click="messagesSection.onCheck(conversation.id, $event)" />
-							<label data-ng-attr-for="{{'messageCheckbox' + conversation.id}}" class="blueCheckboxLabel">&nbsp;</label>
-							<div class="senderAndSummary">
-								<h2 data-ng-bind="messagesSection.getListingName(conversation.original)"></h2>
-								<h3 data-ng-bind="conversation.original.decrypted.subject"></h3>
-							</div>
-							<div class="dateAndTime">
-								<strong data-ng-bind="messagesSection.getDate(conversation.lastTimestamp).date"></strong>
-								<br />
-								<span data-ng-bind="messagesSection.getDate(conversation.lastTimestamp).time"></span>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="messagesSectionMessageView" data-ng-style="resize()" resize="590,135">
-					<div class="messagesSectionMessageViewIntro" data-ng-show="!messagesSection.conversation && !messagesSection.conversationIsLoading">
-						<img src="img/icon256.png" alt="" />
-						<h1 data-l10n-id="welcomeToAccount"></h1>
-						<p data-l10n-id="welcomeToAccountText"></p>
-						<ol>
-							<li data-l10n-id="welcomeToAccountList1"></li>
-							<li data-l10n-id="welcomeToAccountList2"></li>
-							<li data-l10n-id="welcomeToAccountList3"></li>
-						</ol>
-						<p data-l10n-id="welcomeToAccountListSearch"></p>
-					</div>
-					<div class="messagesSectionMessageViewTopIcons" data-ng-show="messagesSection.conversation">
-						<!-- <button
-							class="messagesSectionMessageViewAddToFolder clear fontAwesome"
-							data-utip-l10n="addToFolder"
-							data-utip-gravity="sw"
-							>&#xf115;</button> -->
-						<button class="messagesSectionMessageViewDelete fontAwesome clear"
-								data-utip-l10n="remove"
-								data-ng-mousedown="messagesSection.removeConversations([messagesSection.conversation.id])"
-								data-utip-gravity="sw">
-							&#xf014;
-						</button>
-					</div>
-					<h1 data-ng-show="messagesSection.conversation">
-						<span data-l10n-id="from"></span>
-						<span data-ng-bind="messagesSection.getFullName(messagesSection.conversation.original.sender)"></span>
+        </form>
+    </div>
+    <div class="mainSections">
+        <section class="messagesSection" data-ng-controller="messagesSection" data-sectionlink="messages">
+            <div class="messagesSectionListView" data-ng-style="resize()" resize="0,95">
+                <div class="messagesSectionListViewToolbar">
+                    <!-- <button class="fontAwesome clear" data-utip-l10n="addToFolder" data-utip-gravity="ne">&#xf115;</button> -->
+                    <button class="fontAwesome clear"
+                            data-utip-l10n="remove"
+                            data-utip-gravity="ne"
+                            data-ng-click="messagesSection.removeConversations(messagesSection.checkedIDs)">
+                        &#xf014;
+                    </button>
+                    <button class="fontAwesome clear"
+                            data-ng-click="$root.folders.addToFolderBulk(messagesSection.checkedIDs)">
+                        &#xf115;
+                    </button>
+                </div>
+                <div class="messagesSectionListViewItems" data-ng-style="resize()" resize="0, 139">
+                    <img data-ng-show="messagesSection.listIsLoading" src="img/loading.gif"
+                         class="messagesSectionListViewLoading" alt=""/>
+
+                    <div class="messageListItem" draggable="true"
+                         peerio-drag-start="$root.folders.handleDragStart(conversation)"
+                         peerio-drag-end="$root.folders.handleDragEnd(conversation)"
+                         data-ng-repeat="conversation in messagesSection.conversations | orderObjectBy:'lastTimestamp':true"
+                         data-ng-attr-data-conversationid="{{'c' + conversation.id}}"
+                         data-ng-mousedown="messagesSection.selectConversation(conversation, $event)"
+                         data-ng-class="{'unread':conversation.original.isModified}"
+                         data-ng-show="messagesSection.checkSearchFilterConversation(conversation) && !!conversation.original.decrypted && messagesSection.checkTypeFilter(conversation)">
+                        <div class="messageStatusIndicatorUnread" data-utip-l10n="newMessages" data-utip-gravity="se"
+                             data-ng-show="conversation.original.isModified"></div>
+                        <div class="messageStatusIndicatorRead" data-utip-l10n="noNewMessages" data-utip-gravity="se"
+                             data-ng-show="!conversation.original.isModified"></div>
+                        <input type="checkbox" class="blueCheckbox"
+                               data-ng-attr-id="{{'messageCheckbox' + conversation.id}}"
+                               data-ng-click="messagesSection.onCheck(conversation.id, $event)"/>
+                        <label data-ng-attr-for="{{'messageCheckbox' + conversation.id}}" class="blueCheckboxLabel">
+                            &nbsp;</label>
+
+                        <div class="senderAndSummary">
+                            <h2 data-ng-bind="messagesSection.getListingName(conversation.original)"></h2>
+
+                            <h3 data-ng-bind="conversation.original.decrypted.subject"></h3>
+                        </div>
+                        <div class="dateAndTime">
+                            <strong data-ng-bind="messagesSection.getDate(conversation.lastTimestamp).date"></strong>
+                            <br/>
+                            <span data-ng-bind="messagesSection.getDate(conversation.lastTimestamp).time"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="messagesSectionMessageView" data-ng-style="resize()" resize="590,135">
+                <div class="messagesSectionMessageViewIntro"
+                     data-ng-show="!messagesSection.conversation && !messagesSection.conversationIsLoading">
+                    <img src="img/icon256.png" alt=""/>
+
+                    <h1 data-l10n-id="welcomeToAccount"></h1>
+
+                    <p data-l10n-id="welcomeToAccountText"></p>
+                    <ol>
+                        <li data-l10n-id="welcomeToAccountList1"></li>
+                        <li data-l10n-id="welcomeToAccountList2"></li>
+                        <li data-l10n-id="welcomeToAccountList3"></li>
+                    </ol>
+                    <p data-l10n-id="welcomeToAccountListSearch"></p>
+                </div>
+                <div class="messagesSectionMessageViewTopIcons" data-ng-show="messagesSection.conversation">
+						 <span class="folder-selector">
+
+
+							 <select style="width:170px" data-ng-model="messagesSection.conversation.folderID"
+                                     data-ng-options="folder.id as folder.name for folder in $root.folders.folders"
+                                     data-ng-change="$root.folders.addToFolder(messagesSection.conversation)">
+                                 <option value="">Inbox</option>
+                             </select>
+						 </span>
+                    <button class="messagesSectionMessageViewDelete fontAwesome clear"
+                            data-utip-l10n="remove"
+                            data-ng-mousedown="messagesSection.removeConversations([messagesSection.conversation.id])"
+                            data-utip-gravity="sw">
+                        &#xf014;
+                    </button>
+                </div>
+                <h1 data-ng-show="messagesSection.conversation">
+                    <span data-l10n-id="from"></span>
+                    <span data-ng-bind="messagesSection.getFullName(messagesSection.conversation.original.sender)"></span>
 						<span class="headingSmall">
 							(<span data-ng-bind="messagesSection.conversation.original.sender"></span>)
 						</span>
-					</h1>
-					<h2 data-ng-show="messagesSection.conversation">
-						<span data-ng-repeat="participant in messagesSection.conversation.participants" data-ng-show="messagesSection.isValidParticipant(participant, messagesSection.conversation)">
+                </h1>
+
+                <h2 data-ng-show="messagesSection.conversation">
+						<span data-ng-repeat="participant in messagesSection.conversation.participants"
+                              data-ng-show="messagesSection.isValidParticipant(participant, messagesSection.conversation)">
 							<span data-ng-bind="messagesSection.getFullName(participant)"></span>
 							<span class="headingSmall">
 								(<span data-ng-bind="participant"></span>)
 							</span>
 							&nbsp;&nbsp;
 						</span>
-						<span class="messagesSectionMessageViewPreviousParticipants" data-ng-show="!!messagesSection.conversation.events.length">
+						<span class="messagesSectionMessageViewPreviousParticipants"
+                              data-ng-show="!!messagesSection.conversation.events.length">
 							<strong data-l10n-id="participantsWhoHaveLeft"></strong>
-							<span data-ng-repeat="event in messagesSection.conversation.events" data-ng-show="(event.type==='remove')">
+							<span data-ng-repeat="event in messagesSection.conversation.events"
+                                  data-ng-show="(event.type==='remove')">
 								<span data-ng-bind="messagesSection.getFullName(event.participant)"></span>
 								<span class="headingSmall">
 									(<span data-ng-bind="event.participant"></span>)
@@ -490,710 +560,788 @@
 								&nbsp;
 							</span>
 						</span>
-					</h2>
-					<h3 data-ng-show="messagesSection.conversation" data-ng-bind="messagesSection.conversation.original.decrypted.subject"></h3>
-					<div data-ng-show="messagesSection.conversationIsLoading" class="messagesSectionMessageViewLoading" alt="" data-ng-style="resize()" resize="0,405"></div>
-					<div data-ng-show="messagesSection.conversation&&!messagesSection.conversationIsLoading" class="messagesSectionMessageViewSingles" data-ng-style="resize()" resize="0,405">
-						<div data-ng-repeat="message in messagesSection.conversation.messages | orderObjectBy:'timestamp':false">
-							<div class="messagesSectionMessageViewAcknowledgement"
-								 data-ng-if="messagesSection.messageIsAck(message)">
-								<span class="fontAwesome">&#xf087;</span>
-								<span data-ng-bind="messagesSection.getDate(message.timestamp).date"></span>
-								<span>&nbsp;</span>
-								<span data-ng-bind="messagesSection.getDate(message.timestamp).time"></span>
+                </h2>
+
+                <h3 data-ng-show="messagesSection.conversation"
+                    data-ng-bind="messagesSection.conversation.original.decrypted.subject"></h3>
+
+                <div data-ng-show="messagesSection.conversationIsLoading" class="messagesSectionMessageViewLoading"
+                     alt="" data-ng-style="resize()" resize="0,405"></div>
+                <div data-ng-show="messagesSection.conversation&&!messagesSection.conversationIsLoading"
+                     class="messagesSectionMessageViewSingles" data-ng-style="resize()" resize="0,405">
+                    <div data-ng-repeat="message in messagesSection.conversation.messages | orderObjectBy:'timestamp':false">
+                        <div class="messagesSectionMessageViewAcknowledgement"
+                             data-ng-if="messagesSection.messageIsAck(message)">
+                            <span class="fontAwesome">&#xf087;</span>
+                            <span data-ng-bind="messagesSection.getDate(message.timestamp).date"></span>
+                            <span>&nbsp;</span>
+                            <span data-ng-bind="messagesSection.getDate(message.timestamp).time"></span>
 								<span style="float:right">
 									<span data-ng-bind="messagesSection.getFullName(message.sender)"></span>
 									<span class="headingSmall">
 										(<span data-ng-bind="message.sender"></span>)
 									</span>
 								</span>
-							</div>
-							<div class="messagesSectionMessageViewSingle"
-								 data-ng-if="messagesSection.messageIsDecrypted(message)&&!messagesSection.messageIsAck(message)"
-								 data-ng-class="{'sentByMe':messagesSection.sentByMe(message), 'failed':messagesSection.isFailed(message), 'sending':message.sending}"
-								 data-ng-attr-data-messageid="{{'m' + message.id}}">
-								<div class="messagesSectionMessageViewSingleInfo">
+                        </div>
+                        <div class="messagesSectionMessageViewSingle"
+                             data-ng-if="messagesSection.messageIsDecrypted(message)&&!messagesSection.messageIsAck(message)"
+                             data-ng-class="{'sentByMe':messagesSection.sentByMe(message), 'failed':messagesSection.isFailed(message), 'sending':message.sending}"
+                             data-ng-attr-data-messageid="{{'m' + message.id}}">
+                            <div class="messagesSectionMessageViewSingleInfo">
 									<span class="messagesSectionMessageViewSingleInfoSenderName">
 										<span data-ng-bind="messagesSection.getFullName(message.sender)"></span>
 										<span class="headingSmall">
 											(<span data-ng-bind="message.sender"></span>)
 										</span>
 									</span>
-									<span data-ng-bind="messagesSection.getDate(message.timestamp).date"></span>
-									<span data-ng-bind="messagesSection.getDate(message.timestamp).time"></span>
-									<div class="messagesSectionMessageViewSingleInfoFiles" data-ng-show="message.decrypted.fileIDs.length">
-										<div class="fileListing" data-ng-repeat="fileID in message.decrypted.fileIDs" data-ng-if="messagesSection.doesFileExist(fileID)">
+                                <span data-ng-bind="messagesSection.getDate(message.timestamp).date"></span>
+                                <span data-ng-bind="messagesSection.getDate(message.timestamp).time"></span>
+
+                                <div class="messagesSectionMessageViewSingleInfoFiles"
+                                     data-ng-show="message.decrypted.fileIDs.length">
+                                    <div class="fileListing" data-ng-repeat="fileID in message.decrypted.fileIDs"
+                                         data-ng-if="messagesSection.doesFileExist(fileID)">
 											<span class="fontAwesome fileListingIcon"
-												  data-ng-bind-html="messagesSection.getIcon(fileID)"></span>
+                                                  data-ng-bind-html="messagesSection.getIcon(fileID)"></span>
 											<span class="fileListingName"
-												  data-ng-bind="messagesSection.truncateName(fileID)"
-												  data-ng-click="messagesSection.downloadFile(fileID)"></span>
-										</div>
-									</div>
+                                                  data-ng-bind="messagesSection.truncateName(fileID)"
+                                                  data-ng-click="messagesSection.downloadFile(fileID)"></span>
+                                    </div>
+                                </div>
 									<span style="float:right">
 										<span class="messagesSectionMessageViewSingleInfoEncrypted">
 											<span class="fontAwesome">&#xf023;</span>
 											<span data-l10n-id="encrypted"></span>
 										</span>
 									</span>
-								</div>
-								<pre data-ng-bind-html="message.decrypted.message | linky:'_blank'" data-ng-show="!!message.decrypted&&!message.decrypted.isPhoto"></pre>
-								<pre data-l10n-id="messageDecryptedError" data-ng-show="!message.decrypted"></pre>
-								<img data-data-ng-src="{{message.decrypted.message}}" data-ng-if="message.decrypted.isPhoto" alt="" />
-							</div>
-							<div class="messagesSectionMessageViewReadReceipts" data-ng-show="messagesSection.checkedReceipts[message.decrypted.receipt].length">
-								<span class="fontAwesome">&#xf00c;</span>
+                            </div>
+                            <pre data-ng-bind-html="message.decrypted.message | linky:'_blank'"
+                                 data-ng-show="!!message.decrypted&&!message.decrypted.isPhoto"></pre>
+                            <pre data-l10n-id="messageDecryptedError" data-ng-show="!message.decrypted"></pre>
+                            <img data-data-ng-src="{{message.decrypted.message}}" data-ng-if="message.decrypted.isPhoto"
+                                 alt=""/>
+                        </div>
+                        <div class="messagesSectionMessageViewReadReceipts"
+                             data-ng-show="messagesSection.checkedReceipts[message.decrypted.receipt].length">
+                            <span class="fontAwesome">&#xf00c;</span>
 								<span data-ng-repeat="recipient in message.recipients"
-									  data-ng-if="messagesSection.checkReceipt(message.decrypted.receipt, recipient, message.sender)">
+                                      data-ng-if="messagesSection.checkReceipt(message.decrypted.receipt, recipient, message.sender)">
 									<span data-ng-bind="messagesSection.getFullName(recipient.username)"></span>
 									<span class="headingSmall">
 										<span data-ng-bind="recipient.username"></span>
-										(<span data-ng-bind="messagesSection.getReceiptTimestamp(message, recipient.username)"></span>)
+										(<span
+                                            data-ng-bind="messagesSection.getReceiptTimestamp(message, recipient.username)"></span>)
 									</span>
 								</span>
-							</div>
-							<div class="messagesSectionMessageViewExpandConversation"
-								 data-ng-if="messagesSection.isExpandConversationVisible(message.id, messagesSection.conversation)"
-								 data-ng-click="messagesSection.expandConversation(messagesSection.conversation, true)">
-								<span data-l10n-id="expandConversation"></span>
-								(
-								<span data-ng-bind="{{messagesSection.conversation.messageCount}}"></span>
-								<span data-l10n-id="messages"></span>)
-							</div>
-						</div>
-					</div>
-					<div data-ng-show="messagesSection.conversation" class="messagesSectionMessageViewTabs">
+                        </div>
+                        <div class="messagesSectionMessageViewExpandConversation"
+                             data-ng-if="messagesSection.isExpandConversationVisible(message.id, messagesSection.conversation)"
+                             data-ng-click="messagesSection.expandConversation(messagesSection.conversation, true)">
+                            <span data-l10n-id="expandConversation"></span>
+                            (
+                            <span data-ng-bind="{{messagesSection.conversation.messageCount}}"></span>
+                            <span data-l10n-id="messages"></span>)
+                        </div>
+                    </div>
+                </div>
+                <div data-ng-show="messagesSection.conversation" class="messagesSectionMessageViewTabs">
 						<span class="messagesSectionMessageViewReplyTab active"
-							  data-l10n-id="reply"
-							  data-ng-mousedown="messagesSection.messageViewReplyTabClick()"></span>
+                              data-l10n-id="reply"
+                              data-ng-mousedown="messagesSection.messageViewReplyTabClick()"></span>
 						<span class="messagesSectionMessageViewFilesTab"
-							  data-l10n-id="files"
-							  data-ng-mousedown="messagesSection.messageViewFilesTabClick()"></span>
-						<div class="messagesSectionMessageViewReply">
-							<div class="messagesSectionMessageViewReplyToolbar">
-								<button class="fontAwesome clear" data-utip-l10n="attachFile" data-utip-gravity="se" data-ng-mousedown="messagesSection.attachFile(messagesSection.conversation)">
-									&#xf0c6;
+                              data-l10n-id="files"
+                              data-ng-mousedown="messagesSection.messageViewFilesTabClick()"></span>
+
+                    <div class="messagesSectionMessageViewReply">
+                        <div class="messagesSectionMessageViewReplyToolbar">
+                            <button class="fontAwesome clear" data-utip-l10n="attachFile" data-utip-gravity="se"
+                                    data-ng-mousedown="messagesSection.attachFile(messagesSection.conversation)">
+                                &#xf0c6;
 									<span class="attachFileButtonCounter"
-										  data-ng-show="messagesSection.attachFileIDs.length"
-										  data-ng-bind="messagesSection.attachFileIDs.length"></span>
-								</button>
-								<!--<button class="fontAwesome clear" data-utip-l10n="autoDestructSettings" data-utip-gravity="sw">&#xf06d;</button>-->
-							</div>
-							<textarea data-ng-model="messagesSection.messageViewReply" data-l10n-id="typeYourReply" data-ng-if="!messagesSection.isOnlyParticipant(messagesSection.conversation)"></textarea>
-							<div class="messagesSectionMessageViewOnlyParticipant" data-l10n-id="noParticipantsLeft" data-ng-if="messagesSection.isOnlyParticipant(messagesSection.conversation)"></div>
-							<div class="messagesSectionMessageViewReplyBottomBar">
-								<button data-l10n-id="send"
-										class="messagesSectionMessageViewReplySend"
-										data-ng-mousedown="messagesSection.replyToConversation(messagesSection.conversation)"
-										data-ng-disabled="messagesSection.isOnlyParticipant(messagesSection.conversation)"></button>
-								<button class="messagesSectionMessageViewAcknowledge fontAwesome"
-										data-utip-l10n="acknowledge"
-										data-utip-gravity="e"
-										data-ng-mousedown="messagesSection.acknowledgeMessage(messagesSection.conversation)"
-										data-ng-disabled="messagesSection.isAckButtonDisabled(messagesSection.conversation)">
-									&#xf087;
-								</button>
-								<div class="messagesSectionMessageViewReplyBottomBarSendOnEnter">
-									<input type="checkbox" class="blueCheckbox" data-ng-model="messagesSection.pressEnterToSend" id="messagesSectionMessageViewReplyBottomBarSendOnEnterCheckbox" />
-									<label for="messagesSectionMessageViewReplyBottomBarSendOnEnterCheckbox" class="blueCheckboxLabel" data-l10n-id="pressEnterToSend"></label>
-								</div>
-							</div>
-						</div>
-						<div class="messagesSectionMessageViewFiles">
-							<div class="messagesSectionMessageViewFilesPlaceholder" data-ng-show="!messagesSection.conversation.fileIDs.length">
-								<h1 data-l10n-id="conversationHasNoFiles"></h1>
-								<h2 data-l10n-id="filesWillAppearHere"></h2>
-							</div>
-							<div class="fileListing" data-ng-repeat="fileID in messagesSection.conversation.fileIDs" data-ng-if="messagesSection.doesFileExist(fileID)">
+                                          data-ng-show="messagesSection.attachFileIDs.length"
+                                          data-ng-bind="messagesSection.attachFileIDs.length"></span>
+                            </button>
+                            <!--<button class="fontAwesome clear" data-utip-l10n="autoDestructSettings" data-utip-gravity="sw">&#xf06d;</button>-->
+                        </div>
+                        <textarea data-ng-model="messagesSection.messageViewReply" data-l10n-id="typeYourReply"
+                                  data-ng-if="!messagesSection.isOnlyParticipant(messagesSection.conversation)"></textarea>
+
+                        <div class="messagesSectionMessageViewOnlyParticipant" data-l10n-id="noParticipantsLeft"
+                             data-ng-if="messagesSection.isOnlyParticipant(messagesSection.conversation)"></div>
+                        <div class="messagesSectionMessageViewReplyBottomBar">
+                            <button data-l10n-id="send"
+                                    class="messagesSectionMessageViewReplySend"
+                                    data-ng-mousedown="messagesSection.replyToConversation(messagesSection.conversation)"
+                                    data-ng-disabled="messagesSection.isOnlyParticipant(messagesSection.conversation)"></button>
+                            <button class="messagesSectionMessageViewAcknowledge fontAwesome"
+                                    data-utip-l10n="acknowledge"
+                                    data-utip-gravity="e"
+                                    data-ng-mousedown="messagesSection.acknowledgeMessage(messagesSection.conversation)"
+                                    data-ng-disabled="messagesSection.isAckButtonDisabled(messagesSection.conversation)">
+                                &#xf087;
+                            </button>
+                            <div class="messagesSectionMessageViewReplyBottomBarSendOnEnter">
+                                <input type="checkbox" class="blueCheckbox"
+                                       data-ng-model="messagesSection.pressEnterToSend"
+                                       id="messagesSectionMessageViewReplyBottomBarSendOnEnterCheckbox"/>
+                                <label for="messagesSectionMessageViewReplyBottomBarSendOnEnterCheckbox"
+                                       class="blueCheckboxLabel" data-l10n-id="pressEnterToSend"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="messagesSectionMessageViewFiles">
+                        <div class="messagesSectionMessageViewFilesPlaceholder"
+                             data-ng-show="!messagesSection.conversation.fileIDs.length">
+                            <h1 data-l10n-id="conversationHasNoFiles"></h1>
+
+                            <h2 data-l10n-id="filesWillAppearHere"></h2>
+                        </div>
+                        <div class="fileListing" data-ng-repeat="fileID in messagesSection.conversation.fileIDs"
+                             data-ng-if="messagesSection.doesFileExist(fileID)">
 								<span class=" fontAwesome fileListingIcon"
-									  data-ng-bind-html="messagesSection.getIcon(fileID)">
+                                      data-ng-bind-html="messagesSection.getIcon(fileID)">
 								</span>
 								<span class="fileListingName"
-									  data-ng-bind="messagesSection.truncateName(fileID)"
-									  data-ng-mousedown="messagesSection.downloadFile(fileID)"></span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section class="filesSection" data-ng-controller="filesSection" data-sectionlink="files" data-ng-style="resize()" resize="270,135" data-ng-mousedown="filesSection.hideListingActions($event)">
-				<div class="filesSectionToolbar">
-					<div class="filesSectionToolbarActions">
-						<button class="fontAwesome clear" data-utip-l10n="send" data-utip-gravity="nw" data-ng-mousedown="filesSection.sendFiles(filesSection.checkedIDs)">&#xf1d9;</button>
-						<button class="fontAwesome clear" data-utip-l10n="remove" data-utip-gravity="nw" data-ng-mousedown="filesSection.removeFiles(filesSection.checkedIDs)">&#xf014;</button>
-						<button class="fontAwesome clear" data-utip-l10n="destroy" data-utip-gravity="nw" data-ng-mousedown="filesSection.nukeFiles(filesSection.checkedIDs)">&#xf06d;</button>
-					</div>
-					<div class="filesSectionToolbarSort">
-						<span data-l10n-id="show"></span>:
-						<button data-l10n-id="allFiles" class="clear active"
-								data-ng-mousedown="filesSection.setOwnerFilter('all', $event)"></button>
-						<button data-l10n-id="myFiles" class="clear"
-								data-ng-mousedown="filesSection.setOwnerFilter('me', $event)"></button>
-						<button data-l10n-id="receivedFiles" class="clear"
-								data-ng-mousedown="filesSection.setOwnerFilter('others', $event)"></button>
-					</div>
-				</div>
-				<table class="filesSectionTableHeader">
-					<tr>
-						<th></th>
-						<th data-l10n-id="fileName"></th>
-						<th data-l10n-id="date"></th>
-						<th data-l10n-id="size"></th>
-						<th data-l10n-id="owner"></th>
-					</tr>
-				</table>
-				<div class="filesSectionTableWrapper">
-					<table class="filesSectionTable">
-						<tr class="filesSectionTableEntry"
-							data-ng-repeat="file in filesSection.files | orderObjectBy:'timestamp':true"
-							data-ng-show="filesSection.checkTypeFilter(file.type)&&filesSection.checkSearchFilter(file)&&filesSection.checkOwnerFilter(file)">
-							<td class="filesSectionTableCheckboxCell">
-								<input type="checkbox"
-									   class="blueCheckbox"
-									   data-ng-attr-id="{{'fileCheckbox' + file.size + file.timestamp}}"
-									   data-ng-click="filesSection.onCheck(file.id, $event)"
-									   data-ng-disabled="file.uploading" />
-								<label data-ng-attr-for="{{'fileCheckbox' + file.size + file.timestamp}}" class="blueCheckboxLabel">&nbsp;</label>
-							</td>
-							<td>
-								<div class="fileListing"
-									 data-ng-mousedown="filesSection.showListingActions(file.id, $event)">
+                                      data-ng-bind="messagesSection.truncateName(fileID)"
+                                      data-ng-mousedown="messagesSection.downloadFile(fileID)"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="filesSection" data-ng-controller="filesSection" data-sectionlink="files"
+                 data-ng-style="resize()" resize="270,135" data-ng-mousedown="filesSection.hideListingActions($event)">
+            <div class="filesSectionToolbar">
+                <div class="filesSectionToolbarActions">
+                    <button class="fontAwesome clear" data-utip-l10n="send" data-utip-gravity="nw"
+                            data-ng-mousedown="filesSection.sendFiles(filesSection.checkedIDs)">&#xf1d9;</button>
+                    <button class="fontAwesome clear" data-utip-l10n="remove" data-utip-gravity="nw"
+                            data-ng-mousedown="filesSection.removeFiles(filesSection.checkedIDs)">&#xf014;</button>
+                    <button class="fontAwesome clear" data-utip-l10n="destroy" data-utip-gravity="nw"
+                            data-ng-mousedown="filesSection.nukeFiles(filesSection.checkedIDs)">&#xf06d;</button>
+                </div>
+                <div class="filesSectionToolbarSort">
+                    <span data-l10n-id="show"></span>:
+                    <button data-l10n-id="allFiles" class="clear active"
+                            data-ng-mousedown="filesSection.setOwnerFilter('all', $event)"></button>
+                    <button data-l10n-id="myFiles" class="clear"
+                            data-ng-mousedown="filesSection.setOwnerFilter('me', $event)"></button>
+                    <button data-l10n-id="receivedFiles" class="clear"
+                            data-ng-mousedown="filesSection.setOwnerFilter('others', $event)"></button>
+                </div>
+            </div>
+            <table class="filesSectionTableHeader">
+                <tr>
+                    <th></th>
+                    <th data-l10n-id="fileName"></th>
+                    <th data-l10n-id="date"></th>
+                    <th data-l10n-id="size"></th>
+                    <th data-l10n-id="owner"></th>
+                </tr>
+            </table>
+            <div class="filesSectionTableWrapper">
+                <table class="filesSectionTable">
+                    <tr class="filesSectionTableEntry"
+                        data-ng-repeat="file in filesSection.files | orderObjectBy:'timestamp':true"
+                        data-ng-show="filesSection.checkTypeFilter(file.type)&&filesSection.checkSearchFilter(file)&&filesSection.checkOwnerFilter(file)">
+                        <td class="filesSectionTableCheckboxCell">
+                            <input type="checkbox"
+                                   class="blueCheckbox"
+                                   data-ng-attr-id="{{'fileCheckbox' + file.size + file.timestamp}}"
+                                   data-ng-click="filesSection.onCheck(file.id, $event)"
+                                   data-ng-disabled="file.uploading"/>
+                            <label data-ng-attr-for="{{'fileCheckbox' + file.size + file.timestamp}}"
+                                   class="blueCheckboxLabel">&nbsp;</label>
+                        </td>
+                        <td>
+                            <div class="fileListing"
+                                 data-ng-mousedown="filesSection.showListingActions(file.id, $event)">
 									<span class="fontAwesome fileListingIcon"
-										  data-ng-bind-html="filesSection.getIcon(file.id)"
-										  data-ng-show="!file.uploading && !file.downloading"></span>
-									<span class="fileListingUploading" data-ng-show="file.uploading" data-ng-bind="file.uploadProgress"></span>
-									<span class="fileListingDownloading" data-ng-show="file.downloading" data-ng-bind="file.downloadProgress"></span>
-									<span class="fileListingName" data-ng-bind="filesSection.truncateName(file.name)" data-ng-attr-title="{{file.name}}"></span>
-								</div>
-							</td>
-							<td>
-								<span data-ng-bind="filesSection.getDate(file.timestamp).date"></span>
-								<span data-ng-bind="filesSection.getDate(file.timestamp).time"></span>
-							</td>
-							<td data-ng-bind="filesSection.getSize(file.size)"></td>
-							<td>
-								<span data-ng-bind="filesSection.getFullName(file.creator)"></span>
+                                          data-ng-bind-html="filesSection.getIcon(file.id)"
+                                          data-ng-show="!file.uploading && !file.downloading"></span>
+                                <span class="fileListingUploading" data-ng-show="file.uploading"
+                                      data-ng-bind="file.uploadProgress"></span>
+                                <span class="fileListingDownloading" data-ng-show="file.downloading"
+                                      data-ng-bind="file.downloadProgress"></span>
+                                <span class="fileListingName" data-ng-bind="filesSection.truncateName(file.name)"
+                                      data-ng-attr-title="{{file.name}}"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <span data-ng-bind="filesSection.getDate(file.timestamp).date"></span>
+                            <span data-ng-bind="filesSection.getDate(file.timestamp).time"></span>
+                        </td>
+                        <td data-ng-bind="filesSection.getSize(file.size)"></td>
+                        <td>
+                            <span data-ng-bind="filesSection.getFullName(file.creator)"></span>
 								<span class="headingSmall">
 									(<span data-ng-bind="file.creator"></span>)
 								</span>
-							</td>
-						</tr>
-					</table>
-				</div>
-				<div class="fileListingActions">
-					<button class="fileListingActionsButton fontAwesome clear"
-							data-utip-l10n="download"
-							data-utip-gravity="sw"
-							data-ng-mousedown="filesSection.downloadFile(filesSection.selectedFile)">
-						&#xf019;
-					</button>
-					<button class="fileListingActionsButton fontAwesome clear"
-							data-utip-l10n="send"
-							data-utip-gravity="sw"
-							data-ng-mousedown="filesSection.sendFiles([filesSection.selectedFile])">
-						&#xf1d9;
-					</button>
-					<button class="fileListingActionsButton fontAwesome clear"
-							data-utip-l10n="remove"
-							data-utip-gravity="sw"
-							data-ng-mousedown="filesSection.removeFiles([filesSection.selectedFile])">
-						&#xf014;
-					</button>
-					<button class="fileListingActionsButton fontAwesome clear"
-							data-utip-l10n="destroy"
-							data-utip-gravity="sw"
-							data-ng-mousedown="filesSection.nukeFiles([filesSection.selectedFile])"
-							data-ng-show="filesSection.isFileIDOwnedByMe(filesSection.selectedFile)">
-						&#xf06d;
-					</button>
-				</div>
-			</section>
-			<section class="contactsSection" data-ng-controller="contactsSection" data-sectionlink="contacts">
-				<div class="contactsSectionListView" data-ng-style="resize()" resize="0,95">
-					<div class="contactsSectionListViewToolbar">
-						<span data-l10n-id="sortBy"></span>:
-						<button data-l10n-id="lastName" class="clear" data-ng-click="contactsSection.orderByProperty='lastName';contactsSection.orderByReverse=false"></button>
-						<button data-l10n-id="firstName" class="clear" data-ng-click="contactsSection.orderByProperty='firstName';contactsSection.orderByReverse=false"></button>
-					</div>
-					<div class="contactsSectionListViewItems" data-ng-style="resize()" resize="0, 139">
-						<div class="contactListItem"
-							 data-ng-repeat="contact in contactsSection.contacts | orderObjectBy:contactsSection.orderByProperty:contactsSection.orderByReverse"
-							 data-ng-mousedown="contactsSection.expandContact(contact.username, $event)"
-							 data-ng-show="contactsSection.checkSearchFilter(contact) && contactsSection.checkTypeFilter(contact)">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="fileListingActions">
+                <button class="fileListingActionsButton fontAwesome clear"
+                        data-utip-l10n="download"
+                        data-utip-gravity="sw"
+                        data-ng-mousedown="filesSection.downloadFile(filesSection.selectedFile)">
+                    &#xf019;
+                </button>
+                <button class="fileListingActionsButton fontAwesome clear"
+                        data-utip-l10n="send"
+                        data-utip-gravity="sw"
+                        data-ng-mousedown="filesSection.sendFiles([filesSection.selectedFile])">
+                    &#xf1d9;
+                </button>
+                <button class="fileListingActionsButton fontAwesome clear"
+                        data-utip-l10n="remove"
+                        data-utip-gravity="sw"
+                        data-ng-mousedown="filesSection.removeFiles([filesSection.selectedFile])">
+                    &#xf014;
+                </button>
+                <button class="fileListingActionsButton fontAwesome clear"
+                        data-utip-l10n="destroy"
+                        data-utip-gravity="sw"
+                        data-ng-mousedown="filesSection.nukeFiles([filesSection.selectedFile])"
+                        data-ng-show="filesSection.isFileIDOwnedByMe(filesSection.selectedFile)">
+                    &#xf06d;
+                </button>
+            </div>
+        </section>
+        <section class="contactsSection" data-ng-controller="contactsSection" data-sectionlink="contacts">
+            <div class="contactsSectionListView" data-ng-style="resize()" resize="0,95">
+                <div class="contactsSectionListViewToolbar">
+                    <span data-l10n-id="sortBy"></span>:
+                    <button data-l10n-id="lastName" class="clear"
+                            data-ng-click="contactsSection.orderByProperty='lastName';contactsSection.orderByReverse=false"></button>
+                    <button data-l10n-id="firstName" class="clear"
+                            data-ng-click="contactsSection.orderByProperty='firstName';contactsSection.orderByReverse=false"></button>
+                </div>
+                <div class="contactsSectionListViewItems" data-ng-style="resize()" resize="0, 139">
+                    <div class="contactListItem"
+                         data-ng-repeat="contact in contactsSection.contacts | orderObjectBy:contactsSection.orderByProperty:contactsSection.orderByReverse"
+                         data-ng-mousedown="contactsSection.expandContact(contact.username, $event)"
+                         data-ng-show="contactsSection.checkSearchFilter(contact) && contactsSection.checkTypeFilter(contact)">
 							<span class="contactListItemName">
 								<span data-ng-bind="contact.firstName"></span>
 								<span data-ng-bind="contact.lastName"></span>
 								<span data-ng-bind="contact.username" class="headingSmall"></span>
 							</span>
 							<span class="contactListItemStatus">
-								<span data-ng-show="contact.isRequest&&!contact.isReceivedRequest" data-l10n-id="addContactInviteSent"></span>
+								<span data-ng-show="contact.isRequest&&!contact.isReceivedRequest"
+                                      data-l10n-id="addContactInviteSent"></span>
 								<span data-ng-show="contact.isReceivedRequest" data-l10n-id="pending"></span>
 								<span data-ng-show="contact.isMe" data-l10n-id="you"></span>
 								<span data-ng-show="contact.isDeleted" class="red" data-l10n-id="accountDeleted"></span>
 							</span>
-						</div>
-					</div>
-				</div>
-				<div class="contactsSectionContactView" data-ng-style="resize()" resize="590,135">
-					<div data-ng-show="!contactsSection.contact">
-						<div class="noContacts">
-							<h1 data-l10n-id="noContacts"></h1>
-							<p data-l10n-id="noContactsText"></p>
-							<button data-l10n-id="addMyFirstContact" data-ng-mousedown="contactsSidebar.addContact()"></button>
-						</div>
-					</div>
-					<div data-ng-show="contactsSection.contact">
-						<div class="contactsViewHeading">
-							<div class="contactsViewAvatar" data-utip-l10n="avatarTooltip" data-utip-gravity="se">
-								<img data-ng-src="{{contactsSection.contact.avatarIcon1}}" alt="" />
-								<img data-ng-src="{{contactsSection.contact.avatarIcon2}}" alt="" />
-								<img data-ng-src="{{contactsSection.contact.avatarIcon3}}" alt="" />
-								<img data-ng-src="{{contactsSection.contact.avatarIcon4}}" alt="" />
-							</div>
-							<h1>
-								<span data-ng-bind="contactsSection.contact.firstName"></span>
-								<span data-ng-bind="contactsSection.contact.lastName"></span>
-								<span data-ng-bind="contactsSection.contact.username" class="headingSmall"></span>
-							</h1>
-							<h2 data-ng-bind="contactsSection.contact.primaryAddress"></h2>
-							<h2 class="contactsViewMiniLockID">
-								<span data-l10n-id="miniLockID"></span>
-								<span data-ng-bind="contactsSection.contact.miniLockID"></span>
-							</h2>
-							<h2 class="contactsViewSubheading">
-								<span data-ng-show="contactsSection.contact.isMe" data-l10n-id="You"></span>
-							</h2>
-							<hr />
-						</div>
-						<div class="contactsViewIsRequest"
-							 data-ng-show="contactsSection.contact.isRequest && !!contactsSection.contact.firstName.length">
-							<h1 data-l10n-id="acceptContactRequest"></h1>
-							<p data-l10n-id="acceptContactRequestText"></p>
-							<button data-l10n-id="accept"
-									data-ng-mousedown="contactsSection.acceptRequest(contactsSection.contact.username)"></button>
-							<button data-l10n-id="decline"
-									class="red"
-									data-ng-mousedown="contactsSection.declineRequest(contactsSection.contact.username)"></button>
-						</div>
-						<div data-ng-show="!contactsSection.contact.isMe">
-							<button class="contactsSectionContactViewDelete fontAwesome clear"
-									data-utip-l10n="remove"
-									data-utip-gravity="sw"
-									data-ng-mousedown="contactsSection.removeContact(contactsSection.contact.username)">
-								&#xf014;
-							</button>
-						</div>
-						<div class="contactsViewToolbar"
-							 data-ng-show="!contactsSection.contact.isRequest && !contactsSection.contact.isMe">
-							<button class="contactsViewSendMessage clear" data-ng-mousedown="contactsSection.newMessage(contactsSection.contact.username)">
-								<span class="fontAwesome">&#xf1d9;</span>
-								<span data-l10n-id="sendMessage"></span>
-							</button>
-							<!-- <button class="contactsViewNotificationOptions clear">
-								<span class="fontAwesome">&#xf086;</span>
-								<span data-l10n-id="notificationOptions"></span>
-							</button> -->
-						</div>
-						<div class="contactsViewLatestMessages" data-ng-show="!contactsSection.contact.isRequest">
-							<div class="contactsViewLatestMessagesHeading">
-								<span class="contactsViewLatestMessagesHeadingTitle" data-l10n-id="latestMessages"></span>
-								<button class="contactsViewLatestMessagesHeadingViewAll clear"
-										data-ng-mousedown="contactsSection.viewAllMessages(contactsSection.contact.username)">
-									<span data-l10n-id="viewAllMessages"></span>
-									<span class="fontAwesome">&#xf105;</span>
-								</button>
-							</div>
-							<div class="contactsViewLatestMessagesItems">
-								<div class="contactsViewMessageItem"
-									 data-ng-repeat="conversation in contactsSection.conversations | orderBy:'lastTimestamp':true"
-									 data-ng-if="contactsSection.showLatestMessageItem(conversation, contactsSection.contact.username)">
-									<span class="contactsViewMessageItemTitle" data-ng-bind="conversation.original.decrypted.subject"></span>
-									<span class="contactsViewMessageItemDate" data-ng-bind="contactsSection.getDate(conversation.lastTimestamp).date">
+                    </div>
+                </div>
+            </div>
+            <div class="contactsSectionContactView" data-ng-style="resize()" resize="590,135">
+                <div data-ng-show="!contactsSection.contact">
+                    <div class="noContacts">
+                        <h1 data-l10n-id="noContacts"></h1>
+
+                        <p data-l10n-id="noContactsText"></p>
+                        <button data-l10n-id="addMyFirstContact"
+                                data-ng-mousedown="contactsSidebar.addContact()"></button>
+                    </div>
+                </div>
+                <div data-ng-show="contactsSection.contact">
+                    <div class="contactsViewHeading">
+                        <div class="contactsViewAvatar" data-utip-l10n="avatarTooltip" data-utip-gravity="se">
+                            <img data-ng-src="{{contactsSection.contact.avatarIcon1}}" alt=""/>
+                            <img data-ng-src="{{contactsSection.contact.avatarIcon2}}" alt=""/>
+                            <img data-ng-src="{{contactsSection.contact.avatarIcon3}}" alt=""/>
+                            <img data-ng-src="{{contactsSection.contact.avatarIcon4}}" alt=""/>
+                        </div>
+                        <h1>
+                            <span data-ng-bind="contactsSection.contact.firstName"></span>
+                            <span data-ng-bind="contactsSection.contact.lastName"></span>
+                            <span data-ng-bind="contactsSection.contact.username" class="headingSmall"></span>
+                        </h1>
+
+                        <h2 data-ng-bind="contactsSection.contact.primaryAddress"></h2>
+
+                        <h2 class="contactsViewMiniLockID">
+                            <span data-l10n-id="miniLockID"></span>
+                            <span data-ng-bind="contactsSection.contact.miniLockID"></span>
+                        </h2>
+
+                        <h2 class="contactsViewSubheading">
+                            <span data-ng-show="contactsSection.contact.isMe" data-l10n-id="You"></span>
+                        </h2>
+                        <hr/>
+                    </div>
+                    <div class="contactsViewIsRequest"
+                         data-ng-show="contactsSection.contact.isRequest && !!contactsSection.contact.firstName.length">
+                        <h1 data-l10n-id="acceptContactRequest"></h1>
+
+                        <p data-l10n-id="acceptContactRequestText"></p>
+                        <button data-l10n-id="accept"
+                                data-ng-mousedown="contactsSection.acceptRequest(contactsSection.contact.username)"></button>
+                        <button data-l10n-id="decline"
+                                class="red"
+                                data-ng-mousedown="contactsSection.declineRequest(contactsSection.contact.username)"></button>
+                    </div>
+                    <div data-ng-show="!contactsSection.contact.isMe">
+                        <button class="contactsSectionContactViewDelete fontAwesome clear"
+                                data-utip-l10n="remove"
+                                data-utip-gravity="sw"
+                                data-ng-mousedown="contactsSection.removeContact(contactsSection.contact.username)">
+                            &#xf014;
+                        </button>
+                    </div>
+                    <div class="contactsViewToolbar"
+                         data-ng-show="!contactsSection.contact.isRequest && !contactsSection.contact.isMe">
+                        <button class="contactsViewSendMessage clear"
+                                data-ng-mousedown="contactsSection.newMessage(contactsSection.contact.username)">
+                            <span class="fontAwesome">&#xf1d9;</span>
+                            <span data-l10n-id="sendMessage"></span>
+                        </button>
+                        <!-- <button class="contactsViewNotificationOptions clear">
+                            <span class="fontAwesome">&#xf086;</span>
+                            <span data-l10n-id="notificationOptions"></span>
+                        </button> -->
+                    </div>
+                    <div class="contactsViewLatestMessages" data-ng-show="!contactsSection.contact.isRequest">
+                        <div class="contactsViewLatestMessagesHeading">
+                            <span class="contactsViewLatestMessagesHeadingTitle" data-l10n-id="latestMessages"></span>
+                            <button class="contactsViewLatestMessagesHeadingViewAll clear"
+                                    data-ng-mousedown="contactsSection.viewAllMessages(contactsSection.contact.username)">
+                                <span data-l10n-id="viewAllMessages"></span>
+                                <span class="fontAwesome">&#xf105;</span>
+                            </button>
+                        </div>
+                        <div class="contactsViewLatestMessagesItems">
+                            <div class="contactsViewMessageItem"
+                                 data-ng-repeat="conversation in contactsSection.conversations | orderBy:'lastTimestamp':true"
+                                 data-ng-if="contactsSection.showLatestMessageItem(conversation, contactsSection.contact.username)">
+                                <span class="contactsViewMessageItemTitle"
+                                      data-ng-bind="conversation.original.decrypted.subject"></span>
+									<span class="contactsViewMessageItemDate"
+                                          data-ng-bind="contactsSection.getDate(conversation.lastTimestamp).date">
 									</span>
-								</div>
-							</div>
-							<hr />
-						</div>
-						<div class="contactsViewLatestFiles" data-ng-show="!contactsSection.contact.isRequest">
-							<div class="contactsViewLatestFilesHeading">
-								<span class="contactsViewLatestFilesHeadingTitle" data-l10n-id="latestFiles"></span>
-								<button class="contactsViewLatestFilesHeadingViewAll clear"
-										data-ng-mousedown="contactsSection.viewAllFiles(contactsSection.contact.username)">
-									<span data-l10n-id="viewAllFiles"></span>
-									<span class="fontAwesome">&#xf105;</span>
-								</button>
-							</div>
-							<div class="contactsViewLatestFilesItems">
-								<div class="contactsViewMessageItem"
-									 data-ng-repeat="file in contactsSection.files | orderObjectBy:'timestamp':true"
-									 data-ng-show="file.sender===contactsSection.contact.username||file.creator===contactsSection.contact.username">
-									<div class="fileListing">
-										<span class="fontAwesome fileListingIcon" data-ng-bind-html="contactsSection.getIcon(file.id)"></span>
-										<span class="fileListingName" data-ng-bind="file.name"></span>
-									</div>
-									<span class="contactsViewMessageItemDate" data-ng-bind="contactsSection.getDate(file.timestamp).date"></span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-		</div>
-	</div>
-	<!-- Front Modals -->
-	<div class="frontModalsWrapper">
-		<div class="frontModals" data-ng-controller="frontModals">
-			<button class="frontModalsClose fontAwesome clear" data-ng-mousedown="frontModals.close()">&#xf00d;</button>
-			<div class="newMessage frontModal" data-ng-controller="newMessage">
-				<form>
-					<div class="newMessageInfo">
-						<div class="newMessageToWrapper">
-							<span data-l10n-id="to"></span>
-							<div class="newMessageRecipients">
+                            </div>
+                        </div>
+                        <hr/>
+                    </div>
+                    <div class="contactsViewLatestFiles" data-ng-show="!contactsSection.contact.isRequest">
+                        <div class="contactsViewLatestFilesHeading">
+                            <span class="contactsViewLatestFilesHeadingTitle" data-l10n-id="latestFiles"></span>
+                            <button class="contactsViewLatestFilesHeadingViewAll clear"
+                                    data-ng-mousedown="contactsSection.viewAllFiles(contactsSection.contact.username)">
+                                <span data-l10n-id="viewAllFiles"></span>
+                                <span class="fontAwesome">&#xf105;</span>
+                            </button>
+                        </div>
+                        <div class="contactsViewLatestFilesItems">
+                            <div class="contactsViewMessageItem"
+                                 data-ng-repeat="file in contactsSection.files | orderObjectBy:'timestamp':true"
+                                 data-ng-show="file.sender===contactsSection.contact.username||file.creator===contactsSection.contact.username">
+                                <div class="fileListing">
+                                    <span class="fontAwesome fileListingIcon"
+                                          data-ng-bind-html="contactsSection.getIcon(file.id)"></span>
+                                    <span class="fileListingName" data-ng-bind="file.name"></span>
+                                </div>
+                                <span class="contactsViewMessageItemDate"
+                                      data-ng-bind="contactsSection.getDate(file.timestamp).date"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<!-- Front Modals -->
+<div class="frontModalsWrapper">
+    <div class="frontModals" data-ng-controller="frontModals">
+        <button class="frontModalsClose fontAwesome clear" data-ng-mousedown="frontModals.close()">&#xf00d;</button>
+        <div class="newMessage frontModal" data-ng-controller="newMessage">
+            <form>
+                <div class="newMessageInfo">
+                    <div class="newMessageToWrapper">
+                        <span data-l10n-id="to"></span>
+
+                        <div class="newMessageRecipients">
 								<span class="newMessageRecipient"
-									  data-ng-repeat="recipient in newMessage.recipients">
+                                      data-ng-repeat="recipient in newMessage.recipients">
 									<span data-ng-bind="recipient"></span>
 								</span>
-							</div>
-							<input type="text" class="newMessageTo"
-								   data-ng-model="newMessage.to"
-								   data-ng-change="newMessage.toAutocomplete()"
-								   data-ng-keydown="newMessage.toKeyDown($event)" />
-						</div>
-						<div class="newMessageToAutocomplete" data-ng-show="newMessage.auto.length">
-							<div class="newMessageAutocompleteSuggestion"
-								 data-ng-repeat="suggestion in newMessage.auto"
-								 data-ng-mousedown="newMessage.addRecipient(suggestion.username)">
-								<h1>
-									<span data-ng-bind="suggestion.firstName"></span>
-									<span data-ng-bind="suggestion.lastName"></span>
-								</h1>
-							</div>
-						</div>
-						<input type="text" class="newMessageSubject" data-l10n-id="subject" data-ng-model="newMessage.subject" maxlength="64" required />
-					</div>
-					<div class="newMessageToolbar">
-						<button class="fontAwesome clear" data-utip-l10n="attachFile" data-utip-gravity="s" data-ng-mousedown="newMessage.attachFile()">
-							&#xf0c6;
+                        </div>
+                        <input type="text" class="newMessageTo"
+                               data-ng-model="newMessage.to"
+                               data-ng-change="newMessage.toAutocomplete()"
+                               data-ng-keydown="newMessage.toKeyDown($event)"/>
+                    </div>
+                    <div class="newMessageToAutocomplete" data-ng-show="newMessage.auto.length">
+                        <div class="newMessageAutocompleteSuggestion"
+                             data-ng-repeat="suggestion in newMessage.auto"
+                             data-ng-mousedown="newMessage.addRecipient(suggestion.username)">
+                            <h1>
+                                <span data-ng-bind="suggestion.firstName"></span>
+                                <span data-ng-bind="suggestion.lastName"></span>
+                            </h1>
+                        </div>
+                    </div>
+                    <input type="text" class="newMessageSubject" data-l10n-id="subject"
+                           data-ng-model="newMessage.subject" maxlength="64" required/>
+                </div>
+                <div class="newMessageToolbar">
+                    <button class="fontAwesome clear" data-utip-l10n="attachFile" data-utip-gravity="s"
+                            data-ng-mousedown="newMessage.attachFile()">
+                        &#xf0c6;
 							<span class="attachFileButtonCounter"
-								  data-ng-show="newMessage.attachFileIDs.length"
-								  data-ng-bind="newMessage.attachFileIDs.length"></span>
-						</button>
-						<!--<button class="fontAwesome clear" data-utip-l10n="autoDestructSettings" data-utip-gravity="s">&#xf06d;</button>-->
-					</div>
-					<textarea class="newMessageBody" required="" data-ng-style="resize()" resize="0,400" data-ng-model="newMessage.body"></textarea>
-					<input type="submit"
-						   class="newMessageSend"
-						   data-l10n-id="send"
-						   value="Send"
-						   data-ng-disabled="newMessage.sending"
-						   data-ng-click="newMessage.send(false)" />
-					<!-- <button class="newMessageSaveDraft clear">
-						<span class="fontAwesome">&#xf0c7;</span>
-						&nbsp;
-						<span data-l10n-id="saveDraft" data-ng-click="newMessage.send(true)"></span>
-					</button> -->
-				</form>
-			</div>
-			<div class="attachFile frontModal" data-ng-controller="attachFile">
-				<h1>
-					<span data-l10n-id="attachFile"></span>
-				</h1>
-				<input type="text" class="attachFileSearch" data-l10n-id="search" data-ng-model="attachFile.searchFilter" />
-				<table class="attachFileTableHeader">
-					<tr>
-						<th></th>
-						<th data-l10n-id="fileName"></th>
-						<th data-l10n-id="date"></th>
-						<th data-l10n-id="size"></th>
-						<th data-l10n-id="owner"></th>
-					</tr>
-				</table>
-				<div class="attachFileTableWrapper">
-					<table class="attachFileTable">
-						<tr class="attachFileTableEntry"
-							data-ng-repeat="file in attachFile.files | orderObjectBy:'timestamp':true"
-							data-ng-show="attachFile.checkSearchFilter(file)">
-							<td class="attachFileTableCheckboxCell">
-								<div class="fileStatusIndicator"></div>
-								<input type="checkbox" class="blueCheckbox"
-									   data-ng-attr-id="{{'attachFileCheckbox' + file.size + file.timestamp}}"
-									   data-ng-click="attachFile.onCheck(file.id, $event)"
-									   data-ng-disabled="file.uploading" />
-								<label data-ng-attr-for="{{'attachFileCheckbox' + file.size + file.timestamp}}" class="blueCheckboxLabel">&nbsp;</label>
-							</td>
-							<td>
-								<div class="fileListing">
+                                  data-ng-show="newMessage.attachFileIDs.length"
+                                  data-ng-bind="newMessage.attachFileIDs.length"></span>
+                    </button>
+                    <!--<button class="fontAwesome clear" data-utip-l10n="autoDestructSettings" data-utip-gravity="s">&#xf06d;</button>-->
+                </div>
+                <textarea class="newMessageBody" required="" data-ng-style="resize()" resize="0,400"
+                          data-ng-model="newMessage.body"></textarea>
+                <input type="submit"
+                       class="newMessageSend"
+                       data-l10n-id="send"
+                       value="Send"
+                       data-ng-disabled="newMessage.sending"
+                       data-ng-click="newMessage.send(false)"/>
+                <!-- <button class="newMessageSaveDraft clear">
+                    <span class="fontAwesome">&#xf0c7;</span>
+                    &nbsp;
+                    <span data-l10n-id="saveDraft" data-ng-click="newMessage.send(true)"></span>
+                </button> -->
+            </form>
+        </div>
+        <div class="attachFile frontModal" data-ng-controller="attachFile">
+            <h1>
+                <span data-l10n-id="attachFile"></span>
+            </h1>
+            <input type="text" class="attachFileSearch" data-l10n-id="search" data-ng-model="attachFile.searchFilter"/>
+            <table class="attachFileTableHeader">
+                <tr>
+                    <th></th>
+                    <th data-l10n-id="fileName"></th>
+                    <th data-l10n-id="date"></th>
+                    <th data-l10n-id="size"></th>
+                    <th data-l10n-id="owner"></th>
+                </tr>
+            </table>
+            <div class="attachFileTableWrapper">
+                <table class="attachFileTable">
+                    <tr class="attachFileTableEntry"
+                        data-ng-repeat="file in attachFile.files | orderObjectBy:'timestamp':true"
+                        data-ng-show="attachFile.checkSearchFilter(file)">
+                        <td class="attachFileTableCheckboxCell">
+                            <div class="fileStatusIndicator"></div>
+                            <input type="checkbox" class="blueCheckbox"
+                                   data-ng-attr-id="{{'attachFileCheckbox' + file.size + file.timestamp}}"
+                                   data-ng-click="attachFile.onCheck(file.id, $event)"
+                                   data-ng-disabled="file.uploading"/>
+                            <label data-ng-attr-for="{{'attachFileCheckbox' + file.size + file.timestamp}}"
+                                   class="blueCheckboxLabel">&nbsp;</label>
+                        </td>
+                        <td>
+                            <div class="fileListing">
 									<span class="fontAwesome fileListingIcon"
-										  data-ng-bind-html="attachFile.getIcon(file.id)"
-										  data-ng-show="!file.uploading"></span>
-									<span class="fileListingUploading" data-ng-show="file.uploading" data-ng-bind="file.uploadProgress"></span>
-									<span class="fileListingName" data-ng-bind="attachFile.truncateName(file.name)" data-ng-attr-title="{{file.name}}"></span>
-								</div>
-							</td>
-							<td>
-								<span data-ng-bind="attachFile.getDate(file.timestamp).date"></span>
-								<span data-ng-bind="attachFile.getDate(file.timestamp).time"></span>
-							</td>
-							<td data-ng-bind="attachFile.getSize(file.size)"></td>
-							<td>
-								<span data-ng-bind="attachFile.getFullName(file.creator)"></span>
+                                          data-ng-bind-html="attachFile.getIcon(file.id)"
+                                          data-ng-show="!file.uploading"></span>
+                                <span class="fileListingUploading" data-ng-show="file.uploading"
+                                      data-ng-bind="file.uploadProgress"></span>
+                                <span class="fileListingName" data-ng-bind="attachFile.truncateName(file.name)"
+                                      data-ng-attr-title="{{file.name}}"></span>
+                            </div>
+                        </td>
+                        <td>
+                            <span data-ng-bind="attachFile.getDate(file.timestamp).date"></span>
+                            <span data-ng-bind="attachFile.getDate(file.timestamp).time"></span>
+                        </td>
+                        <td data-ng-bind="attachFile.getSize(file.size)"></td>
+                        <td>
+                            <span data-ng-bind="attachFile.getFullName(file.creator)"></span>
 								<span class="headingSmall">
 									(<span data-ng-bind="file.creator"></span>)
 								</span>
-							</td>
-						</tr>
-					</table>
-				</div>
-				<div class="attachFileButtons">
-					<button class="attachFileSelected" data-ng-mousedown="attachFile.attachSelected()">
-						<span class="fontAwesome">&#xf0c6;</span>
-						<span data-l10n-id="attachSelectedFiles"></span>
-					</button>
-					<button class="attachFileUploadNew" data-ng-mousedown="attachFile.uploadNew()">
-						<span class="fontAwesome">&#xf093;</span>
-						<span data-l10n-id="uploadNewFile"></span>
-					</button>
-				</div>
-			</div>
-			<div class="addContact frontModal" data-ng-controller="addContact">
-				<h1 data-l10n-id="addContact"></h1>
-				<div class="infoAlert">
-					<span class="infoAlertIcon">&#xf05a;</span>
-					<div class="infoAlertContent">
-						<h1 data-l10n-id="addContactInfo"></h1>
-						<p data-l10n-id="addContactInfoText"></p>
-					</div>
-				</div>
-				<form data-ng-submit="addContact.addContact()">
-					<input type="text"
-						   data-l10n-id="usernameEmailOrPhone"
-						   data-ng-pattern="/^([-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+\.[a-zA-Z]{2,20})|(\+?(\d|\s|\-|\(|\)){6,20})|(\w{1,16})$/"
-						   data-ng-model="addContact.contact"
-						   required autofocus />
-					<button type="submit"
-							data-l10n-id="addContact"
-							data-ng-disabled="!addContact.contact"></button>
-				</form>
-			</div>
-			<div class="twoFactorAuth frontModal" data-ng-controller="twoFactorAuth">
-				<h1 data-l10n-id="twoFactorAuth"></h1>
-				<div class="infoAlert">
-					<span class="infoAlertIcon">&#xf05a;</span>
-					<div class="infoAlertContent" data-ng-show="!twoFactorAuth.isEnabled()">
-						<h1 data-l10n-id="twoFactorAuthSetupHeading"></h1>
-						<p data-l10n-id="twoFactorAuthSetupText"></p>
-					</div>
-					<div class="infoAlertContent" data-ng-show="twoFactorAuth.isEnabled()">
-						<h1 data-l10n-id="twoFactorAuthInfoHeading"></h1>
-						<p data-l10n-id="twoFactorAuthInfoText"></p>
-					</div>
-				</div>
-				<div class="twoFactorAuthQRCode">
-					<img src="img/2fa.png" alt="" data-ng-show="twoFactorAuth.isEnabled()" />
-				</div>
-				<form class="twoFactorAuthForm" data-ng-submit="twoFactorAuth.submitCode()">
-					<p data-ng-show="!twoFactorAuth.isEnabled()" data-l10n-id="twoFactorAuthConfirm"></p>
-					<input type="text"
-						   data-l10n-id="code"
-						   data-ng-model="twoFactorAuth.code"
-						   class="twoFactorAuthCode" />
-					<button type="submit"
-							data-l10n-id="authenticate"
-							data-ng-disabled="!twoFactorAuth.code"></button>
-				</form>
-			</div>
-			<div class="accountSettings frontModal" data-ng-controller="accountSettings">
-				<h1 data-l10n-id="accountSettings"></h1>
-				<form>
-					<div class="accountSettingsName">
-						<h2 data-l10n-id="name"></h2>
-						<h3>&nbsp;</h3>
-						<input type="text" data-l10n-id="firstName" data-ng-model="accountSettings.firstName" />
-						<input type="text" data-l10n-id="lastName" data-ng-model="accountSettings.lastName" />
-						<button data-l10n-id="submit" data-ng-mousedown="accountSettings.updateName()"></button>
-					</div>
-				</form>
-				<div class="accountSettingsAddresses">
-					<h2 data-l10n-id="addresses"></h2>
-					<div class="accountSettingsAddress" data-ng-repeat="address in addresses">
-						<h3 data-l10n-id="primary"
-							class="accountSettingsPrimaryAddressHeader"
-							data-ng-show="address.isPrimary"></h3>
-						<input type="text" data-l10n-id="emailOrPhone" data-ng-value="address.value" readonly />
-						<input type="text"
-							   data-l10n-id="code"
-							   class="accountSettingsAddressConfirmationCode"
-							   data-ng-show="!address.isConfirmed"
-							   data-ng-keyup="accountSettings.confirmAddress($event)" />
-						<button class="clear fontAwesome"
-								data-ng-mousedown="accountSettings.setPrimaryAddress($event)"
-								data-utip-l10n="setPrimaryAddress"
-								data-utip-gravity="ne"
-								data-ng-show="!address.isPrimary && address.isConfirmed">
-							&#xf005;
-						</button>
-						<button class="clear fontAwesome"
-								data-ng-mousedown="accountSettings.removeAddress($event)"
-								data-utip-l10n="removeAddress"
-								data-utip-gravity="ne"
-								data-ng-show="!address.isPrimary">
-							&#xf068;
-						</button>
-					</div>
-					<div class="accountSettingsAddress newAddress">
-						<form data-ng-submit="accountSettings.addNewAddress()">
-							<input type="text"
-								   data-l10n-id="emailOrPhone"
-								   data-ng-model="accountSettings.newAddress"
-								   data-ng-pattern="/^([-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+\.[a-zA-Z]{2,20})|\+?(\d|\s|\-|\(|\)){6,20}$/" />
-							<button type="submit"
-									data-l10n-id="addNewAddress"
-									data-ng-disabled="!accountSettings.newAddress"></button>
-						</form>
-					</div>
-				</div>
-				<div class="deleteAccount">
-					<form>
-						<h2 data-l10n-id="deleteAccount"></h2>
-						<span data-l10n-id="deleteAccountText"></span>
-						<br /><br />
-						<button type="button" data-ng-click="accountSettings.deleteAccount()" class="red" data-l10n-id="deleteAccount"></button>
-						<!--
-							<input type="password" data-l10n-id="newPassphrase" />
-							<input type="password" data-l10n-id="retypeNewPassphrase" />
-							<button data-l10n-id="changePassphrase" data-ng-click="accountSettings.changePassphrase()></button>
-						-->
-					</form>
-				</div>
-				<div class="twoFactorAuthSettings">
-					<h2 data-l10n-id="twoFactorAuth"></h2>
-					<span data-l10n-id="accountSettingsTwoFactorAuthText"></span>
-					<button data-ng-click="accountSettings.enableTwoFactorAuth()"
-							data-ng-show="!accountSettings.isTwoFactorAuthEnabled()">
-						<span class="fontAwesome">&#xf10b;</span>
-						&nbsp;
-						<span data-l10n-id="enableTwoFactorAuth"></span>
-					</button>
-					<button class="red"
-							data-ng-click="accountSettings.disableTwoFactorAuth()"
-							data-ng-show="accountSettings.isTwoFactorAuthEnabled()">
-						<span class="fontAwesome">&#xf10b;</span>
-						&nbsp;
-						<span data-l10n-id="disableTwoFactorAuth"></span>
-					</button>
-					<a class="twoFactorAuthLearnMore" data-l10n-id="twoFactorAuthLearnMore" target="_blank" href="https://peerio.zendesk.com/hc/en-us/articles/203665635-What-is-two-factor-authentication-"></a>
-				</div>
-			</div>
-			<div class="preferences frontModal" data-ng-controller="preferences">
-				<h1 data-l10n-id="preferences"></h1>
-				<h2 data-l10n-id="language"></h2>
-				<select data-ng-model="preferences.language"
-						data-ng-options="option.value as option.name for option in preferences.languageOptions"
-						data-ng-change="preferences.updateLocaleCode(preferences.language)"></select>
-				<hr />
-				<h2 data-l10n-id="notifications"></h2>
-				<input type="checkbox"
-					   class="blueCheckbox"
-					   id="receiveMessageNotifications"
-					   data-ng-checked="preferences.receiveMessageNotifications"
-					   data-ng-click="preferences.receiveMessageNotificationsOnCheck($event)" />
-				<label for="receiveMessageNotifications" class="blueCheckboxLabel" data-l10n-id="receiveMessageNotifications"></label>
-				<br />
-				<input type="checkbox"
-					   class="blueCheckbox"
-					   id="useSounds"
-					   data-ng-checked="preferences.useSounds"
-					   data-ng-click="preferences.useSoundsOnCheck($event)" />
-				<label for="useSounds" class="blueCheckboxLabel" data-l10n-id="useSounds"></label>
-				<br />
-				<hr />
-				<h2 data-l10n-id="peerioPINForThisDevice"></h2>
-				<form data-ng-submit="preferences.peerioPINSet()">
-					<div class="infoAlert">
-						<span class="infoAlertIcon">&#xf05a;</span>
-						<div class="infoAlertContent">
-							<p data-l10n-id="signupPeerioPIN"></p>
-						</div>
-					</div>
-					<input type="password"
-						   data-ng-model="preferences.peerioPIN"
-						   data-l10n-id="peerioPIN"
-						   class="signupPeerioPINEntry" />
-					<div class="peerioPINStrength">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="attachFileButtons">
+                <button class="attachFileSelected" data-ng-mousedown="attachFile.attachSelected()">
+                    <span class="fontAwesome">&#xf0c6;</span>
+                    <span data-l10n-id="attachSelectedFiles"></span>
+                </button>
+                <button class="attachFileUploadNew" data-ng-mousedown="attachFile.uploadNew()">
+                    <span class="fontAwesome">&#xf093;</span>
+                    <span data-l10n-id="uploadNewFile"></span>
+                </button>
+            </div>
+        </div>
+        <div class="addContact frontModal" data-ng-controller="addContact">
+            <h1 data-l10n-id="addContact"></h1>
+
+            <div class="infoAlert">
+                <span class="infoAlertIcon">&#xf05a;</span>
+
+                <div class="infoAlertContent">
+                    <h1 data-l10n-id="addContactInfo"></h1>
+
+                    <p data-l10n-id="addContactInfoText"></p>
+                </div>
+            </div>
+            <form data-ng-submit="addContact.addContact()">
+                <input type="text"
+                       data-l10n-id="usernameEmailOrPhone"
+                       data-ng-pattern="/^([-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+\.[a-zA-Z]{2,20})|(\+?(\d|\s|\-|\(|\)){6,20})|(\w{1,16})$/"
+                       data-ng-model="addContact.contact"
+                       required autofocus/>
+                <button type="submit"
+                        data-l10n-id="addContact"
+                        data-ng-disabled="!addContact.contact"></button>
+            </form>
+        </div>
+        <div class="twoFactorAuth frontModal" data-ng-controller="twoFactorAuth">
+            <h1 data-l10n-id="twoFactorAuth"></h1>
+
+            <div class="infoAlert">
+                <span class="infoAlertIcon">&#xf05a;</span>
+
+                <div class="infoAlertContent" data-ng-show="!twoFactorAuth.isEnabled()">
+                    <h1 data-l10n-id="twoFactorAuthSetupHeading"></h1>
+
+                    <p data-l10n-id="twoFactorAuthSetupText"></p>
+                </div>
+                <div class="infoAlertContent" data-ng-show="twoFactorAuth.isEnabled()">
+                    <h1 data-l10n-id="twoFactorAuthInfoHeading"></h1>
+
+                    <p data-l10n-id="twoFactorAuthInfoText"></p>
+                </div>
+            </div>
+            <div class="twoFactorAuthQRCode">
+                <img src="img/2fa.png" alt="" data-ng-show="twoFactorAuth.isEnabled()"/>
+            </div>
+            <form class="twoFactorAuthForm" data-ng-submit="twoFactorAuth.submitCode()">
+                <p data-ng-show="!twoFactorAuth.isEnabled()" data-l10n-id="twoFactorAuthConfirm"></p>
+                <input type="text"
+                       data-l10n-id="code"
+                       data-ng-model="twoFactorAuth.code"
+                       class="twoFactorAuthCode"/>
+                <button type="submit"
+                        data-l10n-id="authenticate"
+                        data-ng-disabled="!twoFactorAuth.code"></button>
+            </form>
+        </div>
+        <div class="accountSettings frontModal" data-ng-controller="accountSettings">
+            <h1 data-l10n-id="accountSettings"></h1>
+
+            <form>
+                <div class="accountSettingsName">
+                    <h2 data-l10n-id="name"></h2>
+
+                    <h3>&nbsp;</h3>
+                    <input type="text" data-l10n-id="firstName" data-ng-model="accountSettings.firstName"/>
+                    <input type="text" data-l10n-id="lastName" data-ng-model="accountSettings.lastName"/>
+                    <button data-l10n-id="submit" data-ng-mousedown="accountSettings.updateName()"></button>
+                </div>
+            </form>
+            <div class="accountSettingsAddresses">
+                <h2 data-l10n-id="addresses"></h2>
+
+                <div class="accountSettingsAddress" data-ng-repeat="address in addresses">
+                    <h3 data-l10n-id="primary"
+                        class="accountSettingsPrimaryAddressHeader"
+                        data-ng-show="address.isPrimary"></h3>
+                    <input type="text" data-l10n-id="emailOrPhone" data-ng-value="address.value" readonly/>
+                    <input type="text"
+                           data-l10n-id="code"
+                           class="accountSettingsAddressConfirmationCode"
+                           data-ng-show="!address.isConfirmed"
+                           data-ng-keyup="accountSettings.confirmAddress($event)"/>
+                    <button class="clear fontAwesome"
+                            data-ng-mousedown="accountSettings.setPrimaryAddress($event)"
+                            data-utip-l10n="setPrimaryAddress"
+                            data-utip-gravity="ne"
+                            data-ng-show="!address.isPrimary && address.isConfirmed">
+                        &#xf005;
+                    </button>
+                    <button class="clear fontAwesome"
+                            data-ng-mousedown="accountSettings.removeAddress($event)"
+                            data-utip-l10n="removeAddress"
+                            data-utip-gravity="ne"
+                            data-ng-show="!address.isPrimary">
+                        &#xf068;
+                    </button>
+                </div>
+                <div class="accountSettingsAddress newAddress">
+                    <form data-ng-submit="accountSettings.addNewAddress()">
+                        <input type="text"
+                               data-l10n-id="emailOrPhone"
+                               data-ng-model="accountSettings.newAddress"
+                               data-ng-pattern="/^([-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+\.[a-zA-Z]{2,20})|\+?(\d|\s|\-|\(|\)){6,20}$/"/>
+                        <button type="submit"
+                                data-l10n-id="addNewAddress"
+                                data-ng-disabled="!accountSettings.newAddress"></button>
+                    </form>
+                </div>
+            </div>
+            <div class="deleteAccount">
+                <form>
+                    <h2 data-l10n-id="deleteAccount"></h2>
+                    <span data-l10n-id="deleteAccountText"></span>
+                    <br/><br/>
+                    <button type="button" data-ng-click="accountSettings.deleteAccount()" class="red"
+                            data-l10n-id="deleteAccount"></button>
+                    <!--
+                        <input type="password" data-l10n-id="newPassphrase" />
+                        <input type="password" data-l10n-id="retypeNewPassphrase" />
+                        <button data-l10n-id="changePassphrase" data-ng-click="accountSettings.changePassphrase()></button>
+                    -->
+                </form>
+            </div>
+            <div class="twoFactorAuthSettings">
+                <h2 data-l10n-id="twoFactorAuth"></h2>
+                <span data-l10n-id="accountSettingsTwoFactorAuthText"></span>
+                <button data-ng-click="accountSettings.enableTwoFactorAuth()"
+                        data-ng-show="!accountSettings.isTwoFactorAuthEnabled()">
+                    <span class="fontAwesome">&#xf10b;</span>
+                    &nbsp;
+                    <span data-l10n-id="enableTwoFactorAuth"></span>
+                </button>
+                <button class="red"
+                        data-ng-click="accountSettings.disableTwoFactorAuth()"
+                        data-ng-show="accountSettings.isTwoFactorAuthEnabled()">
+                    <span class="fontAwesome">&#xf10b;</span>
+                    &nbsp;
+                    <span data-l10n-id="disableTwoFactorAuth"></span>
+                </button>
+                <a class="twoFactorAuthLearnMore" data-l10n-id="twoFactorAuthLearnMore" target="_blank"
+                   href="https://peerio.zendesk.com/hc/en-us/articles/203665635-What-is-two-factor-authentication-"></a>
+            </div>
+        </div>
+        <div class="preferences frontModal" data-ng-controller="preferences">
+            <h1 data-l10n-id="preferences"></h1>
+
+            <h2 data-l10n-id="language"></h2>
+            <select data-ng-model="preferences.language"
+                    data-ng-options="option.value as option.name for option in preferences.languageOptions"
+                    data-ng-change="preferences.updateLocaleCode(preferences.language)"></select>
+            <hr/>
+            <h2 data-l10n-id="notifications"></h2>
+            <input type="checkbox"
+                   class="blueCheckbox"
+                   id="receiveMessageNotifications"
+                   data-ng-checked="preferences.receiveMessageNotifications"
+                   data-ng-click="preferences.receiveMessageNotificationsOnCheck($event)"/>
+            <label for="receiveMessageNotifications" class="blueCheckboxLabel"
+                   data-l10n-id="receiveMessageNotifications"></label>
+            <br/>
+            <input type="checkbox"
+                   class="blueCheckbox"
+                   id="useSounds"
+                   data-ng-checked="preferences.useSounds"
+                   data-ng-click="preferences.useSoundsOnCheck($event)"/>
+            <label for="useSounds" class="blueCheckboxLabel" data-l10n-id="useSounds"></label>
+            <br/>
+            <hr/>
+            <h2 data-l10n-id="peerioPINForThisDevice"></h2>
+
+            <form data-ng-submit="preferences.peerioPINSet()">
+                <div class="infoAlert">
+                    <span class="infoAlertIcon">&#xf05a;</span>
+
+                    <div class="infoAlertContent">
+                        <p data-l10n-id="signupPeerioPIN"></p>
+                    </div>
+                </div>
+                <input type="password"
+                       data-ng-model="preferences.peerioPIN"
+                       data-l10n-id="peerioPIN"
+                       class="signupPeerioPINEntry"/>
+
+                <div class="peerioPINStrength">
 						<span data-l10n-id="PINNotStrong"
-							  class="PINNotStrong"
-							  data-ng-show="!preferences.peerioPINStrength()"></span>
+                              class="PINNotStrong"
+                              data-ng-show="!preferences.peerioPINStrength()"></span>
 						<span data-l10n-id="PINStrong"
-							  class="PINStrong"
-							  data-ng-show="preferences.peerioPINStrength()"></span>
-					</div>
-					<button type="submit"
-							data-l10n-id="setPIN"
-							data-ng-disabled="!preferences.peerioPINStrength()"
-							class="preferencesPeerioPINEntryContinue"></button>
-					<button data-utip-l10n="removeMyPeerioPIN"
-							data-utip-gravity="e"
-							data-ng-click="preferences.peerioPINRemove()"
-							class="preferencesPeerioPINEntryContinue red fontAwesome">
-						&#xf00d;
-					</button>
-				</form>
-			</div>
-			<div class="importContacts frontModal" data-ng-controller="importContacts">
-				<h1 data-l10n-id="importContactsGoogle"></h1>
-				<div data-ng-show="!importContacts.addresses.length">
-					<p data-l10n-id="importContactsGoogleText"></p>
-					<div class="importContactsInstructions">
-						<ol>
-							<li data-l10n-id="importContactsGoogleStep1"></li>
-							<li data-l10n-id="importContactsGoogleStep2"></li>
-							<li data-l10n-id="importContactsGoogleStep3"></li>
-							<li data-l10n-id="importContactsGoogleStep4"></li>
-							<li data-l10n-id="importContactsGoogleStep5"></li>
-						</ol>
-					</div>
-				</div>
-				<form class="importContactsUploadForm" data-ng-show="!importContacts.addresses.length">
-					<h2 data-l10n-id="uploadCSV"></h2>
-					<input type="file" name="file" class="importContactsFileSelectDialog" />
-					<input type="reset" value="reset" class="hidden" />
-				</form>
-				<h2 data-l10n-id="importContactsSelectToInvite" data-ng-show="importContacts.addresses.length"></h2>
-				<p data-l10n-id="importContactsSelectToInviteText" data-ng-show="importContacts.addresses.length"></p>
-				<div class="importContactsSelectContactsWrapper" data-ng-show="importContacts.addresses.length">
-					<table class="importContactsSelectContacts">
-						<tr class="importContactsContact" data-ng-repeat="address in importContacts.addresses | orderBy:'name':false">
-							<td class="importContactsSelectContactsCheckboxCell">
-								<input type="checkbox"
-									   class="blueCheckbox importContactsSelectContactsCheckbox"
-									   data-ng-attr-id="{{'importContactsAddress' + address.parsed.address.value}}"
-									   data-ng-click="importContacts.onCheck(address.parsed, $event)" />
-								<label data-ng-attr-for="{{'importContactsAddress' + address.parsed.address.value}}" class="blueCheckboxLabel">&nbsp;</label>
-							</td>
-							<td>
-								<strong>
-									<label data-ng-attr-for="{{'importContactsAddress' + address.parsed.address.value}}" data-ng-bind="address.name"></label>
-								</strong>
-							</td>
-							<td>
-								<label data-ng-attr-for="{{'importContactsAddress' + address.parsed.address.value}}" data-ng-bind="address.parsed.address.value"></label>
-							</td>
-						</tr>
-					</table>
-				</div>
-				<button class="clear" data-ng-click="importContacts.selectAll()" data-ng-show="importContacts.addresses.length">
-					<span class="fontAwesome">&#xf00c;</span>
-					&nbsp;
-					<span data-l10n-id="importContactsSelectAll"></span>
-				</button>
-				<button data-ng-click="importContacts.importContacts()" data-ng-show="importContacts.addresses.length">
-					<span class="fontAwesome">&#xf0c0;</span>
-					&nbsp;
-					<span data-l10n-id="importSelectedContacts"></span>
-				</button>
-			</div>
-		</div>
-	</div>
+                              class="PINStrong"
+                              data-ng-show="preferences.peerioPINStrength()"></span>
+                </div>
+                <button type="submit"
+                        data-l10n-id="setPIN"
+                        data-ng-disabled="!preferences.peerioPINStrength()"
+                        class="preferencesPeerioPINEntryContinue"></button>
+                <button data-utip-l10n="removeMyPeerioPIN"
+                        data-utip-gravity="e"
+                        data-ng-click="preferences.peerioPINRemove()"
+                        class="preferencesPeerioPINEntryContinue red fontAwesome">
+                    &#xf00d;
+                </button>
+            </form>
+        </div>
+        <div class="importContacts frontModal" data-ng-controller="importContacts">
+            <h1 data-l10n-id="importContactsGoogle"></h1>
+
+            <div data-ng-show="!importContacts.addresses.length">
+                <p data-l10n-id="importContactsGoogleText"></p>
+
+                <div class="importContactsInstructions">
+                    <ol>
+                        <li data-l10n-id="importContactsGoogleStep1"></li>
+                        <li data-l10n-id="importContactsGoogleStep2"></li>
+                        <li data-l10n-id="importContactsGoogleStep3"></li>
+                        <li data-l10n-id="importContactsGoogleStep4"></li>
+                        <li data-l10n-id="importContactsGoogleStep5"></li>
+                    </ol>
+                </div>
+            </div>
+            <form class="importContactsUploadForm" data-ng-show="!importContacts.addresses.length">
+                <h2 data-l10n-id="uploadCSV"></h2>
+                <input type="file" name="file" class="importContactsFileSelectDialog"/>
+                <input type="reset" value="reset" class="hidden"/>
+            </form>
+            <h2 data-l10n-id="importContactsSelectToInvite" data-ng-show="importContacts.addresses.length"></h2>
+
+            <p data-l10n-id="importContactsSelectToInviteText" data-ng-show="importContacts.addresses.length"></p>
+
+            <div class="importContactsSelectContactsWrapper" data-ng-show="importContacts.addresses.length">
+                <table class="importContactsSelectContacts">
+                    <tr class="importContactsContact"
+                        data-ng-repeat="address in importContacts.addresses | orderBy:'name':false">
+                        <td class="importContactsSelectContactsCheckboxCell">
+                            <input type="checkbox"
+                                   class="blueCheckbox importContactsSelectContactsCheckbox"
+                                   data-ng-attr-id="{{'importContactsAddress' + address.parsed.address.value}}"
+                                   data-ng-click="importContacts.onCheck(address.parsed, $event)"/>
+                            <label data-ng-attr-for="{{'importContactsAddress' + address.parsed.address.value}}"
+                                   class="blueCheckboxLabel">&nbsp;</label>
+                        </td>
+                        <td>
+                            <strong>
+                                <label data-ng-attr-for="{{'importContactsAddress' + address.parsed.address.value}}"
+                                       data-ng-bind="address.name"></label>
+                            </strong>
+                        </td>
+                        <td>
+                            <label data-ng-attr-for="{{'importContactsAddress' + address.parsed.address.value}}"
+                                   data-ng-bind="address.parsed.address.value"></label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <button class="clear" data-ng-click="importContacts.selectAll()"
+                    data-ng-show="importContacts.addresses.length">
+                <span class="fontAwesome">&#xf00c;</span>
+                &nbsp;
+                <span data-l10n-id="importContactsSelectAll"></span>
+            </button>
+            <button data-ng-click="importContacts.importContacts()" data-ng-show="importContacts.addresses.length">
+                <span class="fontAwesome">&#xf0c0;</span>
+                &nbsp;
+                <span data-l10n-id="importSelectedContacts"></span>
+            </button>
+        </div>
+    </div>
+</div>
 </body>
 </html>
