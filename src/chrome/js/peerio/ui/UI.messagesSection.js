@@ -65,8 +65,8 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
     $scope.messagesSection.checkedReceipts = {}
     $scope.messagesSection.messageNewCount = 0
 
-    if (!$scope.$root.folders) {
-      var f = $scope.$root.folders = {};
+    if (!$scope.$root.convFolders) {
+      var f = $scope.$root.convFolders = {};
       var l = function(n){return document.l10n.getEntitySync(n).value};
       f.folders = [];
 
@@ -77,7 +77,15 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
             return;
           }
           $scope.$root.$apply(function () {
-            f.folders = data.folders.sort();
+            f.folders = data.folders.sort(function (a, b) {
+              if (a.name > b.name) {
+                return 1;
+              }
+              if (a.name < b.name) {
+                return -1;
+              }
+              return 0;
+            });
           });
         });
       };
@@ -154,6 +162,12 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
               swal(l('error'), l('removingFolderError'), "error");
             } else {
               f.loadFolders();
+              Object.keys(Peerio.user.conversations).forEach(function(id){
+                if(Peerio.user.conversations.hasOwnProperty(id)){
+                  var c =Peerio.user.conversations[id];
+                  if(c.folderID === folder.id) c.folderID = null;
+                }
+              });
               swal({title: l('success'), text: l('folderRemoved'), type: "success"});
             }
           })
@@ -207,7 +221,7 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
                 Peerio.user.conversations[id].folderID = folderId;
               });
               $scope.$root.$apply();
-              swal({title: l('success'), text: ids.length +" " +l('conversations moved.'), type: "success"});
+              swal({title: l('success'), text: ids.length +" " +l('conversationsMoved'), type: "success"});
             }
           })
         });
@@ -243,9 +257,15 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
           $scope.$apply();
         });
       };
+      f.getFolderName = function(id){
+        for(var i=0;i< f.folders.length;i++){
+          if(f.folders[i].id === id) return f.folders[i].name;
+        }
+        return 'Inbox';
+      };
     }
     $scope.$on('messagesSectionPopulate', function (event, callback) {
-      $scope.$root.folders.loadFolders();
+      $scope.$root.convFolders.loadFolders();
       $scope.messagesSection.listIsLoading = true
       if (/Sidebar/.test($element[0].className)) {
         return false
@@ -956,7 +976,7 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
           cancelButtonText: document.l10n.getEntitySync('cancel').value,
           confirmButtonColor: '#e07a66',
           confirmButtonText: document.l10n.getEntitySync('remove').value,
-          closeOnConfirm: false
+          closeOnConfirm: true
         }, function () {
           removeConversations(ids)
         })

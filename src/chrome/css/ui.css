@@ -930,7 +930,7 @@ div.userMenu {
 		background: #F7F7F7;
 		box-shadow: -3px 3px rgba(50, 50, 50, 0.1);
 		z-index: 200;
-		height: 210px;
+		height: 235px;
 	}
 
 		div.userMenu:hover * {
@@ -1101,7 +1101,7 @@ div.mainSidebar {
 		overflow-x: hidden;
 		overflow-y: auto;
 		list-style-type: none;
-		max-height: 240px;
+
 	}
 
 		div.mainSidebar ul.folderView .fontAwesome {
@@ -1167,7 +1167,7 @@ button.contactsSidebarAddContact {
 span.filesSidebarUploadFileSubtitle {
 	font-variant: small-caps;
 	text-align: center;
-	margin: -50px auto 50px auto;
+	margin: -50px auto 10px auto;
 	display: block;
 	color: #FFF;
 }
@@ -1190,9 +1190,9 @@ div.sidebar ul {
 
 	div.sidebar ul li {
 
-		margin-top: 2px;
 		color: #FFF;
 		opacity: 0.6;
+		margin-top:2px;
 	}
 
 button.active {
@@ -1219,7 +1219,7 @@ div.filesSidebar {
 }
 
 div.filesSidebarQuotaUsage {
-	margin: 15px 0 0 0px;
+	margin: 0px 0 0 0px;
 	font-variant: small-caps;
 	padding: 10px;
 	font-size: 1em;
@@ -1232,7 +1232,7 @@ div.filesSidebarQuotaUsage {
 		color: #FFF;
 	}
 
-	div.filesSidebarQuotaUsage span {
+div.userMenu:hover span {
 		color: #FFF;
 	}
 
@@ -2641,4 +2641,16 @@ table.importContactsSelectContacts {
 
 td.importContactsSelectContactsCheckboxCell {
 	padding: 10px 0 10px 10px !important;
+}
+
+.sweet-alert{
+	border-radius: 2px;
+}
+.sweet-alert button{
+	border-radius: 0;
+}
+
+ul.filesSidebarTypeFilters li,ul.messagesSidebarTypeFilters li {
+	margin:0;
+	line-height: 22px;
 }

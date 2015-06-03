@@ -22,6 +22,209 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 	$scope.filesSection.typeFilter = ''
 	$scope.filesSection.ownerFilter = /./
 	$scope.filesSection.checkedIDs = []
+
+	if (!$scope.$root.fileFolders) {
+		var f = $scope.$root.fileFolders = {};
+		var l = function(n){return document.l10n.getEntitySync(n).value};
+		f.folders = [];
+
+		f.loadFolders = function () {
+			Peerio.network.getFileFolders(function (data) {
+				if (data.error) {
+					console.error(data.error);
+					return;
+				}
+				$scope.$root.$apply(function () {
+					f.folders = data.folders.sort(function (a, b) {
+						if (a.name > b.name) {
+							return 1;
+						}
+						if (a.name < b.name) {
+							return -1;
+						}
+						// a must be equal to b
+						return 0;
+					});
+				});
+			});
+		};
+
+		f.addFolder = function () {
+			swal({
+				title: l('newFolderDialogTitle'),
+				text: l('newFolderDialogText'),
+				type: "input",
+				showCancelButton: true,
+				closeOnConfirm: false,
+				animation: "slide-from-top",
+				inputPlaceholder: l('folderInputPlaceholder')
+			}, function (inputValue) {
+				if (inputValue === false) return false;
+				if (inputValue === "") {
+					swal.showInputError(l("folderInputEmptyError"));
+					return false
+				}
+				Peerio.network.createFileFolder(inputValue, function (response) {
+					if (response.error) {
+						console.log(response);
+						swal(l("error"), l('creatingFolderError'), "error");
+					} else {
+						f.loadFolders();
+						swal({title: l('success'), text: l('folderCreated'), type: "success"});
+					}
+				})
+			});
+		};
+
+		f.renameFolder = function (folder) {
+			swal({
+				title: l("renameFolderDialogTitle"),
+				text: l('renameFolderDialogText'),
+				type: "input",
+				showCancelButton: true,
+				closeOnConfirm: false,
+				animation: "slide-from-top",
+				inputPlaceholder: l('folderInputPlaceholder'),
+				inputValue: folder.name
+			}, function (inputValue) {
+				if (inputValue === false) return false;
+				if (inputValue === "") {
+					swal.showInputError(l("folderInputEmptyError"));
+					return false
+				}
+				Peerio.network.renameFileFolder(folder.id, inputValue, function (response) {
+					if (response.error) {
+						console.log(response);
+						swal(l('error'), l('renamingFolderError'), "error");
+					} else {
+						f.loadFolders();
+						swal({title: l('success'), text: l('folderRenamed'), type: "success"});
+					}
+				})
+			});
+		};
+
+		f.removeFolder = function (folder) {
+			swal({
+				title: l('removeFolderDialogTitle'),
+				text: l("removeFolderDialogText1")+" '" + folder.name + "'. "+l('removeFileFolderDialogText2'),
+				type: "warning",
+				confirmButtonColor: "#DD6B55",
+				showCancelButton: true,
+				closeOnConfirm: true,
+				animation: "slide-from-top"
+			}, function (isConfirm) {
+				if (!isConfirm) return;
+				Peerio.network.removeFileFolder(folder.id, function (response) {
+					if (response.error) {
+						console.log(response);
+						swal(l('error'), l('removingFolderError'), "error");
+					} else {
+						f.loadFolders();
+						Object.keys(Peerio.user.files).forEach(function(id){
+							if(Peerio.user.files.hasOwnProperty(id)){
+								var file = Peerio.user.files[id];
+								if (file.folderID === folder.id)
+									file.folderID = null;
+							}
+						});
+						swal({title: l('success'), text: l('folderRemoved'), type: "success"});
+					}
+				})
+			});
+		};
+
+		f.addToFolder = function (file) {
+			var previous = file.folderID;
+			window.setTimeout(function () {
+				Peerio.network.moveFileIntoFolder(file.id, file.folderID, function (response) {
+					if (response.error) {
+						swal(l('error'), l('fileMoveError'), "error");
+						conversation.folderID = previous;
+						return;
+					}
+					$scope.$apply();
+				});
+			}, 500);
+		};
+
+		f.addToFolderBulk = function (ids) {
+			if(ids.length===0){
+				swal(l('moveFilesDialogTitle'), l('filesNotSelectedError'),"info");
+				return;
+			}
+			var html = "<strong>"+ids.length+"</strong> " +l('moveFilesDialogText')+"<br/>"
+				+"<select id='groupFolderSelect'><option value='' selected>"+l('inbox')+"</option>";
+
+			f.folders.forEach(function (folder) {
+				html += "<option value='" + folder.id + "'>" + folder.name + "</option>";
+			});
+			html +="</select>";
+			swal({
+				title: l('moveFilesDialogTitle'),
+				text: html,
+				type: "warning",
+				showCancelButton: true,
+				closeOnConfirm: false,
+				html:true,
+				animation: "slide-from-top"
+			}, function (isConfirm) {
+				if (!isConfirm) return;
+				var folderId = $('#groupFolderSelect').val();
+				if(folderId=='') folderId=null;
+				Peerio.network.moveFileIntoFolder(ids, folderId, function (response) {
+					if (response.error) {
+						console.log(response);
+						swal(l('error'), l('movingFilesError'), "error");
+					} else {
+						ids.forEach(function(id){
+							Peerio.user.files[id].folderID = folderId;
+						});
+						$scope.$root.$apply();
+						swal({title: l('success'), text: ids.length +" " +l('filesMoved'), type: "success"});
+					}
+				})
+			});
+		};
+
+		f.handleDragStart = function (file) {
+			f.dragging = file;
+		};
+
+		f.handleDragEnd = function (file) {
+			f.dragging = null;
+			// console.log('dragend');
+		};
+
+		f.handleDragEnter = function (folder) {
+			//console.log('dragenter', folder);
+		};
+		f.handleDragLeave = function (folder) {
+			//console.log('dragleave', folder);
+		};
+
+		f.handleDrop = function (folder) {
+			if(!folder) folder = {id:null, name:l('inbox') };
+			// console.log('drop', folder);
+			if (!f.dragging) return;
+			var file = f.dragging;
+			Peerio.network.moveFileIntoFolder(file.id, folder.id, function (response) {
+				if (response.error) {
+					swal(l('error'), l('movingFilesError'), "error");
+					return;
+				}
+				file.folderID = folder.id;
+				$scope.$root.$apply();
+				$scope.$apply();
+			});
+		};
+		f.getFolderName = function(id){
+			for(var i=0;i< f.folders.length;i++){
+				if(f.folders[i].id === id) return f.folders[i].name;
+			}
+			return '[none]';
+		};
+	}
 	Peerio.UI.filesSectionScopeApply = function() {
 		$scope.$apply()
 	}
@@ -32,6 +235,7 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 		if (/Sidebar/.test($element[0].className)) {
 			return false
 		}
+		$scope.$root.fileFolders.loadFolders();
 		Peerio.file.getFiles(function() {
 			$scope.filesSection.files = Peerio.user.files
 			$scope.$apply()
@@ -92,14 +296,19 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 		$(event.target).addClass('active')
 		$scope.$root.$broadcast('filesSectionSetTypeFilter', type)
 	}
-	$scope.filesSection.checkTypeFilter = function(type) {
+	$scope.filesSection.checkTypeFilter = function(file) {
+		var type = file.type;
 		if ($scope.filesSection.typeFilter === '') {
 			return true
 		}
 		if ($scope.filesSection.typeFilter === 'other') {
 			return !(new RegExp('^((image)|(video)|(pdf)|(word)|(excel)|(powerpoint))$')).test(type)
 		}
-		return (new RegExp('^' + $scope.filesSection.typeFilter + '$')).test(type)
+		var typeTest = (new RegExp('^' + $scope.filesSection.typeFilter + '$')).test(type);
+		if(typeTest) return true;
+
+		return $scope.filesSection.typeFilter === file.folderID;
+
 	}
 	$scope.filesSection.checkSearchFilter = function(file) {
 		if (!$scope.filesSection.searchFilter.length) {
@@ -172,7 +381,7 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 			cancelButtonText: document.l10n.getEntitySync('cancel').value,
 			confirmButtonColor: '#e07a66',
 			confirmButtonText: document.l10n.getEntitySync('remove').value,
-			closeOnConfirm: false
+			closeOnConfirm: true
 		}, function() {
 			Peerio.file.removeFile(ids, function() {
 				$scope.filesSection.checkedIDs = []
@@ -211,7 +420,7 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 			cancelButtonText: document.l10n.getEntitySync('cancel').value,
 			confirmButtonColor: '#e07a66',
 			confirmButtonText: document.l10n.getEntitySync('destroy').value,
-			closeOnConfirm: false
+			closeOnConfirm: true
 		}, function() {
 			Peerio.file.nukeFile(ids, function() {
 				$scope.filesSection.checkedIDs = []

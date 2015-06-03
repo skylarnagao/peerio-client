@@ -129,7 +129,7 @@
 <typeYourReply "Type your reply...">
 <noParticipantsLeft "There are no participants left in this conversation.">
 
-<allDocuments "All Documents">
+<allDocuments "All Files">
 <photos "Photos">
 <videos "Videos">
 <pdfDocuments "PDF Documents">
@@ -138,7 +138,7 @@
 <presentations "Presentations">
 <other "Other">
 <storage "Storage">
-<yourUsage "your usage:">
+<yourUsage "USAGE:">
 <quotaError "Storage limit reached">
 <quotaErrorText "You do not have enough space in your Peerio account. Try deleting other files first, or upgrade your account to include more storage.">
 <sizeError "File is too big">
@@ -334,12 +334,22 @@
 <removeFolderDialogTitle "Removing folder">
 <removeFolderDialogText1 "Are you sure you want to remove the folder:">
 <removeFolderDialogText2 "Conversations in this folder will be moved to inbox.">
+<removeFileFolderDialogText2 "Files in this folder will be moved to inbox.">
 <removingFolderError "Sorry, failed to remove folder">
 <folderRemoved "Folder removed.">
 <conversationMoveError "Filed to move conversation into folder.">
+<fileMoveError "Filed to move file into folder.">
 <moveConversationsDialogTitle "Moving conversations into folder">
 <moveConversationsDialogText "conversations selected. Move them into folder:">
 <conversationsNotSelectedError "Please select conversations first">
 <movingConversationsError "Sorry, failed to move conversations to folder">
 <conversationsMoved "conversations moved.">
+<moveFilesDialogTitle "Moving files into folder">
+<moveFilesDialogText "files selected. Move them into folder:">
+<filesNotSelectedError "Please select files first">
+<movingFilesError "Sorry, failed to move files to folder">
+<filesMoved "files moved.">
+
+<folder "Folder">
 <addNewFolder "Add a new folder">
+<moveToFolder "Move to folder">

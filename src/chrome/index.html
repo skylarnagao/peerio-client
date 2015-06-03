@@ -256,7 +256,7 @@
             <h3 data-l10n-id="dragAndDropUploadText"></h3>
         </div>
     </div>
-    <div class="mainSidebar" data-ng-style="resize()" resize="0,20">
+    <div class="mainSidebar" data-ng-style="resize()" resize="0,20" style="position: relative;">
         <img src="img/peerioLogotypeWhite.png" alt="Peerio" class="peerioLogotypeWhite"/>
 
         <div class="messagesSidebar sidebar" data-sectionlink="messages" data-ng-controller="messagesSection">
@@ -264,9 +264,9 @@
                     data-l10n-id="newMessage"
                     data-ng-mousedown="messagesSidebar.newMessage()"></button>
 
-            <h2 peerio-drag-enter="$root.folders.handleDragEnter()"
-                peerio-drag-leave="$root.folders.handleDragLeave()"
-                peerio-drop="$root.folders.handleDrop()"
+            <h2 peerio-drag-enter="$root.convFolders.handleDragEnter()"
+                peerio-drag-leave="$root.convFolders.handleDragLeave()"
+                peerio-drop="$root.convFolders.handleDrop()"
                 data-ng-mousedown="messagesSection.setTypeFilter('inbox', $event)">
                 <span style="pointer-events: none;" data-l10n-id="inbox"></span>&nbsp;
                 <span style="pointer-events: none;" class="green"
@@ -281,20 +281,23 @@
                 <!-- <li data-l10n-id="drafts" data-ng-mousedown="messagesSection.setTypeFilter('drafts', $event)"></li> -->
             </ul>
 
-            <ul class="folderView">
-                <li peerio-drag-enter="$root.folders.handleDragEnter(folder)"
-                    peerio-drag-leave="$root.folders.handleDragLeave(folder)"
-                    peerio-drop="$root.folders.handleDrop(folder)"
-                    data-ng-repeat="folder in $root.folders.folders"
+            <a href="#" class="add-folder-btn" data-ng-click="$root.convFolders.addFolder()"
+               data-l10n-id="addNewFolder"></a>
+
+            <ul class="folderView"
+                style="position: absolute;top: 310px;left: 10px;right: 0;bottom:80px;padding-bottom: 30px">
+                <li peerio-drag-enter="$root.convFolders.handleDragEnter(folder)"
+                    peerio-drag-leave="$root.convFolders.handleDragLeave(folder)"
+                    peerio-drop="$root.convFolders.handleDrop(folder)"
+                    data-ng-repeat="folder in $root.convFolders.folders"
                     data-ng-mousedown="messagesSection.setTypeFilter(folder.id, $event)">
                     <span class="blue fontAwesome">&#xf07c;</span>{{folder.name}}
 						<span class="fontAwesome action-icon" style="right:13px;top:-1px;"
-                              data-ng-click="$root.folders.renameFolder(folder)">&#xf044;</span>
+                              data-ng-click="$root.convFolders.renameFolder(folder)">&#xf044;</span>
                     <span class="fontAwesome action-icon"
-                          data-ng-click="$root.folders.removeFolder(folder)">&#xf00d;</span>
+                          data-ng-click="$root.convFolders.removeFolder(folder)">&#xf00d;</span>
                 </li>
             </ul>
-            <a href="#" class="add-folder-btn" data-ng-click="$root.folders.addFolder()" data-l10n-id="addNewFolder"></a>
         </div>
         <div class="filesSidebar sidebar" data-sectionlink="files" data-ng-controller="filesSection">
             <button class="filesSidebarUploadFile" data-l10n-id="uploadFile"
@@ -307,8 +310,14 @@
                 <input type="reset" value="reset" class="hidden"/>
             </form>
             <ul class="filesSidebarTypeFilters">
-                <li class="active" data-l10n-id="allDocuments"
+                <li peerio-drag-enter="$root.fileFolders.handleDragEnter()"
+                    peerio-drag-leave="$root.fileFolders.handleDragLeave()"
+                    peerio-drop="$root.fileFolders.handleDrop()"
+                    class="active" style="transform-origin: left;transition:transform 0.1s linear"
+                    data-l10n-id="allDocuments"
                     data-ng-mousedown="filesSection.setTypeFilter('', $event)"></li>
+            </ul>
+            <ul class="filesSidebarTypeFilters">
                 <li data-l10n-id="photos" data-ng-mousedown="filesSection.setTypeFilter('image', $event)"></li>
                 <li data-l10n-id="videos" data-ng-mousedown="filesSection.setTypeFilter('video', $event)"></li>
                 <li data-l10n-id="pdfDocuments" data-ng-mousedown="filesSection.setTypeFilter('pdf', $event)"></li>
@@ -318,24 +327,31 @@
                     data-ng-mousedown="filesSection.setTypeFilter('powerpoint', $event)"></li>
                 <li data-l10n-id="other" data-ng-mousedown="filesSection.setTypeFilter('other', $event)"></li>
             </ul>
-            <div class="filesSidebarQuotaUsage">
-                <h1 data-l10n-id="storage"></h1>
-                <span data-l10n-id="yourUsage"></span>
-                <br/>
-                <span data-ng-bind="filesSidebar.getUserQuota()"></span>/
-                <span data-ng-bind="filesSidebar.getTotalQuota()"></span>
-                (
-                <span data-ng-bind="filesSidebar.getQuotaPercentage()"></span>)
-            </div>
-            <ul class="folderView">
-                <li><span class="blue fontAwesome">&#xf07c;</span> Work</li>
-                <ul>
-                    <li>Quantum computers</li>
-                    <li>More sushi</li>
-                </ul>
-                <li><span class="blue fontAwesome">&#xf07b;</span> Travel</li>
-                <li><span class="blue fontAwesome">&#xf07b;</span> Cats</li>
+            <ul class="folderView"
+                style="position: absolute;top: 412px;left: 10px;right: 0;bottom:80px;padding-bottom: 30px">
+                <li peerio-drag-enter="$root.fileFolders.handleDragEnter(folder)"
+                    peerio-drag-leave="$root.fileFolders.handleDragLeave(folder)"
+                    peerio-drop="$root.fileFolders.handleDrop(folder)"
+                    data-ng-repeat="folder in $root.fileFolders.folders"
+                    data-ng-mousedown="messagesSection.setTypeFilter(folder.id, $event)">
+                    <span class="blue fontAwesome">&#xf07c;</span>{{folder.name}}
+						<span class="fontAwesome action-icon" style="right:13px;top:-1px;"
+                              data-ng-click="$root.fileFolders.renameFolder(folder)">&#xf044;</span>
+                    <span class="fontAwesome action-icon"
+                          data-ng-click="$root.fileFolders.removeFolder(folder)">&#xf00d;</span>
+                </li>
             </ul>
+            <a href="#" class="add-folder-btn" data-ng-click="$root.fileFolders.addFolder()"
+               data-l10n-id="addNewFolder"></a>
+            <!--<div class="filesSidebarQuotaUsage">-->
+            <!--<h1 data-l10n-id="storage"></h1>-->
+            <!--<span data-l10n-id="yourUsage"></span>-->
+            <!--<br/>-->
+            <!--<span data-ng-bind="filesSidebar.getUserQuota()"></span>/-->
+            <!--<span data-ng-bind="filesSidebar.getTotalQuota()"></span>-->
+            <!--(-->
+            <!--<span data-ng-bind="filesSidebar.getQuotaPercentage()"></span>)-->
+            <!--</div>-->
         </div>
         <div class="contactsSidebar sidebar" data-sectionlink="contacts" data-ng-controller="contactsSection">
             <button class="contactsSidebarAddContact"
@@ -374,6 +390,10 @@
             </div>
             <br/>
             <br/>
+
+            <div style="margin-left: 0px;font-size: 80%;margin-top: -26px;"><span data-l10n-id="yourUsage"></span>
+                {{userMenu.getUserQuota()}} / {{userMenu.getTotalQuota()}} ({{userMenu.getQuotaPercentage()}})
+            </div>
             <button class="clear" data-ng-mousedown="userMenu.openAccountSettings()">
                 <span class="fontAwesome">&#xf007;</span>
                 &nbsp;
@@ -460,7 +480,9 @@
                         &#xf014;
                     </button>
                     <button class="fontAwesome clear"
-                            data-ng-click="$root.folders.addToFolderBulk(messagesSection.checkedIDs)">
+                            data-utip-l10n="moveToFolder"
+                            data-utip-gravity="ne"
+                            data-ng-click="$root.convFolders.addToFolderBulk(messagesSection.checkedIDs)">
                         &#xf115;
                     </button>
                 </div>
@@ -469,8 +491,8 @@
                          class="messagesSectionListViewLoading" alt=""/>
 
                     <div class="messageListItem" draggable="true"
-                         peerio-drag-start="$root.folders.handleDragStart(conversation)"
-                         peerio-drag-end="$root.folders.handleDragEnd(conversation)"
+                         peerio-drag-start="$root.convFolders.handleDragStart(conversation)"
+                         peerio-drag-end="$root.convFolders.handleDragEnd(conversation)"
                          data-ng-repeat="conversation in messagesSection.conversations | orderObjectBy:'lastTimestamp':true"
                          data-ng-attr-data-conversationid="{{'c' + conversation.id}}"
                          data-ng-mousedown="messagesSection.selectConversation(conversation, $event)"
@@ -515,15 +537,18 @@
                     <p data-l10n-id="welcomeToAccountListSearch"></p>
                 </div>
                 <div class="messagesSectionMessageViewTopIcons" data-ng-show="messagesSection.conversation">
-						 <span class="folder-selector">
+						 <span style="font-size:1em !important">
+                            <span class="fontAwesome clear" style="font-size:1em !important">
+                                  &#xf115;
+                            </span>
+                             {{$root.convFolders.getFolderName(messagesSection.conversation.folderID)}}
 
-
-							 <select style="width:170px" data-ng-model="messagesSection.conversation.folderID"
-                                     data-ng-options="folder.id as folder.name for folder in $root.folders.folders"
-                                     data-ng-change="$root.folders.addToFolder(messagesSection.conversation)">
-                                 <option value="">Inbox</option>
-                             </select>
-						 </span>
+                    <!--<select style="width:170px" data-ng-model="messagesSection.conversation.folderID"-->
+                    <!--data-ng-options="folder.id as folder.name for folder in $root.convFolders.folders"-->
+                    <!--data-ng-change="$root.convFolders.addToFolder(messagesSection.conversation)">-->
+                    <!--<option value="">Inbox</option>-->
+                    <!--</select>-->
+                    </span>
                     <button class="messagesSectionMessageViewDelete fontAwesome clear"
                             data-utip-l10n="remove"
                             data-ng-mousedown="messagesSection.removeConversations([messagesSection.conversation.id])"
@@ -715,6 +740,10 @@
                 <div class="filesSectionToolbarActions">
                     <button class="fontAwesome clear" data-utip-l10n="send" data-utip-gravity="nw"
                             data-ng-mousedown="filesSection.sendFiles(filesSection.checkedIDs)">&#xf1d9;</button>
+                    <button class="fontAwesome clear" data-utip-l10n="moveToFolder" data-utip-gravity="nw"
+                            data-ng-click="$root.fileFolders.addToFolderBulk(filesSection.checkedIDs)">
+                        &#xf115;
+                    </button>
                     <button class="fontAwesome clear" data-utip-l10n="remove" data-utip-gravity="nw"
                             data-ng-mousedown="filesSection.removeFiles(filesSection.checkedIDs)">&#xf014;</button>
                     <button class="fontAwesome clear" data-utip-l10n="destroy" data-utip-gravity="nw"
@@ -737,13 +766,16 @@
                     <th data-l10n-id="date"></th>
                     <th data-l10n-id="size"></th>
                     <th data-l10n-id="owner"></th>
+                    <th data-l10n-id="folder"></th>
                 </tr>
             </table>
             <div class="filesSectionTableWrapper">
                 <table class="filesSectionTable">
-                    <tr class="filesSectionTableEntry"
+                    <tr class="filesSectionTableEntry" draggable="true"
+                        peerio-drag-start="$root.fileFolders.handleDragStart(file)"
+                        peerio-drag-end="$root.fileFolders.handleDragEnd(file)"
                         data-ng-repeat="file in filesSection.files | orderObjectBy:'timestamp':true"
-                        data-ng-show="filesSection.checkTypeFilter(file.type)&&filesSection.checkSearchFilter(file)&&filesSection.checkOwnerFilter(file)">
+                        data-ng-show="filesSection.checkTypeFilter(file)&&filesSection.checkSearchFilter(file)&&filesSection.checkOwnerFilter(file)">
                         <td class="filesSectionTableCheckboxCell">
                             <input type="checkbox"
                                    class="blueCheckbox"
@@ -755,7 +787,7 @@
                         </td>
                         <td>
                             <div class="fileListing"
-                                 data-ng-mousedown="filesSection.showListingActions(file.id, $event)">
+                                 data-ng-click="filesSection.showListingActions(file.id, $event)">
 									<span class="fontAwesome fileListingIcon"
                                           data-ng-bind-html="filesSection.getIcon(file.id)"
                                           data-ng-show="!file.uploading && !file.downloading"></span>
@@ -778,6 +810,7 @@
 									(<span data-ng-bind="file.creator"></span>)
 								</span>
                         </td>
+                        <td>{{$root.fileFolders.getFolderName(file.folderID)}}</td>
                     </tr>
                 </table>
             </div>
