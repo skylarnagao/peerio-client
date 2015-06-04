@@ -97,6 +97,11 @@
         </form>
         <button class="loginFormSignup" data-ng-click="login.showSignupForm()" data-l10n-id="signup"></button>
 
+        <h2 data-l10n-id="language" class="login-locale-title"></h2>
+        <select data-ng-model="selectedLocale" class="login-locale-select"
+                data-ng-options="option.value as option.name for option in languageOptions"
+                data-ng-change="changeLocale()"></select>
+
         <div class="loginFormFooter">
             <img src="img/peerioLogoWhite.png" alt=""/>
             <span class="loginFormVersion" data-ng-bind="login.version"></span>
@@ -392,9 +397,10 @@
             <br/>
             <br/>
 
-            <div style="margin-left: 0px;font-size: 80%;margin-top: -26px;"><span data-l10n-id="yourUsage"></span>
-                {{userMenu.getUserQuota()}} / {{userMenu.getTotalQuota()}} ({{userMenu.getQuotaPercentage()}})
-            </div>
+            <button class="clear">
+                <span class="fontAwesome">&#xf0e4;</span>
+                &nbsp;{{userMenu.getUserQuota()}} / {{userMenu.getTotalQuota()}} ({{userMenu.getQuotaPercentage()}})
+            </button>
             <button class="clear" data-ng-mousedown="userMenu.openAccountSettings()">
                 <span class="fontAwesome">&#xf007;</span>
                 &nbsp;

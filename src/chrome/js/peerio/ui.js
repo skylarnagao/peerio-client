@@ -224,17 +224,22 @@ Peerio.UI = angular.module('PeerioUI', ['ngSanitize', 'cfp.hotkeys']);
       ) {
         language = data.localeCode
       }
-      if (
-        (typeof(language) !== 'string') || !/^((en)|(fr))$/.test(language)
-      ) {
+      if ((typeof(language) !== 'string') || !/^((en)|(fr)|(de)|(es)|(it))$/.test(language)) {
         var navLang = navigator.language || navigator.userLanguage
-        if (/fr/.test(navLang)) {
-          language = 'fr'
-        }
-        else {
-          language = 'en'
+        var langs = {'en': /en/, 'fr': /fr/, 'de':/de/, 'es':/es/, 'it':/it/};
+        var keys = Object.keys[langs];
+        //default
+        language = 'en';
+
+        for(var i=0;i<keys.length;i++){
+          if(langs[keys[i]].test(navLang)){
+            language = keys[i];
+            break;
+          }
         }
       }
+      Peerio.UI.localeCode = language;
+      Peerio.user.settings.localeCode = language;
       document.l10n.ready(function () {
         Peerio.UI.applyDynamicElements()
       })
