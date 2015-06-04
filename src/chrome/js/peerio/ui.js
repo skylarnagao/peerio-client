@@ -227,7 +227,7 @@ Peerio.UI = angular.module('PeerioUI', ['ngSanitize', 'cfp.hotkeys']);
       if ((typeof(language) !== 'string') || !/^((en)|(fr)|(de)|(es)|(it))$/.test(language)) {
         var navLang = navigator.language || navigator.userLanguage
         var langs = {'en': /en/, 'fr': /fr/, 'de':/de/, 'es':/es/, 'it':/it/};
-        var keys = Object.keys[langs];
+        var keys = Object.keys(langs);
         //default
         language = 'en';
 
