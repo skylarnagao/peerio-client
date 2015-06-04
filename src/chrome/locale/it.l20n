@@ -289,32 +289,34 @@
     <importContactsSelectAll "Seleziona tutti i contatti">
     <importSelectedContacts "Importa i contatti selezionati">
     <newFolderDialogTitle "Add New Folder">
-    <newFolderDialogText "Enter the new folder’s name">
-    <folderInputEmptyError "You need to write something!">
+    <newFolderDialogText "What should this folder's name be?">
+    <folderInputEmptyError "Please enter a folder name.">
     <folderInputPlaceholder "enter folder name">
     <creatingFolderError "Oops! Something went wrong and your folder was not created. Please try again.">
-    <success "Success">
-    <folderCreated "Folder created">
-    <renameFolderDialogTitle "Rename Folder">
-    <renameFolderDialogText "Enter the new folder name">
+    <success "Success!">
+    <folderCreated "Your folder has been created!">
+    <renameFolderDialogTitle "Change Folder Name">
+    <renameFolderDialogText "What should this folder's new name be?">
     <renamingFolderError "Oops! Something went wrong and your folder was not renamed. Please try again.">
-    <folderRenamed "Folder renamed">
+    <folderRenamed "This folder has been renamed.">
     <removeFolderDialogTitle "Remove Folder">
     <removeFolderDialogText1 "Are you sure you want to remove the folder">
-    <removeFolderDialogText2 "Conversations in this folder will be moved to \"inbox\".">
+    <removeFolderDialogText2 "Conversations in this folder will be moved to 'inbox'.">
     <removingFolderError "Oops! Something went wrong and your folder was not removed. Please try again.">
-    <folderRemoved "Folder removed.">
+    <folderRemoved "This folder has been removed.">
     <conversationMoveError "Failed to move conversation into folder.">
-    <moveConversationsDialogTitle "Moving conversations into folder">
-    <moveConversationsDialogText "conversations selected. Move them into folder:">
-    <conversationsNotSelectedError "Please select conversations first">
+    <moveConversationsDialogTitle "Move Conversations To Folder">
+    <moveConversationsDialogText "conversations selected. Move to which folder?:">
+    <conversationsNotSelectedError "Please select at least one conversation to move.">
     <movingConversationsError "Sorry, failed to move conversations to folder">
     <conversationsMoved "conversations moved.">
-    <addNewFolder "Add a new folder">
-    <moveFilesDialogTitle "Moving files into folder">
-    <moveFilesDialogText "files selected. Move them into folder">
+    <addNewFolder "Add new folder">
+    <moveFilesDialogTitle "Move Files To Folder">
+    <moveFilesDialogText "files selected. Move to which folder?">
     <filesNotSelectedError "Please select files first">
     <movingFilesError "Sorry, failed to move files to folder">
-    <filesMoved "files moved.">
+    <filesMoved "files were moved.">
     <fileMoveError "Failed to move file into folder.">
-    <removeFileFolderDialogText2 "Files in this folder are now in \"all files\".">
+    <removeFileFolderDialogText2 "Files in this folder will be moved to 'all files'.">
+    <folder "Folder">
+    <moveToFolder "Move to folder">
