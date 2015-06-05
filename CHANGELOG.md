@@ -1,3 +1,8 @@
+##Peerio 1.0.4.3 (9)
+**April 6 2015**
+- This update fixes an issue where a warning popup would fail to show when a contact's public identity changed. All other key verifications mechanisms were unaffected.
+- Fixed an issue with message display.
+
 ##Peerio 1.0.4.2 (8)
 **March 9 2015**
 - Fixed an issue that could prevent message threads from synchronizing and appearing in clients.

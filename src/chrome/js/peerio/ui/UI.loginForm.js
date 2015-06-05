@@ -23,7 +23,12 @@ Peerio.UI.controller('loginForm', function($scope) {
 					Peerio.user.firstName = data.firstName
 					Peerio.user.lastName  = data.lastName
 					Peerio.user.addresses = data.addresses
+					var currLocale = Peerio.user.settings.localeCode;
 					Peerio.user.settings = data.settings
+					if(currLocale!== Peerio.user.settings.localeCode) {
+						Peerio.user.settings.localeCode = currLocale;
+						Peerio.network.updateSettings({localeCode:currLocale}, function () {});
+					}
 					Peerio.user.quota = data.quota
 					$scope.$root.$broadcast('mainTopPopulate', null)
 					$scope.$root.$broadcast('preferencesOnLogin', null)
@@ -78,4 +83,33 @@ Peerio.UI.controller('loginForm', function($scope) {
 			$('span.loginShowPassphraseDisable').show()
 		}
 	}
-})
+	$scope.selectedLocale = Peerio.UI.localeCode;
+	$scope.languageOptions = Peerio.UI.languageOptions;
+	$scope.changeLocale = function(){
+		var defaultPouch = new PouchDB('_default')
+		defaultPouch.get('localeCode', function(err, data) {
+			defaultPouch.remove(data, function() {
+				defaultPouch.put({
+					_id: 'localeCode',
+					localeCode: $scope.selectedLocale
+				}, function() {
+					swal({
+						title: document.l10n.getEntitySync('confirmed').value,
+						text: document.l10n.getEntitySync('confirmedLanguageText').value,
+						type: 'success',
+						confirmButtonText: document.l10n.getEntitySync('OK').value
+					}, function () {
+						if(chrome){
+							chrome.runtime.reload();
+						} else document.location.reload(true);
+					});
+				});
+			})
+		});
+	}
+	document.l10n.ready(function () {
+		if($scope.selectedLocale) return;
+		$scope.selectedLocale = Peerio.UI.localeCode;
+		$scope.$apply();
+	})
+});

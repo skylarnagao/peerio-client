@@ -3,27 +3,7 @@
 importScripts('../lib/socket.js')
 
 var mySocket = (function() {
-	var serverList = [
-		'https://bubblegum.peerio.com:443',
-		'https://iceking.peerio.com:443',
-		'https://lsp.peerio.com:443'
-	]
-
-	var secureRandom = function() {
-		var result = '0.'
-		var buffer = new Uint8Array(32)
-		crypto.getRandomValues(buffer)
-		for (var i = 0; i < buffer.length; i++) {
-			if (buffer[i] > 249) {
-				continue
-			}
-			result += (buffer[i] % 10).toString()
-		}
-		return parseFloat(result)
-	}
-
-	var serverIndex = Math.floor( (self.crypto ? secureRandom() : Math.random()) * serverList.length)
-	var server = serverList[serverIndex];
+	var server = 'https://app.peerio.com:443';
 
 	return io.connect(server, { transports: ['websocket'] })
 }());

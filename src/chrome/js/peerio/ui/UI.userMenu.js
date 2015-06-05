@@ -53,4 +53,14 @@ Peerio.UI.controller('userMenu', function($scope) {
 			confirmButtonText: document.l10n.getEntitySync('logout').value
 		}, function() { window.close() })
 	}
+	$scope.userMenu.getUserQuota = function() {
+		return Peerio.file.getReadableFileSize(Peerio.user.quota.user)
+	}
+	$scope.userMenu.getTotalQuota = function() {
+		return Peerio.file.getReadableFileSize(Peerio.user.quota.total)
+	}
+	$scope.userMenu.getQuotaPercentage = function() {
+		var p = (Peerio.user.quota.user * 100) / Peerio.user.quota.total
+		return Math.ceil(p) + '%'
+	}
 })

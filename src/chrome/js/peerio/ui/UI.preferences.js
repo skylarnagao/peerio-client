@@ -1,18 +1,30 @@
+Peerio.UI.languageOptions = [{
+	name: 'English',
+	value: 'en'
+}, {
+	name: 'Francais',
+	value: 'fr'
+}, {
+	name: 'Deutsch',
+	value: 'de'
+}, {
+	name: 'Español',
+	value: 'es'
+}, {
+	name: 'Italiano',
+	value: 'it'
+}
+];
+
 Peerio.UI.controller('preferences', function($scope) {
 	'use strict';
 	$scope.preferences = {}
 	$scope.$on('preferencesOnLogin', function() {
 		$scope.preferences.language = Peerio.user.settings.localeCode
-		$scope.preferences.languageOptions = [{
-			name: 'English',
-			value: 'en'
-		}, {
-			name: 'Francais',
-			value: 'fr'
-		}]
-		if ($scope.preferences.language === 'fr') {
-			$scope.preferences.languageOptions.reverse()
-		}
+		$scope.preferences.languageOptions = Peerio.UI.languageOptions;
+//		if ($scope.preferences.language === 'fr') {
+	//		$scope.preferences.languageOptions.reverse()
+//		}
 		$scope.preferences.receiveMessageNotifications = Peerio.user.settings.receiveMessageNotifications
 		$scope.preferences.useSounds = Peerio.user.settings.useSounds
 		$scope.$apply()
@@ -148,6 +160,7 @@ Peerio.UI.controller('preferences', function($scope) {
 			}
 		)
 	}
+
 	$scope.preferences.peerioPINRemove = function() {
 		Peerio.user.removePIN(Peerio.user.username, function() {
 			swal({

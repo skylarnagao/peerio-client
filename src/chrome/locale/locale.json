@@ -1,7 +1,10 @@
 {
   "locales": [
     "en",
-    "fr"
+    "fr",
+    "de",
+    "es",
+    "it"
   ],
   "resources": [
     "./{{locale}}.l20n"

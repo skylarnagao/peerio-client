@@ -173,7 +173,7 @@ Peerio.UI.controller('contactsSection', function($scope, $element, $sce) {
 			cancelButtonText: document.l10n.getEntitySync('cancel').value,
 			confirmButtonColor: '#e07a66',
 			confirmButtonText: document.l10n.getEntitySync('removeContact').value,
-			closeOnConfirm: false
+			closeOnConfirm: true
 		}, function() {
 			if (Peerio.user.contacts[username].isRequest) {
 				Peerio.network.cancelContactRequest(username, function() {

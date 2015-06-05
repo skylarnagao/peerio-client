@@ -9,3 +9,7 @@ src/windows/package.nw
 Debug/peerio.log
 Debug/peerio.tlog/peerio.lastbuildstate
 src/mac/Peerio.app/Contents/Resources/app.nw
+tmp
+node_modules
+npm-debug.log
+.transifexrc

@@ -149,7 +149,7 @@ Peerio.UI.controller('accountSettings', function($scope) {
 			cancelButtonText: document.l10n.getEntitySync('cancel').value,
 			confirmButtonColor: '#e07a66',
 			confirmButtonText: document.l10n.getEntitySync('deleteAccount').value,
-			closeOnConfirm: false
+			closeOnConfirm: true
 		}, function() {
 			Peerio.UI.twoFactorAuth(function() {
 				Peerio.network.closeAccount(function() {
