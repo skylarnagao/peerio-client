@@ -267,14 +267,14 @@ Here is a general template of a request accepted by the Peerio Server Applicatio
 ####C. Error Messages
 The Peerio Server Application may respond to an unsuccessful request with the following error codes:
 
-**404**: Sent when a resource could not be found (either because it does not exist or the user us not allowed to access it)
-**413**: Sent when the user is not allowed to perform an operation due to having exceeded their storage quota.
-**406**: Sent when the client's request is malformed (e.g. missing a required field, supplying fields in an incorrect format).
-**423**: Sent when there is an authentication problem (e.g. authToken unacceptable, too many authToken requests).
-**424**: Two-factor authentication required.
-**425**: Sent when the account has been throttled (sent too many requests that failed to authenticate).
-**426**: User blacklisted.
-**400***: Sent for all other errors.
+- **404**: Sent when a resource could not be found (either because it does not exist or the user us not allowed to access it)
+- **413**: Sent when the user is not allowed to perform an operation due to having exceeded their storage quota.
+- **406**: Sent when the client's request is malformed (e.g. missing a required field, supplying fields in an incorrect format).
+- **423**: Sent when there is an authentication problem (e.g. authToken unacceptable, too many authToken requests).
+- **424**: Two-factor authentication required.
+- **425**: Sent when the account has been throttled (sent too many requests that failed to authenticate).
+- **426**: User blacklisted.
+- **400***: Sent for all other errors.
 
 ###4. Account Registration
 **Input Validation**: See §B.3.A.
@@ -449,7 +449,8 @@ User's client sends `getContacts` message:
 {
 	authToken: 'Decrypted authToken (Base64 String)'
 
-}```
+}
+```
 
 The server returns:
 ```javascript
@@ -888,8 +889,8 @@ The server will respond with:
 
 If the file does not exist or does not belong to the owner, the code associated with the file ID will be `404`. If some other error occurred the error code will be `400`.
 
-####Nuke a File
-A user may ask the server to "nuke" a file (immediately delete it and remove it from all accounts it has been shared with) with a `nukeFile` message:
+####Destroy a File
+A user may ask the server to destroy or "nuke" a file (immediately delete it and remove it from all accounts it has been shared with) with a `nukeFile` message:
 ```javascript
 {
 	ids: [
@@ -1103,6 +1104,7 @@ The format of the response will be similar to that for fetching all conversation
 			lastTimestamp: 'timestamp of last message (Number)',
 			folderID: 'ID of folder (String)',
 			messageCount: 'number of messages in the conversation (Number)',
+			fileCount: 'number of files sent in the conversation',
 			messages: {
 				'id of message' : {
 					// message object
@@ -1515,13 +1517,10 @@ High priority/frequency:
 - `modifiedMessagesAvailable` - Sent when a new message has been received, or a receipt has been added to a message.
 
 Medium priority/frequency:
-- `receivedContactRequestsAvailable` - Sent when someone has added the user as a contact.
-- `newContactsAvailable` - Sent when someone has accepted a contact request sent by the user.
+- `newContactsAvailable` - Sent when the number of contacts, sent contact requests or received contact requests has changed.
 
 Low priority/frequency:
 - `uploadedFilesAvailable` - Sent when the number of files a user has uploaded (ie. not received from someone else) changes.
-- `sentContactRequestsAvailable` - Sent when the number of sent contact requests changes (generally means a new contact, or can mean a rejected contact request).
-- `contactsAvailable` - Sent when the number of contacts has changed, generally either the same as when a new contact has accepted a request OR also if someone has removed the user as a contact.
 - `modifiedConversationsAvailable` - Sent when the events in a conversation have changed, ie. a participant has removed/left the conversation.
 
 When the client receives these messages, it will request data from the server normally, ie. by sending `getReceivedContactRequests`, `getContacts` and `getModifiedMessageIDs` messages to the server respectively, with all necessary parameters (including a valid `authToken`).
