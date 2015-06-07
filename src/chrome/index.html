@@ -282,12 +282,9 @@
                     data-l10n-id="newMessage"
                     data-ng-mousedown="messagesSidebar.newMessage()"></button>
 
-            <h2 peerio-drag-enter="$root.convFolders.handleDragEnter()"
-                peerio-drag-leave="$root.convFolders.handleDragLeave()"
-                peerio-drop="$root.convFolders.handleDrop()"
-                data-ng-mousedown="messagesSection.setTypeFilter('inbox', $event)">
-                <span style="pointer-events: none;" data-l10n-id="inbox"></span>&nbsp;
-                <span style="pointer-events: none;" class="green"
+            <h2>
+                <span data-l10n-id="inbox"></span>&nbsp;
+                <span class="green"
                       data-ng-bind="messagesSection.getMessagesNewCount()"
                       data-ng-show="!!messagesSection.getMessagesNewCount()"></span>
             </h2>
@@ -295,8 +292,10 @@
             <ul class="messagesSidebarTypeFilters">
                 <li data-l10n-id="allMessages" class="active"
                     data-ng-mousedown="messagesSection.setTypeFilter('all', $event)"></li>
-                <li data-l10n-id="newMessages" data-ng-mousedown="messagesSection.setTypeFilter('new', $event)"></li>
-                <!-- <li data-l10n-id="drafts" data-ng-mousedown="messagesSection.setTypeFilter('drafts', $event)"></li> -->
+                <li data-l10n-id="unsorted" peerio-drag-enter="$root.convFolders.handleDragEnter()"
+                    peerio-drag-leave="$root.convFolders.handleDragLeave()"
+                    peerio-drop="$root.convFolders.handleDrop()"
+                    data-ng-mousedown="messagesSection.setTypeFilter('inbox', $event)"></li>
             </ul>
 
             <a href="#" class="add-folder-btn" data-ng-click="$root.convFolders.addFolder()"
@@ -309,7 +308,7 @@
                     peerio-drop="$root.convFolders.handleDrop(folder)"
                     data-ng-repeat="folder in $root.convFolders.folders"
                     data-ng-mousedown="messagesSection.setTypeFilter(folder.id, $event)">
-                    <span class="blue fontAwesome">&#xf07c;</span>{{folder.name}}
+                    <span class="blue fontAwesome">&#xf07c;</span>{{folder.name}} <span class="green folder-counter">{{folder.newMessageCount||''}}</span>
 						<span class="fontAwesome action-icon" style="right:13px;top:-1px;"
                               data-ng-click="$root.convFolders.renameFolder(folder)">&#xf044;</span>
                     <span class="fontAwesome action-icon"
@@ -411,7 +410,9 @@
 
             <button class="clear">
                 <span class="fontAwesome">&#xf0e4;</span>
-                &nbsp;{{userMenu.getUserQuota()}} / {{userMenu.getTotalQuota()}} ({{userMenu.getQuotaPercentage()}})
+                <span style=" font-size: 85%;">
+                    &nbsp;{{userMenu.getUserQuota()}} / {{userMenu.getTotalQuota()}} ({{userMenu.getQuotaPercentage()}})
+                </span>
             </button>
             <button class="clear" data-ng-mousedown="userMenu.openAccountSettings()">
                 <span class="fontAwesome">&#xf007;</span>
