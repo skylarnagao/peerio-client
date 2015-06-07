@@ -33,7 +33,6 @@
     <script type="application/javascript" src="js/lib/crypto/scrypt.js"></script>
     <!-- miniLock -->
     <script type="application/javascript" src="js/miniLock/miniLock.js"></script>
-    <script type="application/javascript" src="js/miniLock/phrase.js"></script>
     <!-- Peerio -->
     <script type="application/javascript" src="js/peerio/peerio.js"></script>
     <script type="application/javascript" src="js/peerio/config.js"></script>
@@ -47,6 +46,7 @@
     <script type="application/javascript" src="js/peerio/notification.js"></script>
     <script type="application/javascript" src="js/peerio/ui.js"></script>
     <script type="application/javascript" src="js/peerio/user.js"></script>
+    <script type="application/javascript" src="js/peerio/phrase/phrase_generator.js"></script>
     <!-- Peerio UI -->
     <script type="application/javascript" src="js/peerio/ui/UI.accountSettings.js"></script>
     <script type="application/javascript" src="js/peerio/ui/UI.addContact.js"></script>
@@ -176,12 +176,24 @@
                 <div class="signupGeneratedPassphraseView">
                     <h2 data-l10n-id="signupYourGeneratedPassphrase"></h2>
                     <span class="signupGeneratedPassphrase" data-ng-bind="signup.passphrase"></span>
-                    <button type="button" class="clear signupGeneratedPassphraseRefresh"
+                    <button type="button" style="vertical-align: top;" class="clear signupGeneratedPassphraseRefresh"
                             data-ng-click="signup.generatedPassphraseRefresh()">
                         <span class="fontAwesome">&#xf021;</span>
                         &nbsp;
                         <span data-l10n-id="signupPassphraseRefresh"></span>
                     </button>
+                    <div class="passphrase-option">
+                        <span data-l10n-id="passphraseLanguage"></span><br>
+                        <select data-ng-model="signup.selectedLocale"
+                                data-ng-options="option.value as option.name for option in signup.languageOptions"
+                                data-ng-change="signup.generatedPassphraseRefresh()"></select>
+                    </div>
+                    <div class="passphrase-option">
+                        <span data-l10n-id="passphraseLength"></span><br>
+                        <select data-ng-model="signup.wordCount"
+                                data-ng-options="option.value as option.name for option in signup.wordCountOptions"
+                                data-ng-change="signup.generatedPassphraseRefresh()"></select>
+                    </div>
                 </div>
                 <button type="submit"
                         data-l10n-id="createMyAccount"

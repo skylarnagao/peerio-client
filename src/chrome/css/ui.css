@@ -2675,3 +2675,9 @@ ul.filesSidebarTypeFilters li,ul.messagesSidebarTypeFilters li {
 	text-align: center;
 	font-weight: bold;
 }
+.passphrase-option{
+	display: inline-block;
+	background-color: #F0F0F0;
+	padding: 10px;
+	margin: 10px;
+}
