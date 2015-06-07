@@ -5,7 +5,7 @@ Peerio.UI.controller('signupForms', function ($scope) {
   window.setTimeout(function(){
     $scope.signup.selectedLocale = Peerio.user.settings.localeCode;
     $scope.$apply();
-  }, 2000);
+  }, 3000);
 
   $scope.signup.languageOptions = Peerio.PhraseGenerator.languages;
   $scope.signup.wordCount = 6;

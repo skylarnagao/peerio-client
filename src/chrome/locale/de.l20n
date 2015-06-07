@@ -320,5 +320,5 @@
     <removeFileFolderDialogText2 "Dateien in diesem Ordner werden in \"Alle Dateien\" verschoben.">
     <folder "Ordner">
     <moveToFolder "In Ordner verschieben">
-    <passphraseLength "Passphrase length">
-    <passphraseLanguage "Passphrase language">
+    <passphraseLength "Passphrasenlänge">
+    <passphraseLanguage "Passphrasensprache">
