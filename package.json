@@ -15,6 +15,10 @@
     "gulp-rename": "latest",
     "gulp-replace": "latest",
     "gulp-shell": "latest",
+    "gulp-bump": "latest",
+    "gulp-zip": "latest",
+    "gulp-ignore": "latest",
+    "minimist": "latest",
     "run-sequence": "latest",
     "node-webkit-builder": "latest",
     "lodash": "latest"
