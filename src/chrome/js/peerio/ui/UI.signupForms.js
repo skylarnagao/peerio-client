@@ -79,12 +79,17 @@ Peerio.UI.controller('signupForms', function ($scope) {
     swal({
       title: document.l10n.getEntitySync('signupPassphraseConfirm').value,
       text: document.l10n.getEntitySync('signupPassphraseConfirmText').value,
-      type: 'warning',
+      type: 'input',
       showCancelButton: true,
       cancelButtonText: document.l10n.getEntitySync('cancel').value,
       confirmButtonText: document.l10n.getEntitySync('continue').value,
-      closeOnConfirm: true
-    }, function () {
+      closeOnConfirm: false,
+      inputType: 'text'
+    }, function (input) {
+      if(input !== $scope.signup.passphrase)  {
+        swal('error',document.l10n.getEntitySync('passphraseConfirmFailed').value, 'error');
+        return false;
+      }
       $('button.yourPassphraseContinue').attr('disabled', true)
       Peerio.user.setKeyPair(
         $scope.signup.passphrase,
@@ -93,7 +98,9 @@ Peerio.UI.controller('signupForms', function ($scope) {
           $scope.signup.registerAccount()
         }
       )
-    })
+      swal.close();
+    });
+
   }
   $scope.signup.registerAccount = function () {
     $scope.signup.address = Peerio.util.parseAddress($scope.signup.emailOrPhone)

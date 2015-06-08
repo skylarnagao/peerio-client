@@ -2651,11 +2651,16 @@ td.importContactsSelectContactsCheckboxCell {
 	border-radius: 0;
 }
 
+.sweet-alert button.cancel {
+	background-color: #9B9898;
+}
+
 ul.filesSidebarTypeFilters li,ul.messagesSidebarTypeFilters li {
 	margin:0;
 	line-height: 22px;
 	transform-origin: left;
 	-webkit-transform-origin: left;
+	transition: transform .1s linear;
 }
 .login-locale-title{
 	margin-top: 50px;
@@ -2680,11 +2685,18 @@ ul.filesSidebarTypeFilters li,ul.messagesSidebarTypeFilters li {
 }
 .passphrase-option{
 	display: inline-block;
-	background-color: #F0F0F0;
 	padding: 10px;
 	margin: 10px;
 }
 .folder-counter{
 	margin-left: 2px;
 	font-size: 80%;
+	background-color: #85C573;
+	color: #FFF;
+	font-weight: bold;
+	padding: 0px 4px;
+	border-radius: 2px;
+}
+.filter-name{
+	color: #fff;
 }

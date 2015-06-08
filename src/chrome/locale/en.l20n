@@ -320,6 +320,8 @@
     <removeFileFolderDialogText2 "Files in this folder will be moved to 'all files'.">
     <folder "Folder">
     <moveToFolder "Move to folder">
-    <passphraseLength "Passphrase length">
-    <passphraseLanguage "Passphrase language">
+    <length "length">
+    <words "words">
     <unsorted "Unsorted">
+    <typePassphraseToConfirm "Please enter this passphrase as it appears above to accept and continue">
+    <passphraseConfirmFailed "Your passphrase was entered incorrectly. If you have not stored your passphrase somewhere safe, please go back and do so before continuing.">

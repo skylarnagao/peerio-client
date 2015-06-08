@@ -60,7 +60,7 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
     $scope.messagesSection.attachFileIDs = []
     $scope.messagesSection.fetchedConversations = []
     $scope.messagesSection.searchFilter = ''
-    $scope.messagesSection.typeFilter = 'all'
+    $scope.messagesSection.typeFilter = 'inbox'
     $scope.messagesSection.checkedIDs = []
     $scope.messagesSection.checkedReceipts = {}
     $scope.messagesSection.messageNewCount = 0
@@ -192,11 +192,13 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
         }, 500);
       };
 
-      f.addToFolderBulk = function (ids) {
-        if (ids.length === 0) {
+      f.addToFolderBulk = function (ids, conversation) {
+        if (ids.length === 0 && !conversation) {
           swal(l('moveConversationsDialogTitle'), l('conversationsNotSelectedError'), "info");
           return;
         }
+        if (!ids.length) ids = [conversation.id];
+
         var html = "<strong>" + ids.length + "</strong> " + l('moveConversationsDialogText') + "<br/>"
           + "<select id='groupFolderSelect'><option value='' selected>" + l('inbox') + "</option>";
 
@@ -224,6 +226,7 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
               ids.forEach(function (id) {
                 Peerio.user.conversations[id].folderID = folderId;
               });
+              $scope.$root.$broadcast('messagesSectionClearSelection');
               $scope.$root.$apply();
               swal({title: l('success'), text: ids.length + " " + l('conversationsMoved'), type: "success"});
             }
@@ -268,6 +271,10 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
         return 'Inbox';
       };
     }
+    $scope.$root.$on('messagesSectionClearSelection', function(){
+      $scope.messagesSection.checkedIDs = [];
+      $('div.messageListItem .blueCheckbox:checked').prop('checked', false);
+    });
     $scope.$on('messagesSectionPopulate', function (event, callback) {
       $scope.$root.convFolders.loadFolders();
       $scope.messagesSection.listIsLoading = true
@@ -590,12 +597,14 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
       $scope.$root.convFolders.folders.forEach(function (folder) {
         folder.newMessageCount = 0;
       });
+      $scope.$root.convFolders.inboxCounter = 0;
       for (var id in Peerio.user.conversations) {
         if (!Peerio.user.conversations.hasOwnProperty(id)) continue;
         var c = Peerio.user.conversations[id];
-        if (c.folderID && c.original && c.original.isModified) {
-          $scope.$root.convFolders.foldersMap[c.folderID].newMessageCount++;
-        }
+        if (c.folderID) {
+          if (c.original && c.original.isModified)
+            $scope.$root.convFolders.foldersMap[c.folderID].newMessageCount++;
+        } else if(c.original && c.original.isModified) $scope.$root.convFolders.inboxCounter++;
       }
       //
       return $scope.messagesSection.messagesNewCount
@@ -946,9 +955,10 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
       })
     }
     $scope.messagesSection.removeConversations = function (ids) {
-      if (!ids.length) {
+      if (!ids.length && !$scope.messagesSection.conversation) {
         return false
       }
+      if (!ids.length) ids = [$scope.messagesSection.conversation.id];
       var removeConversations = function (ids) {
         Peerio.storage.db.get('conversations', function (err, conversations) {
           Peerio.storage.db.remove(conversations, function () {
@@ -975,30 +985,21 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
           }
         })
       }
-      var isDraft = false
-      ids.forEach(function (id) {
-        if (Peerio.user.conversations[id].original.isDraft) {
-          isDraft = true
-        }
-      })
-      if (isDraft) {
-        removeConversations(ids)
-      }
-      else {
-        swal({
-          title: document.l10n.getEntitySync('removeConversationsQuestion').value,
-          text: document.l10n.getEntitySync('removeConversationsText').value,
-          type: 'warning',
-          showCancelButton: true,
-          cancelButtonText: document.l10n.getEntitySync('cancel').value,
-          confirmButtonColor: '#e07a66',
-          confirmButtonText: document.l10n.getEntitySync('remove').value,
-          closeOnConfirm: true
-        }, function () {
-          removeConversations(ids)
-        })
-      }
-    }
+      swal({
+        title: document.l10n.getEntitySync('removeConversationsQuestion').value,
+        text: document.l10n.getEntitySync('removeConversationsText').value,
+        type: 'warning',
+        showCancelButton: true,
+        cancelButtonText: document.l10n.getEntitySync('cancel').value,
+        confirmButtonColor: '#e07a66',
+        confirmButtonText: document.l10n.getEntitySync('remove').value,
+        closeOnConfirm: true
+      }, function () {
+        removeConversations(ids);
+        //  $scope.messagesSection.conversation = null;
+      });
+    };
+
     $scope.messagesSection.sentByMe = function (message) {
       if (
         (message.sender === Peerio.user.username) &&
@@ -1008,6 +1009,7 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
       }
       return false
     }
+
     $scope.messagesSection.isFailed = function (message) {
       if (message.sender === Peerio.user.username) {
         return false

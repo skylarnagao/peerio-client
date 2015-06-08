@@ -19,7 +19,7 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 	}
 	$scope.filesSection = {}
 	$scope.filesSection.searchFilter = ''
-	$scope.filesSection.typeFilter = ''
+	$scope.filesSection.typeFilter = 'unsorted'
 	$scope.filesSection.ownerFilter = /./
 	$scope.filesSection.checkedIDs = []
 
@@ -180,6 +180,7 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 						ids.forEach(function(id){
 							Peerio.user.files[id].folderID = folderId;
 						});
+						$scope.$root.$broadcast('filesSectionClearSelection');
 						$scope.$root.$apply();
 						swal({title: l('success'), text: ids.length +" " +l('filesMoved'), type: "success"});
 					}
@@ -244,6 +245,12 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 			}
 		})
 	})
+
+	$scope.$root.$on('filesSectionClearSelection', function(){
+		$scope.filesSection.checkedIDs = [];
+		$('.filesSectionTableCheckboxCell .blueCheckbox:checked').prop('checked', false);
+	});
+
 	$scope.$on('filesSectionSetSearchFilter', function(event, input) {
 		$scope.filesSection.searchFilter = input.toLowerCase()
 		$scope.$apply()
@@ -299,15 +306,23 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 	}
 	$scope.filesSection.checkTypeFilter = function(file) {
 		var type = file.type;
+		// all
 		if ($scope.filesSection.typeFilter === '') {
 			return true
 		}
+		// usorted
+		if ($scope.filesSection.typeFilter === 'unsorted' && !file.folderID) {
+			return true
+		}
+
+		// file type
 		if ($scope.filesSection.typeFilter === 'other') {
 			return !(new RegExp('^((image)|(video)|(pdf)|(word)|(excel)|(powerpoint))$')).test(type)
 		}
 		var typeTest = (new RegExp('^' + $scope.filesSection.typeFilter + '$')).test(type);
 		if(typeTest) return true;
 
+		// folder
 		return $scope.filesSection.typeFilter === file.folderID;
 
 	}
