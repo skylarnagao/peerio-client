@@ -1,13 +1,13 @@
 
     <title "Peerio">
     <signupHeader "Messages et fichiers. Simple et sécuritaire.">
-    <signupIntro "Peerio is a simple and secure way to send messages, share files, and store documents online. Everything gets encrypted before being sent to cloud, so nobody but you and those you share with ever have access to your data.<br /><br /><strong>Peerio is currently in Beta. <a href='https://peerio.com/pages/beta.html' target='_blank'>See what this means</a>.">
+    <signupIntro "Peerio est une interface de messagerie, d'échange de fichiers et de stockage de documents complètement sécurisée. Toute l'information est chiffrée avant d'être envoyée sur notre nuage afin de s'assurer que seuls les expéditeurs et les destinataires ont accès à l'information. <br /><br /><strong>Peerio est présentement en Beta. <a href='https://peerio.com/pages/beta.html' target='_blank'>Cliquez ici pour plus d'information</a>.">
     <username "Nom d'utilisateur">
     <passphrase "Phrase secrète">
-    <passphraseOrPIN "Passphrase or Passcode">
+    <passphraseOrPIN "Phrase ou code secret">
     <or "ou">
     <loginFailed "Échec de connexion">
-    <loginFailedText "If you are using a device passcode, please try using your account passphrase instead.">
+    <loginFailedText "Si votre code secret ne fonctionne pas, essayez votre phrase secrète.">
     <ok "OK">
     <submit "Envoyer">
     <signup "Abonnement">
@@ -18,12 +18,12 @@
     <addressNotAvailable "addresse invalide ou indisponible">
     <firstName "Prénom">
     <lastName "Nom">
-    <emailOrPhone "Email or mobile">
+    <emailOrPhone "Courriel ou # de tél">
     <yourPassphrase "Votre phrase secrète">
-    <infoAlertPassphrase "For stronger security, Peerio uses <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'>randomly generated passphrases</a>. <strong>Your passphrase is the master key to your account!</strong>  You are the sole owner of your passphrase, and your account's security depends on you remembering and protecting it. You will need it to login to your account on new devices. If you lose your passphrase, you will permanently lose access to your account. We recommend writing your passphrase down on paper, or storing it in a secure password manager.">
-    <infoAlertPassphraseNote "<strong>Don't worry</strong>, in a moment you will be able to set a shorter pass<i>code</i> for quick access on this device.">
-    <signupPassphraseConfirm "Use this passphrase?">
-    <signupPassphraseConfirmText "<strong>Remember</strong>, you are the sole owner of this passphrase. <a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>If you lose your passphrase</a>, we cannot reset or recover it and your account will be lost. If you have not stored your passphrase somewhere safe, please go back and do so before continuing.">
+    <infoAlertPassphrase "Pour garantir votre sécurité, Peerio utilise des <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'>phrases secrètes générées au hasard</a>. <strong>Votre phrase secrète est votre clé principale pour votre compte!</strong> Vous êtes l'unique propriétaire de cette phrase et la sécurité de votre compte requiert que vous vous en rappeliez. Vous allez devoir rentrer cette phrase pour tout nouveau téléphone ou ordinateur sur lequel vous installerez Peerio. <strong>Si vous perdez cette phrase, vous perdez l'accès à votre compte et à vos données pour toujours.</strong> Nous vous recommandons de la prendre en note et la garder dans un endroit privé ou de l'enregistrer dans un gestionnaire de mots de passe sécuritaire. ">
+    <infoAlertPassphraseNote "<strong>Soyez sans craintes</strong>, Peerio vous permet d'entrer un code d'accès pour chacun de vos ordinateurs, tablettes ou téléphones afin de vous éviter de rentrer votre phrase secrète à chaque fois que vous vous authentifiez.">
+    <signupPassphraseConfirm "Voulez-vous utiliser cette phrase secrète?">
+    <signupPassphraseConfirmText "<strong>N'oubliez pas</strong> que vous êtes la seule personne ayant accès à cette phrase secrète.<a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>Si vous la perdez</a>, vous allez perdre l'accès à votre compte pour toujours. Donc afin d'être certain que vous ne la perdiez, veuillez la rentrer une dernière fois avant de continuer. ">
     <signupYourGeneratedPassphrase "Votre phrase secrète générée:">
     <signupPassphraseRefresh "Changer phrase secrète">
     <error "Erreur">
@@ -184,12 +184,12 @@
     <addContactInfoText "Sending messages and sharing files with your friends begins by adding them as contacts. If your friend is not a Peerio user, we'll try to send an invite to their address. You can add a user by specifying their <strong>username</strong>, <strong>email</strong> or <strong>mobile number</strong>.">
     <addContactInfoAvatar "À propos de l'Avatar du contact">
     <addContactInfoAvatarText "Chaque utilisateur Peerio possède un avatar spécial qui l'identifie. Vous pouvez comparer ceci à une emprunte digitale virtuelle. Si l'avatar de votre contact change, ceci veut dire que ce dernier a changé sa phrase secrète ou que son compte est compromis.">
-    <usernameEmailOrPhone "Username, email, or mobile">
+    <usernameEmailOrPhone "Nom d'utilisateur, courriel, ou mobile">
     <addContactRequestSent "Demande de Contact Envoyée">
     <addContactRequestSentText "Nous avons envoyé une demande de contact à l'utilisateur.">
     <addContactInviteSent "Invitation Envoyée">
-    <addContactInviteSentText "We have sent an invitation to your contact.">
-    <addContactErrorText "We couldn't add this contact. Please double-check the information and try again.">
+    <addContactInviteSentText "Nous avons envoyé une invitation à votre contact.">
+    <addContactErrorText "Nous ne pouvons pas ajouter ce contact. S'il vous plaît, vérifiez les informations et réessayez.">
     <removeContact "Supprimer ce Contact">
     <removeContactQuestion "Supprimer ce Contact?">
     <removeContactText "Ceci va vous empêcher de communiquer avec ce contact sur Peerio. Êtes-vous sûr?">
@@ -205,9 +205,9 @@
     <twoFactorAuthSetupText "Utilisez votre application d'authentification favorite pour scanner le code à bar ci-dessous. <a href='https://peerio.zendesk.com/hc/en-us/articles/204018305' target='_blank'>Apprenez comment l'authentification à deux facteurs marche sur Peerio</a>.">
     <twoFactorAuthInfoHeading "Aidez-nous à protéger votre compte.">
     <twoFactorAuthInfoText "L'authentification à deux facteurs aide à garder votre compte sécurisé en imposant 2 méthodes complémentaires pour vous connecter. Entrez le code à six chiffres généré par votre appareil mobile.">
-    <twoFactorAuthConfirm "After scanning the QR code, enter the six-digit code generated by your mobile device to confirm setup.">
+    <twoFactorAuthConfirm "Après avoir scanné le code QR, entrez le code à six chiffres généré par votre appareil mobile pour confirmer la configuration.">
     <twoFactorAuthIncorrect "Code Invalide">
-    <twoFactorAuthIncorrectText "The code you have entered is incorrect. Please try again.">
+    <twoFactorAuthIncorrectText "Le code que vous avez entré est incorrect. S'il vous plaît, essayer à nouveau.">
     <twoFactorAuthConfirmedText "À partir de maintenant, vous devrez utiliser ces codes à partir de votre appareil mobile afin de vous connecter. Faites attention de ne pas perdre votre appareil.">
     <twoFactorAuthCannotDisable "Nous ne pouvons pas désactiver l'authentification à deux facteurs.">
     <twoFactorAuthDisabled "Authentification à Deux Facteurs désactivée.">
@@ -223,18 +223,18 @@
     <secondary "secondaire">
     <addresses "Adresses">
     <setPrimaryAddress "Activer comme Adresse Primaire">
-    <removeAddress "Enlever l'adresse">
+    <removeAddress "Supprimer l'adresse">
     <addNewAddress "Ajouter une nouvelle adresse">
     <couldNotConfirmAddress "Vérifiez votre code de confirmation.">
     <couldNotAddAddress "Nous ne pouvons pas ajouter cette adresse.">
-    <couldNotUpdateName "We couldn't update your name. Please try again.">
+    <couldNotUpdateName "Nous ne pouvons pas mettre à jour votre nom. S'il vous plaît, essayer à nouveau.">
     <confirmed "Confirmé!">
     <confirmedText "Vos préférences ont été mises à jour.">
     <confirmedLanguageText "Votre nouveau langage sera disponible après avoir reparti l'application Peerio.">
     <confirmedAddressText "Merci d'avoir pris le temps de confirmer votre nouvelle adresse Peerio.">
-    <confirmedNameText "Your name has been updated.">
+    <confirmedNameText "Votre nom a été mis à jour.">
     <email "Courriel">
-    <phoneNumber "Mobile Number">
+    <phoneNumber "Téléphone mobile">
     <deleteAccount "Effacer Votre Compte">
     <deleteAccountText "L'effacement de votre compte Peerio détruirera définitivement toutes vos informations, et vous ne serez pas en mesure de récupérer ce nom d'utilisateur dans le futur.">
     <deleteAccountConfirm "Confirmez L'effacement de Votre Compte">
@@ -254,12 +254,12 @@
     <useSounds "<strong>Émettre un son</strong> quand je reçois une nouvelle notification.">
     <sendReadReceipts "Envoyer une notification à mes contacts lorsque je lis leurs messages.">
     <readReceipts "Accusés de Réception">
-    <peerioPINForThisDevice "Device Passcode">
-    <peerioPINUpdated "Device Passcode Updated">
-    <peerioPINUpdatedText "Your passcode for this device has been successfully updated.">
-    <removeMyPeerioPIN "Remove Device Passcode">
-    <peerioPINRemoved "Device Passcode Removed">
-    <peerioPINRemovedText "Passcodes assigned to this device have been destroyed.">
+    <peerioPINForThisDevice "NIP d'appareil">
+    <peerioPINUpdated "NIP pour cet appareil mis à jour">
+    <peerioPINUpdatedText "Votre NIP pour cet appareil a été mis à jour avec succès.">
+    <removeMyPeerioPIN "Supprimer le NIP de cet appareil">
+    <peerioPINRemoved "NIP de cet appareil supprimé">
+    <peerioPINRemovedText "Les NIP attribués à cet appareil ont été détruits.">
     <ctrlEnter "Répondre">
     <pressEnterToSend "Appuyez sur Entrée pour envoyer">
     <updateAvailable "Mise à jour disponible!">
@@ -281,47 +281,47 @@
     <importContactsConfirm "Peerio pourra envoyer des invitations en votre nom">
     <importContactsConfirmText "If you proceed, Peerio may send invitations on your behalf to contacts that are not yet on Peerio. Are you sure you want to send invites to these contacts?">
     <importContactsError "Impossible d'inviter vos contacts">
-    <importContactsErrorText "Nous ne pouvions pas inviter vos contacts à ce moment. Veuillez vérifier vos informations et réessayer.">
+    <importContactsErrorText "Nous ne pouvons pas inviter vos contacts à ce moment. Veuillez vérifier vos informations et réessayer.">
     <importContactsSuccess "Invitations envoyées!">
     <importContactsSuccessText "Vos contacts seront invités en votre nom.">
     <importContactsSelectToInvite "Sélectionnez les contacts à ajouter/inviter">
     <importContactsSelectToInviteText "Si un contact est déjà sur Peerio, ils seront ajoutés à votre compte. Sinon, nous allons leur envoyer une invitation en votre nom.">
     <importContactsSelectAll "Selectionner tous le contacts">
     <importSelectedContacts "Importer les contacts sélectionnés">
-    <newFolderDialogTitle "Add New Folder">
-    <newFolderDialogText "What should this folder's name be?">
-    <folderInputEmptyError "Please enter a folder name.">
-    <folderInputPlaceholder "enter folder name">
-    <creatingFolderError "Oops! Something went wrong and your folder was not created. Please try again.">
-    <success "Success!">
-    <folderCreated "Your folder has been created!">
-    <renameFolderDialogTitle "Change Folder Name">
-    <renameFolderDialogText "What should this folder's new name be?">
-    <renamingFolderError "Oops! Something went wrong and your folder was not renamed. Please try again.">
-    <folderRenamed "This folder has been renamed.">
-    <removeFolderDialogTitle "Remove Folder">
-    <removeFolderDialogText1 "Are you sure you want to remove the folder">
-    <removeFolderDialogText2 "Conversations in this folder will be moved to 'inbox'.">
-    <removingFolderError "Oops! Something went wrong and your folder was not removed. Please try again.">
-    <folderRemoved "This folder has been removed.">
-    <conversationMoveError "Failed to move conversation into folder.">
-    <moveConversationsDialogTitle "Move Conversations To Folder">
-    <moveConversationsDialogText "conversations selected. Move to which folder?:">
-    <conversationsNotSelectedError "Please select at least one conversation to move.">
-    <movingConversationsError "Sorry, failed to move conversations to folder">
-    <conversationsMoved "conversations moved.">
-    <addNewFolder "Add new folder">
-    <moveFilesDialogTitle "Move Files To Folder">
-    <moveFilesDialogText "files selected. Move to which folder?">
-    <filesNotSelectedError "Please select files first">
-    <movingFilesError "Sorry, failed to move files to folder">
-    <filesMoved "files were moved.">
-    <fileMoveError "Failed to move file into folder.">
-    <removeFileFolderDialogText2 "Files in this folder will be moved to 'all files'.">
-    <folder "Folder">
-    <moveToFolder "Move to folder">
-    <length "length">
-    <words "words">
-    <unsorted "Unsorted">
-    <typePassphraseToConfirm "Please enter this passphrase as it appears above to accept and continue">
-    <passphraseConfirmFailed "Your passphrase was entered incorrectly. If you have not stored your passphrase somewhere safe, please go back and do so before continuing.">
+    <newFolderDialogTitle "Créer un dossier">
+    <newFolderDialogText "Quel est le nom à attribuer à ce dossier?">
+    <folderInputEmptyError "S'il vous plaît, entrer un nom de dossier.">
+    <folderInputPlaceholder "entrer un nom de dossier">
+    <creatingFolderError "Oups! Quelque chose a mal tourné et votre dossier n'a pas été créé. S'il vous plaît, essayer à nouveau.">
+    <success "Succès!">
+    <folderCreated "Votre dossier a été créé!">
+    <renameFolderDialogTitle "Modifier le nom du dossier">
+    <renameFolderDialogText "Quel est le nouveau nom à attribuer à ce dossier?">
+    <renamingFolderError "Oups! Quelque chose a mal tourné et votre dossier n'a pas été renommé. S'il vous plaît, essayer à nouveau.">
+    <folderRenamed "Ce dossier a été renommé.">
+    <removeFolderDialogTitle "Supprimer le dossier">
+    <removeFolderDialogText1 "Etes-vous sûr de vouloir supprimer le dossier">
+    <removeFolderDialogText2 "Les conversations dans ce dossier seront déplacées vers «Boîte de réception».">
+    <removingFolderError "Oups! Quelque chose a mal tourné et votre dossier n'a pas été supprimé. S'il vous plaît, essayer à nouveau.">
+    <folderRemoved "Ce dossier a été supprimé.">
+    <conversationMoveError "Impossible de déplacer la conversation dans le dossier.">
+    <moveConversationsDialogTitle "Déplacer les conversations vers un dossier">
+    <moveConversationsDialogText "conversations sélectionnés. Déplacer vers quel dossier ? : ">
+    <conversationsNotSelectedError "S'il vous plaît, sélectionner au moins une conversation à déplacer.">
+    <movingConversationsError "Désolé, impossible de déplacer ces conversations dans le dossier">
+    <conversationsMoved "conversations déplacées.">
+    <addNewFolder "Créer un dossier">
+    <moveFilesDialogTitle "Déplacer des fichiers vers un dossier">
+    <moveFilesDialogText "fichiers sélectionnés. Déplacer vers quel dossier?">
+    <filesNotSelectedError "S'il vous plaît, sélectionner les fichiers d'abord">
+    <movingFilesError "Désolé, impossible de déplacer les fichiers vers le dossier">
+    <filesMoved "fichiers ont été déplacés.">
+    <fileMoveError "Impossible de déplacer le fichier dans le dossier.">
+    <removeFileFolderDialogText2 "Les fichiers de ce dossier seront déplacés vers «Tous les fichiers».">
+    <folder "Dossier">
+    <moveToFolder "Déplacer vers le dossier">
+    <length "longueur">
+    <words "mots">
+    <unsorted "Non trié">
+    <typePassphraseToConfirm "S’il vous plaît, entrez cette phrase de passe telle qu'elle apparaît ci-dessus pour accepter et continuer">
+    <passphraseConfirmFailed "Votre phrase de passe a été entrée incorrectement. S'il vous plaît, stocker votre phrase de passe dans un endroit sûr avant de poursuivre.">
