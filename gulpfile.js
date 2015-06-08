@@ -116,7 +116,7 @@ gulp.task('bump-config', function(callback) {
 		version = JSON.parse(fs.readFileSync('src/chrome/package.json')).version;
 
 	return gulp.src('src/chrome/js/peerio/config.js')
-		.pipe(replace(/version: \'([0-9]|\.)+\',/gi, 'version: ' + version + ','))
+		.pipe(replace(/version: \'([0-9]|\.)+\',/gi, 'version: \'' + version + '\','))
 		.pipe(replace(/buildID: ([0-9]+),/gi, 'buildID: ' + buildNumber + ','))
 		.pipe(gulp.dest('src/chrome/js/peerio/'));
 })
@@ -195,7 +195,7 @@ gulp.task('build', function(callback) {
 		winIco: 'src/chrome/img/icon256.ico'
 	});
 
-  	runSequence('clean-build', function() {
+  	runSequence('update-dependendencies', 'clean-build', function() {
   		nw.build()
   			.then(function() {
 	  			runSequence('build-mac', 'build-chrome', callback)
@@ -205,7 +205,6 @@ gulp.task('build', function(callback) {
 				callback();
 			});
   	})
-
 });
 
 /**
