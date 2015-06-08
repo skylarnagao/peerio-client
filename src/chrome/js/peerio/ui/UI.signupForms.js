@@ -84,7 +84,7 @@ Peerio.UI.controller('signupForms', function ($scope) {
       cancelButtonText: document.l10n.getEntitySync('cancel').value,
       confirmButtonText: document.l10n.getEntitySync('continue').value,
       closeOnConfirm: false,
-      inputType: 'password'
+      inputType: 'text'
     }, function (input) {
       if(input !== $scope.signup.passphrase)  {
         swal('error',document.l10n.getEntitySync('passphraseConfirmFailed').value, 'error');
