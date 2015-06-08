@@ -76,22 +76,72 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
             console.error(data.error);
             return;
           }
-          f.foldersMap = {};
-          data.folders.forEach(function (folder) {
-            f.foldersMap[folder.id] = folder;
-          });
-          $scope.$root.$apply(function () {
-            f.folders = data.folders.sort(function (a, b) {
-              if (a.name > b.name) {
-                return 1;
-              }
-              if (a.name < b.name) {
-                return -1;
-              }
-              return 0;
+          Peerio.crypto.decryptFolders(data.folders, function (folders) {
+            f.foldersMap = {};
+            folders.forEach(function (folder) {
+              f.foldersMap[folder.id] = folder;
+            });
+            $scope.$root.$apply(function () {
+              f.folders = folders.sort(function (a, b) {
+                if (a.name > b.name) {
+                  return 1;
+                }
+                if (a.name < b.name) {
+                  return -1;
+                }
+                return 0;
+              });
             });
           });
         });
+      };
+
+      window.convertFolders = function () {
+        console.log("FOLDER NAMES ENCRYPTION STARTED");
+        console.log("requesting conversation folders");
+        Peerio.network.getConversationFolders(function (data) {
+          if (data.error) {
+            console.log(data.error);
+            console.log('failed to fetch conversation folders');
+            return;
+          }
+          console.log("received " + data.folders.length + " folders");
+          console.log("encrypting...");
+          data.folders.forEach(function(folder){
+            Peerio.crypto.encryptUserString(folder.name, function (encryptedName) {
+              Peerio.network.renameConversationFolder(folder.id, encryptedName, function (response) {
+                if (response.error) {
+                  console.log(response);
+                } else {
+                  console.log(folder.name + " encrypted");
+                }
+              });
+            });
+          });
+        });
+
+        console.log("requesting file folders");
+        Peerio.network.getFileFolders(function (data) {
+          if (data.error) {
+            console.log(data.error);
+            console.log('failed to fetch file folders');
+            return;
+          }
+          console.log("received " + data.folders.length + " folders");
+          console.log("encrypting...");
+          data.folders.forEach(function(folder){
+            Peerio.crypto.encryptUserString(folder.name, function (encryptedName) {
+              Peerio.network.renameFileFolder(folder.id, encryptedName, function (response) {
+                if (response.error) {
+                  console.log(response);
+                } else {
+                  console.log(folder.name + " encrypted");
+                }
+              });
+            });
+          });
+        });
+
       };
 
       f.addFolder = function () {
@@ -109,15 +159,21 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
             swal.showInputError(l("folderInputEmptyError"));
             return false
           }
-          Peerio.network.createConversationFolder(inputValue, function (response) {
-            if (response.error) {
-              console.log(response);
-              swal(l("error"), l('creatingFolderError'), "error");
-            } else {
-              f.loadFolders();
-              swal({title: l('success'), text: l('folderCreated'), type: "success"});
-            }
-          })
+          if (f.folders.filter(function (val) {return val === inputValue}).length > 0) {
+            swal.showInputError(l("folderExistsError"));
+            return false
+          }
+          Peerio.crypto.encryptUserString(inputValue, function (encryptedName) {
+            Peerio.network.createConversationFolder(encryptedName, function (response) {
+              if (response.error) {
+                console.log(response);
+                swal(l("error"), l('creatingFolderError'), "error");
+              } else {
+                f.loadFolders();
+                swal({title: l('success'), text: l('folderCreated'), type: "success"});
+              }
+            })
+          });
         });
       };
 
@@ -137,15 +193,21 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
             swal.showInputError(l("folderInputEmptyError"));
             return false
           }
-          Peerio.network.renameConversationFolder(folder.id, inputValue, function (response) {
-            if (response.error) {
-              console.log(response);
-              swal(l('error'), l('renamingFolderError'), "error");
-            } else {
-              f.loadFolders();
-              swal({title: l('success'), text: l('folderRenamed'), type: "success"});
-            }
-          })
+          if (f.folders.filter(function (val) {return val === inputValue}).length > 0) {
+            swal.showInputError(l("folderExistsError"));
+            return false
+          }
+          Peerio.crypto.encryptUserString(inputValue, function (encryptedName) {
+            Peerio.network.renameConversationFolder(folder.id, encryptedName, function (response) {
+              if (response.error) {
+                console.log(response);
+                swal(l('error'), l('renamingFolderError'), "error");
+              } else {
+                f.loadFolders();
+                swal({title: l('success'), text: l('folderRenamed'), type: "success"});
+              }
+            });
+          });
         });
       };
 
@@ -271,7 +333,7 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
         return 'Inbox';
       };
     }
-    $scope.$root.$on('messagesSectionClearSelection', function(){
+    $scope.$root.$on('messagesSectionClearSelection', function () {
       $scope.messagesSection.checkedIDs = [];
       $('div.messageListItem .blueCheckbox:checked').prop('checked', false);
     });
@@ -604,7 +666,7 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
         if (c.folderID) {
           if (c.original && c.original.isModified)
             $scope.$root.convFolders.foldersMap[c.folderID].newMessageCount++;
-        } else if(c.original && c.original.isModified) $scope.$root.convFolders.inboxCounter++;
+        } else if (c.original && c.original.isModified) $scope.$root.convFolders.inboxCounter++;
       }
       //
       return $scope.messagesSection.messagesNewCount

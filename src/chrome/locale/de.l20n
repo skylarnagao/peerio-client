@@ -56,7 +56,7 @@
     <accountRateLimited "Bitte ein paar Minuten warten">
     <accountRateLimitedText "Dieses Benutzerkonto ist vorübergehend nicht verfügbar, da von ihm zu viele Serveranfragen ausgingen. Bitte warten Sie ein paar Minuten und versuchen Sie es erneut.">
     <accountBlacklisted "Benutzerkonto nicht verfügbar">
-    <accountBlacklistedText "Dieses Benutzerkonto ist vorübergehend gesperrt. Um den Zugriff wiederzuerlangen, kontaktieren Sie bitte die Peerio-Kundenbetreuung über support@peerio.com.">
+    <accountBlacklistedText "Dieses Benutzerkonto ist vorübergehend gesperrt. Um den Zugriff wiederzuerlangen, kontaktieren Sie bitte die Peerio-Kundenbetreuung unter support@peerio.com.">
     <searchMessagesFilesAndContacts "Nachrichten, Dateien und Kontakte suchen">
     <messages "Nachrichten">
     <files "Dateien">
@@ -319,6 +319,7 @@
     <fileMoveError "Verschieben der Datei in Ordner fehlgeschlagen.">
     <removeFileFolderDialogText2 "Dateien in diesem Ordner werden in \"Alle Dateien\" verschoben.">
     <folder "Ordner">
+    <folderExistsError "Folder with this name already exists">
     <moveToFolder "In Ordner verschieben">
     <length "Länge">
     <words "Wörter">

@@ -56,7 +56,7 @@
     <accountRateLimited "Please Wait A Few Minutes">
     <accountRateLimitedText "Questo account è temporaneamente non disponibile perchè ha inviato troppe richieste al server. Per favore attendi qualche minuto e riprova.">
     <accountBlacklisted "Account Non Disponibile">
-    <accountBlacklistedText "This account is temporarily suspended. In order to regain access, please contact Peerio support by at support@peerio.com.">
+    <accountBlacklistedText "This account is temporarily suspended. In order to regain access, please contact Peerio support by support@peerio.com.">
     <searchMessagesFilesAndContacts "Search messages, files, and contacts">
     <messages "Messaggi">
     <files "Files">
@@ -319,6 +319,7 @@
     <fileMoveError "Failed to move file into folder.">
     <removeFileFolderDialogText2 "Files in this folder will be moved to 'all files'.">
     <folder "Folder">
+    <folderExistsError "Folder with this name already exists">
     <moveToFolder "Move to folder">
     <length "length">
     <words "words">
