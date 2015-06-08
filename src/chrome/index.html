@@ -33,7 +33,6 @@
     <script type="application/javascript" src="js/lib/crypto/scrypt.js"></script>
     <!-- miniLock -->
     <script type="application/javascript" src="js/miniLock/miniLock.js"></script>
-    <script type="application/javascript" src="js/miniLock/phrase.js"></script>
     <!-- Peerio -->
     <script type="application/javascript" src="js/peerio/peerio.js"></script>
     <script type="application/javascript" src="js/peerio/config.js"></script>
@@ -47,6 +46,7 @@
     <script type="application/javascript" src="js/peerio/notification.js"></script>
     <script type="application/javascript" src="js/peerio/ui.js"></script>
     <script type="application/javascript" src="js/peerio/user.js"></script>
+    <script type="application/javascript" src="js/peerio/phrase/phrase_generator.js"></script>
     <!-- Peerio UI -->
     <script type="application/javascript" src="js/peerio/ui/UI.accountSettings.js"></script>
     <script type="application/javascript" src="js/peerio/ui/UI.addContact.js"></script>
@@ -176,12 +176,24 @@
                 <div class="signupGeneratedPassphraseView">
                     <h2 data-l10n-id="signupYourGeneratedPassphrase"></h2>
                     <span class="signupGeneratedPassphrase" data-ng-bind="signup.passphrase"></span>
-                    <button type="button" class="clear signupGeneratedPassphraseRefresh"
+                    <button type="button" style="vertical-align: top;" class="clear signupGeneratedPassphraseRefresh"
                             data-ng-click="signup.generatedPassphraseRefresh()">
                         <span class="fontAwesome">&#xf021;</span>
                         &nbsp;
                         <span data-l10n-id="signupPassphraseRefresh"></span>
                     </button>
+                    <div class="passphrase-option">
+                        <span data-l10n-id="passphraseLanguage"></span><br>
+                        <select data-ng-model="signup.selectedLocale"
+                                data-ng-options="option.value as option.name for option in signup.languageOptions"
+                                data-ng-change="signup.generatedPassphraseRefresh()"></select>
+                    </div>
+                    <div class="passphrase-option">
+                        <span data-l10n-id="passphraseLength"></span><br>
+                        <select data-ng-model="signup.wordCount"
+                                data-ng-options="option.value as option.name for option in signup.wordCountOptions"
+                                data-ng-change="signup.generatedPassphraseRefresh()"></select>
+                    </div>
                 </div>
                 <button type="submit"
                         data-l10n-id="createMyAccount"
@@ -270,12 +282,9 @@
                     data-l10n-id="newMessage"
                     data-ng-mousedown="messagesSidebar.newMessage()"></button>
 
-            <h2 peerio-drag-enter="$root.convFolders.handleDragEnter()"
-                peerio-drag-leave="$root.convFolders.handleDragLeave()"
-                peerio-drop="$root.convFolders.handleDrop()"
-                data-ng-mousedown="messagesSection.setTypeFilter('inbox', $event)">
-                <span style="pointer-events: none;" data-l10n-id="inbox"></span>&nbsp;
-                <span style="pointer-events: none;" class="green"
+            <h2>
+                <span data-l10n-id="inbox"></span>&nbsp;
+                <span class="green"
                       data-ng-bind="messagesSection.getMessagesNewCount()"
                       data-ng-show="!!messagesSection.getMessagesNewCount()"></span>
             </h2>
@@ -283,8 +292,10 @@
             <ul class="messagesSidebarTypeFilters">
                 <li data-l10n-id="allMessages" class="active"
                     data-ng-mousedown="messagesSection.setTypeFilter('all', $event)"></li>
-                <li data-l10n-id="newMessages" data-ng-mousedown="messagesSection.setTypeFilter('new', $event)"></li>
-                <!-- <li data-l10n-id="drafts" data-ng-mousedown="messagesSection.setTypeFilter('drafts', $event)"></li> -->
+                <li data-l10n-id="unsorted" peerio-drag-enter="$root.convFolders.handleDragEnter()"
+                    peerio-drag-leave="$root.convFolders.handleDragLeave()"
+                    peerio-drop="$root.convFolders.handleDrop()"
+                    data-ng-mousedown="messagesSection.setTypeFilter('inbox', $event)"></li>
             </ul>
 
             <a href="#" class="add-folder-btn" data-ng-click="$root.convFolders.addFolder()"
@@ -297,7 +308,7 @@
                     peerio-drop="$root.convFolders.handleDrop(folder)"
                     data-ng-repeat="folder in $root.convFolders.folders"
                     data-ng-mousedown="messagesSection.setTypeFilter(folder.id, $event)">
-                    <span class="blue fontAwesome">&#xf07c;</span>{{folder.name}}
+                    <span class="blue fontAwesome">&#xf07c;</span>{{folder.name}} <span class="green folder-counter">{{folder.newMessageCount||''}}</span>
 						<span class="fontAwesome action-icon" style="right:13px;top:-1px;"
                               data-ng-click="$root.convFolders.renameFolder(folder)">&#xf044;</span>
                     <span class="fontAwesome action-icon"
@@ -399,7 +410,9 @@
 
             <button class="clear">
                 <span class="fontAwesome">&#xf0e4;</span>
-                &nbsp;{{userMenu.getUserQuota()}} / {{userMenu.getTotalQuota()}} ({{userMenu.getQuotaPercentage()}})
+                <span style=" font-size: 85%;">
+                    &nbsp;{{userMenu.getUserQuota()}} / {{userMenu.getTotalQuota()}} ({{userMenu.getQuotaPercentage()}})
+                </span>
             </button>
             <button class="clear" data-ng-mousedown="userMenu.openAccountSettings()">
                 <span class="fontAwesome">&#xf007;</span>

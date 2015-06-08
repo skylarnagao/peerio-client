@@ -20,7 +20,7 @@
     <lastName "Nom">
     <emailOrPhone "Email or mobile">
     <yourPassphrase "Votre phrase secrète">
-    <infoAlertPassphrase "For stronger security, Peerio uses <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'>randomly generated pass<i>phrases</i></a>. <strong>Your passphrase is the master key to your account!</strong>  You are the sole owner of your passphrase, and your account's security depends on you remembering and protecting it. You will need it to login to your account on new devices. If you lose your passphrase, you will permanently lose access to your account. We recommend writing your passphrase down on paper, or storing it in a secure password manager.">
+    <infoAlertPassphrase "For stronger security, Peerio uses <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'>randomly generated passphrases</a>. <strong>Your passphrase is the master key to your account!</strong>  You are the sole owner of your passphrase, and your account's security depends on you remembering and protecting it. You will need it to login to your account on new devices. If you lose your passphrase, you will permanently lose access to your account. We recommend writing your passphrase down on paper, or storing it in a secure password manager.">
     <infoAlertPassphraseNote "<strong>Don't worry</strong>, in a moment you will be able to set a shorter pass<i>code</i> for quick access on this device.">
     <signupPassphraseConfirm "Use this passphrase?">
     <signupPassphraseConfirmText "<strong>Remember</strong>, you are the sole owner of this passphrase. <a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>If you lose your passphrase</a>, we cannot reset or recover it and your account will be lost. If you have not stored your passphrase somewhere safe, please go back and do so before continuing.">
@@ -57,7 +57,7 @@
     <accountRateLimitedText "Ce compte est temporairement indisponible, car il a fait trop de demandes de serveur. Veuillez attendre quelques minutes et puis essayer de nouveau.">
     <accountBlacklisted "Compte Indisponible">
     <accountBlacklistedText "This account is temporarily suspended. In order to regain access, please contact Peerio support by at support@peerio.com.">
-    <searchMessagesFilesAndContacts "Recherchez vos données et contacts">
+    <searchMessagesFilesAndContacts "Search messages, files, and contacts">
     <messages "Messages">
     <files "Fichiers">
     <contacts "Contacts">
@@ -111,16 +111,16 @@
     <messageCouldNotBeSentTo "Échec lors de l'envoi de votre message pour les contacts suivants:">
     <messageDecryptedError "Votre contact a essayé de vous envoyer un message, mais il ne peut pas être reçu correctement par votre compte.">
     <removeConversationsQuestion "Supprimer les conversations?">
-    <removeConversationsText "Attention: Vous ne recevrez aucun message ou fichier futurs envoyés dans cette conversation.">
+    <removeConversationsText "Warning: You will no longer receive any messages or files shared within the conversation.">
     <newMessageRecipientsError "Message n'a pas de destinataires">
     <newMessageRecipientsErrorText "Please enter at least one recipient to send your message.">
     <typeYourReply "Tapez votre réponse...">
     <noParticipantsLeft "Il n'y a aucun participant restant dans cette conversation.">
-    <allDocuments "Tous les Documents">
+    <allDocuments "All Files">
     <photos "Photos">
     <videos "Vidéos">
     <pdfDocuments "Documents PDF">
-    <wordDocuments "Documents Textes">
+    <wordDocuments "Text Documents">
     <spreadsheets "Chiffriers">
     <presentations "Présentations">
     <other "Autres">
@@ -134,8 +134,8 @@
     <removeFilesText "Les fichiers seront supprimés de votre compte, mais resteront toujours visibles aux utilisateurs avec qui vous les avez partagés.">
     <destroyFilesQuestion "Détruire les fichiers?">
     <destroyFilesText "Les fichiers seront supprimés de votre compte ainsi que partout où ils ont été partagés.">
-    <destroyFilesOwnerError "Can’t destroy files you don’t own">
-    <destroyFilesOwnerErrorText "Destroying files removes them from every account they have been shared with. Only a file's owner can do that. Try deleting the file instead.">
+    <destroyFilesOwnerError "Cannot destroy files you do not own">
+    <destroyFilesOwnerErrorText "Destroying files removes them from every account they have been shared with. Only a file's owner can do that. Please try deleting the file instead.">
     <fileUploadError "Erreur de téléchargement">
     <fileUploadErrorText "Veuillez vérifier vos paramètres de téléchargement de fichiers et essayer à nouveau.">
     <dragAndDropUploadTitle "Drop to upload to Peerio.">
@@ -205,7 +205,7 @@
     <twoFactorAuthSetupText "Utilisez votre application d'authentification favorite pour scanner le code à bar ci-dessous. <a href='https://peerio.zendesk.com/hc/en-us/articles/204018305' target='_blank'>Apprenez comment l'authentification à deux facteurs marche sur Peerio</a>.">
     <twoFactorAuthInfoHeading "Aidez-nous à protéger votre compte.">
     <twoFactorAuthInfoText "L'authentification à deux facteurs aide à garder votre compte sécurisé en imposant 2 méthodes complémentaires pour vous connecter. Entrez le code à six chiffres généré par votre appareil mobile.">
-    <twoFactorAuthConfirm "Après avoir scanné le code QR, entrez le code de six chiffres généré par votre appareil mobile pour confirmer l'intégration.">
+    <twoFactorAuthConfirm "After scanning the QR code, enter the six-digit code generated by your mobile device to confirm setup.">
     <twoFactorAuthIncorrect "Code Invalide">
     <twoFactorAuthIncorrectText "The code you have entered is incorrect. Please try again.">
     <twoFactorAuthConfirmedText "À partir de maintenant, vous devrez utiliser ces codes à partir de votre appareil mobile afin de vous connecter. Faites attention de ne pas perdre votre appareil.">
@@ -245,7 +245,7 @@
     <retypeNewPassphrase "Réinscrire votre Nouvelle Phrase Secrète">
     <enableTwoFactorAuth "Activer l'Authentification à Deux Facteurs">
     <disableTwoFactorAuth "Désactiver l'Authentification à Deux Facteurs">
-    <accountSettingsTwoFactorAuthText "Peerio peut se pairer avec votre appareil intelligent afin d'ajouter un niveau de sécurité plus élevé.">
+    <accountSettingsTwoFactorAuthText "Peerio can pair with your mobile device to provide additional account security.">
     <twoFactorAuthLearnMore "plus d'infos sur l'authentification à deux facteurs">
     <language "Langue">
     <notifications "Notifications">
@@ -320,3 +320,6 @@
     <removeFileFolderDialogText2 "Files in this folder will be moved to 'all files'.">
     <folder "Folder">
     <moveToFolder "Move to folder">
+    <passphraseLength "Passphrase length">
+    <passphraseLanguage "Passphrase language">
+    <unsorted "Unsorted">

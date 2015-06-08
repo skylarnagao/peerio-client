@@ -1117,6 +1117,7 @@ div.mainSidebar {
 			position: relative;
 			transition: all .1s linear;
 			transform-origin: left;
+			-webkit-transform-origin: left;
 		}
 		div.mainSidebar ul.folderView li .action-icon {
 			display: none;
@@ -1176,6 +1177,7 @@ div.sidebar h2 {
 	margin: 15px 0 0 10px;
 	font-weight: normal;
 	transform-origin: left;
+	-webkit-transform-origin: left;
 	transition: transform 0.1s linear;
 }
 
@@ -1208,8 +1210,7 @@ div.sidebar ul li:hover,
 div.sidebar ul li.active,
 div.sidebar ul li:hover *,
 div.sidebar ul li.active *,
-.messagesSidebar h2.active,
-.messagesSidebar h2:hover{
+.messagesSidebar h2.active{
 	opacity: 1;
 }
 .messagesSidebar h2 {
@@ -2593,7 +2594,7 @@ div.preferences {
 		border: none;
 		border-top: 1px solid #EAEAEA;
 		width: 400px;
-		margin: 20px 0;
+		margin: 8px 0;
 	}
 
 div.importContacts {
@@ -2653,6 +2654,8 @@ td.importContactsSelectContactsCheckboxCell {
 ul.filesSidebarTypeFilters li,ul.messagesSidebarTypeFilters li {
 	margin:0;
 	line-height: 22px;
+	transform-origin: left;
+	-webkit-transform-origin: left;
 }
 .login-locale-title{
 	margin-top: 50px;
@@ -2674,4 +2677,14 @@ ul.filesSidebarTypeFilters li,ul.messagesSidebarTypeFilters li {
 	border: none;
 	text-align: center;
 	font-weight: bold;
+}
+.passphrase-option{
+	display: inline-block;
+	background-color: #F0F0F0;
+	padding: 10px;
+	margin: 10px;
+}
+.folder-counter{
+	margin-left: 2px;
+	font-size: 80%;
 }

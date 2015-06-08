@@ -1,13 +1,13 @@
 
     <title "Peerio">
     <signupHeader "Nachrichten und Dateien. Einfach und sicher.">
-    <signupIntro "Peerio ist ein einfacher und sicherer Weg zum Senden von Nachrichten, Teilen von Dateien und Speichern von Dokumenten online. Alles wird vor der Übertragung in die Cloud verschlüsselt, sodass niemand außer Ihnen und jenen, mit denen Sie teilen, jemals Zugriff auf Ihre Daten haben wird.<br /><br /><strong>Peerio hat derzeit Betastatus. <a href='https://peerio.com/pages/beta.html' target='_blank'>Informieren, was das bedeutet</a>.">
+    <signupIntro "Peerio ist eine einfache und sichere Möglichkeit zum Versenden von Nachrichten, Teilen von Dateien und Speichern von Dokumenten online. Alles wird vor der Übertragung in die Cloud verschlüsselt, sodass niemand außer Ihnen und jenen, mit denen Sie teilen, jemals Zugriff auf Ihre Daten haben wird.<br /><br /><strong>Peerio hat derzeit Betastatus. <a href='https://peerio.com/pages/beta.html' target='_blank'>Informieren, was das bedeutet</a>.">
     <username "Benutzername">
     <passphrase "Passphrase">
-    <passphraseOrPIN "Passphrase oder Sicherheitscode">
+    <passphraseOrPIN "Passphrase oder Passcode">
     <or "oder">
     <loginFailed "Anmeldung fehlgeschlagen">
-    <loginFailedText "Falls Sie gerade einen Gerätesicherheitscode verwenden, versuchen Sie stattdessen bitte die Passphrase Ihres Benutzerkontos.">
+    <loginFailedText "Falls Sie gerade einen Geräte-Passcode verwenden, versuchen Sie stattdessen bitte die Passphrase Ihres Benutzerkontos.">
     <ok "OK">
     <submit "Senden">
     <signup "Registrieren">
@@ -18,12 +18,12 @@
     <addressNotAvailable "Adresse ist ungültig oder nicht verfügbar.">
     <firstName "Vorname">
     <lastName "Nachname">
-    <emailOrPhone "E-Mail oder Mobilfunk">
+    <emailOrPhone "E-Mail oder Mobiltelefon">
     <yourPassphrase "Ihre Passphrase">
-    <infoAlertPassphrase "Für höhere Sicherheit verwendet Peerio <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'>zufällig erzeugte Pass<i>phrasen</i></a>. <strong>Ihre Passphrase ist Ihr Generalschlüssel zu Ihrem Benutzerkonto!</strong>  Sie sind der alleinige Eigentümer Ihrer Passphrase, und die Sicherheit Ihres Benutzerkontos hängt davon ab, dass Sie es sich merken und es schützen. Es wird für die Kontoanmeldung auf neuen Geräten benötigt. Falls Sie Ihre Passphrase verlieren, werden Sie dauerhaft den Zugriff auf Ihr Benutzerkonto verlieren. Wir empfehlen daher, die Passphrase auf Papier zu notieren oder in einem sicheren Passwortmanager aufzubewahren.">
-    <infoAlertPassphraseNote "<strong>Keine Sorge</strong>, gleich werden Sie einen kürzeren Sicherheits<i>code</i> für schnellen Zugriff auf dieses Gerät festlegen können.">
+    <infoAlertPassphrase "Für höhere Sicherheit verwendet Peerio <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'>zufällig erzeugte Passphrasen</a>. <strong>Ihre Passphrase ist Ihr Generalschlüssel zu Ihrem Benutzerkonto!</strong> Sie sind der alleinige Besitzer Ihrer Passphrase, und die Sicherheit Ihres Benutzerkontos hängt davon ab, dass Sie es sich merken und es schützen. Es wird für die Kontoanmeldung auf neuen Geräten benötigt. Falls Sie Ihre Passphrase verlieren, werden Sie dauerhaft den Zugriff auf Ihr Benutzerkonto verlieren. Wir empfehlen daher, die Passphrase auf Papier zu notieren oder in einem sicheren Passwortmanager aufzubewahren.">
+    <infoAlertPassphraseNote "<strong>Keine Sorge</strong>, gleich werden Sie einen kürzeren Pass<i>code</i> für schnellen Zugriff auf dieses Gerät festlegen können.">
     <signupPassphraseConfirm "Diese Passphrase verwenden?">
-    <signupPassphraseConfirmText "<strong>Denken Sie daran</strong>, Sie sind der alleinige Eigentümer dieser Passphrase. <a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>Falls Sie Ihre Passphrase verlieren</a>, können wir diese weder zurücksetzen noch wiederherstellen, und Ihr Benutzerkonto wird dauerhaft verloren sein. Falls Sie Ihre Passphrase nicht irgendwo sicher aufbewahrt haben, gehen Sie bitte zurück und tun Sie es, bevor Sie fortfahren.">
+    <signupPassphraseConfirmText "<strong>Denken Sie daran</strong> - Sie sind der alleinige Besitzer dieser Passphrase. <a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>Falls Sie Ihre Passphrase verlieren</a>, können wir diese weder zurücksetzen noch wiederherstellen, und Ihr Benutzerkonto wird dauerhaft verloren sein. Falls Sie Ihre Passphrase nicht irgendwo sicher aufbewahrt haben, gehen Sie bitte zurück und tun Sie es, bevor Sie fortfahren.">
     <signupYourGeneratedPassphrase "Ihre erzeugte Passphrase:">
     <signupPassphraseRefresh "Passphrase ändern">
     <error "Fehler">
@@ -45,32 +45,32 @@
     <confirmationCode "Bestätigungscode">
     <confirmMyAccount "Benutzerkonto bestätigen">
     <invalidConfirmationCode "Bitte überprüfen Sie diesen Code erneut.">
-    <finishingUp "Fertigstellung">
-    <peerioPIN "Peerio-Sicherheitscode">
-    <setAPeerioPIN "Sicherheitscode für dieses Gerät festlegen?">
-    <signupPeerioPIN "Peerio-Sicherheitscodes erlauben ein schnelleres Anmelden auf konkreten Geräten. Statt der Eingabe Ihrer Passphrase bei jedem Anmelden können Sie einen kürzeren Sicherheitscode festlegen, der nur auf diesem konkreten Gerät funktioniert. Sie können verschiedene Sicherheitscodes von Ihren verschiedenen Geräten aus festlegen. <br><br>Vom Anwender ausgewählte Sicherheitscodes sind zumeist unsicherer als Peerios Passphrasen, daher sollten Sie <strong>Sicherheitscodes nur auf Geräten festlegen, denen Sie vertrauen und die Sie regelmäßig benutzen</strong>.">
-    <PINNotStrong "Sicherheitscodestärke: schwach">
-    <PINStrong "Sicherheitscodestärke: o. k.!">
-    <setPIN "Sicherheitscode festlegen">
+    <finishingUp "Fertigstellen">
+    <peerioPIN "Peerio-Passcode">
+    <setAPeerioPIN "Passcode für dieses Gerät festlegen?">
+    <signupPeerioPIN "Peerio-Passcodes erlauben ein schnelleres Anmelden auf konkreten Geräten. Statt der Eingabe Ihrer Passphrase bei jedem Anmelden können Sie einen kürzeren Passcode festlegen, der nur auf diesem konkreten Gerät funktioniert. Sie können verschiedene Passcodes von Ihren verschiedenen Geräten aus festlegen. <br><br>Vom Anwender ausgewählte Passcodes sind zumeist unsicherer als Peerios Passphrasen, daher sollten Sie <strong>Passcodes nur auf Geräten festlegen, denen Sie vertrauen und die Sie regelmäßig benutzen</strong>.">
+    <PINNotStrong "Passcodestärke: schwach">
+    <PINStrong "Passcodestärke: o. k.!">
+    <setPIN "Passcode festlegen">
     <skip "Überspringen">
     <accountRateLimited "Bitte ein paar Minuten warten">
-    <accountRateLimitedText "Dieses Benutzerkonto ist vorübergehend nicht verfügbar, weil von ihm zu viele Anfragen an den Server ausgingen. Bitte warten Sie ein paar Minuten und versuchen Sie es erneut.">
+    <accountRateLimitedText "Dieses Benutzerkonto ist vorübergehend nicht verfügbar, da von ihm zu viele Serveranfragen ausgingen. Bitte warten Sie ein paar Minuten und versuchen Sie es erneut.">
     <accountBlacklisted "Benutzerkonto nicht verfügbar">
-    <accountBlacklistedText "Dieses Benutzerkonto wurde vorübergehend gesperrt. Um den Zugriff wiederzuerlangen, kontaktieren Sie bitte die Peerio-Kundenbetreuung über support@peerio.com.">
+    <accountBlacklistedText "Dieses Benutzerkonto ist vorübergehend gesperrt. Um den Zugriff wiederzuerlangen, kontaktieren Sie bitte die Peerio-Kundenbetreuung über support@peerio.com.">
     <searchMessagesFilesAndContacts "Nachrichten, Dateien und Kontakte suchen">
     <messages "Nachrichten">
     <files "Dateien">
     <contacts "Kontakte">
-    <searchResultsClickToReset "Suchergebnisse (klicken zum Zurücksetzen)">
+    <searchResultsClickToReset "Suchergebnisse (anklicken zum Zurücksetzen)">
     <connectionStatus "Verbindungsstatus">
     <welcomeToAccount "Willkommen in Ihrem Peerio-Benutzerkonto.">
     <welcomeToAccountText "Mit Peerio können Sie sicher Nachrichten versenden sowie ihre Dateien und Dokumente speichern und verwalten. Hier werden Ihnen die ersten Schritte gezeigt.">
-    <welcomeToAccountList1 "Fügen Sie Kontakte hinzu, indem sie auf den <strong>Kontakte</strong>-Reiter klicken. Sobald Sie Kontakte hinzugefügt haben, ist das Teilen von Nachrichten und Dateien einfach.">
-    <welcomeToAccountList2 "Beginnen Sie Unterhaltungen, indem Sie links die Schaltfläche <strong>Nachrichten verfassen</strong> anklicken. Unterhaltungen können so viele Kontakte wie gewünscht enthalten - und alles ist Ende-zu-Ende verschlüsselt.">
+    <welcomeToAccountList1 "Fügen Sie Kontakte hinzu, indem sie den <strong>Kontakte</strong>-Reiter anklicken. Sobald Sie Kontakte hinzugefügt haben, ist das Teilen von Nachrichten und Dateien einfach.">
+    <welcomeToAccountList2 "Beginnen Sie Unterhaltungen, indem Sie links die Schaltfläche <strong>Nachrichten verfassen</strong> anklicken. Unterhaltungen können so viele Kontakte wie gewünscht enthalten — und alles ist Ende-zu-Ende verschlüsselt.">
     <welcomeToAccountList3 "Speichern Sie Ihre Dateien auf Peerio durch Anklicken des <strong>Dateien</strong>-Reiters. Ihre Dateien werden verschlüsselt und stehen bereit, um auf Ihren anderen Geräten abgerufen oder mit Ihren Kontakten geteilt zu werden.">
     <welcomeToAccountListSearch "Peerios <strong>Suchleiste</strong> im oberen Teil des Fensters lässt Sie einfach auf Ihre Nachrichten, Dateien und Kontakte zugreifen. Probieren Sie es aus!">
     <newMessage "Nachricht verfassen">
-    <inbox "Nachrichteneingang">
+    <inbox "Posteingang">
     <uploadFile "Dateien hochladen">
     <filesSidebarUploadFileSubtitle "oder Ziehen und Ablegen">
     <addContact "Kontakt hinzufügen">
@@ -97,7 +97,7 @@
     <readBy "Gelesen von:">
     <expandConversation "Unterhaltung aufklappen">
     <encrypted "verschlüsselt">
-    <addToFolder "Zum Ordner hinzufügen">
+    <addToFolder "Zu Ordner hinzufügen">
     <acknowledge "Bestätigen">
     <remove "Entfernen">
     <download "Herunterladen">
@@ -107,23 +107,23 @@
     <participantsWhoHaveLeft "Ehemalige Teilnehmer:">
     <newMessageErrorText "Ihre Nachricht konnte nicht gesendet werden.">
     <conversationHasNoFiles "In dieser Unterhaltung wurden bisher keine Dateien geteilt.">
-    <filesWillAppearHere "Dateien werden hier für den Schnellzugriff aufgelistet.">
+    <filesWillAppearHere "Dateien werden hier für den Schnellzugriff aufgeführt.">
     <messageCouldNotBeSentTo "Ihre Nachricht konnte nicht an die folgenden Kontakte gesendet werden:">
-    <messageDecryptedError "Ihr Kontakt versuchte Ihnen eine Nachricht zu senden, aber diese konnte von Ihrem Benutzerkonto nicht korrekt empfangen werden.">
+    <messageDecryptedError "Ihr Kontakt versuchte Ihnen eine Nachricht zu senden, diese konnte aber von Ihrem Benutzerkonto nicht korrekt empfangen werden.">
     <removeConversationsQuestion "Unterhaltungen entfernen?">
-    <removeConversationsText "Warnung: Sie werden keine weiteren Nachrichten und Dateien erhalten, die innerhalb dieser Unterhaltung geteilt werden.">
+    <removeConversationsText "Warnung: Sie werden keine weiteren, innerhalb dieser Unterhaltung geteilte Nachrichten oder Dateien erhalten.">
     <newMessageRecipientsError "Nachricht hat keine Empfänger">
     <newMessageRecipientsErrorText "Zum Senden Ihrer Nachricht bitte mindestens einen Empfänger angeben.">
     <typeYourReply "Schreiben Sie Ihre Antwort …">
     <noParticipantsLeft "In dieser Unterhaltung sind keine Teilnehmer mehr vorhanden.">
-    <allDocuments "Alle Dokumente">
+    <allDocuments "Alle Dateien">
     <photos "Fotos">
     <videos "Videos">
     <pdfDocuments "PDF-Dokumente">
-    <wordDocuments "Word-Dokumente">
+    <wordDocuments "Textdokumente">
     <spreadsheets "Tabellen">
     <presentations "Präsentationen">
-    <other "Sonstiges">
+    <other "Sonstige">
     <storage "Speicher">
     <yourUsage "Ihre Nutzung:">
     <quotaError "Speicherplatzbegrenzung erreicht">
@@ -134,7 +134,7 @@
     <removeFilesText "Dateien werden dauerhaft aus Ihrem Benutzerkonto gelöscht, bleiben jedoch für alle Nutzer sichtbar, mit denen Sie die Dateien geteilt haben.">
     <destroyFilesQuestion "Dateien vernichten?">
     <destroyFilesText "Dateien werden aus Ihrem Benutzerkonto entfernt, sowie aus den Konten aller, mit denen Sie die Dateien geteilt haben.">
-    <destroyFilesOwnerError "Ihnen nicht gehörende Dateien können nicht vernichtet werden">
+    <destroyFilesOwnerError "Um Dateien zu vernichten, müssen Sie deren Eigentümer sein">
     <destroyFilesOwnerErrorText "Das Vernichten von Dateien entfernt diese von jedem Benutzerkonto, mit dem sie geteilt wurden. Nur der Eigentümer einer Datei kann dies tun. Versuchen Sie stattdessen, die Datei zu löschen.">
     <fileUploadError "Hochladen der Datei fehlgeschlagen">
     <fileUploadErrorText "Bitte überprüfen Sie Ihre Einstellungen für das Hochladen von Dateien und versuchen Sie es erneut.">
@@ -148,16 +148,16 @@
     <size "Dateigröße">
     <owner "Eigentümer">
     <actions "Aktionen">
-    <search "Suche">
+    <search "Suchen">
     <attachSelectedFiles "Ausgewählte Dateien anhängen">
     <uploadNewFile "Neue Dateien hochladen">
     <downloading "Herunterladen">
-    <downloadFileInfo "Ihre Datei wird in Ihrem Standard-Download-Ordner gespeichert.">
+    <downloadFileInfo "Ihre Datei wird in Ihrem Standardordner für Downloads gespeichert.">
     <downloadFileDangerous "Warnung: Öffnen Sie Dateien nur, wenn Sie dem Absender vertrauen.">
     <downloadFileComplete "Ihre Datei wurde erfolgreich heruntergeladen und entschlüsselt.">
     <downloadFileError "Datei konnte nicht heruntergeladen werden">
     <downloadFileErrorText "Ein Fehler ist aufgetreten.">
-    <save "Speichern">
+    <save "speichern">
     <allContacts "Alle Kontakte">
     <confirmedContacts "Bestätigte Kontakte">
     <pendingContacts "Ausstehende Kontakte">
@@ -168,25 +168,25 @@
     <latestFiles "Letzte Dateien">
     <viewAllMessages "Alle Nachrichten anzeigen">
     <viewAllFiles "Alle Dateien anzeigen">
-    <avatarTooltip "Benutzeravatare ermöglichen Ihnen, die kryptografische Identität Ihrer Kontakte zu überprüfen. Falls sich der Avatar eines Kontakts ändert, kontaktieren Sie den Kontakt zur erneuten Überprüfung, bevor Sie mit ihm über Peerio kommunizieren.">
+    <avatarTooltip "Benutzeravatare ermöglichen Ihnen, die kryptografische Identität Ihrer Kontakte zu überprüfen. Falls sich der Avatar eines Kontakts ändert, kontaktieren Sie bitte den Kontakt zur erneuten Überprüfung, bevor Sie mit ihm über Peerio kommunizieren.">
     <pending "Ausstehend">
     <you "Sie">
     <accountDeleted "Benutzerkonto gelöscht">
     <block "Blockieren">
     <noContacts "Kein Kontakt ausgewählt">
-    <noContactsText "Wählen Sie einen Kontakt aus oder beginnen Sie, indem Sie eine Freundin bzw. einen Freund einladen.">
+    <noContactsText "Wählen Sie einen Kontakt aus oder laden Sie eine Freundin bzw. einen Freund ein.">
     <addMyFirstContact "Neuen Kontakt hinzufügen">
     <acceptContactRequest "Kontaktanfrage annehmen?">
-    <acceptContactRequestText "Wählen Sie aus, ob Sie diesem Nutzer erlauben, Ihnen sicher über Peerio Nachrichten zu senden und Dateien mit Ihnen zu teilen.">
+    <acceptContactRequestText "Entscheiden Sie, ob Sie diesem Nutzer erlauben, Ihnen sicher über Peerio Nachrichten zu senden und Dateien mit Ihnen zu teilen.">
     <accept "Annehmen">
     <decline "Ablehnen">
     <addContactInfo "Freunde als Kontakte hinzufügen">
-    <addContactInfoText "Das Senden von Nachrichten und Teilen von Dateien mit Ihren Freunden beginnt mit dem Hinzufügen dieser zu den Kontakten. Falls Ihr Freund kein Peerio-Benutzer ist, wird versucht, eine Einladung an seine Adresse zu senden. Sie können einen Benutzer hinzufügen durch Nennung seines <strong>Benutzernamens</strong>, seiner <strong>E-Mail-Adresse</strong> oder <strong>Mobilfunkrufnummer</strong>.">
+    <addContactInfoText "Das Versenden von Nachrichten und Teilen von Dateien mit Ihren Freunden beginnt mit dem Hinzufügen dieser zu den Kontakten. Falls Ihr Freund kein Peerio-Benutzer ist, wird versucht, eine Einladung an seine Adresse zu senden. Sie können einen Benutzer hinzufügen durch Nennung seines <strong>Benutzernamens</strong>, seiner <strong>E-Mail-Adresse</strong> oder <strong>Mobilrufnummer</strong>.">
     <addContactInfoAvatar "Über den Kontaktavatar">
     <addContactInfoAvatarText "Jeder Peerio-Benutzer hat einen speziellen, ihn identifizierenden Avatar. Stellen Sie sich diesen als digitalen Fingerabdruck des Benutzers vor. Falls sich der Avatar eines Peerio-Benutzers ändert, so hat der entsprechende Benutzer entweder seine Passphrase geändert, oder aber sein Benutzerkonto wurde kompromittiert.">
-    <usernameEmailOrPhone "Benutzername, E-Mail oder Mobilfunk">
+    <usernameEmailOrPhone "Benutzername, E-Mail oder Mobiltelefon">
     <addContactRequestSent "Kontaktanfrage gesendet">
-    <addContactRequestSentText "Eine Kontaktanfrage wurde an den eingegebenen Benutzernamen gesendet.">
+    <addContactRequestSentText "Wir haben eine Kontaktanfrage an den eingegebenen Benutzernamen gesendet.">
     <addContactInviteSent "Einladung gesendet">
     <addContactInviteSentText "Wir haben eine Einladung an Ihren Kontakt gesendet.">
     <addContactErrorText "Der Kontakt konnte nicht hinzugefügt werden. Bitte überprüfen Sie nochmals die Informationen und versuchen Sie es erneut.">
@@ -197,7 +197,7 @@
     <removeContactSuccess "Ihr Kontakt wurde erfolgreich entfernt.">
     <removeContactError "Der Kontakt konnte nicht entfernt werden. Bitte versuchen Sie es erneut.">
     <newContact "Neuer Kontakt!">
-    <newContactText "Sie sind jetzt Kontakt mit">
+    <newContactText "Sie sind jetzt in Kontakt mit">
     <miniLockID "miniLock-ID:">
     <twoFactorAuth "Zwei-Faktor-Authentifizierung">
     <authenticate "Authentifizieren">
@@ -205,10 +205,10 @@
     <twoFactorAuthSetupText "Nutzen Sie Ihre bevorzugte Authentifizierungs-App, um den unten dargestellten QR-Code einzuscannen. Peerio empfiehlt Google Authenticator für iPhone und Android. <a href='https://peerio.zendesk.com/hc/en-us/articles/204018305' target='_blank'>Informieren Sie sich, wie Zwei-Faktor-Authentifizierung mit Peerio funktioniert</a>.">
     <twoFactorAuthInfoHeading "Helfen Sie uns, Ihr Konto zu schützen">
     <twoFactorAuthInfoText "Zwei-Faktor-Authentifizierung hilft Ihnen bei der Absicherung Ihres Benutzerkontos durch das Erfordernis zweier unterschiedlicher Arten von Anmeldeinformationen. Bitte geben Sie den von Ihrem Mobilgerät erzeugten sechsstelligen Code ein, um fortzufahren.">
-    <twoFactorAuthConfirm "Nach dem Einscannen des QR-Codes geben Sie bitte zur Bestätigung den von Ihrem Mobilgerät erzeugten sechsstelligen Code ein.">
+    <twoFactorAuthConfirm "Nach dem Einscannen des QR-Codes geben Sie bitte den von Ihrem Mobilgerät erzeugten sechsstelligen Code zur Bestätigung ein.">
     <twoFactorAuthIncorrect "Ungültiger Code">
-    <twoFactorAuthIncorrectText "Der eingegebene Code ist falsch. Bitte versuchen Sie es erneut.">
-    <twoFactorAuthConfirmedText "Von nun an werden Sie zum Anmelden von Ihrem Mobilgerät erzeugte Codes benutzen müssen. Bitte stellen Sie sicher, dass Sie Ihr Mobilgerät nicht verlieren.">
+    <twoFactorAuthIncorrectText "Der eingegebene Code ist ungültig. Bitte versuchen Sie es erneut.">
+    <twoFactorAuthConfirmedText "Von nun an werden Sie zur Eingabe eines Codes von Ihrem Mobilgerät aufgefordert, wenn Sie sich erstmalig an einem Tag oder von einem neuen Ort aus anmelden. Bitte stellen Sie sicher, dass Sie Ihr Mobilgerät nicht verlieren.">
     <twoFactorAuthCannotDisable "Zwei-Faktor-Authentifizierung konnte nicht deaktiviert werden.">
     <twoFactorAuthDisabled "Zwei-Faktor-Authentifizierung deaktiviert">
     <twoFactorAuthDisabledText "Sie können sich jetzt lediglich mit Ihrem Passwort anmelden. Ziehen Sie zur Verbesserung der Sicherheit in Betracht, die Zwei-Faktor-Authenitifizierung zukünftig wieder zu aktivieren.">
@@ -222,7 +222,7 @@
     <primary "primär">
     <secondary "sekundär">
     <addresses "Adressen">
-    <setPrimaryAddress "Als Primäradresse verwenden">
+    <setPrimaryAddress "Als Primäradresse festlegen">
     <removeAddress "Adresse entfernen">
     <addNewAddress "Neue Adresse hinzufügen">
     <couldNotConfirmAddress "Bitte prüfen Sie erneut den eingegebenen Bestätigungscode.">
@@ -234,19 +234,19 @@
     <confirmedAddressText "Danke, dass Sie sich die Zeit zur Bestätigung Ihrer neuen Peerio-Adresse genommen haben.">
     <confirmedNameText "Ihr Name wurde aktualisiert.">
     <email "E-Mail">
-    <phoneNumber "Mobilfunkrufnummer">
+    <phoneNumber "Mobilrufnummer">
     <deleteAccount "Benutzerkonto löschen">
-    <deleteAccountText "Das Löschen Ihres Peerio-Benutzerkontos wird alle Ihre Daten unwiederbringlich vernichten, und Sie werden Ihren derzeitigen Benutzernamen zukünftig nicht wiederverwenden können.">
-    <deleteAccountConfirm "Löschung des Benutzerkontos bestätigen">
+    <deleteAccountText "Das Löschen Ihres Peerio-Benutzerkontos wird alle Ihre Daten unwiederbringlich vernichten und Sie werden Ihren derzeitigen Benutzernamen zukünftig nicht wiederverwenden können.">
+    <deleteAccountConfirm "Kontolöschung bestätigen">
     <deleteAccountConfirmText "Sind Sie sicher? Sie werden alle Ihre Daten verlieren und Ihren derzeitigen Benutzernamen nie wieder verwenden können.">
     <changePassphrase "Passphrase ändern">
-    <changePassphraseText "Im Falle einer Kompromittierung Ihrer Passphrase wird Ihnen Peerio den Widerruf der derzeitigen und die Einrichtung einer neuen Passphrase erlauben. Diese Funktion erscheint bald.">
+    <changePassphraseText "Im Falle einer Kompromittierung Ihrer Passphrase wird Ihnen Peerio den Widerruf der derzeitigen und die Festlegung einer neuen Passphrase erlauben. Diese Funktion erscheint bald.">
     <newPassphrase "Neue Passphrase">
     <retypeNewPassphrase "Neue Passphrase erneut eingeben">
     <enableTwoFactorAuth "Zwei-Faktor-Authentifizierung aktivieren">
     <disableTwoFactorAuth "Zwei-Faktor-Authentifizierung deaktivieren">
-    <accountSettingsTwoFactorAuthText "Peerio kann mit Ihrem Smartphone verknüpft werden, um die Sicherheit Ihres Benutzerkontos weiter zu erhöhen.">
-    <twoFactorAuthLearnMore "Mehr über Zwei-Faktor-Authentifizierung erfahren">
+    <accountSettingsTwoFactorAuthText "Peerio kann mit Ihrem Mobilgerät verknüpft werden, um die Sicherheit Ihres Benutzerkontos weiter zu erhöhen.">
+    <twoFactorAuthLearnMore "mehr über Zwei-Faktor-Authentifizierung erfahren">
     <language "Sprache">
     <notifications "Benachrichtigungen">
     <notificationOptions "Benachrichtigungsoptionen">
@@ -254,16 +254,16 @@
     <useSounds "<strong>Einen Klang wiedergeben</strong> bei Erhalt einer neuen Benachrichtigung.">
     <sendReadReceipts "Meine Kontakte über das Lesen ihrer Nachrichten informieren.">
     <readReceipts "Lesebestätigungen">
-    <peerioPINForThisDevice "Gerätesicherheitscode">
-    <peerioPINUpdated "Gerätesicherheitscode wurde aktualisiert">
-    <peerioPINUpdatedText "Ihr Sicherheitscode für dieses Gerät wurde erfolgreich aktualisiert.">
-    <removeMyPeerioPIN "Gerätesicherheitscode entfernen">
-    <peerioPINRemoved "Gerätesicherheitscode wurde entfernt">
-    <peerioPINRemovedText "Diesem Gerät zugewiesene Sicherheitscodes wurden vernichtet.">
+    <peerioPINForThisDevice "Geräte-Passcode">
+    <peerioPINUpdated "Geräte-Passcode wurde aktualisiert">
+    <peerioPINUpdatedText "Ihr Passcode für dieses Gerät wurde erfolgreich aktualisiert.">
+    <removeMyPeerioPIN "Geräte-Passcode entfernen">
+    <peerioPINRemoved "Geräte-Passcode wurde entfernt">
+    <peerioPINRemovedText "Diesem Gerät zugewiesene Passcodes wurden vernichtet.">
     <ctrlEnter "Antwort senden">
-    <pressEnterToSend "Zum Senden die Eingabetaste drücken">
+    <pressEnterToSend "Zum Senden Eingabetaste drücken">
     <updateAvailable "Aktualisierung verfügbar!">
-    <updateAvailableText "Eine neue Aktualisierung für Peerio ist verfügbar! Aktualisierungen bringen interessante, neue Funktionen und Verbesserungen der Zuverlässigkeit. Möchten Sie die Aktualisierung jetzt durchführen?">
+    <updateAvailableText "Eine neue Aktualisierung für Peerio ist verfügbar! Aktualisierungen bringen interessante, neue Funktionen, weiterhin Verbesserungen der Zuverlässigkeit. Möchten Sie die Aktualisierung jetzt durchführen?">
     <updateDownload "Aktualisierung herunterladen">
     <later "Später">
     <updateAvailableCritical "Wichtige Aktualisierung verfügbar">
@@ -271,11 +271,11 @@
     <TOFUNotMatchError "Kontaktidentitäten haben sich verändert!">
     <TOFUNotMatchErrorText "Warnung! Einige Ihrer Kontakte haben ihre Identitäten verändert. Bevor Sie mit ihnen kommunizieren, überprüfen Sie bitte das Peerio-Avatarsymbol in deren Profil. Die Benutzernamen sind:">
     <importContactsGoogle "Google Kontakte in Peerio importieren">
-    <importContactsGoogleText "Zur Nutzung Ihrer Google Kontakte mit Peerio melden Sie sich einfach in Ihrem Gmail-Benutzerkonto an, und befolgen Sie diese Schritte:">
+    <importContactsGoogleText "Zur Nutzung Ihrer Google Kontakte mit Peerio melden Sie sich einfach in Ihrem Gmail-Benutzerkonto an, und befolgen danach diese Schritte:">
     <importContactsGoogleStep1 "Klicken Sie auf <strong>Gmail</strong> in der linken oberen Ecke der Gmail-Seite und wählen Sie dann <strong>Kontakte</strong>.">
     <importContactsGoogleStep2 "Wählen Sie innerhalb des <strong>Mehr</strong>-Aufklappmenüs <strong>Exportieren</strong> aus …">
     <importContactsGoogleStep3 "Wählen Sie aus, ob Sie alle Kontakte oder nur eine Gruppe exportieren möchten.">
-    <importContactsGoogleStep4 "Wählen Sie zum Export Ihrer Kontakte das <strong>Google-CSV</strong>-Format.">
+    <importContactsGoogleStep4 "Wählen Sie zum Export Ihrer Kontakte das <strong>Google-CSV</strong>-Format aus.">
     <importContactsGoogleStep5 "Nachdem Sie Ihre Kontakte in eine CSV-Datei exportiert haben, klicken Sie zum Hochladen der Datei zu Peerio auf die Schaltfläche unten.">
     <uploadCSV "CSV-Datei hochladen">
     <importContactsConfirm "Peerio darf Einladungen in Ihrem Namen senden">
@@ -300,7 +300,7 @@
     <renamingFolderError "Hoppla! Etwas ist schiefgelaufen und Ihr Ordner wurde nicht umbenannt. Bitte erneut versuchen.">
     <folderRenamed "Der Ordner wurde umbenannt.">
     <removeFolderDialogTitle "Ordner entfernen">
-    <removeFolderDialogText1 "Sie Sie sicher, dass Sie den Ordner entfernen möchten">
+    <removeFolderDialogText1 "Sie Sie sicher, dass Sie den folgenden Ordner entfernen möchten?">
     <removeFolderDialogText2 "Unterhaltungen in diesem Ordner werden in den \"Posteingang\" verschoben.">
     <removingFolderError "Hoppla! Etwas ist schiefgelaufen und Ihr Ordner wurde nicht entfernt. Bitte erneut versuchen.">
     <folderRemoved "Dieser Ordner wurde entfernt.">
@@ -320,3 +320,6 @@
     <removeFileFolderDialogText2 "Dateien in diesem Ordner werden in \"Alle Dateien\" verschoben.">
     <folder "Ordner">
     <moveToFolder "In Ordner verschieben">
+    <passphraseLength "Passphrasenlänge">
+    <passphraseLanguage "Passphrasensprache">
+    <unsorted "Unsortiert">

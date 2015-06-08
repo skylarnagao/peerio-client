@@ -1,19 +1,20 @@
 {
-	"name": "peerio-client",
-	"author": "Technologies Peerio Inc.",
-	"description": "Secure message and file sharing for everyone. Our worldwide cloud storage lets you work anywhere, while end-to-end encryption keeps your data safe everywhere.",
-	"version": "1.1.0",
-	"keywords": [
-		"peerio",
-		"encrypted messages",
-		"encrypted email",
-		"file sharing"
-	],
-	"devDependencies": {
-		"gulp" : "latest",
-		"gulp-shell": "latest",
-		"gulp-replace": "latest",
-		"gulp-rename": "latest",
-		"run-sequence": "latest"
-	}
+  "name": "peerio-client",
+  "author": "Technologies Peerio Inc.",
+  "description": "Secure message and file sharing for everyone. Our worldwide cloud storage lets you work anywhere, while end-to-end encryption keeps your data safe everywhere.",
+  "version": "1.1.0",
+  "keywords": [
+    "peerio",
+    "encrypted messages",
+    "encrypted email",
+    "file sharing"
+  ],
+  "devDependencies": {
+    "del": "^1.2.0",
+    "gulp": "latest",
+    "gulp-rename": "latest",
+    "gulp-replace": "latest",
+    "gulp-shell": "latest",
+    "run-sequence": "latest"
+  }
 }

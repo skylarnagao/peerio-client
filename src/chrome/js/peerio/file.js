@@ -429,7 +429,7 @@ Peerio.file = {
 				type: 'word',
 				extensions: [
 					'doc', 'dot', 'docx', 'docm',
-					'dotx', 'dotm', 'docb'
+					'dotx', 'dotm', 'docb', 'odt'
 				],
 				icon: '&#xf1c2;'
 			},
@@ -437,7 +437,7 @@ Peerio.file = {
 				type: 'excel',
 				extensions: [
 					'xls', 'xlt', 'xlm', 'xlsx',
-					'xlsm', 'xltx', 'xltm'
+					'xlsm', 'xltx', 'xltm', 'ods'
 				],
 				icon: '&#xf1c3;'
 			},
@@ -446,7 +446,7 @@ Peerio.file = {
 				extensions: [
 					'ppt', 'pot', 'pps', 'pptx',
 					'pptm', 'potx', 'potm', 'ppam',
-					'ppsx', 'ppsm', 'sldx', 'sldm'
+					'ppsx', 'ppsm', 'sldx', 'sldm', 'odp'
 				],
 				icon: '&#xf1c4;'
 			},

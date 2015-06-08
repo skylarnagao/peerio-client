@@ -20,7 +20,7 @@
     <lastName "Apellidos">
     <emailOrPhone "Correo electrónico o móvil">
     <yourPassphrase "Su frase de acceso">
-    <infoAlertPassphrase "Para una seguridad más robusta, Peerio utiliza <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'><i>frases</i> de acesso generadas aleatoriamente</a>. <strong>¡Su frase-contraseña es la clave maestra hacia su cuenta!</strong> Usted es el único propietario de su frase-contraseña, y la seguridad de su cuenta depende de que la recuerde y la proteja. La necesitará para iniciar sesión en su cuenta en nuevos dispositivos. Si pierde su frase contraseña, perderá permanentemente el acceso a su cuenta. Le recomendamos que escriba su frase-contraseña en un papel, o la guarde en su gestor de contraseñas seguro.">
+    <infoAlertPassphrase "Para una seguridad más robusta, Peerio utiliza <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'>frases de acceso generadas aleatoriamente</a>. <strong>¡Su frase de acceso es la clave maestra para su cuenta!</strong>  Usted es el único propietario de su frase de acceso, y la seguridad de su cuenta depende de que la recuerde y la proteja. La necesitará para iniciar sesión en su cuenta desde nuevos dispositivos. Si pierde su frase de acceso, perderá permanentemente el acceso a su cuenta. Recomendamos que escriba su frase de acceso en un papel, o la almacene en un gestor seguro de contraseñas.">
     <infoAlertPassphraseNote "<strong>No se preocupe</strong>, en un momento podrá establecer un <i>código</i>-de-acceso más corto para un acceso rápido sobre este dispositivo.">
     <signupPassphraseConfirm "¿Usar esta frase-contraseña?">
     <signupPassphraseConfirmText "<strong>Recuerde</strong>, usted es el único propietario de esta frase de acceso. <a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>Si pierde su frase-contraseña</a>, no podemos restablecerla o recuperarla y su cuenta se pederá. Si no ha guardado su frase contraseña en algún lugar seguro, por favor, vuelva y hágalo antes de continuar.">
@@ -42,13 +42,13 @@
     <signupConfirmationCodeExpired "El código de confirmación expiró">
     <signupConfirmationCodeExpiredText "Su código de confirmación ha caducado. Por favor, reincie Peerio e inténte registrarse de nuevo.">
     <code "Código">
-    <confirmationCode "Confirmation code">
+    <confirmationCode "Código de confirmación">
     <confirmMyAccount "Confirmar mi cuenta">
-    <invalidConfirmationCode "por favor revise este código.">
+    <invalidConfirmationCode "por favor, compruebe dos veces este código.">
     <finishingUp "Terminando">
     <peerioPIN "Código-de-acceso de Peerio">
     <setAPeerioPIN "¿Establecer un código-de-acceso para este dispositivo?">
-    <signupPeerioPIN "Los códigos de acceso de Peerio permiten un inicio de sesión más rápido en dispositivos específicos. En lugar de introducir su frase de acceso cada vez que inicie sesión, puede establecer un código-de-acceso más corto que sólo funcionará en este dispositivo. Puede establecer diferentes códigos-de-acceso desde sus distintos dispositivos.<br><br>Los códigos-de-acceso elegidos por el usuario tienden a ser menos seguros que las frases-contraseña de Peerio, asi que debe <strong>sólo establecer códigos de acceso en los dispositivos de su confianza y que utilice regularmente</strong>.">
+    <signupPeerioPIN "Los códigos de acceso de Peerio permiten un inicio de sesión más rápido en dispositivos específicos. En lugar de introducir su frase de acceso cada vez que inicie sesión, puede establecer un código-de-acceso más corto que sólo funcionará en este dispositivo. Puede establecer diferentes códigos de acceso desde sus distintos dispositivos.<br><br>Los códigos-de-acceso elegidos por el usuario tienden a ser menos seguros que las frases de acceso  de Peerio, asi que debe <strong>sólo establecer códigos de acceso en los dispositivos de su confianza y que utilice regularmente</strong>.">
     <PINNotStrong "fuerza del código-de-acceso: débil">
     <PINStrong "fuerza del código-de-acceso: ¡OK!">
     <setPIN "Establecer código-de-acceso">
@@ -57,7 +57,7 @@
     <accountRateLimitedText "Esta cuenta temporalmente no está disponible porque ha hecho demasiadas solicitudes al servidor. Por favor espere unos minutos e intente de nuevo.">
     <accountBlacklisted "Cuenta no disponible">
     <accountBlacklistedText "Esta cuenta está suspendida temporalmente. Para restablecer acceso, por favor, contacte con el soporte de Peerio a través de support@peerio.com">
-    <searchMessagesFilesAndContacts "Buscar mensajes, archivos y contactos">
+    <searchMessagesFilesAndContacts "Buscar mensajes, archivos, y contactos">
     <messages "Mensajes">
     <files "Archivos">
     <contacts "Contactos">
@@ -111,16 +111,16 @@
     <messageCouldNotBeSentTo "Su mensaje no pudo ser enviado a los siguientes contactos:">
     <messageDecryptedError "Su contacto intentó enviar un mensaje, pero no pudo ser recibido por tu cuenta.">
     <removeConversationsQuestion "¿Borrar conversaciones?">
-    <removeConversationsText "Advertencia: A partir de este momento no podrá recibir más mensajes nuevos o archivos compartidos en esta conversación.">
+    <removeConversationsText "Advertencia: Ya no recibirá ningún mensaje o archivo compartido dentro de la conversación.">
     <newMessageRecipientsError "El mensaje no tiene destinatarios">
     <newMessageRecipientsErrorText "Por favor, introduzca al menos un destinatario para enviar su mensaje.">
     <typeYourReply "Escriba su respuesta...">
     <noParticipantsLeft "No quedan participantes en esta conversación.">
-    <allDocuments "Todos los documentos">
+    <allDocuments "Todos los archivos">
     <photos "Fotos">
     <videos "Vídeos">
     <pdfDocuments "Documentos PDF">
-    <wordDocuments "Documentos Word">
+    <wordDocuments "Documentos de texto">
     <spreadsheets "Hojas de cálculo">
     <presentations "Presentaciones">
     <other "Otros">
@@ -134,10 +134,10 @@
     <removeFilesText "Los archivos serán borrados permanentemente de su cuenta, pero seguirán siendo visibles para los usuarios con quienes los ha compartido.">
     <destroyFilesQuestion "¿Destruir los archivos?">
     <destroyFilesText "Los archivos serán borrados de tu cuenta y de las cuentas de todos con quienes los has compartido.">
-    <destroyFilesOwnerError "No puede destruir ficheros que no son suyos">
-    <destroyFilesOwnerErrorText "Destruir ficheros los elimina de todas las cuentas con las que hayan sido compartidos. Sólo un propietario de fichero puede hacer eso. En su lugar, pruebe a borrar el fichero.">
+    <destroyFilesOwnerError "No puede destruir archivos que no son de su propiedad">
+    <destroyFilesOwnerErrorText "Destruir archivos los elimina de todas las cuentas con las que hayan sido compartidos. Sólo el propietario de un archivo puede hacer eso. En su lugar, por favor, intente borrar el archivo.">
     <fileUploadError "Falló la transmisión del archivo">
-    <fileUploadErrorText "Por favor verifique su configuración de subida de archivos, e intenta de nuevo.">
+    <fileUploadErrorText "Por favor verifique su configuración de subida de archivos, e intente de nuevo.">
     <dragAndDropUploadTitle "Suéltelo para subirlo a Peerio.">
     <dragAndDropUploadText "Sus archivos serán cifrados y subidos a su nube personal.">
     <allFiles "Todos los archivos">
@@ -149,7 +149,7 @@
     <owner "Propietario">
     <actions "Acciones">
     <search "Búsqueda">
-    <attachSelectedFiles "Agregar archivos seleccionados">
+    <attachSelectedFiles "Adjuntar archivos seleccionados">
     <uploadNewFile "Subir nuevos archivos">
     <downloading "Descargando">
     <downloadFileInfo "Su archivo será guardado en su carpeta de Descargas.">
@@ -205,7 +205,7 @@
     <twoFactorAuthSetupText "Use su aplicación de autentificador favorita para escanear el código de barras de debajo. Peerio recomienda Google Authenticator para iPhone y Android. <a href='https://peerio.zendesk.com/hc/en-us/articles/204018305' target='_blank'>Vea cómo funciona la autentificación de dos factores con Peerio</a>.\n">
     <twoFactorAuthInfoHeading "Ayúdenos a proteger su cuenta">
     <twoFactorAuthInfoText "La autentificación de dos factores ayuda a mantener su cuenta segura al requerir dos tipos distintos de información de inicio de sesión. Por favor, introduzca el código de seis dígitos de su dispositivo móvil para continuar.">
-    <twoFactorAuthConfirm "Tras escanear el código QR, introduzca el código de seis dígitos generado por su teléfono móvil para confirmar la configuración.">
+    <twoFactorAuthConfirm "Tras escanear el código QR, introduzca el código de seis-dígitos generado por su dispositivo móvil para confirmar la instalación.">
     <twoFactorAuthIncorrect "Código incorrecto">
     <twoFactorAuthIncorrectText "El código que ha introducido es incorrecto. Por favor inténtelo de nuevo.">
     <twoFactorAuthConfirmedText "De ahora en adelante, se le pedirá que introduzca un código desde su dispositivo móvil cuando inicie sesión por primera vez en un día, o desde una nueva ubicación. Por favor asegúrese de no perder su teléfono móvil.">
@@ -245,7 +245,7 @@
     <retypeNewPassphrase "Reescriba la nueva frase de acceso ">
     <enableTwoFactorAuth "Habilitar autentificación de dos-factores">
     <disableTwoFactorAuth "Deshabilitar autentificación de dos-factores">
-    <accountSettingsTwoFactorAuthText "Peerio se puede coordinar con su smartphone para proporcionar seguridad adicional de cuenta.">
+    <accountSettingsTwoFactorAuthText "Peerio puede asociarse con su dispositivo móvil para proporcionar seguridad adicional a la cuenta.">
     <twoFactorAuthLearnMore "conozca más sobre la autentificación de dos-factores">
     <language "Idioma">
     <notifications "Notificaciones">
@@ -261,7 +261,7 @@
     <peerioPINRemoved "Código-de-acceso del dispositivo eliminado">
     <peerioPINRemovedText "Los códigos-de-acceso asignados a este dispositivo han sido destruidos.">
     <ctrlEnter "Enviar respuesta">
-    <pressEnterToSend "Oprima Enter para enviar">
+    <pressEnterToSend "Pulse Intro para enviar">
     <updateAvailable "¡Actualización disponible!">
     <updateAvailableText "¡Hay una nueva actualización disponible para Peerio! Las actualizaciones traen nuevas características chulas, así como mejoras de fiabilidad. ¿Desea actualizar ahora?">
     <updateDownload "Descargar actualización">
@@ -320,3 +320,6 @@
     <removeFileFolderDialogText2 "Los archivos en esta carpeta serán trasladados a la 'todos los archivos'.">
     <folder "Carpeta">
     <moveToFolder "Trasladar a una carpeta">
+    <passphraseLength "Passphrase length">
+    <passphraseLanguage "Passphrase language">
+    <unsorted "Unsorted">
