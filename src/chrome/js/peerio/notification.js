@@ -69,16 +69,15 @@ Peerio.notification = {};
 			// nwjs execution path is in Peerio.app/Contents/Frameworks/nwjs\ Helper.app/Contents/MacOS/
 			if (process.platform == 'darwin') {
 				imagePath = path.join(execPath, '..', '..', '..', '..', 'Resources', 'app.nw', 'img', 'notification.png');
-				alert(imagePath);
 			}
-			
+
 			notifier.notify({
 				'title': info.title,
 				'subtitle': info.contextMessage,
 				'message': info.message,
 				'sound': false,
-				'icon':  execPath + '/notification.png',
-				'contentImage': execPath + '/notification.png',
+				'icon':  imagePath,
+				'contentImage': imagePath,
 				'wait': true
 			}, function() {
 				if (typeof(callback) === 'function') {
