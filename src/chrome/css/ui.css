@@ -2695,6 +2695,7 @@ ul.filesSidebarTypeFilters li,ul.messagesSidebarTypeFilters li {
 	color: #FFF;
 	font-weight: bold;
 	padding: 0px 4px;
+	border-radius: 2px;
 }
 .filter-name{
 	color: #fff;
