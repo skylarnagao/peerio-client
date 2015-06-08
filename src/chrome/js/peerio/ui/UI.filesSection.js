@@ -180,6 +180,7 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 						ids.forEach(function(id){
 							Peerio.user.files[id].folderID = folderId;
 						});
+						$scope.$root.$broadcast('filesSectionClearSelection');
 						$scope.$root.$apply();
 						swal({title: l('success'), text: ids.length +" " +l('filesMoved'), type: "success"});
 					}
@@ -244,6 +245,12 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 			}
 		})
 	})
+
+	$scope.$root.$on('filesSectionClearSelection', function(){
+		$scope.filesSection.checkedIDs = [];
+		$('.filesSectionTableCheckboxCell .blueCheckbox:checked').prop('checked', false);
+	});
+
 	$scope.$on('filesSectionSetSearchFilter', function(event, input) {
 		$scope.filesSection.searchFilter = input.toLowerCase()
 		$scope.$apply()

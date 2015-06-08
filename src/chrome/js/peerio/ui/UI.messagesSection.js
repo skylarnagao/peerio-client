@@ -226,6 +226,7 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
               ids.forEach(function (id) {
                 Peerio.user.conversations[id].folderID = folderId;
               });
+              $scope.$root.$broadcast('messagesSectionClearSelection');
               $scope.$root.$apply();
               swal({title: l('success'), text: ids.length + " " + l('conversationsMoved'), type: "success"});
             }
@@ -270,6 +271,10 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
         return 'Inbox';
       };
     }
+    $scope.$root.$on('messagesSectionClearSelection', function(){
+      $scope.messagesSection.checkedIDs = [];
+      $('div.messageListItem .blueCheckbox:checked').prop('checked', false);
+    });
     $scope.$on('messagesSectionPopulate', function (event, callback) {
       $scope.$root.convFolders.loadFolders();
       $scope.messagesSection.listIsLoading = true
