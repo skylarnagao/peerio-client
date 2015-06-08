@@ -23,7 +23,7 @@
     <infoAlertPassphrase "Para una seguridad más robusta, Peerio utiliza <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'>frases de acceso generadas aleatoriamente</a>. <strong>¡Su frase de acceso es la clave maestra para su cuenta!</strong>  Usted es el único propietario de su frase de acceso, y la seguridad de su cuenta depende de que la recuerde y la proteja. La necesitará para iniciar sesión en su cuenta desde nuevos dispositivos. Si pierde su frase de acceso, perderá permanentemente el acceso a su cuenta. Recomendamos que escriba su frase de acceso en un papel, o la almacene en un gestor seguro de contraseñas.">
     <infoAlertPassphraseNote "<strong>No se preocupe</strong>, en un momento podrá establecer un <i>código</i>-de-acceso más corto para un acceso rápido sobre este dispositivo.">
     <signupPassphraseConfirm "¿Usar esta frase-contraseña?">
-    <signupPassphraseConfirmText "<strong>Recuerde</strong>, usted es el único propietario de esta frase de acceso. <a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>Si pierde su frase-contraseña</a>, no podemos restablecerla o recuperarla y su cuenta se pederá. Si no ha guardado su frase contraseña en algún lugar seguro, por favor, vuelva y hágalo antes de continuar.">
+    <signupPassphraseConfirmText "<strong>Recuerde</strong>, usted es el único poseedor de esta frase de acceso. <a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>Si la pierde</a>, su cuenta se perderá para siempre. Así que para asegurarse, por favor, introduzca su frase de acceso una vez más para continuar.">
     <signupYourGeneratedPassphrase "Su frase de acceso generada:">
     <signupPassphraseRefresh "Cambiar frase de acceso">
     <error "Error">
@@ -320,8 +320,8 @@
     <removeFileFolderDialogText2 "Los archivos en esta carpeta serán trasladados a la 'todos los archivos'.">
     <folder "Carpeta">
     <moveToFolder "Trasladar a una carpeta">
-    <length "length">
-    <words "words">
-    <unsorted "Unsorted">
-    <typePassphraseToConfirm "Please enter this passphrase as it appears above to accept and continue">
-    <passphraseConfirmFailed "Your passphrase was entered incorrectly. If you have not stored your passphrase somewhere safe, please go back and do so before continuing.">
+    <length "tamaño">
+    <words "palabras">
+    <unsorted "No ordenadas">
+    <typePassphraseToConfirm "Por favor, introduzca esta frase de acceso como aparece arriba para aceptar y continuar.">
+    <passphraseConfirmFailed "Su frase de acceso fue introducida de forma incorrecta. Por favor, guarde su frase de acceso en algún seguro antes de continuar.">

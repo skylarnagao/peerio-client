@@ -23,7 +23,7 @@
     <infoAlertPassphrase "For stronger security, Peerio uses <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'>randomly generated passphrases</a>. <strong>Your passphrase is the master key to your account!</strong>  You are the sole owner of your passphrase, and your account's security depends on you remembering and protecting it. You will need it to login to your account on new devices. If you lose your passphrase, you will permanently lose access to your account. We recommend writing your passphrase down on paper, or storing it in a secure password manager.">
     <infoAlertPassphraseNote "<strong>Don't worry</strong>, in a moment you will be able to set a shorter pass<i>code</i> for quick access on this device.">
     <signupPassphraseConfirm "Use this passphrase?">
-    <signupPassphraseConfirmText "<strong>Remember</strong>, you are the sole owner of this passphrase. <a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>If you lose your passphrase</a>, we cannot reset or recover it and your account will be lost. If you have not stored your passphrase somewhere safe, please go back and do so before continuing.">
+    <signupPassphraseConfirmText "<strong>Remember</strong>, you are the sole owner of this passphrase. <a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>If you lose it</a>, your account will be lost forever. So just to be safe, please enter your passphrase once more in order to continue.">
     <signupYourGeneratedPassphrase "La tua passphrase:">
     <signupPassphraseRefresh "Cambia passphrase">
     <error "Errore">
@@ -324,4 +324,4 @@
     <words "words">
     <unsorted "Unsorted">
     <typePassphraseToConfirm "Please enter this passphrase as it appears above to accept and continue">
-    <passphraseConfirmFailed "Your passphrase was entered incorrectly. If you have not stored your passphrase somewhere safe, please go back and do so before continuing.">
+    <passphraseConfirmFailed "Your passphrase was entered incorrectly. Please store your passphrase somewhere safe before continuing.">
