@@ -290,11 +290,14 @@
             <!--</h2>-->
             <div style="display: none;">{{messagesSection.getMessagesNewCount()}}</div>
             <ul class="messagesSidebarTypeFilters">
-                <li data-l10n-id="inbox" peerio-drag-enter="$root.convFolders.handleDragEnter()"
+                <li peerio-drag-enter="$root.convFolders.handleDragEnter()"
                     peerio-drag-leave="$root.convFolders.handleDragLeave()"
                     peerio-drop="$root.convFolders.handleDrop()"
                     data-ng-mousedown="messagesSection.setTypeFilter('inbox', $event)"
-                    class="active"></li>
+                    class="active"><span data-l10n-id="inbox" class="filter-name" style="pointer-events: none;"></span>
+                    <span class="folder-counter" style="pointer-events: none;" ng-show="$root.convFolders.inboxCounter">
+                        {{$root.convFolders.inboxCounter}}</span>
+                </li>
                 <li data-l10n-id="allMessages"
                     data-ng-mousedown="messagesSection.setTypeFilter('all', $event)"></li>
             </ul>
@@ -309,7 +312,7 @@
                     peerio-drop="$root.convFolders.handleDrop(folder)"
                     data-ng-repeat="folder in $root.convFolders.folders"
                     data-ng-mousedown="messagesSection.setTypeFilter(folder.id, $event)">
-                    <span class="blue fontAwesome">&#xf07c;</span>{{folder.name}} <span class="green folder-counter">{{folder.newMessageCount||''}}</span>
+                    <span class="blue fontAwesome">&#xf07c;</span>{{folder.name}} <span class="folder-counter" ng-show="folder.newMessageCount">{{folder.newMessageCount}}</span>
 						<span class="fontAwesome action-icon" style="right:13px;top:-1px;"
                               data-ng-click="$root.convFolders.renameFolder(folder)">&#xf044;</span>
                     <span class="fontAwesome action-icon"

@@ -197,7 +197,7 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
           swal(l('moveConversationsDialogTitle'), l('conversationsNotSelectedError'), "info");
           return;
         }
-        if (!ids.length) ids=[conversation.id];
+        if (!ids.length) ids = [conversation.id];
 
         var html = "<strong>" + ids.length + "</strong> " + l('moveConversationsDialogText') + "<br/>"
           + "<select id='groupFolderSelect'><option value='' selected>" + l('inbox') + "</option>";
@@ -592,12 +592,14 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
       $scope.$root.convFolders.folders.forEach(function (folder) {
         folder.newMessageCount = 0;
       });
+      $scope.$root.convFolders.inboxCounter = 0;
       for (var id in Peerio.user.conversations) {
         if (!Peerio.user.conversations.hasOwnProperty(id)) continue;
         var c = Peerio.user.conversations[id];
-        if (c.folderID && c.original && c.original.isModified) {
-          $scope.$root.convFolders.foldersMap[c.folderID].newMessageCount++;
-        }
+        if (c.folderID) {
+          if (c.original && c.original.isModified)
+            $scope.$root.convFolders.foldersMap[c.folderID].newMessageCount++;
+        } else if(c.original && c.original.isModified) $scope.$root.convFolders.inboxCounter++;
       }
       //
       return $scope.messagesSection.messagesNewCount
@@ -951,7 +953,7 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
       if (!ids.length && !$scope.messagesSection.conversation) {
         return false
       }
-      if (!ids.length) ids=[$scope.messagesSection.conversation.id];
+      if (!ids.length) ids = [$scope.messagesSection.conversation.id];
       var removeConversations = function (ids) {
         Peerio.storage.db.get('conversations', function (err, conversations) {
           Peerio.storage.db.remove(conversations, function () {
@@ -978,19 +980,19 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
           }
         })
       }
-        swal({
-          title: document.l10n.getEntitySync('removeConversationsQuestion').value,
-          text: document.l10n.getEntitySync('removeConversationsText').value,
-          type: 'warning',
-          showCancelButton: true,
-          cancelButtonText: document.l10n.getEntitySync('cancel').value,
-          confirmButtonColor: '#e07a66',
-          confirmButtonText: document.l10n.getEntitySync('remove').value,
-          closeOnConfirm: true
-        }, function () {
-          removeConversations(ids);
+      swal({
+        title: document.l10n.getEntitySync('removeConversationsQuestion').value,
+        text: document.l10n.getEntitySync('removeConversationsText').value,
+        type: 'warning',
+        showCancelButton: true,
+        cancelButtonText: document.l10n.getEntitySync('cancel').value,
+        confirmButtonColor: '#e07a66',
+        confirmButtonText: document.l10n.getEntitySync('remove').value,
+        closeOnConfirm: true
+      }, function () {
+        removeConversations(ids);
         //  $scope.messagesSection.conversation = null;
-        });
+      });
     };
 
     $scope.messagesSection.sentByMe = function (message) {

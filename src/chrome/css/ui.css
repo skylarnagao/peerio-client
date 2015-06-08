@@ -2691,4 +2691,11 @@ ul.filesSidebarTypeFilters li,ul.messagesSidebarTypeFilters li {
 .folder-counter{
 	margin-left: 2px;
 	font-size: 80%;
+	background-color: #85C573;
+	color: #FFF;
+	font-weight: bold;
+	padding: 0px 4px;
+}
+.filter-name{
+	color: #fff;
 }
