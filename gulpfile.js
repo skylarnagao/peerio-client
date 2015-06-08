@@ -3,12 +3,49 @@ var gulp = require('gulp'),
 	replace = require('gulp-replace'),
 	rename = require('gulp-rename'),
 	runSequence = require('run-sequence'),
-  del = require('del');
+	_ = require('lodash'),
+  del = require('del'), 
+  NwBuilder = require('node-webkit-builder');
+	
+
 
 // settings
 var tmpSources = 'tmp/tx/*.json';
 var localeDest = 'src/chrome/locale';
 var usedLangs = 'en,de,es,it,fr';
+
+
+/**
+ * Generate nwjs packages.
+ */
+var nw = new NwBuilder({
+      files: 'src/chrome/**/**', // use the glob format
+      platforms: ['win32', 'osx32', 'linux32'],
+      buildDir: 'build', 
+      macIcns: 'src/chrome/img/nw.icns', 
+      macPlist: {
+        'UTTypeReferenceURL': 'https://peerio.com',
+        'CFBundleIdentifier': 'com.peerio.peeriomac',
+        'DTSDKBuild': 10
+      }, 
+      winIco: 'src/chrome/img/icon256.ico'
+  });
+
+
+/**
+ * Sign the executables.
+ */
+var codesignCommands = ['Contents/Frameworks/crash_inspector', 
+              'Contents/Frameworks/nwjs\\ Framework.framework/nwjs\\ Framework',
+              'Contents/Frameworks/nwjs\\ Helper\\ EH.app/',
+              'Contents/Frameworks/nwjs\\ Helper\\ NP.app/',
+              '/Contents/Frameworks/nwjs\\ Helper.app/Contents/MacOS/nwjs\\ Helper',
+              'Contents/Frameworks/nwjs\\ Helper.app/',
+              '']
+
+codesignCommands = _.map(codesignCommands, function(file) {
+  return 'codesign --force --verify --verbose --sign "' + process.env.PEERIO_DEVELOPER_ID + '" build/Peerio/osx32/Peerio.app/' + file;
+});
 
 /**
  * Fetch json files from Transifex.
@@ -60,3 +97,28 @@ gulp.task('localize', function(callback) {
 gulp.task('localize:all', function(callback) {
   runSequence('clean-tmp', 'fetch-i18n-all', 'convert-i18n', 'clean-tmp', callback);
 });
+
+/**
+ * Build the Mac, Windows, Linux packages.
+ */  
+gulp.task('build', function(callback) {
+    nw.build()
+    .then(function() {
+      
+      
+    })
+    .then(function() {
+      callback();
+    })
+    .catch(function (error) {
+        console.error(error);
+        callback();
+    });
+});
+
+/**
+ * Sign the Mac package. 
+ */   	
+gulp.task('sign', shell.task(codesignCommands))
+
+    
