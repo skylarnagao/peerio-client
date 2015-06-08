@@ -282,27 +282,28 @@
                     data-l10n-id="newMessage"
                     data-ng-mousedown="messagesSidebar.newMessage()"></button>
 
-            <h2>
-                <span data-l10n-id="inbox"></span>&nbsp;
-                <span class="green"
-                      data-ng-bind="messagesSection.getMessagesNewCount()"
-                      data-ng-show="!!messagesSection.getMessagesNewCount()"></span>
-            </h2>
+            <!--<h2>-->
+                <!--<span data-l10n-id="inbox"></span>&nbsp;-->
+                <!--<span class="green"-->
+                      <!--data-ng-bind="messagesSection.getMessagesNewCount()"-->
+                      <!--data-ng-show="!!messagesSection.getMessagesNewCount()"></span>-->
+            <!--</h2>-->
 
             <ul class="messagesSidebarTypeFilters">
-                <li data-l10n-id="allMessages" class="active"
-                    data-ng-mousedown="messagesSection.setTypeFilter('all', $event)"></li>
-                <li data-l10n-id="unsorted" peerio-drag-enter="$root.convFolders.handleDragEnter()"
+                <li data-l10n-id="inbox" peerio-drag-enter="$root.convFolders.handleDragEnter()"
                     peerio-drag-leave="$root.convFolders.handleDragLeave()"
                     peerio-drop="$root.convFolders.handleDrop()"
-                    data-ng-mousedown="messagesSection.setTypeFilter('inbox', $event)"></li>
+                    data-ng-mousedown="messagesSection.setTypeFilter('inbox', $event)"
+                    class="active"></li>
+                <li data-l10n-id="allMessages"
+                    data-ng-mousedown="messagesSection.setTypeFilter('all', $event)"></li>
             </ul>
 
             <a href="#" class="add-folder-btn" data-ng-click="$root.convFolders.addFolder()"
                data-l10n-id="addNewFolder"></a>
 
             <ul class="folderView"
-                style="position: absolute;top: 310px;left: 10px;right: 0;bottom:80px;padding-bottom: 30px">
+                style="position: absolute;top: 285px;left: 10px;right: 0;bottom:80px;padding-bottom: 30px">
                 <li peerio-drag-enter="$root.convFolders.handleDragEnter(folder)"
                     peerio-drag-leave="$root.convFolders.handleDragLeave(folder)"
                     peerio-drop="$root.convFolders.handleDrop(folder)"
@@ -330,7 +331,10 @@
                 <li peerio-drag-enter="$root.fileFolders.handleDragEnter()"
                     peerio-drag-leave="$root.fileFolders.handleDragLeave()"
                     peerio-drop="$root.fileFolders.handleDrop()"
-                    class="active" style="transform-origin: left;transition:transform 0.1s linear"
+                    class="active" style="transform-origin: left;transition:transform 0.1s linear; font-size:110%"
+                    data-l10n-id="unsorted"
+                    data-ng-mousedown="filesSection.setTypeFilter('unsorted', $event)"></li>
+                <li style=" font-size:110%"
                     data-l10n-id="allDocuments"
                     data-ng-mousedown="filesSection.setTypeFilter('', $event)"></li>
             </ul>
@@ -345,7 +349,7 @@
                 <li data-l10n-id="other" data-ng-mousedown="filesSection.setTypeFilter('other', $event)"></li>
             </ul>
             <ul class="folderView"
-                style="position: absolute;top: 412px;left: 10px;right: 0;bottom:80px;padding-bottom: 30px">
+                style="position: absolute;top: 435px;left: 10px;right: 0;bottom:80px;padding-bottom: 30px">
                 <li peerio-drag-enter="$root.fileFolders.handleDragEnter(folder)"
                     peerio-drag-leave="$root.fileFolders.handleDragLeave(folder)"
                     peerio-drop="$root.fileFolders.handleDrop(folder)"
@@ -502,7 +506,7 @@
                     <button class="fontAwesome clear"
                             data-utip-l10n="moveToFolder"
                             data-utip-gravity="ne"
-                            data-ng-click="$root.convFolders.addToFolderBulk(messagesSection.checkedIDs)">
+                            data-ng-click="$root.convFolders.addToFolderBulk(messagesSection.checkedIDs, messagesSection.conversation)">
                         &#xf115;
                     </button>
                 </div>

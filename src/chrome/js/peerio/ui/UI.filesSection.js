@@ -19,7 +19,7 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 	}
 	$scope.filesSection = {}
 	$scope.filesSection.searchFilter = ''
-	$scope.filesSection.typeFilter = ''
+	$scope.filesSection.typeFilter = 'unsorted'
 	$scope.filesSection.ownerFilter = /./
 	$scope.filesSection.checkedIDs = []
 
@@ -299,15 +299,23 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 	}
 	$scope.filesSection.checkTypeFilter = function(file) {
 		var type = file.type;
+		// all
 		if ($scope.filesSection.typeFilter === '') {
 			return true
 		}
+		// usorted
+		if ($scope.filesSection.typeFilter === 'unsorted' && !file.folderID) {
+			return true
+		}
+
+		// file type
 		if ($scope.filesSection.typeFilter === 'other') {
 			return !(new RegExp('^((image)|(video)|(pdf)|(word)|(excel)|(powerpoint))$')).test(type)
 		}
 		var typeTest = (new RegExp('^' + $scope.filesSection.typeFilter + '$')).test(type);
 		if(typeTest) return true;
 
+		// folder
 		return $scope.filesSection.typeFilter === file.folderID;
 
 	}

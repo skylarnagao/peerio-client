@@ -60,7 +60,7 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
     $scope.messagesSection.attachFileIDs = []
     $scope.messagesSection.fetchedConversations = []
     $scope.messagesSection.searchFilter = ''
-    $scope.messagesSection.typeFilter = 'all'
+    $scope.messagesSection.typeFilter = 'inbox'
     $scope.messagesSection.checkedIDs = []
     $scope.messagesSection.checkedReceipts = {}
     $scope.messagesSection.messageNewCount = 0
@@ -192,11 +192,13 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
         }, 500);
       };
 
-      f.addToFolderBulk = function (ids) {
-        if (ids.length === 0) {
+      f.addToFolderBulk = function (ids, conversation) {
+        if (ids.length === 0 && !conversation) {
           swal(l('moveConversationsDialogTitle'), l('conversationsNotSelectedError'), "info");
           return;
         }
+        if (!ids.length) ids=[conversation.id];
+
         var html = "<strong>" + ids.length + "</strong> " + l('moveConversationsDialogText') + "<br/>"
           + "<select id='groupFolderSelect'><option value='' selected>" + l('inbox') + "</option>";
 
@@ -946,9 +948,10 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
       })
     }
     $scope.messagesSection.removeConversations = function (ids) {
-      if (!ids.length) {
+      if (!ids.length && !$scope.messagesSection.conversation) {
         return false
       }
+      if (!ids.length) ids=[$scope.messagesSection.conversation.id];
       var removeConversations = function (ids) {
         Peerio.storage.db.get('conversations', function (err, conversations) {
           Peerio.storage.db.remove(conversations, function () {
@@ -975,16 +978,6 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
           }
         })
       }
-      var isDraft = false
-      ids.forEach(function (id) {
-        if (Peerio.user.conversations[id].original.isDraft) {
-          isDraft = true
-        }
-      })
-      if (isDraft) {
-        removeConversations(ids)
-      }
-      else {
         swal({
           title: document.l10n.getEntitySync('removeConversationsQuestion').value,
           text: document.l10n.getEntitySync('removeConversationsText').value,
@@ -995,10 +988,11 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
           confirmButtonText: document.l10n.getEntitySync('remove').value,
           closeOnConfirm: true
         }, function () {
-          removeConversations(ids)
-        })
-      }
-    }
+          removeConversations(ids);
+        //  $scope.messagesSection.conversation = null;
+        });
+    };
+
     $scope.messagesSection.sentByMe = function (message) {
       if (
         (message.sender === Peerio.user.username) &&
@@ -1008,6 +1002,7 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
       }
       return false
     }
+
     $scope.messagesSection.isFailed = function (message) {
       if (message.sender === Peerio.user.username) {
         return false

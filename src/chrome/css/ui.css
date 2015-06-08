@@ -2660,6 +2660,7 @@ ul.filesSidebarTypeFilters li,ul.messagesSidebarTypeFilters li {
 	line-height: 22px;
 	transform-origin: left;
 	-webkit-transform-origin: left;
+	transition: transform .1s linear;
 }
 .login-locale-title{
 	margin-top: 50px;
