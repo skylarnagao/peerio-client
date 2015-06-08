@@ -61,9 +61,17 @@ Peerio.notification = {};
 
 	notificationAdapters.nodeWebkit = {
 		show: function(notificationID, info, callback) {
-			var notifier = require('node-notifier')
-			var path = require('path')
-			var execPath = path.dirname(process.execPath)
+			var notifier = require('node-notifier'),
+				path = require('path'), 
+				execPath = path.dirname(process.execPath),
+				imagePath = execPath + '/notification.png'
+
+			// nwjs execution path is in Peerio.app/Contents/Frameworks/nwjs\ Helper.app/Contents/MacOS/
+			if (process.platform == 'darwin') {
+				imagePath = path.join(execPath, '..', '..', '..', '..', 'Resources', 'app.nw', 'img', 'notification.png');
+				alert(imagePath);
+			}
+			
 			notifier.notify({
 				'title': info.title,
 				'subtitle': info.contextMessage,
