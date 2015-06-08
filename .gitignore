@@ -17,3 +17,5 @@ npm-debug.log
 *.vcxproj.*
 *.cmd
 *.sln
+build/*
+cache/*
