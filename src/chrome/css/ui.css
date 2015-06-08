@@ -2651,6 +2651,10 @@ td.importContactsSelectContactsCheckboxCell {
 	border-radius: 0;
 }
 
+.sweet-alert button.cancel {
+	background-color: #9B9898;
+}
+
 ul.filesSidebarTypeFilters li,ul.messagesSidebarTypeFilters li {
 	margin:0;
 	line-height: 22px;
@@ -2680,7 +2684,6 @@ ul.filesSidebarTypeFilters li,ul.messagesSidebarTypeFilters li {
 }
 .passphrase-option{
 	display: inline-block;
-	background-color: #F0F0F0;
 	padding: 10px;
 	margin: 10px;
 }
