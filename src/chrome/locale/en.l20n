@@ -56,7 +56,7 @@
     <accountRateLimited "Please Wait A Few Minutes">
     <accountRateLimitedText "This account is temporarily unavailable because it has made too many server requests. Please wait a few minutes and try again.">
     <accountBlacklisted "Account Unavailable">
-    <accountBlacklistedText "This account is temporarily suspended. In order to regain access, please contact Peerio support by at support@peerio.com.">
+    <accountBlacklistedText "This account is temporarily suspended. In order to regain access, please contact Peerio support by support@peerio.com.">
     <searchMessagesFilesAndContacts "Search messages, files, and contacts">
     <messages "Messages">
     <files "Files">
