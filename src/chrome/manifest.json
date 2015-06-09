@@ -2,7 +2,7 @@
 	"name": "Peerio",
 	"short_name": "Peerio",
 	"description": "Secure message and file sharing for everyone. Work anywhere with our cloud. Keep your data safe with end-to-end encryption.",
-	"version": "1.0.4",
+	"version": "1.1.0",
 	"author": "Technologies Peerio Inc.",
 	"minimum_chrome_version": "39",
 	"manifest_version": 2,
@@ -10,7 +10,6 @@
 	"icons": {
 		"16": "img/icon16.png",
 		"32": "img/icon32.png",
-		"48": "img/icon48.png",
 		"48": "img/icon64.png",
 		"128": "img/icon128.png",
 		"256": "img/icon256.png",
@@ -19,11 +18,17 @@
 	},
 	"app": {
 		"background": {
-			"scripts": [ "background.js" ]
+			"scripts": [
+				"background.js"
+			]
 		}
 	},
 	"permissions": [
-		{"fileSystem": ["write"]},
+		{
+			"fileSystem": [
+				"write"
+			]
+		},
 		"notifications",
 		"storage",
 		"fileBrowserHandler",
