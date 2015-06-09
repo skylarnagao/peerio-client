@@ -10,7 +10,7 @@ Peerio.config = {};
 	'use strict';
 
 	Peerio.config = {
-		version: '1.0.4.3',
+		version: '1.0.4',
 		buildID: 9,
 		updateJSON: 'https://peerio.com/update/info.json',
 		updateWin: 'https://peerio.com/download/peerio-win.exe',
