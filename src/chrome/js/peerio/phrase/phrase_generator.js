@@ -28,6 +28,9 @@
   }, {
     name: 'Italiano',
     value: 'it'
+  }, {
+    name: 'Русский',
+    value: 'ru'
   }];
 
   Peerio.PhraseGenerator.languages.forEach(function (l) {

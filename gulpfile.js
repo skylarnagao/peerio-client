@@ -16,7 +16,7 @@ var gulp = require('gulp'),
 // settings
 var tmpSources = 'tmp/tx/*.json';
 var localeDest = 'src/chrome/locale';
-var usedLangs = 'en,de,es,it,fr';
+var usedLangs = 'en,de,es,it,fr,ru';
 var buildDest = 'build/';
 var codesignCommands = ['Contents/Frameworks/crash_inspector', 							// all executables must be signed
 			  'Contents/Frameworks/nwjs\\ Framework.framework/nwjs\\ Framework',

@@ -322,15 +322,16 @@
         </div>
         <div class="filesSidebar sidebar" data-sectionlink="files" data-ng-controller="filesSection">
             <button class="filesSidebarUploadFile" data-l10n-id="uploadFile"
-                    data-ng-mousedown="filesSidebar.selectFile()"></button>
-            <span class="filesSidebarUploadFileSubtitle" data-l10n-id="filesSidebarUploadFileSubtitle"></span>
+                    data-ng-mousedown="filesSidebar.selectFile()" style="margin:0 auto"></button>
+            <span class="filesSidebarUploadFileSubtitle" style="position: absolute;left: 0;right: 0;top: 170px;margin:0;"
+                  data-l10n-id="filesSidebarUploadFileSubtitle"></span>
 
             <form class="fileUploadForm">
                 <input type="file" name="file" class="fileSelectDialog" multiple/>
                 <input type="file" class="fileSelectDialogNodeWebkit" nwsaveas/>
                 <input type="reset" value="reset" class="hidden"/>
             </form>
-            <ul class="filesSidebarTypeFilters">
+            <ul class="filesSidebarTypeFilters" style="margin:40px 0 0 10px;">
                 <li peerio-drag-enter="$root.fileFolders.handleDragEnter()"
                     peerio-drag-leave="$root.fileFolders.handleDragLeave()"
                     peerio-drop="$root.fileFolders.handleDrop()"
@@ -341,7 +342,7 @@
                     data-l10n-id="allDocuments"
                     data-ng-mousedown="filesSection.setTypeFilter('', $event)"></li>
             </ul>
-            <ul class="filesSidebarTypeFilters">
+            <ul class="filesSidebarTypeFilters" style="margin:0 0 0 10px;">
                 <li data-l10n-id="photos" data-ng-mousedown="filesSection.setTypeFilter('image', $event)"></li>
                 <li data-l10n-id="videos" data-ng-mousedown="filesSection.setTypeFilter('video', $event)"></li>
                 <li data-l10n-id="pdfDocuments" data-ng-mousedown="filesSection.setTypeFilter('pdf', $event)"></li>
@@ -351,8 +352,10 @@
                     data-ng-mousedown="filesSection.setTypeFilter('powerpoint', $event)"></li>
                 <li data-l10n-id="other" data-ng-mousedown="filesSection.setTypeFilter('other', $event)"></li>
             </ul>
+            <div href="#" class="add-folder-btn" data-ng-click="$root.fileFolders.addFolder()"
+                 data-l10n-id="addNewFolder"></div>
             <ul class="folderView"
-                style="position: absolute;top: 435px;left: 10px;right: 0;bottom:80px;padding-bottom: 30px">
+                style="position: absolute;top: 440px;left: 10px;right: 0;bottom:80px;padding-bottom: 30px">
                 <li peerio-drag-enter="$root.fileFolders.handleDragEnter(folder)"
                     peerio-drag-leave="$root.fileFolders.handleDragLeave(folder)"
                     peerio-drop="$root.fileFolders.handleDrop(folder)"
@@ -365,8 +368,6 @@
                           data-ng-click="$root.fileFolders.removeFolder(folder)">&#xf00d;</span>
                 </li>
             </ul>
-            <div href="#" class="add-folder-btn" data-ng-click="$root.fileFolders.addFolder()"
-               data-l10n-id="addNewFolder"></div>
             <!--<div class="filesSidebarQuotaUsage">-->
             <!--<h1 data-l10n-id="storage"></h1>-->
             <!--<span data-l10n-id="yourUsage"></span>-->

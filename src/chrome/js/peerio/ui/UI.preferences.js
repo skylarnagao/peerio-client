@@ -13,8 +13,10 @@ Peerio.UI.languageOptions = [{
 }, {
 	name: 'Italiano',
 	value: 'it'
-}
-];
+}, {
+	name: 'Русский',
+	value: 'ru'
+}];
 
 Peerio.UI.controller('preferences', function($scope) {
 	'use strict';

@@ -96,54 +96,6 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
         });
       };
 
-      window.convertFolders = function () {
-        console.log("FOLDER NAMES ENCRYPTION STARTED");
-        console.log("requesting conversation folders");
-        Peerio.network.getConversationFolders(function (data) {
-          if (data.error) {
-            console.log(data.error);
-            console.log('failed to fetch conversation folders');
-            return;
-          }
-          console.log("received " + data.folders.length + " folders");
-          console.log("encrypting...");
-          data.folders.forEach(function(folder){
-            Peerio.crypto.encryptUserString(folder.name, function (encryptedName) {
-              Peerio.network.renameConversationFolder(folder.id, encryptedName, function (response) {
-                if (response.error) {
-                  console.log(response);
-                } else {
-                  console.log(folder.name + " encrypted");
-                }
-              });
-            });
-          });
-        });
-
-        console.log("requesting file folders");
-        Peerio.network.getFileFolders(function (data) {
-          if (data.error) {
-            console.log(data.error);
-            console.log('failed to fetch file folders');
-            return;
-          }
-          console.log("received " + data.folders.length + " folders");
-          console.log("encrypting...");
-          data.folders.forEach(function(folder){
-            Peerio.crypto.encryptUserString(folder.name, function (encryptedName) {
-              Peerio.network.renameFileFolder(folder.id, encryptedName, function (response) {
-                if (response.error) {
-                  console.log(response);
-                } else {
-                  console.log(folder.name + " encrypted");
-                }
-              });
-            });
-          });
-        });
-
-      };
-
       f.addFolder = function () {
         swal({
           title: l('newFolderDialogTitle'),
