@@ -8,7 +8,7 @@ var gulp = require('gulp'),
 // settings
 var tmpSources = 'tmp/tx/*.json';
 var localeDest = 'src/chrome/locale';
-var usedLangs = 'en,de,es,it,fr';
+var usedLangs = 'en,de,es,it,fr,ru';
 
 /**
  * Fetch json files from Transifex.

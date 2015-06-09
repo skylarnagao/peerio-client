@@ -4,7 +4,8 @@
     "fr",
     "de",
     "es",
-    "it"
+    "it",
+    "ru"
   ],
   "resources": [
     "./{{locale}}.l20n"
