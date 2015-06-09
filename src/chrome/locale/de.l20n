@@ -319,7 +319,7 @@
     <fileMoveError "Verschieben der Datei in Ordner fehlgeschlagen.">
     <removeFileFolderDialogText2 "Dateien in diesem Ordner werden in \"Alle Dateien\" verschoben.">
     <folder "Ordner">
-    <folderExistsError "Folder with this name already exists">
+    <folderExistsError "Ordner dieses Namens existiert bereits">
     <moveToFolder "In Ordner verschieben">
     <length "Länge">
     <words "Wörter">
