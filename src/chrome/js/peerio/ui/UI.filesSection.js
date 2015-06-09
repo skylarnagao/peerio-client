@@ -34,16 +34,21 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 					console.error(data.error);
 					return;
 				}
-				$scope.$root.$apply(function () {
-					f.folders = data.folders.sort(function (a, b) {
-						if (a.name > b.name) {
-							return 1;
-						}
-						if (a.name < b.name) {
-							return -1;
-						}
-						// a must be equal to b
-						return 0;
+				Peerio.crypto.decryptFolders(data.folders, function (folders) {
+					f.foldersMap = {};
+					folders.forEach(function (folder) {
+						f.foldersMap[folder.id] = folder;
+					});
+					$scope.$root.$apply(function () {
+						f.folders = folders.sort(function (a, b) {
+							if (a.name > b.name) {
+								return 1;
+							}
+							if (a.name < b.name) {
+								return -1;
+							}
+							return 0;
+						});
 					});
 				});
 			});
@@ -64,15 +69,21 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 					swal.showInputError(l("folderInputEmptyError"));
 					return false
 				}
-				Peerio.network.createFileFolder(inputValue, function (response) {
-					if (response.error) {
-						console.log(response);
-						swal(l("error"), l('creatingFolderError'), "error");
-					} else {
-						f.loadFolders();
-						swal({title: l('success'), text: l('folderCreated'), type: "success"});
-					}
-				})
+				if (f.folders.filter(function (val) {return val === inputValue}).length > 0) {
+					swal.showInputError(l("folderExistsError"));
+					return false
+				}
+				Peerio.crypto.encryptUserString(inputValue, function (encryptedName) {
+					Peerio.network.createFileFolder(encryptedName, function (response) {
+						if (response.error) {
+							console.log(response);
+							swal(l("error"), l('creatingFolderError'), "error");
+						} else {
+							f.loadFolders();
+							swal({title: l('success'), text: l('folderCreated'), type: "success"});
+						}
+					})
+				});
 			});
 		};
 
@@ -92,15 +103,21 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 					swal.showInputError(l("folderInputEmptyError"));
 					return false
 				}
-				Peerio.network.renameFileFolder(folder.id, inputValue, function (response) {
-					if (response.error) {
-						console.log(response);
-						swal(l('error'), l('renamingFolderError'), "error");
-					} else {
-						f.loadFolders();
-						swal({title: l('success'), text: l('folderRenamed'), type: "success"});
-					}
-				})
+				if (f.folders.filter(function (val) {return val === inputValue}).length > 0) {
+					swal.showInputError(l("folderExistsError"));
+					return false
+				}
+				Peerio.crypto.encryptUserString(inputValue, function (encryptedName) {
+					Peerio.network.renameFileFolder(folder.id, encryptedName, function (response) {
+						if (response.error) {
+							console.log(response);
+							swal(l('error'), l('renamingFolderError'), "error");
+						} else {
+							f.loadFolders();
+							swal({title: l('success'), text: l('folderRenamed'), type: "success"});
+						}
+					});
+				});
 			});
 		};
 
@@ -140,7 +157,7 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 				Peerio.network.moveFileIntoFolder(file.id, file.folderID, function (response) {
 					if (response.error) {
 						swal(l('error'), l('fileMoveError'), "error");
-						conversation.folderID = previous;
+						file.folderID = previous;
 						return;
 					}
 					$scope.$apply();

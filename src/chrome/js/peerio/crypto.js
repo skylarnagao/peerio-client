@@ -432,4 +432,97 @@ Peerio.crypto = {};
 		return decrypted
 	}
 
-})()
+	/**
+	 * Encrypts string for current user only
+	 * @param {string} str - string to encrypt
+	 * @param {Function} callback with encrypted string
+	 */
+	Peerio.crypto.encryptUserString = function (str, callback) {
+		miniLock.crypto.encryptFile(
+			new Blob([nacl.util.decodeUTF8(str)]),
+			'string',
+			[Peerio.user.miniLockID],
+			Peerio.user.miniLockID,
+			Peerio.user.keyPair.secretKey,
+			null,
+			function(encryptedChunks, header) {
+				if (!encryptedChunks) {
+					callback(false);
+					return false
+				}
+				var encryptedBlob = new Blob(encryptedChunks);
+				encryptedChunks = null;
+				var reader = new FileReader();
+				reader.onload = function(readerEvent) {
+					var encryptedBuffer = new Uint8Array(readerEvent.target.result);
+					var headerLength = miniLock.util.byteArrayToNumber(
+						encryptedBuffer.subarray(8, 12)
+					);
+					header = JSON.parse(header);
+					var body = nacl.util.encodeBase64(
+						encryptedBuffer.subarray(12 + headerLength)
+					);
+					if (typeof(callback) === 'function') {
+						callback(JSON.stringify({header:header, body:body}));
+					}
+				};
+
+				reader.readAsArrayBuffer(encryptedBlob);
+			});
+	};
+	/**
+	 * Decrypts string
+	 * @param {string} data - encrypted string (stringified json)
+	 * @param {Function} callback
+	 */
+	Peerio.crypto.decryptUserString = function(data, callback) {
+		data = JSON.parse(data);
+		var header = JSON.stringify(data.header);
+		var strBlob = new Blob([
+			'miniLock',
+			miniLock.util.numberToByteArray(header.length),
+			header,
+			nacl.util.decodeBase64(data.body)
+		]);
+
+		miniLock.crypto.decryptFile(
+			strBlob,
+			Peerio.user.miniLockID,
+			Peerio.user.keyPair.secretKey,
+			function(decryptedBlob) {
+				if (!decryptedBlob) {
+					callback(false);
+					return false;
+				}
+
+				var reader = new FileReader();
+
+				reader.onload = function(readerEvent) {
+					var decryptedBuffer = new Uint8Array(readerEvent.target.result);
+					decryptedBuffer = nacl.util.encodeUTF8(decryptedBuffer);
+					callback(decryptedBuffer);
+				};
+
+				reader.readAsArrayBuffer(decryptedBlob);
+			}
+		);
+	};
+
+	Peerio.crypto.decryptFolders=function(folders, callback){
+		var count = folders.length;
+		if(count===0) {
+			callback(folders);
+			return;
+		}
+
+		folders.forEach(function(folder){
+			Peerio.crypto.decryptUserString(folder.name, function(name){
+				folder.name = name;
+				count--;
+				if(length===0) callback(folders);
+			});
+		});
+
+	};
+
+})();

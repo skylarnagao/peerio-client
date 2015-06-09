@@ -1145,6 +1145,13 @@ div.mainSidebar {
 .add-folder-btn{
 	font-size: 0.9em;
 	margin-left: 10px;
+	margin-top: 3px;
+	color: #2C95CF;
+	cursor: pointer;
+	text-decoration: underline;
+}
+.add-folder-btn:hover{
+	color: #9DD3F0;
 }
 #groupFolderSelect{
 	font-size: 1em;
