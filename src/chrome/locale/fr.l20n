@@ -319,6 +319,7 @@
     <fileMoveError "Impossible de déplacer le fichier dans le dossier.">
     <removeFileFolderDialogText2 "Les fichiers de ce dossier seront déplacés vers «Tous les fichiers».">
     <folder "Dossier">
+    <folderExistsError "Folder with this name already exists">
     <moveToFolder "Déplacer vers le dossier">
     <length "longueur">
     <words "mots">

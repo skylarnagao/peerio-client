@@ -319,6 +319,7 @@
     <fileMoveError "No se pudo mover el archivo a la carpeta.">
     <removeFileFolderDialogText2 "Los archivos en esta carpeta serán trasladados a la 'todos los archivos'.">
     <folder "Carpeta">
+    <folderExistsError "Folder with this name already exists">
     <moveToFolder "Trasladar a una carpeta">
     <length "tamaño">
     <words "palabras">
