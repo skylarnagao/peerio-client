@@ -169,8 +169,19 @@ gulp.task('clean-build', function(callback){
   del([buildDest + '*'], callback);
 });
 
-gulp.task('build-mac', shell.task(['chmod -R 755 '+ buildDest +'Peerio/osx32/Peerio.app/']))
+/**
+ * Set permissions for Mac
+ */
+gulp.task('finalize-mac-build', shell.task(['chmod -R 755 '+ buildDest +'Peerio/osx32/Peerio.app/']))
 
+
+/**
+ * Zip the src directory, excluding node_modules.
+ */  
+gulp.task('finalize-win-build', function(callback) {
+	return gulp.src('src/chrome/img/notification.png')
+			.pipe(gulp.dest(buildDest +'Peerio/win32/'));
+});
 
 /**
  * Build the Mac, Windows, Linux & Chrome packages.
@@ -192,13 +203,13 @@ gulp.task('build', function(callback) {
 		  'CFBundleIdentifier': 'com.peerio.peeriomac',
 		  'DTSDKBuild': buildNumber
 		}, 
-		winIco: 'src/chrome/img/icon256.ico'
+		winIco: 'src/chrome/img/icon256.ico'				// comment this line if you don't have wine installed
 	});
 
   	runSequence('update-dependendencies', 'clean-build', function() {
   		nw.build()
   			.then(function() {
-	  			runSequence('build-mac', 'build-chrome', callback)
+	  			runSequence('finalize-mac-build', 'build-chrome', 'finalize-win-build', callback)
 			})
 			.catch(function (error) {
 				console.error(error);
