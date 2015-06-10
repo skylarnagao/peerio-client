@@ -1,6 +1,6 @@
 
     <title "Peerio">
-    <signupHeader "Messages et fichiers. Simple et sécuritaire.">
+    <signupHeader "Des messages et des fichiers. Simple et sécurisé.">
     <signupIntro "Peerio est une interface de messagerie, d'échange de fichiers et de stockage de documents complètement sécurisée. Toute l'information est chiffrée avant d'être envoyée sur notre nuage afin de s'assurer que seuls les expéditeurs et les destinataires ont accès à l'information. <br /><br /><strong>Peerio est présentement en Beta. <a href='https://peerio.com/pages/beta.html' target='_blank'>Cliquez ici pour plus d'information</a>.">
     <username "Nom d'utilisateur">
     <passphrase "Phrase secrète">
@@ -56,7 +56,7 @@
     <accountRateLimited "Veuillez attendre quelques minutes">
     <accountRateLimitedText "Ce compte est temporairement indisponible, car il a fait trop de demandes de serveur. Veuillez attendre quelques minutes et puis essayer de nouveau.">
     <accountBlacklisted "Compte Indisponible">
-    <accountBlacklistedText "This account is temporarily suspended. In order to regain access, please contact Peerio support by support@peerio.com.">
+    <accountBlacklistedText "Ce compte est temporairement suspendu. Afin de pouvoir accéder de nouveau. veuillez contacter l'assistance Peerio à support@peerio.com.">
     <searchMessagesFilesAndContacts "Rechercher des messages, fichiers ou contacts">
     <messages "Messages">
     <files "Fichiers">
@@ -259,7 +259,7 @@
     <peerioPINUpdatedText "Votre code secret a été mis à jour avec succès.">
     <removeMyPeerioPIN "Supprimer le code secret de cet appareil">
     <peerioPINRemoved "Code secret supprimé">
-    <peerioPINRemovedText "Votre code secret a été détruit.">
+    <peerioPINRemovedText "Le code de passe assigné à cet appareil a été supprimé.">
     <ctrlEnter "Répondre">
     <pressEnterToSend "Appuyez sur Entrée pour envoyer">
     <updateAvailable "Mise à jour disponible!">
@@ -319,7 +319,7 @@
     <fileMoveError "Impossible de déplacer le fichier dans le dossier.">
     <removeFileFolderDialogText2 "Les fichiers de ce dossier seront déplacés vers «Tous les fichiers».">
     <folder "Dossier">
-    <folderExistsError "Folder with this name already exists">
+    <folderExistsError "Un dossier portant ce nom existe déjà">
     <moveToFolder "Déplacer vers le dossier">
     <length "longueur">
     <words "mots">

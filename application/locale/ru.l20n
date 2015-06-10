@@ -259,7 +259,7 @@
     <peerioPINUpdatedText "Пароль для этого устройства был успешно обновлён.">
     <removeMyPeerioPIN "Удалить пароль устройства">
     <peerioPINRemoved "Пароль устройства удалён">
-    <peerioPINRemovedText "Пароль устройства удалён.">
+    <peerioPINRemovedText "The passcode assigned to this device has been removed.">
     <ctrlEnter "Отправить ответ">
     <pressEnterToSend "Нажмите Enter, чтобы отправить">
     <updateAvailable "Доступно обновление!">

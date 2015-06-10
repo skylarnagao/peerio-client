@@ -259,7 +259,7 @@
     <peerioPINUpdatedText "Ihr Passcode für dieses Gerät wurde erfolgreich aktualisiert.">
     <removeMyPeerioPIN "Geräte-Passcode entfernen">
     <peerioPINRemoved "Geräte-Passcode wurde entfernt">
-    <peerioPINRemovedText "Diesem Gerät zugewiesene Passcodes wurden vernichtet.">
+    <peerioPINRemovedText "Der diesem Gerät zugewiesene Passcode wurde entfernt.">
     <ctrlEnter "Antwort senden">
     <pressEnterToSend "Zum Senden Eingabetaste drücken">
     <updateAvailable "Aktualisierung verfügbar!">

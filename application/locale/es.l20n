@@ -259,7 +259,7 @@
     <peerioPINUpdatedText "Su código de acceso para este dispositivo ha sido actualizado.">
     <removeMyPeerioPIN "Eliminar el código-de-acceso del dispositivo">
     <peerioPINRemoved "Código-de-acceso del dispositivo eliminado">
-    <peerioPINRemovedText "Los códigos-de-acceso asignados a este dispositivo han sido destruidos.">
+    <peerioPINRemovedText "The passcode assigned to this device has been removed.">
     <ctrlEnter "Enviar respuesta">
     <pressEnterToSend "Pulse Intro para enviar">
     <updateAvailable "¡Actualización disponible!">

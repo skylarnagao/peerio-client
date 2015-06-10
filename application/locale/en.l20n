@@ -259,7 +259,7 @@
     <peerioPINUpdatedText "Your passcode for this device has been successfully updated.">
     <removeMyPeerioPIN "Remove Device Passcode">
     <peerioPINRemoved "Device Passcode Removed">
-    <peerioPINRemovedText "Passcodes assigned to this device have been destroyed.">
+    <peerioPINRemovedText "The passcode assigned to this device has been removed.">
     <ctrlEnter "Send Reply">
     <pressEnterToSend "Press Enter to send">
     <updateAvailable "Update Available!">
