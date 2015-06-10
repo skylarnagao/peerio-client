@@ -110,7 +110,8 @@ Peerio.UI.controller('signupForms', function ($scope) {
       firstName: $scope.signup.firstName,
       lastName: $scope.signup.lastName,
       address: $scope.signup.address,
-      miniLockID: Peerio.user.miniLockID
+      miniLockID: Peerio.user.miniLockID,
+      localeCode: Peerio.UI.localeCode
     }, function (data) {
       if (({}).hasOwnProperty.call(data, 'error')) {
         swal({
