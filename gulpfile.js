@@ -15,7 +15,7 @@ var gulp = require('gulp'),
 
 // settings
 var tmpSources = 'tmp/tx/*.json';
-var localeDest = 'src/chrome/locale';
+var localeDest = 'application/locale';
 var usedLangs = 'en,de,es,it,fr,ru';
 var buildDest = 'build/';
 var codesignCommands = ['Contents/Frameworks/crash_inspector', 							// all executables must be signed
@@ -85,7 +85,7 @@ gulp.task('localize:all', function(callback) {
  * Update dependencies in the source directory.
  **/
 gulp.task('update-dependendencies', shell.task([
-	'cd src/chrome/ && npm update'
+	'cd application/ && npm update'
   ])
 );
 
@@ -101,24 +101,24 @@ gulp.task('update', function(callback) {
  * Increment build number.
  */
 gulp.task('bump-build' ,function() {
-  return gulp.src(['src/chrome/build.txt'])
+  return gulp.src(['application/build.txt'])
   .pipe(replace(/([0-9]+)/g, function(match, number) {
 	return +number +1;
   }))
-  .pipe(gulp.dest('src/chrome/'))
+  .pipe(gulp.dest('application/'))
 });
 
 /**
  * Generate application config.js file from version and build numbers found in build.txt and package.json. 
  */
 gulp.task('bump-config', function(callback) {
-	var buildNumber = fs.readFileSync("src/chrome/build.txt", "utf8"),
-		version = JSON.parse(fs.readFileSync('src/chrome/package.json')).version;
+	var buildNumber = fs.readFileSync("application/build.txt", "utf8"),
+		version = JSON.parse(fs.readFileSync('application/package.json')).version;
 
-	return gulp.src('src/chrome/js/peerio/config.js')
+	return gulp.src('application/js/peerio/config.js')
 		.pipe(replace(/version: \'([0-9]|\.)+\',/gi, 'version: \'' + version + '\','))
 		.pipe(replace(/buildID: ([0-9]+),/gi, 'buildID: ' + buildNumber + ','))
-		.pipe(gulp.dest('src/chrome/js/peerio/'));
+		.pipe(gulp.dest('application/js/peerio/'));
 })
 
 /**
@@ -127,9 +127,9 @@ gulp.task('bump-config', function(callback) {
 gulp.task('bump-src', function(callback) {
 	var type = minimist(process.argv)['type'] || 'patch';
 
-	return gulp.src(['src/chrome/package.json', 'src/chrome/manifest.json'])
+	return gulp.src(['application/package.json', 'application/manifest.json'])
   			.pipe(bump({ type: type }))
-  			.pipe(gulp.dest('src/chrome/'));
+  			.pipe(gulp.dest('application/'));
 })
 
 /**
@@ -155,7 +155,7 @@ gulp.task('bump', function(callback) {
  * Zip the src directory, excluding node_modules.
  */  
 gulp.task('build-chrome', function(callback) {
-	return gulp.src('src/chrome/**')
+	return gulp.src('application/**')
 			.pipe(ignore.exclude(/node_modules/))
 			.pipe(zip('peerio-chrome.zip'))
 			.pipe(gulp.dest(buildDest +'Peerio/chrome/'));
@@ -179,7 +179,7 @@ gulp.task('finalize-mac-build', shell.task(['chmod -R 755 '+ buildDest +'Peerio/
  * Zip the src directory, excluding node_modules.
  */  
 gulp.task('finalize-win-build', function(callback) {
-	return gulp.src('src/chrome/img/notification.png')
+	return gulp.src('application/img/notification.png')
 			.pipe(gulp.dest(buildDest +'Peerio/win32/'));
 });
 
@@ -188,22 +188,23 @@ gulp.task('finalize-win-build', function(callback) {
  */  
 gulp.task('build', function(callback) {
 
-  var buildNumber = fs.readFileSync("src/chrome/build.txt", "utf8");
+  var buildNumber = fs.readFileSync("application/build.txt", "utf8");
 
   /**
    * Generate nwjs packages.
    */
   var nw = new NwBuilder({
-		files: 'src/chrome/**/**', // use the glob format
+		files: 'application/**/**', // use the glob format
 		platforms: ['win32', 'osx32', 'linux32'],
 		buildDir: buildDest, 
-		macIcns: 'src/chrome/img/nw.icns', 
+		cacheDir: 'tmp/nw',
+		macIcns: 'application/img/nw.icns', 
 		macPlist: {
 		  'UTTypeReferenceURL': 'https://peerio.com',
 		  'CFBundleIdentifier': 'com.peerio.peeriomac',
 		  'DTSDKBuild': buildNumber
 		}, 
-		winIco: 'src/chrome/img/icon256.ico'				// comment this line if you don't have wine installed
+		winIco: 'application/img/icon256.ico'				// comment this line if you don't have wine installed
 	});
 
   	runSequence('update-dependendencies', 'clean-build', function() {
