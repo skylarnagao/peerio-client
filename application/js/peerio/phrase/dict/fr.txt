@@ -1,34 +1,51 @@
+de
+je
 est
 pas
+le
 vous
+la
+tu
 que
-à
-a
+un
+il
+et
+ne
 les
+ce
+en
+on
 ça
 une
+ai
 pour
 des
 moi
 qui
 nous
-mais
-y
+maisme
 dans
+du
 bien
 elle
+si
 tout
 plus
 non
 mon
 suis
+te
+au
 avec
 oui
+va
 toi
 fait
 ils
+as
 être
 faire
+se
 comme
 était
 sur
@@ -37,9 +54,11 @@ ici
 sais
 lui
 veux
+ma
 là
 rien
 dit
+es
 où
 votre
 sont
@@ -54,6 +73,7 @@ dire
 vais
 avez
 bon
+ou
 très
 même
 merci
@@ -66,25 +86,27 @@ allez
 tous
 ces
 deux
+sa
 faut
 été
 êtes
+ta
 avoir
 fais
 peut
 autre
 encore
-peu
-m
-mes
+peumes
 temps
 notre
 vie
+oh
 juste
 sans
 avait
 monde
 accord
+vu
 fois
 aller
 trop
@@ -112,6 +134,8 @@ parler
 vos
 après
 mort
+ca
+eu
 veut
 parce
 sera
@@ -144,6 +168,7 @@ nos
 cela
 nuit
 avons
+merde
 cet
 papa
 maman
@@ -163,6 +188,7 @@ savoir
 plaît
 choses
 fils
+ah
 bas
 moins
 entre
@@ -189,6 +215,7 @@ heure
 puis
 tard
 tuer
+eh
 dû
 ami
 petite
@@ -208,10 +235,13 @@ porte
 serait
 prends
 venir
+pu
 seule
 sens
 allons
+putain
 idée
+ni
 contre
 revoir
 passer
@@ -285,7 +315,6 @@ jouer
 train
 gros
 compte
-s
 savais
 mourir
 parlé
@@ -320,7 +349,6 @@ garçon
 près
 cinq
 chef
-h
 ainsi
 haut
 celui
@@ -340,13 +368,11 @@ plutôt
 marche
 vérité
 envie
-e
 vue
 essaie
 font
 tomber
 numéro
-c
 garde
 dur
 serai
@@ -361,6 +387,7 @@ fera
 prend
 suffit
 route
+cul
 minute
 jeu
 ferme
@@ -368,7 +395,6 @@ mot
 chien
 prenez
 calme
-o
 dedans
 fous
 entrer
@@ -382,11 +408,11 @@ pauvre
 attend
 drôle
 ira
-l
 retour
 verre
 pensé
 six
+ci
 ferai
 aimes
 payer
@@ -415,7 +441,6 @@ rendre
 écrit
 équipe
 joue
-i
 sinon
 esprit
 rentre
@@ -428,7 +453,6 @@ année
 état
 soyez
 bois
-t
 laissé
 dès
 semble
@@ -441,7 +465,6 @@ mets
 rêve
 armée
 perdre
-d
 parles
 avis
 dormir
@@ -458,9 +481,11 @@ livre
 appris
 sale
 serais
+an
 sauf
 choix
 étiez
+or
 visage
 ordre
 essayé
@@ -477,15 +502,16 @@ allé
 ciel
 amie
 force
-j
 garder
 petits
+tirer
 grave
 marché
 voix
 propos
 bateau
 oublie
+con
 celle
 gauche
 prix
@@ -499,6 +525,8 @@ voyage
 sorte
 long
 espèce
+idiot
+gueule
 début
 bouge
 sort
@@ -543,7 +571,6 @@ pieds
 seras
 carte
 jolie
-n
 pied
 groupe
 venue
@@ -552,6 +579,8 @@ agent
 effet
 libre
 seront
+foutre
+bordel
 mots
 neuf
 tire
@@ -599,6 +628,7 @@ envoyé
 lire
 disait
 tombe
+su
 avance
 forme
 bord
@@ -615,9 +645,7 @@ ferait
 ignore
 diable
 sortez
-cadeau
-b
-flics
+cadeauflics
 avocat
 jure
 sept
@@ -634,6 +662,7 @@ grosse
 monter
 tenir
 bons
+balle
 selon
 classe
 paris
@@ -645,6 +674,7 @@ pote
 prête
 honte
 photos
+folle
 écrire
 suivre
 livres
@@ -657,8 +687,9 @@ huit
 radio
 arrêté
 change
-connu
-k
+baiser
+connulu
+pute
 bande
 enfer
 tenez
@@ -718,11 +749,14 @@ héros
 banque
 clé
 nord
+salaud
 cour
 juge
 bruit
+flic
 tient
 paraît
+crime
 assis
 thé
 payé
@@ -742,6 +776,7 @@ sol
 vent
 club
 gamin
+tante
 croit
 bar
 milieu
@@ -786,6 +821,7 @@ lequel
 mur
 ouvert
 église
+salope
 beauté
 lâche
 sauter
@@ -794,9 +830,7 @@ adieu
 parie
 entrée
 tort
-revenu
-f
-soldat
+revenusoldat
 auriez
 prince
 vis
@@ -810,9 +844,7 @@ presse
 frères
 preuve
 ouvrez
-gosse
-p
-rose
+gosserose
 nature
 vide
 cinéma
@@ -841,19 +873,19 @@ paie
 nul
 épouse
 tueur
-né
-r
-rendu
+nérendu
 course
 mien
 types
 coupe
+ha
 ouest
 idées
 gagne
 chat
 ayez
 dégage
+chier
 ravi
 étions
 joie
@@ -874,12 +906,11 @@ joyeux
 mariée
 mangé
 envers
+km
 ange
 copine
 règles
-dure
-u
-langue
+durelangue
 zone
 drogue
 charge
@@ -891,15 +922,14 @@ essaye
 soient
 dirais
 entier
-vécu
-v
-bus
+vécubus
 offrir
 cartes
 henry
 papier
 action
 permis
+bu
 rapide
 shérif
 frais
@@ -916,6 +946,7 @@ taille
 sexe
 sacré
 repas
+qu
 client
 lait
 faite
@@ -1028,9 +1059,7 @@ afin
 gare
 douce
 frappe
-fermé
-g
-alcool
+ferméalcool
 vendu
 samedi
 répète
@@ -1044,6 +1073,7 @@ animal
 raté
 règle
 meurs
+queue
 viande
 assure
 obligé
@@ -1094,6 +1124,7 @@ montez
 titre
 génie
 amené
+os
 perd
 valeur
 style
@@ -1125,11 +1156,13 @@ fer
 gorge
 talent
 passée
+sexy
 maria
 privé
 tuée
 feras
 direct
+in
 jette
 paquet
 fumer
@@ -1149,6 +1182,7 @@ dira
 job
 mode
 série
+pis
 sage
 mariés
 grandi
@@ -1170,6 +1204,7 @@ entré
 billet
 moteur
 caché
+al
 riches
 hiver
 épée
@@ -1194,6 +1229,7 @@ rues
 mentir
 plans
 coûte
+no
 offert
 paye
 fuir
@@ -1270,6 +1306,7 @@ source
 couche
 prêtre
 saison
+re
 mesure
 images
 sacrée
@@ -1290,6 +1327,7 @@ aube
 fleur
 coincé
 tenu
+bite
 étoile
 juif
 filer
@@ -1344,6 +1382,7 @@ foyer
 ayant
 voila
 jouez
+go
 brave
 sales
 roule
@@ -1356,6 +1395,7 @@ net
 ravie
 voient
 accusé
+ho
 navré
 sombre
 hâte
@@ -1384,6 +1424,7 @@ studio
 aurons
 quant
 traces
+gay
 traite
 gamins
 modèle
@@ -1395,6 +1436,7 @@ soyons
 empire
 baise
 débile
+black
 top
 devine
 privée
@@ -1408,6 +1450,7 @@ jaloux
 mener
 sainte
 temple
+bosser
 tâche
 enfuir
 sers
@@ -1446,10 +1489,9 @@ bouffe
 fumée
 crédit
 abruti
-virer
-x
-jus
+virerjus
 suivez
+pot
 cochon
 répond
 enlevé
@@ -1471,6 +1513,7 @@ lutte
 feriez
 terres
 brisé
+mn
 cap
 mardi
 tenter
@@ -1481,10 +1524,9 @@ craint
 examen
 élevé
 bouton
-ferez
-q
-passes
+ferezpasses
 rythme
+cancer
 jeudi
 parte
 têtes
@@ -1558,6 +1600,7 @@ crème
 parfum
 libres
 avoue
+nu
 pressé
 brûlé
 froide
@@ -1585,6 +1628,7 @@ digne
 riz
 vends
 puce
+ex
 vend
 dollar
 joseph
@@ -1621,6 +1665,7 @@ sommet
 ailes
 ramené
 rang
+bible
 livrer
 venger
 show
@@ -1639,9 +1684,7 @@ prenne
 gâcher
 adulte
 pommes
-auteur
-ô
-vague
+auteurvague
 bottes
 barbe
 sortes
@@ -1675,6 +1718,7 @@ retire
 vote
 fasses
 anges
+pisser
 bol
 nôtre
 soirs
@@ -1687,6 +1731,7 @@ amant
 baisé
 tandis
 villes
+do
 échoué
 risqué
 rempli
@@ -1721,9 +1766,7 @@ actes
 ferons
 indien
 auto
-baby
-w
-charme
+babycharme
 fièvre
 irais
 aides
@@ -1776,12 +1819,14 @@ dragon
 durs
 métro
 fonce
+chatte
 durer
 sortis
 lion
 séance
 foutue
 finale
+br
 congé
 pari
 trahi
@@ -1816,6 +1861,7 @@ rage
 cessez
 neveu
 blé
+veuve
 mile
 signes
 juin
@@ -1872,6 +1918,7 @@ fit
 nue
 voies
 garce
+canada
 issue
 façons
 salade
@@ -1910,9 +1957,11 @@ album
 valait
 repris
 fusils
+pipe
 çà
 volée
 coucou
+franc
 guère
 for
 élever
@@ -1947,9 +1996,7 @@ prime
 tels
 seules
 zut
-séjour
-z
-tabac
+séjourtabac
 chaos
 courte
 coûté
@@ -1997,6 +2044,7 @@ eut
 boue
 cabane
 poing
+he
 piquer
 francs
 termes
@@ -2021,6 +2069,7 @@ sexuel
 aidez
 crée
 défi
+pa
 longs
 estime
 arts
@@ -2053,15 +2102,18 @@ statue
 époux
 scènes
 survie
+kg
 manche
 pourvu
 mordu
 mettra
 gâché
+bourré
 masse
 luxe
 couru
 tueurs
+be
 mobile
 salue
 attire
@@ -2077,6 +2129,7 @@ usage
 revue
 sachez
 aile
+us
 prêtes
 bloc
 écoles
@@ -2103,6 +2156,7 @@ tombes
 sépare
 fermes
 cesser
+er
 côtes
 saut
 relève
@@ -2114,6 +2168,7 @@ cassée
 serre
 menacé
 casier
+cm
 vides
 suisse
 outils
@@ -2147,6 +2202,7 @@ connus
 savon
 pendre
 osé
+pipi
 sauras
 leçons
 viol
@@ -2163,11 +2219,14 @@ bush
 coûter
 peste
 élu
+joint
 retiré
 machin
 fameux
+nègre
 boules
 requin
+porno
 étude
 rit
 assuré
@@ -2208,6 +2267,7 @@ cash
 range
 marc
 ris
+pr
 fâchée
 extra
 leader
@@ -2236,6 +2296,7 @@ vif
 saigne
 légal
 ticket
+li
 coca
 tendu
 sauvée
@@ -2255,6 +2316,7 @@ anneau
 pompe
 crevé
 douée
+mm
 bandes
 impact
 médias
@@ -2338,10 +2400,12 @@ pan
 genou
 mortes
 lutter
+péter
 aperçu
 défaut
 pat
 réduit
+homo
 poli
 parié
 brésil
@@ -2375,6 +2439,7 @@ subi
 graves
 écrite
 gênant
+cuba
 jouet
 boys
 devrai
@@ -2388,6 +2453,7 @@ filet
 nièce
 nazis
 carton
+allumé
 pété
 tues
 payés
@@ -2504,10 +2570,12 @@ coeurs
 paiera
 caches
 prouvé
+ri
 moine
 alpha
 admets
 lapins
+mi
 banc
 tiroir
 bougé
@@ -2529,6 +2597,7 @@ maigre
 gant
 violée
 rêvais
+gin
 engage
 former
 voyou
@@ -2612,6 +2681,7 @@ obsédé
 énervé
 sueur
 iront
+latin
 béni
 perles
 aidée
@@ -2641,6 +2711,7 @@ fouet
 colin
 obéis
 culot
+mo
 bazar
 case
 relais
@@ -2665,6 +2736,7 @@ rasoir
 moquer
 alliés
 aîné
+laid
 nier
 maïs
 veines
@@ -2689,6 +2761,7 @@ lions
 tuyaux
 hauts
 paient
+crack
 pull
 entrés
 enfuie
@@ -2722,6 +2795,7 @@ bandit
 ruine
 merdes
 loyal
+fa
 laser
 amenée
 ruiné
@@ -2769,6 +2843,7 @@ débat
 jambon
 paré
 pige
+jouir
 pyjama
 taches
 tapé
@@ -2820,6 +2895,7 @@ paies
 nain
 appât
 nomme
+cd
 dansé
 grippe
 badge
@@ -2829,6 +2905,7 @@ priez
 orbite
 farce
 armure
+co
 mômes
 marée
 fondre
@@ -2894,6 +2971,7 @@ voté
 marge
 vendue
 plumes
+suce
 creuse
 prions
 causes
@@ -2904,6 +2982,7 @@ céder
 hésite
 rituel
 porcs
+caca
 pleurs
 mord
 éclat
@@ -2923,6 +3002,7 @@ treize
 ego
 visuel
 stock
+at
 durée
 plaie
 mers
@@ -2944,6 +3024,7 @@ brune
 sons
 nuls
 plaise
+di
 rejeté
 chassé
 item
@@ -2984,6 +3065,7 @@ farine
 bases
 vidé
 yang
+dope
 zones
 lancez
 cibles
@@ -2992,8 +3074,10 @@ amusé
 parts
 degré
 canyon
+am
 ponts
 torche
+pédale
 cote
 bijou
 actuel
@@ -3112,6 +3196,7 @@ autel
 purée
 grade
 âgée
+fi
 épais
 profs
 ciné
@@ -3141,6 +3226,7 @@ soigne
 phare
 iris
 effacé
+na
 câlin
 blair
 nounou
@@ -3199,6 +3285,7 @@ violet
 nuque
 blond
 tigres
+crash
 soigné
 culs
 globe
@@ -3232,6 +3319,7 @@ hou
 adopté
 bridge
 nourri
+if
 barque
 cycle
 cure
@@ -3246,6 +3334,7 @@ pâques
 nommer
 ironie
 pâte
+hi
 donnés
 vénus
 évêque
@@ -3261,6 +3350,7 @@ dépit
 loue
 laide
 milord
+boom
 gays
 abus
 révèle
@@ -3275,6 +3365,7 @@ kilo
 habit
 valoir
 échoue
+nazi
 trêve
 fautes
 ôter
@@ -3308,11 +3399,13 @@ pieu
 arriva
 tac
 ancre
+bander
 freins
 turc
 fatal
 pair
 brin
+fr
 filons
 momie
 brun
@@ -3378,6 +3471,7 @@ punis
 amours
 dora
 cadet
+jade
 abîme
 unir
 savant
@@ -3387,6 +3481,7 @@ brume
 citer
 chauds
 courts
+bd
 amer
 cite
 osez
@@ -3489,8 +3584,10 @@ vivrai
 toits
 tombez
 bulles
+panama
 traits
 graine
+urine
 impoli
 lances
 choeur
@@ -3553,6 +3650,7 @@ lier
 cornes
 gratte
 pièges
+ra
 chiot
 cavale
 chaton
@@ -3609,6 +3707,7 @@ câbles
 vital
 tanks
 chie
+melon
 séparé
 cliché
 crotte
@@ -3640,6 +3739,7 @@ liée
 plier
 régner
 patate
+drague
 frein
 endors
 chope
@@ -3666,6 +3766,7 @@ notion
 tirés
 marina
 dorme
+gerber
 baisée
 noie
 intact
@@ -3790,6 +3891,7 @@ guérie
 ragoût
 vanité
 tic
+po
 tuées
 larme
 percé
@@ -3930,6 +4032,7 @@ enfile
 tâchez
 chéris
 tara
+iii
 tirait
 étendu
 micros
@@ -4057,6 +4160,7 @@ punie
 dédié
 arène
 mini
+pi
 réside
 muette
 maries
@@ -4219,6 +4323,7 @@ corvée
 forcez
 steaks
 haines
+ba
 pornos
 filets
 équipé
@@ -4259,6 +4364,7 @@ kimono
 drap
 dring
 tantes
+abuse
 basses
 rêvez
 gag
@@ -4358,6 +4464,7 @@ lue
 imite
 lacs
 trahie
+fe
 taxe
 sourds
 déluge
@@ -4490,6 +4597,7 @@ merlin
 crèche
 doutez
 naïve
+cirer
 congés
 mûre
 fuites
@@ -4531,6 +4639,7 @@ quais
 abat
 braque
 menés
+bi
 exigé
 bossu
 teste
@@ -4548,6 +4657,8 @@ joujou
 nœuds
 jugez
 fluide
+ac
+ge
 blocs
 moches
 motos
@@ -4610,11 +4721,13 @@ posera
 grasse
 amoché
 jusqu
+moule
 banale
 frits
 sûres
 bénir
 trot
+ti
 brut
 vocale
 cutter
@@ -4692,6 +4805,7 @@ gourde
 té
 foute
 vitaux
+trique
 puceau
 errer
 enclos
@@ -4711,6 +4825,7 @@ mécano
 cirage
 ardent
 sème
+perse
 ficher
 atomes
 saveur
@@ -4732,16 +4847,19 @@ souche
 hic
 fibre
 olives
+poilu
 lai
 jouiez
 avide
 guidé
+anus
 cocu
 twist
 émue
 écarté
 serres
 rite
+trio
 jeton
 flair
 craie
@@ -4749,6 +4867,7 @@ rounds
 livrée
 octave
 waters
+gouine
 irwin
 sali
 bambou
@@ -4808,6 +4927,7 @@ donjon
 belge
 fêlé
 osais
+ch
 aval
 barbu
 portés
@@ -4852,6 +4972,7 @@ pif
 frire
 sabine
 cobaye
+rabbi
 oscars
 timbre
 azur
@@ -4928,6 +5049,7 @@ juteux
 duquel
 capté
 collée
+fat
 régale
 tope
 autos
@@ -4941,9 +5063,11 @@ sénile
 divise
 gronde
 ratez
+squaw
 barder
 dicter
 rendes
+morue
 clans
 muse
 cake
@@ -5002,6 +5126,7 @@ pigez
 démodé
 stylos
 benne
+mu
 singer
 tirons
 refilé
@@ -5065,6 +5190,7 @@ crus
 fis
 tua
 musclé
+china
 évacue
 clebs
 flancs
@@ -5154,6 +5280,7 @@ quitta
 coran
 payant
 prunes
+voyeur
 gadget
 sketch
 chacal
@@ -5349,6 +5476,7 @@ cadets
 zéros
 cils
 cerner
+ar
 éther
 dus
 bisons
@@ -5396,6 +5524,7 @@ datent
 initié
 beige
 faces
+mg
 dînons
 fendre
 matez
@@ -5444,7 +5573,9 @@ sucres
 mous
 armez
 gaule
+ir
 éloge
+ms
 sentis
 hélium
 médocs
@@ -5505,6 +5636,7 @@ raton
 pillé
 laissa
 épris
+ut
 emparé
 fade
 frôlé
@@ -5544,6 +5676,7 @@ brises
 logé
 aumône
 bandés
+fm
 payons
 dues
 fend
@@ -5559,7 +5692,9 @@ python
 ponton
 écorce
 givré
+oral
 déc
+shoot
 visait
 typhon
 augure
@@ -5570,12 +5705,14 @@ potins
 grogne
 prient
 filait
+mali
 clones
 bals
 chics
 gelés
 valser
 cric
+ga
 avare
 fuyant
 vexée
@@ -5727,6 +5864,7 @@ gaines
 plaidé
 trier
 moisi
+vomit
 mirent
 perdit
 digue
@@ -5743,6 +5881,7 @@ mesa
 loulou
 érable
 jouit
+negro
 défini
 bœufs
 rebut
@@ -5780,14 +5919,18 @@ jetant
 bidule
 phénix
 adopte
+sr
 vanne
 mixer
 zéphyr
+harem
 tapent
 grêle
+cc
 trouer
 reggae
 goujat
+bonze
 expiré
 impur
 nurse
@@ -5906,6 +6049,7 @@ bette
 garrot
 occase
 tchao
+libido
 sautée
 cortex
 must
@@ -5965,6 +6109,7 @@ sil
 selles
 fumais
 dinars
+pm
 rétro
 émerge
 varie
@@ -6058,6 +6203,7 @@ muter
 blocus
 caddie
 fats
+xi
 scié
 punira
 remous
@@ -6154,6 +6300,7 @@ bit
 vénéré
 fallut
 téton
+anal
 plis
 averse
 ritals
@@ -6234,6 +6381,7 @@ farces
 salve
 pesé
 guidés
+cr
 créées
 sodium
 boots
@@ -6364,6 +6512,7 @@ toge
 allier
 vanté
 méduse
+ki
 ancré
 colles
 rasée
@@ -6539,6 +6688,7 @@ bavure
 sève
 dosage
 uriner
+hymen
 raines
 égaler
 macs
@@ -6638,6 +6788,7 @@ calmée
 haïs
 tarin
 rallye
+ml
 clamp
 triplé
 pollué
@@ -6760,6 +6911,7 @@ chipie
 lino
 lises
 mécène
+ru
 pieuse
 flirté
 hep
@@ -6813,6 +6965,7 @@ pal
 saki
 kraken
 latte
+bitte
 nages
 luttez
 lavais
@@ -6911,6 +7064,7 @@ soucié
 mono
 poilue
 minous
+nd
 nichon
 huma
 hameau
@@ -6931,6 +7085,7 @@ morflé
 chaste
 râpé
 échos
+monta
 ignare
 nomade
 paella
@@ -6974,6 +7129,7 @@ boirez
 renaît
 gères
 motels
+rectum
 tonus
 ériger
 rusés
@@ -7223,6 +7379,7 @@ dotés
 jailli
 boxers
 pétée
+étron
 djinn
 galon
 boiras
@@ -7311,6 +7468,7 @@ fières
 réfère
 émus
 poncho
+cl
 décimé
 breton
 imbibé
@@ -7319,6 +7477,7 @@ truffé
 kayak
 ter
 orale
+ph
 marré
 tique
 pubis
@@ -7516,6 +7675,7 @@ démis
 gemma
 castré
 crypté
+tc
 cimes
 bistro
 cocas
@@ -7632,6 +7792,7 @@ carpes
 aigus
 ondine
 vinyle
+pd
 génome
 condom
 maints
@@ -7856,6 +8017,7 @@ sis
 peyotl
 plot
 gelait
+anale
 loris
 torché
 réjoui
@@ -7945,6 +8107,7 @@ atours
 aima
 pilori
 créole
+cu
 prône
 ricin
 riens
@@ -8031,6 +8194,7 @@ nabab
 connut
 dénuée
 bans
+sm
 homes
 soûles
 murai
@@ -8170,6 +8334,7 @@ cohue
 rugir
 turbin
 lavées
+ag
 joués
 remuée
 rotary
@@ -8570,6 +8735,7 @@ blâmes
 zoomer
 rucha
 étai
+th
 abusée
 mouché
 attira
@@ -8681,6 +8847,7 @@ glacer
 lynché
 vendes
 cites
+merlan
 référé
 ramé
 régné
@@ -8723,6 +8890,7 @@ loves
 thym
 cousus
 butez
+mufti
 rallié
 tapi
 baille
@@ -8913,6 +9081,7 @@ cajou
 joules
 labels
 candi
+kt
 satine
 orne
 chiait
@@ -8983,6 +9152,7 @@ pastel
 statué
 bêtas
 osons
+slave
 battit
 packs
 nommes
@@ -9147,6 +9317,7 @@ ravivé
 rentes
 riment
 sèmera
+xe
 édité
 calée
 lorgne
@@ -9191,6 +9362,7 @@ dagues
 gazé
 crotté
 fumiez
+cs
 auvent
 prisme
 avorte
@@ -9367,6 +9539,7 @@ arrière
 attaque
 pourtant
 réponse
+connard
 étrange
 exemple
 secours
@@ -9472,6 +9645,7 @@ dossier
 animaux
 imbécile
 chevaux
+enfoiré
 enchanté
 douleur
 arrivera
@@ -9602,6 +9776,7 @@ vendredi
 accepte
 parlons
 certaine
+couilles
 revenez
 recevoir
 répondu
@@ -10362,6 +10537,7 @@ endormi
 cuisiner
 mérites
 passerai
+déconne
 tiendra
 quittes
 culotte
@@ -10760,6 +10936,7 @@ inventer
 facteur
 chinoise
 rapporté
+chiottes
 délicat
 racontez
 concept
@@ -10778,6 +10955,7 @@ document
 recette
 magasins
 altitude
+déconner
 indices
 bureaux
 réplique
@@ -10849,6 +11027,7 @@ garantis
 remplace
 organes
 dénoncer
+merdeux
 tronche
 cheville
 décharge
@@ -11293,6 +11472,7 @@ martiaux
 détente
 haleine
 absolue
+emmerder
 armoire
 chantent
 dépasser
@@ -11348,6 +11528,7 @@ posséder
 environs
 vilaine
 appuyez
+connasse
 directe
 banlieue
 graisse
@@ -11427,6 +11608,7 @@ accélère
 shopping
 parvenir
 reconnue
+tapette
 loterie
 spatial
 couverts
@@ -11570,6 +11752,7 @@ promise
 ruisseau
 baratin
 indiquer
+allumée
 suggéré
 disputés
 cigares
@@ -11822,6 +12005,7 @@ pianiste
 vitrine
 maréchal
 médicaux
+branler
 menteurs
 ouvrira
 ignorant
