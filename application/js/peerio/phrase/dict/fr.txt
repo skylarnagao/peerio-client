@@ -23,7 +23,8 @@ des
 moi
 qui
 nous
-maisme
+mais
+me
 dans
 du
 bien
@@ -96,7 +97,8 @@ fais
 peut
 autre
 encore
-peumes
+peu
+mes
 temps
 notre
 vie
@@ -645,7 +647,8 @@ ferait
 ignore
 diable
 sortez
-cadeauflics
+cadeau
+flics
 avocat
 jure
 sept
@@ -688,7 +691,8 @@ radio
 arrêté
 change
 baiser
-connulu
+connu
+lu
 pute
 bande
 enfer
@@ -830,7 +834,8 @@ adieu
 parie
 entrée
 tort
-revenusoldat
+revenu
+soldat
 auriez
 prince
 vis
@@ -844,7 +849,8 @@ presse
 frères
 preuve
 ouvrez
-gosserose
+gosse
+rose
 nature
 vide
 cinéma
@@ -873,7 +879,8 @@ paie
 nul
 épouse
 tueur
-nérendu
+né
+rendu
 course
 mien
 types
@@ -910,7 +917,8 @@ km
 ange
 copine
 règles
-durelangue
+dure
+langue
 zone
 drogue
 charge
@@ -922,7 +930,8 @@ essaye
 soient
 dirais
 entier
-vécubus
+vécu
+bus
 offrir
 cartes
 henry
@@ -1059,7 +1068,8 @@ afin
 gare
 douce
 frappe
-ferméalcool
+fermé
+alcool
 vendu
 samedi
 répète
@@ -1489,7 +1499,8 @@ bouffe
 fumée
 crédit
 abruti
-virerjus
+virer
+jus
 suivez
 pot
 cochon
@@ -1524,7 +1535,8 @@ craint
 examen
 élevé
 bouton
-ferezpasses
+ferez
+passes
 rythme
 cancer
 jeudi
@@ -1684,7 +1696,8 @@ prenne
 gâcher
 adulte
 pommes
-auteurvague
+auteur
+vague
 bottes
 barbe
 sortes
@@ -1766,7 +1779,8 @@ actes
 ferons
 indien
 auto
-babycharme
+baby
+charme
 fièvre
 irais
 aides
@@ -1826,7 +1840,6 @@ lion
 séance
 foutue
 finale
-br
 congé
 pari
 trahi
@@ -1996,7 +2009,8 @@ prime
 tels
 seules
 zut
-séjourtabac
+séjour
+tabac
 chaos
 courte
 coûté
@@ -2102,7 +2116,6 @@ statue
 époux
 scènes
 survie
-kg
 manche
 pourvu
 mordu
@@ -2168,7 +2181,6 @@ cassée
 serre
 menacé
 casier
-cm
 vides
 suisse
 outils
@@ -2267,7 +2279,6 @@ cash
 range
 marc
 ris
-pr
 fâchée
 extra
 leader
