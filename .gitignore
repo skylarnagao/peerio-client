@@ -13,3 +13,9 @@ tmp
 node_modules
 npm-debug.log
 .transifexrc
+*.vcxproj
+*.vcxproj.*
+*.cmd
+*.sln
+build/*
+cache/*
