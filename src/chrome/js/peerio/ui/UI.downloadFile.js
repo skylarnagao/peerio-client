@@ -38,8 +38,8 @@ Peerio.UI.downloadFile = {};
 						return false
 					}
 					if (!Peerio.file.getFileExtension(fileEntry.name)) {
-						fileEntry.name = fileEntry.name + Peerio.file.getFileExtension(fileName)
-						fileEntry.fullPath = fileEntry.fullPath + Peerio.file.getFileExtension(fileName)
+						//fileEntry.name = fileEntry.name + Peerio.file.getFileExtension(fileName)
+						//fileEntry.fullPath = fileEntry.fullPath + Peerio.file.getFileExtension(fileName)
 					}
 					fileEntry.createWriter(function(fileWriter) {
 						fileWriter.onwriteend = function() {
