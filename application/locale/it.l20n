@@ -1,7 +1,7 @@
 
     <title "Peerio">
     <signupHeader "Messaggi e file. In semplicità e sicurezza.">
-    <signupIntro "Peerio is a simple and secure way to send messages, share files, and store documents online. Everything gets encrypted before being sent to cloud, so nobody but you and those you share with ever have access to your data.<br /><br /><strong>Peerio is currently in Beta. <a href='https://peerio.com/pages/beta.html' target='_blank'>See what this means</a>.">
+    <signupIntro "Peerio is a simple and secure way to send messages, share files, and store documents online. Everything gets encrypted before being sent to the cloud, so nobody but you and those you share with ever have access to your data.<br /><br /><strong>Peerio is currently in Beta. <a href='https://peerio.com/pages/beta.html' target='_blank'>See what this means</a>.">
     <username "Nome utente">
     <passphrase "Passphrase">
     <passphraseOrPIN "Passphrase or Passcode">
@@ -20,7 +20,7 @@
     <lastName "Cognome">
     <emailOrPhone "Email or mobile">
     <yourPassphrase "La tua passphrase">
-    <infoAlertPassphrase "For stronger security, Peerio uses <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'>randomly generated passphrases</a>. <strong>Your passphrase is the master key to your account!</strong>  You are the sole owner of your passphrase, and your account's security depends on you remembering and protecting it. You will need it to login to your account on new devices. If you lose your passphrase, you will permanently lose access to your account. We recommend writing your passphrase down on paper, or storing it in a secure password manager.">
+    <infoAlertPassphrase "For stronger security, Peerio uses <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'>randomly generated passphrases</a>. <br><br><strong>You are the sole owner of your passphrase!</strong> If you lose it, you will permanently lose access to your account. We recommend writing your passphrase down on paper, or storing it in a secure password manager.">
     <infoAlertPassphraseNote "<strong>Don't worry</strong>, in a moment you will be able to set a shorter pass<i>code</i> for quick access on this device.">
     <signupPassphraseConfirm "Use this passphrase?">
     <signupPassphraseConfirmText "<strong>Remember</strong>, you are the sole owner of this passphrase. <a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>If you lose it</a>, your account will be lost forever. So just to be safe, please enter your passphrase once more in order to continue.">
@@ -56,7 +56,7 @@
     <accountRateLimited "Please Wait A Few Minutes">
     <accountRateLimitedText "Questo account è temporaneamente non disponibile perchè ha inviato troppe richieste al server. Per favore attendi qualche minuto e riprova.">
     <accountBlacklisted "Account Non Disponibile">
-    <accountBlacklistedText "This account is temporarily suspended. In order to regain access, please contact Peerio support by support@peerio.com.">
+    <accountBlacklistedText "This account is temporarily suspended. In order to regain access, please contact Peerio support at support@peerio.com.">
     <searchMessagesFilesAndContacts "Search messages, files, and contacts">
     <messages "Messaggi">
     <files "Files">
@@ -324,5 +324,6 @@
     <length "length">
     <words "words">
     <unsorted "Unsorted">
-    <typePassphraseToConfirm "Please enter this passphrase as it appears above to accept and continue">
+    <typePassphraseToConfirm "To accept this passphrase, please enter it below">
     <passphraseConfirmFailed "Your passphrase was entered incorrectly. Please store your passphrase somewhere safe before continuing.">
+    <acknowledgedMessage "Acknowledged Message">

@@ -20,7 +20,7 @@
     <lastName "Nachname">
     <emailOrPhone "E-Mail oder Mobiltelefon">
     <yourPassphrase "Ihre Passphrase">
-    <infoAlertPassphrase "Für höhere Sicherheit verwendet Peerio <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'>zufällig erzeugte Passphrasen</a>. <strong>Ihre Passphrase ist Ihr Generalschlüssel zu Ihrem Benutzerkonto!</strong> Sie sind der alleinige Besitzer Ihrer Passphrase, und die Sicherheit Ihres Benutzerkontos hängt davon ab, dass Sie es sich merken und es schützen. Es wird für die Kontoanmeldung auf neuen Geräten benötigt. Falls Sie Ihre Passphrase verlieren, werden Sie dauerhaft den Zugriff auf Ihr Benutzerkonto verlieren. Wir empfehlen daher, die Passphrase auf Papier zu notieren oder in einem sicheren Passwortmanager aufzubewahren.">
+    <infoAlertPassphrase "Für höhere Sicherheit verwendet Peerio <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'>zufällig erzeugte Passphrasen</a>. <br><br><strong>Sie sind der alleinige Besitzer Ihrer Passphrase!</strong> Falls Sie sie verlieren, werden Sie dauerhaft den Zugriff auf Ihr Benutzerkonto verlieren. Wir empfehlen, die Passphrase auf Papier zu notieren oder in einem sicheren Passwortmanager aufzubewahren.">
     <infoAlertPassphraseNote "<strong>Keine Sorge</strong>, gleich werden Sie einen kürzeren Pass<i>code</i> für schnellen Zugriff auf dieses Gerät festlegen können.">
     <signupPassphraseConfirm "Diese Passphrase verwenden?">
     <signupPassphraseConfirmText "<strong>Denken Sie daran:</strong>; Sie sind der alleinige Besitzer dieser Passphrase. <a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>Falls Sie sie verlieren, wird Ihr Benutzerkonto dauerhaft verloren sein. Bitte geben Sie zu Ihrer Sicherheit die Passphrase noch einmal ein, um fortzufahren.">
@@ -324,5 +324,6 @@
     <length "Länge">
     <words "Wörter">
     <unsorted "Unsortiert">
-    <typePassphraseToConfirm "Bitte geben Sie diese Passphrase wie oben angezeigt ein, um zuzustimmen und fortzufahren">
+    <typePassphraseToConfirm "Um dieser Passphrase zuzustimmen, geben Sie sie bitte unten ein">
     <passphraseConfirmFailed "Ihre Passphrase wurde falsch eingegeben. Bitte bewahren Sie diese an einem sicheren Ort auf, bevor Sie fortfahren.">
+    <acknowledgedMessage "Bestätigte Nachricht">
