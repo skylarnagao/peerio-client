@@ -15,10 +15,13 @@ if (typeof(require) === 'function') {
 
 	// Add Mac native menubar
 	if (navigator.appVersion.indexOf('Mac') >= 0) {
-		var win = gui.Window.get()
-		var nativeMenuBar = new gui.Menu({ type: 'menubar' })
-		nativeMenuBar.createMacBuiltin('Peerio')
-		win.menu = nativeMenuBar
+		Peerio.platform = 'mac';
+		var win = gui.Window.get();
+		var nativeMenuBar = new gui.Menu({ type: 'menubar' });
+		nativeMenuBar.createMacBuiltin('Peerio');
+		win.menu = nativeMenuBar;
+	} else {
+		Peerio.platform = process.platform;
 	}
 
 	// Check for update
@@ -85,4 +88,6 @@ if (typeof(require) === 'function') {
 
 	// Catch process errors
 	process.on('uncaughtException', function(e) { console.log(e) })
+} else {
+	Peerio.platform = 'chrome';
 }
