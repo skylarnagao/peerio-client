@@ -23,7 +23,7 @@
     <infoAlertPassphrase "For stronger security, Peerio uses <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'>randomly generated passphrases</a>. <br><br><strong>You are the sole owner of your passphrase!</strong> If you lose it, you will permanently lose access to your account. We recommend writing your passphrase down on paper, or storing it in a secure password manager.">
     <infoAlertPassphraseNote "<strong>Don't worry</strong>, in a moment you will be able to set a shorter pass<i>code</i> for quick access on this device.">
     <signupPassphraseConfirm "Use this passphrase?">
-    <signupPassphraseConfirmText "<strong>Remember</strong>, you are the sole owner of this passphrase. <a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>If you lose it</a>, your account will be lost forever. So just to be safe, please enter your passphrase once more in order to continue.">
+    <signupPassphraseConfirmText "<strong>Remember</strong>, you are the sole owner of this passphrase. <a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>If you lose it</a>, your account will be lost forever. So just to be safe, <strong>please enter your passphrase once more in order to continue.</strong>">
     <signupYourGeneratedPassphrase "Your generated passphrase:">
     <signupPassphraseRefresh "Change passphrase">
     <error "Error">

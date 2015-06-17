@@ -23,7 +23,7 @@
     <infoAlertPassphrase "Pour une sécurité accrue, Peerio utilise des <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'>phrases de passe générées aléatoirement</a>. <br><br><strong>Vous êtes l'unique propriétaire de votre phrase de passe !</strong> Si vous la perdez, vous n'aurez plus jamais accès à votre compte. Nous vous recommandons de prendre votre phrase de passe en note ou de la conserver dans un gestionnaire de mots de passe sécurisé.">
     <infoAlertPassphraseNote "<strong>Ne vous inquiétez pas</strong>, dans quelques instants vous pourrez définir un <i>code</i> de passe plus court pour un accès rapide à partir de cet appareil.">
     <signupPassphraseConfirm "Utiliser cette phrase de passe ?">
-    <signupPassphraseConfirmText "<strong>Souvenez-vous</strong> que vous êtes le seul propriétaire de cette phrase de passe.<a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>Si vous la perdez</a>, votre compte sera perdu pour toujours. Donc par sécurité, veuillez saisir votre phrase de passe de nouveau afin de pouvoir continuer. ">
+    <signupPassphraseConfirmText "<strong>Souvenez-vous</strong> que vous êtes le seul propriétaire de cette phrase de passe.<a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>Si vous la perdez</a>, votre compte sera perdu pour toujours. Donc par sécurité, <strong>veuillez saisir votre phrase de passe de nouveau afin de pouvoir continuer.</strong>">
     <signupYourGeneratedPassphrase "Votre phrase de passe générée :">
     <signupPassphraseRefresh "Changer la phrase de passe">
     <error "Erreur">
