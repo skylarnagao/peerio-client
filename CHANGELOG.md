@@ -1,3 +1,21 @@
+##Peerio 1.1.0 (10)
+**June 16, 2015**
+- Added folders for file and conversation organization (#54).
+- Added passphrase confirmation step to signup.
+- Added interface languages: Spanish, German, Russian, Italian.
+- Simplified passphrase dictionaries.
+- Added passphrase language options (English, French, Spanish, German, Italian) and length options.
+- Renamed PIN to passcode.
+- Numerous copy changes (See [peerio-copy](https://github.com/PeerioTechnologies/peerio-copy)).
+- Include OpenOffice (& other) file extensions under "Text" documents.
+- Fixed bug #262 where button to remove a passcode.
+- Fixed bug #258, make "skip" in passcode step a button.
+- Fixed bug #157, no way to switch languages before signup.
+- Fixed bug in Chrome version where extension-less files could not be downloaded.
+- New build process.
+- MSI instead of EXE for Windows installer.
+- Improved documentation.
+
 ##Peerio 1.0.4.3 (9)
 **April 6 2015**
 - This update fixes an issue where a warning popup would fail to show when a contact's public identity changed. All other key verifications mechanisms were unaffected.
