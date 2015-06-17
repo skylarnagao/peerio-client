@@ -63,7 +63,7 @@ Peerio.UI.controller('signupForms', function ($scope) {
     $('div.signupProgressBarFill').css({width: 100})
     $('form.signupBasicInformation').hide()
     $('form.signupYourPassphrase').show()
-    $('form.signupYourPassphrase').find('input')[0].focus()
+    //$('form.signupYourPassphrase').find('input')[0].focus()
     Peerio.UI.applyDynamicElements()
     $scope.signup.generatedPassphraseRefresh()
     if (typeof(require) === 'function') {
@@ -76,6 +76,8 @@ Peerio.UI.controller('signupForms', function ($scope) {
   }
   $scope.signup.checkPassphrase = function () {
     $scope.signup.username = $scope.signup.username.toLowerCase()
+
+    $('.signupGeneratedPassphrase').addClass('blurred');
     swal({
       title: document.l10n.getEntitySync('signupPassphraseConfirm').value,
       text: document.l10n.getEntitySync('signupPassphraseConfirmText').value,
@@ -86,6 +88,7 @@ Peerio.UI.controller('signupForms', function ($scope) {
       closeOnConfirm: false,
       inputType: 'text'
     }, function (input) {
+      $('.signupGeneratedPassphrase').removeClass('blurred');
       if(input !== $scope.signup.passphrase)  {
         swal('error',document.l10n.getEntitySync('passphraseConfirmFailed').value, 'error');
         return false;
@@ -100,8 +103,12 @@ Peerio.UI.controller('signupForms', function ($scope) {
       )
       swal.close();
     });
+    window.setTimeout(function(){
+      $('.sweet-alert.show-input input').bind('paste', function(e){e.preventDefault();});
+    }, 300);
 
   }
+
   $scope.signup.registerAccount = function () {
     $scope.signup.address = Peerio.util.parseAddress($scope.signup.emailOrPhone)
     $scope.signup.username = $scope.signup.username.toLowerCase()
