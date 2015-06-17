@@ -74,7 +74,8 @@ Peerio.network.getAuthTokens = function (callback) {
   Peerio.socket.emit('authTokenRequest', {
     username: Peerio.user.username,
     miniLockID: Peerio.user.miniLockID,
-    //version: Peerio.config.version
+    version: Peerio.config.version,
+    platform: Peerio.platform
   }, callback)
 }
 
