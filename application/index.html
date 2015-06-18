@@ -298,7 +298,7 @@
                     <span class="folder-counter" style="pointer-events: none;" ng-show="$root.convFolders.inboxCounter">
                         {{$root.convFolders.inboxCounter}}</span>
                 </li>
-                <li data-l10n-id="allMessages"
+                <li data-l10n-id="allMessages" id='allMessagesFolder'
                     data-ng-mousedown="messagesSection.setTypeFilter('all', $event)"></li>
             </ul>
 
@@ -338,7 +338,7 @@
                     class="active" style="transform-origin: left;transition:transform 0.1s linear; font-size:110%"
                     data-l10n-id="unsorted"
                     data-ng-mousedown="filesSection.setTypeFilter('unsorted', $event)"></li>
-                <li style=" font-size:110%"
+                <li style=" font-size:110%" id="allFilesFolder"
                     data-l10n-id="allDocuments"
                     data-ng-mousedown="filesSection.setTypeFilter('', $event)"></li>
             </ul>

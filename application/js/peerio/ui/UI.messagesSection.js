@@ -441,6 +441,10 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
       $scope.$root.$broadcast('frontModalsClose', null)
     })
     $scope.$on('messagesSectionSetSearchFilter', function (event, input) {
+      if($scope.messagesSection.searchFilter === '' && input !==''){
+        //resetting folder to 'all' to be able display all search results
+        $scope.messagesSection.setTypeFilter('all',{target: $('#allMessagesFolder')});
+      }
       $scope.messagesSection.searchFilter = input.toLowerCase()
       $scope.$apply()
     })

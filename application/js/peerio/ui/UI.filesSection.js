@@ -269,6 +269,9 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 	});
 
 	$scope.$on('filesSectionSetSearchFilter', function(event, input) {
+		if($scope.filesSection.searchFilter==='' && input !==''){
+			$scope.filesSection.setTypeFilter('', {target:$('#allFilesFolder')});
+		}
 		$scope.filesSection.searchFilter = input.toLowerCase()
 		$scope.$apply()
 	})
