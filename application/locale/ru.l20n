@@ -18,12 +18,12 @@
     <addressNotAvailable "этот адрес уже занят.">
     <firstName "Имя">
     <lastName "Фамилия">
-    <emailOrPhone "Email или номер мобильного телефона">
+    <emailOrPhone "Email or mobile number">
     <yourPassphrase "Ваша кодовая фраза">
-    <infoAlertPassphrase "Для обеспечения высокой надежности, Peerio использует <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'&gt;случайно сгенерированные кодовые фразы&lt;/a>;. <strong>;Ваша кодовая фраза это главный ключ к вашему аккаунту!&lt;/strong>; Вы единственный владелец вашей кодовой фразы, запомните и берегите её, от этого зависит безопасность вашего аккаунта. Мы рекомендуем записать её на бумаге или сохранить в надежном менеджере паролей.">
+    <infoAlertPassphrase "For stronger security, Peerio uses <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'>randomly generated passphrases</a>. <br><br><strong>You are the only one who knows this passphrase!</strong> If you lose it, you will permanently lose access to your account. We recommend writing your passphrase down on paper, or storing it in a secure password manager.">
     <infoAlertPassphraseNote "<strong>Не беспокойтесь</strong>, через мгновение вы сможете установить короткий пароль для быстрого доступа с этого устройства.">
     <signupPassphraseConfirm "Использовать эту кодовую фразу?">
-    <signupPassphraseConfirmText "<strong>Remember</strong>, you are the sole owner of this passphrase. <a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>If you lose it</a>, your account will be lost forever. So just to be safe, <strong>please enter your passphrase once more in order to continue.</strong>">
+    <signupPassphraseConfirmText "Remember, you are the only one who knows this passphrase. <a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>If you lose it</a>, your account will be lost forever. So just to be safe, <strong>please enter your passphrase once more in order to continue.</strong>">
     <signupYourGeneratedPassphrase "Сгенерированная кодовая фраза:">
     <signupPassphraseRefresh "Изменить кодовую фразу">
     <error "Ошибка">
@@ -37,7 +37,7 @@
     <createMyAccount "Создать мой аккаунт">
     <accountConfirmation "Подтверждение аккаунта">
     <signupAccountConfirmationEmail "Пожалуйста проверьте свой email на предмет письма от Peerio с кодом подтвержения регистрации. Введите код подтверждения ниже. Если вы не получили письма, пожадуйста проверьте папку со спамом.">
-    <signupAccountConfirmationPhone "Мы отправили СМС с кодом подтверждения на телефонный номер, который вы указали. <strong>Пожалуйста, убедитесь, что вы ввели полный номер телефона, включая код страны и города.</strong>">
+    <signupAccountConfirmationPhone "A confirmation code has been sent via SMS to the mobile number you provided. <strong>Please make sure your mobile number contains your country code as well as an area code.</strong>">
     <signupConfirmationCodeTimeText "Код подтверждения истекает через:">
     <signupConfirmationCodeExpired "Код подтверждения истек">
     <signupConfirmationCodeExpiredText "Истекло время для ввода кода подтверждения. Пожалуйста перезапустите Peerio и попробуйте зарегистрироваться снова.">
@@ -56,7 +56,7 @@
     <accountRateLimited "Пожалуйста, подождите">
     <accountRateLimitedText "Этот аккаунт временно недоступен, в связи со слишком большим количеством запросов к серверу. Пожалуйста, подождите пару минут и попробуйте снова.">
     <accountBlacklisted "Аккаунт заблокирован">
-    <accountBlacklistedText "Этот аккаунт был временно заблокирован. Чтобы восстановить доступ свяжитесь с поддержкой Peerio по адресу support@peerio.com">
+    <accountBlacklistedText "This account is temporarily suspended. In order to regain access, please contact support@peerio.com.">
     <searchMessagesFilesAndContacts "Поиск сообщений, файлов и контактов">
     <messages "Сообщения">
     <files "Файлы">
@@ -65,10 +65,10 @@
     <connectionStatus "Состояние соединения">
     <welcomeToAccount "Добро пожаловать в ваш аккаунт Peerio.">
     <welcomeToAccountText "Peerio позволят вам обмениваться шифрованными сообщениями, а так же хранить свои файлы и документы. Вот с чего вы можете начать.">
-    <welcomeToAccountList1 "Добавьте контакты, нажав на закладку <strong>Контакты</strong>. Когда вы это сделаете, обмен сообщениями и файлами станет проще.">
-    <welcomeToAccountList2 "Начните общение с кнопки <strong>Написать сообщение</strong>. Сообщения могут содержать столько адресатов, сколько вы захотите и все будет зашифровано из конца в конец.">
-    <welcomeToAccountList3 "Сохраните свои файлы в облако Peerio нажав на закладку <strong>Файлы</strong>. Ваши файлы будут зашифрованы и готовы к доступу с ваших устройств, а так же для предоставления доступа вашим контактам.">
-    <welcomeToAccountListSearch "<strong>Поисковая строка</strong> Peerio в верхней части окна облегчает поиск по сообщениям, файлам и контактам. Попробуйте!">
+    <welcomeToAccountList1 "<strong>Add contacts</strong> by selecting the Contacts tab and clicking the Add Contact button on the left.">
+    <welcomeToAccountList2 "<strong>Start conversations</strong> by clicking the Compose Message button on the left. Conversations can include as many contacts as you like — and everything is encrypted end to end.">
+    <welcomeToAccountList3 "<strong>Store your files</strong> on Peerio by selecting the Files tab and clicking the Upload Files button on the left. Your files will be encrypted and ready to access on your other devices or share with contacts.">
+    <welcomeToAccountListSearch "The <strong>search bar</strong> at the top of the window makes it easy to go through your messages, files, and contacts all in one swoop. Give it a shot!">
     <newMessage "Создать сообщение">
     <inbox "Входящие">
     <uploadFile "Загрузить файлы">
@@ -77,7 +77,6 @@
     <allMessages "Все сообщения">
     <drafts "Черновики">
     <trash "Корзина">
-    <settings "Настройки">
     <account "Аккаунт">
     <preferences "Предпочтения">
     <help "Помощь">
@@ -137,7 +136,7 @@
     <destroyFilesOwnerError "Вы не можете уничтожить не принадлежащие вам файлы">
     <destroyFilesOwnerErrorText "Уничтоженный файл будет удален со всех акканутов, которым вы его отправляли. Только владелец файла может его уничтожить. Пожалуйста, попробуйте просто удалить файл с вашего аккаунта.">
     <fileUploadError "Загрузка файлов не удалась">
-    <fileUploadErrorText "Пожалуйста проверьте настройки загрузки файлов и попробуйте снова.">
+    <fileUploadErrorText "Please check your connection and try again.">
     <dragAndDropUploadTitle "Перетащите файл чтоб загрузить его в  Peerio.">
     <dragAndDropUploadText "Ваши файлы будут загружены, зашифрованы и сохранены в ваше персональное облако.">
     <allFiles "Все файлы">
@@ -152,11 +151,8 @@
     <attachSelectedFiles "Добавить выбранные файлы">
     <uploadNewFile "Загрузить новые файлы">
     <downloading "Загрузка">
-    <downloadFileInfo "Ваши файлы будут сохранены в папку Загрузок по-умолчанию.">
-    <downloadFileDangerous "Внимание: Открывайте только файлы от источников, которым вы доверяете.">
-    <downloadFileComplete "Файл был успешно загружен и расшифрован.">
     <downloadFileError "Не удалось скачать файл">
-    <downloadFileErrorText "Произошла ошибка.">
+    <downloadFileErrorText "Oops! An error has occurred, please try again later.">
     <save "сохранить">
     <allContacts "Все контакты">
     <confirmedContacts "Подтвержденные контакты">
@@ -181,35 +177,34 @@
     <accept "Принять">
     <decline "Отклонить">
     <addContactInfo "Добавление друзей в контакты">
-    <addContactInfoText "Обмен сообщениями и файлами с вашими друзьями возможен после того, как вы добавите друг-друга в контакты.  Если ваш друг не является пользователем Peerio, мы попробуем отправить ему приглашение. Вы можете добавить контакт указав его  <strong>имя пользователя</strong>, <strong>email</strong> или <strong>номер телефона</strong>.">
-    <addContactInfoAvatar "Об аватарах контактов">
+    <addContactInfoText "Sending messages and sharing files with your friends begins by adding them as contacts. If your friend is not a Peerio user, an invitation will be sent to their address. You can add a user by specifying their <strong>username</strong>, <strong>email address</strong> or <strong>mobile number</strong>.">
     <addContactInfoAvatarText "Каждый пользователь Peerio имеет специальный аватар для идентификации. Представьте это себе как цифровой отпечаток пальца. Если аватар пользователя Peerio меняется, он мог сменить свою кодовую фразу, или его аккаунт был взломан.">
-    <usernameEmailOrPhone "Имя пользователя, email или номер телефона">
+    <usernameEmailOrPhone "Username, email address, or mobile number">
     <addContactRequestSent "Запрос контакта отправлен">
-    <addContactRequestSentText "Мы отправили запрос контакта, на имя пользователя, которое вы ввели.">
+    <addContactRequestSentText "A contact request has been sent to the username you have entered.">
     <addContactInviteSent "Приглашение отправлено">
-    <addContactInviteSentText "Мы отправили приглашение вашему контакту.">
-    <addContactErrorText "Не удалось добавить контакт. Пожалуйста перепроверьте введенные данные.">
+    <addContactInviteSentText "An invitation has been sent to your contact.">
+    <addContactErrorText "Contact could not be added. Please double-check the information and try again.">
     <removeContact "Удалить контакт">
     <removeContactQuestion "Удалить контакт?">
-    <removeContactText "Вы не сможете общаться с этим контактом через Peerio. Подтвердить?">
+    <removeContactText "You will no longer be able to securely communicate with each other on Peerio. Are you sure?">
     <cancel "Отмена">
-    <removeContactSuccess "Ваш контакт был успешно удалён.">
-    <removeContactError "Не удалось удалить ваш контакт. Пожалуйста, попробуйте снова.">
+    <removeContactSuccess "Your contact has been removed.">
+    <removeContactError "Unable to be remove contact. Please try again.">
     <newContact "Новый контакт!">
     <newContactText "Теперь вы в контактах с">
     <miniLockID "miniLock ID:">
     <twoFactorAuth "Двухфакторная аутентификация">
     <authenticate "Аутентифицировать">
     <twoFactorAuthSetupHeading "Настроить мобильные устройства">
-    <twoFactorAuthSetupText "Воспользуйтесь вашим любимым приложением для аутентификации, чтобы отсканировать QR-код ниже и настроить двухфакторную аутентификацию. Peerio рекомендует Google Authenticator для iPhone и Android, или Microsoft Authenticator для Windows Phone.">
+    <twoFactorAuthSetupText "Use your favorite authenticator app to scan the QR code below. Peerio recommends either Authy or FreeOTP. <a href='https://peerio.zendesk.com/hc/en-us/articles/204018305' target='_blank'>See how two-factor authentication works with Peerio</a>.">
     <twoFactorAuthInfoHeading "Помогите нам защитить ваш аккаунт">
     <twoFactorAuthInfoText "Двухфакторная аутентификация помогает содержать ваш аккаунт в безопасности, путем использования двух различных методов входа. Пожалуйста, введите шестизначный код с вашего мобильного устройства для продолжения.">
     <twoFactorAuthConfirm "После сканирования QR кода, введите код, сгенерированный вашим устройством чтобы завершить настройку.">
     <twoFactorAuthIncorrect "Неправильный код">
     <twoFactorAuthIncorrectText "Введенный код неверен, попробуйте еще раз.">
-    <twoFactorAuthConfirmedText "С этого момента, для входа вам нужно будет использовать коды с вашего мобильного устройства. Пожалуйста, не теряйте свое мобильное устройство.">
-    <twoFactorAuthCannotDisable "Не удалось отключить двухфакторную аутентификацию.">
+    <twoFactorAuthConfirmedText "From now on, you will be asked to enter a code generated by your mobile device when you login for the first time in a day, or from a new location. Please make sure you do not lose your mobile device.">
+    <twoFactorAuthCannotDisable "Unable to turn off two-factor authentication.">
     <twoFactorAuthDisabled "Двухфакторная аутентификация отключена">
     <twoFactorAuthDisabledText "Теперь вы можете входить используя только пароль. Для повышения безопасности, рассмотрите вопрос о повторном включении двухфакторной аутентификации в будущем.">
     <subject "Тема">
@@ -226,8 +221,8 @@
     <removeAddress "Удалить адрес">
     <addNewAddress "Добавить новый адрес">
     <couldNotConfirmAddress "Пожалуйста, перепроверьте код подтверждения, который вы ввели.">
-    <couldNotAddAddress "Не удалось добавить этот адрес. Пожалуйста перепроверьте.">
-    <couldNotUpdateName "Не удалось обновить ваше имя, попробуйте еще раз.">
+    <couldNotAddAddress "This address could not be added. Please double-check it.">
+    <couldNotUpdateName "Your name could not be updated. Please try again.">
     <confirmed "Подтверждено!">
     <confirmedText "Ваши предпочтения были обновлены.">
     <confirmedLanguageText "Ваш новый язык будет доступен после перезагрузки Peerio.">
@@ -256,7 +251,7 @@
     <readReceipts "Уведомления о прочтении">
     <peerioPINForThisDevice "Пароль устройства">
     <peerioPINUpdated "Пароль устройства обновлён">
-    <peerioPINUpdatedText "Пароль для этого устройства был успешно обновлён.">
+    <peerioPINUpdatedText "Your passcode for this device has been updated.">
     <removeMyPeerioPIN "Удалить пароль устройства">
     <peerioPINRemoved "Пароль устройства удалён">
     <peerioPINRemovedText "Пароль устройства удалён.">
@@ -281,11 +276,11 @@
     <importContactsConfirm "Peerio отправлять приглашения от вашего имени">
     <importContactsConfirmText "Если вы продолжите, Peerio может отправить приглашения от вашего имени тем контактам, которые пока не имеют аккаунта Peerio. Вы уверены, что хотите отправить приглашения этим контактам?">
     <importContactsError "Не удалось пригласить контакты">
-    <importContactsErrorText "Не удалось пригласить контакты в этот раз. Пожалуйста, проверьте вашу информацию и попробуйте снова.">
+    <importContactsErrorText "Invitations could not be sent to your contacts. Please verify your information and try again.">
     <importContactsSuccess "Приглашения отправлены контактам!">
     <importContactsSuccessText "Ваши контакты будут приглашены от вашего имени.">
     <importContactsSelectToInvite "Выберите контакты, чтобы добавить/пригласить их в Peerio">
-    <importContactsSelectToInviteText "Если контакт уже имеет аккаут Peerio, он будет добавлен в ваш список контактов. В противном случае мы вышлем ему приглашение от вашего имени.">
+    <importContactsSelectToInviteText "If a contact is already on Peerio, they will be added to your account. Otherwise, an invitation will be sent on your behalf.">
     <importContactsSelectAll "Выбрать все контакты">
     <importSelectedContacts "Импортировать выбранные контакты">
     <newFolderDialogTitle "Добавить папку">
@@ -300,7 +295,7 @@
     <renamingFolderError "Что-то пошло не так и ваша папка не была переименована. Пожалуйста попробуйте еще раз.">
     <folderRenamed "Папка переименована.">
     <removeFolderDialogTitle "Удалить папку">
-    <removeFolderDialogText1 "Вы уверены, что хотите удалить эту папку?">
+    <removeFolderDialogText1 "Вы уверены, что хотите удалить эту папку">
     <removeFolderDialogText2 "Сообщения в этой папке будут перемещены во 'Входящие'">
     <removingFolderError "Что-то пошло не так и ваша папка не была удалена. Пожалуйста попробуйте еще раз.">
     <folderRemoved "Папка удалена.">

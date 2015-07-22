@@ -18,12 +18,12 @@
     <addressNotAvailable "address is invalid or unavailable.">
     <firstName "First name">
     <lastName "Last name">
-    <emailOrPhone "Email or mobile">
+    <emailOrPhone "Email or mobile number">
     <yourPassphrase "Your passphrase">
-    <infoAlertPassphrase "For stronger security, Peerio uses <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'>randomly generated passphrases</a>. <br><br><strong>You are the sole owner of your passphrase!</strong> If you lose it, you will permanently lose access to your account. We recommend writing your passphrase down on paper, or storing it in a secure password manager.">
+    <infoAlertPassphrase "For stronger security, Peerio uses <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'>randomly generated passphrases</a>. <br><br><strong>You are the only one who knows this passphrase!</strong> If you lose it, you will permanently lose access to your account. We recommend writing your passphrase down on paper, or storing it in a secure password manager.">
     <infoAlertPassphraseNote "<strong>Don't worry</strong>, in a moment you will be able to set a shorter pass<i>code</i> for quick access on this device.">
     <signupPassphraseConfirm "Use this passphrase?">
-    <signupPassphraseConfirmText "<strong>Remember</strong>, you are the sole owner of this passphrase. <a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>If you lose it</a>, your account will be lost forever. So just to be safe, <strong>please enter your passphrase once more in order to continue.</strong>">
+    <signupPassphraseConfirmText "Remember, you are the only one who knows this passphrase. <a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>If you lose it</a>, your account will be lost forever. So just to be safe, <strong>please enter your passphrase once more in order to continue.</strong>">
     <signupYourGeneratedPassphrase "Your generated passphrase:">
     <signupPassphraseRefresh "Change passphrase">
     <error "Error">
@@ -37,7 +37,7 @@
     <createMyAccount "Create My Account">
     <accountConfirmation "Account Confirmation">
     <signupAccountConfirmationEmail "Please check your email for a Peerio account confirmation code and enter it below. If you do not see a message, please check your spam folder.">
-    <signupAccountConfirmationPhone "We've sent an SMS to the phone number you have provided with a confirmation code. <strong>Please make sure your phone number contains your country code as well as an area code.</strong>">
+    <signupAccountConfirmationPhone "A confirmation code has been sent via SMS to the mobile number you provided. <strong>Please make sure your mobile number contains your country code as well as an area code.</strong>">
     <signupConfirmationCodeTimeText "Seconds until your code expires:">
     <signupConfirmationCodeExpired "Confirmation code expired">
     <signupConfirmationCodeExpiredText "Your confirmation code has expired. Please restart Peerio and try signing up again.">
@@ -56,7 +56,7 @@
     <accountRateLimited "Please Wait A Few Minutes">
     <accountRateLimitedText "This account is temporarily unavailable because it has made too many server requests. Please wait a few minutes and try again.">
     <accountBlacklisted "Account Unavailable">
-    <accountBlacklistedText "This account is temporarily suspended. In order to regain access, please contact Peerio support at support@peerio.com.">
+    <accountBlacklistedText "This account is temporarily suspended. In order to regain access, please contact support@peerio.com.">
     <searchMessagesFilesAndContacts "Search messages, files, and contacts">
     <messages "Messages">
     <files "Files">
@@ -65,10 +65,10 @@
     <connectionStatus "Connection Status">
     <welcomeToAccount "Welcome to your Peerio account.">
     <welcomeToAccountText "Peerio lets you send messages securely, as well as store and manage your files and documents. Here's how you can get started.">
-    <welcomeToAccountList1 "Add contacts by clicking on the <strong>Contacts</strong> tab. Once you've added contacts, sharing messages and files is easy.">
-    <welcomeToAccountList2 "Start conversations by clicking the <strong>Compose Message</strong> button on the left. Conversations can include as many contacts as you like — and everything is encrypted end to end.">
-    <welcomeToAccountList3 "Store your files on Peerio by clicking the <strong>Files</strong> tab. Your files will be encrypted and ready to access on your other devices or share with contacts.">
-    <welcomeToAccountListSearch "Peerio's <strong>search bar</strong> at the top of the window makes it easy to go through your messages, files, and contacts all in one swoop. Give it a shot!">
+    <welcomeToAccountList1 "<strong>Add contacts</strong> by selecting the Contacts tab and clicking the Add Contact button on the left.">
+    <welcomeToAccountList2 "<strong>Start conversations</strong> by clicking the Compose Message button on the left. Conversations can include as many contacts as you like — and everything is encrypted end to end.">
+    <welcomeToAccountList3 "<strong>Store your files</strong> on Peerio by selecting the Files tab and clicking the Upload Files button on the left. Your files will be encrypted and ready to access on your other devices or share with contacts.">
+    <welcomeToAccountListSearch "The <strong>search bar</strong> at the top of the window makes it easy to go through your messages, files, and contacts all in one swoop. Give it a shot!">
     <newMessage "Compose Message">
     <inbox "Inbox">
     <uploadFile "Upload Files">
@@ -77,7 +77,6 @@
     <allMessages "All Messages">
     <drafts "Drafts">
     <trash "Trash">
-    <settings "Settings">
     <account "Account">
     <preferences "Preferences">
     <help "Help">
@@ -137,7 +136,7 @@
     <destroyFilesOwnerError "Cannot destroy files you do not own">
     <destroyFilesOwnerErrorText "Destroying files removes them from every account they have been shared with. Only a file's owner can do that. Please try deleting the file instead.">
     <fileUploadError "File upload failed">
-    <fileUploadErrorText "Please verify your file upload settings, and try again.">
+    <fileUploadErrorText "Please check your connection and try again.">
     <dragAndDropUploadTitle "Drop to upload to Peerio.">
     <dragAndDropUploadText "Your files will be encrypted and uploaded to your personal cloud.">
     <allFiles "All Files">
@@ -152,11 +151,8 @@
     <attachSelectedFiles "Attach Selected Files">
     <uploadNewFile "Upload New Files">
     <downloading "Downloading">
-    <downloadFileInfo "Your file will be saved to your default Downloads folder.">
-    <downloadFileDangerous "Warning: Do not open files unless you trust the sender.">
-    <downloadFileComplete "Your file has been successfully downloaded and decrypted.">
     <downloadFileError "Could not download file">
-    <downloadFileErrorText "An error has occurred.">
+    <downloadFileErrorText "Oops! An error has occurred, please try again later.">
     <save "save">
     <allContacts "All Contacts">
     <confirmedContacts "Confirmed Contacts">
@@ -181,35 +177,34 @@
     <accept "Accept">
     <decline "Decline">
     <addContactInfo "Adding friends as contacts">
-    <addContactInfoText "Sending messages and sharing files with your friends begins by adding them as contacts. If your friend is not a Peerio user, we'll try to send an invite to their address. You can add a user by specifying their <strong>username</strong>, <strong>email</strong> or <strong>mobile number</strong>.">
-    <addContactInfoAvatar "About the contact avatar">
+    <addContactInfoText "Sending messages and sharing files with your friends begins by adding them as contacts. If your friend is not a Peerio user, an invitation will be sent to their address. You can add a user by specifying their <strong>username</strong>, <strong>email address</strong> or <strong>mobile number</strong>.">
     <addContactInfoAvatarText "Every Peerio user has a special avatar that identifies them. Think of it as their digital fingerprint. If a Peerio user's avatar changes, they may have changed their passphrase, or their account may have been compromised.">
-    <usernameEmailOrPhone "Username, email, or mobile">
+    <usernameEmailOrPhone "Username, email address, or mobile number">
     <addContactRequestSent "Contact Request Sent">
-    <addContactRequestSentText "We've sent a contact request to the username you have entered.">
+    <addContactRequestSentText "A contact request has been sent to the username you have entered.">
     <addContactInviteSent "Invite Sent">
-    <addContactInviteSentText "We have sent an invitation to your contact.">
-    <addContactErrorText "We couldn't add this contact. Please double-check the information and try again.">
+    <addContactInviteSentText "An invitation has been sent to your contact.">
+    <addContactErrorText "Contact could not be added. Please double-check the information and try again.">
     <removeContact "Remove Contact">
     <removeContactQuestion "Remove Contact?">
-    <removeContactText "This will prevent you from communicating with each other securely over Peerio. Are you sure?">
+    <removeContactText "You will no longer be able to securely communicate with each other on Peerio. Are you sure?">
     <cancel "Cancel">
-    <removeContactSuccess "Your contact has been successfully removed.">
-    <removeContactError "We could not remove this contact right now. Please try again.">
+    <removeContactSuccess "Your contact has been removed.">
+    <removeContactError "Unable to be remove contact. Please try again.">
     <newContact "New contact!">
     <newContactText "You are now contacts with">
     <miniLockID "miniLock ID:">
     <twoFactorAuth "Two-Factor Authentication">
     <authenticate "Authenticate">
     <twoFactorAuthSetupHeading "Set up your mobile device">
-    <twoFactorAuthSetupText "Use your favorite authenticator app to scan the barcode below. Peerio recommends Google Authenticator for iPhone and Android. <a href='https://peerio.zendesk.com/hc/en-us/articles/204018305' target='_blank'>See how two-factor authentication works with Peerio</a>.">
+    <twoFactorAuthSetupText "Use your favorite authenticator app to scan the QR code below. Peerio recommends either Authy or FreeOTP. <a href='https://peerio.zendesk.com/hc/en-us/articles/204018305' target='_blank'>See how two-factor authentication works with Peerio</a>.">
     <twoFactorAuthInfoHeading "Help us protect your account">
     <twoFactorAuthInfoText "Two-factor authentication helps keep your account safe by requiring two different kinds of login information. Please enter the six-digit code from your mobile device to continue.">
     <twoFactorAuthConfirm "After scanning the QR code, enter the six-digit code generated by your mobile device to confirm setup.">
     <twoFactorAuthIncorrect "Incorrect Code">
     <twoFactorAuthIncorrectText "The code you have entered is incorrect. Please try again.">
-    <twoFactorAuthConfirmedText "From now on, you will be asked to enter a code from your mobile device when you login for the first time in a day, or from a new location. Please make sure you do not lose your mobile device.">
-    <twoFactorAuthCannotDisable "We could not disable two-factor authentication.">
+    <twoFactorAuthConfirmedText "From now on, you will be asked to enter a code generated by your mobile device when you login for the first time in a day, or from a new location. Please make sure you do not lose your mobile device.">
+    <twoFactorAuthCannotDisable "Unable to turn off two-factor authentication.">
     <twoFactorAuthDisabled "Two-Factor Authentication Disabled">
     <twoFactorAuthDisabledText "You can now log in using only your password. For enhanced security, consider turning two-factor authentication back on in the future.">
     <subject "Subject">
@@ -226,8 +221,8 @@
     <removeAddress "Remove Address">
     <addNewAddress "Add New Address">
     <couldNotConfirmAddress "Please double-check the confirmation code you entered.">
-    <couldNotAddAddress "We couldn't add this address. Please double-check it.">
-    <couldNotUpdateName "We couldn't update your name. Please try again.">
+    <couldNotAddAddress "This address could not be added. Please double-check it.">
+    <couldNotUpdateName "Your name could not be updated. Please try again.">
     <confirmed "Confirmed!">
     <confirmedText "Your preferences have been updated.">
     <confirmedLanguageText "Your new language will be available once you restart Peerio.">
@@ -256,7 +251,7 @@
     <readReceipts "Read Receipts">
     <peerioPINForThisDevice "Device Passcode">
     <peerioPINUpdated "Device Passcode Updated">
-    <peerioPINUpdatedText "Your passcode for this device has been successfully updated.">
+    <peerioPINUpdatedText "Your passcode for this device has been updated.">
     <removeMyPeerioPIN "Remove Device Passcode">
     <peerioPINRemoved "Device Passcode Removed">
     <peerioPINRemovedText "The passcode assigned to this device has been removed.">
@@ -281,11 +276,11 @@
     <importContactsConfirm "Peerio may send invites on your behalf">
     <importContactsConfirmText "If you proceed, Peerio may send invitations on your behalf to contacts that are not yet on Peerio. Are you sure you want to send invites to these contacts?">
     <importContactsError "Could not invite contacts">
-    <importContactsErrorText "We could not invite your contacts at this time. Please verify your information and try again.">
+    <importContactsErrorText "Invitations could not be sent to your contacts. Please verify your information and try again.">
     <importContactsSuccess "Contact invites sent!">
     <importContactsSuccessText "Your contacts will be invited on your behalf.">
     <importContactsSelectToInvite "Select contacts to add/invite">
-    <importContactsSelectToInviteText "If a contact is already on Peerio, they will be added to your account. Otherwise, we will send them an invitation on your behalf.">
+    <importContactsSelectToInviteText "If a contact is already on Peerio, they will be added to your account. Otherwise, an invitation will be sent on your behalf.">
     <importContactsSelectAll "Select all contacts">
     <importSelectedContacts "Import selected contacts">
     <newFolderDialogTitle "Add New Folder">
