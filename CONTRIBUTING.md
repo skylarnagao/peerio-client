@@ -1,5 +1,9 @@
 #Contributing to Peerio
 
+##Passphrase dictionaries
+
+If you find words that might be unsuitable for passphrases (e.g. offensive terms), you can submit a pull request containing these changes. 
+
 ##Coding style for contributions
 Please be mindful that you are contributing to security and encryption software. We expect all code to be pre-reviewed for security and to be of high quality.  
 
