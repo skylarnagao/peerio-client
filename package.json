@@ -20,7 +20,7 @@
     "gulp-ignore": "latest",
     "minimist": "latest",
     "run-sequence": "latest",
-    "node-webkit-builder": "latest",
+    "nw-builder": "latest",
     "lodash": "latest"
   }
 }
