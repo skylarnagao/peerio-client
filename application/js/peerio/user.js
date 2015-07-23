@@ -409,7 +409,7 @@ Peerio.user = {};
 			isMe: true,
 			miniLockID: Peerio.user.miniLockID,
 			username: Peerio.user.username,
-			primaryAddress: Peerio.user.addresses[0].value,
+			primaryAddress: Peerio.user.addresses[0] ? Peerio.user.addresses[0].value : '',
 			addresses: []
 		}
 		Peerio.network.getContacts(function(result) {
