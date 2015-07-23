@@ -291,8 +291,7 @@ The client's request is a socket.io message `registrationRequest` and its body i
 		type: '"email" or "phone" (String)',
 		value: 'Email or phone number (String)'
 	}
-	miniLockID: 'User-claimed miniLock ID (Base58 String)',
-	keyStorage: '(Base64 String)'
+	miniLockID: 'User-claimed miniLock ID (Base58 String)'
 }
 ```
 
