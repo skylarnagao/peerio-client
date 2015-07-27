@@ -22,8 +22,8 @@ From the command line, run `nw PATH/TO/EXECUTABLE/Peerio`.
 
 # Additional (Internal) Tooling
 
-To bump the version number to a patch version, run `grunt bump`.
+To bump the version number to a patch version, run `gulp bump`.
 
-Before doing releases, make sure to run `grunt update` to update dependencies and translation copy. 
+Before doing releases, make sure to run `gulp update` to update dependencies and translation copy. 
 
 Mac OS code signing can be done with `gulp sign`, provided the right Developer ID certificate is installed and configured as an environment variable. 
