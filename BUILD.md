@@ -2,7 +2,7 @@
 
 The Mac, Windows and Linux versions of Peerio can be built using `nwjs` (formerly `node-webkit`). 
 
-To build, install [node.js and npm](http://nodejs.org), as well as the [Transifex client](http://docs.transifex.com/client/setup/) with a `~/.transifexrc` file for user credentials. Within the root project directory, run `npm install`. Then, run `grunt build`. This command will generate working Mac, Windows and Linux builds. 
+To build, install [node.js and npm](http://nodejs.org), as well as the [Transifex client](http://docs.transifex.com/client/setup/) with a `~/.transifexrc` file for user credentials. Within the root project directory, run `npm install`. Then, run `gulp build`. This command will generate working Mac, Windows and Linux builds. 
 
 Mac and Linux users may want to comment out the `winIco` line in the `build` task in `gulpfile.js` (~ L207), since it is not useful to them and will require installing Wine.
 
