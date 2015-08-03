@@ -1,7 +1,7 @@
 
     <title "Peerio">
     <signupHeader "消息和文件。简单且安全。">
-    <signupIntro "Peerio 是一种简单且安全的发送消息、共享文件和在线存储文档的方式。一切东西发送到云端之前都会被加密，因此除了您和您曾经分享的人以外，没有人能看到您的数据内容。&lt;br /><br /><strong>Peerio 目前处于测试版阶段。<a href='https://peerio.com/pages/beta.html' target='_blank'>了解这意味着什么</a>。">
+    <signupIntro "Peerio 是一种简单且安全的发送消息、共享文件和在线存储文档的方式。一切东西发送到云端之前都会被加密，因此除了您和您曾经分享的人以外，没有人能看到您的数据内容。<br /><br /><strong>Peerio 目前处于测试版阶段。<a href='https://peerio.com/pages/beta.html' target='_blank'>了解这意味着什么</a>。">
     <username "用户名">
     <passphrase "密码">
     <passphraseOrPIN "密码短语或设备密码">
@@ -136,7 +136,7 @@
     <destroyFilesOwnerError "无法销毁非您持有的文件">
     <destroyFilesOwnerErrorText "销毁文件意味着从每个已被分享的账户中移除它们。只有文件的所有者可以做到这一点。尝试删除别的文件吧。">
     <fileUploadError "文件上传失败">
-    <fileUploadErrorText "Please check your connection and try again.">
+    <fileUploadErrorText "请验证您的文件上传设置，然后再试。">
     <dragAndDropUploadTitle "拖放以上传到 Peerio。">
     <dragAndDropUploadText "您的文件将被加密并上传到您的个人云存储。">
     <allFiles "所有文件">
@@ -204,7 +204,7 @@
     <twoFactorAuthIncorrect "代码不正确">
     <twoFactorAuthIncorrectText "您输入的代码不正确。请重试。">
     <twoFactorAuthConfirmedText "从现在开始，当您每天第一次登录或者从一台新设备登录时，您都将被询问您的移动设备上的代码。请确保您不要丢失您的移动设备。">
-    <twoFactorAuthCannotDisable "Unable to turn off two-factor authentication.">
+    <twoFactorAuthCannotDisable "我们未能禁用双因素验证。">
     <twoFactorAuthDisabled "双因素验证已禁用">
     <twoFactorAuthDisabledText "您现在可以只使用您的密码登录。为了增强安全性，请考虑在未来重新打开双因素验证。">
     <subject "主题">
