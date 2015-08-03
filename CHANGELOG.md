@@ -1,3 +1,10 @@
+##Peerio 1.1.2 (11)
+**August 3, 2015**
+- Added locales and dictionaries for Hungarian, Chinese (Simplified), Norwegian (Bokmål), and Turkish
+- Removed bias from passphrase generator (thank you, @Sc00bz)
+- Fixed a crash caused by contacts without an email/phone number.
+- Skipped a patch number (1.1.1) for internal reasons.
+
 ##Peerio 1.1.0 (10)
 **June 16, 2015**
 - Added folders for file and conversation organization (#54).
