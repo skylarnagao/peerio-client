@@ -31,6 +31,18 @@
   }, {
     name: 'Русский',
     value: 'ru'
+  },{
+    name: '汉语',
+    value: 'zh-CN'
+  }, { 
+    name: 'Norsk (Bokmål)',
+    value: 'nb-NO'
+  }, {
+    name: 'Türkçe',
+    value: 'tr'
+  }, {
+    name: 'Magyar',
+    value: 'hu'
   }];
 
   Peerio.PhraseGenerator.languages.forEach(function (l) {

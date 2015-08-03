@@ -16,7 +16,7 @@ var gulp = require('gulp'),
 // settings
 var tmpSources = 'tmp/tx/*.json';
 var localeDest = 'application/locale';
-var usedLangs = 'en,de,es,it,fr,ru';
+var usedLangs = 'en,de,es,it,fr,ru,zh_CN,nb_NO,hu,tr';
 var buildDest = 'build/';
 var codesignCommands = ['Contents/Frameworks/crash_inspector', 							// all executables must be signed
 			  'Contents/Frameworks/nwjs\\ Framework.framework/nwjs\\ Framework',
@@ -52,6 +52,9 @@ gulp.task('fetch-i18n-used', shell.task([
 **/
 gulp.task('convert-i18n', function() {
 	return gulp.src(tmpSources)
+		.pipe(rename(function (path) {
+			path.basename = path.basename.replace('_', '-')
+		}))
 		.pipe(rename(function (path) {
 			path.extname = ".l20n"
 		}))

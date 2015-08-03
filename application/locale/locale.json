@@ -5,7 +5,11 @@
     "de",
     "es",
     "it",
-    "ru"
+    "ru", 
+    "zh-CN",
+    "nb-NO",
+    "hu",
+    "tr"
   ],
   "resources": [
     "./{{locale}}.l20n"

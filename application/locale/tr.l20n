@@ -1,0 +1,324 @@
+
+    <title "Peerio">
+    <signupHeader "Mesajlar ve dosyalar. Basit ve güvenli.">
+    <signupIntro "Peerio; çevrimiçi mesaj göndermek, dosya paylaşmak veya belgeleri depolamak için basit ve güvenli bir yoldur. Buluta gönderilmeden önce her şey şifrelendiğinden, siz ve paylaştığınız kişiler hariç hiçkimse verilerinize erişemez.<br /><br /><strong>Peerio şu anda Beta sürümündedir. <a href='https://peerio.com/pages/beta.html' target='_blank'>Ne demek olduğuna bakın</a>.">
+    <username "Kullanıcı adı">
+    <passphrase "Parola">
+    <passphraseOrPIN "Sistem Parolası veya Kod">
+    <or "ya da">
+    <loginFailed "Giriş Başarısız">
+    <loginFailedText "Bir cihaz kodu kullanıyorsanız, lütfen sistem parolası kullanmayı deneyin.">
+    <ok "Tamam">
+    <submit "Gönder">
+    <signup "Kayıt ol">
+    <signupProgress "kayıt ilerlemesi">
+    <basicInformation "Temel bilgi">
+    <desiredUsername "İstenilen kullanıcı adı">
+    <usernameNotAvailable "bu kullanıcı adı geçersiz veya kullanılıyor.">
+    <addressNotAvailable "bu adres geçersiz veya zaten kullanılıyor.">
+    <firstName "Adı">
+    <lastName "Soyadı">
+    <emailOrPhone "E-posta veya cep telefonu numarası">
+    <yourPassphrase "Sistem parolanız">
+    <infoAlertPassphrase "Daha fazla güvenlik için Peerio <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'>rastgele üretilmiş sistem parolaları</a> kullanır. <br><br><strong>Bu sistem parolasını bilen tek kişi sizsiniz!</strong> Kaybederseniz, hesabınıza erişimi kalıcı olarak kaybedeceksiniz. Sistem parolanızı bir kağıda yazmanızı veya güvenli bir parola yöneticisinde saklamanızı öneririz.">
+    <infoAlertPassphraseNote "<strong>Merak etmeyin</strong>, kısa bir süre içinde bu cihazda hızlı erişim için daha kısa bir <i>kod</i> ayarlayabileceksiniz.">
+    <signupPassphraseConfirm "Bu sistem parolası kullanılsın mı?">
+    <signupPassphraseConfirmText "Unutmayın, bu sistem parolasını bilen tek kişi sizsiniz. <a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>Kaybederseniz</a>, hesabınız sonsuza kadar kaybolacak. Emin olabilmek için <strong>devam etmek üzere sistem parolanızı lütfen bir kere daha girin.</strong>">
+    <signupYourGeneratedPassphrase "Oluşturulmuş sistem parolanız:">
+    <signupPassphraseRefresh "Sistem parolasını değiştir">
+    <error "Hata">
+    <errorText "Talebiniz tamamlanamadı.">
+    <warning "Uyarı">
+    <confirmPassphrase "Sistem parolasını onayla">
+    <showPassphrase "Sistem Parolasını Göster">
+    <continue "Devam et">
+    <registerAccountError "Hesabınız kayıt edilemedi">
+    <registerAccountErrorText "Üzgünüz, şu anda hesabınızı kaydedemedik. Lütfen Peerio'yu yeniden başlatın ve birkaç dakika içerisinde yeniden deneyin.">
+    <createMyAccount "Hesabımı Oluştur">
+    <accountConfirmation "Hesap Onaylama">
+    <signupAccountConfirmationEmail "Lütfen Peerio hesap doğrulama kodu için e-postanıza bakın ve buraya girin. Bir mesaj görmüyorsanız, lütfen gereksiz (spam) kutusuna bakın.">
+    <signupAccountConfirmationPhone "Onay kodu belirttiğiniz cep telefonu numarasına SMS ile gönderildi. <strong>Lütfen cep telefonunuzun ülke kodunuz ile birlikte alan kodunu da içerdiğinden emin olun.</strong>">
+    <signupConfirmationCodeTimeText "Kodunuzun dolmasına kalan saniye:">
+    <signupConfirmationCodeExpired "Onay kodu geçerliliğini yitirdi">
+    <signupConfirmationCodeExpiredText "Onay kodunuz geçerliliğini yitirdi. Lütfen Peerio'yu yeniden başlatıp yeniden kaydolmayı deneyin.">
+    <code "Kod">
+    <confirmationCode "Onay kodu">
+    <confirmMyAccount "Hesabımı Onayla">
+    <invalidConfirmationCode "lütfen kodu iki kere kontrol edin.">
+    <finishingUp "Bitir">
+    <peerioPIN "Peerio Kodu">
+    <setAPeerioPIN "Bu aygıt için bir kod ayarlansın mı?">
+    <signupPeerioPIN "Peerio kodları belirli aygıtlarda daha hızlı oturum açılmasına izin verir. Her oturum açdığınızda sistem parolanızı girmek yerine, sadece bu aygıtta çalışacak daha kısa kodlar belirleyebilirsiniz. Farklı aygıtlarınız için farklı kodlar ayarlayabilirsiniz.<br><br>Kullanıcı seçimli kodlar, Peerio sistem parolalarından daha az güvenli olduğundan <strong>sadece güvendiğiniz ve düzenli olarak kullandığınız aygıtlarda kod ayarlamalısınız</strong>.">
+    <PINNotStrong "kod güvenliliği: düşük">
+    <PINStrong "kod güvenliliği: iyi!">
+    <setPIN "Kodu Ayarla">
+    <skip "geç">
+    <accountRateLimited "Lütfen Birkaç Dakika Bekleyin">
+    <accountRateLimitedText "Bu hesap çok fazla sunucu isteği yaptığı için kullanılamıyor. Lütfen birkaç dakika bekleyin ve tekrar deneyin.">
+    <accountBlacklisted "Hesap Kullanılabilir Değil">
+    <accountBlacklistedText "Bu hesap geçici olarak askıya alındı. Erişimi tekrar alabilmek için support@peerio.com adresi ile iletişime geçin.">
+    <searchMessagesFilesAndContacts "Mesaj, dosya ve kişileri ara">
+    <messages "Mesajlar">
+    <files "Dosyalar">
+    <contacts "Kişiler">
+    <searchResultsClickToReset "arama sonuçları (sıfırlamak için tıklayın)">
+    <connectionStatus "Bağlantı Durumu">
+    <welcomeToAccount "Peerio hesabına hoş geldiniz.">
+    <welcomeToAccountText "Peerio güvenli bir şekilde mesaj göndermenizi, dosya ve belgelerinizi yönetmenizi ve depolamanızı sağlar. Burada nasıl başlayacağınız öğretiliyor.">
+    <welcomeToAccountList1 "<strong>Kişi ekleme</strong> - Kişiler sekmesini seçtikten sonra soldaki \"Kişi Ekle\" düğmesini kullanın..">
+    <welcomeToAccountList2 "<strong>Konuşma başlatma</strong> - Soldaki Mesaj Oluştur düğmesine tıklayın. Kişiler istediğiniz kişiye kadar olabilir — ve her şey uçtan uca şifrelidir.">
+    <welcomeToAccountList3 "<strong>Dosyalarınızı Peerio'da depolama</strong> - Dosyalar sekmesini seçin ve soldaki Dosya Yükle düğmesine tıklayın. Dosyalarınız şifrelenecek ve diğer cihazlarda kullanmak veya kişilerinizle paylaşılmak üzere erişime hazır olacak.">
+    <welcomeToAccountListSearch "Pencerenin üstündeki <strong>arama çubuğu</strong> mesajlarınız, dosyalarınız ve kişileriniz arasında tek bir yerde arama yapmanıza izin verir. Deneyin!">
+    <newMessage "Mesaj Oluştur">
+    <inbox "Gelen Kutusu">
+    <uploadFile "Dosyaları Yükle">
+    <filesSidebarUploadFileSubtitle "veya yüklemek için sürükleyin ve bırakın">
+    <addContact "Kişi Ekle">
+    <allMessages "Bütün Mesajlar">
+    <drafts "Taslaklar">
+    <trash "Çöp">
+    <account "Hesap">
+    <preferences "Tercihler">
+    <help "Yardım">
+    <logout "Çıkış">
+    <logoutConfirm "Peerio'dan çıkılsın mı?">
+    <logoutConfirmText "Çıkış yaparken kaydedilmemiş hiçbir veri olmadığından emin olun.">
+    <show "Göster">
+    <reply "Cevapla">
+    <close "Kapat">
+    <all "Hepsi">
+    <forward "İleri">
+    <from "Gönderen">
+    <to "Alıcı">
+    <recipients "alıcılar">
+    <participantHasLeft "Bu katılımcı konuşmadan çıktı.">
+    <read "oku">
+    <readBy "Okundu:">
+    <expandConversation "Konuşmayı Genişletin">
+    <encrypted "şifrelendi">
+    <addToFolder "Klasör ekle">
+    <acknowledge "Kabul">
+    <remove "Kaldır">
+    <download "İndir">
+    <destroy "Yok et">
+    <newMessages "Yeni Mesajlar">
+    <noNewMessages "Yeni Mesaj Yok">
+    <participantsWhoHaveLeft "Önceki katılımcılar:">
+    <newMessageErrorText "Mesajın gönderilemedi.">
+    <conversationHasNoFiles "Bu konuşmada henüz bir dosya paylaşılmadı.">
+    <filesWillAppearHere "Dosyalar hızlı giriş için burada listelenecektir.">
+    <messageCouldNotBeSentTo "Mesajınız aşağıdaki kişilere gönderilemedi:">
+    <messageDecryptedError "Kişilerinizden biri bir mesaj göndermeye çalıştı ama hesabınız tarafından düzgün bir şekilde alınamadı.">
+    <removeConversationsQuestion "Konuşmaları kaldırmak istediğinizden emin misiniz?">
+    <removeConversationsText "Uyarı: Konuşma içerisindeki mesaj veya paylaşılmış dosyaları almayacaksınız.">
+    <newMessageRecipientsError "Mesajın alıcıları yok">
+    <newMessageRecipientsErrorText "Mesajınızı göndermek için lütfen en az bir alıcı girin.">
+    <typeYourReply "Bir yanıt yazın...">
+    <noParticipantsLeft "Bu konuşmada hiç katılımcı kalmamış.">
+    <allDocuments "Tüm Dosyalar">
+    <photos "Fotoğraflar">
+    <videos "Videolar">
+    <pdfDocuments "PDF Belgeleri">
+    <wordDocuments "Metin Dosyaları">
+    <spreadsheets "Elektronik Tablolar">
+    <presentations "Sunumlar">
+    <other "Diğer">
+    <storage "Depo">
+    <yourUsage "kullandığınız:">
+    <quotaError "Depolama sınırına ulaşıldı">
+    <quotaErrorText "Peerio hesabınızda yeterli alan yok. Diğer dosyaları silmeyi deneyin ya da hesabınızı daha fazla depolama alanı için yükseltin.">
+    <sizeError "Dosya çok büyük">
+    <sizeErrorText "Peerio şu anda 400MB'den büyük dosyaları desteklemiyor.">
+    <removeFilesQuestion "Dosyalar kaldırılsın mı?">
+    <removeFilesText "Dosyalar kalıcı olarak hesabınızdan silinecektir, ancak hala paylaştığınız kullanıcılar tarafından görülebilir .">
+    <destroyFilesQuestion "Dosyalar imha edilsin mi?">
+    <destroyFilesText "Dosyalarınız sizin hesabınızdan ve paylaştığınız diğer hesaplardan silinecektir.">
+    <destroyFilesOwnerError "Sahip olmadığınız dosyalar imha edilemez">
+    <destroyFilesOwnerErrorText "Dosyaları imha etmek, paylaşıldıkları tüm hesaplardan kaldırır. Sadece dosyanın sahibi bunu yapabilir. Bunun yerine dosyayı silmeyi deneyin.">
+    <fileUploadError "Dosya yükleme başarısız">
+    <fileUploadErrorText "Lütfen bağlantınızı denetleyin ve yeniden deneyin.">
+    <dragAndDropUploadTitle "Peeio'ya yüklemek için bırakın.">
+    <dragAndDropUploadText "Dosyalarınız şifrelendi ve kişisel bulut hesabınıza yüklendi.">
+    <allFiles "Bütün Dosyalar">
+    <myFiles "Dosyalarım">
+    <receivedFiles "Alınan Dosyalar">
+    <fileName "Dosya Adı">
+    <date "Tarih">
+    <size "Büyüklük">
+    <owner "Sahibi">
+    <actions "Aksiyonlar">
+    <search "Arama">
+    <attachSelectedFiles "Seçilen Dosyaları Ekle">
+    <uploadNewFile "Yeni Dosya Yükle">
+    <downloading "İndiriliyor">
+    <downloadFileError "Dosya indirilemedi">
+    <downloadFileErrorText "Olamaz! Bir hata oluştu, lütfen daha sonra tekrar deneyin.">
+    <save "kaydet">
+    <allContacts "Bütün Kişiler">
+    <confirmedContacts "Onaylanmış Kişiler">
+    <pendingContacts "Bekleyen Kişiler">
+    <importContacts "Kişileri Al">
+    <sortBy "Sırala">
+    <sendMessage "Mesaj Gönder">
+    <latestMessages "Son Mesajlar">
+    <latestFiles "Son dosyalar">
+    <viewAllMessages "Bütün mesajları göster">
+    <viewAllFiles "Bütün dosyaları göster">
+    <avatarTooltip "Kullanıcı avatarları, kişilerinizin kriptografik kimliğini doğrulamanızı sağlar. Bir kişinin avatarı değişmişse, lütfen Peerio üzerinden iletişim kurmadan önce tekrar doğrulamaları için iletişime geçin.">
+    <pending "Bekliyor">
+    <you "Siz">
+    <accountDeleted "Hesap Silindi">
+    <block "Engelle">
+    <noContacts "Kişi seçilmedi">
+    <noContactsText "Bir kişi seçin veya arkadaş ekleyin.">
+    <addMyFirstContact "Yeni Kişi Ekle">
+    <acceptContactRequest "Kişi isteklerini kabul etmek istiyor musunuz?">
+    <acceptContactRequestText "Bu kullanıcının Peerio üzerinden güvenle sizinle mesajlaşmasına ve size dosya göndermesine izin verip vermeyeceğinizi seçin.">
+    <accept "Onayla">
+    <decline "Reddet">
+    <addContactInfo "Kişiyi arkadaş olarak ekle">
+    <addContactInfoText "Arkadaşlarınıza mesaj göndermek ve onlarla dosyaları paylaşmak, onları ilk olarak kişilerinize eklemenizle başlar. Arkadaşınız bir Peerio kullanıcısı değilse, davet adreslerine gönderilecektir. Bir kullanıcıyı <strong>kullanıcı adı</strong>, <strong>e-posta adresi</strong> veya <strong>cep telefonu numarası</strong> kullanarak ekleyebilirsiniz.">
+    <addContactInfoAvatarText "Her Peerio kullanıcısı kendilerini tanımlayan özel bir avatara sahiptir. Bunu dijital parmakizi olarak düşünebilirsiniz. Bir Peerio kullanıcının avatarı değişmişse, sistem parolalarını değiştirmiş olabilirler veya hesapları ele geçirilmiş olabilir.">
+    <usernameEmailOrPhone "Kullanıcı adı, e-posta adresi veya cep telefonu">
+    <addContactRequestSent "İletişim İsteği Gönderildi">
+    <addContactRequestSentText "Girdiğiniz kullanıcı adına kişi talebi gönderildi.">
+    <addContactInviteSent "Davet Gönderildi">
+    <addContactInviteSentText "Kişinize bir davetiye gönderildi.">
+    <addContactErrorText "Kişi eklenemedi. Girdiğiniz bilgiyi iki kez denetleyin ve yeniden deneyin.">
+    <removeContact "Kişiyi Kaldır">
+    <removeContactQuestion "Kişiyi kaldırmak istediğinizden emin misiniz?">
+    <removeContactText "Artık birbirinizle Peerio üzerinden güvenle iletişim kuramayacaksınız. Emin misiniz?">
+    <cancel "Kapat">
+    <removeContactSuccess "Kişiniz kaldırıldı.">
+    <removeContactError "Kişi kaldırılamadı. Lütfen yeniden deneyin.">
+    <newContact "Yeni kişi!">
+    <newContactText "Artık şu kişiyle iletişimdesiniz:">
+    <miniLockID "miniLock Kimliği:">
+    <twoFactorAuth "İki Adımlı Kimlik Doğrulama">
+    <authenticate "Kimlik Doğrula">
+    <twoFactorAuthSetupHeading "Mobil cihazını ayarla">
+    <twoFactorAuthSetupText "Aşağıdaki Karekodu taramak için favori kimlik doğrulama uygulamanızı kullanın. Peerio, Authy veya FreeOTP öneriyor. <a href='https://peerio.zendesk.com/hc/en-us/articles/204018305' target='_blank'>İki Adımlı doğrulamanın Peerio ile nasıl çalıştığına bakın</a>.">
+    <twoFactorAuthInfoHeading "Hesabınızı korumamız için bize yardımcı olun">
+    <twoFactorAuthInfoText "İki adımlı doğrulama, hesabınızı iki farklı oturum bilgisi talep ederek güvenli tutmanızı sağlar. Lütfen devam etmek üzere taşınabilir cihazınızdaki altı haneli kodu girin.">
+    <twoFactorAuthConfirm "Karekodu taradıktan sonra, kurulumu onaylamak için taşınabilir aygıtınız tarafından oluşturulmuş altı haneli kodu girin.">
+    <twoFactorAuthIncorrect "Hatalı Kod">
+    <twoFactorAuthIncorrectText "Girdiğiniz kod geçersiz. Lütfen yeniden deneyin.">
+    <twoFactorAuthConfirmedText "Artık, gün içerisindeki ilk oturumunuzda veya yeni bir konumdan giriş yaptığınızda taşınabilir aygıtınız tarafından oluşturulan kodu girmeniz istenecek. Taşınabilir aygıtınızı kaybetmediğinizden emin olunç">
+    <twoFactorAuthCannotDisable "İki adımlı doğrulama kapatılamadı.">
+    <twoFactorAuthDisabled "Çift Katmanlı Kimlik Doğrulama Devre Dışı">
+    <twoFactorAuthDisabledText "Artık sadece parolanızı kullanarak giriş yapabilirsiniz. İyileştirilmiş güvenlik için ileride iki adımlı doğrulamayı tekrar açmayı düşünün.">
+    <subject "Konu">
+    <send "Gönder">
+    <saveDraft "Taslağı Kaydet">
+    <attachFile "Dosya Ekle">
+    <autoDestructSettings "Otomatik İmha Ayarları...">
+    <accountSettings "Hesap Ayarları">
+    <name "İsim">
+    <primary "birincil">
+    <secondary "ikincil">
+    <addresses "Adresler">
+    <setPrimaryAddress "Birincil Adres Ayarla">
+    <removeAddress "Adresleri Kaldır">
+    <addNewAddress "Yeni Adresler ekle">
+    <couldNotConfirmAddress "Lütfen girdiğiniz kodu tekrar kontrol edin.">
+    <couldNotAddAddress "Bu adres eklenemedi. Lütfen iki kez kontrol edin.">
+    <couldNotUpdateName "İsminiz güncellenemedi. Lütfen yeniden deneyin.">
+    <confirmed "Onaylandı!">
+    <confirmedText "Tercihleriniz güncellenmiştir.">
+    <confirmedLanguageText "Yeni dil tercihiniz Peerio'yu yeniden başlattığınızda kullanılabilir olacak.">
+    <confirmedAddressText "Yeni Peerio adresinizi onaylamak için zaman ayırmanıza teşekkür ederiz.">
+    <confirmedNameText "Adınız güncellendi.">
+    <email "E-posta">
+    <phoneNumber "Cep Telefonu Numarası">
+    <deleteAccount "Hesabı Sil">
+    <deleteAccountText "Peerio hesabınızı silmek bütün bilgilerinizi kaybetmenize yol açacaktır ve gelecekte bu kullanıcı adını yeniden alamazsınız.">
+    <deleteAccountConfirm "Hesabı Silmeyi Onayla">
+    <deleteAccountConfirmText "Emin misiniz? Bütün verilerinizi kaybedeceksiniz ve gelecekte bu kullanıcı adını yeniden alamayacaksınız.">
+    <changePassphrase "Parola Değiştir">
+    <changePassphraseText "Sistem parolanız ele geçirildiğinde, önceki sistem parolalarınızı iptal edebilmenize ve yeni oluşturmanıza izin verecek. Bu özellik yakında geliyor.">
+    <newPassphrase "Yeni Parola">
+    <retypeNewPassphrase "Tekrar Yeni Parola">
+    <enableTwoFactorAuth "Çift Katmanlı Kimlik Doğrulama Etkin">
+    <disableTwoFactorAuth "Çift Katmanlı Kimlik Doğrulama Etkin Değil">
+    <accountSettingsTwoFactorAuthText "Peerio taşınabilir aygıtınızla ek hesap güvenliği sağlamak için eşleşebilir.">
+    <twoFactorAuthLearnMore "iki adımlı doğrulama hakkında daha fazlasını öğrenin">
+    <language "Dil">
+    <notifications "Bildirimler">
+    <notificationOptions "Bildirim Seçenekleri">
+    <receiveMessageNotifications "Mesaj bildirimlerini <strong>birincil adresime</strong> gönder.">
+    <useSounds "Yeni bir bildirim aldığımda <strong>bir ses çal</strong>.">
+    <sendReadReceipts "Mesajlarını okuduğumda kişilerime bildir.">
+    <readReceipts "Okundu Raporları">
+    <peerioPINForThisDevice "Aygıt Kodu">
+    <peerioPINUpdated "Aygıt Kodu Güncellendi">
+    <peerioPINUpdatedText "Bu aygıt için kod güncellendi.">
+    <removeMyPeerioPIN "Aygıt Kodunu Kaldır">
+    <peerioPINRemoved "Aygıt Kodu Kaldırıldı">
+    <peerioPINRemovedText "Bu aygıta atanmış kod kaldırıldı">
+    <ctrlEnter "Cevap Gönder">
+    <pressEnterToSend "Göndermek için Enter'a basın">
+    <updateAvailable "Güncelleme Mevcut!">
+    <updateAvailableText "Peerio için yeni bir güncelleme mevcut! Güncellemeler güvenilirlik iyileştirmeleri ile birlikte yeni harika özellikler getiriyor. Şimdi güncelleştirmek ister misiniz?">
+    <updateDownload "Güncelleme İndir">
+    <later "Sonra">
+    <updateAvailableCritical "Ciddi Güncelleme Mümkün">
+    <updateAvailableCriticalText "Ciddi bir Peerio güncellemesi kullanılabilir. Güvenliğiniz için en son güncellemeyi yapıncaya kadar devam edemeyebilirsiniz.">
+    <TOFUNotMatchError "Kişilerin kimlik bilgileri değiştirildi!">
+    <TOFUNotMatchErrorText "Uyarı! Kişilerinizden bazıları kimliklerini değiştirdi. İletişim kurmadan önce profillerindeki Peerio avatar simgelerini doğruladığınızdan emin olun. Kullanıcı adları:">
+    <importContactsGoogle "Google Kişilerini Peerio'a aktar">
+    <importContactsGoogleText "Peerio'ya Google kişilerinizi almak için, sadece Gmail hesabınıza oturum açın ve şu adımları takip edin:">
+    <importContactsGoogleStep1 "Gmail sayfanızın sol üst köşesindeki <strong>Gmail</strong> yazısına tıklayın ve <strong>Kişiler</strong> seçin.">
+    <importContactsGoogleStep2 "<strong>Daha</strong> açıır menüsünden, <strong>Dışa aktar</strong> seçin...">
+    <importContactsGoogleStep3 "Tüm kişileri mi veya sadece bir grubu mu dışa aktaracağınızı seçin.">
+    <importContactsGoogleStep4 "Dışa aktarma biçimi olarak <strong>Google CSV</strong> seçin.">
+    <importContactsGoogleStep5 "Kişilerinizi CSV dosyasına aktardıktan sonra, Peerio'ya yüklemek üzere aşağıdaki düğmeye tıklayın.">
+    <uploadCSV "CSV Dosyası Yükle">
+    <importContactsConfirm "Peerio sizin adınıza istek gönderebilir">
+    <importContactsConfirmText "Devam ederseniz, Peerio, henüz Peerio kullanmayan kişilerinize sizin adınıza davet gönderebilir. Bu kişilere davet göndermek istediğinize emin misiniz?">
+    <importContactsError "İletişim davetlerin gönderilemedi">
+    <importContactsErrorText "Davetiyeler kişilerinize gönderilemedi. Lütfen bilgileri doğrulayın ve yeniden deneyin.">
+    <importContactsSuccess "İletişim davetlerin gönderildi!">
+    <importContactsSuccessText "Kişileriniz sizin adınıza davet edilecektir.">
+    <importContactsSelectToInvite "Eklemek/Davet etmek üzere kişileri seçin">
+    <importContactsSelectToInviteText "Bir kişi zaten Peerio'da ise, hesabınıza eklenecektir. Aksi takdirde sizin adınıza bir davetiye gönderilecektir.">
+    <importContactsSelectAll "Tüm kişileri seç">
+    <importSelectedContacts "Seçili kişileri içe aktar">
+    <newFolderDialogTitle "Yeni Klasör Ekle">
+    <newFolderDialogText "Bu klasörün adı ne olmalı?">
+    <folderInputEmptyError "Lütfen bir klasör adı girin.">
+    <folderInputPlaceholder "klasör adı girin">
+    <creatingFolderError "Olamaz! Bir şeyler yanlış gitti ve klasörünüz oluşturulamadı. Lütfen tekrar deneyin.">
+    <success "Başarılı!">
+    <folderCreated "Klasörünüz oluşturuldu!">
+    <renameFolderDialogTitle "Klasör Adını Değiştir">
+    <renameFolderDialogText "Bu klasörün yeni adı ne olmalı?">
+    <renamingFolderError "Olamaz! Bir şeyler yanlış gitti ve klasörünüz yeniden adlandırılamadı. Lütfen tekrar deneyin.">
+    <folderRenamed "Bu klasör yeniden adlandırıldı">
+    <removeFolderDialogTitle "Klasörü Kaldır">
+    <removeFolderDialogText1 "Bu klasörü silmek istediğinizden emin misiniz: ">
+    <removeFolderDialogText2 "Bu klasördeki konuşmalar 'gelen kutusu' içine taşınacak.">
+    <removingFolderError "Olamaz! Bir şeyler yanlış gitti ve klasörünüz kaldırılamadı. Lütfen tekrar deneyin.">
+    <folderRemoved "Bu klasör kaldırıldı.">
+    <conversationMoveError "Konuşma klasöre taşınamadı.">
+    <moveConversationsDialogTitle "Konuşmaları Klasöre Taşı">
+    <moveConversationsDialogText "konuşma seçildi. Hangi klasöre taşınsın?:">
+    <conversationsNotSelectedError "Lütfen taşımak üzere en az bir konuşma seçin.">
+    <movingConversationsError "Üzgünüz, konuşmalar klasöre taşınamadı">
+    <conversationsMoved "konuşma taşındı.">
+    <addNewFolder "Yeni klasör ekle">
+    <moveFilesDialogTitle "Dosyaları Klasöre Taşı">
+    <moveFilesDialogText "dosya seçildi. Hangi klasöre taşınsın?">
+    <filesNotSelectedError "Lütfen ilk olarak dosyaları seçin">
+    <movingFilesError "Üzgünüz, dosyalar klasöre taşınamadı">
+    <filesMoved "dosya taşındı.">
+    <fileMoveError "Üzgünüz, dosya klasöre taşınamadı.">
+    <removeFileFolderDialogText2 "Bu klasördeki dosyalar, 'tüm dosyalar' klasörüne taşınacak.">
+    <folder "Klasör">
+    <folderExistsError "Bu isimde klasör zaten mevcut">
+    <moveToFolder "Klasöre taşı">
+    <length "uzunluk">
+    <words "kelime">
+    <unsorted "Sıralanmamış">
+    <typePassphraseToConfirm "Bu sistem parolasını kabul etmek için aşağıya girin">
+    <passphraseConfirmFailed "Sistem parolası hatalı girildi. Lütfen devam etmeden önce güvenli bir yerde saklayın.">
+    <acknowledgedMessage "Doğrulanmış Mesaj">

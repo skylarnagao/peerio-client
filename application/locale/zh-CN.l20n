@@ -1,0 +1,324 @@
+
+    <title "Peerio">
+    <signupHeader "消息和文件。简单且安全。">
+    <signupIntro "Peerio 是一种简单且安全的发送消息、共享文件和在线存储文档的方式。一切东西发送到云端之前都会被加密，因此除了您和您曾经分享的人以外，没有人能看到您的数据内容。&lt;br /><br /><strong>Peerio 目前处于测试版阶段。<a href='https://peerio.com/pages/beta.html' target='_blank'>了解这意味着什么</a>。">
+    <username "用户名">
+    <passphrase "密码">
+    <passphraseOrPIN "密码短语或设备密码">
+    <or "或">
+    <loginFailed "登录失败">
+    <loginFailedText "如果您在使用设备密码，请改为使用您的账户密码。">
+    <ok "确定">
+    <submit "提交">
+    <signup "注册">
+    <signupProgress "注册流程">
+    <basicInformation "基本信息">
+    <desiredUsername "想要的用户名">
+    <usernameNotAvailable "用户名无效或不可用。">
+    <addressNotAvailable "地址无效或不可用。">
+    <firstName "名">
+    <lastName "姓">
+    <emailOrPhone "电子邮件或手机号">
+    <yourPassphrase "您的密码">
+    <infoAlertPassphrase "为了增强安全性，Peerio 采用 &lt;a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'&gt;随机生成的密码短语&lt;/a>;。&lt;strong>;您的密码短语是您账户的万能钥匙！&lt;/strong>;您是您的密码短语的唯一拥有者，您的账户安全完全取决于它，请记住这点并保护它。您在新设备上登录您的账户时需要用到它。如果您遗失了您的密码短语，您就永久失去了对您的账户的访问权。我们建议您将您的密码短语写在纸上，或将其存储在一个安全的密码管理器中。">
+    <infoAlertPassphraseNote "<strong>不用担心</strong>，一会您还可以设置<i>设备密码</i>以供快速访问此设备。">
+    <signupPassphraseConfirm "使用此密码？">
+    <signupPassphraseConfirmText "<strong>记住</strong>，您是此密码短语的唯一拥有者。<a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>;如果您遗失了该密码短语&lt;/a>;，您的账户也将永远遗失。因此为了确保安全，请输入一次您的密码短语，确保您已经完善保存它，然后继续。">
+    <signupYourGeneratedPassphrase "您生成的密码：">
+    <signupPassphraseRefresh "更改密码">
+    <error "错误">
+    <errorText "您的请求未能完成。">
+    <warning "警告">
+    <confirmPassphrase "确认密码">
+    <showPassphrase "显示密码">
+    <continue "继续">
+    <registerAccountError "未能注册账户">
+    <registerAccountErrorText "对不起，我们现在不能注册您的账户。请重新启动 Peerio 并重新尝试注册。">
+    <createMyAccount "创建我的账户">
+    <accountConfirmation "账户确认">
+    <signupAccountConfirmationEmail "请检查您用来注册 Peerio 账户的电子邮箱，查收确认码并在下面输入它。如果您未看到那封邮件，请检查您的垃圾邮件文件夹。">
+    <signupAccountConfirmationPhone "我们已经将确认码通过一条短信（SMS）发送到了您提供的电话号码。<strong>请确保您的手机号包含国家代码和区域号。</strong>">
+    <signupConfirmationCodeTimeText "您的代码有效期还剩（秒）：">
+    <signupConfirmationCodeExpired "确认码已过期">
+    <signupConfirmationCodeExpiredText "您的确认码已过期。请重新启动 Peerio 并再试一次。">
+    <code "代码">
+    <confirmationCode "确认码">
+    <confirmMyAccount "确认我的账户">
+    <invalidConfirmationCode "请仔细检查此代码。">
+    <finishingUp "完成注册">
+    <peerioPIN "Peerio 密码">
+    <setAPeerioPIN "为此设备设置密码？">
+    <signupPeerioPIN "Peerio 设备密码允许您快速的在特定设备上登录，而避免每次登录都需要输入您的密码短语。您可以设置一个只在此设备上有效的较短密码。您可以在不同的设备上设置不同的设备密码。<br><br>用户设置的设备密码往往要比 Peerio 的密码短语更不安全，因此您应该<strong>只在您信任并且经常使用的设备上设置设备密码</strong>。">
+    <PINNotStrong "密码强度：脆弱">
+    <PINStrong "密码强度：不错">
+    <setPIN "设置密码">
+    <skip "跳过">
+    <accountRateLimited "请稍等几分钟">
+    <accountRateLimitedText "此账户暂时不可用，因为它执行了太多次服务器请求。请稍等几分钟，然后再试。">
+    <accountBlacklisted "账户不可用">
+    <accountBlacklistedText "此账户现被暂停。为了重新获得访问权，请通过 support@peerio.com 联系 Peerio 客服。">
+    <searchMessagesFilesAndContacts "搜索消息、文件和联系人">
+    <messages "消息">
+    <files "文件">
+    <contacts "联系人">
+    <searchResultsClickToReset "搜索结果（点击重置）">
+    <connectionStatus "连接状态">
+    <welcomeToAccount "欢迎查阅您的 Peerio 账户。">
+    <welcomeToAccountText "Peerio 可以让您安全地发送消息，以及存储和管理您的文件和文档。这里是您的上手教程。">
+    <welcomeToAccountList1 "点击 <strong>联系人</strong> 选项卡添加联系人。在您添加一些联系人之后，分享消息和文件都非常简单。">
+    <welcomeToAccountList2 "点击左侧的&lt;strong>撰写消息</strong>;按钮开始对话。对话可以包含非常多的联系人 — 并且一切都是端到端加密。">
+    <welcomeToAccountList3 "点击 <strong>文件</strong> 选项卡，在 Peerio 上存储您的文件。您的文件将被加密，并且随时供您的其他设备访问，或与联系人分享。">
+    <welcomeToAccountListSearch "Peerio 窗口顶部的&lt;strong>搜索栏</strong>;让您可以轻松地在一处访问您的所有消息、文件和联系人。快试试吧！">
+    <newMessage "撰写消息">
+    <inbox "收件箱">
+    <uploadFile "上传文件">
+    <filesSidebarUploadFileSubtitle "或拖放以上传">
+    <addContact "添加联系人">
+    <allMessages "所有消息">
+    <drafts "草稿箱">
+    <trash "垃圾箱">
+    <account "账户">
+    <preferences "首选项">
+    <help "帮助">
+    <logout "退出">
+    <logoutConfirm "退出 Peerio 登录状态？">
+    <logoutConfirmText "在退出登录前，请确保您没有任何未保存的数据。">
+    <show "显示">
+    <reply "回复">
+    <close "关闭">
+    <all "所有">
+    <forward "转发">
+    <from "从">
+    <to "至">
+    <recipients "收件人">
+    <participantHasLeft "此参与者离开了对话。">
+    <read "阅读">
+    <readBy "阅读时间:">
+    <expandConversation "展开对话">
+    <encrypted "已加密">
+    <addToFolder "添加到文件夹">
+    <acknowledge "确认">
+    <remove "移除">
+    <download "下载">
+    <destroy "销毁">
+    <newMessages "新消息">
+    <noNewMessages "没有新消息">
+    <participantsWhoHaveLeft "以前的参与者：">
+    <newMessageErrorText "您的消息未能发送。">
+    <conversationHasNoFiles "此对话还没有共享文件。">
+    <filesWillAppearHere "文件将被添加到这里供快速访问。">
+    <messageCouldNotBeSentTo "您的消息未能发送给下列联系人：">
+    <messageDecryptedError "您的联系人尝试发送一个消息，但未能被您的账户正确接收。">
+    <removeConversationsQuestion "移除对话？">
+    <removeConversationsText "警告：您将不再接收到此对话中共享的任何消息或文件。">
+    <newMessageRecipientsError "消息没有收件人">
+    <newMessageRecipientsErrorText "请输入至少一个接收人以发送您的消息。">
+    <typeYourReply "请输入您的回复...">
+    <noParticipantsLeft "没有参与者仍然在此对话中。">
+    <allDocuments "所有文件">
+    <photos "照片">
+    <videos "视频">
+    <pdfDocuments "PDF 文档">
+    <wordDocuments "文本文件">
+    <spreadsheets "电子表格">
+    <presentations "幻灯片">
+    <other "其他">
+    <storage "存储">
+    <yourUsage "您已使用：">
+    <quotaError "达到存储限额">
+    <quotaErrorText "您的 Peerio 账户没有足够的空间。先尝试删除一些“其他”文件，或者升级您的账户以获得更多存储空间。">
+    <sizeError "文件太大">
+    <sizeErrorText "Peerio 目前不支持超过  400MB 的文件。">
+    <removeFilesQuestion "移除文件？">
+    <removeFilesText "文件将从您的账户中永久删除，但对于您已经与其分享的用户仍然可见。">
+    <destroyFilesQuestion "销毁文件？">
+    <destroyFilesText "文件将被从您的账户和任何您与其分享的账户中移除。">
+    <destroyFilesOwnerError "无法销毁非您持有的文件">
+    <destroyFilesOwnerErrorText "销毁文件意味着从每个已被分享的账户中移除它们。只有文件的所有者可以做到这一点。尝试删除别的文件吧。">
+    <fileUploadError "文件上传失败">
+    <fileUploadErrorText "Please check your connection and try again.">
+    <dragAndDropUploadTitle "拖放以上传到 Peerio。">
+    <dragAndDropUploadText "您的文件将被加密并上传到您的个人云存储。">
+    <allFiles "所有文件">
+    <myFiles "我的文件">
+    <receivedFiles "收到的文件">
+    <fileName "文件名称">
+    <date "日期">
+    <size "大小">
+    <owner "所有者">
+    <actions "操作">
+    <search "搜索">
+    <attachSelectedFiles "附加选定文件">
+    <uploadNewFile "上传新文件">
+    <downloading "正在下载">
+    <downloadFileError "未能下载文件">
+    <downloadFileErrorText "发生一个错误。">
+    <save "保存">
+    <allContacts "所有联系人">
+    <confirmedContacts "已确认联系人">
+    <pendingContacts "待定联系人">
+    <importContacts "导入联系人">
+    <sortBy "排序方式">
+    <sendMessage "发送消息">
+    <latestMessages "最新消息">
+    <latestFiles "最新文件">
+    <viewAllMessages "查看所有消息">
+    <viewAllFiles "查看所有文件">
+    <avatarTooltip "用户头像允许您验证您的联系人的密码学身份。如果一个联系人的头像变化了，请在与其通过 Peerio 通信前，联系他们并重新验证它。">
+    <pending "待定">
+    <you "您">
+    <accountDeleted "账户已删除">
+    <block "屏蔽">
+    <noContacts "没有选择联系人">
+    <noContactsText "选择一个联系人，或者添加一名好友以开始。">
+    <addMyFirstContact "添加新联系人">
+    <acceptContactRequest "接受联系人请求？">
+    <acceptContactRequestText "选择是否允许此用户通过 Peerio 向您发送消息和与您安全地分享文件。">
+    <accept "接受">
+    <decline "拒绝">
+    <addContactInfo "添加好友为联系人">
+    <addContactInfoText "与您的好友发送消息和分享文件是从添加他们为联系人开始的。如果您的好友还不是一名 Peerio 用户，我们会尝试给他们的地址发送一封邀请函。您可以指定他们的<strong>用户名</strong>、<strong>电子邮件地址</strong>或<strong>手机号码</strong>来添加一名用户。">
+    <addContactInfoAvatarText "每名 Peerio 用户都有着一个特殊的头像标示身份。它是作为自身的数字指纹。如果 Peerio 用户的头像变化，它们可能已经更改了他们的密码，或者他们的账户可能已经受到了侵害。">
+    <usernameEmailOrPhone "用户名、电子邮件或手机号">
+    <addContactRequestSent "联系人请求已发送">
+    <addContactRequestSentText "我们已经发送了一个联系人请求到您提供的用户名。">
+    <addContactInviteSent "邀请已发送">
+    <addContactInviteSentText "我们已经发送了一封邀请信给您的联系人。">
+    <addContactErrorText "我们无法添加此联系人。请再次检查此信息，然后再试。">
+    <removeContact "移除联系人">
+    <removeContactQuestion "移除联系人？">
+    <removeContactText "这将阻止您与他通过 Peerio 进行安全的通信。您确定吗？">
+    <cancel "取消">
+    <removeContactSuccess "您的联系人已成功移除。">
+    <removeContactError "我们现在未能移除此联系人。请重试。">
+    <newContact "新联系人！">
+    <newContactText "您现在可以与他联系了：">
+    <miniLockID "miniLock ID:">
+    <twoFactorAuth "双因素验证">
+    <authenticate "验证">
+    <twoFactorAuthSetupHeading "设置您的移动设备">
+    <twoFactorAuthSetupText "使用您喜欢用的身份验证应用扫描下面的条码<a href='https://peerio.zendesk.com/hc/en-us/articles/204018305' target='_blank'>了解双因素验证如何与 Peerio 协同工作</a>。">
+    <twoFactorAuthInfoHeading "帮助我们保护您的账户">
+    <twoFactorAuthInfoText "双因素验证有助于保持您的账户同时具有两种不同类别的登录信息来确保安全。请输入您的移动设备给出的六位数字以继续。">
+    <twoFactorAuthConfirm "在扫描该 QR 码之后，输入您的移动设备生成的六位代码以确认初始设置。">
+    <twoFactorAuthIncorrect "代码不正确">
+    <twoFactorAuthIncorrectText "您输入的代码不正确。请重试。">
+    <twoFactorAuthConfirmedText "从现在开始，当您每天第一次登录或者从一台新设备登录时，您都将被询问您的移动设备上的代码。请确保您不要丢失您的移动设备。">
+    <twoFactorAuthCannotDisable "Unable to turn off two-factor authentication.">
+    <twoFactorAuthDisabled "双因素验证已禁用">
+    <twoFactorAuthDisabledText "您现在可以只使用您的密码登录。为了增强安全性，请考虑在未来重新打开双因素验证。">
+    <subject "主题">
+    <send "发送">
+    <saveDraft "保存草稿">
+    <attachFile "附加文件">
+    <autoDestructSettings "自动销毁设置...">
+    <accountSettings "账户设置">
+    <name "名称">
+    <primary "主要">
+    <secondary "次要">
+    <addresses "地址">
+    <setPrimaryAddress "设为主要地址">
+    <removeAddress "移除">
+    <addNewAddress "添加新地址">
+    <couldNotConfirmAddress "请仔细检查您输入的确认码。">
+    <couldNotAddAddress "我们未能添加此地址。请仔细检查。">
+    <couldNotUpdateName "我们未能更新您的名称。请再试一次。">
+    <confirmed "已确认！">
+    <confirmedText "您的首选项已经更新。">
+    <confirmedLanguageText "您的新语言将在您重新启动 Peerio 后可用。">
+    <confirmedAddressText "感谢您花时间确认您的新的 Peerio 地址。">
+    <confirmedNameText "您的名称已更新。">
+    <email "电子邮件">
+    <phoneNumber "手机号码">
+    <deleteAccount "删除账户">
+    <deleteAccountText "删除您的 Peerio 账户将永久销毁您的所有信息，并且您将不再可能在未来重新使用此用户名。">
+    <deleteAccountConfirm "确认删除账户">
+    <deleteAccountConfirmText "您确定？您将失去您的所有数据，并且永远无法再重新使用此用户名。">
+    <changePassphrase "更改密码">
+    <changePassphraseText "如果您的密码遭到泄露，Peerio 允许您废除您以前的密码并设置一个新密码。此功能即将推出。">
+    <newPassphrase "新密码">
+    <retypeNewPassphrase "重复新密码">
+    <enableTwoFactorAuth "启用双因素验证">
+    <disableTwoFactorAuth "禁用双因素验证">
+    <accountSettingsTwoFactorAuthText "Peerio 可以与您的移动设备配对以提供增强的账户安全性。">
+    <twoFactorAuthLearnMore "了解什么是双因素验证">
+    <language "语言">
+    <notifications "通知">
+    <notificationOptions "通知选项">
+    <receiveMessageNotifications "将给我的通知发送到<strong>我的主要地址</strong>。">
+    <useSounds "当我收到一条新通知时<strong>播放声音</strong>">
+    <sendReadReceipts "当我已读他们的消息时通知我的联系人">
+    <readReceipts "已读回执">
+    <peerioPINForThisDevice "设备密码">
+    <peerioPINUpdated "设备密码已更新">
+    <peerioPINUpdatedText "您的此设备的密码已成功更新。">
+    <removeMyPeerioPIN "移除设备密码">
+    <peerioPINRemoved "设备密码已移除">
+    <peerioPINRemovedText "分配到此设备的密码已完成销毁。">
+    <ctrlEnter "发送回复">
+    <pressEnterToSend "按 Enter 发送">
+    <updateAvailable "有更新可用！">
+    <updateAvailableText "Peerio 有新的更新可用！更新会带来更酷的新功能，以及可靠性改善。您要立即更新吗？">
+    <updateDownload "下载更新">
+    <later "稍后">
+    <updateAvailableCritical "有关键更新可用">
+    <updateAvailableCriticalText "有一个 Peerio 关键性更新可用。为了您的安全，在您安装最新的更新之前，您可能不能继续使用。">
+    <TOFUNotMatchError "联系人身份已变化！">
+    <TOFUNotMatchErrorText "警告！您的部分联系人已经更改了他们的身份。在与他们通信之前，请先验证他们的个人资料中的 Peerio 头像。他的用户名是：">
+    <importContactsGoogle "导入您的 Google 联系人到 Peerio">
+    <importContactsGoogleText "要在您的 Peerio 上获得您的 Google 联系人，只需登录您的 Gmail 账户，然后进行如下操作：">
+    <importContactsGoogleStep1 "点击您的 Gmail 页面左上角的 <strong>Gmail</strong>，然后选择 <strong>通讯录</strong>。">
+    <importContactsGoogleStep2 "从 <strong>更多</strong> 下拉菜单中选择 <strong>导出</strong>...">
+    <importContactsGoogleStep3 "选择是否导出所有联系人，或者只导出一组。">
+    <importContactsGoogleStep4 "选择 <strong>Google CSV</strong> 格式导出您的联系人。">
+    <importContactsGoogleStep5 "在您已经将您的联系人导出到一个 CSV 文件之后，点击下面的按钮将它上传到 Peerio。">
+    <uploadCSV "上传 CSV 文件">
+    <importContactsConfirm "Peerio 可能会代表您发送邀请函">
+    <importContactsConfirmText "如果继续，Peerio 可能会代表您向还未使用 Peerio 的联系人发送邀请函。您确定要向这些联系人发送邀请函吗？">
+    <importContactsError "未能邀请联系人">
+    <importContactsErrorText "我们目前未能邀请您的联系人。请验证您的信息然后重试。">
+    <importContactsSuccess "联系人邀请已发送！">
+    <importContactsSuccessText "您的联系人将被您邀请。">
+    <importContactsSelectToInvite "选择要添加/邀请的联系人">
+    <importContactsSelectToInviteText "如果一名联系人已经在使用 Peerio，他们将被添加到您的账户。否则，我们将代表您向他们发送一封邀请函。">
+    <importContactsSelectAll "选择所有联系人">
+    <importSelectedContacts "导入选定联系人">
+    <newFolderDialogTitle "添加新文件夹">
+    <newFolderDialogText "这个文件夹的名称？">
+    <folderInputEmptyError "请输入文件夹名称。">
+    <folderInputPlaceholder "输入文件夹名称">
+    <creatingFolderError "噢！发生了某些事情，您的文件夹未能创建。请重试。">
+    <success "成功！">
+    <folderCreated "您的文件夹已创建！">
+    <renameFolderDialogTitle "更改文件夹名称">
+    <renameFolderDialogText "这个文件夹的新名字是？">
+    <renamingFolderError "噢！发生了某些事情，您的文件夹未能重命名。请重试。">
+    <folderRenamed "此文件夹已被重命名。">
+    <removeFolderDialogTitle "移除文件夹">
+    <removeFolderDialogText1 "您确定要移除该文件夹吗">
+    <removeFolderDialogText2 "此文件夹中的对话将被移动到“收件箱”。">
+    <removingFolderError "噢！发生了某些事情，您的文件夹未能移除。请重试。">
+    <folderRemoved "此文件夹已被移除。">
+    <conversationMoveError "移动对话到文件夹失败。">
+    <moveConversationsDialogTitle "移动对话到文件夹">
+    <moveConversationsDialogText "对话已选中。移动到哪个文件夹？：">
+    <conversationsNotSelectedError "请选择至少一个要移动的对话。">
+    <movingConversationsError "抱歉，移动对话到文件夹失败">
+    <conversationsMoved "对话已移动。">
+    <addNewFolder "添加新文件夹">
+    <moveFilesDialogTitle "移动文件到文件夹">
+    <moveFilesDialogText "文件已选中。移动到哪个文件夹？">
+    <filesNotSelectedError "请先选择一些文件">
+    <movingFilesError "抱歉，移动文件到文件夹失败">
+    <filesMoved "文件已移动。">
+    <fileMoveError "移动文件到文件夹失败。">
+    <removeFileFolderDialogText2 "此文件夹中的文件已移动到“所有文件”。">
+    <folder "文件夹">
+    <folderExistsError "此名称的文件夹已经存在">
+    <moveToFolder "移动到文件夹">
+    <length "长度">
+    <words "字词">
+    <unsorted "未排序">
+    <typePassphraseToConfirm "请输入如上所示的此密码短语以接受并继续">
+    <passphraseConfirmFailed "您的密码短语输入错误。请在某处安全的地方存储您的密码短语，然后再继续。">
+    <acknowledgedMessage "已确认此项">

@@ -1,0 +1,324 @@
+
+    <title "Peerio">
+    <signupHeader "Meldinger og filer. Enkelt og sikkert.">
+    <signupIntro "Peerio er en enkel og sikker måte å sende meldinger, dele filer, samt å lagre dokumenter på nettet. Alt blir kryptert før det sendes til skyen, slik at bare du og dem du deler med har tilgang til din data.<br /><br /><strong>Peerio er foreløpig i beta-stadie.<a href='https://peerio.com/pages/beta.html' target='_blank'>Her kan du finne ut hva det betyr</a>.">
+    <username "Brukernavn">
+    <passphrase "Passordsekvens">
+    <passphraseOrPIN "Passordsekvens eller enhetskode">
+    <or "eller">
+    <loginFailed "Innlogging feilet">
+    <loginFailedText "Hvis du bruker et enhetspassord, prøv å bruk kontoens passordsekvens i steden for.">
+    <ok "OK">
+    <submit "Send inn">
+    <signup "Påmelding">
+    <signupProgress "påmeldingsprosess">
+    <basicInformation "Grunninformasjon">
+    <desiredUsername "Ønsket brukernavn">
+    <usernameNotAvailable "brukernavnet er ugyldig eller ikke tilgjengelig.">
+    <addressNotAvailable "adressen er ugylidg eller ikke tilgjengelig.">
+    <firstName "Fornavn">
+    <lastName "Etternavn">
+    <emailOrPhone "E-post eller mobiltelefonnummer">
+    <yourPassphrase "Din passordsekvens">
+    <infoAlertPassphrase "For bedre sikkerhet bruker Peerio <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'>tilfeldig genererte passordsekvenser</a>. <br><br><strong>Du er den eneste med kjennskap til denne passordsekvensen!</strong> Hvis du mister den, vil du tape tilgangen til din konto for godt. Vi anbefaler å skrive ned passordsekvensen på papir, eller å lagre den i en sikret passordsbehandler.">
+    <infoAlertPassphraseNote "<strong>Frykt ikke</strong>, du vil snart kunne velge et kortere enhets<i>kode</i> for rask tilgang til denne enheten.">
+    <signupPassphraseConfirm "Benytt denne passordsekvensen?">
+    <signupPassphraseConfirmText "<strong>Husk</strong>, du er den eneste med kjennskap til denne passordsekvensen. <a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>Hvis du mister det</a>, vil din konto gå tapt for alltid. For å være på den sikre siden, <strong>skriv inn din passordsekvens én gang til for å fortsette.</strong>">
+    <signupYourGeneratedPassphrase "Din maskinopprettede passordsekvens:">
+    <signupPassphraseRefresh "Bytt passordsekvens">
+    <error "Feil">
+    <errorText "Din forespørsel kunne ikke fullføres.">
+    <warning "Advarsel">
+    <confirmPassphrase "Bekreft passordsekvens">
+    <showPassphrase "Vis passordsekvens">
+    <continue "Fortsett">
+    <registerAccountError "Kunne ikke registrere konto">
+    <registerAccountErrorText "Beklager, vi kunne ikke registrere din konto for øyeblikket. Gjør en omstart av Peerio og prøv igjen om noen minutter.">
+    <createMyAccount "Opprett min konto">
+    <accountConfirmation "Kontobekreftelse">
+    <signupAccountConfirmationEmail "Sjekk din e-post for en bekreftelseskode fra Peerio, og skriv den inn nedenfor. Hvis du ikke finner den kan det lønne seg å ta en titt i søppelposten.">
+    <signupAccountConfirmationPhone "En bekreftelseskode har blitt sendt via SMS til mobiltelefonnummeret du oppga. <strong>Sørg for at det inneholder både lands og retningsnummer. (0047 eller +47 for Norge etterfugt av nummer)</strong>">
+    <signupConfirmationCodeTimeText "Sekunder til din kode utløper:">
+    <signupConfirmationCodeExpired "Bekreftelseskode utløpt">
+    <signupConfirmationCodeExpiredText "Din bekreftelseskode har utløpt. Gjør omstart av Peerio med ny påmelding.">
+    <code "Kode">
+    <confirmationCode "Bekreftelseskode">
+    <confirmMyAccount "Bekreft min konto">
+    <invalidConfirmationCode "dobbeltsjekk denne koden.">
+    <finishingUp "Sluttfører">
+    <peerioPIN "Peerio enhetskode">
+    <setAPeerioPIN "Sett enhetskode for denne enheten?">
+    <signupPeerioPIN "Enhetskoder i Peerio lar deg logge inn raskere på angitte enheter. I steden for å skrive inn passordsekvens her gang du logger inn, kan du velge en kortere enhetskode som bare fungerer på denne enheten. Du kan velge forskjellige enhetskoder på forskjellige enheter. <br><br>Brukervalgte enhetskoder er vanligvis mindre sikre enn Peerios passordsekvenser, du bør <strong>bare velge enhetskode på enheter som du har tiltro til, og som du bruker regelmessig</strong>.">
+    <PINNotStrong "enhetskodens styrke: svakt">
+    <PINStrong "passordstyrke: ok!">
+    <setPIN "Angi passord">
+    <skip "hopp over">
+    <accountRateLimited "Vent noen minutter">
+    <accountRateLimitedText "Denne kontoen er midlertidig utilgjengelig fordi den har sendt for mange forespørsler til tjeneren. Vent noen minutter og prøv igjen.">
+    <accountBlacklisted "Konto utilgjengelig">
+    <accountBlacklistedText "Denne kontoen er midlertidig opphevet. Tilgang kan oppnås ved å sende e-post til support@peerio.com.">
+    <searchMessagesFilesAndContacts "Søk i meldinger, filer og kontakter">
+    <messages "Meldinger">
+    <files "Filer">
+    <contacts "Kontakter">
+    <searchResultsClickToReset "søkeresultater (klikk for å tilbakestille)">
+    <connectionStatus "Tilkoblingsstatus">
+    <welcomeToAccount "Velkommen til din Peerio-konto.">
+    <welcomeToAccountText "Peerio lar deg sende sikrede meldinger, sågar også lagre og behandle filer og dokumenter. Slik kommer du i gang:">
+    <welcomeToAccountList1 "<strong>Legg til kontakter</strong> ved å velge Kontakter-fanen for så å klippe på Legg til kontakt på venstresiden.">
+    <welcomeToAccountList2 "<strong>Start samtaler</strong> ved å trykke på Forfatt melding-knappen på venstresiden. Det er ingen begrensninger på hvor mange som kan delta i samtalen -- og alt er kryptert fra ende til ende.">
+    <welcomeToAccountList3 "<strong>Lagre dine filer</stong> på Peerio ved å velge Filer-fanen for så klikke Last opp filer-knappen på venstresiden. Dine filer vil bli kryptert og er klar til bruk å andre enheter eller til deling med dine kontakter.">
+    <welcomeToAccountListSearch "<strong>Søkefeltet</strong> i toppen av vinduet gjør det enkelt å gå gjennom meldinger, filer og kontakter, alt på en gang. Prøv det!">
+    <newMessage "Forfatt melding">
+    <inbox "Innboks">
+    <uploadFile "Last opp filer">
+    <filesSidebarUploadFileSubtitle "eller dra og slipp for å laste opp">
+    <addContact "Legg til kontakt">
+    <allMessages "Alle meldinger">
+    <drafts "Kladder">
+    <trash "Papirkurv">
+    <account "Konto">
+    <preferences "Innstillinger">
+    <help "Hjelp">
+    <logout "Utlogging">
+    <logoutConfirm "Logg ut fra Peerio?">
+    <logoutConfirmText "Forsikre deg om at du ikke har noe åpent som ikke er lagret før du logger ut.">
+    <show "Vis">
+    <reply "Svar">
+    <close "Lukk">
+    <all "Alle">
+    <forward "Videresend">
+    <from "Fra">
+    <to "Til">
+    <recipients "mottakere">
+    <participantHasLeft "Denne mottakeren har forlatt samtalen.">
+    <read "les">
+    <readBy "Lest av:">
+    <expandConversation "Utvid samtale">
+    <encrypted "kryptert">
+    <addToFolder "Legg til mappe">
+    <acknowledge "Vedkjenn">
+    <remove "Fjern">
+    <download "Last ned">
+    <destroy "Destruer">
+    <newMessages "Nye meldinger">
+    <noNewMessages "Ingen nye meldinger">
+    <participantsWhoHaveLeft "Forrige deltagere:">
+    <newMessageErrorText "Meldingen din kunne ikke sendes">
+    <conversationHasNoFiles "Ingen filer har blitt delt i denne samtalen enda.">
+    <filesWillAppearHere "Filer vil bli opplistet her for raskere tilgang.">
+    <messageCouldNotBeSentTo "Din melding kunne ikke sendes til følgende mottakere:">
+    <messageDecryptedError "Din kontakt prøvde å sende en melding, men den kunne ikke mottas på rett måte av din konto.">
+    <removeConversationsQuestion "Fjern samtaler?">
+    <removeConversationsText "Advarsel: Du vil ikke lenger motta noen meldinger eller filer delt i samtalen.">
+    <newMessageRecipientsError "Meldingen har ingen mottakere">
+    <newMessageRecipientsErrorText "Oppgi ihvertfall én mottaker.">
+    <typeYourReply "Skriv svaret ditt...">
+    <noParticipantsLeft "Ingen gjenværende deltagere i denne samtalen.">
+    <allDocuments "Alle filer">
+    <photos "Bilder">
+    <videos "Videoer">
+    <pdfDocuments "PDF-dokumenter">
+    <wordDocuments "Tekst-dokumenter">
+    <spreadsheets "Regneark">
+    <presentations "Presentasjoner">
+    <other "Annet">
+    <storage "Lagringsplass">
+    <yourUsage "ditt forbruk:">
+    <quotaError "Lagringsavgrensning overskredet">
+    <quotaErrorText "Du har ikke nokk plass tilknyttet din Peerio-konto. Prøv å slette andre filer først, eller oppgrader din konto for legge til mer plass.">
+    <sizeError "Filen er for stor">
+    <sizeErrorText "Peerio støtter foreløpig ikke filer større enn 400MB.">
+    <removeFilesQuestion "Fjern filer?">
+    <removeFilesText "Filer vil bli slettet fra din konto for godt, men vil fremdeles vises for brukere du har delt dem med.">
+    <destroyFilesQuestion "Destruer filer?">
+    <destroyFilesText "Filer vil bli fjernet fra din konto, og kontoene til dem du har delt filene med.">
+    <destroyFilesOwnerError "Kan ikke ødelegge filer du ikke har eierskap til">
+    <destroyFilesOwnerErrorText "Å destruere filer vil fjerne dem fra hver konto de har blitt delt med. Bare filens eier kan gjøre dette. Prøv å slett filen i steden for.">
+    <fileUploadError "Filopplasting feilet">
+    <fileUploadErrorText "Sjekk din tilkobling og prøv igjen.">
+    <dragAndDropUploadTitle "Slipp her for å laste opp til Peerio.">
+    <dragAndDropUploadText "Dine filer vil bli kryptert og lastet opp til din personlige sky.">
+    <allFiles "Alle filer">
+    <myFiles "Mine filer">
+    <receivedFiles "Mottatte filer">
+    <fileName "Filnavn">
+    <date "Dato">
+    <size "Størrelse">
+    <owner "Eier">
+    <actions "Handlinger">
+    <search "Søk">
+    <attachSelectedFiles "Legg ved utvalgte filer">
+    <uploadNewFile "Last opp nye filer">
+    <downloading "Laster ned">
+    <downloadFileError "Kunne ikke laste ned fil">
+    <downloadFileErrorText "Oida! En feil inntraff, prøv igjen senere.">
+    <save "lagre">
+    <allContacts "Alle kontakter">
+    <confirmedContacts "Bekreftede kontakter">
+    <pendingContacts "Avventende kontakter">
+    <importContacts "Importer kontakter">
+    <sortBy "Sorter etter">
+    <sendMessage "Send melding">
+    <latestMessages "Seneste meldinger">
+    <latestFiles "Seneste filer">
+    <viewAllMessages "Se alle meldinger">
+    <viewAllFiles "Se alle filer">
+    <avatarTooltip "Brukeravatarer lar deg bekrefte den kryptografiske identiteten til dine kontakter. Hvis en av dem endrer seg, kontakt dem for å bekrefte den igjen før du fører en samtale med dem i Peerio.">
+    <pending "Avventende">
+    <you "Deg">
+    <accountDeleted "Konto slettet">
+    <block "Blokker">
+    <noContacts "Ingen kontakter valgt">
+    <noContactsText "Velg en kontakt, eller kom i gang ved å legge til en venn.">
+    <addMyFirstContact "Legg til ny kontakt">
+    <acceptContactRequest "Godkjenn kontaktforespørsel?">
+    <acceptContactRequestText "Velg hvorvidt du skal tillate denne brukeren å sende deg meldinger og dele filer på en sikker måte på Peerio.">
+    <accept "Godta">
+    <decline "Avslå">
+    <addContactInfo "Legger til venner som kontakter">
+    <addContactInfoText "Send meldinger og filer til kontakter på Peerio. Legg til ved å oppgi <strong>brukernavn</strong> Eller inviter <strong>e-post</strong> eller <strong>mobilnummer</strong>.">
+    <addContactInfoAvatarText "Hver Peerio-bruker har en egen avatar som identifiserer dem. Tenk på det som et digitalt fingeravtrykk. Hvis en brukers avatar endrer seg i Peerio, kan de ha byttet passordsekvens, eller kontoen deres kan ha blitt stjålet.">
+    <usernameEmailOrPhone "Bruker, e-post eller mobil">
+    <addContactRequestSent "Kontaktforespørsel sendt">
+    <addContactRequestSentText "En kontaktforespørsel har blitt sendt til brukeren du har angitt.">
+    <addContactInviteSent "Invitasjon sendt">
+    <addContactInviteSentText "Invitasjon sendt til kontakt.">
+    <addContactErrorText "Kunne ikke legge til denne kontakten. Dobbeltsjekk og prøv igjen.">
+    <removeContact "Fjern kontakt">
+    <removeContactQuestion "Fjern kontakt?">
+    <removeContactText "Dette vil forhindre dere fra å føre sikrede samtaler over Peerio. Bekreft.">
+    <cancel "Avbryt">
+    <removeContactSuccess "Kontakt fjernet.">
+    <removeContactError "Kunne ikke fjerne kontakt. Prøv igjen.">
+    <newContact "Ny kontakt!">
+    <newContactText "Du er nå i kontakt med">
+    <miniLockID "miniLock-ID:">
+    <twoFactorAuth "To-stegs-beskyttelse">
+    <authenticate "Bekreft">
+    <twoFactorAuthSetupHeading "Sett opp din mobile enhet">
+    <twoFactorAuthSetupText "Bruk den bekreftelsesmekanismen du liker best ved å skanne QR-koden nedenfor. Peerio anbefaler FreeOTP. <a href='https://peerio.zendesk.com/hc/en-us/articles/204018305' target='_blank'>Lær hvordan to-stegs-beskyttelse fungerer i Peerio</a>.">
+    <twoFactorAuthInfoHeading "Hjelp oss å beskytte din konto">
+    <twoFactorAuthInfoText "To-stegs-beskyttelse sikrer din konto ved å kreve to forskjellige innloggingsdeler. Skriv inn den seks-sifrede koden fra din mobile enhet for å fortsette.">
+    <twoFactorAuthConfirm "Etter at du skanner QR-koden, skriv inn den seks-sifrede koden generert av mobilen din for å bekrefte oppsett.">
+    <twoFactorAuthIncorrect "Feil kode">
+    <twoFactorAuthIncorrectText "Koden du har skrevet er feil. Prøv igjen.">
+    <twoFactorAuthConfirmedText "Framtidige innlogginger vil kreve at du skriver inne en kode fra din mobile enhet den første gangen du logger inn for dagen, eller fra en ny plassering. Ikke mist din mobile enhet.">
+    <twoFactorAuthCannotDisable "Klarte ikke å skru av to-stegs-beskyttelse.">
+    <twoFactorAuthDisabled "To-stegs-beskyttelse avskrudd.">
+    <twoFactorAuthDisabledText "Du kan nå logge inn med bare passordet. For bedret sikkerhet bør du overveie å skru to-stegs-beskyttelse på igjen i fremtiden.">
+    <subject "Emne">
+    <send "Send">
+    <saveDraft "Send kladd">
+    <attachFile "Legg ved fil">
+    <autoDestructSettings "Selvutslettings-innstillinger...">
+    <accountSettings "Konto-innstillinger">
+    <name "Navn">
+    <primary "primær">
+    <secondary "sekundær">
+    <addresses "Adresser">
+    <setPrimaryAddress "Velg som hovedadresse">
+    <removeAddress "Fjern adresse">
+    <addNewAddress "Legg til ny adresse">
+    <couldNotConfirmAddress "Dobbeltsjekk bekreftelseskoden du skrev inn.">
+    <couldNotAddAddress "Adresse kunne ikke legges til. Dobbeltsjekk den.">
+    <couldNotUpdateName "Navn kunne ikke oppdateres. Prøv igjen.">
+    <confirmed "Bekreftet!">
+    <confirmedText "Dine innstillinger har blitt lastet opp.">
+    <confirmedLanguageText "Nytt språk tilgjengelig ved omstart av Peerio.">
+    <confirmedAddressText "Takk for at du tar deg tid til å bekrefte din Peerio-adresse.">
+    <confirmedNameText "Navnet ditt har blitt oppdatert.">
+    <email "E-post">
+    <phoneNumber "Mobiltelefonnummer">
+    <deleteAccount "Slett konto">
+    <deleteAccountText "Å slette din Peerio-konto vil slette all din informasjon på permanent basis, og du vil ikke kunne nytte dette brukernavnet i fremtiden.">
+    <deleteAccountConfirm "Bekreft sletting av konto">
+    <deleteAccountConfirmText "Er du sikker? Du vil miste all data og kan aldri få dette brukernavnet igjen.">
+    <changePassphrase "Endre passordsekvens">
+    <changePassphraseText "Hvis din passordsekvens kommer andre for øye, vil Peerio la deg tilbakestille din tidligere passordsekvens og velge en ny en.\nDette blir implementert snart.">
+    <newPassphrase "Ny passordsekvens">
+    <retypeNewPassphrase "Skriv inn ny passordsekvens igjen">
+    <enableTwoFactorAuth "Skru på To-stegs-beskyttelse">
+    <disableTwoFactorAuth "Skru av to-stegs-beskyttelse">
+    <accountSettingsTwoFactorAuthText "Peerio kan bruke din mobile enhet for ytterligere kontosikkerhet.">
+    <twoFactorAuthLearnMore "lær mer om to-stegs-beskyttelse">
+    <language "Språk">
+    <notifications "Merknader">
+    <notificationOptions "Merknadsvalg">
+    <receiveMessageNotifications "Send merknadsmeldinger <strong>til min hovedadresse</strong>.">
+    <useSounds "<strong>Spill en lyd</strong> Når jeg mottar en ny merknad.">
+    <sendReadReceipts "Underrett mine kontakter om at jeg leser deres meldinger.">
+    <readReceipts "Lesekvitteringer">
+    <peerioPINForThisDevice "Enhetskode">
+    <peerioPINUpdated "Enhetskode oppdatert">
+    <peerioPINUpdatedText "Din enhetskode for denne enheten har blitt oppdatert.">
+    <removeMyPeerioPIN "Fjern enhetskode fra enhet">
+    <peerioPINRemoved "Enhetskode fjernet for enheten">
+    <peerioPINRemovedText "Angitt enhetskode for denne enheten har blitt fjernet.">
+    <ctrlEnter "Send svar">
+    <pressEnterToSend "Trykk enter for å sende">
+    <updateAvailable "Oppdatering tilgjengelig!">
+    <updateAvailableText "Oppdatering tilgjengelig! Bedre stabilitet, forbedringer. Oppdatere nå?">
+    <updateDownload "Last ned oppdatering">
+    <later "Senere">
+    <updateAvailableCritical "Kritisk oppdatering tilgjengelig">
+    <updateAvailableCriticalText "En kritisk oppdatering er tilgjengelig, du kan ikke fortsette før du installerer den.">
+    <TOFUNotMatchError "Kontaktidentiteter har endret seg!">
+    <TOFUNotMatchErrorText "Advarsel! Noen av dine kontakter har endret sine identiteter. Før du snakker med dem, bekreft deres Peerio-avatar, altså miniatyrbildet i deres profil. Dette gjelder følgende brukernavn:">
+    <importContactsGoogle "Importer dine Google-kontakter til Peerio">
+    <importContactsGoogleText "For å få dine Google-kontakter til Peerio, logg inn på din Gmail-konto og følg veiledningen:">
+    <importContactsGoogleStep1 "Klikk <strong>Gmail</strong> øverst til venstre i Gmail, velg så <strong>Kontakter</strong>.">
+    <importContactsGoogleStep2 "Fra <strong>Mer</strong> rullegardinsmenyen, velg <strong>Eksporter</strong>...">
+    <importContactsGoogleStep3 "Velg hvorvidt du vil eksportere alle kontakter eller bare én gruppe.">
+    <importContactsGoogleStep4 "Velg <strong>Google-CSV</strong>-formatet for eksportering av dine kontakter.">
+    <importContactsGoogleStep5 "Etter at du har eksportert dine kontakter til en CSV-fil, klikk knappen nedenfor for å laste den opp til Peerio.">
+    <uploadCSV "Last opp CSV-fil">
+    <importContactsConfirm "Peerio kan sende invitasjoner på vegne av deg">
+    <importContactsConfirmText "Bekreft forsendelse av kontaktinforespørsler fra Peerio til dine kontakter på dine vegne.">
+    <importContactsError "Kunne ikke invitere kontakter">
+    <importContactsErrorText "Kunne ikke sende kontaktforespørsler. Bekreft din informasjon og prøv igjen.">
+    <importContactsSuccess "Kontaktinvitasjoner sendt!">
+    <importContactsSuccessText "Dine kontakter vil bli invitert på vegne av deg.">
+    <importContactsSelectToInvite "Velg kontakter å legge til/invitere">
+    <importContactsSelectToInviteText "Kontakter som allerede er på Peerio vil bli lagt til i kontaktlisten, alle andre vil få en invitasjon.">
+    <importContactsSelectAll "Velg alle kontakter">
+    <importSelectedContacts "Importer valgte kontakter">
+    <newFolderDialogTitle "Legg til ny mappe">
+    <newFolderDialogText "Hva skal mappen hete?">
+    <folderInputEmptyError "Skriv inn mappenavn">
+    <folderInputPlaceholder "skriv inn mappenavn">
+    <creatingFolderError "Oida! Noe gikk galt og mappen din ble ikke opprettet. Prøv igjen.">
+    <success "Vellykket!">
+    <folderCreated "Din mappe har blitt opprettet!">
+    <renameFolderDialogTitle "Endre mappenavn">
+    <renameFolderDialogText "Hva skal denne mappen hete?">
+    <renamingFolderError "Oida! Noe gikk galt og mappen din fikk ikke nytt navn. Prøv igjen.">
+    <folderRenamed "Denne mappen har fått nytt navn.">
+    <removeFolderDialogTitle "Fjern mappe">
+    <removeFolderDialogText1 "Er du sikker på at du vil fjerne mappen">
+    <removeFolderDialogText2 "Samtaler i denne mappen vil bli flyttet til 'innboks'.">
+    <removingFolderError "Oida! Noe gikk galt og mappen din ble ikke fjernet. Prøv igjen.">
+    <folderRemoved "Denne mappen har blitt fjernet.">
+    <conversationMoveError "Kunne ikke flytte samtaler til mappe.">
+    <moveConversationsDialogTitle "Flytt samtaler til mappe">
+    <moveConversationsDialogText "samtaler valgt. Flytt til hvilken mappe?:">
+    <conversationsNotSelectedError "Velg ihvertfall én samtale å flytte.">
+    <movingConversationsError "Beklager, kunne ikke flytte samtaler til mappe">
+    <conversationsMoved "samtaler flyttet.">
+    <addNewFolder "Legg til ny mappe">
+    <moveFilesDialogTitle "Flytt filer til mappe">
+    <moveFilesDialogText "filer valgt. Flytt til hvilken mappe?">
+    <filesNotSelectedError "Velg filer først">
+    <movingFilesError "Kunne ikke flytte filer til mappe">
+    <filesMoved "filer ble flyttet.">
+    <fileMoveError "Kunne ikke flytte filer til mappe.">
+    <removeFileFolderDialogText2 "Filer i denne mappen vil bli flyttet til 'alle filer'.">
+    <folder "Mappe">
+    <folderExistsError "Mappe med samme navn finnes allerede">
+    <moveToFolder "Flytt til mappe">
+    <length "lengde">
+    <words "ord">
+    <unsorted "Usortert">
+    <typePassphraseToConfirm "For å godta denne passordsekvensen, skriv den inn nedenfor">
+    <passphraseConfirmFailed "Din passordsekvens ble skrevet inn feil. Lagre din passordsekvens på en sikker måte før du fortsetter.">
+    <acknowledgedMessage "Bekreftelsesmelding">

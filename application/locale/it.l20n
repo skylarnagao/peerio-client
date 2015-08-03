@@ -1,7 +1,7 @@
 
     <title "Peerio">
     <signupHeader "Messaggi e file. In semplicità e sicurezza.">
-    <signupIntro "Contatta persone e condividi file in modo sicuro e semplice con Peerio. Il nostro cloud ti permette di lavorare ovunque, inoltre i tuoi dati sono al sicuro dappertutto grazie alla crittografia end-to-end.<br /><br /><strong>Peerio è momentaneamente in fase Beta. <a href='https://peerio.com/pages/beta.html' target='_blank'>Scopri di cosa si tratta</a>.">
+    <signupIntro "Contatta persone e condividi file in modo sicuro e semplice con Peerio. Il nostro cloud ti permette di lavorare ovunque, inoltre i tuoi dati sono al sicuro dappertutto grazie alla cifratura end-to-end.<br /><br /><strong>Peerio è momentaneamente in fase Beta. <a href='https://peerio.com/pages/beta.html' target='_blank'>Scopri di cosa si tratta</a>.">
     <username "Nome utente">
     <passphrase "Passphrase">
     <passphraseOrPIN "Passphrase o Passcode">
@@ -59,19 +59,19 @@
     <accountBlacklistedText "Questo account è temporaneamente sospeso. Per ottenere nuovamente l'accesso contatta, per favore, il team di supporto di Peerio a support@peerio.com.">
     <searchMessagesFilesAndContacts "Cerca messaggi, file e contatti">
     <messages "Messaggi">
-    <files "Files">
+    <files "File">
     <contacts "Contatti">
     <searchResultsClickToReset "risultati di ricerca (clicca per il reset)">
     <connectionStatus "Stato della Connessione">
     <welcomeToAccount "Benvenuto nel tuo account Peerio.">
-    <welcomeToAccountText "Peerio ti permette di inviare messaggi in modo sicuro e di gestire i tuoi files e i tuoi documenti. Qui puoi vedere come iniziare.">
+    <welcomeToAccountText "Peerio ti permette di inviare messaggi in modo sicuro e di gestire i tuoi file e i tuoi documenti. Qui puoi vedere come iniziare.">
     <welcomeToAccountList1 "<strong>Aggiungi contatti</strong> selezionando la tabella Contatti e cliccando su Aggiungi Contatto sulla sinistra.">
     <welcomeToAccountList2 "<strong>Inizia una conversazione</strong> cliccando su Componi Messaggio sulla sinistra. Le conversazioni possono includere tutti i contatti che vuoi -- e tutto è cifrato end to end.">
     <welcomeToAccountList3 "<strong>Salva i tuoi file</strong> in Peerio cliccando su File. I tuoi file saranno cifrati e pronti per essere consultati in qualsiasi dispositivo o condivisi con i contatti.">
-    <welcomeToAccountListSearch "La <strong>barra di ricerca</strong> in alto alla finestra rende facile la navigazione tra i messaggi, i files e i contatti in un semplice swoop. Dagli un'occhiata!">
+    <welcomeToAccountListSearch "La <strong>barra di ricerca</strong> in alto alla finestra rende facile la navigazione tra i messaggi, i file e i contatti in un semplice swoop. Dagli un'occhiata!">
     <newMessage "Componi Messaggio">
     <inbox "In Arrivo">
-    <uploadFile "Carica Files">
+    <uploadFile "Carica File">
     <filesSidebarUploadFileSubtitle "o trascina e rilascia per caricare">
     <addContact "Aggiungi Contatto">
     <allMessages "Tutti I Messaggi">
@@ -105,8 +105,8 @@
     <noNewMessages "Nessun Nuovo Messaggio">
     <participantsWhoHaveLeft "Partecipanti precedenti:">
     <newMessageErrorText "Il tuo messaggio non può essere inviato.">
-    <conversationHasNoFiles "Nessun files è ancora stato condiviso in questa conversazione.">
-    <filesWillAppearHere "I files saranno elencati qui per un accesso più rapido.">
+    <conversationHasNoFiles "Nessun file è ancora stato condiviso in questa conversazione.">
+    <filesWillAppearHere "I file saranno elencati qui per un accesso più rapido.">
     <messageCouldNotBeSentTo "Il tuo messaggio non può essere inviato ai seguenti contatti:">
     <messageDecryptedError "Il tuo contatto ha provato ad inviarti un messaggio, ma non può essere correttamente ricevuto dal tuo account.">
     <removeConversationsQuestion "Rimuovere la conversazione?">
@@ -128,28 +128,28 @@
     <quotaError "Raggiunto limite di spazio">
     <quotaErrorText "Non hai abbastanza spazio nel tuo account Peerio. Prova prima a cancellare altri file, o aggiorna il tuo account per ottenere più spazio.">
     <sizeError "Il file è troppo grande">
-    <sizeErrorText "Peerio al momento non supporta files più grandi di 400MB.">
-    <removeFilesQuestion "Rimuovere i Files?">
-    <removeFilesText "I files saranno cancellati definitivamente dal tuo account, ma saranno ancora visibili agli utenti con cui li hai condivisi.">
-    <destroyFilesQuestion "Distruggere i Files?">
-    <destroyFilesText "I files saranno rimossi dal tuo account e dagli account con cui li avevi condivisi.">
+    <sizeErrorText "Peerio al momento non supporta file più grandi di 400MB.">
+    <removeFilesQuestion "Rimuovere i file?">
+    <removeFilesText "I file saranno cancellati definitivamente dal tuo account, ma saranno ancora visibili agli utenti con cui li hai condivisi.">
+    <destroyFilesQuestion "Distruggere i file?">
+    <destroyFilesText "I file saranno rimossi dal tuo account e dagli account con cui li avevi condivisi.">
     <destroyFilesOwnerError "Non puoi distruggere i file che non possiedi">
     <destroyFilesOwnerErrorText "Distruggere file significa rimuoverli da ogni account con cui sono stati condivisi. Solo il proprietario può farlo. Prova ad eliminarli invece.">
     <fileUploadError "Caricamento del file fallito">
     <fileUploadErrorText "Per favore controlla la connessione e riprova.">
     <dragAndDropUploadTitle "Rilascia per caricare su Peerio.">
-    <dragAndDropUploadText "I tuoi files saranno criptati e caricati nel tuo cloud personale.">
-    <allFiles "Tutti i Files">
-    <myFiles "I Miei Files">
-    <receivedFiles "Files Ricevuti">
+    <dragAndDropUploadText "I tuoi file saranno cifrati e caricati nel tuo cloud personale.">
+    <allFiles "Tutti i File">
+    <myFiles "I Miei File">
+    <receivedFiles "File Ricevuti">
     <fileName "Nome del File">
     <date "Data">
     <size "Grandezza">
     <owner "Proprietario">
     <actions "Azioni">
     <search "Cerca">
-    <attachSelectedFiles "Allega I Files Selezionati">
-    <uploadNewFile "Carica Nuovi Files">
+    <attachSelectedFiles "Allega I File Selezionati">
+    <uploadNewFile "Carica Nuovi File">
     <downloading "In Scaricamento">
     <downloadFileError "Impossibile scaricare il file">
     <downloadFileErrorText "Oops! Si è verificato un errore, per favore riprova più tardi.">
@@ -161,9 +161,9 @@
     <sortBy "Ordina Per">
     <sendMessage "Invia Messaggio">
     <latestMessages "Ultimo Messaggio">
-    <latestFiles "Ultimi Files">
+    <latestFiles "Ultimi File">
     <viewAllMessages "Vedi tutti i messaggi">
-    <viewAllFiles "Vedi tutti i files">
+    <viewAllFiles "Vedi tutti i file">
     <avatarTooltip "Gli avatar degli utenti di permettono di verificare l'identità criptografica dei tuoi contatti. Se l'avatar di un contatto dovesse cambiare, per favore contattalo per verificarlo prima di comunicare attraverso Peerio.">
     <pending "In Attesa">
     <you "Tu">
@@ -173,7 +173,7 @@
     <noContactsText "Seleziona un contatto, o inizia aggiungendo un amico.">
     <addMyFirstContact "Aggiungi Nuovo Contatto">
     <acceptContactRequest "Accettare la richiesta del contatto?">
-    <acceptContactRequestText "Scegli se permettere a questo utente di inviarti messaggi o condividere files con te in modo sicuro attraverso Peerio.">
+    <acceptContactRequestText "Scegli se permettere a questo utente di inviarti messaggi o condividere file con te in modo sicuro attraverso Peerio.">
     <accept "Accetta">
     <decline "Rifiuta">
     <addContactInfo "Aggiungi amici come contatti">
@@ -197,7 +197,7 @@
     <twoFactorAuth "Autenticazione a Due Fattori">
     <authenticate "Autenticato">
     <twoFactorAuthSetupHeading "Imposta il tuo dispositivo mobile">
-    <twoFactorAuthSetupText "Use your favorite authenticator app to scan the QR code below. Peerio recommends either Authy or FreeOTP. <a href='https://peerio.zendesk.com/hc/en-us/articles/204018305' target='_blank'>See how two-factor authentication works with Peerio</a>.">
+    <twoFactorAuthSetupText "Utilizza la tua app di autenticazione preferita per scannerizzare il codice QR qui sotto. Peerio raccomanda Authy o FreeOTP. <a href='https://peerio.zendesk.com/hc/en-us/articles/204018305' target='_blank'>Guarda come funziona l'autenticazione a due fattori con Peerio</a>.">
     <twoFactorAuthInfoHeading "Aiutaci a proteggere il tuo account">
     <twoFactorAuthInfoText "L'autenticazione a due fattori aiuta a proteggere il tuo account richiedendo due tipi differenti di informazione all'accesso. Per favore digita il codice a sei cifre dato dal tuo dispositivo mobile per continuare.">
     <twoFactorAuthConfirm "Dopo aver scannerizzato il codice QR, digita il codice di sei caratteri generato dal tuo dispositivo mobile per confermare le impostazioni.">

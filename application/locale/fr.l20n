@@ -97,7 +97,7 @@
     <expandConversation "Développer la conversation">
     <encrypted "chiffré">
     <addToFolder "Ajouter au dossier">
-    <acknowledge "Accuser réception">
+    <acknowledge "Approuver">
     <remove "Retirer">
     <download "Télécharger">
     <destroy "Détruire">
@@ -197,13 +197,13 @@
     <twoFactorAuth "Validation en deux étapes">
     <authenticate "S'authentifier">
     <twoFactorAuthSetupHeading "Configurez votre appareil mobile">
-    <twoFactorAuthSetupText "Use your favorite authenticator app to scan the QR code below. Peerio recommends either Authy or FreeOTP. <a href='https://peerio.zendesk.com/hc/en-us/articles/204018305' target='_blank'>See how two-factor authentication works with Peerio</a>.">
+    <twoFactorAuthSetupText "Utilisez votre appli d'authentification préférée pour lire le code QR ci-dessous. Peerio recommande Authy ou FreeOTP. <a href='https://peerio.zendesk.com/hc/en-us/articles/204018305' target='_blank'>Voyez comment la validation en deux étapes fonctionne avec Peerio</a>.">
     <twoFactorAuthInfoHeading "Aidez-nous à protéger votre compte">
     <twoFactorAuthInfoText "La validation en deux étapes aide à assurer la sécurité de votre compte en exigeant deux sortes d'informations de connexion différentes. Veuillez saisir le code à six chiffres généré par votre appareil mobile pour poursuivre.">
     <twoFactorAuthConfirm "Après avoir lu le code QR, saisissez le code à six chiffres généré par votre appareil mobile pour confirmer la configuration.">
     <twoFactorAuthIncorrect "Code erroné">
     <twoFactorAuthIncorrectText "Le code que vous avez saisi est erroné. Veuillez ressayer.">
-    <twoFactorAuthConfirmedText "À partir de maintenant, l'on vous demandera de saisir un code généré par votre appareil mobile lors de votre première connexion de la journée, ou d'un nouvel endroit. Veuillez vous assurer de ne pas perdre votre appareil mobile.">
+    <twoFactorAuthConfirmedText "À partir de maintenant, l'on vous demandera de saisir un code généré par votre appareil mobile lors de votre première connexion de la journée, ou d'un nouvel emplacement. Veuillez vous assurer de ne pas perdre votre appareil mobile.">
     <twoFactorAuthCannotDisable "Impossible de désactiver la validation en deux étapes.">
     <twoFactorAuthDisabled "Validation en deux étapes désactivée">
     <twoFactorAuthDisabledText "Vous pouvez maintenant vous connecter en utilisant seulement votre mot de passe. Pour une sécurité accrue, pensez à réactiver prochainement la validation en deux étapes.">
@@ -321,4 +321,4 @@
     <unsorted "Non trié">
     <typePassphraseToConfirm "Pour accepter cette phrase de passe, veuillez la saisir ci-dessous">
     <passphraseConfirmFailed "Votre phrase de passe n'a pas été saisie correctement. Veuillez stocker votre phrase de passe dans un endroit sécurisé avant de poursuivre.">
-    <acknowledgedMessage "Message reçu">
+    <acknowledgedMessage "Message approuvé">

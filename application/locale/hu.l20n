@@ -1,0 +1,324 @@
+
+    <title "Peerio">
+    <signupHeader "Üzenetek és fájlok. Egyszerű és biztonságos.">
+    <signupIntro "A Peerio egy egyszerű és biztonságos módja üzenetek küldésének, fájlok megosztásának és dokumentumok tárolásának online. Minden titkosítást kap, mielőtt el lesz küldve a felhőbe, így senki sem fér hozzá az adataidhoz csak te és akikkel valaha megosztottad.<br /><br /><strong>A Peerio jelenleg Beta. <a href='https://peerio.com/pages/beta.html' target='_blank'>Nézd meg ez mit jelent</a>.">
+    <username "Felhasználónév">
+    <passphrase "Jelmondat">
+    <passphraseOrPIN "Jelmondat vagy számkód">
+    <or "vagy">
+    <loginFailed "Sikertelen bejelentkezés">
+    <loginFailedText "Ha eszköz jelkódot használsz, kérlek próbáld meg a fiókod jelmondatát használni helyette.">
+    <ok "OK">
+    <submit "Elküld">
+    <signup "Feliratkozás">
+    <signupProgress "feliratkozási folyamat">
+    <basicInformation "Alapinformáció">
+    <desiredUsername "Kívánt felhasználónév">
+    <usernameNotAvailable "felhasználónév érvénytelen vagy nem érhető el.">
+    <addressNotAvailable "cím érvénytelen vagy nem érhető el.">
+    <firstName "Keresztnév">
+    <lastName "Vezetéknév">
+    <emailOrPhone "Email vagy mobilszám">
+    <yourPassphrase "A jelmondatod">
+    <infoAlertPassphrase "A nagyobb biztonság érdekében a Peerio <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'>véletlenszerűen generált jelmondatokat</a> használ. <br><br><strong>Te vagy az egyetlen, aki ismeri ezt a jelmondatot!</strong> Ha elveszted, akkor végleg elveszted a hozzáférést a fiókodhoz. Azt ajánljuk, hogy írjd le a jelmondatod egy papírra, vagy tárold egy biztonságos jelszókezelőben.">
+    <infoAlertPassphraseNote "<strong>Ne aggódj</strong>, egy pillanaton belül lehetőséged lesz beállítani egy rövidebb jel<i>kód</i>ot a gyors hozzáféréshez ezen az eszközön.">
+    <signupPassphraseConfirm "Ez a jelmondat használata?">
+    <signupPassphraseConfirmText "Emlékezz, te vagy az egyetlen, aki ismeri ezt a jelmondatot. <a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>Ha elveszted</a>, a fiókod örökre elveszik. Tehát a biztonság kedvéért <strong>kérlek add meg a jelmondatod még egyszer a folytatás érdekében.</strong>">
+    <signupYourGeneratedPassphrase "A generált jelmondatod:">
+    <signupPassphraseRefresh "Jelmondat megváltoztatása">
+    <error "Hiba">
+    <errorText "A kérésed nem lehet elvégezni.">
+    <warning "Figyelmeztetés">
+    <confirmPassphrase "Jelmondat megerősítése">
+    <showPassphrase "Jelmondat megjelenítése">
+    <continue "Folytatás">
+    <registerAccountError "Nem sikerült fiókot regisztrálni">
+    <registerAccountErrorText "Sajnáljuk, most nem tudjuk regisztrálni a fiókod. Kérlek indítsd újra a Peerio-t és próbáld újra néhány perc múlva.">
+    <createMyAccount "Fiókom elkészítése">
+    <accountConfirmation "Fiók megerősítés">
+    <signupAccountConfirmationEmail "Kérlek ellenőrizd az emailed egy Peerio fiók megerősítési kódért és írd be alulra. Ha nem látsz üzenetet, kérlek ellenőrizd a spam mappát.">
+    <signupAccountConfirmationPhone "Egy megerősítési kód el lett küldve SMS-ben az általad megadott mobilszámra. <strong>Kérlek győződj meg róla, hogy a mobilszámod tartalmazza az országkódod, valamint egy körzetszámot.</strong>">
+    <signupConfirmationCodeTimeText "Másodpercek, amíg a kódod lejár:">
+    <signupConfirmationCodeExpired "A megerősítési kód lejárt">
+    <signupConfirmationCodeExpiredText "A megerősítési kódod lejárt. Kérlek indítsd újra a Peerio-t és próbálj meg újra feliratkozni.">
+    <code "Kód">
+    <confirmationCode "Megerősítési kód">
+    <confirmMyAccount "Fiókom megerősítése">
+    <invalidConfirmationCode "kérlek duplán ellenőrizd ezt a kódot.">
+    <finishingUp "Utolsó simítások">
+    <peerioPIN "Peerio jelmondat">
+    <setAPeerioPIN "Jelkód beállítása ehhez az eszközhöz?">
+    <signupPeerioPIN "A Peerio jelkódok lehetővé teszik a gyorsabb bejelentkezést sajátos eszközökön. A minden bejelentkezésnél történő jelmondat megadása helyett beállíthatsz egy rövidebb jelkódot, ami csak azon az eszközön működik. Beállíthatsz különböző jelkódokat a különböző eszközeidről. <br><br>A felhasználó által választott jelkódok hajlamosabbak kevésbé biztonságosak lenni mint a Peerio jelmondatai, tehát <strong>csak olyan eszközökre kéne beállítanod jelkódokat, amikben megbízol és rendszeresen használsz</strong>.">
+    <PINNotStrong "számkód erőssége: gyenge">
+    <PINStrong "számkód erőssége: ok!">
+    <setPIN "Számkód beállítása">
+    <skip "kihagyás">
+    <accountRateLimited "Kérlek várj néhány percet">
+    <accountRateLimitedText "Ez a fiók jelenleg nem elérhető mert túl sok szerverkérést csinált. Kérlek várj pár percet és próbáld újra.">
+    <accountBlacklisted "Fiók nem elérhető">
+    <accountBlacklistedText "Ez a fiók átmenetileg fel van függesztve. A hozzáférés visszaszerzése érdekében kérlek vedd fel a kapcsolatot a support@peerio.com -mal.">
+    <searchMessagesFilesAndContacts "Üzenetek, fájlok és kapcsolatok keresése">
+    <messages "Üzenetek">
+    <files "Fájlok">
+    <contacts "Kapcsolatok">
+    <searchResultsClickToReset "keresési eredmények (kattints a visszaállításhoz)">
+    <connectionStatus "Kapcsolat állapota">
+    <welcomeToAccount "Üdvözlünk a Peerio fiókodban.">
+    <welcomeToAccountText "A Peerio lehetővé teszi, hogy üzeneteket küldj biztonságosan, valamint tárolhatod és kezelheted a fájljaidat és dokumentumaidat. Itt van, hogy hogyan kezdheted.">
+    <welcomeToAccountList1 "<strong>Kapcsolatok hozzáadása</strong> a Kapcsolatok fül kiválasztásával és a Kapcsolat hozzáadására kattintva a bal oldalon.">
+    <welcomeToAccountList2 "<strong>Beszélgetések kezdése</strong> az Üzenet összeállítása gombra kattintva a bal oldalon. A beszélgetések annyi kapcsolatot tartalmaznak, amennyit szeretnél — és minden titkosítva van a végpontok között.">
+    <welcomeToAccountList3 "<strong>Fájljaid tárolása</strong> a Peerio-n a Fájlok fül kiválasztásával és a Fájlok feltöltése gombra kattintva a bal oldalon. A fájljaid titkosítva lesznek és készen állnak a többi eszközödről való hozzáférésre vagy megosztásra kapcsolatokkal.">
+    <welcomeToAccountListSearch "A <strong>keresősáv</strong> az ablak tetején megkönnyíti az üzeneteid, fájljaid és kapcsolataid átnézését egy csapásra. Próbáld ki!">
+    <newMessage "Üzenet összeállítása">
+    <inbox "Beérkező">
+    <uploadFile "Fájlok feltöltése">
+    <filesSidebarUploadFileSubtitle "vagy fogd és vidd a feltöltéshez">
+    <addContact "Kapcsolat hozzáadása">
+    <allMessages "Összes üzenet">
+    <drafts "Piszkozatok">
+    <trash "Kuka">
+    <account "Fiók">
+    <preferences "Preferenciák">
+    <help "Súgó">
+    <logout "Kijelentkezés">
+    <logoutConfirm "Kijelentkezés a Peerio-ból?">
+    <logoutConfirmText "Kérlek győződj meg arról, hogy nincs nem mentett adatod, mielőtt kijelentkezel.">
+    <show "Megjelenít">
+    <reply "Válasz">
+    <close "Bezár">
+    <all "Összes">
+    <forward "Továbbítás">
+    <from "Tőle">
+    <to "Neki">
+    <recipients "címzettek">
+    <participantHasLeft "Ez a résztvevő elhagyta a beszélgetést.">
+    <read "olvasva">
+    <readBy "Olvasva általa:">
+    <expandConversation "Beszélgetés kinyitása">
+    <encrypted "titkosított">
+    <addToFolder "Hozzáadás mappához">
+    <acknowledge "Nyugtáz">
+    <remove "Eltávolítás">
+    <download "Letöltés">
+    <destroy "Megsemmisítés">
+    <newMessages "Új üzenetek">
+    <noNewMessages "Nincsenek új üzenetek">
+    <participantsWhoHaveLeft "Előző résztvevők:">
+    <newMessageErrorText "Az üzeneted nem sikerült elküldeni.">
+    <conversationHasNoFiles "Jelenleg nincsenek fájlok megosztva ebben a beszélgetésben.">
+    <filesWillAppearHere "A fájlok itt lesznek listázva a gyors eléréshez.">
+    <messageCouldNotBeSentTo "Az üzeneted nem sikerült elküldeni a következő kapcsolatoknak:">
+    <messageDecryptedError "A kapcsolatod megpróbált üzenetet küldeni, de nem érkezett meg rendesen a fiókodra.">
+    <removeConversationsQuestion "Beszélgetések eltávolítása?">
+    <removeConversationsText "Figyelem: Többé nem kapsz megosztott fájlokat vagy üzeneteket a beszélgetésen belül.">
+    <newMessageRecipientsError "Az üzenetnek nincsenek címzettjei">
+    <newMessageRecipientsErrorText "Kérlek adj meg legalább egy címzettet az üzeneted elküldéséhez.">
+    <typeYourReply "Írd be a válaszod...">
+    <noParticipantsLeft "Nem maradtak résztvevők ebben a beszélgetésben.">
+    <allDocuments "Összes fájl">
+    <photos "Fotók">
+    <videos "Videók">
+    <pdfDocuments "PDF dokumentumok">
+    <wordDocuments "Szöveges dokumentumok">
+    <spreadsheets "Táblázatok">
+    <presentations "Prezentációk">
+    <other "Egyéb">
+    <storage "Tárhely">
+    <yourUsage "általad használt:">
+    <quotaError "Tárhely korlát elérve">
+    <quotaErrorText "Nincs elég helyed a Peerio fiókodban. Először próbálj meg törölni egyéb fájlokat, vagy frissítsd a fiókod, hogy több tárhelyet tartalmazzon.">
+    <sizeError "A fájl túl nagy">
+    <sizeErrorText "A Peerio jelenleg nem támogatja a 400MB-nál nagyobb fájlokat.">
+    <removeFilesQuestion "Fájlok eltávolítása?">
+    <removeFilesText "A fájlok véglegesen törölve lesznek a fiókodból, de láthatóak lesznek azoknak a felhasználóknak, akikkel megosztottad.">
+    <destroyFilesQuestion "Fájlok megsemmisítése?">
+    <destroyFilesText "A fájlok el lesznek távolítva a fiókodból és azok fiókjából, akikkel megosztottad.">
+    <destroyFilesOwnerError "Nem lehet megsemmisíteni azokat a fájlokat, amik nem a tieid">
+    <destroyFilesOwnerErrorText "A fájlok megsemmisítése eltávolítja azokat minden fiókból, amikkel lettek osztva. Csak a fájl tulajdonosa teheti ezt. Kérem próbálja meg helyette a fájlt törölni.">
+    <fileUploadError "Fájl feltöltés sikertelen">
+    <fileUploadErrorText "Kérlek ellenőrizd a kapcsolatod és próbáld újra.">
+    <dragAndDropUploadTitle "Peerio-ba feltöltéshez dobd.">
+    <dragAndDropUploadText "A fájljaid titkosítva és feltöltve lesznek a személyes felhődbe.">
+    <allFiles "Összes fájl">
+    <myFiles "Fájljaim">
+    <receivedFiles "Fogadott fájlok">
+    <fileName "Fájlnév">
+    <date "Dátum">
+    <size "Méret">
+    <owner "Tulajdonos">
+    <actions "Műveletek">
+    <search "Keresés">
+    <attachSelectedFiles "Kiválasztott fájlok csatolása">
+    <uploadNewFile "Új fájlok feltöltése">
+    <downloading "Letöltés">
+    <downloadFileError "Nem sikerült fájlt letölteni">
+    <downloadFileErrorText "Hoppá! Hiba történt, kérlek próbáld újra később.">
+    <save "mentés">
+    <allContacts "Összes kapcsolat">
+    <confirmedContacts "Megerősített kapcsolatok">
+    <pendingContacts "Függő kapcsolatok">
+    <importContacts "Kapcsolatok importálása">
+    <sortBy "Rendezés">
+    <sendMessage "Üzenet küldése">
+    <latestMessages "Legutóbbi üzenetek">
+    <latestFiles "Legutóbbi fájlok">
+    <viewAllMessages "Összes üzenet megtekintése">
+    <viewAllFiles "Összes fájl megtekintése">
+    <avatarTooltip "A felhasználói avatarok lehetővé teszik, hogy igazold a kriptográfiai identitását a kapcsolataidnak. Ha egy kapcsolat avatarja megváltozik, kérlek vedd fel vele a kapcsolatot, hogy igazold újra, mielőtt kommunikálsz velük a Peerio-n keresztül.">
+    <pending "Függő">
+    <you "Te">
+    <accountDeleted "Fiók törölve">
+    <block "Blokkol">
+    <noContacts "Nincs kapcsolat kiválasztva">
+    <noContactsText "Válassz egy kapcsolatot, vagy kezdd egy ismerős hozzáadásával.">
+    <addMyFirstContact "Új kapcsolat hozzáadása">
+    <acceptContactRequest "Kapcsolati kérelem elfogadása?">
+    <acceptContactRequestText "Döntsd el, hogy engedélyezed-e ennek a felhasználónak, hogy üzenetet küldjön neked és fájlokat osszon meg veled a Peerio-n keresztül.">
+    <accept "Elfogad">
+    <decline "Megtagad">
+    <addContactInfo "Ismerősök hozzáadása kapcsolatokként">
+    <addContactInfoText "Az üzenetek küldése és fájlok megosztása az ismerőseiddel azzal kezdődik, hogy hozzáadod őket kapcsolatokként. Ha az ismerősöd nem Peerio felhasználó, akkor egy meghívó lesz küldve a címére. Hozzáadhatsz egy felhasználót meghatározva a <strong>felhasználónev</strong>et, <strong>email cím</strong>et vagy <strong>mobileszám</strong>ot.">
+    <addContactInfoAvatarText "Minden Peerio felhasználónak különleges avatarja van, ami azonosítja őket. Gondolj rá úgy, mint a digitális ujjlenyomatukra. Ha egy Peerio felhasználó avatarja megváltozik, akkor lehet, hogy ők megváltoztatták a jelmondatukat, vagy a fiókjaik veszélyeztetve vannak.">
+    <usernameEmailOrPhone "Felhasználónév, email cím vagy mobilszám">
+    <addContactRequestSent "Kapcsolati kérelem elküldve">
+    <addContactRequestSentText "Egy kapcsolati kérelem el lett küldve az általad megadott felhasználónévnek.">
+    <addContactInviteSent "Meghívás elküldve">
+    <addContactInviteSentText "Egy meghívó el lett küldve a kapcsolatodnak.">
+    <addContactErrorText "A kapcsolatot nem lehetett hozzáadni. Kérlek duplán ellenőrizd az információt és próbáld újra.">
+    <removeContact "Kapcsolat eltávolítása">
+    <removeContactQuestion "Kapcsolat eltávolítása?">
+    <removeContactText "Többé nem lesztek képesek biztonságosan kommunikálni egymással a Peerio-n. Biztos vagy benne?">
+    <cancel "Mégse">
+    <removeContactSuccess "A kapcsolatod el lett távolítva.">
+    <removeContactError "Nem sikerült eltávolítani a kapcsolatot. Kérlek próbáld újra.">
+    <newContact "Új kapcsolat!">
+    <newContactText "Most kapcsolatban vagy vele:">
+    <miniLockID "miniLock ID:">
+    <twoFactorAuth "Kétlépcsős hitelesítés">
+    <authenticate "Hitelesít">
+    <twoFactorAuthSetupHeading "Állítsd be a mobilkészüléked">
+    <twoFactorAuthSetupText "Használd a kedvenc hitelesítő alkalmazásod az alábbi QR kód beolvasásához. A Peerio vagy az Authy-t vagy a FreeOTP-t ajánlja. <a href='https://peerio.zendesk.com/hc/en-us/articles/204018305' target='_blank'>Nézd meg, hogy hogyan működik a kétlépcsős hitelesítés Peerio-val</a>.">
+    <twoFactorAuthInfoHeading "Segíts nekünk megvédeni a fiókod">
+    <twoFactorAuthInfoText "A kétlépcsős hitelesítés segít biztonságban tartani a fiókod azáltal, hogy két különböző fajta bejelentkezési információt kér. Kérlek add meg a hatjegyű kódot a mobilkészülékedről a folytatáshoz.">
+    <twoFactorAuthConfirm "Miután beolvastad a QR kódot, add meg a mobilkészüléked által generált hatjegyű kódot a telepítés megerősítéséhez.">
+    <twoFactorAuthIncorrect "Helytelen kód">
+    <twoFactorAuthIncorrectText "Az általad megadott kód helytelen. Kérlek próbáld újra.">
+    <twoFactorAuthConfirmedText "Mostantól meg leszel kérve, hogy add meg a mobilkészüléked által generált kódot a napi első, vagy egy új helyről történő bejelentkezéskor. Kérlek biztosítsd be, hogy ne veszítsd el a mobilkészüléked.">
+    <twoFactorAuthCannotDisable "Nem lehet kikapcsolni a kétlépcsős hitelesítést.">
+    <twoFactorAuthDisabled "Kétlépcsős hitelesítés letiltva">
+    <twoFactorAuthDisabledText "Most be tudsz jelentkezni csak a jelszavad használatával. A fokozott biztonság érdekében fontold meg a kétlépcsős hitelesítés visszakapcsolását a jövőben.">
+    <subject "Tárgy">
+    <send "Küldés">
+    <saveDraft "Piszkozat mentése">
+    <attachFile "Fájl csatolása">
+    <autoDestructSettings "Auto-megsemmisítés beállítások...">
+    <accountSettings "Fiókbeállítások">
+    <name "Név">
+    <primary "elsődleges">
+    <secondary "másodlagos">
+    <addresses "Címek">
+    <setPrimaryAddress "Beállítás elsődleges címnek">
+    <removeAddress "Cím eltávolítása">
+    <addNewAddress "Új cím hozzáadása">
+    <couldNotConfirmAddress "Kérlek duplán ellenőrizd az általad megadott megerősítési kódot.">
+    <couldNotAddAddress "Ezt a címet nem lehetett hozzáadni. Kérlek duplán ellenőrizd.">
+    <couldNotUpdateName "A nevedet nem lehetett frissíteni. Kérlek próbáld újra.">
+    <confirmed "Megerősítve!">
+    <confirmedText "A preferenciáid frissítve lettek.">
+    <confirmedLanguageText "Az új nyelved elérhető lesz, amint újraindítod a Peerio-t.">
+    <confirmedAddressText "Köszönjük, hogy szántál időt az új Peerio címed megerősítésére.">
+    <confirmedNameText "A neved frissítve!">
+    <email "Email">
+    <phoneNumber "Mobilszám">
+    <deleteAccount "Fiók törlése">
+    <deleteAccountText "A Peerio fiókod törlésével azonnal megsemmisül az összes információd és nem lesz lehetőséged visszakérni ezt a felhasználónevet a jövőben.">
+    <deleteAccountConfirm "Fiók törlésének megerősítése">
+    <deleteAccountConfirmText "Biztos vagy benne? El fogod veszíteni az összes adatod és sohasem lesz lehetőséged visszakérni ezt a felhasználónevet.">
+    <changePassphrase "Jelmondat megváltoztatása">
+    <changePassphraseText "Abban az esetben, ha a jelmondatod veszélybe kerül, a Peerio engedélyezi neked, hogy hatálytalanítsd az előző jelmondatod és újat állíts be. Ez a lehetőség hamarosan érkezik.">
+    <newPassphrase "Új jelmondat">
+    <retypeNewPassphrase "Írd be újra az új jelmondatot">
+    <enableTwoFactorAuth "Kétlépcsős hitelesítés engedélyezése">
+    <disableTwoFactorAuth "Kétlépcsős hitelesítés letiltása">
+    <accountSettingsTwoFactorAuthText "A Peerio párosítani tud a mobilkészülékeddel, hogy további fiók biztonságot nyújtson.">
+    <twoFactorAuthLearnMore "tudj meg többet a kétlépcsős azonosításról">
+    <language "Nyelv">
+    <notifications "Értesítések">
+    <notificationOptions "Értesítési opciók">
+    <receiveMessageNotifications "Küldjön nekem üzenet értesítéseket <strong>az elsődleges címemre</strong>.">
+    <useSounds "<strong>Hang lejátszása</strong>, amikor új értesítést kapok.">
+    <sendReadReceipts "Kapcsolataim értesítése, amikor elolvasom az üzeneteiket.">
+    <readReceipts "Olvasási nyugták">
+    <peerioPINForThisDevice "Eszköz jelkód">
+    <peerioPINUpdated "Eszköz jelkód frissítve">
+    <peerioPINUpdatedText "A jelkódod ehhez az eszközhöz frissítve lett.">
+    <removeMyPeerioPIN "Eszköz jelkód eltávolítása">
+    <peerioPINRemoved "Eszköz jelkód eltávolítva">
+    <peerioPINRemovedText "Az ehhez az eszközhöz kijelölt jelkód el lett távolítva.">
+    <ctrlEnter "Válasz küldése">
+    <pressEnterToSend "Enter lenyomása a küldéshez">
+    <updateAvailable "Frissítés érhető el!">
+    <updateAvailableText "Egy új frissítés elérhető a Peerio-hoz. A frissítés menő új funkciókat hoz megbízhatósági tökéletesítésekkel együtt. Szeretnéd most frissíteni?">
+    <updateDownload "Frissítés letöltése">
+    <later "Később">
+    <updateAvailableCritical "Kritikus frissítés érhető el">
+    <updateAvailableCriticalText "Egy kritikus Peerio frissítés érhető el. A biztonságod érdekében nem kéne folytatnod amíg nem telepíted az utolsó frissítést.">
+    <TOFUNotMatchError "Kapcsolat identitások megváltoztak!">
+    <TOFUNotMatchErrorText "Figyelem! Néhány kapcsolatodnak megváltozott az identitása. Mielőtt kommunikálsz velük, kérlek bizonyosodj meg azzal, hogy ellenőrzöd a Peerio avatar ikonjukat a profiljukban. A felhasználónevek:">
+    <importContactsGoogle "Google Névjegyei importálása a Peerio-ba">
+    <importContactsGoogleText "Hogy megkapd a Google névjegyeidet a Peerio-n, egyszerűen jelentkezz be a Gmail fiókodba és kövesd ezeket a lépéseket:">
+    <importContactsGoogleStep1 "Kattints a <strong>Gmail</strong>-re a Gmail oldalad bal felső sarkában, majd válaszd a <strong>Névjegyek</strong>et.">
+    <importContactsGoogleStep2 "A <strong>Továbbiak</strong> legördülő menüből válaszd az <strong>Exportálás</strong>t...">
+    <importContactsGoogleStep3 "Válassz, hogy az összes kapcsolatot exportálod vagy csak egy csoportot.">
+    <importContactsGoogleStep4 "Válaszd a <strong>Google CSV</strong> formátumot a kapcsolataid exportálásához.">
+    <importContactsGoogleStep5 "Miután exportáltad a kapcsolataidat egy CSV fájlba, kattints az alábbi gombra a Peerio-ba való feltöltéshez.">
+    <uploadCSV "CSV fájl feltöltése">
+    <importContactsConfirm "A Peerio küldhet meghívókat a nevedben">
+    <importContactsConfirmText "Ha folytatod, a Peerio meghívókat küldhet a nevedben kapcsolatoknak, akik még nincsenek a Peerio-n. Biztos vsgy benne, hogy meghívásokat akarsz küldeni ezeknek a kapcsolatoknak?">
+    <importContactsError "Nem lehet meghívni kapcsolatokat">
+    <importContactsErrorText "A meghívókat nem lehetett elküldeni a kapcsolatainak. Kérlek ellenőrizd az információd és próbáld újra.">
+    <importContactsSuccess "Kapcsolat meghívók elküldve!">
+    <importContactsSuccessText "A kapcsolataid a te nevedben lesznek meghívva.">
+    <importContactsSelectToInvite "Válassz kapcsolatokat a hozzáadáshoz/meghíváshoz">
+    <importContactsSelectToInviteText "Ha egy kapcsolat már a Peerio-n van, hozzá lesz adva a fiókodhoz. Különben egy meghívó lesz küldve neki a te nevedben.">
+    <importContactsSelectAll "Összes kapcsolat kiválasztása">
+    <importSelectedContacts "Kiválasztott kapcsolatok importálása">
+    <newFolderDialogTitle "Új mappa hozzáadása">
+    <newFolderDialogText "Mi legyen ennek a mappának a neve?">
+    <folderInputEmptyError "Kérlek adj meg egy mappanevet.">
+    <folderInputPlaceholder "mappa nevének megadása">
+    <creatingFolderError "Hoppá! Valami rosszul ment és a mappád nem lett létrehozva. Kérlek próbáld újra.">
+    <success "Sikerült!">
+    <folderCreated "A mappád elkészült!">
+    <renameFolderDialogTitle "Mappa nevének megváltoztatása">
+    <renameFolderDialogText "Mi legyen ennek a mappának az új neve?">
+    <renamingFolderError "Hoppá! Valami rosszul ment és a mappád nem lett átnevezve. Kérlek próbáld újra.">
+    <folderRenamed "Ez a mappa át lett nevezve.">
+    <removeFolderDialogTitle "Mappa eltávolítása">
+    <removeFolderDialogText1 "Biztosan el akarod távolítani ezt a mappát:">
+    <removeFolderDialogText2 "Ebben a mappában lévő beszélgetések át lettek helyezve a 'beérkező'-be.">
+    <removingFolderError "Hoppá! Valami rosszul ment és a mappád nem lett eltávolítva. Kérlek próbáld újra.">
+    <folderRemoved "Ez a mappa el lett távolítva.">
+    <conversationMoveError "Nem sikerült a beszélgetést mappába helyezni.">
+    <moveConversationsDialogTitle "Beszélgetések áthelyezése mappába">
+    <moveConversationsDialogText "beszélgetés kiválasztva. Áthelyezés melyik mappába?">
+    <conversationsNotSelectedError "Kérlek válassz legalább egy beszélgetést az áthelyezéshez.">
+    <movingConversationsError "Sajnáljuk, nem sikerült áthelyezni a beszélgetéseket mappába">
+    <conversationsMoved "beszélgetés áthelyezve.">
+    <addNewFolder "Új mappa hozzáadása">
+    <moveFilesDialogTitle "Fájlok áthelyezése mappába">
+    <moveFilesDialogText "fájl kiválasztva. Áthelyezés melyik mappába?">
+    <filesNotSelectedError "Kérlek válassz fájlokat először">
+    <movingFilesError "Sajnáljuk, nem sikerült áthelyezni a fájlokat mappába">
+    <filesMoved "fájl áthelyezve.">
+    <fileMoveError "Nem sikerült a fájlt mappába helyezni.">
+    <removeFileFolderDialogText2 "A fájlok ebben a mappában át lesznek helyezve a 'összes fájl'-hoz.">
+    <folder "Mappa">
+    <folderExistsError "Mappa ezen a néven már létezik">
+    <moveToFolder "Áthelyezés mappába">
+    <length "hossz">
+    <words "szavak">
+    <unsorted "Rendezetlen">
+    <typePassphraseToConfirm "Ennek a jelmondatnak az elfogadásához kérlek add meg alul">
+    <passphraseConfirmFailed "A jelmondatod tévesen lett megadva. Kérlek tárold el a jelmondatod valahol biztonságban, mielőtt folytatod.">
+    <acknowledgedMessage "Nyugtázott üzenet">
