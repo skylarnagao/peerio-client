@@ -5,14 +5,14 @@
     <username "Felhasználónév">
     <passphrase "Jelmondat">
     <passphraseOrPIN "Jelmondat vagy számkód">
-    <login "Login">
+    <login "Bejelentkezés">
     <or "vagy">
     <loginFailed "Sikertelen bejelentkezés">
     <loginFailedText "Ha eszköz jelkódot használsz, kérlek próbáld meg a fiókod jelmondatát használni helyette.">
     <ok "OK">
     <submit "Elküld">
-    <signup "Feliratkozás">
-    <signupProgress "feliratkozási folyamat">
+    <signup "Regisztráció">
+    <signupProgress "regisztrációs folyamat">
     <basicInformation "Alapinformáció">
     <desiredUsername "Kívánt felhasználónév">
     <usernameNotAvailable "felhasználónév érvénytelen vagy nem érhető el.">
@@ -41,7 +41,7 @@
     <signupAccountConfirmationPhone "Egy megerősítési kód el lett küldve SMS-ben az általad megadott mobilszámra. <strong>Kérlek győződj meg róla, hogy a mobilszámod tartalmazza az országkódod, valamint egy körzetszámot.</strong>">
     <signupConfirmationCodeTimeText "Másodpercek, amíg a kódod lejár:">
     <signupConfirmationCodeExpired "A megerősítési kód lejárt">
-    <signupConfirmationCodeExpiredText "A megerősítési kódod lejárt. Kérlek indítsd újra a Peerio-t és próbálj meg újra feliratkozni.">
+    <signupConfirmationCodeExpiredText "A megerősítési kódod lejárt. Kérlek indítsd újra a Peerio-t és próbálj meg újra regisztrálni.">
     <code "Kód">
     <confirmationCode "Megerősítési kód">
     <confirmMyAccount "Fiókom megerősítése">
