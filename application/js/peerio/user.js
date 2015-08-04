@@ -249,7 +249,7 @@ Peerio.user = {};
 			lastName: accountInfo.lastName,
 			address: accountInfo.address,
 			miniLockID: accountInfo.miniLockID,
-			localeCode: 'en'
+			localeCode: Peerio.UI.localeCode
 		}, function(data) {
 			if (({}).hasOwnProperty.call(data, 'error')) {
 				if (typeof(errorCallback) === 'function') {
