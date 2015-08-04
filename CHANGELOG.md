@@ -3,6 +3,7 @@
 - Added locales and dictionaries for Hungarian, Chinese (Simplified), Norwegian (Bokmål), and Turkish
 - Removed bias from passphrase generator (thank you, @Sc00bz)
 - Fixed a crash caused by contacts without an email/phone number.
+- Set locale code on account creation. 
 - Skipped a patch number (1.1.1) for internal reasons.
 
 ##Peerio 1.1.0 (10)
