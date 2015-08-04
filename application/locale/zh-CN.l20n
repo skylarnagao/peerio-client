@@ -5,7 +5,7 @@
     <username "用户名">
     <passphrase "密码">
     <passphraseOrPIN "密码短语或设备密码">
-    <login "Login">
+    <login "登录">
     <or "或">
     <loginFailed "登录失败">
     <loginFailedText "如果您在使用设备密码，请改为使用您的账户密码。">

@@ -5,7 +5,7 @@
     <username "Brukernavn">
     <passphrase "Passordsekvens">
     <passphraseOrPIN "Passordsekvens eller enhetskode">
-    <login "Login">
+    <login "Innlogging">
     <or "eller">
     <loginFailed "Innlogging feilet">
     <loginFailedText "Hvis du bruker et enhetspassord, prøv å bruk kontoens passordsekvens i steden for.">
