@@ -5,6 +5,7 @@
     <username "Nom d'utilisateur">
     <passphrase "Phrase de passe">
     <passphraseOrPIN "Phrase ou code de passe">
+    <login "Connexion">
     <or "ou">
     <loginFailed "Échec de connexion">
     <loginFailedText "Si vous utilisez le code de passe de cet appareil, veuillez plutôt essayer d'utiliser la phrase de passe de votre compte.">

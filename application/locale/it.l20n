@@ -5,6 +5,7 @@
     <username "Nome utente">
     <passphrase "Passphrase">
     <passphraseOrPIN "Passphrase o Passcode">
+    <login "Login">
     <or "o">
     <loginFailed "Accesso non riuscito">
     <loginFailedText "Se stai provando ad accedere a Peerio utilizzando il tuo passcode, riprova con la tua passphrase.">

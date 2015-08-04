@@ -5,6 +5,7 @@
     <username "Kullanıcı adı">
     <passphrase "Parola">
     <passphraseOrPIN "Sistem Parolası veya Kod">
+    <login "Login">
     <or "ya da">
     <loginFailed "Giriş Başarısız">
     <loginFailedText "Bir cihaz kodu kullanıyorsanız, lütfen sistem parolası kullanmayı deneyin.">

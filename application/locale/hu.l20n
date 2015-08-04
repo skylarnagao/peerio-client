@@ -5,6 +5,7 @@
     <username "Felhasználónév">
     <passphrase "Jelmondat">
     <passphraseOrPIN "Jelmondat vagy számkód">
+    <login "Login">
     <or "vagy">
     <loginFailed "Sikertelen bejelentkezés">
     <loginFailedText "Ha eszköz jelkódot használsz, kérlek próbáld meg a fiókod jelmondatát használni helyette.">

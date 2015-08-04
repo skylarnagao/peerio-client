@@ -5,6 +5,7 @@
     <username "Benutzername">
     <passphrase "Passphrase">
     <passphraseOrPIN "Passphrase oder Passcode">
+    <login "Anmelden">
     <or "oder">
     <loginFailed "Anmeldung fehlgeschlagen">
     <loginFailedText "Falls Sie gerade einen Geräte-Passcode verwenden, versuchen Sie stattdessen bitte die Passphrase Ihres Benutzerkontos.">

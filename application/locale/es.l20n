@@ -5,6 +5,7 @@
     <username "Nombre de usuario">
     <passphrase "Frase de acceso">
     <passphraseOrPIN "Frase-contraseña o código de acceso">
+    <login "Iniciar sesión">
     <or "o">
     <loginFailed "No se pudo ingresar">
     <loginFailedText "Si está usando un código de acceso de un dispositivo, por favor, pruebe a usar la frase-contraseña de su cuenta en su lugar.">

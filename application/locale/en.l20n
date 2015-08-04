@@ -5,6 +5,7 @@
     <username "Username">
     <passphrase "Passphrase">
     <passphraseOrPIN "Passphrase or Passcode">
+    <login "Login">
     <or "or">
     <loginFailed "Login Failed">
     <loginFailedText "If you are using a device passcode, please try using your account passphrase instead.">
