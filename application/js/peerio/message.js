@@ -34,7 +34,7 @@ Peerio.message = {};
 					contact.username.match(exp) ||
 					contact.firstName.match(exp) ||
 					contact.lastName.match(exp) ||
-					contact.primaryAddress.match(exp)
+					(contact.primaryAddress && contact.primaryAddress.match(exp))
 				) {
 					result.push(contact)
 				}
