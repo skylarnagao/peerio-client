@@ -4180,7 +4180,6 @@ carrinho
 exige
 cano
 turnê
-maricas
 proteja
 botões
 baleia
@@ -13031,4 +13030,3 @@ odores
 pulado
 previa
 horda
-
