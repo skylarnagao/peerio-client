@@ -16,7 +16,7 @@ var gulp = require('gulp'),
 // settings
 var tmpSources = 'tmp/tx/*.json';
 var localeDest = 'application/locale';
-var usedLangs = 'en,de,es,it,fr,ru,zh_CN,nb_NO,hu,tr';
+var usedLangs = 'en,de,es,it,fr,ru,zh_CN,nb_NO,hu,tr,pt_BR,ja';
 var buildDest = 'build/';
 var codesignCommands = ['Contents/Frameworks/crash_inspector', 							// all executables must be signed
 			  'Contents/Frameworks/nwjs\\ Framework.framework/nwjs\\ Framework',
@@ -88,7 +88,7 @@ gulp.task('localize:all', function(callback) {
  * Update dependencies in the source directory.
  **/
 gulp.task('update-dependendencies', shell.task([
-	'cd application/ && npm update'
+	'cd application/ && sudo npm update'
   ])
 );
 
@@ -176,15 +176,17 @@ gulp.task('clean-build', function(callback){
  * Set permissions for Mac
  */
 gulp.task('finalize-mac-build', shell.task(['chmod -R 755 '+ buildDest +'Peerio/osx32/Peerio.app/']))
-
+// TODO zip
 
 /**
  * Zip the src directory, excluding node_modules.
  */  
 gulp.task('finalize-win-build', function(callback) {
 	return gulp.src('application/img/notification.png')
-			.pipe(gulp.dest(buildDest +'Peerio/win32/'));
+			.pipe(gulp.dest(buildDest +'Peerio/win32/')); // TODO finalize linux build with this as well
 });
+
+// todo zip mac and windows binaries as well for Github & get md5 and sha1
 
 /**
  * Build the Mac, Windows, Linux & Chrome packages.
@@ -227,4 +229,19 @@ gulp.task('build', function(callback) {
  */   	
 gulp.task('sign', shell.task(codesignCommands))
 
+
+gulp.task('upload')
+
+/*
+
+scpClient.scp('local_folder', {
+        "host": "remote_host",
+        "port": "remote_port",
+        "username": "username_on_remote",
+        "path": "/path/on/remote",
+        "agent": process.env["SSH_AUTH_SOCK"],
+        "agentForward": true
+    }, cb)
+
+*/
 	
