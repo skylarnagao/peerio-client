@@ -60,6 +60,7 @@ body.stop-scrolling {
     margin: 0;
     padding: 0;
     line-height: normal; }
+  .sweet-alert ul {list-style-type: none; }
   .sweet-alert fieldset {
     border: none;
     position: relative; }
