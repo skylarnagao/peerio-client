@@ -2515,7 +2515,6 @@ gum
 barrel
 drum
 sheets
-connie
 stare
 potato
 causes
@@ -6513,7 +6512,6 @@ sewn
 conned
 kahn
 evils
-nappy
 tulip
 hyena
 buick
@@ -6523,7 +6521,6 @@ gulp
 flashy
 fuzz
 parry
-conn
 atone
 nigh
 mite
