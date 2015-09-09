@@ -1,14 +1,16 @@
 {
   "locales": [
     "en",
-    "fr",
     "de",
     "es",
+    "fr",
     "it",
+    "jp",
+    "hu",
+    "nb-NO",
+    "pt-BR"
     "ru", 
     "zh-CN",
-    "nb-NO",
-    "hu",
     "tr"
   ],
   "resources": [
