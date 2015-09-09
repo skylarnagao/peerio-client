@@ -22,9 +22,8 @@
     <emailOrPhone "E-Mail oder Mobilrufnummer">
     <yourPassphrase "Ihre Passphrase">
     <infoAlertPassphrase "Für höhere Sicherheit verwendet Peerio <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'>zufällig erzeugte Passphrasen</a>. <br><br><strong>Sie sind der Einzige, der diese Passphrase kennt!</strong> Falls Sie sie verlieren, werden Sie dauerhaft den Zugriff auf Ihr Benutzerkonto verlieren. Wir empfehlen, die Passphrase auf Papier zu notieren oder in einem sicheren Passwortmanager aufzubewahren.">
-    <infoAlertPassphraseNote "<strong>Keine Sorge</strong>, gleich werden Sie einen kürzeren Pass<i>code</i> für schnellen Zugriff auf dieses Gerät festlegen können.">
     <signupPassphraseConfirm "Diese Passphrase verwenden?">
-    <signupPassphraseConfirmText "Denken Sie daran: Sie sind der Einzige, der diese Passphrase kennt. <a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>Falls Sie sie verlieren</a>, wird Ihr Benutzerkonto dauerhaft verloren sein. Um sicherzugehen, <strong>geben Sie bitte zum Fortfahren Ihre Passphrase noch einmal ein.</strong>">
+    <signupPassphraseConfirmText "<ul><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206331095' target='_blank'>Nur Sie kennen diese Passphrase.</a></li> <li>Falls Sie sie verlieren, werden Ihre Daten für immer verloren sein.</li><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206330895' target='_blank'>Verwahren Sie Ihre Passphrase an einem sicheren Ort!</a></li><br><strong>Bitte geben Sie Ihre Passphrase ein, um fortzufahren.</strong>">
     <signupYourGeneratedPassphrase "Ihre erzeugte Passphrase:">
     <signupPassphraseRefresh "Passphrase ändern">
     <error "Fehler">
@@ -49,7 +48,7 @@
     <finishingUp "Fertigstellen">
     <peerioPIN "Peerio-Passcode">
     <setAPeerioPIN "Passcode für dieses Gerät festlegen?">
-    <signupPeerioPIN "Peerio-Passcodes erlauben ein schnelleres Anmelden auf konkreten Geräten. Statt der Eingabe Ihrer Passphrase bei jedem Anmelden können Sie einen kürzeren Passcode festlegen, der nur auf diesem konkreten Gerät funktioniert. Sie können verschiedene Passcodes von Ihren verschiedenen Geräten aus festlegen. <br><br>Vom Anwender ausgewählte Passcodes sind zumeist unsicherer als Peerios Passphrasen, daher sollten Sie <strong>Passcodes nur auf Geräten festlegen, denen Sie vertrauen und die Sie regelmäßig benutzen</strong>.">
+    <signupPeerioPIN "Statt der Eingabe Ihrer Passphrase bei jedem Anmelden können Sie einen kürzeren Passcode festlegen, der nur auf diesem konkreten Gerät funktioniert. Vom Anwender ausgewählte Passcodes sind zumeist unsicherer als Peerios Passphrasen, daher sollten Sie <strong>Passcodes nur auf Geräten festlegen, denen Sie vertrauen und die Sie regelmäßig benutzen</strong>">
     <PINNotStrong "Passcodestärke: schwach">
     <PINStrong "Passcodestärke: o. k.!">
     <setPIN "Passcode festlegen">
@@ -62,13 +61,12 @@
     <messages "Nachrichten">
     <files "Dateien">
     <contacts "Kontakte">
-    <searchResultsClickToReset "Suchergebnisse (anklicken zum Zurücksetzen)">
     <connectionStatus "Verbindungsstatus">
     <welcomeToAccount "Willkommen in Ihrem Peerio-Benutzerkonto.">
     <welcomeToAccountText "Mit Peerio können Sie sicher Nachrichten versenden sowie ihre Dateien und Dokumente speichern und verwalten. Hier werden Ihnen die ersten Schritte gezeigt.">
-    <welcomeToAccountList1 "<strong>Fügen Sie Kontakte hinzu</strong>, indem Sie den \"Kontakte\"-Tab auswählen und die \"Kontakt hinzufügen\"-Schaltfläche anklicken.">
-    <welcomeToAccountList2 "<strong>Beginnen Sie Unterhaltungen</strong>, indem Sie links die Schaltfläche \"Nachricht verfassen\" anklicken. Unterhaltungen können so viele Kontakte wie gewünscht enthalten — und alles ist Ende-zu-Ende verschlüsselt.">
-    <welcomeToAccountList3 "<strong>Speichern Sie Ihre Dateien</strong> auf Peerio, indem Sie den \"Dateien\"-Tab auswählen und links die Schaltfläche \"Dateien hochladen\" anklicken. Ihre Dateien werden verschlüsselt und stehen dann bereit, um auf Ihren anderen Geräten abgerufen oder mit Ihren Kontakten geteilt zu werden.">
+    <welcomeToAccountList1 "<strong>Fügen Sie Kontakte hinzu</strong>, indem Sie den „Kontakte“-Tab auswählen und die „Kontakt hinzufügen“-Schaltfläche anklicken.">
+    <welcomeToAccountList2 "<strong>Beginnen Sie Unterhaltungen</strong>, indem Sie links die Schaltfläche „Nachricht verfassen“ anklicken. Unterhaltungen können so viele Kontakte wie gewünscht enthalten — und alles ist Ende-zu-Ende verschlüsselt.">
+    <welcomeToAccountList3 "<strong>Speichern Sie Ihre Dateien</strong> auf Peerio, indem Sie den „Dateien“-Tab auswählen und links die Schaltfläche „Dateien hochladen“ anklicken. Ihre Dateien werden verschlüsselt und stehen dann bereit, um auf Ihren anderen Geräten abgerufen oder mit Ihren Kontakten geteilt zu werden.">
     <welcomeToAccountListSearch "Die <strong>Suchleiste</strong> im oberen Teil des Fensters lässt Sie einfach auf Ihre Nachrichten, Dateien und Kontakte zugreifen. Probieren Sie es aus!">
     <newMessage "Nachricht verfassen">
     <inbox "Posteingang">
@@ -297,7 +295,7 @@
     <folderRenamed "Der Ordner wurde umbenannt.">
     <removeFolderDialogTitle "Ordner entfernen">
     <removeFolderDialogText1 "Sie Sie sicher, dass Sie den folgenden Ordner entfernen möchten?">
-    <removeFolderDialogText2 "Unterhaltungen in diesem Ordner werden in den \"Posteingang\" verschoben.">
+    <removeFolderDialogText2 "Unterhaltungen in diesem Ordner werden in den „Posteingang“ verschoben.">
     <removingFolderError "Hoppla! Etwas ist schiefgelaufen und Ihr Ordner wurde nicht entfernt. Bitte erneut versuchen.">
     <folderRemoved "Dieser Ordner wurde entfernt.">
     <conversationMoveError "Verschieben der Unterhaltung in Ordner fehlgeschlagen">
@@ -313,7 +311,7 @@
     <movingFilesError "Entschuldigung, Verschieben der Dateien in Ordner fehlgeschlagen">
     <filesMoved "Dateien wurden verschoben.">
     <fileMoveError "Verschieben der Datei in Ordner fehlgeschlagen.">
-    <removeFileFolderDialogText2 "Dateien in diesem Ordner werden in \"Alle Dateien\" verschoben.">
+    <removeFileFolderDialogText2 "Dateien in diesem Ordner werden in „Alle Dateien“ verschoben.">
     <folder "Ordner">
     <folderExistsError "Ordner dieses Namens existiert bereits">
     <moveToFolder "In Ordner verschieben">

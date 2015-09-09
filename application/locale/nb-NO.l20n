@@ -22,9 +22,8 @@
     <emailOrPhone "E-post eller mobiltelefonnummer">
     <yourPassphrase "Din passordsekvens">
     <infoAlertPassphrase "For bedre sikkerhet bruker Peerio <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'>tilfeldig genererte passordsekvenser</a>. <br><br><strong>Du er den eneste med kjennskap til denne passordsekvensen!</strong> Hvis du mister den, vil du tape tilgangen til din konto for godt. Vi anbefaler å skrive ned passordsekvensen på papir, eller å lagre den i en sikret passordsbehandler.">
-    <infoAlertPassphraseNote "<strong>Frykt ikke</strong>, du vil snart kunne velge et kortere enhets<i>kode</i> for rask tilgang til denne enheten.">
     <signupPassphraseConfirm "Benytt denne passordsekvensen?">
-    <signupPassphraseConfirmText "<strong>Husk</strong>, du er den eneste med kjennskap til denne passordsekvensen. <a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>Hvis du mister det</a>, vil din konto gå tapt for alltid. For å være på den sikre siden, <strong>skriv inn din passordsekvens én gang til for å fortsette.</strong>">
+    <signupPassphraseConfirmText "<ul><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206331095' target='_blank'>Only you know this passphrase.</a></li> <li>If you lose it, your data will be lost forever.</li><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206330895' target='_blank'>Store your passphrase somewhere safe!</a></li><br><strong>Please enter your passphrase in order to continue.</strong>">
     <signupYourGeneratedPassphrase "Din maskinopprettede passordsekvens:">
     <signupPassphraseRefresh "Bytt passordsekvens">
     <error "Feil">
@@ -49,7 +48,7 @@
     <finishingUp "Sluttfører">
     <peerioPIN "Peerio enhetskode">
     <setAPeerioPIN "Sett enhetskode for denne enheten?">
-    <signupPeerioPIN "Enhetskoder i Peerio lar deg logge inn raskere på angitte enheter. I steden for å skrive inn passordsekvens her gang du logger inn, kan du velge en kortere enhetskode som bare fungerer på denne enheten. Du kan velge forskjellige enhetskoder på forskjellige enheter. <br><br>Brukervalgte enhetskoder er vanligvis mindre sikre enn Peerios passordsekvenser, du bør <strong>bare velge enhetskode på enheter som du har tiltro til, og som du bruker regelmessig</strong>.">
+    <signupPeerioPIN "I steden for å skrive inn passordsekvens hver gang du logger inn, kan du velge en kortere enhetskode som bare fungerer på denne enheten. Brukervalgte enhetskoder er vanligvis mindre sikre enn Peerios passordsekvenser, du bør <strong>bare velge enhetskode på enheter som du har tiltro til, og som du bruker regelmessig</strong>.">
     <PINNotStrong "enhetskodens styrke: svakt">
     <PINStrong "passordstyrke: ok!">
     <setPIN "Angi passord">
@@ -62,7 +61,6 @@
     <messages "Meldinger">
     <files "Filer">
     <contacts "Kontakter">
-    <searchResultsClickToReset "søkeresultater (klikk for å tilbakestille)">
     <connectionStatus "Tilkoblingsstatus">
     <welcomeToAccount "Velkommen til din Peerio-konto.">
     <welcomeToAccountText "Peerio lar deg sende sikrede meldinger, sågar også lagre og behandle filer og dokumenter. Slik kommer du i gang:">

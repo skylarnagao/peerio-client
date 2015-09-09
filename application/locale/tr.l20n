@@ -1,7 +1,7 @@
 
     <title "Peerio">
     <signupHeader "Mesajlar ve dosyalar. Basit ve güvenli.">
-    <signupIntro "Peerio; çevrimiçi mesaj göndermek, dosya paylaşmak veya belgeleri depolamak için basit ve güvenli bir yoldur. Buluta gönderilmeden önce her şey şifrelendiğinden, siz ve paylaştığınız kişiler hariç hiçkimse verilerinize erişemez.<br /><br /><strong>Peerio şu anda Beta sürümündedir. <a href='https://peerio.com/pages/beta.html' target='_blank'>Ne demek olduğuna bakın</a>.">
+    <signupIntro "Peerio; çevrimiçi mesaj göndermek, dosya paylaşmak veya belgeleri depolamak için basit ve güvenli bir yoldur. Buluta gönderilmeden önce her şey şifrelendiğinden, siz ve paylaştığınız kişiler hariç hiç kimse verilerinize erişemez.<br /><br /><strong>Peerio şu anda Beta sürümündedir. <a href='https://peerio.com/pages/beta.html' target='_blank'>Ne demek olduğuna bakın</a>.">
     <username "Kullanıcı adı">
     <passphrase "Parola">
     <passphraseOrPIN "Sistem Parolası veya Kod">
@@ -22,9 +22,8 @@
     <emailOrPhone "E-posta veya cep telefonu numarası">
     <yourPassphrase "Sistem parolanız">
     <infoAlertPassphrase "Daha fazla güvenlik için Peerio <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'>rastgele üretilmiş sistem parolaları</a> kullanır. <br><br><strong>Bu sistem parolasını bilen tek kişi sizsiniz!</strong> Kaybederseniz, hesabınıza erişimi kalıcı olarak kaybedeceksiniz. Sistem parolanızı bir kağıda yazmanızı veya güvenli bir parola yöneticisinde saklamanızı öneririz.">
-    <infoAlertPassphraseNote "<strong>Merak etmeyin</strong>, kısa bir süre içinde bu cihazda hızlı erişim için daha kısa bir <i>kod</i> ayarlayabileceksiniz.">
     <signupPassphraseConfirm "Bu sistem parolası kullanılsın mı?">
-    <signupPassphraseConfirmText "Unutmayın, bu sistem parolasını bilen tek kişi sizsiniz. <a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>Kaybederseniz</a>, hesabınız sonsuza kadar kaybolacak. Emin olabilmek için <strong>devam etmek üzere sistem parolanızı lütfen bir kere daha girin.</strong>">
+    <signupPassphraseConfirmText "<ul><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206331095' target='_blank'>Only you know this passphrase.</a></li> <li>If you lose it, your data will be lost forever.</li><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206330895' target='_blank'>Store your passphrase somewhere safe!</a></li><br><strong>Please enter your passphrase in order to continue.</strong>">
     <signupYourGeneratedPassphrase "Oluşturulmuş sistem parolanız:">
     <signupPassphraseRefresh "Sistem parolasını değiştir">
     <error "Hata">
@@ -49,7 +48,7 @@
     <finishingUp "Bitir">
     <peerioPIN "Peerio Kodu">
     <setAPeerioPIN "Bu aygıt için bir kod ayarlansın mı?">
-    <signupPeerioPIN "Peerio kodları belirli aygıtlarda daha hızlı oturum açılmasına izin verir. Her oturum açdığınızda sistem parolanızı girmek yerine, sadece bu aygıtta çalışacak daha kısa kodlar belirleyebilirsiniz. Farklı aygıtlarınız için farklı kodlar ayarlayabilirsiniz.<br><br>Kullanıcı seçimli kodlar, Peerio sistem parolalarından daha az güvenli olduğundan <strong>sadece güvendiğiniz ve düzenli olarak kullandığınız aygıtlarda kod ayarlamalısınız</strong>.">
+    <signupPeerioPIN "Her oturum açdığınızda sistem parolanızı girmek yerine, sadece bu aygıtta çalışacak daha kısa kodlar belirleyebilirsiniz. Kullanıcı seçimli kodlar, Peerio sistem parolalarından daha az güvenli olduğundan <strong>sadece güvendiğiniz ve düzenli olarak kullandığınız aygıtlarda kod ayarlamalısınız</strong>.">
     <PINNotStrong "kod güvenliliği: düşük">
     <PINStrong "kod güvenliliği: iyi!">
     <setPIN "Kodu Ayarla">
@@ -62,7 +61,6 @@
     <messages "Mesajlar">
     <files "Dosyalar">
     <contacts "Kişiler">
-    <searchResultsClickToReset "arama sonuçları (sıfırlamak için tıklayın)">
     <connectionStatus "Bağlantı Durumu">
     <welcomeToAccount "Peerio hesabına hoş geldiniz.">
     <welcomeToAccountText "Peerio güvenli bir şekilde mesaj göndermenizi, dosya ve belgelerinizi yönetmenizi ve depolamanızı sağlar. Burada nasıl başlayacağınız öğretiliyor.">

@@ -22,9 +22,8 @@
     <emailOrPhone "Courriel ou numéro de cellulaire">
     <yourPassphrase "Votre phrase de passe">
     <infoAlertPassphrase "Pour une sécurité accrue, Peerio utilise des <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'>phrases de passe générées aléatoirement</a>. <br>;<;br>&lt;strong>Vous êtes le seul à connaître cette phrase de passe !</strong> Si vous la perdez, vous perdrez irrémédiablement l'accès à votre compte. Nous vous recommandons de prendre votre phrase de passe en note ou de la conserver grâce à un gestionnaire de mots de passe sécurisé.">
-    <infoAlertPassphraseNote "<strong>Ne vous inquiétez pas</strong>, dans quelques instants vous pourrez définir un <i>code</i> de passe plus court pour un accès rapide à partir de cet appareil.">
     <signupPassphraseConfirm "Utiliser cette phrase de passe ?">
-    <signupPassphraseConfirmText "Souvenez-vous que vous êtes le seul à connaître cette phrase de passe. <a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>Si vous la perdez</a>, votre compte sera perdu pour toujours. Donc par sécurité, <strong>veuillez saisir votre phrase de passe de nouveau afin de pouvoir continuer.</strong>">
+    <signupPassphraseConfirmText "<ul><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206331095' target='_blank'>Cette phrase de passe n'est connue que de vous.</a></li> <li>Si vous la perdez, vous n'aurez plus jamais accès à vos données.</li><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206330895' target='_blank'>Conservez votre phrase de passe dans un endroit sécuritaire !</a></li><br><strong>Veuillez saisir votre phrase de passe afin de poursuivre.</strong>">
     <signupYourGeneratedPassphrase "Votre phrase de passe générée :">
     <signupPassphraseRefresh "Changer la phrase de passe">
     <error "Erreur">
@@ -49,7 +48,7 @@
     <finishingUp "Presque terminé">
     <peerioPIN "Code de passe Peerio">
     <setAPeerioPIN "Définir un code de passe pour cet appareil ?">
-    <signupPeerioPIN "Les codes de passe Peerio permettent une connexion plus rapide sur des appareils particuliers. Au lieu d'avoir à saisir votre phrase de passe lors de chaque connexion, vous pouvez définir un code de passe plus court qui ne fonctionnera que sur cet appareil. Vous pouvez définir différents codes de passe de vos différents appareils. <br><br>Les codes de passe choisis par les utilisateurs sont généralement moins sûrs que les phrases de passe de Peerio, et vous devriez donc <strong>ne définir des codes de passe que sur les appareils auxquels vous faites confiance et que vous utilisez régulièrement</strong>.">
+    <signupPeerioPIN "Au lieu de saisir votre phrase de passe lors de chaque connexion, vous pouvez définir un code de passe plus court qui ne fonctionnera que sur cet appareil. Les codes de passe choisis par les utilisateurs sont généralement moins sûrs que les phrases de passe de Peerio. Vous devriez donc <strong>ne définir des codes de passe que sur les appareils auxquels vous faites confiance et que vous utilisez régulièrement</strong>.">
     <PINNotStrong "force du code de passe : faible">
     <PINStrong "force du code de passe : OK !">
     <setPIN "Définir le code de passe">
@@ -62,7 +61,6 @@
     <messages "Messages">
     <files "Fichiers">
     <contacts "Contacts">
-    <searchResultsClickToReset "résultats de recherche (cliquer pour réinitialiser)">
     <connectionStatus "État de connexion">
     <welcomeToAccount "Bienvenue dans votre compte Peerio.">
     <welcomeToAccountText "Peerio vous permet d'envoyer des messages de façon sécurisée, ainsi que de stocker et de gérer vos fichiers et documents. Voici comment vous pouvez commencer.">

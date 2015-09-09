@@ -22,9 +22,8 @@
     <emailOrPhone "Email o telefono">
     <yourPassphrase "La tua passphrase">
     <infoAlertPassphrase "Per maggiore sicurezza Peerio utilizza <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'>passphrase generate casualmente</a>. <br><br><strong>Tu sei l'unico a conoscere questa passphrase!</strong> Se dovessi dimenticarla, ti sarà impossibile accedere al tuo account. Ti consigliamo di scriverla su un foglio, o di salvarla in un gestore di password sicuro.">
-    <infoAlertPassphraseNote "<strong>Non ti preoccupare</strong>, tra qualche istante potrai impostare una pass<i>code</i> più corta per un effettuare l'accesso più rapidamente su questo dispositivo.">
     <signupPassphraseConfirm "Usare questa passphrase?">
-    <signupPassphraseConfirmText "Ricorda che sei l'unico a conoscere questa passphrase <a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>Se dovessi dimenticarla</a>, il tuo account andrà perso completamente. Quindi per sicurezza, <strong>digita la tua passphrase un'altra volta per andare avanti.</strong>">
+    <signupPassphraseConfirmText "<ul><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206331095' target='_blank'>Solo tu conosci questa passphrase.</a></li> <li>In caso la perdessi, i tuoi dati andrebbero persi per sempre.</li><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206330895' target='_blank'>Salva la passphrase in un posto sicuro!</a></li><br><strong>Per favore digita la passphrase per continuare.</strong>">
     <signupYourGeneratedPassphrase "La tua passphrase:">
     <signupPassphraseRefresh "Cambia passphrase">
     <error "Errore">
@@ -49,7 +48,7 @@
     <finishingUp "In Conclusione">
     <peerioPIN "Peerio Passcode">
     <setAPeerioPIN "Impostare una passcode per questo dispositivo?">
-    <signupPeerioPIN "Le passcode di Peerio ti permettono di effettuare l'accesso più velocemente su un dispositivo specifico. Invece di digitare la passphrase ad ogni accesso, puoi imppostare una passcode più breve che funzionerà solo su questo dispositivo. Puoi impostare passcode diverse per ogni dispositivo che usi. <br><br>Le passcode scelte dagli utenti di solito sono meno sicure delle passphrase di Peerio, quindi <strong> imposta passcode solo su dispositivi sicuri e che usi regolarmente</strong>.">
+    <signupPeerioPIN "Invece di digitare la passphrase ad ogni accesso, puoi impostare una passcode più breve che funzionerà solo su questo dispositivo. Le passcode scelte dagli utenti di solito sono meno sicure delle passphrase di Peerio, quindi <strong> imposta passcode solo su dispositivi sicuri e che usi regolarmente</strong>.">
     <PINNotStrong "sicurezza passcode: debole">
     <PINStrong "sicurezza passcode: ok!">
     <setPIN "Imposta Passcode">
@@ -62,7 +61,6 @@
     <messages "Messaggi">
     <files "File">
     <contacts "Contatti">
-    <searchResultsClickToReset "risultati di ricerca (clicca per il reset)">
     <connectionStatus "Stato della Connessione">
     <welcomeToAccount "Benvenuto nel tuo account Peerio.">
     <welcomeToAccountText "Peerio ti permette di inviare messaggi in modo sicuro e di gestire i tuoi file e i tuoi documenti. Qui puoi vedere come iniziare.">
@@ -75,7 +73,7 @@
     <uploadFile "Carica File">
     <filesSidebarUploadFileSubtitle "o trascina e rilascia per caricare">
     <addContact "Aggiungi Contatto">
-    <allMessages "Tutti I Messaggi">
+    <allMessages "Tutti i Messaggi">
     <drafts "Bozze">
     <trash "Cestino">
     <account "Account">
@@ -98,7 +96,7 @@
     <expandConversation "Espandi Conversazione">
     <encrypted "criptato">
     <addToFolder "Aggiungi alla Cartella">
-    <acknowledge "Riconosciuto">
+    <acknowledge "Approva">
     <remove "Rimuovi">
     <download "Scarica">
     <destroy "Distruggi">
@@ -149,7 +147,7 @@
     <owner "Proprietario">
     <actions "Azioni">
     <search "Cerca">
-    <attachSelectedFiles "Allega I File Selezionati">
+    <attachSelectedFiles "Allega i File Selezionati">
     <uploadNewFile "Carica Nuovi File">
     <downloading "In Scaricamento">
     <downloadFileError "Impossibile scaricare il file">
@@ -171,7 +169,7 @@
     <accountDeleted "Account Cancellato">
     <block "Blocca">
     <noContacts "Nessun contatto selezionato">
-    <noContactsText "Seleziona un contatto, o inizia aggiungendo un amico.">
+    <noContactsText "Seleziona un contatto o inizia aggiungendo un amico.">
     <addMyFirstContact "Aggiungi Nuovo Contatto">
     <acceptContactRequest "Accettare la richiesta del contatto?">
     <acceptContactRequestText "Scegli se permettere a questo utente di inviarti messaggi o condividere file con te in modo sicuro attraverso Peerio.">
@@ -232,7 +230,7 @@
     <email "Email">
     <phoneNumber "Numero di telefono">
     <deleteAccount "Cancella Account">
-    <deleteAccountText "Cancellando il tuo account Peerio distruggerai definitivamente tutte le tue informazioni, e non potrai più usare questo username in futuro.">
+    <deleteAccountText "Cancellando il tuo account Peerio distruggerai definitivamente tutte le tue informazioni e non potrai più usare questo username in futuro.">
     <deleteAccountConfirm "Conferma Cancellazione Account">
     <deleteAccountConfirmText "Sei sicuro? Perderai tutti i tuoi dati e non potrai più usare questo username.">
     <changePassphrase "Cambia Passphrase">
@@ -246,7 +244,7 @@
     <language "Lingua">
     <notifications "Notifiche">
     <notificationOptions "Opzioni di Notifica">
-    <receiveMessageNotifications "Inviami messaggi di notifica <strong>al mio indirizzo primario</strong>.">
+    <receiveMessageNotifications "Invia messaggi di notifica <strong>al mio indirizzo primario</strong>.">
     <useSounds "<strong>Emetti un suono</strong> quando ricevo una nuova notifica.">
     <sendReadReceipts "Notifica i miei contatti quando ho letto i loro messaggi.">
     <readReceipts "Leggi ricevute">
@@ -257,7 +255,7 @@
     <peerioPINRemoved "Passcode del dispositivo rimossa">
     <peerioPINRemovedText "La Passcode assegnata a questo dispositivo è stata rimossa.">
     <ctrlEnter "Invia Risposta">
-    <pressEnterToSend "Premio Invio per mandare">
+    <pressEnterToSend "Premio Invio per inviare">
     <updateAvailable "Aggiornamento Disponibile!">
     <updateAvailableText "Un nuovo aggiornamento è disponibile per Peerio! Gli aggiornamenti portano sia nuove caratteristiche sia miglioramenti. Desideri eseguire l'aggiornamento ora?">
     <updateDownload "Scarica Aggiornamento">
@@ -322,4 +320,4 @@
     <unsorted "Disordinato">
     <typePassphraseToConfirm "Per convalidare questa passphrase, per favore digitala sotto">
     <passphraseConfirmFailed "La tua passphrase è stata digitata male. Per favore salva la tua passphrase in un posto sicuro prima di continuare.">
-    <acknowledgedMessage "Messaggio Riconosciuto">
+    <acknowledgedMessage "Messaggio Approvato">

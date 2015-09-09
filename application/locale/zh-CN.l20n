@@ -22,9 +22,8 @@
     <emailOrPhone "电子邮件或手机号">
     <yourPassphrase "您的密码">
     <infoAlertPassphrase "为了增强安全性，Peerio 采用 &lt;a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'&gt;随机生成的密码短语&lt;/a>;。&lt;strong>;您的密码短语是您账户的万能钥匙！&lt;/strong>;您是您的密码短语的唯一拥有者，您的账户安全完全取决于它，请记住这点并保护它。您在新设备上登录您的账户时需要用到它。如果您遗失了您的密码短语，您就永久失去了对您的账户的访问权。我们建议您将您的密码短语写在纸上，或将其存储在一个安全的密码管理器中。">
-    <infoAlertPassphraseNote "<strong>不用担心</strong>，一会您还可以设置<i>设备密码</i>以供快速访问此设备。">
     <signupPassphraseConfirm "使用此密码？">
-    <signupPassphraseConfirmText "<strong>记住</strong>，您是此密码短语的唯一拥有者。<a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>;如果您遗失了该密码短语&lt;/a>;，您的账户也将永远遗失。因此为了确保安全，请输入一次您的密码短语，确保您已经完善保存它，然后继续。">
+    <signupPassphraseConfirmText "<ul><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206331095' target='_blank'>Only you know this passphrase.</a></li> <li>If you lose it, your data will be lost forever.</li><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206330895' target='_blank'>Store your passphrase somewhere safe!</a></li><br><strong>Please enter your passphrase in order to continue.</strong>">
     <signupYourGeneratedPassphrase "您生成的密码：">
     <signupPassphraseRefresh "更改密码">
     <error "错误">
@@ -49,7 +48,7 @@
     <finishingUp "完成注册">
     <peerioPIN "Peerio 密码">
     <setAPeerioPIN "为此设备设置密码？">
-    <signupPeerioPIN "Peerio 设备密码允许您快速的在特定设备上登录，而避免每次登录都需要输入您的密码短语。您可以设置一个只在此设备上有效的较短密码。您可以在不同的设备上设置不同的设备密码。<br><br>用户设置的设备密码往往要比 Peerio 的密码短语更不安全，因此您应该<strong>只在您信任并且经常使用的设备上设置设备密码</strong>。">
+    <signupPeerioPIN "Peerio 设备密码允许您快速的在特定设备上登录，而避免每次登录都需要输入您的密码短语。您可以设置一个只在此设备上有效的较短密码。用户设置的设备密码往往要比 Peerio 的密码短语更不安全，因此您应该<strong>只在您信任并且经常使用的设备上设置设备密码</strong>。">
     <PINNotStrong "密码强度：脆弱">
     <PINStrong "密码强度：不错">
     <setPIN "设置密码">
@@ -62,14 +61,13 @@
     <messages "消息">
     <files "文件">
     <contacts "联系人">
-    <searchResultsClickToReset "搜索结果（点击重置）">
     <connectionStatus "连接状态">
     <welcomeToAccount "欢迎查阅您的 Peerio 账户。">
     <welcomeToAccountText "Peerio 可以让您安全地发送消息，以及存储和管理您的文件和文档。这里是您的上手教程。">
     <welcomeToAccountList1 "点击 <strong>联系人</strong> 选项卡添加联系人。在您添加一些联系人之后，分享消息和文件都非常简单。">
-    <welcomeToAccountList2 "点击左侧的&lt;strong>撰写消息</strong>;按钮开始对话。对话可以包含非常多的联系人 — 并且一切都是端到端加密。">
+    <welcomeToAccountList2 "点击左侧的<strong>撰写消息</strong>;按钮开始对话。对话可以包含非常多的联系人 — 并且一切都是端到端加密。">
     <welcomeToAccountList3 "点击 <strong>文件</strong> 选项卡，在 Peerio 上存储您的文件。您的文件将被加密，并且随时供您的其他设备访问，或与联系人分享。">
-    <welcomeToAccountListSearch "Peerio 窗口顶部的&lt;strong>搜索栏</strong>;让您可以轻松地在一处访问您的所有消息、文件和联系人。快试试吧！">
+    <welcomeToAccountListSearch "Peerio 窗口顶部的<strong>搜索栏</strong>;让您可以轻松地在一处访问您的所有消息、文件和联系人。快试试吧！">
     <newMessage "撰写消息">
     <inbox "收件箱">
     <uploadFile "上传文件">

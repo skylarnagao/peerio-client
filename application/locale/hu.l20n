@@ -22,9 +22,8 @@
     <emailOrPhone "Email vagy mobilszám">
     <yourPassphrase "A jelmondatod">
     <infoAlertPassphrase "A nagyobb biztonság érdekében a Peerio <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'>véletlenszerűen generált jelmondatokat</a> használ. <br><br><strong>Te vagy az egyetlen, aki ismeri ezt a jelmondatot!</strong> Ha elveszted, akkor végleg elveszted a hozzáférést a fiókodhoz. Azt ajánljuk, hogy írjd le a jelmondatod egy papírra, vagy tárold egy biztonságos jelszókezelőben.">
-    <infoAlertPassphraseNote "<strong>Ne aggódj</strong>, egy pillanaton belül lehetőséged lesz beállítani egy rövidebb jel<i>kód</i>ot a gyors hozzáféréshez ezen az eszközön.">
     <signupPassphraseConfirm "Ez a jelmondat használata?">
-    <signupPassphraseConfirmText "Emlékezz, te vagy az egyetlen, aki ismeri ezt a jelmondatot. <a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>Ha elveszted</a>, a fiókod örökre elveszik. Tehát a biztonság kedvéért <strong>kérlek add meg a jelmondatod még egyszer a folytatás érdekében.</strong>">
+    <signupPassphraseConfirmText "<ul><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206331095' target='_blank'>Only you know this passphrase.</a></li> <li>If you lose it, your data will be lost forever.</li><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206330895' target='_blank'>Store your passphrase somewhere safe!</a></li><br><strong>Please enter your passphrase in order to continue.</strong>">
     <signupYourGeneratedPassphrase "A generált jelmondatod:">
     <signupPassphraseRefresh "Jelmondat megváltoztatása">
     <error "Hiba">
@@ -34,7 +33,7 @@
     <showPassphrase "Jelmondat megjelenítése">
     <continue "Folytatás">
     <registerAccountError "Nem sikerült fiókot regisztrálni">
-    <registerAccountErrorText "Sajnáljuk, most nem tudjuk regisztrálni a fiókod. Kérlek indítsd újra a Peerio-t és próbáld újra néhány perc múlva.">
+    <registerAccountErrorText "Sajnos most nem tudjuk regisztrálni a fiókod. Kérlek indítsd újra a Peerio-t és próbáld újra néhány perc múlva.">
     <createMyAccount "Fiókom elkészítése">
     <accountConfirmation "Fiók megerősítés">
     <signupAccountConfirmationEmail "Kérlek ellenőrizd az emailed egy Peerio fiók megerősítési kódért és írd be alulra. Ha nem látsz üzenetet, kérlek ellenőrizd a spam mappát.">
@@ -49,7 +48,7 @@
     <finishingUp "Utolsó simítások">
     <peerioPIN "Peerio jelmondat">
     <setAPeerioPIN "Jelkód beállítása ehhez az eszközhöz?">
-    <signupPeerioPIN "A Peerio jelkódok lehetővé teszik a gyorsabb bejelentkezést sajátos eszközökön. A minden bejelentkezésnél történő jelmondat megadása helyett beállíthatsz egy rövidebb jelkódot, ami csak azon az eszközön működik. Beállíthatsz különböző jelkódokat a különböző eszközeidről. <br><br>A felhasználó által választott jelkódok hajlamosabbak kevésbé biztonságosak lenni mint a Peerio jelmondatai, tehát <strong>csak olyan eszközökre kéne beállítanod jelkódokat, amikben megbízol és rendszeresen használsz</strong>.">
+    <signupPeerioPIN "A minden bejelentkezésnél történő jelmondat megadása helyett beállíthatsz egy rövidebb jelkódot, ami csak azon az eszközön működik. A felhasználó által választott jelkódok hajlamosabbak kevésbé biztonságosak lenni mint a Peerio jelmondatai, tehát <strong>csak olyan eszközökre kéne beállítanod jelkódokat, amikben megbízol és rendszeresen használsz</strong>.">
     <PINNotStrong "számkód erőssége: gyenge">
     <PINStrong "számkód erőssége: ok!">
     <setPIN "Számkód beállítása">
@@ -62,7 +61,6 @@
     <messages "Üzenetek">
     <files "Fájlok">
     <contacts "Kapcsolatok">
-    <searchResultsClickToReset "keresési eredmények (kattints a visszaállításhoz)">
     <connectionStatus "Kapcsolat állapota">
     <welcomeToAccount "Üdvözlünk a Peerio fiókodban.">
     <welcomeToAccountText "A Peerio lehetővé teszi, hogy üzeneteket küldj biztonságosan, valamint tárolhatod és kezelheted a fájljaidat és dokumentumaidat. Itt van, hogy hogyan kezdheted.">
@@ -79,7 +77,7 @@
     <drafts "Piszkozatok">
     <trash "Kuka">
     <account "Fiók">
-    <preferences "Preferenciák">
+    <preferences "Beállítások">
     <help "Súgó">
     <logout "Kijelentkezés">
     <logoutConfirm "Kijelentkezés a Peerio-ból?">
@@ -225,7 +223,7 @@
     <couldNotAddAddress "Ezt a címet nem lehetett hozzáadni. Kérlek duplán ellenőrizd.">
     <couldNotUpdateName "A nevedet nem lehetett frissíteni. Kérlek próbáld újra.">
     <confirmed "Megerősítve!">
-    <confirmedText "A preferenciáid frissítve lettek.">
+    <confirmedText "A beállításaid frissítve lettek.">
     <confirmedLanguageText "Az új nyelved elérhető lesz, amint újraindítod a Peerio-t.">
     <confirmedAddressText "Köszönjük, hogy szántál időt az új Peerio címed megerősítésére.">
     <confirmedNameText "A neved frissítve!">
@@ -304,13 +302,13 @@
     <moveConversationsDialogTitle "Beszélgetések áthelyezése mappába">
     <moveConversationsDialogText "beszélgetés kiválasztva. Áthelyezés melyik mappába?">
     <conversationsNotSelectedError "Kérlek válassz legalább egy beszélgetést az áthelyezéshez.">
-    <movingConversationsError "Sajnáljuk, nem sikerült áthelyezni a beszélgetéseket mappába">
+    <movingConversationsError "Sajnos nem sikerült áthelyezni a beszélgetéseket mappába">
     <conversationsMoved "beszélgetés áthelyezve.">
     <addNewFolder "Új mappa hozzáadása">
     <moveFilesDialogTitle "Fájlok áthelyezése mappába">
     <moveFilesDialogText "fájl kiválasztva. Áthelyezés melyik mappába?">
     <filesNotSelectedError "Kérlek válassz fájlokat először">
-    <movingFilesError "Sajnáljuk, nem sikerült áthelyezni a fájlokat mappába">
+    <movingFilesError "Sajnos nem sikerült áthelyezni a fájlokat mappába">
     <filesMoved "fájl áthelyezve.">
     <fileMoveError "Nem sikerült a fájlt mappába helyezni.">
     <removeFileFolderDialogText2 "A fájlok ebben a mappában át lesznek helyezve a 'összes fájl'-hoz.">

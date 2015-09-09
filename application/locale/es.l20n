@@ -22,9 +22,8 @@
     <emailOrPhone "Correo electrónico o número de móvil/celular">
     <yourPassphrase "Su frase de acceso">
     <infoAlertPassphrase "Para una seguridad más robusta, Peerio utiliza <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'>frases-contraseña generadas aleatoriamente</a>. <br><br><strong>¡Usted es el único que conoce esta frase-contraseña!</strong> Si la pierde, perderá permanentemente el acceso a su cuenta. Recomendamos que escriba su frase-contraseña en un papel, o que la guarde en un administrador seguro de contraseñas.">
-    <infoAlertPassphraseNote "<strong>No se preocupe</strong>, en un momento podrá establecer un <i>código</i>-de-acceso más corto para un acceso rápido sobre este dispositivo.">
     <signupPassphraseConfirm "¿Usar esta frase-contraseña?">
-    <signupPassphraseConfirmText "Recuerde, usted es el único que conoce esta frase-contraseña. <a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>Si la pierde</a>, su cuenta se perderá para siempre. Así que por seguridad, <strong>por favor, introduzca su frase-contraseña una vez más para continuar.</strong>">
+    <signupPassphraseConfirmText "<ul><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206331095' target='_blank'>Sólo usted conoce esta frase-contraseña.</a></li> <li>Si la pierde, sus datos se perderán para siempre.</li><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206330895' target='_blank'>¡Guarde su contraseña en algún lugar seguro!</a></li><br><strong>Por favor, introduzca su frase-contraseña para continuar.</strong>">
     <signupYourGeneratedPassphrase "Su frase de acceso generada:">
     <signupPassphraseRefresh "Cambiar frase de acceso">
     <error "Error">
@@ -49,7 +48,7 @@
     <finishingUp "Terminando">
     <peerioPIN "Código-de-acceso de Peerio">
     <setAPeerioPIN "¿Establecer un código-de-acceso para este dispositivo?">
-    <signupPeerioPIN "Los códigos de acceso de Peerio permiten un inicio de sesión más rápido en dispositivos específicos. En lugar de introducir su frase de acceso cada vez que inicie sesión, puede establecer un código-de-acceso más corto que sólo funcionará en este dispositivo. Puede establecer diferentes códigos de acceso desde sus distintos dispositivos.<br><br>Los códigos-de-acceso elegidos por el usuario tienden a ser menos seguros que las frases de acceso  de Peerio, asi que debe <strong>sólo establecer códigos de acceso en los dispositivos de su confianza y que utilice regularmente</strong>.">
+    <signupPeerioPIN "En lugar de introducir su frase-contraseña cada vez que inicie sesión, puede establecer un código de acceso más corto que funcionará sobre este dispositivo. Los códigos de acceso escogidos-por-usuario tienden a ser menos seguros que las frases-contraseña de Peerio, así que debería <strong>únicamente establecer códigos-de-acceso sobre dispositivos en los que confíe y que use regularmente</strong>.">
     <PINNotStrong "fuerza del código-de-acceso: débil">
     <PINStrong "fuerza del código-de-acceso: ¡OK!">
     <setPIN "Establecer código-de-acceso">
@@ -62,7 +61,6 @@
     <messages "Mensajes">
     <files "Archivos">
     <contacts "Contactos">
-    <searchResultsClickToReset "resultados de búsqueda (click para limpiar)">
     <connectionStatus "Estado de conexión ">
     <welcomeToAccount "Bienvenido a su cuenta Peerio.">
     <welcomeToAccountText "Peerio te permite enviar mensajes de forma segura, así como almacenar y administrar sus archivos y documentos. A continuación le mostramos cómo comenzar a usarlo.">

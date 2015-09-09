@@ -22,9 +22,8 @@
     <emailOrPhone "Электронная почта или номер мобильного телефона">
     <yourPassphrase "Ваша кодовая фраза">
     <infoAlertPassphrase "Для обеспечения высокой надежности, Peerio использует <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'&amp;gt;случайно сгенерированные кодовые фразы&amp;lt;/a>;;. <strong>;;Ваша кодовая фраза это главный ключ к вашему аккаунту!&amp;lt;/strong>;; Вы единственный владелец вашей кодовой фразы, запомните и берегите её, от этого зависит безопасность вашего аккаунта. Мы рекомендуем записать её на бумаге или сохранить в надежном менеджере паролей.">
-    <infoAlertPassphraseNote "<strong>Не беспокойтесь</strong>, через мгновение вы сможете установить короткий пароль для быстрого доступа с этого устройства.">
     <signupPassphraseConfirm "Использовать эту кодовую фразу?">
-    <signupPassphraseConfirmText "Помните, что вы единственный владелец этой кодовой фразы, она не известна больше никому. <a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>Если вы забудете её</a>, доступ к вашим данным будет потерян навесгда. Для надежности, введите пожалуйста кодовую фразу еще раз.">
+    <signupPassphraseConfirmText "<ul><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206331095' target='_blank'>Only you know this passphrase.</a></li> <li>If you lose it, your data will be lost forever.</li><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206330895' target='_blank'>Store your passphrase somewhere safe!</a></li><br><strong>Please enter your passphrase in order to continue.</strong>">
     <signupYourGeneratedPassphrase "Сгенерированная кодовая фраза:">
     <signupPassphraseRefresh "Изменить кодовую фразу">
     <error "Ошибка">
@@ -49,7 +48,7 @@
     <finishingUp "Завершение">
     <peerioPIN "Пароль устройства">
     <setAPeerioPIN "Установить пароль для этого устройства?">
-    <signupPeerioPIN "Пароль устройства позволяет быстрый доступ к Peerio. Вместо ввода кодовой фразы при каждом входе, вы можете установить короткий пароль специально для вашего устройства. Этот пароль не будет работать на других устройствах, на них вы можете установить пароль отдельно. <br>Для вашей безопасности, <strong>настраивайте пароль только на устройствах, которым вы доверяете и регулярно пользуетесь.</strong>">
+    <signupPeerioPIN "Вместо ввода кодовой фразы при каждом входе, вы можете установить короткий пароль специально для вашего устройства. Для вашей безопасности, <strong>настраивайте пароль только на устройствах, которым вы доверяете и регулярно пользуетесь.</strong>">
     <PINNotStrong "надежность пароля: низкая">
     <PINStrong "надежность пароля: подходящая">
     <setPIN "Установить пароль устройства">
@@ -62,7 +61,6 @@
     <messages "Сообщения">
     <files "Файлы">
     <contacts "Контакты">
-    <searchResultsClickToReset "результаты поиска (нажмите для сброса)">
     <connectionStatus "Состояние соединения">
     <welcomeToAccount "Добро пожаловать в ваш аккаунт Peerio.">
     <welcomeToAccountText "Peerio позволят вам обмениваться шифрованными сообщениями, а так же хранить свои файлы и документы. Вот с чего вы можете начать.">

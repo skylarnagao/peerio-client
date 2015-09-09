@@ -22,9 +22,8 @@
     <emailOrPhone "Email or mobile number">
     <yourPassphrase "Your passphrase">
     <infoAlertPassphrase "For stronger security, Peerio uses <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'>randomly generated passphrases</a>. <br><br><strong>You are the only one who knows this passphrase!</strong> If you lose it, you will permanently lose access to your account. We recommend writing your passphrase down on paper, or storing it in a secure password manager.">
-    <infoAlertPassphraseNote "<strong>Don't worry</strong>, in a moment you will be able to set a shorter pass<i>code</i> for quick access on this device.">
     <signupPassphraseConfirm "Use this passphrase?">
-    <signupPassphraseConfirmText "Remember, you are the only one who knows this passphrase. <a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>If you lose it</a>, your account will be lost forever. So just to be safe, <strong>please enter your passphrase once more in order to continue.</strong>">
+    <signupPassphraseConfirmText "<ul><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206331095' target='_blank'>Only you know this passphrase.</a></li> <li>If you lose it, your data will be lost forever.</li><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206330895' target='_blank'>Store your passphrase somewhere safe!</a></li><br><strong>Please enter your passphrase in order to continue.</strong>">
     <signupYourGeneratedPassphrase "Your generated passphrase:">
     <signupPassphraseRefresh "Change passphrase">
     <error "Error">
@@ -49,7 +48,7 @@
     <finishingUp "Finishing Up">
     <peerioPIN "Peerio Passcode">
     <setAPeerioPIN "Set a passcode for this device?">
-    <signupPeerioPIN "Peerio passcodes allow for quicker login on specific devices. Instead of entering your passphrase each time you login, you can set a shorter passcode that will only work on this device. You can set different passcodes from your different devices. <br><br>User-chosen passcodes tend to be less secure than Peerio's passphrases, so you should <strong>only set passcodes on devices you trust and use regularly</strong>.">
+    <signupPeerioPIN "Instead of entering your passphrase each time you login, you can set a shorter passcode that will only work on this device. User-chosen passcodes tend to be less secure than Peerio's passphrases, so you should <strong>only set passcodes on devices you trust and use regularly</strong>.">
     <PINNotStrong "passcode strength: weak">
     <PINStrong "passcode strength: ok!">
     <setPIN "Set Passcode">
@@ -62,7 +61,6 @@
     <messages "Messages">
     <files "Files">
     <contacts "Contacts">
-    <searchResultsClickToReset "search results (click to reset)">
     <connectionStatus "Connection Status">
     <welcomeToAccount "Welcome to your Peerio account.">
     <welcomeToAccountText "Peerio lets you send messages securely, as well as store and manage your files and documents. Here's how you can get started.">
