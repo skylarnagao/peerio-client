@@ -17,8 +17,8 @@
     name: 'English',
     value: 'en'
   }, {
-    name: 'Francais',
-    value: 'fr'
+    name: '汉语',
+    value: 'zh-CN'
   }, {
     name: 'Deutsch',
     value: 'de'
@@ -26,23 +26,29 @@
     name: 'Español',
     value: 'es'
   }, {
+    name: 'Francais',
+    value: 'fr'
+  }, {
     name: 'Italiano',
     value: 'it'
   }, {
-    name: 'Русский',
-    value: 'ru'
-  },{
-    name: '汉语',
-    value: 'zh-CN'
-  }, { 
-    name: 'Norsk (Bokmål)',
-    value: 'nb-NO'
-  }, {
-    name: 'Türkçe',
-    value: 'tr'
+    name: '日本語',
+    value: 'jp'
   }, {
     name: 'Magyar',
     value: 'hu'
+  }, {
+    name: 'Norsk (Bokmål)',
+    value: 'nb-NO'
+  }, {
+    name: 'Português (Brasileiro)',
+    value: 'pt-BR'
+  }, {
+    name: 'Русский',
+    value: 'ru'
+  }, {
+    name: 'Türkçe',
+    value: 'tr'
   }];
 
   Peerio.PhraseGenerator.languages.forEach(function (l) {
