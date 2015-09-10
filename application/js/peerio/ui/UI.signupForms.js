@@ -8,8 +8,9 @@ Peerio.UI.controller('signupForms', function ($scope) {
   }, 3000);
 
   $scope.signup.languageOptions = Peerio.PhraseGenerator.languages;
-  $scope.signup.wordCount = 6;
+  $scope.signup.wordCount = 5;
   $scope.signup.wordCountOptions = [
+    {name: '5', value: 5},
     {name: '6', value: 6},
     {name: '7', value: 7},
     {name: '8', value: 8},
