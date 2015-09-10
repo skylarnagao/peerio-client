@@ -23,7 +23,7 @@
     <yourPassphrase "Din passordsekvens">
     <infoAlertPassphrase "For bedre sikkerhet bruker Peerio <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'>tilfeldig genererte passordsekvenser</a>. <br><br><strong>Du er den eneste med kjennskap til denne passordsekvensen!</strong> Hvis du mister den, vil du tape tilgangen til din konto for godt. Vi anbefaler å skrive ned passordsekvensen på papir, eller å lagre den i en sikret passordsbehandler.">
     <signupPassphraseConfirm "Benytt denne passordsekvensen?">
-    <signupPassphraseConfirmText "<ul><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206331095' target='_blank'>Only you know this passphrase.</a></li> <li>If you lose it, your data will be lost forever.</li><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206330895' target='_blank'>Store your passphrase somewhere safe!</a></li><br><strong>Please enter your passphrase in order to continue.</strong>">
+    <signupPassphraseConfirmText "<strong>Husk</strong>, du er den eneste med kjennskap til denne passordsekvensen. <a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>Hvis du mister det</a>, vil din konto gå tapt for alltid. For å være på den sikre siden, <strong>skriv inn din passordsekvens én gang til for å fortsette.</strong>">
     <signupYourGeneratedPassphrase "Din maskinopprettede passordsekvens:">
     <signupPassphraseRefresh "Bytt passordsekvens">
     <error "Feil">

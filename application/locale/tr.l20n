@@ -23,7 +23,7 @@
     <yourPassphrase "Sistem parolanız">
     <infoAlertPassphrase "Daha fazla güvenlik için Peerio <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'>rastgele üretilmiş sistem parolaları</a> kullanır. <br><br><strong>Bu sistem parolasını bilen tek kişi sizsiniz!</strong> Kaybederseniz, hesabınıza erişimi kalıcı olarak kaybedeceksiniz. Sistem parolanızı bir kağıda yazmanızı veya güvenli bir parola yöneticisinde saklamanızı öneririz.">
     <signupPassphraseConfirm "Bu sistem parolası kullanılsın mı?">
-    <signupPassphraseConfirmText "<ul><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206331095' target='_blank'>Only you know this passphrase.</a></li> <li>If you lose it, your data will be lost forever.</li><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206330895' target='_blank'>Store your passphrase somewhere safe!</a></li><br><strong>Please enter your passphrase in order to continue.</strong>">
+    <signupPassphraseConfirmText "Unutmayın, bu sistem parolasını bilen tek kişi sizsiniz. <a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>Kaybederseniz</a>, hesabınız sonsuza kadar kaybolacak. Emin olabilmek için <strong>devam etmek üzere sistem parolanızı lütfen bir kere daha girin.</strong>">
     <signupYourGeneratedPassphrase "Oluşturulmuş sistem parolanız:">
     <signupPassphraseRefresh "Sistem parolasını değiştir">
     <error "Hata">

@@ -23,7 +23,7 @@
     <yourPassphrase "您的密码">
     <infoAlertPassphrase "为了增强安全性，Peerio 采用 &lt;a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'&gt;随机生成的密码短语&lt;/a>;。&lt;strong>;您的密码短语是您账户的万能钥匙！&lt;/strong>;您是您的密码短语的唯一拥有者，您的账户安全完全取决于它，请记住这点并保护它。您在新设备上登录您的账户时需要用到它。如果您遗失了您的密码短语，您就永久失去了对您的账户的访问权。我们建议您将您的密码短语写在纸上，或将其存储在一个安全的密码管理器中。">
     <signupPassphraseConfirm "使用此密码？">
-    <signupPassphraseConfirmText "<ul><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206331095' target='_blank'>Only you know this passphrase.</a></li> <li>If you lose it, your data will be lost forever.</li><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206330895' target='_blank'>Store your passphrase somewhere safe!</a></li><br><strong>Please enter your passphrase in order to continue.</strong>">
+    <signupPassphraseConfirmText "<strong>记住</strong>，您是此密码短语的唯一拥有者。<a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>;;如果您遗失了该密码短语</a>，您的账户也将永远遗失。因此为了确保安全，请输入一次您的密码短语，确保您已经完善保存它，然后继续。">
     <signupYourGeneratedPassphrase "您生成的密码：">
     <signupPassphraseRefresh "更改密码">
     <error "错误">

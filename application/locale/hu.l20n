@@ -23,7 +23,7 @@
     <yourPassphrase "A jelmondatod">
     <infoAlertPassphrase "A nagyobb biztonság érdekében a Peerio <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'>véletlenszerűen generált jelmondatokat</a> használ. <br><br><strong>Te vagy az egyetlen, aki ismeri ezt a jelmondatot!</strong> Ha elveszted, akkor végleg elveszted a hozzáférést a fiókodhoz. Azt ajánljuk, hogy írjd le a jelmondatod egy papírra, vagy tárold egy biztonságos jelszókezelőben.">
     <signupPassphraseConfirm "Ez a jelmondat használata?">
-    <signupPassphraseConfirmText "<ul><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206331095' target='_blank'>Only you know this passphrase.</a></li> <li>If you lose it, your data will be lost forever.</li><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206330895' target='_blank'>Store your passphrase somewhere safe!</a></li><br><strong>Please enter your passphrase in order to continue.</strong>">
+    <signupPassphraseConfirmText "Emlékezz, te vagy az egyetlen, aki ismeri ezt a jelmondatot. <a href='https://peerio.zendesk.com/hc/en-us/articles/202927099' target='_blank'>Ha elveszted</a>, a fiókod örökre elveszik. Tehát a biztonság kedvéért <strong>kérlek add meg a jelmondatod még egyszer a folytatás érdekében.</strong>">
     <signupYourGeneratedPassphrase "A generált jelmondatod:">
     <signupPassphraseRefresh "Jelmondat megváltoztatása">
     <error "Hiba">

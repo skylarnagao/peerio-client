@@ -5,7 +5,7 @@
     <username "Имя пользователя">
     <passphrase "Кодовая фраза">
     <passphraseOrPIN "Кодовая фраза или пароль устройства">
-    <login "логин">
+    <login "Логин">
     <or "или">
     <loginFailed "Попытка входа не удалась">
     <loginFailedText "Если вы использовали пароль устройства попробуйте войти с помощью кодовой фразы.">
@@ -23,7 +23,7 @@
     <yourPassphrase "Ваша кодовая фраза">
     <infoAlertPassphrase "Для обеспечения высокой надежности, Peerio использует <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'&amp;gt;случайно сгенерированные кодовые фразы&amp;lt;/a>;;. <strong>;;Ваша кодовая фраза это главный ключ к вашему аккаунту!&amp;lt;/strong>;; Вы единственный владелец вашей кодовой фразы, запомните и берегите её, от этого зависит безопасность вашего аккаунта. Мы рекомендуем записать её на бумаге или сохранить в надежном менеджере паролей.">
     <signupPassphraseConfirm "Использовать эту кодовую фразу?">
-    <signupPassphraseConfirmText "<ul><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206331095' target='_blank'>Only you know this passphrase.</a></li> <li>If you lose it, your data will be lost forever.</li><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206330895' target='_blank'>Store your passphrase somewhere safe!</a></li><br><strong>Please enter your passphrase in order to continue.</strong>">
+    <signupPassphraseConfirmText "<ul><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206331095' target='_blank'>Только вам известна эта кодовая фраза.</a></li> <li>Если вы забудете её, ваши данные будут потеряны навсегда.</li><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206330895' target='_blank'>Сохраните вашу кодовую фразу в надежном месте!</a></li><br><strong>Пожалуйста, введите свою кодовую фразу, чтобы продолжить.</strong>">
     <signupYourGeneratedPassphrase "Сгенерированная кодовая фраза:">
     <signupPassphraseRefresh "Изменить кодовую фразу">
     <error "Ошибка">
@@ -48,7 +48,7 @@
     <finishingUp "Завершение">
     <peerioPIN "Пароль устройства">
     <setAPeerioPIN "Установить пароль для этого устройства?">
-    <signupPeerioPIN "Вместо ввода кодовой фразы при каждом входе, вы можете установить короткий пароль специально для вашего устройства. Для вашей безопасности, <strong>настраивайте пароль только на устройствах, которым вы доверяете и регулярно пользуетесь.</strong>">
+    <signupPeerioPIN "Вместо ввода кодовой фразы при каждом входе, вы можете установить короткий пароль специально для вашего устройства. Пароль устройства менее надежен, чем кодовая фраза, поэтому <strong>настраивайте пароль только на устройствах, которым вы доверяете и регулярно пользуетесь.</strong>">
     <PINNotStrong "надежность пароля: низкая">
     <PINStrong "надежность пароля: подходящая">
     <setPIN "Установить пароль устройства">
