@@ -10,7 +10,7 @@ var gulp = require('gulp'),
 	runSequence = require('run-sequence'),
 	_ = require('lodash'),
   	del = require('del'), 
-  	NwBuilder = require('node-webkit-builder');
+  	NwBuilder = require('nw-builder');
 	
 
 // settings
