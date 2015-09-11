@@ -33,7 +33,7 @@
     value: 'it'
   }, {
     name: '日本語',
-    value: 'jp'
+    value: 'ja'
   }, {
     name: 'Magyar',
     value: 'hu'
