@@ -1,3 +1,9 @@
+##Peerio 1.1.4 (13)
+**September 10, 2015**
+- Added locales and dictionaries for Japanese and Brazilian Portuguese.
+- Dropped minimum word requirement in passphrase to 5. 
+- Skipped a patch number (1.1.3) for internal reasons.
+
 ##Peerio 1.1.2 (11)
 **August 3, 2015**
 - Added locales and dictionaries for Hungarian, Chinese (Simplified), Norwegian (Bokmål), and Turkish
