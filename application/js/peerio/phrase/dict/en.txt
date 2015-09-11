@@ -562,7 +562,6 @@ ship
 rock
 sam
 age
-christ
 murder
 finish
 letter
@@ -4859,7 +4858,6 @@ rye
 lenin
 gunner
 mold
-gays
 risen
 lamps
 sierra
@@ -5116,7 +5114,6 @@ carver
 tinker
 fowler
 zurich
-trans
 zebra
 mating
 aerial
@@ -6585,7 +6582,6 @@ crafty
 slop
 scab
 faulty
-queers
 atlas
 moors
 buoy
@@ -8977,7 +8973,6 @@ whining
 assured
 touches
 balcony
-lesbian
 filling
 primary
 samples
