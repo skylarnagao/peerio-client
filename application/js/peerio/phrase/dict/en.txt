@@ -3917,7 +3917,6 @@ lens
 pupils
 legion
 plaza
-puerto
 coats
 grim
 vanity
@@ -3925,10 +3924,8 @@ void
 idle
 fang
 nay
-psst
 colt
 pickup
-sol
 loop
 lizard
 skiing
@@ -3938,7 +3935,6 @@ poured
 fury
 shrine
 thorn
-costa
 trials
 cola
 naples
@@ -4797,7 +4793,6 @@ rouge
 alias
 abide
 skunk
-yahoo
 relay
 blaze
 rained
@@ -5515,7 +5510,6 @@ decker
 user
 rugby
 plank
-gogh
 drunks
 sling
 margin
@@ -5544,11 +5538,9 @@ chug
 admits
 deceit
 rinse
-ell
 stoop
 slowed
 comfy
-lei
 hisses
 gender
 gore
@@ -5894,7 +5886,6 @@ inter
 poorer
 cider
 smokey
-shiva
 triad
 floss
 vinci
@@ -6103,11 +6094,8 @@ gobble
 dears
 hither
 snort
-micah
-plumb
 scorn
 moods
-gras
 blasts
 mammal
 temp
@@ -6124,7 +6112,6 @@ stunts
 toil
 owls
 slab
-talkie
 twitch
 jester
 lineup
@@ -6420,9 +6407,7 @@ lyons
 loch
 yippee
 perch
-bookie
 avatar
-lazar
 urges
 felon
 awol
@@ -6431,7 +6416,6 @@ gigolo
 wrongs
 uproar
 ruckus
-ami
 fakes
 heirs
 nerds
@@ -6955,7 +6939,6 @@ unwise
 tulips
 chopin
 aspire
-actin
 bails
 mousse
 quint
@@ -7318,7 +7301,6 @@ taker
 hires
 flex
 suburb
-moro
 wanton
 ditto
 shay
@@ -7393,7 +7375,6 @@ fares
 warts
 bengal
 fiends
-bossa
 cynic
 sears
 taurus
@@ -7405,16 +7386,13 @@ avant
 stirs
 eights
 mumps
-brahms
 bower
 vipers
 hazy
 femme
-trois
 unwind
 twerp
 donors
-sui
 kicker
 essays
 teal
@@ -7921,7 +7899,6 @@ concur
 heifer
 sprang
 woven
-jour
 twirl
 crusty
 mints
@@ -10489,7 +10466,6 @@ gambled
 fossils
 plucked
 windsor
-kibbutz
 hosting
 meanest
 chipped
