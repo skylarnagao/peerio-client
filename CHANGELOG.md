@@ -1,3 +1,8 @@
+##Peerio 1.1.5 (14)
+**September 14, 2015**
+- Fixed Japanese locale.
+- Updated copy. 
+
 ##Peerio 1.1.4 (13)
 **September 10, 2015**
 - Added locales and dictionaries for Japanese and Brazilian Portuguese.
