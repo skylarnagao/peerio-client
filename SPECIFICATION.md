@@ -116,12 +116,12 @@ Once a recipient receives a Peerio message, they decrypt it using their miniLock
 ###6. Deleting a Conversation
 A user can delete a conversation (and all of its messages) from their account using an `authToken`. It is the Peerio network's responsibility to keep track of when a conversation or message is removed from all accounts so that it may then purge it from its storage, which saves server disk spaces and helps guarantee user privacy. Messages may not be removed independently.
 
-###7. Peerio PINs
-A Peerio PIN is a shorter passcode that lets users login on a particular device more quickly, avoiding having to type their long passphrase every time. Users can set a different Peerio PIN for each device they are using with Peerio.
+###7. Peerio Passcodes
+A Peerio passcode is a shorter user-chosen password that lets users login on a particular device more quickly, avoiding having to type their long passphrase every time. Users can set a different passcode for each device they are using with Peerio.
 
-On desktop platforms, Peerio PINs are passwords that are checked for strength. On mobile devices we use 6-digit numbers, owing to the lack of a full-sized keyboard on small touch-screen devices.
-f
-Peerio PINs are used as the basis to derive an encryption key which will be used to encrypt the user's long-term secret key for storage on the device. The user can then later unlock their long-term secret key by typing in their Peerio PIN. The encryption key is by passing the Peerio PIN through the `scrypt` key derivation function defined with the following parameters:
+On desktop platforms, Peerio passcodes are passwords that are checked for strength. On mobile devices we use 6-digit numbers, owing to the lack of a full-sized keyboard on small touch-screen devices.
+
+Peerio passcodes are used as the basis to derive an encryption key which will be used to encrypt the user's long-term secret key for storage on the device. The user can then later unlock their long-term secret key by typing in their Peerio passcode. The encryption key is by passing the Peerio passcode through the `scrypt` key derivation function defined with the following parameters:
 
 * N = 2<sup>14</sup>
 * r = 8,
