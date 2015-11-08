@@ -200,7 +200,7 @@ gulp.task('build', function(callback) {
    */
   var nw = new NwBuilder({
 		files: 'application/**/**', // use the glob format
-		platforms: ['win32', 'osx32', 'linux32'],
+		platforms: ['win32', 'osx32', 'linux32', 'linux64'],
 		buildDir: buildDest, 
 		version: '0.12.3',
 		cacheDir: 'tmp/nw',
