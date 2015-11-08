@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Peerio
+Name[fr]=Peerio
+Comment=Securely communicate and share files with your contacts
+Comment[fr]=Communiquez et échangez des fichiers en soute sécurité, avec votre réseau de contacts
+Categories=Network;Application;
+Exec=peerio-client
+Icon=peerio-client.png
+Terminal=false
+Type=Application
+StartupNotify=true
+Version=0.1
