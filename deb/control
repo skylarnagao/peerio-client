@@ -2,7 +2,6 @@ Package: peerio-client
 Version: 0.1-1
 Architecture: /ARCH/
 Maintainer: Samuel Martin Moro <samuel@peerio.com>
-Depends: npm (>=1.3)
 Section: comm
 Homepage: https://peerio.com/
 Priority: optional
