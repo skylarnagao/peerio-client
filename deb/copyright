@@ -1,0 +1,15 @@
+peerio-client
+
+Copyright: PeerioTechnologies
+
+2015-11-08
+
+This package was debianized by Samuel Martin Moro <samuel@peerio.com>
+on 2015 Nov 8th. Feel free to get in touch for support.
+
+It is based on peerio-client, as distributed on github:
+  https://github.com/PeerioTechnologies/peerio-client
+
+License attached in /usr/share/doc/peerio-client/LICENSE.md
+
+If you think we forgot to quote your name here, feel free to get in touch
