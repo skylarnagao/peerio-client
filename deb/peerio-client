@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if test -x /usr/share/peerio-client/Peerio; then
+    umask 077
+    /usr/share/peerio-client/Peerio >~/.peerio-client.log 2>&1 &
+    exit 0
+fi
+
+exit 1

@@ -1,0 +1,10 @@
+Package: peerio-client
+Version: /VERSION/-/PKGREL/
+Architecture: /ARCH/
+Maintainer: Samuel Martin Moro <samuel@peerio.com>
+Section: comm
+Homepage: https://peerio.com/
+Priority: optional
+Description: Peerio Standalone Client
+ Peerio is a messaging and file sharing solution based on the miniLock,
+ providing with strong end-to-end encryption.

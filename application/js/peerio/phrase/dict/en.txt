@@ -586,7 +586,6 @@ count
 gold
 forgot
 radio
-french
 caught
 short
 soul
@@ -1504,7 +1503,6 @@ wire
 ted
 yard
 button
-jews
 plate
 dump
 tail
@@ -1739,7 +1737,6 @@ rip
 fox
 urgent
 maggie
-russia
 tricks
 mask
 gather
@@ -1931,7 +1928,6 @@ tunnel
 drew
 recall
 drank
-greek
 poetry
 swell
 knight
@@ -2457,7 +2453,6 @@ kenny
 scout
 boot
 album
-buddha
 senses
 tender
 plates
@@ -2602,7 +2597,6 @@ skies
 sheet
 denied
 apples
-korea
 alfred
 ladder
 booth
@@ -2688,7 +2682,6 @@ oldest
 deaths
 rode
 breeze
-korean
 seated
 click
 sylvia
@@ -3016,16 +3009,13 @@ modest
 grain
 injury
 lester
-swiss
 sells
-nazis
 votes
 debate
 milan
 draft
 mice
 savage
-arabic
 ransom
 knives
 repay
@@ -3071,7 +3061,6 @@ funds
 scent
 hangs
 scheme
-romans
 meter
 samuel
 growth
@@ -4005,7 +3994,6 @@ wrath
 rapid
 buses
 urban
-turk
 storms
 riddle
 mild
@@ -4045,7 +4033,6 @@ jonah
 blouse
 numb
 quack
-greeks
 arise
 havana
 richer
@@ -4107,7 +4094,6 @@ fuzzy
 hurrah
 gibson
 beaver
-turks
 convoy
 birdie
 sniff
@@ -4640,7 +4626,6 @@ greasy
 meow
 mat
 tar
-islam
 raving
 sow
 lays
@@ -5131,7 +5116,6 @@ stingy
 scalp
 devote
 rhymes
-fidel
 cloudy
 asap
 aging
@@ -5552,7 +5536,6 @@ versa
 duct
 pillar
 buds
-swede
 ins
 tucson
 civic
@@ -5724,7 +5707,6 @@ wines
 darts
 kelvin
 bugged
-aviv
 curl
 accord
 fig
@@ -5743,12 +5725,10 @@ regent
 meddle
 lagoon
 stings
-abc
 fink
 rails
 flaws
 midday
-leone
 widely
 dues
 sordid
@@ -5781,8 +5761,6 @@ quota
 carton
 dell
 wiring
-lima
-burma
 vortex
 posed
 edison
@@ -6733,7 +6711,6 @@ blower
 plough
 thrice
 avail
-isaiah
 afloat
 trait
 fated
@@ -6746,7 +6723,6 @@ hippy
 fetish
 herpes
 chases
-afghan
 moths
 homing
 lapse
@@ -7233,7 +7209,6 @@ gull
 keel
 slid
 mumbo
-swedes
 solves
 pocus
 snare
@@ -7324,7 +7299,6 @@ moles
 aria
 ruff
 dinky
-bona
 zing
 jurors
 hanger
@@ -7515,23 +7489,19 @@ stooge
 ulcers
 petal
 coupon
-def
 arty
 bouncy
 humid
 loops
-jus
 ails
 madmen
 orgies
 frisky
 mosaic
-hep
 hefty
 regal
 amazes
 sickle
-sri
 petite
 gleam
 emblem
@@ -7637,11 +7607,9 @@ zeal
 hinder
 afoot
 scurvy
-fide
 toxin
 ghouls
 caw
-sachs
 cappy
 toying
 revise
@@ -7735,7 +7703,6 @@ padded
 glows
 faker
 anvil
-gar
 curing
 waive
 sprint
@@ -7743,7 +7710,6 @@ subdue
 jugs
 ailing
 priced
-goto
 curie
 soggy
 cranes
@@ -7844,7 +7810,6 @@ septic
 flicks
 exec
 hearth
-cur
 atop
 assert
 mora
@@ -7931,8 +7896,6 @@ hives
 alight
 humbug
 crafts
-creole
-vis
 dinghy
 acorns
 ethic
@@ -7992,7 +7955,6 @@ lackey
 seamen
 rani
 waxing
-garbo
 tripod
 liven
 brawn
@@ -8011,8 +7973,6 @@ doped
 spooks
 graph
 ranges
-gipsy
-moines
 widen
 cited
 hoots
@@ -8021,7 +7981,6 @@ decor
 furies
 cater
 combs
-balkan
 tweed
 murky
 uppity
@@ -8202,11 +8161,9 @@ station
 wedding
 worried
 message
-america
 instead
 certain
 hundred
-english
 history
 michael
 quickly
@@ -8265,21 +8222,17 @@ soldier
 dressed
 support
 mention
-charles
 grandma
 screams
 freedom
-chinese
 breathe
 command
 patient
 figured
 weapons
-england
 stories
 sheriff
 keeping
-richard
 natural
 witness
 correct
@@ -8299,7 +8252,6 @@ justice
 letters
 knowing
 society
-russian
 willing
 student
 jealous
@@ -8322,7 +8274,6 @@ whoever
 sweetie
 science
 discuss
-spanish
 medical
 pleased
 invited
@@ -8366,7 +8317,6 @@ warning
 belongs
 success
 reasons
-italian
 journey
 century
 ancient
@@ -8420,7 +8370,6 @@ license
 offered
 holiday
 theater
-germans
 whistle
 answers
 receive
@@ -8699,7 +8648,6 @@ messing
 classic
 musical
 matches
-lincoln
 dignity
 massive
 shocked
@@ -8707,7 +8655,6 @@ respond
 comment
 studies
 laughed
-mexican
 leaders
 feeding
 shortly
@@ -9030,10 +8977,8 @@ screech
 needing
 feather
 pursuit
-turkish
 scaring
 satisfy
-swedish
 detroit
 marilyn
 shuttle
@@ -9345,7 +9290,6 @@ inherit
 pajamas
 predict
 dolores
-israeli
 suckers
 ecstasy
 messiah
@@ -9354,7 +9298,6 @@ disgust
 rocking
 freezer
 cherish
-krishna
 brothel
 shrieks
 dragons
@@ -9689,7 +9632,6 @@ refugee
 doorman
 thanked
 breaths
-islamic
 alleged
 arrests
 admirer
@@ -9718,7 +9660,6 @@ indulge
 sanders
 descend
 spreads
-belgian
 fleeing
 pianist
 periods
@@ -9733,7 +9674,6 @@ appoint
 chiming
 qualify
 cabaret
-zealand
 patrols
 placing
 sustain
@@ -9773,7 +9713,6 @@ reviews
 neglect
 carmine
 harness
-soviets
 antenna
 sharply
 anatomy
@@ -9943,7 +9882,6 @@ rascals
 genesis
 wichita
 revenue
-fascism
 sleeper
 smuggle
 olympus
@@ -9983,7 +9921,6 @@ guineas
 drastic
 ongoing
 dashing
-junkies
 bravely
 jogging
 coffins
@@ -10032,7 +9969,6 @@ streams
 giraffe
 refresh
 addicts
-bermuda
 posture
 confide
 cheater
@@ -10043,7 +9979,6 @@ tornado
 cardiac
 raphael
 fatigue
-mitzvah
 lending
 minding
 violate
@@ -10105,7 +10040,6 @@ lengths
 builder
 scripts
 lunches
-koreans
 raiders
 finnish
 charade
@@ -10648,7 +10582,6 @@ quartet
 turnout
 railing
 plotted
-chilean
 ostrich
 scrolls
 smeared
@@ -10800,7 +10733,6 @@ possible
 straight
 laughing
 hospital
-american
 speaking
 finished
 terrible
@@ -10853,7 +10785,6 @@ strength
 greatest
 consider
 favorite
-japanese
 mountain
 national
 practice
@@ -11059,7 +10990,6 @@ jonathan
 splendid
 standard
 valuable
-russians
 homework
 informed
 industry
@@ -11456,7 +11386,6 @@ carnival
 fortress
 sweating
 prettier
-canadian
 pentagon
 mentally
 relation
@@ -11691,7 +11620,6 @@ chandler
 oklahoma
 mainland
 panicked
-columbia
 monument
 guarding
 hydrogen
@@ -11949,7 +11877,6 @@ mountains
 carefully
 americans
 therefore
-christian
 champagne
 suffering
 knowledge
