@@ -1,5 +1,5 @@
 # Dockerfile
-FROM debian:jessie
+FROM debian:wheezy
 
 # Local caches - only set those you actually have such caches
 #ENV apt_proxy http://10.42.44.100:3142/
@@ -11,19 +11,26 @@ ENV TRANSIFEX_USER your_transifex_username
 
 # Arch to output
 ENV ARCH 64
+ENV NODE_VERSION 0.10.40
 ENV PKG_ARCH amd64
 ENV PKG_VERSION 1.1.5
 ENV PKG_REL 1
 ENV PKG_NAME peerio-client_$PKG_VERSION-${PKG_REL}_$PKG_ARCH
 
-ENV NODE_BIN_DIR=/usr/bin
+ENV NODE_BIN_DIR=/usr/local/bin
 ENV DEBIAN_FRONTEND=noninteractive 
 
 RUN test "$apt_proxy" && echo 'Acquire::http { Proxy "$apt_proxy"; };' >/etc/apt/apt.conf.d/01proxy
 RUN apt-get update && apt-get install -y \
-    build-essential curl devscripts gcc-multilib git lsb-release make nodejs npm python-pip rsync sudo
+    build-essential curl devscripts gcc-multilib git lsb-release make python-pip rsync sudo wget
 
-RUN test -x $NODE_BIN_DIR/nodejs -a ! -x $NODE_BIN_DIR/node && ln -sf $NODE_BIN_DIR/nodejs $NODE_BIN_DIR/node
+WORKDIR /usr/src
+RUN wget https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION.tar.gz
+RUN tar -xzf node-v$NODE_VERSION.tar.gz
+WORKDIR /usr/src/node-v$NODE_VERSION
+RUN ./configure ; make ; make install
+RUN test -x $NODE_BIN_DIR/nodejs -a ! -x $NODE_BIN_DIR/node && ln -sf $NODE_BIN_DIR/nodejs $NODE_BIN_DIR/node || true
+RUN curl -k -L https://npmjs.org/install.sh | sh
 RUN pip install transifex-client
 RUN npm install -g nw
 ADD https://raw.githubusercontent.com/PeerioTechnologies/peerio-client/master/deb/transifex.rc /root/.transifexrc

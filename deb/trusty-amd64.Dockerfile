@@ -23,7 +23,7 @@ RUN test "$apt_proxy" && echo 'Acquire::http { Proxy "$apt_proxy"; };' >/etc/apt
 RUN apt-get update && apt-get install -y \
     build-essential curl devscripts gcc-multilib git lsb-release make nodejs npm python-pip rsync sudo
 
-RUN test -x $NODE_BIN_DIR/nodejs -a ! -x $NODE_BIN_DIR/node && ln -sf $NODE_BIN_DIR/nodejs $NODE_BIN_DIR/node
+RUN test -x $NODE_BIN_DIR/nodejs -a ! -x $NODE_BIN_DIR/node && ln -sf $NODE_BIN_DIR/nodejs $NODE_BIN_DIR/node || true
 RUN pip install transifex-client
 RUN npm install -g nw
 ADD https://raw.githubusercontent.com/PeerioTechnologies/peerio-client/master/deb/transifex.rc /root/.transifexrc
