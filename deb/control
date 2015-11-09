@@ -3,7 +3,6 @@ Version: /VERSION/-/PKGREL/
 Architecture: /ARCH/
 Maintainer: Samuel Martin Moro <samuel@peerio.com>
 Section: comm
-Standards-Version
 Homepage: https://peerio.com/
 Priority: optional
 Description: Peerio Standalone Client

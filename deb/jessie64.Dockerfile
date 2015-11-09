@@ -52,7 +52,6 @@ RUN sed -i -e "s|/ARCH/|$PKG_ARCH|" -e "s|/VERSION/|$PKG_VERSION|" -e "s|/PKGREL
 RUN cd usr/share/man/man1 && gzip -9 -f peerio-client.1
 RUN find . -type f -exec chmod 0644 {} \;
 RUN find . -type d -exec chmod 0755 {} \;
-RUN chmod 0755 usr/share/peerio-client/Peerio
-RUN chmod 0755 usr/bin/peerio-client
+RUN chmod 0755 usr/share/peerio-client/Peerio usr/bin/peerio-client
 WORKDIR /usr/src
 RUN dpkg-deb --build $PKG_NAME
