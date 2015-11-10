@@ -4,9 +4,27 @@ PROG_NAME = peerio-client
 APP_DIR   = $(PREFIX)/$(PROG_NAME)
 BIN_DIR   = /usr/bin
 DOC_DIR   = $(PREFIX)/doc
-MAN_DIR   = $(PREFIX)/man/man1
 DSK_DIR   = /usr/share/applications
 ICON_DIR  = /usr/share/icons/hicolor
+MAN_DIR   = $(PREFIX)/man/man1
+OBJ       = build/Peerio/chrome
+
+ifeq ($(OS),Windows_NT)
+    OBJ = build/Peerio/win32
+else
+    UNAME_P := $(shell uname -p)
+    UNAME_S := $(shell uname -s)
+    ifeq ($(UNAME_S),Linux)
+	ifeq ($(UNAME_P),x86_64)
+	   OBJ = build/Peerio/linux64
+	else
+	   OBJ = build/Peerio/linux32
+	endif
+    endif
+    ifeq ($(UNAME_S),Darwin)
+	OBJ = build/Peerio/osx32
+    endif
+endif
 
 all: install clean
 
@@ -23,7 +41,6 @@ confdeps:
 
 client: confdeps
 	if ! test -d build; then \
-	    sed -i '/^[ \t]*winIco: /d' gulpfile.js; \
 	    ./node_modules/.bin/gulp build; \
 	fi
 
@@ -33,11 +50,11 @@ installdirs:
 	done
 
 install: client installdirs
-	for file in $(shell find build/Peerio/linux64 -type f | sed 's|.*Peerio/linux64/||'); do \
+	for file in $(shell find $(OBJ) -type f | sed 's|build/Peerio/[^/]*/||'); do \
 	    if echo "$$file" | grep Peerio; then \
-		install -c -m 0755 build/Peerio/linux64/$$file $(APP_DIR)/$$file; \
+		install -c -m 0755 $(OBJ)/$$file $(APP_DIR)/$$file; \
 	    else \
-		install -c -m 0644 build/Peerio/linux64/$$file $(APP_DIR)/$$file; \
+		install -c -m 0644 $(OBJ)/$$file $(APP_DIR)/$$file; \
 	    fi \
 	done
 	for dim in 16 32 48 64 128; do \
