@@ -73,5 +73,11 @@ deinstall:
 	rm -f $(DSK_DIR)/$(PROG_NAME).desktop $(BIN_DIR)/$(PROG_NAME) $(MAN_DIR)/peerio-client.1.gz
 	rm -rf $(APP_DIR)
 
+createdebsource: clean
+	debuild -S -sa
+
+createdebbin: clean
+	dpkg-buildpackage -us -uc
+
 clean:
 	rm -fr build
