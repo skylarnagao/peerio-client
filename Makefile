@@ -1,11 +1,13 @@
-PREFIX = /usr/share
+BINPREFIX = /usr
+PREFIX    = /usr/share
+XPREFIX   = $(PREFIX)
 
 PROG_NAME = peerio-client
 APP_DIR   = $(PREFIX)/$(PROG_NAME)
-BIN_DIR   = /usr/bin
+BIN_DIR   = $(BINPREFIX)/bin
 DOC_DIR   = $(PREFIX)/doc
-DSK_DIR   = /usr/share/applications
-ICON_DIR  = /usr/share/icons/hicolor
+DSK_DIR   = $(XPREFIX)/applications
+ICON_DIR  = $(XPREFIX)/icons/hicolor
 MAN_DIR   = $(PREFIX)/man/man1
 OBJ       = build/Peerio/chrome
 
@@ -16,9 +18,9 @@ else
     UNAME_S := $(shell uname -s)
     ifeq ($(UNAME_S),Linux)
 	ifeq ($(UNAME_P),x86_64)
-	   OBJ = build/Peerio/linux64
+	    OBJ = build/Peerio/linux64
 	else
-	   OBJ = build/Peerio/linux32
+	    OBJ = build/Peerio/linux32
 	endif
     endif
     ifeq ($(UNAME_S),Darwin)
@@ -26,17 +28,14 @@ else
     endif
 endif
 
-all: install clean
+all: client
 
 confdeps:
 	if ! test -d build; then \
-	    pip install transifex-client; \
-	    npm install -g nw; \
-	    npm install; \
-	    if ! test -s ~/.transifexrc; then \
-		echo missing transifex configuration >&2; \
-		exit 1; \
-	    fi; \
+	    pip list 2>&1 | grep ^transifex-client >/dev/null || pip install transifex-client; \
+	    npm -g ls 2>&1 | grep ' nw@' >/dev/null || npm install -g nw; \
+	    test -d node_modules || npm install; \
+	    test -d application/node_modules || cd application && npm install; \
 	fi
 
 client: confdeps
@@ -45,13 +44,13 @@ client: confdeps
 	fi
 
 installdirs:
-	for d in $(APP_DIR)/locales $(DOC_DIR)/peerio-client $(BIN_DIR) $(MAN_DIR) $(ICON_DIR)/16x16/apps $(ICON_DIR)/32x32/apps $(ICON_DIR)/48x48/apps $(ICON_DIR)/64x64/apps $(ICON_DIR)/128x128/apps; do \
+	for d in $(APP_DIR)/locales $(DOC_DIR)/peerio-client $(BIN_DIR) $(MAN_DIR) $(ICON_DIR)/16x16/apps $(ICON_DIR)/32x32/apps $(ICON_DIR)/48x48/apps $(ICON_DIR)/64x64/apps $(ICON_DIR)/128x128/apps $(DSK_DIR); do \
 	    test -d "$$d" || mkdir -p "$$d"; \
 	done
 
 install: client installdirs
 	for file in $(shell find $(OBJ) -type f | sed 's|build/Peerio/[^/]*/||'); do \
-	    if echo "$$file" | grep Peerio; then \
+	    if echo "$$file" | grep Peerio >/dev/null; then \
 		install -c -m 0755 $(OBJ)/$$file $(APP_DIR)/$$file; \
 	    else \
 		install -c -m 0644 $(OBJ)/$$file $(APP_DIR)/$$file; \
@@ -60,15 +59,18 @@ install: client installdirs
 	for dim in 16 32 48 64 128; do \
 	    install -c -m 0644 application/img/icon$$dim.png $(ICON_DIR)/$${dim}x$$dim/apps/$(PROG_NAME).png; \
 	done
-	install -c -m 0644 deb/desktop  $(DSK_DIR)/$(PROG_NAME).desktop
+	install -c -m 0644 deb/desktop $(DSK_DIR)/$(PROG_NAME).desktop
+	install -c -m 0644 deb/man.1 $(MAN_DIR)/peerio-client.1
 	install -c -m 0755 deb/peerio-client $(BIN_DIR)/$(PROG_NAME)
+	umask 133
+	gzip -9 -f $(MAN_DIR)/peerio-client.1
 
 deinstall:
 	for dim in 16 32 48 64 128; do \
 	    test -f $(ICON_DIR)/$${dim}x$$dim/apps/$(PROG_NAME).png || continue; \
 	    rm -f $(ICON_DIR)/$${dim}x$$dim/apps/$(PROG_NAME).png; \
 	done
-	rm -f $(DSK_DIR)/$(PROG_NAME).desktop $(BIN_DIR)/$(PROG_NAME)
+	rm -f $(DSK_DIR)/$(PROG_NAME).desktop $(BIN_DIR)/$(PROG_NAME) $(MAN_DIR)/peerio-client.1.gz
 	rm -rf $(APP_DIR)
 
 clean:

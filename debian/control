@@ -1,0 +1,15 @@
+Source: peerio-client
+Section: comm
+Priority: optional
+Maintainer: Samuel MARTIN MORO <samuel@peerio.com>
+Build-Depends: npm, curl, git, python-pip, debhelper (>= 9)
+Standards-Version: 3.9.6
+Homepage: https://peerio.com
+Vcs-Git: git://github.com/PeerioTechnologies/peerio-client.git
+
+Package: peerio-client
+Architecture: any
+Depends: libnss3, libnspr4, ${shlibs:Depends}, ${misc:Depends}
+Description: Peerio Client
+ Peerio is a messaging and file sharing solution based on miniLock,
+ providing with strong end-to-end encryption.
