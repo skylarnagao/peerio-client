@@ -9,6 +9,7 @@ DOC_DIR   = $(PREFIX)/doc
 DSK_DIR   = $(XPREFIX)/applications
 ICON_DIR  = $(XPREFIX)/icons/hicolor
 MAN_DIR   = $(PREFIX)/man/man1
+NODE_DIR  = /usr/bin
 OBJ       = build/Peerio/chrome
 
 ifeq ($(OS),Windows_NT)
@@ -31,6 +32,9 @@ endif
 all: client
 
 confdeps:
+	if test -x $(NODE_DIR)/nodejs -a ! -x $(NODE_DIR)/node; then \
+	    ln -sf $(NODE_DIR)/nodejs $(NODE_DIR)/node; \
+	fi
 	if ! test -d build; then \
 	    pip list 2>&1 | grep ^transifex-client >/dev/null || pip install transifex-client; \
 	    npm -g ls 2>&1 | grep ' nw@' >/dev/null || npm install -g nw; \
