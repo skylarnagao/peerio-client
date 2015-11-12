@@ -15,10 +15,10 @@ OBJ       = build/Peerio/chrome
 ifeq ($(OS),Windows_NT)
     OBJ = build/Peerio/win32
 else
-    UNAME_P := $(shell uname -p)
+    UNAME_M := $(shell uname -m)
     UNAME_S := $(shell uname -s)
     ifeq ($(UNAME_S),Linux)
-	ifeq ($(UNAME_P),x86_64)
+	ifeq ($(UNAME_M),x86_64)
 	    OBJ = build/Peerio/linux64
 	else
 	    OBJ = build/Peerio/linux32
@@ -84,4 +84,4 @@ createdebbin: clean
 	dpkg-buildpackage -us -uc
 
 clean:
-	rm -fr build
+	rm -fr build node_modules application/node_modules
