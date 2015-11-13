@@ -127,7 +127,7 @@
 
             <form class="signupBasicInformation" data-ng-submit="signup.basicInformationContinue()">
                 <h1 data-l10n-id="basicInformation"></h1>
-                <input type="text"
+                <input type="text" style="width:170px"
                        data-l10n-id="desiredUsername"
                        maxlength="16"
                        data-ng-model="signup.username"
@@ -138,26 +138,25 @@
                 <div class="signupUsernameAvailability" data-l10n-id="usernameNotAvailable"></div>
                 <input type="text"
                        data-l10n-id="firstName"
-                       maxlength="16"
+                       maxlength="16" style="width:170px"
                        data-ng-model="signup.firstName"
-                       data-ng-pattern="/^[a-zãâàâåáéèêëîïôûùüÿýçñæœößøòôõóìîíùûúà .\-']{1,20}$/i" required/>
-                <input type="text"
+                       data-ng-pattern="/^[a-zãâàâåáéèêëîïôûùüÿýçñæœößøòôõóìîíùûúà .\-']{1,20}$/i"/>
+                <input type="text" style="width:170px"
                        data-l10n-id="lastName"
                        maxlength="16"
                        data-ng-model="signup.lastName"
-                       data-ng-pattern="/^[a-zãâàâåáéèêëîïôûùüÿýçñæœößøòôõóìîíùûúà .\-']{1,20}$/i" required/>
-                <input type="text"
-                       data-l10n-id="emailOrPhone"
-                       maxlength="128"
-                       class="signupEmailOrPhone"
-                       data-ng-change="signup.checkAddress()"
-                       data-ng-pattern="/^([-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+\.[a-zA-Z]{2,20})|\+?(\d|\s|\-|\(|\)){6,20}$/"
-                       data-ng-model="signup.emailOrPhone" required/>
+                       data-ng-pattern="/^[a-zãâàâåáéèêëîïôûùüÿýçñæœößøòôõóìîíùûúà .\-']{1,20}$/i"/>
+                <!--<input type="text"-->
+                       <!--data-l10n-id="emailOrPhone"-->
+                       <!--maxlength="128"-->
+                       <!--class="signupEmailOrPhone"-->
+                       <!--data-ng-change="signup.checkAddress()"-->
+                       <!--data-ng-pattern="/^([-0-9a-zA-Z.+_]+@[-0-9a-zA-Z.+_]+\.[a-zA-Z]{2,20})|\+?(\d|\s|\-|\(|\)){6,20}$/"-->
+                       <!--data-ng-model="signup.emailOrPhone" required/>-->
 
-                <div class="signupAddressAvailability" data-l10n-id="addressNotAvailable"></div>
-                <button type="submit"
-                        data-l10n-id="continue"
-                        data-ng-disabled="!signup.username||!signup.firstName||!signup.lastName||!signup.emailOrPhone"
+                <!--<div class="signupAddressAvailability" data-l10n-id="addressNotAvailable"></div>-->
+                <button type="submit" data-l10n-id="continue"
+                        data-ng-disabled="!signup.username"
                         class="basicInformationContinue"></button>
             </form>
             <form class="signupYourPassphrase" data-ng-submit="signup.checkPassphrase()">
