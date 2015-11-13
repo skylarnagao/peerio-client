@@ -39,8 +39,8 @@ confdeps:
 	    curl -k -L https://npmjs.org/install.sh | sh; \
 	fi
 	if ! test -d build; then \
-	    pip list 2>&1 | grep ^transifex-client >/dev/null || pip install transifex-client; \
-	    npm -g ls 2>&1 | grep ' nw@' >/dev/null || npm install -g nw; \
+	    pip list 2>&1 | grep ^transifex-client >/dev/null || sudo pip install transifex-client; \
+	    npm -g ls 2>&1 | grep ' nw@' >/dev/null || sudo npm install -g nw; \
 	    test -d node_modules || npm install; \
 	    test -d application/node_modules || cd application && npm install; \
 	fi
