@@ -247,7 +247,7 @@ Peerio.user = {};
 			username: username,
 			firstName: accountInfo.firstName,
 			lastName: accountInfo.lastName,
-			address: accountInfo.address,
+			//address: accountInfo.address,
 			miniLockID: accountInfo.miniLockID,
 			localeCode: Peerio.UI.localeCode
 		}, function(data) {
