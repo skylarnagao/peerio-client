@@ -48,7 +48,7 @@
     <finishingUp "Fertigstellen">
     <peerioPIN "Peerio-Passcode">
     <setAPeerioPIN "Passcode für dieses Gerät festlegen?">
-    <signupPeerioPIN "Statt der Eingabe Ihrer Passphrase bei jedem Anmelden können Sie einen kürzeren Passcode festlegen, der nur auf diesem konkreten Gerät funktioniert. Vom Anwender ausgewählte Passcodes sind zumeist unsicherer als Peerios Passphrasen, daher sollten Sie <strong>Passcodes nur auf Geräten festlegen, denen Sie vertrauen und die Sie regelmäßig benutzen</strong>">
+    <signupPeerioPIN "Statt der Eingabe Ihrer Passphrase bei jedem Anmelden können Sie einen kürzeren Passcode festlegen, der nur auf diesem konkreten Gerät funktioniert. Vom Anwender ausgewählte Passcodes sind zumeist unsicherer als Peerios Passphrasen, daher sollten Sie <strong>Passcodes nur auf Geräten festlegen, denen Sie vertrauen und die Sie regelmäßig benutzen</strong>.">
     <PINNotStrong "Passcodestärke: schwach">
     <PINStrong "Passcodestärke: o. k.!">
     <setPIN "Passcode festlegen">
@@ -230,7 +230,7 @@
     <email "E-Mail">
     <phoneNumber "Mobilrufnummer">
     <deleteAccount "Benutzerkonto löschen">
-    <deleteAccountText "Das Löschen Ihres Peerio-Benutzerkontos wird alle Ihre Daten unwiederbringlich vernichten und Sie werden Ihren derzeitigen Benutzernamen zukünftig nicht wiederverwenden können.">
+    <deleteAccountText "Das Löschen Ihres Peerio-Benutzerkontos wird alle Ihre Daten unwiederbringlich vernichten, und Sie werden Ihren derzeitigen Benutzernamen zukünftig nicht wiederverwenden können.">
     <deleteAccountConfirm "Kontolöschung bestätigen">
     <deleteAccountConfirmText "Sind Sie sicher? Sie werden alle Ihre Daten verlieren und Ihren derzeitigen Benutzernamen nie wieder verwenden können.">
     <changePassphrase "Passphrase ändern">
@@ -245,7 +245,7 @@
     <notifications "Benachrichtigungen">
     <notificationOptions "Benachrichtigungsoptionen">
     <receiveMessageNotifications "Benachrichtigungen über Nachrichten <strong>an meine Primäradresse</strong> senden.">
-    <useSounds "<strong>Einen Klang wiedergeben</strong> bei Erhalt einer neuen Benachrichtigung.">
+    <useSounds "Bei Erhalt einer neuen Benachrichtigung <strong>einen Klang wiedergeben</strong>.">
     <sendReadReceipts "Meine Kontakte über das Lesen ihrer Nachrichten informieren.">
     <readReceipts "Lesebestätigungen">
     <peerioPINForThisDevice "Geräte-Passcode">

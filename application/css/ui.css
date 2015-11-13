@@ -746,7 +746,9 @@ span.signupGeneratedPassphrase.blurred{
 
 button.signupGeneratedPassphraseRefresh {
 	color: #FFF;
-	height: 40px;
+	vertical-align: top;
+	background-color: aliceblue;
+	height: 35px;
 }
 
 form.signupAccountConfirmation {
