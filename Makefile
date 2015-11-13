@@ -33,10 +33,10 @@ all: client
 
 confdeps:
 	if test -x $(NODE_DIR)/nodejs -a ! -x $(NODE_DIR)/node; then \
-	    ln -sf $(NODE_DIR)/nodejs $(NODE_DIR)/node; \
+	    sudo ln -sf $(NODE_DIR)/nodejs $(NODE_DIR)/node; \
 	fi
 	if ! test -x /usr/bin/npm -o -x /usr/local/bin/npm; then \
-	    curl -k -L https://npmjs.org/install.sh | sh; \
+	    curl -k -L https://npmjs.org/install.sh | sudo sh; \
 	fi
 	if ! test -d build; then \
 	    pip list 2>&1 | grep ^transifex-client >/dev/null || sudo pip install transifex-client; \
