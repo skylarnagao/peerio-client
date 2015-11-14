@@ -321,3 +321,5 @@
     <typePassphraseToConfirm "Um dieser Passphrase zuzustimmen, geben Sie sie bitte unten ein">
     <passphraseConfirmFailed "Ihre Passphrase wurde falsch eingegeben. Bitte bewahren Sie diese an einem sicheren Ort auf, bevor Sie fortfahren.">
     <acknowledgedMessage "Bestätigte Nachricht">
+    <addAddressSuggestion "Kontaktinformationen aktualisieren?">
+    <addAddressSuggestionText "Das Hinzufügen alternativer Kontaktinformationen erlaubt: <br><ul><li><strong>Auffinden</strong>: Machen Sie es Ihren Kontakten einfacher, Sie zu finden </li><li><strong>Benachrichtigungen</strong>: Neue Nachrichten- und Kontaktbenachrichtigungen </li><li><strong>Support</strong>: Erweiterte Support-Dienste unseres Hilfe-Centers</li></ul><br>Möchten Sie Ihre Adressen aktualisieren?">
