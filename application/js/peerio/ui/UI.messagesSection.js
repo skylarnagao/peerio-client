@@ -438,7 +438,7 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
           confirmButtonText: document.l10n.getEntitySync('ok').value,
           closeOnConfirm: true
         }, function () {
-          userMenu.openAccountSettings();
+          Peerio.UI.openSettings();
         });
       }
       $scope.messagesSection.conversations = Peerio.user.conversations
