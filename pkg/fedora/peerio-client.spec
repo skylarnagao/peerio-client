@@ -43,14 +43,15 @@ providing with strong end-to-end encryption.
 %prep
 %autosetup
 %build
-sed -i '/^[ \t]*winIco: /d' gulpfile.js
 make
 
 %install
 make install PREFIX=%{buildroot}/usr/share BINPREFIX=%{buildroot}/usr
+install -m 0755 -d %{buildroot}/usr/share/pixmaps
+install -c -m 0644 application/img/icon128.png %{buildroot}/usr/share/pixmaps/peerio-client.png
 
 %clean
-make clean PREFIX=%{buildroot}/usr/share BINPREFIX=%{buildroot}/usr
+make clean
 
 %files
 %defattr(-,root,root)
@@ -65,6 +66,7 @@ make clean PREFIX=%{buildroot}/usr/share BINPREFIX=%{buildroot}/usr
 %{_bindir}/peerio-client
 %{_datadir}/applications/peerio-client.desktop
 %{_datadir}/icons/hicolor/*/apps/peerio-client.png
+%{_datadir}/pixmaps/peerio-client.png
 %{_mandir}/man1/peerio-client.1.gz
 
 %changelog
