@@ -43,7 +43,7 @@ providing with strong end-to-end encryption.
 %prep
 %autosetup
 %build
-sed -i '/^[ \t]*winIco: /d' gulpfile.js
+sed -i 's|Icon=peerio-client.png|Icon=peerio-client|' pkg/desktop
 make
 
 %install
