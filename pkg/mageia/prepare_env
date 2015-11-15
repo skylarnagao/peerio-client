@@ -7,3 +7,19 @@ urpmi alsa-lib glibc cairo libdbus1_3 fontconfig GConf2 libgdk_pixbuf2.0_0 libgt
 #wget https://dl.peerio.com/sources/00-build.patch -O SOURCES/00-build.patch
 #wget https://dl.peerio.com/fedora23/peerio-client.spec -O SPECS/peerio-client.spec
 #rpmbuild -ba SPECS/peerio-client.spec
+
+#to distribute packages, create the following tree
+#i585
+#i585/core
+#i585/core/your.rpm
+#x86_64
+#x86_64/core
+#x86_64/core/your.rpm
+#SRPMS
+#SRPMS/core
+#SRPMS/core/your.rpm
+
+#then build corresponding metadata:
+#for arch in i585 x86_64 SRPMS
+#do genhdlist2 --xml-info --allow-empty-media $arch/core
+#done
