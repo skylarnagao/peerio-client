@@ -38,8 +38,10 @@ confdeps:
 	if ! test -x /usr/bin/npm -o -x /usr/local/bin/npm; then \
 	    curl -k -L https://npmjs.org/install.sh | sudo sh; \
 	fi
-	if ! test -d build; then \
+	if ! test -x /usr/bin/tx; then \
 	    pip list 2>&1 | grep ^transifex-client >/dev/null || sudo pip install transifex-client; \
+	fi
+	if ! test -d build; then \
 	    npm -g ls 2>&1 | grep ' nw@' >/dev/null || sudo npm install -g nw; \
 	    test -d node_modules || npm install; \
 	    test -d application/node_modules || cd application && npm install; \
@@ -66,9 +68,9 @@ install: client installdirs
 	for dim in 16 32 48 64 128; do \
 	    install -c -m 0644 application/img/icon$$dim.png $(ICON_DIR)/$${dim}x$$dim/apps/$(PROG_NAME).png; \
 	done
-	install -c -m 0644 deb/desktop $(DSK_DIR)/$(PROG_NAME).desktop
-	install -c -m 0644 deb/man.1 $(MAN_DIR)/peerio-client.1
-	install -c -m 0755 deb/peerio-client $(BIN_DIR)/$(PROG_NAME)
+	install -c -m 0644 pkg/desktop $(DSK_DIR)/$(PROG_NAME).desktop
+	install -c -m 0644 pkg/man.1 $(MAN_DIR)/peerio-client.1
+	install -c -m 0755 pkg/peerio-client $(BIN_DIR)/$(PROG_NAME)
 	umask 133
 	gzip -9 -f $(MAN_DIR)/peerio-client.1
 
