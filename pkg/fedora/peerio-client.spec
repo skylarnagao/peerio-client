@@ -20,7 +20,7 @@ Requires: dbus-libs
 Requires: fontconfig
 Requires: GConf2
 Requires: gdk-pixbuf2
-Requires: gtk2
+Requires: gtk3
 Requires: libnotify
 Requires: libXcomposite
 Requires: libXcursor

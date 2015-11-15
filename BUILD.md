@@ -42,7 +42,7 @@ Assuming you have all build and runtime dependencies installed, this should prod
 
 Note: there is known problems between libgl and virtualbox video driver, causing nw.js to open a blank window. Not sure how to fix yet. I have not seen this problem running my packages on physical hosts. You may still build your packages on virtual environments.
 
-#### Fedora/CentOS
+#### Fedora/CentOS/Mageia
 
 If you are not familiar yet with the process of building packages, check out https://fedoraproject.org/wiki/How_to_create_an_RPM_package
 

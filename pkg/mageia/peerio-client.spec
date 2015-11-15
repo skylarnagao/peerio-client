@@ -10,26 +10,26 @@ URL: https://peerio.com
 
 BuildRequires: fakeroot
 BuildRequires: make
-BuildRequires: npm
+BuildRequires: nodejs
+BuildRequires: python-pip
 BuildRequires: sudo
-BuildRequires: transifex-client
 Requires: alsa-lib
 Requires: glibc
 Requires: cairo
-Requires: dbus-libs
+Requires: libdbus1_3
 Requires: fontconfig
 Requires: GConf2
-Requires: gdk-pixbuf2
-Requires: gtk3
+Requires: libgdk_pixbuf2.0_0
+Requires: libgtk+3_0
 Requires: libnotify
-Requires: libXcomposite
-Requires: libXcursor
-Requires: libXdamage
-Requires: libXfixes
-Requires: libXi
-Requires: libXrandr
-Requires: libXrender
-Requires: libXtst
+Requires: libxcomposite1
+Requires: libxcursor1
+Requires: libxdamage1
+Requires: libxfixes3
+Requires: libxi6
+Requires: libxrandr2
+Requires: libxrender1
+Requires: libxtst6
 Requires: nspr
 Requires: nss
 Requires: pango
@@ -43,14 +43,15 @@ providing with strong end-to-end encryption.
 %prep
 %autosetup
 %build
-sed -i 's|Icon=peerio-client.png|Icon=peerio-client|' pkg/desktop
 make
 
 %install
 make install PREFIX=%{buildroot}/usr/share BINPREFIX=%{buildroot}/usr
+install -m 0755 -d %{buildroot}/usr/share/pixmaps
+install -c -m 0644 application/img/icon128.png %{buildroot}/usr/share/pixmaps/peerio-client.png
 
 %clean
-make clean PREFIX=%{buildroot}/usr/share BINPREFIX=%{buildroot}/usr
+sudo make clean
 
 %files
 %defattr(-,root,root)
@@ -65,6 +66,7 @@ make clean PREFIX=%{buildroot}/usr/share BINPREFIX=%{buildroot}/usr
 %{_bindir}/peerio-client
 %{_datadir}/applications/peerio-client.desktop
 %{_datadir}/icons/hicolor/*/apps/peerio-client.png
+%{_datadir}/pixmaps/peerio-client.png
 %{_mandir}/man1/peerio-client.1.gz
 
 %changelog
