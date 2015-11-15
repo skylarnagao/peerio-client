@@ -1,0 +1,20 @@
+apt-get update
+apt-get install docker.io
+exit 0
+export DIST=jessie
+export ARCH=amd64
+docker build -t peerio-$DIST-$ARCH - <$DIST-$ARCH.Dockerfile
+(
+    cat <<EOF
+FROM peerio-$DIST-$ARCH
+RUN apt-get update && apt-get install -y openssh-server
+RUN mkdir /var/run/sshd
+RUN echo 'root:build' | chpasswd
+RUN sed -i 's/^PermitRootLogin .*/PermitRootLogin yes/' /etc/ssh/sshd_config
+RUN sed 's|session\s*required\s*pam_loginuid.so|session optional pam_loginuid.so|g' -i /etc/pam.d/sshd
+EXPOSE 22
+CMD ["/usr/sbin/sshd", "-D"]
+EOF
+) | docker build -t peerio-$DIST-$ARCH-ssh -
+docker run -d -P --name peerio-$DIST-$ARCH-ssh peerio-$DIST-$ARCH-ssh
+printf "running on %s\n" $(docker port peerio-$DIST-$ARCH-ssh 22)
