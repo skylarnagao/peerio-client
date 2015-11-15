@@ -6,5 +6,5 @@ yum install alsa-lib glibc cairo dbus-libs fontconfig GConf2 gdk-pixbuf2 gtk3 li
 #cd rpmbuild
 #wget https://dl.peerio.com/sources/rh-peerio-client-1.1.5.tar.gz -O SOURCES/rh-peerio-client-1.1.5.tar.gz
 #wget https://dl.peerio.com/sources/00-build.patch -O SOURCES/00-build.patch
-#wget https://dl.peerio.com/centos/peerio-client.spec -O SPECS/peerio-client.spec
+#wget https://dl.peerio.com/centos7/peerio-client.spec -O SPECS/peerio-client.spec
 #rpmbuild -ba SPECS/peerio-client.spec
