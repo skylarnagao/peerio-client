@@ -69,12 +69,25 @@ Peerio.UI.controller('accountSettings', function ($scope) {
                     return false
                 }
 
+                //swal({
+                //    title: '',//document.l10n.getEntitySync('').value,
+                //    text: document.l10n.getEntitySync(address.type ==='email'? 'signupAccountConfirmationEmail':'signupAccountConfirmationPhone').value,
+                //    type: 'info',
+                //    confirmButtonText: document.l10n.getEntitySync('OK').value
+                //});
                 swal({
-                    title: '',//document.l10n.getEntitySync('').value,
+                    title: '',
                     text: document.l10n.getEntitySync(address.type ==='email'? 'signupAccountConfirmationEmail':'signupAccountConfirmationPhone').value,
-                    type: 'info',
-                    confirmButtonText: document.l10n.getEntitySync('OK').value
+                    type: "input",
+                    showCancelButton: true,
+                    closeOnConfirm: false,
+                    animation: "slide-from-top",
+                    inputPlaceholder: document.l10n.getEntitySync('confirmationCode').value
+                }, function (code) {
+                    if (code === false) return false;
+                    actualConfirm(address.value, code);
                 });
+
 
                 Peerio.network.getSettings(function (data) {
                     Peerio.user.addresses = data.addresses
@@ -88,9 +101,14 @@ Peerio.UI.controller('accountSettings', function ($scope) {
         if (event.target.value.length < 8) {
             return false
         }
+
+        return actualConfirm(thisAddress, event.target.value);
+    }
+
+    function actualConfirm(address, code){
         Peerio.network.confirmAddress(
-            thisAddress,
-            event.target.value,
+            address,
+            code,
             function (data) {
                 if (({}).hasOwnProperty.call(data, 'error')) {
                     swal({
@@ -114,6 +132,8 @@ Peerio.UI.controller('accountSettings', function ($scope) {
             }
         )
     }
+
+
     $scope.accountSettings.setPrimaryAddress = function (event) {
         var thisAddress = $(event.target)
             .parent().find('input').first().val()
