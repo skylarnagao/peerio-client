@@ -427,6 +427,9 @@ Peerio.message = {};
 						console.log('Failed to decrypt message: ', message);
 						delete data.messages[keys[count-1]];
 						decryptNextMessage(count);
+						if (count === keys.length) {
+							callback(data)
+						}
 						return;
 					}
 
