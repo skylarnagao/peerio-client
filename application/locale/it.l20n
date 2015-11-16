@@ -322,4 +322,4 @@
     <passphraseConfirmFailed "La tua passphrase è stata digitata male. Per favore salva la tua passphrase in un posto sicuro prima di continuare.">
     <acknowledgedMessage "Messaggio Approvato">
     <addAddressSuggestion "Update contact information?">
-    <addAddressSuggestionText "Adding alternative contact information allows for: <br><ul><li><strong>Discovery</strong>: Make it easier for your contacts to find you </li><li><strong>Notifications</strong>: New message and contact notifications </li><li><strong>Support</strong>: Extended support services from our Help Center</li></ul><br>Would you like to update your addresses?">
+    <addAddressSuggestionText "Aggiungere informazione di contatto alternativa permette:\nRitrovamento: Rendi facile ai Suoi contatti di ritrovarle\nNotifiche: Nuove notifiche di messaggi e di contatto\nAssistenza: Ancora più servizi da parte del nostro Centro Assistenza\nVuole Lei aggiornare i Suoi indirizzi e-mail?">
