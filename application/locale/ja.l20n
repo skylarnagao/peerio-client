@@ -322,4 +322,4 @@
     <passphraseConfirmFailed "パスフレーズは間違って入力されました。続ける前に、安全な場所にパスフレーズを保管してください。">
     <acknowledgedMessage "確認済みのメッセージ">
     <addAddressSuggestion "連絡先の情報をアップデートしますか？">
-    <addAddressSuggestionText "連絡先の代替情報を追加すると、このようなことが可能になります: <br><ul><li><strong>発見</strong>: 連絡先があなたを見つけやすくなります </li><li><strong>通知</strong>: 新しいメッセージと連絡先の通知 </li><li><strong>サポート</strong>: ヘルプセンターからより多くのサポートサービス</li></ul><br>連絡先をアップデートしますか？">
+    <addAddressSuggestionText "連絡先の代替情報を追加すると、このようなことが可能になります<br><ul><li><strong>発見</strong>: 連絡先があなたを見つけやすくなります</li><li><strong>通知</strong>: 新しいメッセージと連絡先が通知されます</li><li><strong>サポート</strong>: ヘルプセンターからより多くのサポートサービスが受けられます</li></ul><br>連絡先をアップデートしますか？">
