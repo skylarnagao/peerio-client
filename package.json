@@ -2,7 +2,7 @@
   "name": "peerio-client",
   "author": "Technologies Peerio Inc.",
   "description": "Secure message and file sharing for everyone. Our worldwide cloud storage lets you work anywhere, while end-to-end encryption keeps your data safe everywhere.",
-  "version": "1.1.5",
+  "version": "1.2.0",
   "keywords": [
     "peerio",
     "encrypted messages",

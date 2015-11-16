@@ -321,5 +321,5 @@
     <typePassphraseToConfirm "Pour accepter cette phrase de passe, veuillez la saisir ci-dessous">
     <passphraseConfirmFailed "Votre phrase de passe n'a pas été saisie correctement. Veuillez stocker votre phrase de passe dans un endroit sécurisé avant de poursuivre.">
     <acknowledgedMessage "Message approuvé">
-    <addAddressSuggestion "Update contact information?">
-    <addAddressSuggestionText "Adding alternative contact information allows for: <br><ul><li><strong>Discovery</strong>: Make it easier for your contacts to find you </li><li><strong>Notifications</strong>: New message and contact notifications </li><li><strong>Support</strong>: Extended support services from our Help Center</li></ul><br>Would you like to update your addresses?">
+    <addAddressSuggestion "Mettre à jour les coordonnées ?">
+    <addAddressSuggestionText "Ajouter des coordonnées permet de :<br><ul><li><strong>Recherche</strong> : vos contacts vous retrouveront plus facilement</li><li><strong>Notifications</strong> : notifications de nouveaux messages/contacts </li><li><strong>Assistance technique</strong> : notre équipe d'assistance aura plus d'options pour vous aider.</li></ul><br>Voulez-vous mettre à jour vos coordonnées ?">

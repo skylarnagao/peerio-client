@@ -321,5 +321,5 @@
     <typePassphraseToConfirm "Пожалуйста введите эту кодовую фразу и подтвердите для продолжения">
     <passphraseConfirmFailed "Кодовая фраза введена неверно, пожалуйста, сохраните её в безопасном месте прежде чем продолжить.">
     <acknowledgedMessage "Сообщение принято">
-    <addAddressSuggestion "Update contact information?">
-    <addAddressSuggestionText "Adding alternative contact information allows for: <br><ul><li><strong>Discovery</strong>: Make it easier for your contacts to find you </li><li><strong>Notifications</strong>: New message and contact notifications </li><li><strong>Support</strong>: Extended support services from our Help Center</li></ul><br>Would you like to update your addresses?">
+    <addAddressSuggestion "Обновить информацию о контакте?">
+    <addAddressSuggestionText "Добавление резервной контактной информации позволяет обеспечить: <br><ul><li><strong>Поиск</strong>: Ваши контакты смогут проще вас искать </li><li><strong>Уведомления</strong>: Новые уведомления о сообщениях и контактах </li><li><strong>Поддержку</strong>: Больше различных сервисов поддержки от нашего Центра Помощи</li></ul><br>Вы хотите обновить свою контактную информацию?">

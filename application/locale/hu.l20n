@@ -321,5 +321,5 @@
     <typePassphraseToConfirm "Ennek a jelmondatnak az elfogadásához kérlek add meg alul">
     <passphraseConfirmFailed "A jelmondatod tévesen lett megadva. Kérlek tárold el a jelmondatod valahol biztonságban, mielőtt folytatod.">
     <acknowledgedMessage "Nyugtázott üzenet">
-    <addAddressSuggestion "Update contact information?">
-    <addAddressSuggestionText "Adding alternative contact information allows for: <br><ul><li><strong>Discovery</strong>: Make it easier for your contacts to find you </li><li><strong>Notifications</strong>: New message and contact notifications </li><li><strong>Support</strong>: Extended support services from our Help Center</li></ul><br>Would you like to update your addresses?">
+    <addAddressSuggestion "Kapcsolat információ frissítése?">
+    <addAddressSuggestionText "Alternatív kapcsolat információ hozzáadása engedélyezve van erre: <br><ul><li><strong>Felderítés</strong>: Egyszerűbbé teszi a kapcsolataidnak, hogy megtaláljanak </li><li><strong>Értesítések</strong>: Új üzenet és kapcsolat értesítések </li><li><strong>Támogatás</strong>: Kiterjesztett támogatási szolgáltatások a Támogatási Központunktól</li></ul><br>Szeretnéd frissíteni a címeid?">

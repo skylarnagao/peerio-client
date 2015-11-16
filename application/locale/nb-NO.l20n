@@ -322,4 +322,4 @@
     <passphraseConfirmFailed "Din passordsekvens ble skrevet inn feil. Lagre din passordsekvens på en sikker måte før du fortsetter.">
     <acknowledgedMessage "Bekreftelsesmelding">
     <addAddressSuggestion "Update contact information?">
-    <addAddressSuggestionText "Adding alternative contact information allows for: <br><ul><li><strong>Discovery</strong>: Make it easier for your contacts to find you </li><li><strong>Notifications</strong>: New message and contact notifications </li><li><strong>Support</strong>: Extended support services from our Help Center</li></ul><br>Would you like to update your addresses?">
+    <addAddressSuggestionText "Adding alternative contact information allows for: <br><ul><li><strong>Discovery</strong>: Make it easier for your contacts to find you </li><li><strong>Notifications</strong>: New message and contact notifications </li><li><strong>Support</strong>: More support services from our Help Center</li></ul><br>Would you like to update your addresses?">

@@ -1,0 +1,325 @@
+
+    <title "Peerio">
+    <signupHeader "Zprávy a soubory. Snadno a bezpečně.">
+    <signupIntro "Peerio představuje snadný a bezpečný způsob posílání zpráv, sdílení souborů a uchovávání dokumentů online. Vše je zašifrováno ještě před odesláním do cloudu, takže nikdo, kromě vás a lidí se kterými je sdílíte, nebude mít přístup k vašim datům.<br /><br /><strong>Peerio je nyní v Betě. <a href='https://peerio.com/pages/beta.html' target='_blank'>Zjistěte, co to znamená.</a>.">
+    <username "Uživatelské jméno">
+    <passphrase "Přístupová fráze">
+    <passphraseOrPIN "Přístupová fráze nebo Přístupový kód">
+    <login "Přihlásit se">
+    <or "nebo">
+    <loginFailed "Přihlášení neúspěšné">
+    <loginFailedText "Pokud jste použili přístupový kód zařízení, zkuste prosím místo něho použít přístupovou frázi vašeho účtu.">
+    <ok "OK">
+    <submit "Předložit">
+    <signup "Registrovat se">
+    <signupProgress "postup registrace">
+    <basicInformation "Základní údaje">
+    <desiredUsername "Požadované uživatelské jméno">
+    <usernameNotAvailable "uživatelské jméno je neplatné nebo nedostupné.">
+    <addressNotAvailable "adresa je neplatná nebo nedostupná.">
+    <firstName "Křestní jméno">
+    <lastName "Příjmení">
+    <emailOrPhone "E-mail nebo mobilní číslo">
+    <yourPassphrase "Vaše přístupová fráze">
+    <infoAlertPassphrase "Pro lepší zabezpečení používá Peerio <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'>náhodně generované přístupové fráze</a>. <br><br><strong>Tuto přístupovou frázi znáte pouze Vy!</strong> Pokud ji ztratíte, přijdete navždy o přístup ke svému účtu. Proto vám doporučujeme zapsat si vaši přístupovou frázi na papír nebo do bezpečného správce hesel.">
+    <signupPassphraseConfirm "Použít tuto přístupovou frázi?">
+    <signupPassphraseConfirmText "<ul><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206331095' target='_blank'>Jen vy znáte tuto přístupovou frázi.</a></li> <li>Pokud ji ztratíte, navždy přijdete o vaše data.</li><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206330895' target='_blank'>Zapište si proto tuto frázi na bezpečné místo!</a></li><br><strong>Zadejte prosím svou přístupovou frázi pro pokračování.</strong>">
+    <signupYourGeneratedPassphrase "Vaše vygenerovaná přístupová fráze:">
+    <signupPassphraseRefresh "Změnit přístupovou frázi">
+    <error "Chyba">
+    <errorText "Váš požadavek nemohl být splněn.">
+    <warning "Varování">
+    <confirmPassphrase "Potvrdit přístupovou frázi">
+    <showPassphrase "Ukázat přístupovou frázi">
+    <continue "Pokračovat">
+    <registerAccountError "Nebylo možné zaregistrovat účet">
+    <registerAccountErrorText "Omlouváme se. V tuto chvíli vás nemůžeme zaregistrovat. Restartujte prosím Peerio a zkuste to znovu za pár minut.">
+    <createMyAccount "Vytvořit účet">
+    <accountConfirmation "Potvrzení účtu">
+    <signupAccountConfirmationEmail "Na váš e-mail asociovaný s Peeriem byl odeslán potvrzovací kód. Vložte ho prosím níže. Nevidíte-li zprávu s kódem, zkontrolujte prosím také složku nevyžádané pošty.">
+    <signupAccountConfirmationPhone "Na vámi poskytnuté mobilní telefonní číslo byla odeslána SMS s potvrzovacím kódem. <strong>Ujistěte se prosím, že zadané číslo obsahuje telefonní předvolbu země a případně oblasti.</strong>">
+    <signupConfirmationCodeTimeText "Sekundy do vypršení platnosti kódu:">
+    <signupConfirmationCodeExpired "Platnost potvrzovacího kódu vypršela">
+    <signupConfirmationCodeExpiredText "Platnost vašeho potvrzovacího kódu vypršela. Restartujte prosím Peerio a zkuste se zaregistrovat znovu.">
+    <code "Kód">
+    <confirmationCode "Potvrzovací kód">
+    <confirmMyAccount "Potvrdit můj účet">
+    <invalidConfirmationCode "překontrolujte prosím tento kód.">
+    <finishingUp "Dokončování">
+    <peerioPIN "Přístupový kód Peeria">
+    <setAPeerioPIN "Přejete si pro toto zařízení nastavit přístupový kód?">
+    <signupPeerioPIN "Abyste nemuseli svou přístupovou frázi zadávat při každém přihlášení, můžete si nastavit kratší přístupový kód fungující pouze na tomto zařízení. Jelikož ručně zvolené přístupové kódy bývají méně bezpečné než přístupové fráze Peeria, měli byste <strong>nastavovat přístupové kódy pouze na zařízeních, která pravidelně používáte a důvěřujete jim</strong>.">
+    <PINNotStrong "bezpečnost přístupového kódu: nízká">
+    <PINStrong "bezpečnost přístupového kódu: ok!">
+    <setPIN "Nastavit přístupový kód">
+    <skip "přeskočit">
+    <accountRateLimited "Vyčkejte prosím několik minut">
+    <accountRateLimitedText "Tento účet je dočasně nedostupný, protože odeslal příliš mnoho požadavků na server. Počkejte prosím několik minut a zkuste to znovu.">
+    <accountBlacklisted "Účet nedostupný">
+    <accountBlacklistedText "Tento účet je dočasně pozastaven. Pro opětovné získání přístupu prosím kontaktujte support@peerio.com.">
+    <searchMessagesFilesAndContacts "Hledat zprávy, soubory a kontakty">
+    <messages "Zprávy">
+    <files "Soubory">
+    <contacts "Kontakty">
+    <connectionStatus "Stav připojení">
+    <welcomeToAccount "Vítejte ve svém účtu Peerio.">
+    <welcomeToAccountText "Peerio vám umožňuje bezpečně posílat zprávy a stejně tak i uchovávat a spravovat vaše soubory a dokumenty. Podívejte se, jak začít.">
+    <welcomeToAccountList1 "<strong>Přidejte kontakty</strong> vybráním záložky Kontakty a kliknutím na tlačítko Přidat kontakt vlevo.">
+    <welcomeToAccountList2 "<strong>Začněte konverzaci</strong> kliknutím na tlačítko Psát zprávu na levé straně. Do konverzací můžete zahrnout kolik kontaktů chcete — a vše bude zabezpečeno koncovým šifrováním.">
+    <welcomeToAccountList3 "Pro <strong>uložení vašich souborů</strong> na Peeriu vyberte záložku Soubory a klikněte na tlačítko Nahrát soubory po levé straně. Vaše soubory budou zašifrovány a budete k nim moci přistupovat ze svých ostatních zařízení nebo je sdílet se svými kontakty.">
+    <welcomeToAccountListSearch "<strong>Vyhledávací pole</strong> nahoře vám usnadňuje procházení vašimi soubory, zprávami i kontakty, vším najednou. Nebojte se ho zkusit!">
+    <newMessage "Psát zprávu">
+    <inbox "Doručené">
+    <uploadFile "Nahrát soubory">
+    <filesSidebarUploadFileSubtitle "nebo přetáhněte pro nahrání">
+    <addContact "Přidat kontakt">
+    <allMessages "Všechny zprávy">
+    <drafts "Koncepty">
+    <trash "Koš">
+    <account "Účet">
+    <preferences "Předvolby">
+    <help "Nápověda">
+    <logout "Odhlásit se">
+    <logoutConfirm "Odhlásit se z Peeria?">
+    <logoutConfirmText "Před odhlášením se prosím ujistěte, že máte uložena všechna data.">
+    <show "Zobrazit">
+    <reply "Odpovědět">
+    <close "Zavřít">
+    <all "Vše">
+    <forward "Přeposlat">
+    <from "Od">
+    <to "Pro">
+    <recipients "příjemci">
+    <participantHasLeft "Tento účastník opustil konverzaci.">
+    <read "přečteno">
+    <readBy "Přečetli:">
+    <expandConversation "Rozšířit konverzaci">
+    <encrypted "zašifrováno">
+    <addToFolder "Přidat do složky">
+    <acknowledge "Potvrdit">
+    <remove "Odstranit">
+    <download "Stáhnout">
+    <destroy "Zničit">
+    <newMessages "Nové zprávy">
+    <noNewMessages "Žádné nové zprávy">
+    <participantsWhoHaveLeft "Dřívější účastníci:">
+    <newMessageErrorText "Vaše zpráva nemohla být odeslána.">
+    <conversationHasNoFiles "V této konverzaci ještě žádné soubory sdíleny nebyly.">
+    <filesWillAppearHere "Soubory budou pro rychlý přístup vypsány zde.">
+    <messageCouldNotBeSentTo "Vaše zpráva nemohla být odeslána následujícím kontaktům:">
+    <messageDecryptedError "Jeden z vašich kontaktů se vám pokusil poslat zprávu, ale váš účet ji nemohl řádně přijmout.">
+    <removeConversationsQuestion "Odstranit konverzace?">
+    <removeConversationsText "Varování: Již nebudete přijímat žádné zprávy ani soubory sdílené v této konverzaci.">
+    <newMessageRecipientsError "Zpráva nemá žádné příjemce.">
+    <newMessageRecipientsErrorText "Pro odeslání zprávy prosím uveďte alespoň jednoho příjemce.">
+    <typeYourReply "Napište svou odpověď...">
+    <noParticipantsLeft "V této konverzaci již nejsou žádní další účastníci.">
+    <allDocuments "Všechny soubory">
+    <photos "Obrázky">
+    <videos "Videa">
+    <pdfDocuments "PDF dokumenty">
+    <wordDocuments "Textové dokumenty">
+    <spreadsheets "Tabulky">
+    <presentations "Prezentace">
+    <other "Jiné">
+    <storage "Úložiště">
+    <yourUsage "využito:">
+    <quotaError "Úložiště je plné">
+    <quotaErrorText "Nemáte ve svém Peerio účtu dostatek místa. Zkuste nejdříve odstranit jiné soubory nebo přejděte na vyšší typ účtu pro rozšíření vašeho úložiště.">
+    <sizeError "Soubor je příliš velký.">
+    <sizeErrorText "Peerio v současnosti nepodporuje soubory větší než 400MB.">
+    <removeFilesQuestion "Odstranit soubory?">
+    <removeFilesText "Soubory budou trvale smazány z vašeho účtu, ale budou stále viditelné uživatelům, se kterými jste je sdíleli.">
+    <destroyFilesQuestion "Zničit soubory?">
+    <destroyFilesText "Soubory budou odstraněny z vašeho účtu i z účtů všech, se kterými jste je sdíleli.">
+    <destroyFilesOwnerError "Nelze zničit soubory, které nevlastníte">
+    <destroyFilesOwnerErrorText "Zničením souborů dojde k jejich odebrání i ze všech účtů, se kterými byly sdíleny. Toto může provést pouze vlastník těchto souborů. Zkuste prosím místo toho soubor smazat.">
+    <fileUploadError "Nahrání souboru neúspěšné.">
+    <fileUploadErrorText "Zkontrolujte prosím své připojení a zkuste znovu.">
+    <dragAndDropUploadTitle "Upusťte pro nahrání do Peeria.">
+    <dragAndDropUploadText "Vaše soubory budou zašifrovány a nahrány do vašeho osobního cloudu.">
+    <allFiles "Všechny soubory">
+    <myFiles "Moje soubory">
+    <receivedFiles "Přijaté soubory">
+    <fileName "Název souboru">
+    <date "Datum">
+    <size "Velikost">
+    <owner "Vlastník">
+    <actions "Akce">
+    <search "Hledat">
+    <attachSelectedFiles "Připojit vybrané soubory">
+    <uploadNewFile "Nahrát nové soubory">
+    <downloading "Stahování">
+    <downloadFileError "Nebylo možné stáhnout soubor">
+    <downloadFileErrorText "Jejda! Vyskytla se chyba, zkuste to prosím později.">
+    <save "uložit">
+    <allContacts "Všechny kontakty">
+    <confirmedContacts "Potvrzené kontakty">
+    <pendingContacts "Nevyřízené kontakty">
+    <importContacts "Importovat kontakty">
+    <sortBy "Řadit dle">
+    <sendMessage "Poslat zprávu">
+    <latestMessages "Nejnovější zprávy">
+    <latestFiles "Nejnovější soubory">
+    <viewAllMessages "Zobrazit všechny zprávy">
+    <viewAllFiles "Zobrazit všechny soubory">
+    <avatarTooltip "Uživatelské avatary vám umožňují ověřit kryptografickou identitu vašich kontaktů. Jestliže se avatar kontaktu změní, kontaktujte ho prosím pro opětovné ověření před tím, než s ním budete znovu komunikovat před Peerio.">
+    <pending "Nevyřízené">
+    <you "Vy">
+    <accountDeleted "Účet smazán">
+    <block "Zablokovat">
+    <noContacts "Nevybrán žádný kontakt">
+    <noContactsText "Vyberte kontakt nebo začněte přidáním přítele.">
+    <addMyFirstContact "Přidat nový kontakt">
+    <acceptContactRequest "Přijmout žádost o kontakt?">
+    <acceptContactRequestText "Zvolte, jestli tomuto uživateli umožnit, aby vám bezpečně přes Peerio posílal zprávy a sdílel s vámi soubory.">
+    <accept "Přijmout">
+    <decline "Odmítnout">
+    <addContactInfo "Přidávání přátel jako kontaktů">
+    <addContactInfoText "Posílání zpráv přátelům a sdílení souborů s nimi začíná jejich přidáním mezi kontakty. Nejsou-li uživateli Peeria, bude na jejich adresu odeslána pozvánka. Uživatele můžete přidat zadáním jejich <strong>uživatelského jména</strong>, <strong>e-mailové adresy</strong> nebo <strong>čísla mobilního telefonu</strong>.">
+    <addContactInfoAvatarText "Každý uživatel Peeria má speciální avatar, který ho identifikuje. Můžete ho chápat jako digitální otisk prstu. Jestliže se uživatelův avatar změní, mohl si tento změnit svou přístupovou frázi nebo byl jeho účet kompromitován.">
+    <usernameEmailOrPhone "Uživatelské jméno, e-mail či mobilní číslo">
+    <addContactRequestSent "Žádost o kontakt odeslána">
+    <addContactRequestSentText "Na zadané uživatelské jméno byla odeslána žádost o kontakt.">
+    <addContactInviteSent "Pozvánka odeslána">
+    <addContactInviteSentText "Vašemu kontaktu byla zaslána pozvánka.">
+    <addContactErrorText "Kontakt nemohl být přidán. Překontrolujte prosím údaje a zkuste to znovu.">
+    <removeContact "Odstranit kontakt">
+    <removeContactQuestion "Odstranit kontakt?">
+    <removeContactText "Již spolu nebudete moci na Peeriu bezpečně komunikovat. Jste si jistí?">
+    <cancel "Zrušit">
+    <removeContactSuccess "Váš kontakt byl odstraněn.">
+    <removeContactError "Nebylo možné odstranit kontakt. Zkuste to prosím znovu.">
+    <newContact "Nový kontakt!">
+    <newContactText "Nyní jste kontaktem uživatele">
+    <miniLockID "miniLock ID:">
+    <twoFactorAuth "Dvoufázové ověřování">
+    <authenticate "Ověřit">
+    <twoFactorAuthSetupHeading "Nastavte své mobilní zařízení">
+    <twoFactorAuthSetupText "K naskenování níže umístěného QR kódu můžete použít vaši oblíbenou ověřovací aplikaci. Peerio doporučuje Authy nebo FreeOTP. <a href='https://peerio.zendesk.com/hc/en-us/articles/204018305' target='_blank'>Podívejte se, jak dvoufázové ověřování s Peeriem funguje</a>.">
+    <twoFactorAuthInfoHeading "Pomozte nám chránit váš účet">
+    <twoFactorAuthInfoText "Dvoufázové ověřování vám pomáhá v zabezpečení vašeho účtu vyžadováním dvou odlišných druhů přihlašovacích údajů. Pro pokračování prosím zadejte šestimístný kód z vašeho mobilního zařízení.">
+    <twoFactorAuthConfirm "Po naskenování QR kódu vložte šestimístný kód vygenerovaný vaším mobilním zařízením, abyste nastavení potvrdili.">
+    <twoFactorAuthIncorrect "Nesprávný kód">
+    <twoFactorAuthIncorrectText "Zadaný kód je nesprávný. Zkuste to prosím znovu.">
+    <twoFactorAuthConfirmedText "Od teď budete při každém prvním denním přihlášení nebo při přihlášení z nového místa požádáni o zadání kódu vygenerovaného vaším mobilním zařízením. Dejte si prosím pozor, abyste toto zařízení neztratili.">
+    <twoFactorAuthCannotDisable "Dvoufázové ověřování se nepodařilo vypnout.">
+    <twoFactorAuthDisabled "Dvoufázové ověřování vypnuto">
+    <twoFactorAuthDisabledText "Nyní se můžete přihlašovat za použití pouze vašeho hesla. Pro zvýšení bezpečnosti prosím v budoucnu zvažte opětovné zapnutí dvoufázového ověřování.">
+    <subject "Předmět">
+    <send "Odeslat">
+    <saveDraft "Uložit koncept">
+    <attachFile "Přiložit soubor">
+    <autoDestructSettings "Nastavení autodestrukce...">
+    <accountSettings "Nastavení účtu">
+    <name "Jméno">
+    <primary "hlavní">
+    <secondary "vedlejší">
+    <addresses "Adresy">
+    <setPrimaryAddress "Nastavit jako hlavní adresu">
+    <removeAddress "Odstranit adresu">
+    <addNewAddress "Přidat novou adresu">
+    <couldNotConfirmAddress "Překontrolujte prosím vložený potvrzovací kód.">
+    <couldNotAddAddress "Tato adresa nemohla být přidána. Překontrolujte ji prosím.">
+    <couldNotUpdateName "Vaše jméno nemohlo být aktualizováno. Zkuste to prosím znovu.">
+    <confirmed "Potvrzeno!">
+    <confirmedText "Vaše předvolby byly aktualizovány.">
+    <confirmedLanguageText "Váš nový jazyk bude dostupný, jakmile restartujete Peerio.">
+    <confirmedAddressText "Děkujeme vám, že jste si našli čas k potvrzení vaší nové adresy Peerio.">
+    <confirmedNameText "Vaše jméno bylo aktualizováno.">
+    <email "E-mail">
+    <phoneNumber "Číslo mobilního telefonu">
+    <deleteAccount "Smazat účet">
+    <deleteAccountText "Smazáním vašeho účtu Peerio budou navždy zničena všechna vaše data v Peeriu. Také již nebudete moci získat zpět toto uživatelské jméno.">
+    <deleteAccountConfirm "Potvrdit smazání účtu">
+    <deleteAccountConfirmText "Jste si jistí? Ztratíte všechna vaše data a již nikdy nebudete moci získat zpět toto uživatelské jméno.">
+    <changePassphrase "Změnit přístupovou frázi">
+    <changePassphraseText "Bude-li vaše přístupová fráze kompromitována, umožní vám ji Peerio zrušit a nastavit novou. Tato funkce bude k dispozici již brzy.">
+    <newPassphrase "Nová přístupová fráze">
+    <retypeNewPassphrase "Zopakujte novou přístupovou frázi">
+    <enableTwoFactorAuth "Povolit dvoufázové ověřování">
+    <disableTwoFactorAuth "Zakázat dvoufázové ověřování">
+    <accountSettingsTwoFactorAuthText "Peerio se může spárovat s vaším mobilním zařízením pro navýšení bezpečnosti účtu.">
+    <twoFactorAuthLearnMore "zjistěte více o dvoufázovém ověřování">
+    <language "Jazyk">
+    <notifications "Oznámení">
+    <notificationOptions "Nastavení oznámení">
+    <receiveMessageNotifications "Posílat <strong>na mou hlavní adresu</strong> oznámení o zprávách.">
+    <useSounds "<strong>Přehrát zvuk</strong>, když obdržím nové oznámení.">
+    <sendReadReceipts "Oznamovat mým kontaktům, že jsem si přečetl jejich zprávy.">
+    <readReceipts "Oznámení o přečtení">
+    <peerioPINForThisDevice "Přístupový kód zařízení">
+    <peerioPINUpdated "Přístupový kód zařízení aktualizován">
+    <peerioPINUpdatedText "Váš přístupový kód pro toto zařízení byl aktualizován.">
+    <removeMyPeerioPIN "Odstranit přístupový kód zařízení">
+    <peerioPINRemoved "Přístupový kód zařízení odebrán">
+    <peerioPINRemovedText "Přístupový kód přiřazený tomuto zařízení byl odebrán.">
+    <ctrlEnter "Odeslat odpověď">
+    <pressEnterToSend "Stiskněte Enter pro odeslání">
+    <updateAvailable "Dostupná aktualizace!">
+    <updateAvailableText "Pro Peerio je dostupná nová aktualizace. Aktualizace přinášejí skvělé nové funkce, stejně jako vylepšení spolehlivosti. Přejete si aktualizovat nyní?">
+    <updateDownload "Stáhnout aktualizaci">
+    <later "Později">
+    <updateAvailableCritical "Kritická aktualizace dostupná">
+    <updateAvailableCriticalText "Je dostupná kritická aktualizace Peeria. Z bezpečnostních důvodů nemůžete pokračovat, dokud poslední aktualizaci nenainstalujete.">
+    <TOFUNotMatchError "Identity kontaktů se změnily!">
+    <TOFUNotMatchErrorText "Pozor! Některé vaše kontakty změnily své identity. Než s nimi budete komunikovat, přesvědčte se prosím o autenticitě ikon avatarů v jejich profilu. Jejich uživatelská jména jsou:">
+    <importContactsGoogle "Importujte do Peeria své Kontakty Google">
+    <importContactsGoogleText "Pro přidání vašich kontaktů Google do Peeria se jednoduše přihlašte ke svému účtu Gmail a řiďte se těmito pokyny:">
+    <importContactsGoogleStep1 "Klikněte na <strong>Gmail</strong> v levém horním rohu stránky Gmailu a vyberte <strong>Kontakty</strong>.">
+    <importContactsGoogleStep2 "Z rozbalovací nabídky <strong>Další</strong> vyberte <strong>Exportovat</strong>...">
+    <importContactsGoogleStep3 "Vyberte, chcete-li exportovat všechny kontakty, nebo pouze jednu skupinu.">
+    <importContactsGoogleStep4 "Pro exportování vašich kontaktů vyberte formát <strong>Google CSV</strong>.">
+    <importContactsGoogleStep5 "Až dokončíte export kontaktů do souboru CSV, klikněte na tlačítko níže pro jeho nahrání do Peeria.">
+    <uploadCSV "Nahrát soubor CSV">
+    <importContactsConfirm "Peerio může odeslat pozvánky vaším jménem">
+    <importContactsConfirmText "Budete-li pokračovat, může Peerio kontaktům, které na  Peeriu ještě nejsou, rozeslat vaším jménem pozvánky. Jste si jistí, že chcete těmto kontaktům pozvánky zaslat?">
+    <importContactsError "Kontakty nebylo možné pozvat">
+    <importContactsErrorText "Vašim kontaktům nebylo možné odeslat pozvánky. Ověřte prosím zadané údaje a zkuste to znovu.">
+    <importContactsSuccess "Pozvánky odeslány kontaktům!">
+    <importContactsSuccessText "Vaše kontakty budou pozvány vaším jménem.">
+    <importContactsSelectToInvite "Vyberte kontakty, jež chcete přidat/pozvat">
+    <importContactsSelectToInviteText "Kontakty, které na Peeriu již jsou, budou přidány k vašemu účtu. Ostatním bude vaším jménem zaslána pozvánka.">
+    <importContactsSelectAll "Vybrat všechny kontakty">
+    <importSelectedContacts "Importovat vybrané kontakty">
+    <newFolderDialogTitle "Přidat novou složku">
+    <newFolderDialogText "Jak by se tato složka měla jmenovat?">
+    <folderInputEmptyError "Zadejte prosím jméno složky.">
+    <folderInputPlaceholder "zadejte jméno složky">
+    <creatingFolderError "Jejda! Něco se pokazilo a vaše složka vytvořena nebyla. Zkuste to prosím znovu.">
+    <success "Úspěch!">
+    <folderCreated "Vaše složka byla vytvořena!">
+    <renameFolderDialogTitle "Přejmenovat složku">
+    <renameFolderDialogText "Jaké by mělo být nové jméno této složky?">
+    <renamingFolderError "Ouha! Něco se nepovedlo a vaše složka přejmenována nebyla. Zkuste to prosím znovu.">
+    <folderRenamed "Tato složka byla přejmenována.">
+    <removeFolderDialogTitle "Odstranit složku">
+    <removeFolderDialogText1 "Jste si jisti, že chcete odstranit složku">
+    <removeFolderDialogText2 "Konverzace v této složce budou přesunuty mezi \"Doručené\".">
+    <removingFolderError "Ouha! Něco se nepovedlo a vaše složka odstraněna nebyla. Zkuste to prosím znovu.">
+    <folderRemoved "Tato složka byla odstraněna.">
+    <conversationMoveError "Přesun konverzace do složky se nezdařil.">
+    <moveConversationsDialogTitle "Přesunout konverzace do složky">
+    <moveConversationsDialogText "konverzace vybrány. Do které složky přesunout?:">
+    <conversationsNotSelectedError "Vyberte prosím alespoň jednu konverzaci k přesunu.">
+    <movingConversationsError "Pardon, přesun konverzací do složky se nezdařil.">
+    <conversationsMoved "konverzace přesunuty.">
+    <addNewFolder "Přidat novou složku">
+    <moveFilesDialogTitle "Přesunout soubory do složky">
+    <moveFilesDialogText "soubory vybrány. Do které složky přesunout?">
+    <filesNotSelectedError "Nejdříve prosím vyberte soubory">
+    <movingFilesError "Promiňte, přesun souborů do složky se nezdařil">
+    <filesMoved "soubory byly přesunuty.">
+    <fileMoveError "Přesun souboru do složky se nezdařil.">
+    <removeFileFolderDialogText2 "Soubory v této složce budou přesunuty mezi \"Všechny soubory\".">
+    <folder "Složka">
+    <folderExistsError "Složka tohoto jména již existuje">
+    <moveToFolder "Přesunout do složky">
+    <length "délka">
+    <words "slova">
+    <unsorted "Netříděné">
+    <typePassphraseToConfirm "Pro přijetí této přístupové fráze ji prosím zadejte níže">
+    <passphraseConfirmFailed "Vaše přístupová fráze byla zadána nesprávně. Přístupovou frázi si prosím, než budete pokračovat, zapište a uchovejte na bezpečném místě.">
+    <acknowledgedMessage "Zpráva potvrzena">
+    <addAddressSuggestion "Aktualizovat kontaktní informace?">
+    <addAddressSuggestionText "Přidání alternativních kontaktních informací umožňuje: <br><ul><li><strong>\nObjev</strong>: Pomožte svým kontaktům Vás najít </li><li><strong>Oznámení</strong>:Nové zprávy a kontaktní oznámení </li><li><strong>Podpora</strong>:Více podpůrných služeb z našeho pomocného centra</li></ul><br>Přejete si aktualizovat své adresy?">
