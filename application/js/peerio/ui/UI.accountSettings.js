@@ -84,7 +84,7 @@ Peerio.UI.controller('accountSettings', function ($scope) {
                     animation: "slide-from-top",
                     inputPlaceholder: document.l10n.getEntitySync('confirmationCode').value
                 }, function (code) {
-                    if (inputValue === false) return false;
+                    if (code === false) return false;
                     actualConfirm(address.value, code);
                 });
 
