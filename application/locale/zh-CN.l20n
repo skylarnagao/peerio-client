@@ -321,3 +321,5 @@
     <typePassphraseToConfirm "请输入如上所示的此密码短语以接受并继续">
     <passphraseConfirmFailed "您的密码短语输入错误。请在某处安全的地方存储您的密码短语，然后再继续。">
     <acknowledgedMessage "已确认此项">
+    <addAddressSuggestion "Update contact information?">
+    <addAddressSuggestionText "Adding alternative contact information allows for: <br><ul><li><strong>Discovery</strong>: Make it easier for your contacts to find you </li><li><strong>Notifications</strong>: New message and contact notifications </li><li><strong>Support</strong>: Extended support services from our Help Center</li></ul><br>Would you like to update your addresses?">

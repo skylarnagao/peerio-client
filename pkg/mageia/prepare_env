@@ -1,0 +1,25 @@
+urpmi rpmdevtools
+urpmi make nodejs python-pip sudo fakeroot make wget
+urpmi alsa-lib glibc cairo libdbus1_3 fontconfig GConf2 libgdk_pixbuf2.0_0 libgtk+3_0 libnotify libxcomposite1 libxcursor1 libxdamage1 libxfixes3 libxi6 libxrandr2 libxrender1 libxtst6 nspr nss pango
+#rpmdev-setuptree
+#cd rpmbuild
+#wget https://dl.peerio.com/sources/rh-peerio-client-1.1.5.tar.gz -O SOURCES/rh-peerio-client-1.1.5.tar.gz
+#wget https://dl.peerio.com/sources/00-build.patch -O SOURCES/00-build.patch
+#wget https://dl.peerio.com/fedora23/peerio-client.spec -O SPECS/peerio-client.spec
+#rpmbuild -ba SPECS/peerio-client.spec
+
+#to distribute packages, create the following tree
+#i585
+#i585/core
+#i585/core/your.rpm
+#x86_64
+#x86_64/core
+#x86_64/core/your.rpm
+#SRPMS
+#SRPMS/core
+#SRPMS/core/your.rpm
+
+#then build corresponding metadata:
+#for arch in i585 x86_64 SRPMS
+#do genhdlist2 --xml-info --allow-empty-media $arch/core
+#done

@@ -426,6 +426,21 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
       if (/Sidebar/.test($element[0].className)) {
         return false
       }
+      if(window.firstLogin){
+        window.firstLogin = false;
+        swal({
+          title: document.l10n.getEntitySync('addAddressSuggestion').value,
+          text: document.l10n.getEntitySync('addAddressSuggestionText').value,
+          type: 'info',
+          showCancelButton: true,
+          cancelButtonText: document.l10n.getEntitySync('cancel').value,
+          //confirmButtonColor: '#e07a66',
+          confirmButtonText: document.l10n.getEntitySync('ok').value,
+          closeOnConfirm: true
+        }, function () {
+          Peerio.UI.openSettings();
+        });
+      }
       $scope.messagesSection.conversations = Peerio.user.conversations
       $scope.$apply(Peerio.UI.applyDynamicElements)
       $('input.mainTopSearchSubmit').trigger('click')

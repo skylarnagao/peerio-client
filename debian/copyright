@@ -1,0 +1,8 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: peerio-client
+Source: git://github.com/PeerioTechnologies/peerio-client.git
+
+Files: *
+Copyright: 2015 PeerioTechnologies
+License: GNU-GPLv3
+ see /usr/share/doc/peerio-client/LICENSE.md

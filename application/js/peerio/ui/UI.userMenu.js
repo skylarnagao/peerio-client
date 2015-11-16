@@ -26,7 +26,7 @@ Peerio.UI.controller('userMenu', function($scope) {
 		}
 		$scope.$apply()
 	}
-	$scope.userMenu.openAccountSettings = function() {
+	Peerio.UI.openSettings = $scope.userMenu.openAccountSettings = function() {
 		if ($('div.frontModalsWrapper').hasClass('visible')) {
 			return false
 		}

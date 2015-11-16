@@ -5,9 +5,6 @@ FROM ubuntu:vivid
 #ENV apt_proxy http://10.42.44.100:3142/
 #ENV http_proxy http://10.42.44.100:3128/
 #ENV https_proxy http://10.42.44.100:3128/
-# Transifex account configuration - mandatory, set yours!
-ENV TRANSIFEX_PASS XXXX
-ENV TRANSIFEX_USER your_transifex_username
 
 # Arch to output
 ENV ARCH 64
@@ -26,8 +23,6 @@ RUN apt-get update && apt-get install -y \
 RUN test -x $NODE_BIN_DIR/nodejs -a ! -x $NODE_BIN_DIR/node && ln -sf $NODE_BIN_DIR/nodejs $NODE_BIN_DIR/node || true
 RUN pip install transifex-client
 RUN npm install -g nw
-ADD https://raw.githubusercontent.com/PeerioTechnologies/peerio-client/master/deb/transifex.rc /root/.transifexrc
-RUN sed -i -e "s|/LOGIN/|$TRANSIFEX_USER|" -e "s|/PASS/|$TRANSIFEX_PASS|" /root/.transifexrc
 RUN git clone https://github.com/PeerioTechnologies/peerio-client /usr/src/peerio-client
 WORKDIR /usr/src/peerio-client
 RUN npm install
@@ -43,11 +38,11 @@ ADD https://raw.githubusercontent.com/PeerioTechnologies/peerio-client/master/ap
 ADD https://raw.githubusercontent.com/PeerioTechnologies/peerio-client/master/application/img/icon48.png usr/share/icons/hicolor/48x48/apps/peerio-client.png
 ADD https://raw.githubusercontent.com/PeerioTechnologies/peerio-client/master/application/img/icon64.png usr/share/icons/hicolor/64x64/apps/peerio-client.png
 ADD https://raw.githubusercontent.com/PeerioTechnologies/peerio-client/master/application/img/icon128.png usr/share/icons/hicolor/128x128/apps/peerio-client.png
-ADD https://raw.githubusercontent.com/PeerioTechnologies/peerio-client/master/deb/control DEBIAN/control
-ADD https://raw.githubusercontent.com/PeerioTechnologies/peerio-client/master/deb/copyright usr/share/doc/peerio-client/copyright
-ADD https://raw.githubusercontent.com/PeerioTechnologies/peerio-client/master/deb/peerio-client usr/bin/peerio-client
-ADD https://raw.githubusercontent.com/PeerioTechnologies/peerio-client/master/deb/desktop usr/share/applications/peerio-client.desktop
-ADD https://raw.githubusercontent.com/PeerioTechnologies/peerio-client/master/deb/man.1 usr/share/man/man1/peerio-client.1
+ADD https://raw.githubusercontent.com/PeerioTechnologies/peerio-client/master/pkg/control DEBIAN/control
+ADD https://raw.githubusercontent.com/PeerioTechnologies/peerio-client/master/pkg/copyright usr/share/doc/peerio-client/copyright
+ADD https://raw.githubusercontent.com/PeerioTechnologies/peerio-client/master/pkg/peerio-client usr/bin/peerio-client
+ADD https://raw.githubusercontent.com/PeerioTechnologies/peerio-client/master/pkg/desktop usr/share/applications/peerio-client.desktop
+ADD https://raw.githubusercontent.com/PeerioTechnologies/peerio-client/master/pkg/man.1 usr/share/man/man1/peerio-client.1
 RUN sed -i -e "s|/ARCH/|$PKG_ARCH|" -e "s|/VERSION/|$PKG_VERSION|" -e "s|/PKGREL/|$PKG_REL|" DEBIAN/control
 RUN cd usr/share/man/man1 && gzip -9 -f peerio-client.1
 RUN find . -type f -exec chmod 0644 {} \;

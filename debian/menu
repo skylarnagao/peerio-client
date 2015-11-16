@@ -1,0 +1,2 @@
+?package(peerio-client):needs="X11|text|vc|wm" section="Applications/Network"\
+  title="peerio-client" command="/usr/bin/peerio-client"

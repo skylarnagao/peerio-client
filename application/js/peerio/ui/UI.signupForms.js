@@ -104,9 +104,9 @@ Peerio.UI.controller('signupForms', function ($scope) {
       )
       swal.close();
     });
-    window.setTimeout(function(){
-      $('.sweet-alert.show-input input').bind('paste', function(e){e.preventDefault();});
-    }, 300);
+   // window.setTimeout(function(){
+   //   $('.sweet-alert.show-input input').bind('paste', function(e){e.preventDefault();});
+   // }, 300);
 
   }
 
@@ -142,6 +142,8 @@ Peerio.UI.controller('signupForms', function ($scope) {
   $scope.signup.yourPassphraseContinue = function () {
     $('div.signupProgressBarFill').css({width: 200})
     $('form.signupYourPassphrase').hide()
+    $scope.signup.accountConfirmationContinue();
+    return;
     $('form.signupAccountConfirmation').show()
     $('form.signupAccountConfirmation').find('input')[0].focus()
     $scope.signup.confirmationCodeCountdown = 600
@@ -207,6 +209,7 @@ Peerio.UI.controller('signupForms', function ($scope) {
     )
   }
   $scope.signup.firstLogin = function () {
+    window.firstLogin = true;
     $scope.signup.username = $scope.signup.username.toLowerCase()
     $scope.$root.$broadcast('login', {
       username: $scope.signup.username,
