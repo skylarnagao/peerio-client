@@ -226,9 +226,9 @@ Peerio.UI = angular.module('PeerioUI', ['ngSanitize', 'cfp.hotkeys']);
       }
 
       console.log('lang', data)
-      if ((typeof(language) !== 'string') || !/^((en)|(de)|(es)|(fr)|(it)|(ja)|(hu)|(nb\-NO)|(pt\-BR)|(ru)|(zh\-CN)|(tr))$/.test(language)) {
+      if ((typeof(language) !== 'string') || !/^((en)|(de)|(es)|(fr)|(it)|(ja)|(hu)|(nb\-NO)|(pt\-BR)|(ru)|(zh\-CN)|(tr)|(cs))$/.test(language)) {
         var navLang = navigator.language || navigator.userLanguage
-        var langs = {'en': /en/, 'de':/de/, 'es':/es/, 'fr': /fr/, 'it':/it/, 'ja':/ja/, 'hu': /hu/, 'nb-NO': /nb\-NO/, 'pt-BR':/pt\-BR/, 'ru':/ru/, 'tr' : /tr/, 'zh-CN':/zh\-CN/};
+        var langs = {'en': /en/, 'de':/de/, 'es':/es/, 'fr': /fr/, 'it':/it/, 'ja':/ja/, 'hu': /hu/, 'nb-NO': /nb\-NO/, 'pt-BR':/pt\-BR/, 'ru':/ru/, 'tr' : /tr/, 'zh-CN':/zh\-CN/, 'cs': /cs/};
         var keys = Object.keys(langs);
         //default
         language = 'en';

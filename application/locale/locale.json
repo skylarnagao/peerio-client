@@ -11,7 +11,8 @@
     "pt-BR"
     "ru", 
     "zh-CN",
-    "tr"
+    "tr",
+    "cs"
   ],
   "resources": [
     "./{{locale}}.l20n"
