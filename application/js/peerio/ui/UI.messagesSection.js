@@ -316,19 +316,19 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
         return false
       }
       Peerio.message.getModifiedMessages(function (modified) {
+        var playReceived = false, playAck = false;
+
         modified.forEach(function (message) {
-          if (modified.length && (message.sender !== Peerio.user.username)) {
-            if (message.decrypted.message === ':::peerioAck:::') {
-              if (Peerio.user.settings.useSounds) {
-                Peerio.notification.playSound('ack')
-              }
-            }
-            else {
-              if (Peerio.user.settings.useSounds) {
-                Peerio.notification.playSound('received')
-              }
+
+          if (Peerio.user.settings.useSounds) {
+            if (message.sender !== Peerio.user.username) {
+              if (message.decrypted.message === ':::peerioAck:::')
+                playAck = true;
+              else
+                playReceived = true;
             }
           }
+
           if (({}).hasOwnProperty.call(Peerio.user.conversations, message.conversationID)) {
             if (({}).hasOwnProperty.call(
                 Peerio.user.conversations[message.conversationID].messages, message.id)
@@ -412,7 +412,11 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
               $scope.$root.$broadcast('messagesSectionRender', null)
             })
           }
-        })
+        });
+
+        if(playReceived) Peerio.notification.playSound('received');
+        else if(playAck) Peerio.notification.playSound('ack');
+
         $scope.$root.$broadcast('messagesSectionRender', null)
         if (modified.length) {
           $('input.mainTopSearchSubmit').trigger('click')

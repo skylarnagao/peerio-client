@@ -422,7 +422,14 @@ Peerio.message = {};
 			var decryptNextMessage = function(count) {
 				var message = data.messages[keys[count]]
 				Peerio.crypto.decryptMessage(message, function(decrypted) {
-					count++
+					count++;
+					if(decrypted === false){
+						console.log('Failed to decrypt message: ', message);
+						delete data.messages[keys[count-1]];
+						decryptNextMessage(count);
+						return;
+					}
+
 					if (typeof(message) !== 'object') {
 						if (count === keys.length) {
 							callback(data)
