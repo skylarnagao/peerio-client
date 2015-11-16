@@ -2,6 +2,9 @@ Peerio.UI.languageOptions = [{
 	   name: 'English',
 	  value: 'en'
   }, {
+	  name: 'Čeština',
+	 value: 'cs'
+  }, {
 	  name: '汉语',
 	 value: 'zh-CN'
   }, {
