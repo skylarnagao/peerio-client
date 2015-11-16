@@ -321,5 +321,5 @@
     <typePassphraseToConfirm "Para aceitar esta senha, por favor, insira-a abaixo">
     <passphraseConfirmFailed "A sua senha foi inserida incorretamente. Por favor, guarde a sua senha num lugar seguro antes de continuar.">
     <acknowledgedMessage "Mensagem de Confirmação">
-    <addAddressSuggestion "Update contact information?">
-    <addAddressSuggestionText "Adding alternative contact information allows for: <br><ul><li><strong>Discovery</strong>: Make it easier for your contacts to find you </li><li><strong>Notifications</strong>: New message and contact notifications </li><li><strong>Support</strong>: More support services from our Help Center</li></ul><br>Would you like to update your addresses?">
+    <addAddressSuggestion "Gostaria de atualizar informações pessoais?">
+    <addAddressSuggestionText "Se você adicionar sua informação pessoal, terá acesso aos seguintes serviços:\n\nDescoberta: fica mais fácil para seus amigos lhe encontrarem. \n\nNotificações: alertas de novas mensagens e contatos.\n\nAjuda: mais serviços do nosso centro de ajuda.\n\nGostaria de atualizar sua informação pessoal?">

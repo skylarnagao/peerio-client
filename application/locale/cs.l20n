@@ -321,5 +321,5 @@
     <typePassphraseToConfirm "Pro přijetí této přístupové fráze ji prosím zadejte níže">
     <passphraseConfirmFailed "Vaše přístupová fráze byla zadána nesprávně. Přístupovou frázi si prosím, než budete pokračovat, zapište a uchovejte na bezpečném místě.">
     <acknowledgedMessage "Zpráva potvrzena">
-    <addAddressSuggestion "Aktualizovat kontaktní informace?">
-    <addAddressSuggestionText "Přidání alternativních kontaktních informací umožňuje: <br><ul><li><strong>\nObjev</strong>: Pomožte svým kontaktům Vás najít </li><li><strong>Oznámení</strong>:Nové zprávy a kontaktní oznámení </li><li><strong>Podpora</strong>:Více podpůrných služeb z našeho pomocného centra</li></ul><br>Přejete si aktualizovat své adresy?">
+    <addAddressSuggestion "Aktualizovat kontaktní údaje?">
+    <addAddressSuggestionText "Přidání alternativních kontaktních údajů umožňuje: <br><ul><li><strong>\nNalezení</strong>: Pomožte svým kontaktům Vás najít </li><li><strong>Oznámení</strong>: Oznámení nových zpráv a kontaktů </li><li><strong>Podporu</strong>: Více podpůrných služeb z našeho centra pomoci</li></ul><br>Přejete si aktualizovat své adresy?">

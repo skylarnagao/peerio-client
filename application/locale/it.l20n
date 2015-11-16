@@ -321,5 +321,5 @@
     <typePassphraseToConfirm "Per convalidare questa passphrase, per favore digitala sotto">
     <passphraseConfirmFailed "La tua passphrase è stata digitata male. Per favore salva la tua passphrase in un posto sicuro prima di continuare.">
     <acknowledgedMessage "Messaggio Approvato">
-    <addAddressSuggestion "Update contact information?">
+    <addAddressSuggestion "Aggiornare informazione di contatto">
     <addAddressSuggestionText "Aggiungere informazione di contatto alternativa permette:\nRitrovamento: Rendi facile ai Suoi contatti di ritrovarle\nNotifiche: Nuove notifiche di messaggi e di contatto\nAssistenza: Ancora più servizi da parte del nostro Centro Assistenza\nVuole Lei aggiornare i Suoi indirizzi e-mail?">
