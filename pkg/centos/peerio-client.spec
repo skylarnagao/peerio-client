@@ -4,8 +4,8 @@ Version: 1.2.0
 Release: 1%{?dist}
 License: GPL3
 Group: Applications/Internet
-Source: https://dl.peerio.com/sources/rh-%{name}-%{version}.tar.gz
-Patch0: https://dl.peerio.com/sources/00-build.patch
+Source: https://linux.peerio.com/sources/rh-%{name}-%{version}.tar.gz
+Patch0: https://linux.peerio.com/sources/00-build.patch
 URL: https://peerio.com
 
 BuildRequires: fakeroot
