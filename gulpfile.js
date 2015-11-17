@@ -88,7 +88,7 @@ gulp.task('localize:all', function(callback) {
  * Update dependencies in the source directory.
  **/
 gulp.task('update-dependendencies', shell.task([
-	'cd application/ && sudo npm update'
+	'cd application/ && npm update'
   ])
 );
 

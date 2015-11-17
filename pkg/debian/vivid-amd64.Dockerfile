@@ -9,7 +9,7 @@ FROM ubuntu:vivid
 # Arch to output
 ENV ARCH 64
 ENV PKG_ARCH amd64
-ENV PKG_VERSION 1.1.5
+ENV PKG_VERSION 1.2.0
 ENV PKG_REL 1
 ENV PKG_NAME peerio-client_$PKG_VERSION-${PKG_REL}_$PKG_ARCH
 

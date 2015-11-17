@@ -1,6 +1,6 @@
 Summary: Peerio Client
 Name: peerio-client
-Version: 1.1.5
+Version: 1.2.0
 Release: 1%{?dist}
 License: GPL3
 Group: Applications/Internet
@@ -47,8 +47,6 @@ make
 
 %install
 make install PREFIX=%{buildroot}/usr/share BINPREFIX=%{buildroot}/usr
-install -m 0755 -d %{buildroot}/usr/share/pixmaps
-install -c -m 0644 application/img/icon128.png %{buildroot}/usr/share/pixmaps/peerio-client.png
 
 %clean
 make clean
@@ -70,5 +68,5 @@ make clean
 %{_mandir}/man1/peerio-client.1.gz
 
 %changelog
- * Mon Nov 09 2015 Samuel MARTIN MORO <samuel@peerio.com> 1.1.5-1
+ * Tue Nov 17 2015 Samuel MARTIN MORO <samuel@peerio.com> 1.2.0-1
  - Initial Centos/Fedora release

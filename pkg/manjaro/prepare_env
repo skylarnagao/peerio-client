@@ -1,4 +1,4 @@
-sudo pacman -Syu makepkg alsa-lib glibc cairo libdbus fontconfig gconf gdk-pixbuf2 gtk3 libnotify libxcomposite libxcursor libxdamage libxfixes libxi libxrandr libxrender libxtst nspr nss pango fakeroot make npm python-pip sudo
+sudo pacman -Syu alsa-lib glibc cairo libdbus fontconfig gconf gdk-pixbuf2 gtk3 libnotify libxcomposite libxcursor libxdamage libxfixes libxi libxrandr libxrender libxtst nspr nss pango fakeroot make npm python-pip sudo
 wget https://dl.peerio.com/archlinux/PKGBUILD
 exit 0
 makepkg
