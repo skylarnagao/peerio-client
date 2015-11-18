@@ -42,14 +42,33 @@ Assuming you have all build and runtime dependencies installed, this should prod
 
 Note: there is known problems between libgl and virtualbox video driver, causing nw.js to open a blank window. Not sure how to fix yet. I have not seen this problem running my packages on physical hosts. You may still build your packages on virtual environments.
 
+#### Gentoo
+
+Create `/usr/local/portage/app-misc/peerio-client` on your filesystem - if not present already. Download `pkg/gentoo/peerio-client-${version}.ebuild` and file it in that directory.
+
+If not configured already, make sure your system actually looks for ebuilds in `/usr/local/portage`, by adding the following to your `/etc/make.conf`
+```
+PORTDIR_OVERLAY="/usr/local/portage"
+```
+
+You may then install our client by running `emerge peerio-client`.
+
 #### Fedora/CentOS/Mageia
 
 If you are not familiar yet with the process of building packages, check out https://fedoraproject.org/wiki/How_to_create_an_RPM_package
 
-Having run `rpmdev-setuptree`, you may download `pkg/fedora/peerio-client.spec` or `pkg/centos/peerio-client.spec` into `~/rpmbuild/SPECS`, then run rpmbuild -ba ~/rpmbuild/SPECS/peerio-client.spec`.
+Having run `rpmdev-setuptree`, you may download `pkg/fedora/peerio-client.spec`, `pkg/centos/peerio-client.spec` or `pkg/mageia/peerio-client.spec` into `~/rpmbuild/SPECS`.
+Download the patches and sources as referrenced in your specfile, file them into `~/rpmbuild/SOURCES`.
+You may now build your package, using `rpmbuild -ba ~/rpmbuild/SPECS/peerio-client.spec`.
 CentOS users will need the `epel-release` repo installed, to satisfy all dependencies.
 
 Assuming you have all build and runtime dependencies installed, this should produce a binary package in `~/rpmbuild/RPMS/`.
+
+#### OpenSuSE
+
+The process is pretty similar than with CentOS/Fedora/Mageia
+
+Main differences are there is no rpmdev-setuptree common. Instead, you will be working in /usr/src/packages/. Copy the specfile from `pkg/opensuse/peerio-client.spec` into `/usr/src/packages/SPECS/`, download the patches and sources as referrenced in your specfile, file them into `/usr/src/packages/SOURCES`,  then run rpmbuild -ba /usr/src/packages/SPECS/peerio-client.spec`.
 
 # Additional (Internal) Tooling
 

@@ -8,6 +8,20 @@ urpmi alsa-lib glibc cairo libdbus1_3 fontconfig GConf2 libgdk_pixbuf2.0_0 libgt
 #wget https://linux.peerio.com/fedora23/peerio-client.spec -O SPECS/peerio-client.spec
 #rpmbuild -ba SPECS/peerio-client.spec
 
+#gpg:
+# once the key is installed in your user account:
+#gpg --list-keys    lists keys, take out the name of yours
+#gpg --export -a 'The Name for your KEY' >RPM-GPG-KEY-Peerio
+#sudo urpmi rpm-sign      somehow not installed already, mandatory to sign!
+#sudo rpm --import RPM-GPG-KEY-Peerio
+#cat <<EOF >>~/.rpmmacros
+#%_signature gpg
+#%_gpg_name The Name for your KEY
+#%_gpg_path ~/.gnupg
+#EOF
+#cd /your/repo/root
+#find . -name '*rpm' | while read line; do rpm --addsign $line; done
+
 #to distribute packages, create the following tree
 #i585
 #i585/core

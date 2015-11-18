@@ -39,12 +39,8 @@ confdeps:
 	if ! test -x /usr/bin/npm -o -x /usr/local/bin/npm; then \
 	    curl -k -L https://npmjs.org/install.sh | sudo sh; \
 	fi
-	if ! test -x /usr/bin/tx; then \
-	    pip list 2>&1 | grep ^transifex-client >/dev/null || sudo pip install transifex-client; \
-	fi
 	if ! test -d build; then \
-	    npm -g ls 2>&1 | grep ' nw@' >/dev/null || sudo npm install -g nw; \
-	    test -d node_modules || npm install; \
+	    test -x node_modules/.bin/nw || npm install; \
 	    test -d application/node_modules || cd application && npm install; \
 	fi
 

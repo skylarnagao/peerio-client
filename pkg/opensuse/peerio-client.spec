@@ -6,33 +6,32 @@ License: GPL3
 Group: Applications/Internet
 Source: https://linux.peerio.com/sources/rh-%{name}-%{version}.tar.gz
 Patch0: https://linux.peerio.com/sources/00-build.patch
+Patch1: https://linux.peerio.com/sources/01-build.patch
+Patch2: https://linux.peerio.com/sources/02-build.patch
 URL: https://peerio.com
 
-BuildRequires: fakeroot
 BuildRequires: make
 BuildRequires: nodejs
-BuildRequires: python-pip
-BuildRequires: sudo
-Requires: alsa-lib
-Requires: glibc
-Requires: cairo
-Requires: libdbus1_3
+Requires: libasound2
+Requires: libglib-2_0-0
+Requires: libcairo2
+Requires: dbus-1-glib
 Requires: fontconfig
-Requires: GConf2
-Requires: libgdk_pixbuf2.0_0
-Requires: libgtk+3_0
-Requires: libnotify
-Requires: libxcomposite1
-Requires: libxcursor1
-Requires: libxdamage1
-Requires: libxfixes3
-Requires: libxi6
-Requires: libxrandr2
-Requires: libxrender1
-Requires: libxtst6
-Requires: nspr
-Requires: nss
-Requires: pango
+Requires: gconf2
+Requires: libgdk_pixbuf-2_0-0
+Requires: libgtk-3-0
+Requires: libnotify4
+Requires: libXcomposite1
+Requires: libXcursor1
+Requires: libXdamage1
+Requires: libXfixes3
+Requires: libXi6
+Requires: libXrandr2
+Requires: libXrender1
+Requires: libXtst6
+Requires: mozilla-nspr
+Requires: mozilla-nss
+Requires: libpango-1_0-0
 
 %description
 Peerio is a messaging and file sharing solution based on miniLock,
@@ -43,13 +42,14 @@ providing with strong end-to-end encryption.
 %prep
 %autosetup
 %build
+sed -i 's|Icon=peerio-client.png|Icon=peerio-client|' pkg/desktop
 make
 
 %install
 make install PREFIX=%{buildroot}/usr/share BINPREFIX=%{buildroot}/usr
 
 %clean
-make clean
+make clean PREFIX=%{buildroot}/usr/share BINPREFIX=%{buildroot}/usr
 
 %files
 %defattr(-,root,root)
@@ -68,5 +68,5 @@ make clean
 %{_mandir}/man1/peerio-client.1.gz
 
 %changelog
- * Tue Nov 17 2015 Samuel MARTIN MORO <samuel@peerio.com> 1.2.0-1
- - Initial Mageia release
+ * Wed Nov 18 2015 Samuel MARTIN MORO <samuel@peerio.com> 1.2.0-1
+ - Initial OpenSuSE release

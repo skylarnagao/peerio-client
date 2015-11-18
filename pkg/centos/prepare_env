@@ -8,3 +8,17 @@ yum install alsa-lib glibc cairo dbus-libs fontconfig GConf2 gdk-pixbuf2 gtk3 li
 #wget https://linux.peerio.com/sources/00-build.patch -O SOURCES/00-build.patch
 #wget https://linux.peerio.com/centos7/peerio-client.spec -O SPECS/peerio-client.spec
 #rpmbuild -ba SPECS/peerio-client.spec
+
+#gpg:
+# once the key is installed in your user account:
+#gpg --list-keys    lists keys, take out the name of yours
+#gpg --export -a 'The Name for your KEY' >RPM-GPG-KEY-Peerio
+#sudo urpmi rpm-sign      somehow not installed already, mandatory to sign!
+#sudo rpm --import RPM-GPG-KEY-Peerio
+#cat <<EOF >>~/.rpmmacros
+#%_signature gpg
+#%_gpg_name The Name for your KEY
+#%_gpg_path ~/.gnupg
+#EOF
+#cd /your/repo/root
+#find . -name '*rpm' | while read line; do rpm --addsign $line; done
