@@ -57,7 +57,6 @@ Messages are encrypted using the miniLock protocol.
 A Peerio message plaintext consists of:
 * A message subject (Between 1 and 128 characters).
 * A message body.
-* Message receipt proofs (discussed below).
 * File attachments (optional).
 
 ####File Attachments
@@ -84,17 +83,6 @@ Once the above procedure has been carried out for every file attachment, we form
 ```
 
 The above formatted JSON is then stringified and encrypted using the regular miniLock protocol. The sender uses their miniLock private key and the miniLock IDs of the recipient(s).
-
-####About the `receipt` value
-Peerio includes a feature called "message receipts" which allows the sender to be notified when a recipient has read their message. In the plaintext JSON, the `receipt` value is part of a challenge that is used in order to prevent a malicious Peerio server from faking a positive status indicating that the user has read the message.
-
-The recipient can communicate a token to the sender proving that they have indeed read the message using the following procedure:
-
-1. The recipient appends the current UNIX time to the `receipt` value and encrypts the result to the Curve25519 public key of the sender (derived from their miniLock ID) using the `nacl.box` construction. We call the resulting encrypted value `encryptedReturnReceipt`.
-2. The recipient uses an `authToken` to send the `encryptedReturnReceipt` (format "encryptedReturnReceipt:nonce", encoded in Base64 and separated by a colon) to the server, notifying them for which message it is meant. On the server side, we store a UNIX timestamp for the time on which it received the `encryptedReturnReceipt`.
-3. The server then allows the original message sender to fetch the `encryptedReturnReceipt` for the particular message.
-4. The sender can now decrypt the `encryptedReturnReceipt`. If the plaintext matches the `receipt` they chose for that message, they have verified the authenticity of the "message read" status.
-5. The sender checks if the UNIX timestamp included in the decrypted `encryptedReturnReceipt` matches the UNIX timestamp during which the Peerio server first received the `encryptedReturnReceipt` value. If the difference is less than 60 seconds, the sender can reasonably display a time during which the message was read.
 
 #### About `ack` messages
 
