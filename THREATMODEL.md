@@ -32,7 +32,6 @@ Namely, the Peerio network and any unauthorized third party **cannot**:
 2. Forge a message claiming to be from a particular Peerio user.
 3. Send a message on behalf of a particular user.
 4. Undetectably intercept and modify a message before it reaches the recipient.
-5. Show a message read receipt to the sender that is not actually reflective of the message having been read by the recipient.
 
 ####Unprotected Information
 While ciphertext confidentiality, integrity and authenticity are guaranteed by the client against the Peerio server, the following information regarding a message is visible to the server:
