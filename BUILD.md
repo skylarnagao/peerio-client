@@ -26,7 +26,7 @@ From the command line, run `./PATH/TO/EXECUTABLE/Peerio`.
 
 Peerio-client is being packaged for several linux distros, you may be able to build your own package using one of the following
 
-#### Debian/Ubuntu/Mint
+#### Debian/Ubuntu/Mint/Kali/Pearl
 
 The easier way to go, is to rely on the docker configuration provided in the `pkg/debian` directory of this repository.
 
@@ -68,7 +68,13 @@ Assuming you have all build and runtime dependencies installed, this should prod
 
 The process is pretty similar than with CentOS/Fedora/Mageia
 
-Main differences are there is no rpmdev-setuptree common. Instead, you will be working in /usr/src/packages/. Copy the specfile from `pkg/opensuse/peerio-client.spec` into `/usr/src/packages/SPECS/`, download the patches and sources as referrenced in your specfile, file them into `/usr/src/packages/SOURCES`,  then run rpmbuild -ba /usr/src/packages/SPECS/peerio-client.spec`.
+Main differences are there is no `rpmdev-setuptree`. Instead, you will be working in `/usr/src/packages/`. Copy the specfile from `pkg/opensuse/peerio-client.spec` into `/usr/src/packages/SPECS/`, download the patches and sources as referrenced in your specfile, file them into `/usr/src/packages/SOURCES`,  then run `rpmbuild -ba /usr/src/packages/SPECS/peerio-client.spec`.
+
+#### PCLinuxOS
+
+Again, the process is pretty similar than with CentOS/Fedora/Mageia/OpenSuSE
+
+Main differences are there is no `rpmdev-setuptree`. Instead, you will be working in `~/src/rpm/`. Copy the specfile from `pkg/pclinuxos/peerio-client.spec` into `~/src/rpm/SPECS/`, download the patches and sources as referrenced in your specfile, file them into `~/src/rpm/SOURCES`,  then run `rpmbuild -ba ~/src/rpm/SPECS/peerio-client.spec`.
 
 # Additional (Internal) Tooling
 
