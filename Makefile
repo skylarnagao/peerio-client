@@ -87,4 +87,4 @@ createdebbin: clean
 	dpkg-buildpackage -us -uc
 
 clean:
-	rm -fr build node_modules application/node_modules
+	rm -fr build node_modules application/node_modules tmp npm-debug.log

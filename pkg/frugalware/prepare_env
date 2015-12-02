@@ -1,0 +1,7 @@
+pacman-g2 -S wget sudo curl pacman-tools git rsync fakeroot
+#pacman-g2 -S lsa-lib glibc cairo fontconfig gconf gdk-pixbuf2 libnotify libxcomposite libxcursor libxdamage libxfixes libxi libxrandr libxrender libxtst nspr nss pango
+repoman upd
+mkdir /var/fst/stable/sources/xapp/peerio-client
+cd /var/fst/stable/sources/xapp/peerio-client
+wget https://linux.peerio.com/frugalware/FrugalBuild
+makepkg

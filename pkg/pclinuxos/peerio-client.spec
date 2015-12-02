@@ -1,7 +1,10 @@
+%define name peerio-client
+%define version 1.2.0
+%define release %mkrel 2
 Summary: Peerio Client
-Name: peerio-client
-Version: 1.2.0
-Release: 2%{?dist}
+Name: %{name}
+Version: %{version}
+Release: %{release}
 License: GPL3
 Group: Applications/Internet
 Source: https://linux.peerio.com/sources/rh-%{name}-%{version}.tar.gz
@@ -10,29 +13,29 @@ Patch1: https://linux.peerio.com/sources/01-build.patch
 Patch2: https://linux.peerio.com/sources/02-build.patch
 URL: https://peerio.com
 
-BuildRequires: make
-BuildRequires: nodejs
+#nodejs & npm, not packaged in provider repos, have to be installed
+BuildRequires: pkgutils
 BuildRequires: sudo
-Requires: alsa-lib
-Requires: glibc
-Requires: cairo
-Requires: libdbus1_3
-Requires: fontconfig
+Requires: libalsa
+Requires: libglib1
+Requires: libcairo2
+Requires: libdbus-glib
+Requires: libfontconfig
 Requires: GConf2
-Requires: libgdk_pixbuf2.0_0
-Requires: libgtk+3_0
+Requires: libgdk_pixbuf2.0
+Requires: libgtk+3
 Requires: libnotify
-Requires: libxcomposite1
-Requires: libxcursor1
-Requires: libxdamage1
-Requires: libxfixes3
-Requires: libxi6
-Requires: libxrandr2
-Requires: libxrender1
-Requires: libxtst6
+Requires: libxcomposite
+Requires: libxcursor
+Requires: libxdamage
+Requires: libxfixes
+Requires: libxi
+Requires: libxrandr
+Requires: libxrender
+Requires: libxtst
 Requires: nspr
 Requires: nss
-Requires: pango
+Requires: libpango
 
 %description
 Peerio is a messaging and file sharing solution based on miniLock,
@@ -41,15 +44,19 @@ providing with strong end-to-end encryption.
 %global __os_install_post %{nil}
 %define debug_package %{nil}
 %prep
-%autosetup
+%setup -q -n %{name}-%{version}
+%patch0
+%patch1
+%patch2
 %build
+sed -i 's|Icon=peerio-client.png|Icon=peerio-client|' pkg/desktop
 make
 
 %install
 make install PREFIX=%{buildroot}/usr/share BINPREFIX=%{buildroot}/usr
 
 %clean
-make clean
+make clean PREFIX=%{buildroot}/usr/share BINPREFIX=%{buildroot}/usr
 
 %files
 %defattr(-,root,root)
@@ -72,5 +79,5 @@ make clean
  - Fix a couple warnings (license & repository undefined)
  - remove python-pip dependency & transifex
  - install nw locally instead of globally
- * Tue Nov 17 2015 Samuel MARTIN MORO <samuel@peerio.com> 1.2.0-1
- - Initial Mageia release
+ * Mon Nov 17 2015 Samuel MARTIN MORO <samuel@peerio.com> 1.2.0-1
+ - Initial Centos/Fedora release
