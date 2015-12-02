@@ -109,10 +109,10 @@ Peerio.user = {};
 		Peerio.storage.db.get('PIN', function(err, data) {
 			if (
 				typeof(data) === 'object' &&
-				({}).hasOwnProperty.call(data, 'PIN') &&
+				hasProp(data, 'PIN') &&
 				typeof(data['PIN']) === 'object' &&
-				({}).hasOwnProperty.call(data.PIN, 'ciphertext') &&
-				({}).hasOwnProperty.call(data.PIN, 'nonce')
+				hasProp(data.PIN, 'ciphertext') &&
+				hasProp(data.PIN, 'nonce')
 			) {
 				Peerio.user.PIN = {
 					ciphertext: Peerio.util.objectToUint8Array(data['PIN'].ciphertext),
@@ -184,7 +184,7 @@ Peerio.user = {};
 			var parsed = false
 			if (
 				(typeof(data) === 'object') &&
-				({}).hasOwnProperty.call(data, 'TOFU') &&
+				hasProp(data, 'TOFU') &&
 				(typeof(data['TOFU']) === 'object')
 			) {
 				TOFU = Peerio.crypto.secretBoxDecrypt(
@@ -223,7 +223,7 @@ Peerio.user = {};
 		Peerio.storage.db.get('PIN', function(err, data) {
 			if (
 				(typeof(data) === 'object') &&
-				({}).hasOwnProperty.call(data, 'PIN')
+				hasProp(data, 'PIN')
 			) {
 				Peerio.storage.db.remove(data, function() {
 					if (typeof(callback) === 'function') {
@@ -251,7 +251,7 @@ Peerio.user = {};
 			miniLockID: accountInfo.miniLockID,
 			localeCode: Peerio.UI.localeCode
 		}, function(data) {
-			if (({}).hasOwnProperty.call(data, 'error')) {
+			if (hasProp(data, 'error')) {
 				if (typeof(errorCallback) === 'function') {
 					errorCallback(data)
 				}
@@ -343,7 +343,7 @@ Peerio.user = {};
 		var parsed = Peerio.util.parseAddress(input)
 		if (parsed) {
 			Peerio.network.addContact([{address: parsed}], function(data) {
-				if (({}).hasOwnProperty.call(data, 'error')) {
+				if (hasProp(data, 'error')) {
 					if (typeof(callback) === 'function') {
 						callback({
 							type: 'address',
@@ -365,7 +365,7 @@ Peerio.user = {};
 			}
 			if (input.match(/^\w{1,16}$/)) {
 				Peerio.network.addContact([{username: input}], function(data) {
-					if (({}).hasOwnProperty.call(data, 'error')) {
+					if (hasProp(data, 'error')) {
 						if (typeof(callback) === 'function') {
 							callback({
 								type: 'username',
@@ -417,10 +417,10 @@ Peerio.user = {};
 				contact.isRequest = false
 				contact.isReceivedRequest = false
 				contact.isMe = false
-				if (({}).hasOwnProperty.call(contact, 'username')) {
+				if (hasProp(contact, 'username')) {
 					contacts[contact.username] = Object.create(null)
 					for (var prop in contact) {
-						if (({}).hasOwnProperty.call(contact, prop)) {
+						if (hasProp(contact, prop)) {
 							contacts[contact.username][prop] = contact[prop]
 						}
 					}

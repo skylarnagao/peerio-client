@@ -292,7 +292,7 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 		return Peerio.file.truncateFileName(fileName)
 	}
 	$scope.filesSection.getIcon = function(fileID) {
-		if (({}).hasOwnProperty.call(Peerio.user.files, fileID)) {
+		if (hasProp(Peerio.user.files, fileID)) {
 			return $sce.trustAsHtml(
 				Peerio.user.files[fileID].icon
 			)
@@ -516,7 +516,7 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 		else {
 			Peerio.file.upload(file, [Peerio.user.username],
 				function(data, id) {
-					if (({}).hasOwnProperty.call(data, 'error')) {
+					if (hasProp(data, 'error')) {
 						swal({
 							title: document.l10n.getEntitySync('fileUploadError').value,
 							text: document.l10n.getEntitySync('fileUploadErrorText').value,
@@ -529,7 +529,7 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 					$scope.$apply()
 				},
 				function(data, id) {
-					if (({}).hasOwnProperty.call(data, 'error')) {
+					if (hasProp(data, 'error')) {
 						swal({
 							title: document.l10n.getEntitySync('fileUploadError').value,
 							text: document.l10n.getEntitySync('fileUploadErrorText').value,
@@ -542,7 +542,7 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 					$scope.$apply()
 				},
 				function(data, id) {
-					if (({}).hasOwnProperty.call(data, 'error')) {
+					if (hasProp(data, 'error')) {
 						swal({
 							title: document.l10n.getEntitySync('fileUploadError').value,
 							text: document.l10n.getEntitySync('fileUploadErrorText').value,

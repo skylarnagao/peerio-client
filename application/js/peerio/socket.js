@@ -17,11 +17,11 @@ Peerio.socket = {};
 	Peerio.socket.worker.onmessage = function(message) {
 		message = message.data
 		if (
-			({}).hasOwnProperty.call(message, 'callbackID') &&
+			hasProp(message, 'callbackID') &&
 			message.callbackID
 		) {
 			// Handle global errors affecting all calls:
-			if (({}).hasOwnProperty.call(message.data, 'error')) {
+			if (hasProp(message.data, 'error')) {
 				if (message.data.error === 423) {
 					Peerio.user.authTokens = []
 					Peerio.network.getAuthTokens(Peerio.crypto.decryptAuthTokens)
@@ -50,7 +50,7 @@ Peerio.socket = {};
 			}, 1000)
 		}
 
-		if (({}).hasOwnProperty.call(message, 'received')) {
+		if (hasProp(message, 'received')) {
 			if (message.received === 'receivedContactRequestsAvailable') {
 				console.log('receivedContactRequestsAvailable')
 				Peerio.UI.contactsSectionPopulate()
@@ -111,7 +111,7 @@ Peerio.socket = {};
 		}
 		// Automatically recharge authTokens if we're close to running out.
 		if (
-			({}).hasOwnProperty.call(content, 'authToken') &&
+			hasProp(content, 'authToken') &&
 			(Peerio.user.authTokens.length < 5)
 		) {
 			Peerio.network.getAuthTokens(function(authTokens) {

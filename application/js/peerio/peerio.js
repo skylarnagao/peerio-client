@@ -34,8 +34,8 @@ if (typeof(require) === 'function') {
 		}
 		$.get(Peerio.config.updateJSON, function(info) {
 			if (
-				!({}).hasOwnProperty.call(info, 'latest') ||
-				!({}).hasOwnProperty.call(info, 'minimum')
+				!hasProp(info, 'latest') ||
+				!hasProp(info, 'minimum')
 			) {
 				return false
 			}

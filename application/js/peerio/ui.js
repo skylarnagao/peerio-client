@@ -218,7 +218,7 @@ Peerio.UI = angular.module('PeerioUI', ['ngSanitize', 'cfp.hotkeys']);
       var language = ''
       if (
         (typeof(data) === 'object') &&
-        (({}).hasOwnProperty.call(data, 'localeCode')) &&
+        (hasProp(data, 'localeCode')) &&
         (typeof(data.localeCode) === 'string') &&
         (data.localeCode.length === 2 || data.localeCode.length === 5)
       ) {

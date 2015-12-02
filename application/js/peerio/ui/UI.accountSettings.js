@@ -14,7 +14,7 @@ Peerio.UI.controller('accountSettings', function ($scope) {
                 firstName: $scope.accountSettings.firstName,
                 lastName: $scope.accountSettings.lastName
             }, function (data) {
-                if (({}).hasOwnProperty.call(data, 'error')) {
+                if (hasProp(data, 'error')) {
                     swal({
                         title: document.l10n.getEntitySync('error').value,
                         text: document.l10n.getEntitySync('couldNotUpdateName').value,
@@ -59,7 +59,7 @@ Peerio.UI.controller('accountSettings', function ($scope) {
                 var address = Peerio.util.parseAddress($scope.accountSettings.newAddress);
                 $scope.accountSettings.newAddress = '';
 
-                if (({}).hasOwnProperty.call(data, 'error')) {
+                if (hasProp(data, 'error')) {
                     swal({
                         title: document.l10n.getEntitySync('error').value,
                         text: document.l10n.getEntitySync('couldNotAddAddress').value,
@@ -110,7 +110,7 @@ Peerio.UI.controller('accountSettings', function ($scope) {
             address,
             code,
             function (data) {
-                if (({}).hasOwnProperty.call(data, 'error')) {
+                if (hasProp(data, 'error')) {
                     swal({
                         title: document.l10n.getEntitySync('error').value,
                         text: document.l10n.getEntitySync('couldNotConfirmAddress').value,
@@ -141,7 +141,7 @@ Peerio.UI.controller('accountSettings', function ($scope) {
             Peerio.network.setPrimaryAddress(
                 thisAddress,
                 function (data) {
-                    if (({}).hasOwnProperty.call(data, 'error')) {
+                    if (hasProp(data, 'error')) {
                         return false
                     }
                     Peerio.network.getSettings(function (data) {
@@ -159,7 +159,7 @@ Peerio.UI.controller('accountSettings', function ($scope) {
             Peerio.network.removeAddress(
                 thisAddress,
                 function (data) {
-                    if (({}).hasOwnProperty.call(data, 'error')) {
+                    if (hasProp(data, 'error')) {
                         return false
                     }
                     Peerio.network.getSettings(function (data) {
@@ -221,7 +221,7 @@ Peerio.UI.controller('accountSettings', function ($scope) {
             Peerio.network.updateSettings({
                 twoFactorAuth: false
             }, function (data) {
-                if (({}).hasOwnProperty.call(data, 'error')) {
+                if (hasProp(data, 'error')) {
                     swal({
                         title: document.l10n.getEntitySync('error').value,
                         text: document.l10n.getEntitySync('twoFactorAuthCannotDisable').value,

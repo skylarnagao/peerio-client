@@ -31,7 +31,7 @@ Peerio.UI.controller('twoFactorAuth', function($scope) {
 	$scope.twoFactorAuth.submitCode = function() {
 		if ($scope.twoFactorAuth.isEnabled()) {
 			Peerio.network.validate2FA($scope.twoFactorAuth.code, function(data) {
-				if (({}).hasOwnProperty.call(data, 'error')) {
+				if (hasProp(data, 'error')) {
 					swal({
 						title: document.l10n.getEntitySync('twoFactorAuthIncorrect').value,
 						text: document.l10n.getEntitySync('twoFactorAuthIncorrectText').value,
@@ -49,7 +49,7 @@ Peerio.UI.controller('twoFactorAuth', function($scope) {
 		}
 		else {
 			Peerio.network.confirm2FA($scope.twoFactorAuth.code, function(data) {
-				if (({}).hasOwnProperty.call(data, 'error')) {
+				if (hasProp(data, 'error')) {
 					swal({
 						title: document.l10n.getEntitySync('twoFactorAuthIncorrect').value,
 						text: document.l10n.getEntitySync('twoFactorAuthIncorrectText').value,

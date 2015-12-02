@@ -27,7 +27,7 @@ Peerio.UI.controller('signupForms', function ($scope) {
     Peerio.network.validateUsername(
       $scope.signup.username,
       function (data) {
-        if (({}).hasOwnProperty.call(data, 'error')) {
+        if (hasProp(data, 'error')) {
           $('div.signupUsernameAvailability').addClass('visible')
           $('input.signupDesiredUsername').addClass('invalid')
         }
@@ -42,7 +42,7 @@ Peerio.UI.controller('signupForms', function ($scope) {
     Peerio.network.validateAddress(
       $scope.signup.emailOrPhone,
       function (data) {
-        if (({}).hasOwnProperty.call(data, 'error')) {
+        if (hasProp(data, 'error')) {
           $('div.signupAddressAvailability').addClass('visible')
           $('input.signupEmailOrPhone').addClass('invalid')
         }
@@ -121,7 +121,7 @@ Peerio.UI.controller('signupForms', function ($scope) {
       miniLockID: Peerio.user.miniLockID,
       localeCode: Peerio.UI.localeCode
     }, function (data) {
-      if (({}).hasOwnProperty.call(data, 'error')) {
+      if (hasProp(data, 'error')) {
         swal({
           title: document.l10n.getEntitySync('registerAccountError').value,
           text: document.l10n.getEntitySync('registerAccountErrorText').value,
@@ -170,7 +170,7 @@ Peerio.UI.controller('signupForms', function ($scope) {
     Peerio.network.sendAccountConfirmation(
       $scope.signup.confirmationCode,
       function (data) {
-        if (({}).hasOwnProperty.call(data, 'error')) {
+        if (hasProp(data, 'error')) {
           $('div.signupConfirmationCodeValidity').addClass('visible')
           $('input.confirmationCode').addClass('invalid')
         }

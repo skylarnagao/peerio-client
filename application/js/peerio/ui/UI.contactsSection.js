@@ -114,7 +114,7 @@ Peerio.UI.controller('contactsSection', function($scope, $element, $sce) {
 		$scope.contactsSection.conversations = Peerio.user.conversations
 		$scope.contactsSection.files = Peerio.user.files
 		if (
-			({}).hasOwnProperty.call(Peerio.user.contacts, username) &&
+			hasProp(Peerio.user.contacts, username) &&
 			Peerio.user.contacts[username].miniLockID.length
 		) {
 			var avatar = Peerio.crypto.getAvatar(
@@ -208,9 +208,9 @@ Peerio.UI.controller('contactsSection', function($scope, $element, $sce) {
 	}
 	$scope.contactsSection.showLatestMessageItem = function(conversation, username) {
 		if (
-			!({}).hasOwnProperty.call(conversation, 'original') ||
+			!hasProp(conversation, 'original') ||
 			(typeof(conversation.original) !== 'object') ||
-			!({}).hasOwnProperty.call(conversation.original, 'sender')
+			!hasProp(conversation.original, 'sender')
 		) {
 			return false
 		}
@@ -237,7 +237,7 @@ Peerio.UI.controller('contactsSection', function($scope, $element, $sce) {
 		return Peerio.util.getDateFromTimestamp(timestamp)
 	}
 	$scope.contactsSection.getIcon = function(fileID) {
-		if (({}).hasOwnProperty.call(Peerio.user.files, fileID)) {
+		if (hasProp(Peerio.user.files, fileID)) {
 			return $sce.trustAsHtml(
 				Peerio.user.files[fileID].icon
 			)

@@ -42,7 +42,7 @@ Peerio.UI.controller('importContacts', function($scope) {
 		}, function() {
 			Peerio.network.addContact($scope.importContacts.checkedAddresses, function(data) {
 				$('form.importContactsUploadForm input[type=reset]').trigger('click')
-				if (({}).hasOwnProperty.call(data, 'error')) {
+				if (hasProp(data, 'error')) {
 					swal({
 						title: document.l10n.getEntitySync('importContactsError').value,
 						text: document.l10n.getEntitySync('importContactsErrorText').value,

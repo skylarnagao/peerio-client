@@ -14,7 +14,7 @@ Peerio.UI.controller('loginForm', function($scope) {
 	}
 	$scope.$on('login', function(event, args) {
 		$scope.login.showLoading = true
-		$scope.$apply()
+		//$scope.$apply()
 		Peerio.user.login(args.username, args.passOrPIN, args.skipPIN, function() {
 			if (Peerio.user.authTokens.length) {
 				Peerio.network.getSettings(function(data) {

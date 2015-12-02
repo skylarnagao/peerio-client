@@ -8,7 +8,7 @@ Peerio.UI.controller('attachFile', function($scope, $sce) {
 		$scope.attachFile.recipients = args.recipients
 		$scope.attachFile.opener = args.opener
 		$scope.attachFile.searchFilter = ''
-		$scope.$apply()
+		//$scope.$apply()
 	})
 	$scope.$on('attachFileReset', function() {
 		$scope.attachFile.ids = []
@@ -26,7 +26,7 @@ Peerio.UI.controller('attachFile', function($scope, $sce) {
 		return Peerio.file.truncateFileName(fileName)
 	}
 	$scope.attachFile.getIcon = function(fileID) {
-		if (({}).hasOwnProperty.call(Peerio.user.files, fileID)) {
+		if (hasProp(Peerio.user.files, fileID)) {
 			return $sce.trustAsHtml(
 				Peerio.user.files[fileID].icon
 			)

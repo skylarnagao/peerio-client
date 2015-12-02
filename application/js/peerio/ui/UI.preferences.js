@@ -60,7 +60,7 @@ Peerio.UI.controller('preferences', function($scope) {
 			Peerio.network.updateSettings({
 				localeCode: $scope.preferences.language
 			}, function(data) {
-				if (({}).hasOwnProperty.call(data, 'error')) {
+				if (hasProp(data, 'error')) {
 					swal({
 						title: document.l10n.getEntitySync('error').value,
 						text: document.l10n.getEntitySync('errorText').value,
@@ -105,7 +105,7 @@ Peerio.UI.controller('preferences', function($scope) {
 			Peerio.network.updateSettings({
 				receiveMessageNotifications: !Peerio.user.settings.receiveMessageNotifications
 			}, function(data) {
-				if (({}).hasOwnProperty.call(data, 'error')) {
+				if (hasProp(data, 'error')) {
 					$scope.preferences.receiveMessageNotifications = Peerio.user.settings.receiveMessageNotifications
 					$scope.$apply()
 					swal({
@@ -135,7 +135,7 @@ Peerio.UI.controller('preferences', function($scope) {
 			Peerio.network.updateSettings({
 				useSounds: !Peerio.user.settings.useSounds
 			}, function(data) {
-				if (({}).hasOwnProperty.call(data, 'error')) {
+				if (hasProp(data, 'error')) {
 					$scope.preferences.useSounds = Peerio.user.settings.useSounds
 					$scope.$apply()
 					swal({

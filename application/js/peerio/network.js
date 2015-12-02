@@ -14,10 +14,12 @@ Peerio.network = {};
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.validateUsername = function (username, callback) {
-  if (!username) { return false }
-  Peerio.socket.emit('validateUsername', {
-    username: username
-  }, callback)
+    if (!username) {
+        return false
+    }
+    Peerio.socket.emit('validateUsername', {
+        username: username
+    }, callback)
 }
 
 /**
@@ -26,11 +28,13 @@ Peerio.network.validateUsername = function (username, callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.validateAddress = function (address, callback) {
-  var parsed = Peerio.util.parseAddress(address)
-  if (!parsed) { return false }
-  Peerio.socket.emit('validateAddress', {
-    address: parsed
-  }, callback)
+    var parsed = Peerio.util.parseAddress(address)
+    if (!parsed) {
+        return false
+    }
+    Peerio.socket.emit('validateAddress', {
+        address: parsed
+    }, callback)
 }
 
 /**
@@ -39,7 +43,7 @@ Peerio.network.validateAddress = function (address, callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.registerAccount = function (accountInfo, callback) {
-  Peerio.socket.emit('registrationRequest', accountInfo, callback)
+    Peerio.socket.emit('registrationRequest', accountInfo, callback)
 }
 
 /**
@@ -48,9 +52,9 @@ Peerio.network.registerAccount = function (accountInfo, callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.returnAccountCreationToken = function (decryptedToken, callback) {
-  Peerio.socket.emit('accountCreationResponse', {
-    accountCreationToken: decryptedToken
-  }, callback)
+    Peerio.socket.emit('accountCreationResponse', {
+        accountCreationToken: decryptedToken
+    }, callback)
 }
 
 /**
@@ -59,10 +63,10 @@ Peerio.network.returnAccountCreationToken = function (decryptedToken, callback) 
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.sendAccountConfirmation = function (confirmationCode, callback) {
-  Peerio.socket.emit('accountConfirmation', {
-    username: Peerio.user.username,
-    confirmationCode: confirmationCode
-  }, callback)
+    Peerio.socket.emit('accountConfirmation', {
+        username: Peerio.user.username,
+        confirmationCode: confirmationCode
+    }, callback)
 }
 
 /**
@@ -70,13 +74,13 @@ Peerio.network.sendAccountConfirmation = function (confirmationCode, callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.getAuthTokens = function (callback) {
-  console.log('authTokenRequest')
-  Peerio.socket.emit('authTokenRequest', {
-    username: Peerio.user.username,
-    miniLockID: Peerio.user.miniLockID,
-    version: Peerio.config.version,
-    platform: Peerio.platform
-  }, callback)
+    console.log('authTokenRequest')
+    Peerio.socket.emit('authTokenRequest', {
+        username: Peerio.user.username,
+        miniLockID: Peerio.user.miniLockID,
+        version: Peerio.config.version,
+        platform: Peerio.platform
+    }, callback)
 }
 
 /**
@@ -84,9 +88,9 @@ Peerio.network.getAuthTokens = function (callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.getSettings = function (callback) {
-  Peerio.socket.emit('getSettings', {
-    authToken: Peerio.user.popAuthToken()
-  }, callback)
+    Peerio.socket.emit('getSettings', {
+        authToken: Peerio.user.popAuthToken()
+    }, callback)
 }
 
 /**
@@ -97,8 +101,8 @@ Peerio.network.getSettings = function (callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.updateSettings = function (settingsObject, callback) {
-  settingsObject.authToken = Peerio.user.popAuthToken()
-  Peerio.socket.emit('updateSettings', settingsObject, callback)
+    settingsObject.authToken = Peerio.user.popAuthToken()
+    Peerio.socket.emit('updateSettings', settingsObject, callback)
 }
 
 /**
@@ -107,12 +111,14 @@ Peerio.network.updateSettings = function (settingsObject, callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.addAddress = function (address, callback) {
-  address = Peerio.util.parseAddress(address)
-  if (!address) { return false }
-  Peerio.socket.emit('addAddress', {
-    address: address,
-    authToken: Peerio.user.popAuthToken()
-  }, callback)
+    address = Peerio.util.parseAddress(address)
+    if (!address) {
+        return false
+    }
+    Peerio.socket.emit('addAddress', {
+        address: address,
+        authToken: Peerio.user.popAuthToken()
+    }, callback)
 }
 
 /**
@@ -122,15 +128,17 @@ Peerio.network.addAddress = function (address, callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.confirmAddress = function (address, code, callback) {
-  address = Peerio.util.parseAddress(address)
-  if (!address) { return false }
-  Peerio.socket.emit('confirmAddress', {
-    address: {
-      value: address.value
-    },
-    confirmationCode: code,
-    authToken: Peerio.user.popAuthToken()
-  }, callback)
+    address = Peerio.util.parseAddress(address)
+    if (!address) {
+        return false
+    }
+    Peerio.socket.emit('confirmAddress', {
+        address: {
+            value: address.value
+        },
+        confirmationCode: code,
+        authToken: Peerio.user.popAuthToken()
+    }, callback)
 }
 
 /**
@@ -139,14 +147,16 @@ Peerio.network.confirmAddress = function (address, code, callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.setPrimaryAddress = function (address, callback) {
-  address = Peerio.util.parseAddress(address)
-  if (!address) { return false }
-  Peerio.socket.emit('setPrimaryAddress', {
-    address: {
-      value: address.value
-    },
-    authToken: Peerio.user.popAuthToken()
-  }, callback)
+    address = Peerio.util.parseAddress(address)
+    if (!address) {
+        return false
+    }
+    Peerio.socket.emit('setPrimaryAddress', {
+        address: {
+            value: address.value
+        },
+        authToken: Peerio.user.popAuthToken()
+    }, callback)
 }
 
 /**
@@ -155,14 +165,16 @@ Peerio.network.setPrimaryAddress = function (address, callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.removeAddress = function (address, callback) {
-  address = Peerio.util.parseAddress(address)
-  if (!address) { return false }
-  Peerio.socket.emit('removeAddress', {
-    address: {
-      value: address.value
-    },
-    authToken: Peerio.user.popAuthToken()
-  }, callback)
+    address = Peerio.util.parseAddress(address)
+    if (!address) {
+        return false
+    }
+    Peerio.socket.emit('removeAddress', {
+        address: {
+            value: address.value
+        },
+        authToken: Peerio.user.popAuthToken()
+    }, callback)
 }
 
 /**
@@ -171,10 +183,10 @@ Peerio.network.removeAddress = function (address, callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.getMiniLockID = function (username, callback) {
-  Peerio.socket.emit('getMiniLockID', {
-    username: username,
-    authToken: Peerio.user.popAuthToken()
-  }, callback)
+    Peerio.socket.emit('getMiniLockID', {
+        username: username,
+        authToken: Peerio.user.popAuthToken()
+    }, callback)
 }
 
 /**
@@ -182,9 +194,9 @@ Peerio.network.getMiniLockID = function (username, callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.getContacts = function (callback) {
-  Peerio.socket.emit('getContacts', {
-    authToken: Peerio.user.popAuthToken()
-  }, callback)
+    Peerio.socket.emit('getContacts', {
+        authToken: Peerio.user.popAuthToken()
+    }, callback)
 }
 
 /**
@@ -192,9 +204,9 @@ Peerio.network.getContacts = function (callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.getSentContactRequests = function (callback) {
-  Peerio.socket.emit('getSentContactRequests', {
-    authToken: Peerio.user.popAuthToken()
-  }, callback)
+    Peerio.socket.emit('getSentContactRequests', {
+        authToken: Peerio.user.popAuthToken()
+    }, callback)
 }
 
 /**
@@ -202,9 +214,9 @@ Peerio.network.getSentContactRequests = function (callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.getReceivedContactRequests = function (callback) {
-  Peerio.socket.emit('getReceivedContactRequests', {
-    authToken: Peerio.user.popAuthToken()
-  }, callback)
+    Peerio.socket.emit('getReceivedContactRequests', {
+        authToken: Peerio.user.popAuthToken()
+    }, callback)
 }
 
 /**
@@ -212,9 +224,9 @@ Peerio.network.getReceivedContactRequests = function (callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.getReceivedContactRequests = function (callback) {
-  Peerio.socket.emit('getReceivedContactRequests', {
-    authToken: Peerio.user.popAuthToken()
-  }, callback)
+    Peerio.socket.emit('getReceivedContactRequests', {
+        authToken: Peerio.user.popAuthToken()
+    }, callback)
 }
 
 /**
@@ -223,12 +235,14 @@ Peerio.network.getReceivedContactRequests = function (callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.addressLookup = function (address, callback) {
-  address = Peerio.util.parseAddress(address)
-  if (!address) { return false }
-  Peerio.socket.emit('addressLookup', {
-    address: address,
-    authToken: Peerio.user.popAuthToken()
-  }, callback)
+    address = Peerio.util.parseAddress(address)
+    if (!address) {
+        return false
+    }
+    Peerio.socket.emit('addressLookup', {
+        address: address,
+        authToken: Peerio.user.popAuthToken()
+    }, callback)
 }
 
 /**
@@ -237,10 +251,10 @@ Peerio.network.addressLookup = function (address, callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.addContact = function (contacts, callback) {
-  Peerio.socket.emit('addContact', {
-    contacts: contacts,
-    authToken: Peerio.user.popAuthToken()
-  }, callback)
+    Peerio.socket.emit('addContact', {
+        contacts: contacts,
+        authToken: Peerio.user.popAuthToken()
+    }, callback)
 }
 
 /**
@@ -249,10 +263,10 @@ Peerio.network.addContact = function (contacts, callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.cancelContactRequest = function (username, callback) {
-  Peerio.socket.emit('cancelContactRequest', {
-    username: username,
-    authToken: Peerio.user.popAuthToken()
-  }, callback)
+    Peerio.socket.emit('cancelContactRequest', {
+        username: username,
+        authToken: Peerio.user.popAuthToken()
+    }, callback)
 }
 
 /**
@@ -261,10 +275,10 @@ Peerio.network.cancelContactRequest = function (username, callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.acceptContactRequest = function (username, callback) {
-  Peerio.socket.emit('acceptContactRequest', {
-    username: username,
-    authToken: Peerio.user.popAuthToken()
-  }, callback)
+    Peerio.socket.emit('acceptContactRequest', {
+        username: username,
+        authToken: Peerio.user.popAuthToken()
+    }, callback)
 }
 
 /**
@@ -273,10 +287,10 @@ Peerio.network.acceptContactRequest = function (username, callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.declineContactRequest = function (username, callback) {
-  Peerio.socket.emit('declineContactRequest', {
-    username: username,
-    authToken: Peerio.user.popAuthToken()
-  }, callback)
+    Peerio.socket.emit('declineContactRequest', {
+        username: username,
+        authToken: Peerio.user.popAuthToken()
+    }, callback)
 }
 
 /**
@@ -285,10 +299,10 @@ Peerio.network.declineContactRequest = function (username, callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.removeContact = function (username, callback) {
-  Peerio.socket.emit('removeContact', {
-    username: username,
-    authToken: Peerio.user.popAuthToken()
-  }, callback)
+    Peerio.socket.emit('removeContact', {
+        username: username,
+        authToken: Peerio.user.popAuthToken()
+    }, callback)
 }
 
 /**
@@ -297,42 +311,50 @@ Peerio.network.removeContact = function (username, callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.inviteUserAddress = function (address, callback) {
-  address = Peerio.util.parseAddress(address)
-  if (!address) { return false }
-  Peerio.socket.emit('inviteUserAddress', {
-    address: address,
-    authToken: Peerio.user.popAuthToken()
-  }, callback)
+    address = Peerio.util.parseAddress(address)
+    if (!address) {
+        return false
+    }
+    Peerio.socket.emit('inviteUserAddress', {
+        address: address,
+        authToken: Peerio.user.popAuthToken()
+    }, callback)
 }
 
 /**
  * Send a Peerio message to contacts. Uses an authToken.
- * @param {string} createMessageObject - created with Peerio.message.new.
+ * @param {object} messageObject - created with Peerio.message.new.
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.createMessage = function (messageObject, callback) {
-  var socketMsg = {
-    isDraft: messageObject.isDraft,
-    recipients: messageObject.recipients,
-    header: messageObject.header,
-    body: messageObject.body,
-    files: messageObject.files,
-    authToken: Peerio.user.popAuthToken()
-  }
-  if (({}).hasOwnProperty.call(messageObject, 'conversationID')) {
-    socketMsg.conversationID = messageObject.conversationID
-  }
-  Peerio.socket.emit('createMessage', socketMsg, callback)
-}
+
+    var socketMsg = {
+        isDraft: messageObject.isDraft,
+        recipients: messageObject.recipients,
+        header: messageObject.header,
+        body: messageObject.body,
+        files: messageObject.files,
+        outerIndex: messageObject.outerIndex,
+        timestamp: messageObject.timestamp,
+        version: messageObject.version,
+        authToken: Peerio.user.popAuthToken()
+    };
+
+    if (hasProp(messageObject, 'conversationID')) {
+        socketMsg.conversationID = messageObject.conversationID;
+    }
+
+    Peerio.socket.emit('createMessage', socketMsg, callback);
+};
 
 /**
  * Retrieve a list of all user messages. Uses an authToken.
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.getAllMessages = function (callback) {
-  Peerio.socket.emit('getAllMessages', {
-    authToken: Peerio.user.popAuthToken()
-  }, callback)
+    Peerio.socket.emit('getAllMessages', {
+        authToken: Peerio.user.popAuthToken()
+    }, callback)
 }
 
 /**
@@ -341,10 +363,10 @@ Peerio.network.getAllMessages = function (callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.getMessages = function (ids, callback) {
-  Peerio.socket.emit('getMessages', {
-    ids: ids,
-    authToken: Peerio.user.popAuthToken()
-  }, callback)
+    Peerio.socket.emit('getMessages', {
+        ids: ids,
+        authToken: Peerio.user.popAuthToken()
+    }, callback)
 }
 
 /**
@@ -352,9 +374,9 @@ Peerio.network.getMessages = function (ids, callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.getMessageIDs = function (callback) {
-  Peerio.socket.emit('getMessageIDs', {
-    authToken: Peerio.user.popAuthToken()
-  }, callback)
+    Peerio.socket.emit('getMessageIDs', {
+        authToken: Peerio.user.popAuthToken()
+    }, callback)
 }
 
 /**
@@ -362,9 +384,9 @@ Peerio.network.getMessageIDs = function (callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.getModifiedMessageIDs = function (callback) {
-  Peerio.socket.emit('getModifiedMessageIDs', {
-    authToken: Peerio.user.popAuthToken()
-  }, callback)
+    Peerio.socket.emit('getModifiedMessageIDs', {
+        authToken: Peerio.user.popAuthToken()
+    }, callback)
 }
 
 /**
@@ -372,9 +394,9 @@ Peerio.network.getModifiedMessageIDs = function (callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.getConversationIDs = function (callback) {
-  Peerio.socket.emit('getConversationIDs', {
-    authToken: Peerio.user.popAuthToken()
-  }, callback)
+    Peerio.socket.emit('getConversationIDs', {
+        authToken: Peerio.user.popAuthToken()
+    }, callback)
 }
 
 /**
@@ -382,9 +404,9 @@ Peerio.network.getConversationIDs = function (callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.getAllConversations = function (callback) {
-  Peerio.socket.emit('getAllConversations', {
-    authToken: Peerio.user.popAuthToken()
-  }, callback)
+    Peerio.socket.emit('getAllConversations', {
+        authToken: Peerio.user.popAuthToken()
+    }, callback)
 }
 
 /**
@@ -393,10 +415,10 @@ Peerio.network.getAllConversations = function (callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.getConversationPages = function (conversations, callback) {
-  Peerio.socket.emit('getConversationPages', {
-    conversations: conversations,
-    authToken: Peerio.user.popAuthToken()
-  }, callback)
+    Peerio.socket.emit('getConversationPages', {
+        conversations: conversations,
+        authToken: Peerio.user.popAuthToken()
+    }, callback)
 }
 
 /**
@@ -405,10 +427,10 @@ Peerio.network.getConversationPages = function (conversations, callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.readMessages = function (read, callback) {
-  Peerio.socket.emit('readMessages', {
-    read: read,
-    authToken: Peerio.user.popAuthToken()
-  }, callback)
+    Peerio.socket.emit('readMessages', {
+        read: read,
+        authToken: Peerio.user.popAuthToken()
+    }, callback)
 }
 
 /**
@@ -417,10 +439,10 @@ Peerio.network.readMessages = function (read, callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.removeConversation = function (ids, callback) {
-  Peerio.socket.emit('removeConversation', {
-    ids: ids,
-    authToken: Peerio.user.popAuthToken()
-  }, callback)
+    Peerio.socket.emit('removeConversation', {
+        ids: ids,
+        authToken: Peerio.user.popAuthToken()
+    }, callback)
 }
 
 /**
@@ -434,8 +456,8 @@ Peerio.network.removeConversation = function (ids, callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.uploadFile = function (uploadFileObject, callback) {
-  uploadFileObject.authToken = Peerio.user.popAuthToken()
-  Peerio.socket.emit('uploadFile', uploadFileObject, callback)
+    uploadFileObject.authToken = Peerio.user.popAuthToken()
+    Peerio.socket.emit('uploadFile', uploadFileObject, callback)
 }
 
 /**
@@ -447,8 +469,8 @@ Peerio.network.uploadFile = function (uploadFileObject, callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.uploadFileChunk = function (chunkObject, callback) {
-  chunkObject.authToken = Peerio.user.popAuthToken()
-  Peerio.socket.emit('uploadFileChunk', chunkObject, callback)
+    chunkObject.authToken = Peerio.user.popAuthToken()
+    Peerio.socket.emit('uploadFileChunk', chunkObject, callback)
 }
 
 /**
@@ -457,10 +479,10 @@ Peerio.network.uploadFileChunk = function (chunkObject, callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.getFile = function (id, callback) {
-  Peerio.socket.emit('getFile', {
-    id: id,
-    authToken: Peerio.user.popAuthToken()
-  }, callback)
+    Peerio.socket.emit('getFile', {
+        id: id,
+        authToken: Peerio.user.popAuthToken()
+    }, callback)
 }
 
 /**
@@ -468,9 +490,9 @@ Peerio.network.getFile = function (id, callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.getFiles = function (callback) {
-  Peerio.socket.emit('getFiles', {
-    authToken: Peerio.user.popAuthToken()
-  }, callback)
+    Peerio.socket.emit('getFiles', {
+        authToken: Peerio.user.popAuthToken()
+    }, callback)
 }
 
 /**
@@ -479,10 +501,10 @@ Peerio.network.getFiles = function (callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.downloadFile = function (id, callback) {
-  Peerio.socket.emit('downloadFile', {
-    id: id,
-    authToken: Peerio.user.popAuthToken()
-  }, callback)
+    Peerio.socket.emit('downloadFile', {
+        id: id,
+        authToken: Peerio.user.popAuthToken()
+    }, callback)
 }
 
 /**
@@ -491,10 +513,10 @@ Peerio.network.downloadFile = function (id, callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.removeFile = function (ids, callback) {
-  Peerio.socket.emit('removeFile', {
-    ids: ids,
-    authToken: Peerio.user.popAuthToken()
-  }, callback)
+    Peerio.socket.emit('removeFile', {
+        ids: ids,
+        authToken: Peerio.user.popAuthToken()
+    }, callback)
 }
 
 /**
@@ -503,10 +525,10 @@ Peerio.network.removeFile = function (ids, callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.nukeFile = function (ids, callback) {
-  Peerio.socket.emit('nukeFile', {
-    ids: ids,
-    authToken: Peerio.user.popAuthToken()
-  }, callback)
+    Peerio.socket.emit('nukeFile', {
+        ids: ids,
+        authToken: Peerio.user.popAuthToken()
+    }, callback)
 }
 
 /**
@@ -514,9 +536,9 @@ Peerio.network.nukeFile = function (ids, callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.setUp2FA = function (callback) {
-  Peerio.socket.emit('setUp2FA', {
-    authToken: Peerio.user.popAuthToken()
-  }, callback)
+    Peerio.socket.emit('setUp2FA', {
+        authToken: Peerio.user.popAuthToken()
+    }, callback)
 }
 
 /**
@@ -525,10 +547,10 @@ Peerio.network.setUp2FA = function (callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.confirm2FA = function (code, callback) {
-  Peerio.socket.emit('confirm2FA', {
-    twoFACode: code,
-    authToken: Peerio.user.popAuthToken()
-  }, callback)
+    Peerio.socket.emit('confirm2FA', {
+        twoFACode: code,
+        authToken: Peerio.user.popAuthToken()
+    }, callback)
 }
 
 /**
@@ -537,11 +559,11 @@ Peerio.network.confirm2FA = function (code, callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.validate2FA = function (code, callback) {
-  Peerio.socket.emit('validate2FA', {
-    twoFACode: code,
-    username: Peerio.user.username,
-    miniLockID: Peerio.user.miniLockID
-  }, callback)
+    Peerio.socket.emit('validate2FA', {
+        twoFACode: code,
+        username: Peerio.user.username,
+        miniLockID: Peerio.user.miniLockID
+    }, callback)
 }
 
 /**
@@ -549,87 +571,87 @@ Peerio.network.validate2FA = function (code, callback) {
  * @param {function} callback - Callback function with server data.
  */
 Peerio.network.closeAccount = function (callback) {
-  Peerio.socket.emit('closeAccount', {
-    authToken: Peerio.user.popAuthToken()
-  }, callback)
+    Peerio.socket.emit('closeAccount', {
+        authToken: Peerio.user.popAuthToken()
+    }, callback)
 }
 
 Peerio.network.createConversationFolder = function (name, callback) {
-  Peerio.socket.emit('createConversationFolder', {
-    name: name,
-    authToken: Peerio.user.popAuthToken()
-  }, callback);
+    Peerio.socket.emit('createConversationFolder', {
+        name: name,
+        authToken: Peerio.user.popAuthToken()
+    }, callback);
 };
 
 Peerio.network.createFileFolder = function (name, callback) {
-  Peerio.socket.emit('createFileFolder', {
-    name: name,
-    authToken: Peerio.user.popAuthToken()
-  }, callback);
+    Peerio.socket.emit('createFileFolder', {
+        name: name,
+        authToken: Peerio.user.popAuthToken()
+    }, callback);
 };
 
 Peerio.network.renameConversationFolder = function (id, name, callback) {
-  Peerio.socket.emit('renameConversationFolder', {
-    id: id,
-    name: name,
-    authToken: Peerio.user.popAuthToken()
-  }, callback);
+    Peerio.socket.emit('renameConversationFolder', {
+        id: id,
+        name: name,
+        authToken: Peerio.user.popAuthToken()
+    }, callback);
 };
 
 Peerio.network.renameFileFolder = function (id, name, callback) {
-  Peerio.socket.emit('renameFileFolder', {
-    id: id,
-    name: name,
-    authToken: Peerio.user.popAuthToken()
-  }, callback);
+    Peerio.socket.emit('renameFileFolder', {
+        id: id,
+        name: name,
+        authToken: Peerio.user.popAuthToken()
+    }, callback);
 };
 
 Peerio.network.removeConversationFolder = function (id, callback) {
-  Peerio.socket.emit('removeConversationFolder', {
-    id: id,
-    authToken: Peerio.user.popAuthToken()
-  }, callback);
+    Peerio.socket.emit('removeConversationFolder', {
+        id: id,
+        authToken: Peerio.user.popAuthToken()
+    }, callback);
 };
 
 Peerio.network.removeFileFolder = function (id, callback) {
-  Peerio.socket.emit('removeFileFolder', {
-    id: id,
-    authToken: Peerio.user.popAuthToken()
-  }, callback);
+    Peerio.socket.emit('removeFileFolder', {
+        id: id,
+        authToken: Peerio.user.popAuthToken()
+    }, callback);
 };
 
 Peerio.network.moveConversationIntoFolder = function (id, folderId, callback) {
-  if (!Array.isArray(id))
-    id = [id];
+    if (!Array.isArray(id))
+        id = [id];
 
-  var data =  {
-    ids: id,
-    authToken: Peerio.user.popAuthToken()
-  };
-  if(folderId) data.folderID = folderId;
-  Peerio.socket.emit('moveConversationIntoFolder', data, callback);
+    var data = {
+        ids: id,
+        authToken: Peerio.user.popAuthToken()
+    };
+    if (folderId) data.folderID = folderId;
+    Peerio.socket.emit('moveConversationIntoFolder', data, callback);
 };
 
 Peerio.network.moveFileIntoFolder = function (id, folderId, callback) {
-  if (!Array.isArray(id))
-    id = [id];
+    if (!Array.isArray(id))
+        id = [id];
 
-  var data =  {
-    ids: id,
-    authToken: Peerio.user.popAuthToken()
-  };
-  if(folderId) data.folderID = folderId;
-  Peerio.socket.emit('moveFileIntoFolder', data, callback);
+    var data = {
+        ids: id,
+        authToken: Peerio.user.popAuthToken()
+    };
+    if (folderId) data.folderID = folderId;
+    Peerio.socket.emit('moveFileIntoFolder', data, callback);
 };
 
 Peerio.network.getConversationFolders = function (callback) {
-  Peerio.socket.emit('getConversationFolders', {
-    authToken: Peerio.user.popAuthToken()
-  }, callback);
+    Peerio.socket.emit('getConversationFolders', {
+        authToken: Peerio.user.popAuthToken()
+    }, callback);
 };
 
 Peerio.network.getFileFolders = function (callback) {
-  Peerio.socket.emit('getFileFolders', {
-    authToken: Peerio.user.popAuthToken()
-  }, callback);
+    Peerio.socket.emit('getFileFolders', {
+        authToken: Peerio.user.popAuthToken()
+    }, callback);
 };

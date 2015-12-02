@@ -95,7 +95,7 @@ Peerio.file = {
 					if (typeof(onProgress) === 'function') {
 						onProgress(data, id)
 					}
-					if (({}).hasOwnProperty.call(data, 'error')) {
+					if (hasProp(data, 'error')) {
 						Peerio.user.files[id].uploading = false
 					}
 					if (chunkNumber < totalChunks - 1) {
@@ -122,7 +122,7 @@ Peerio.file = {
 		var result = {}
 		var getNextFile = function(count) {
 			Peerio.network.getFile(fileIDs[count], function(file) {
-				if (({}).hasOwnProperty.call(file, 'error')) {
+				if (hasProp(file, 'error')) {
 					result[fileIDs[count]] = 'error'
 				}
 				else {
@@ -164,7 +164,7 @@ Peerio.file = {
 		Peerio.network.getFiles(function(files) {
 			files = files.files
 			for (var file in files) {
-				if (({}).hasOwnProperty.call(files, file)) {
+				if (hasProp(files, file)) {
 					files[file].name = Peerio.crypto.decryptFileName(
 						files[file].id, files[file].header
 					)
@@ -191,7 +191,7 @@ Peerio.file = {
 	 */
 	Peerio.file.removeFile = function(ids, callback) {
 		Peerio.network.removeFile(ids, function(data) {
-			if (({}).hasOwnProperty.call(data, 'success')) {
+			if (hasProp(data, 'success')) {
 				data.success.forEach(function(s) {
 					if (ids.indexOf(s) >= 0) {
 						delete Peerio.user.files[s]
@@ -211,7 +211,7 @@ Peerio.file = {
 	 */
 	Peerio.file.nukeFile = function(ids, callback) {
 		Peerio.network.nukeFile(ids, function(data) {
-			if (({}).hasOwnProperty.call(data, 'success')) {
+			if (hasProp(data, 'success')) {
 				data.success.forEach(function(s) {
 					if (ids.indexOf(s) >= 0) {
 						delete Peerio.user.files[s]
@@ -233,7 +233,7 @@ Peerio.file = {
 	 */
 	Peerio.file.downloadFile = function(id, header, progressHandler, callback) {
 		Peerio.network.downloadFile(id, function(data) {
-			if (!({}).hasOwnProperty.call(data, 'url')) {
+			if (!hasProp(data, 'url')) {
 				callback(false)
 				return false
 			}
@@ -297,8 +297,8 @@ Peerio.file = {
 		}
 		recipients.forEach(function(recipient) {
 			if (
-				({}).hasOwnProperty.call(Peerio.user.contacts, recipient) &&
-				({}).hasOwnProperty.call(Peerio.user.contacts[recipient], 'miniLockID') &&
+				hasProp(Peerio.user.contacts, recipient) &&
+				hasProp(Peerio.user.contacts[recipient], 'miniLockID') &&
 				(miniLockIDs.indexOf(Peerio.user.contacts[recipient].miniLockID) < 0)
 			) {
 				miniLockIDs.push(Peerio.user.contacts[recipient].miniLockID)

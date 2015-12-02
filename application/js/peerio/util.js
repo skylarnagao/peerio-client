@@ -47,7 +47,7 @@ Peerio.util = {};
 	Peerio.util.objectToUint8Array = function(obj) {
 		var arr = []
 		for (var i in obj) {
-			if (({}).hasOwnProperty.call(obj, i)) {
+			if (hasProp(obj, i)) {
 				arr[i] = obj[i]
 			}
 		}
@@ -99,9 +99,9 @@ Peerio.util = {};
 			)
 		}
 		if (
-			({}).hasOwnProperty.call(Peerio.user.contacts, username) &&
-			({}).hasOwnProperty.call(Peerio.user.contacts[username], 'firstName') &&
-			({}).hasOwnProperty.call(Peerio.user.contacts[username], 'lastName')
+			hasProp(Peerio.user.contacts, username) &&
+			hasProp(Peerio.user.contacts[username], 'firstName') &&
+			hasProp(Peerio.user.contacts[username], 'lastName')
 		) {
 			return (
 				Peerio.user.contacts[username].firstName + ' ' +
@@ -119,7 +119,7 @@ Peerio.util = {};
 	Peerio.util.getNewTOFU = function() {
 		var TOFU = {}
 		for (var contact in Peerio.user.contacts) {
-			if (({}).hasOwnProperty.call(Peerio.user.contacts, contact)) {
+			if (hasProp(Peerio.user.contacts, contact)) {
 				TOFU[contact] = Peerio.user.contacts[contact].miniLockID
 			}
 		}
@@ -135,8 +135,8 @@ Peerio.util = {};
 		var notMatch = []
 		var notFound = []
 		for (var contact in Peerio.user.contacts) {
-			if (({}).hasOwnProperty.call(Peerio.user.contacts, contact)) {
-				if (!({}).hasOwnProperty.call(TOFU, contact)) {
+			if (hasProp(Peerio.user.contacts, contact)) {
+				if (!hasProp(TOFU, contact)) {
 					notFound.push(contact)
 				}
 				else if (

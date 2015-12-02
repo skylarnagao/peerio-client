@@ -105,27 +105,33 @@ Peerio.UI.controller('newMessage', function($scope) {
 		if ($scope.newMessage.recipients.indexOf(Peerio.user.username) < 0) {
 			$scope.newMessage.recipients.push(Peerio.user.username)
 		}
-		$scope.newMessage.sending = true
+		$scope.newMessage.sending = true;
 		$scope.$root.$broadcast(
 			'attachFilePopulate', {
 				recipients: $scope.newMessage.recipients,
 				opener: 'newMessage'
 			}
-		)
-		Peerio.message.new({
+		);
+		var msgInfo = {
+            version: '1.1.0',
 			isDraft: isDraft,
 			recipients: $scope.newMessage.recipients,
 			subject: $scope.newMessage.subject,
 			body: $scope.newMessage.body,
-			sequence: 0,
+			sequence: 0, //todo deprecated, safe remove in next releases
+			innerIndex: 0, // starting with 0
+			secretConversationId: nacl.util.encodeBase64(nacl.randomBytes(32)),
+            timestamp: Date.now(),
 			fileIDs: $scope.newMessage.attachFileIDs
-		}, function(messageObject, failed) {
+		};
+
+		Peerio.message.new(msgInfo, function(messageObject, failed) {
 			if (Peerio.user.settings.useSounds) {
-				Peerio.notification.playSound('sending')
+				Peerio.notification.playSound('sending');
 			}
 			Peerio.network.createMessage(messageObject, function(result) {
-				$scope.$root.$broadcast('attachFileReset', null)
-				if (({}).hasOwnProperty.call(result, 'error')) {
+				$scope.$root.$broadcast('attachFileReset', null);
+				if (hasProp(result, 'error')) {
 					if (result.error === 413) {
 						swal({
 							title: document.l10n.getEntitySync('quotaError').value,
