@@ -63,6 +63,7 @@ Peerio.message = {};
         var createMessage = function () {
             var message = {
                 version: messageInfo.version,
+                metadataVersion: messageInfo.metadataVersion,
                 subject: messageInfo.subject,
                 message: messageInfo.body,
                 receipt: nacl.util.encodeBase64(nacl.randomBytes(32)),
@@ -86,7 +87,7 @@ Peerio.message = {};
                         callback(false);
 
                     var messageObject = {
-                        version: messageInfo.version,
+                        version: messageInfo.metadataVersion,
                         isDraft: messageInfo.isDraft,
                         recipients: messageInfo.recipients,
                         header: header,
@@ -427,6 +428,7 @@ Peerio.message = {};
                     count++;
                     // protocol validation
                     // !! proper secretConversationId match validation is too hard/time consuming in this codebase, it's been taken care of in a new one
+                    // todo decrypted.metadataVersion >= messageVersion
                     if (decrypted && (message.version === '1.1.0' || decrypted.version === '1.1.0')) {
                         if (message.version !== decrypted.version
                             || typeof(message.outerIndex) !== 'number'
