@@ -2,7 +2,7 @@
 	"main": "index.html",
 	"name": "Peerio",
 	"author": "Technologies Peerio Inc.",
-	"description": "Secure message and file sharing for everyone. Our worldwide cloud storage lets you work anywhere, while end-to-end encryption keeps your data safe everywhere.",
+	"description": "A simple and secure way to share private messages and files and store them in the cloud. End-to-end encrypted, open source, audited, free.",
 	"version": "1.2.0",
 	"keywords": [
 		"peerio",
