@@ -114,6 +114,7 @@ Peerio.UI.controller('newMessage', function($scope) {
 		);
 		var msgInfo = {
             version: '1.1.0',
+            metadataVersion: '1.1.0',
 			isDraft: isDraft,
 			recipients: $scope.newMessage.recipients,
 			subject: $scope.newMessage.subject,

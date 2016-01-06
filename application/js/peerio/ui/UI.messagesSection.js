@@ -917,6 +917,7 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
 
             var msgInfo = {
                 version: '1.1.0', // new version still backwards compatible
+                metadataVersion: '1.1.0',
                 isDraft: false,
                 recipients: conversation.original.decrypted.participants,
                 subject: conversation.original.decrypted.subject,
