@@ -320,6 +320,6 @@
     <unsorted "No ordenadas">
     <typePassphraseToConfirm "Para aceptar esta frase-contraseña, por favor, introdúzcala debajo.">
     <passphraseConfirmFailed "Su frase de acceso fue introducida de forma incorrecta. Por favor, guarde su frase de acceso en algún seguro antes de continuar.">
-    <acknowledgedMessage "Mensaje que ha acusado recibo">
-    <addAddressSuggestion "Actualizar información de contacto.">
-    <addAddressSuggestionText "Añadir direcciones de contacto permite: <br><ul><li><strong>Descubrimiento</strong>: Facilita que sus contactos lo encuentren </li><li><strong>Notificaciones</strong>: Reciba mensajes de notificación cuando recibe un mensaje o solicitud de contacto </li><li><strong>Soporte técnico</strong>: Más servicios a través de nuestro Centro de soporte</li></ul><br>¿desea añadir una dirección?">
+    <acknowledgedMessage "Acuso de recibo">
+    <addAddressSuggestion "¿Actualizar información de contacto?">
+    <addAddressSuggestionText "Añadir datos de contacto alternativos permite: <br><ul><li><strong>Descubrimiento</strong>: Facilita que sus contactos le encuentren </li><li><strong>Notificaciones</strong>: Reciba notificaciones de recepción de mensajes y solicitudes de contacto </li><li><strong>Soporte técnico</strong>: Más servicios a través de nuestro Centro de soporte</li></ul><br>¿Desea añadir/actualizar direcciones?">

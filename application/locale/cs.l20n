@@ -1,10 +1,10 @@
 
     <title "Peerio">
     <signupHeader "Zprávy a soubory. Snadno a bezpečně.">
-    <signupIntro "Peerio představuje snadný a bezpečný způsob posílání zpráv, sdílení souborů a uchovávání dokumentů online. Vše je zašifrováno ještě před odesláním do cloudu, takže nikdo, kromě vás a lidí se kterými je sdílíte, nebude mít přístup k vašim datům.<br /><br /><strong>Peerio je nyní v Betě. <a href='https://peerio.com/pages/beta.html' target='_blank'>Zjistěte, co to znamená.</a>.">
+    <signupIntro "Peerio představuje snadný a bezpečný způsob posílání zpráv, sdílení souborů a uchovávání dokumentů online. Vše je zašifrováno ještě před odesláním do cloudu, takže nikdo, kromě vás a lidí se kterými je sdílíte, nebude mít přístup k vašim datům.<br /><br /><strong>Peerio je nyní v Betě. <a href='https://peerio.com/pages/beta.html' target='_blank'>Zjistěte, co to znamená</a>.">
     <username "Uživatelské jméno">
     <passphrase "Přístupová fráze">
-    <passphraseOrPIN "Přístupová fráze nebo Přístupový kód">
+    <passphraseOrPIN "Přístupová fráze či Přístupový kód">
     <login "Přihlásit se">
     <or "nebo">
     <loginFailed "Přihlášení neúspěšné">
@@ -14,18 +14,18 @@
     <signup "Registrovat se">
     <signupProgress "postup registrace">
     <basicInformation "Základní údaje">
-    <desiredUsername "Požadované uživatelské jméno">
-    <usernameNotAvailable "uživatelské jméno je neplatné nebo nedostupné.">
+    <desiredUsername "Uživatelské jméno">
+    <usernameNotAvailable "uživ. jméno neplatné/nedostupné">
     <addressNotAvailable "adresa je neplatná nebo nedostupná.">
     <firstName "Křestní jméno">
     <lastName "Příjmení">
-    <emailOrPhone "E-mail nebo mobilní číslo">
+    <emailOrPhone "E-mail či mobilní číslo">
     <yourPassphrase "Vaše přístupová fráze">
     <infoAlertPassphrase "Pro lepší zabezpečení používá Peerio <a href='https://peerio.zendesk.com/hc/en-us/articles/203657405' target='_blank'>náhodně generované přístupové fráze</a>. <br><br><strong>Tuto přístupovou frázi znáte pouze Vy!</strong> Pokud ji ztratíte, přijdete navždy o přístup ke svému účtu. Proto vám doporučujeme zapsat si vaši přístupovou frázi na papír nebo do bezpečného správce hesel.">
     <signupPassphraseConfirm "Použít tuto přístupovou frázi?">
     <signupPassphraseConfirmText "<ul><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206331095' target='_blank'>Jen vy znáte tuto přístupovou frázi.</a></li> <li>Pokud ji ztratíte, navždy přijdete o vaše data.</li><li><a href='https://peerio.zendesk.com/hc/en-us/articles/206330895' target='_blank'>Zapište si proto tuto frázi na bezpečné místo!</a></li><br><strong>Zadejte prosím svou přístupovou frázi pro pokračování.</strong>">
     <signupYourGeneratedPassphrase "Vaše vygenerovaná přístupová fráze:">
-    <signupPassphraseRefresh "Změnit přístupovou frázi">
+    <signupPassphraseRefresh "Změnit frázi">
     <error "Chyba">
     <errorText "Váš požadavek nemohl být splněn.">
     <warning "Varování">
@@ -233,7 +233,7 @@
     <deleteAccountText "Smazáním vašeho účtu Peerio budou navždy zničena všechna vaše data v Peeriu. Také již nebudete moci získat zpět toto uživatelské jméno.">
     <deleteAccountConfirm "Potvrdit smazání účtu">
     <deleteAccountConfirmText "Jste si jistí? Ztratíte všechna vaše data a již nikdy nebudete moci získat zpět toto uživatelské jméno.">
-    <changePassphrase "Změnit přístupovou frázi">
+    <changePassphrase "Změnit přístup. frázi">
     <changePassphraseText "Bude-li vaše přístupová fráze kompromitována, umožní vám ji Peerio zrušit a nastavit novou. Tato funkce bude k dispozici již brzy.">
     <newPassphrase "Nová přístupová fráze">
     <retypeNewPassphrase "Zopakujte novou přístupovou frázi">
@@ -322,4 +322,4 @@
     <passphraseConfirmFailed "Vaše přístupová fráze byla zadána nesprávně. Přístupovou frázi si prosím, než budete pokračovat, zapište a uchovejte na bezpečném místě.">
     <acknowledgedMessage "Zpráva potvrzena">
     <addAddressSuggestion "Aktualizovat kontaktní údaje?">
-    <addAddressSuggestionText "Přidání alternativních kontaktních údajů umožňuje: <br><ul><li><strong>Nalezení</strong>: Pomožte svým kontaktům Vás najít </li><li><strong>Oznámení</strong>: Oznámení nových zpráv a kontaktů </li><li><strong>Podporu</strong>: Více podpůrných služeb z našeho centra pomoci</li></ul><br>Přejete si aktualizovat své adresy?">
+    <addAddressSuggestionText "Přidání alternativních kontaktních údajů umožňuje: <br><ul><li><strong>Nalezení</strong>: Pomožte svým kontaktům Vás najít </li><li><strong>Oznámení</strong>: Oznámení nových zpráv a kontaktů </li><li><strong>Podporu</strong>: Více služeb poskytovaných naším Centrem podpory</li></ul><br>Přejete si aktualizovat své adresy?">
