@@ -1,18 +1,18 @@
 Summary: Peerio Client
 Name: peerio-client
 Version: 1.2.0
-Release: 1%{?dist}
+Release: 2%{?dist}
 License: GPL3
 Group: Applications/Internet
 Source: https://linux.peerio.com/sources/rh-%{name}-%{version}.tar.gz
 Patch0: https://linux.peerio.com/sources/00-build.patch
+Patch1: https://linux.peerio.com/sources/01-build.patch
+Patch2: https://linux.peerio.com/sources/02-build.patch
 URL: https://peerio.com
 
-BuildRequires: fakeroot
 BuildRequires: make
 BuildRequires: npm
 BuildRequires: sudo
-BuildRequires: transifex-client
 Requires: alsa-lib
 Requires: glibc
 Requires: cairo
@@ -69,5 +69,9 @@ make clean PREFIX=%{buildroot}/usr/share BINPREFIX=%{buildroot}/usr
 %{_mandir}/man1/peerio-client.1.gz
 
 %changelog
+ * Mon Nov 19 2015 Samuel MARTIN MORO <samuel@peerio.com> 1.2.0-2
+ - Fix a couple warnings (license & repository undefined)
+ - remove python-pip dependency & transifex
+ - install nw locally instead of globally
  * Tue Nov 17 2015 Samuel MARTIN MORO <samuel@peerio.com> 1.2.0-1
  - Initial Centos/Fedora release

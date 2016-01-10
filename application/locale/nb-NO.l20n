@@ -321,5 +321,5 @@
     <typePassphraseToConfirm "For å godta denne passordsekvensen, skriv den inn nedenfor">
     <passphraseConfirmFailed "Din passordsekvens ble skrevet inn feil. Lagre din passordsekvens på en sikker måte før du fortsetter.">
     <acknowledgedMessage "Bekreftelsesmelding">
-    <addAddressSuggestion "Update contact information?">
-    <addAddressSuggestionText "Adding alternative contact information allows for: <br><ul><li><strong>Discovery</strong>: Make it easier for your contacts to find you </li><li><strong>Notifications</strong>: New message and contact notifications </li><li><strong>Support</strong>: More support services from our Help Center</li></ul><br>Would you like to update your addresses?">
+    <addAddressSuggestion "Oppdater kontakt-informasjon?">
+    <addAddressSuggestionText "Tillegg av alternativ kontaktinformasjon tillater: <br><ul><li><strong>Oppdagelse</strong>: Gjør det enklere for dine kontakter å finne deg </li><li><strong>Merknader</strong>: Ny meldings- og kontakt-merknader </li><li><strong>Støtte</strong>: Ytterligere støttetjenester fra brukerstøtte</li></ul><br>Ønsker du å oppdatere adressene dine?">

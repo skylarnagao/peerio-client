@@ -1,0 +1,25 @@
+# Maintainer: Samuel Martin Moro <samuel@peerio.com>
+pkgname=peerio-client
+pkgver=1.2.0
+pkgrel=1
+pkgdesc="Peerio Client"
+archs=('i686' 'x86_64')
+url='https://peerio.com'
+license=('GPL3')
+depends=('alsa-lib' 'glibc' 'cairo' 'fontconfig' 'gconf' 'gdk-pixbuf2' 'libnotify' 'libxcomposite' 'libxcursor' 'libxdamage' 'libxfixes' 'libxi' 'libxrandr' 'libxrender' 'libxtst' 'nspr' 'nss' 'pango')
+makedepends=('curl' 'make' 'nodejs' 'sudo' 'fakeroot')
+options=('!strip')
+up2date='curl http://linux.peerio.com/sources/last'
+#source=('http://linux.peerio.com/sources/${pkgname}-${pkgver}.tar.gz')
+source=('http://linux.peerio.com/sources/peerio-client-1.2.0.tar.gz')
+sha1sums=('84761493372f415f1b1db2748f3e89346414e78c')
+build() {
+    cd peerio-client || return 1
+    sed -i 's|.* pip install .*|echo OK; \\|' Makefile || return 1
+    sed -i '/^[ \t]*winIco: /d' gulpfile.js || return 1
+    sed -i '/ npm install -g nw/d' Makefile || return 1
+    sed -i 's|.*test -d node_modules .*|npm install gulp minimist gulp-shell nw; \\|' Makefile || return 1
+    make install PREFIX=$Fdestdir/usr/share BINPREFIX=$Fdestdir/usr || Fdie
+}
+
+# optimization OK

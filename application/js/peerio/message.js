@@ -63,6 +63,7 @@ Peerio.message = {};
         var createMessage = function () {
             var message = {
                 version: messageInfo.version,
+                metadataVersion: messageInfo.metadataVersion,
                 subject: messageInfo.subject,
                 message: messageInfo.body,
                 receipt: nacl.util.encodeBase64(nacl.randomBytes(32)),
@@ -86,7 +87,7 @@ Peerio.message = {};
                         callback(false);
 
                     var messageObject = {
-                        version: messageInfo.version,
+                        version: messageInfo.metadataVersion,
                         isDraft: messageInfo.isDraft,
                         recipients: messageInfo.recipients,
                         header: header,
@@ -405,6 +406,18 @@ Peerio.message = {};
         }
     }
 
+    // this is a soft validation, only validates new conversations
+    // proper secretConversationId match validation is too hard/time consuming in this codebase, it's been taken care of in a new one
+    function secretConversationIdValid(message, decrypted) {
+        var c = Peerio.user.conversations[message.conversationID];
+        if (!c) return true;
+        if (typeof c.original !== 'object' || !c.original.decrypted) return true;
+        if (c.original.decrypted.secretConversationId) {
+            return c.original.decrypted.secretConversationId === decrypted.secretConversationId;
+        }
+        return true;
+    }
+
     /**
      * Retrieve messages by their IDs and decrypt them.
      * Also adds ephemeral keys to Peerio.user.ephemerals.
@@ -426,14 +439,16 @@ Peerio.message = {};
                 Peerio.crypto.decryptMessage(message, function (decrypted) {
                     count++;
                     // protocol validation
-                    // !! proper secretConversationId match validation is too hard/time consuming in this codebase, it's been taken care of in a new one
                     if (decrypted && (message.version === '1.1.0' || decrypted.version === '1.1.0')) {
                         if (message.version !== decrypted.version
                             || typeof(message.outerIndex) !== 'number'
                             || typeof(decrypted.innerIndex) !== 'number'
                             || message.outerIndex !== decrypted.innerIndex
                             || Math.abs(message.timestamp - decrypted.timestamp) > 120000
-                            || !decrypted.secretConversationId) {
+                            || decrypted.metadataVersion !== message.version // todo: we should allow message.version to be >= decrypted.metadataVersion
+                            || !decrypted.secretConversationId
+                            || !secretConversationIdValid(message, decrypted)) {
+
                             console.log('Failed to validate message: ', message);
                             delete data.messages[keys[count - 1]];
                             decryptNextMessage(count);
