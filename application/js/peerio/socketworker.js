@@ -3,7 +3,7 @@
 importScripts('../lib/socket.js')
 
 var mySocket = (function() {
-	var server = 'https://labs.peerio.com:443';
+	var server = 'https://app.peerio.com:443';
 
 	return io.connect(server, { transports: ['websocket'] })
 }());
