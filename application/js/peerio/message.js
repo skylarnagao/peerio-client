@@ -472,6 +472,14 @@ Peerio.message = {};
                         }
                         return false
                     }
+
+                    if (decrypted.systemMessageType === 0) {
+                        console.log('Ignoring receipt message: ', message);
+                        delete data.messages[keys[count - 1]];
+                        decryptNextMessage(count);
+                        return;
+                    }
+
                     message.decrypted = decrypted
                     if (hasProp(message.decrypted, 'fileIDs')) {
                         Peerio.file.getFile(message.decrypted.fileIDs, function (fileData) {
