@@ -720,12 +720,12 @@
                         <div class="messagesSectionMessageViewReplyBottomBar">
                             <button data-l10n-id="send"
                                     class="messagesSectionMessageViewReplySend"
-                                    data-ng-mousedown="messagesSection.replyToConversation(messagesSection.conversation)"
+                                    data-ng-mouseup="messagesSection.replyToConversation(messagesSection.conversation)"
                                     data-ng-disabled="messagesSection.isOnlyParticipant(messagesSection.conversation)"></button>
                             <button class="messagesSectionMessageViewAcknowledge fontAwesome"
                                     data-utip-l10n="acknowledge"
                                     data-utip-gravity="e"
-                                    data-ng-mousedown="messagesSection.acknowledgeMessage(messagesSection.conversation)"
+                                    data-ng-mouseup="messagesSection.acknowledgeMessage(messagesSection.conversation)"
                                     data-ng-disabled="messagesSection.isAckButtonDisabled(messagesSection.conversation)">
                                 &#xf087;
                             </button>
