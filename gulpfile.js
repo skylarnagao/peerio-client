@@ -27,7 +27,7 @@ var codesignCommands = ['Contents/Frameworks/crash_inspector', 							// all exe
 			  '']
 
 codesignCommands = _.map(codesignCommands, function(file) {
-  return 'codesign --force --verify --verbose --sign "' + process.env.PEERIO_DEVELOPER_ID + '" '+ buildDest +'Peerio/osx64/Peerio.app/' + file;
+  return 'codesign --force --verify --verbose --sign "' + process.env.PEERIO_DEVELOPER_ID + '" '+ buildDest +'Peerio/osx32/Peerio.app/' + file;
 });
 
 /**
@@ -175,7 +175,7 @@ gulp.task('clean-build', function(callback){
 /**
  * Set permissions for Mac
  */
-gulp.task('finalize-mac-build', shell.task(['chmod -R 755 '+ buildDest +'Peerio/osx64/Peerio.app/']))
+gulp.task('finalize-mac-build', shell.task(['chmod -R 755 '+ buildDest +'Peerio/osx32/Peerio.app/']))
 // TODO zip
 
 /**
@@ -183,7 +183,7 @@ gulp.task('finalize-mac-build', shell.task(['chmod -R 755 '+ buildDest +'Peerio/
  */  
 gulp.task('finalize-win-build', function(callback) {
 	return gulp.src('application/img/notification.png')
-			.pipe(gulp.dest(buildDest +'Peerio/win64/')); // TODO finalize linux build with this as well
+			.pipe(gulp.dest(buildDest +'Peerio/win32/')); // TODO finalize linux build with this as well
 });
 
 // todo zip mac and windows binaries as well for Github & get md5 and sha1
@@ -200,11 +200,12 @@ gulp.task('build', function(callback) {
    */
   var nw = new NwBuilder({
 		files: 'application/**/**', // use the glob format
-		platforms: ['win64', 'osx64', 'linux32', 'linux64'],
+		platforms: ['win32', 'osx32', 'linux32', 'linux64'],
 		buildDir: buildDest, 
 		version: '0.12.2',
 		cacheDir: 'tmp/nw',
 		macIcns: 'application/img/nw.icns', 
+		zip: false,
 		macPlist: {
 		  'UTTypeReferenceURL': 'https://peerio.com',
 		  'CFBundleIdentifier': 'com.peerio.peeriomac',
