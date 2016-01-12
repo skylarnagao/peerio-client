@@ -202,9 +202,10 @@ gulp.task('build', function(callback) {
 		files: 'application/**/**', // use the glob format
 		platforms: ['win32', 'osx32', 'linux32', 'linux64'],
 		buildDir: buildDest, 
-		version: '0.12.3',
+		version: '0.12.2',
 		cacheDir: 'tmp/nw',
 		macIcns: 'application/img/nw.icns', 
+		zip: false,
 		macPlist: {
 		  'UTTypeReferenceURL': 'https://peerio.com',
 		  'CFBundleIdentifier': 'com.peerio.peeriomac',
