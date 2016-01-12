@@ -1,3 +1,9 @@
+peerio-client (1.2.1-1) unstable; urgency=medium
+
+  * Peerio API v2 support
+
+ -- Samuel MARTIN MORO <samuel@peerio.com>  Mon, 11 Jan 2016 20:13:42 +0200
+
 peerio-client (1.2.0-1) unstable; urgency=low
 
   * Initial release

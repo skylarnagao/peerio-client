@@ -1,13 +1,11 @@
 Summary: Peerio Client
 Name: peerio-client
-Version: 1.2.0
-Release: 2%{?dist}
+Version: 1.2.1
+Release: 1%{?dist}
 License: GPL3
 Group: Applications/Internet
 Source: https://linux.peerio.com/sources/rh-%{name}-%{version}.tar.gz
 Patch0: https://linux.peerio.com/sources/00-build.patch
-Patch1: https://linux.peerio.com/sources/01-build.patch
-Patch2: https://linux.peerio.com/sources/02-build.patch
 URL: https://peerio.com
 
 BuildRequires: make
@@ -69,6 +67,8 @@ make clean PREFIX=%{buildroot}/usr/share BINPREFIX=%{buildroot}/usr
 %{_mandir}/man1/peerio-client.1.gz
 
 %changelog
+ * Mon Jan 11 2016 Samuel MARTIN MORO <samuel@peerio.com> 1.2.1-1
+ - Add Peerio API v2 support
  * Mon Nov 19 2015 Samuel MARTIN MORO <samuel@peerio.com> 1.2.0-2
  - Fix a couple warnings (license & repository undefined)
  - remove python-pip dependency & transifex

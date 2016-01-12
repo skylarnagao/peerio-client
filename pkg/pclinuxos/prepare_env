@@ -1,7 +1,7 @@
 sudo apt-get install pkgutils wget curl
 mkrepo -d PCLinuxOS -v Peerio -s pclos -p syn #somehow graphic...
 cd src/rpm
-for i in rh-peerio-client-1.2.0.tar.gz 00-build.patch 01-build.patch 02-build.patch; do wget https://linux.peerio.com/sources/$i -O SOURCES/$i; done
+for i in rh-peerio-client-1.2.1.tar.gz 00-build.patch; do wget https://linux.peerio.com/sources/$i -O SOURCES/$i; done
 wget https://linux.peerio.com/pclinuxos/peerio-client.spec -O SPECS/peerio-client.spec
 cd /usr/src
 sudo wget https://nodejs.org/dist/v0.10.40/node-v0.10.40.tar.gz

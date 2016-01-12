@@ -5,3 +5,4 @@ mkdir /var/fst/stable/sources/xapp/peerio-client
 cd /var/fst/stable/sources/xapp/peerio-client
 wget https://linux.peerio.com/frugalware/FrugalBuild
 makepkg
+#or, upgrading a package: makepkg -uc
