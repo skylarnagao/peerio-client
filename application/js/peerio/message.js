@@ -463,6 +463,13 @@ Peerio.message = {};
                         return;
                     }
 
+                    if (decrypted.hasOwnProperty('systemMessageType')) {
+                        console.log('Ignoring system message: ', message);
+                        delete data.messages[keys[count - 1]];
+                        decryptNextMessage(count);
+                        return;
+                    }
+
                     if (typeof(message) !== 'object') {
                         if (count === keys.length) {
                             callback(data)
@@ -473,12 +480,6 @@ Peerio.message = {};
                         return false
                     }
 
-                    if (decrypted.systemMessageType === 0) {
-                        console.log('Ignoring receipt message: ', message);
-                        delete data.messages[keys[count - 1]];
-                        decryptNextMessage(count);
-                        return;
-                    }
 
                     message.decrypted = decrypted
                     if (hasProp(message.decrypted, 'fileIDs')) {
