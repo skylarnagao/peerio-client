@@ -303,6 +303,85 @@ Peerio.message = {};
         }
     }
 
+    var protocolChangeDate = 1458424800000;// 20 Feb 2016, aprrox. date at which all clients should be able to speak '1.1.0' protocol
+    function verifyMetadata(msg, previous) {
+        if (!msg.timestamp) {
+            console.error(msg, 'Message has no timestamp');
+            return false;
+        }
+
+
+        if (!Number.isInteger(msg.timestamp)) {
+            console.error(msg, 'Incorrect timestamp');
+            return false;
+        }
+
+        if (msg.version !== '1.1.0') {
+            // old protocol messages could have been sent before protocolChangeDate
+            if (msg.timestamp > protocolChangeDate) {
+                console.error(msg, 'Wrong message metadata version.');
+                return false;
+            }
+            return true;
+        }
+
+        if (!Number.isInteger(msg.outerIndex)) {
+            console.log(msg, 'OuterIndex is missing.');
+            return false;
+
+        }
+        // no previous message means we are verifying the first message in conversation
+        if (!previous && msg.outerIndex !== 0) {
+            console.error(msg, 'Original message should have outerIndex 0');
+            return false;
+        }
+
+        if (previous) {
+            if (msg.outerIndex - previous.outerIndex > 1) {
+                console.error(msg, previous, 'Index mismatch');
+                return false;
+            }
+            if (Math.abs(msg.timestamp - previous.timestamp) > 120000) {
+                console.error(msg, previous, 'Timestamp mismatch');
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function verifyDecryptedMessage(metadata, message, previous) {
+        if (message.version !== '1.1.0') {
+            // old protocol messages could have been sent before protocolChangeDate
+            var c = Peerio.user.conversations[message.conversationID];
+            if (c &&  c.timestamp > protocolChangeDate) {
+                console.error(msg, 'Wrong message metadata version.');
+                return false;
+            }
+            return true;
+        }
+
+        if (!message.secretConversationId) {
+            console.log(message, 'secretConversationId is missing.');
+            return false;
+        }
+
+        if (metadata.outerIndex !== message.innerIndex) {
+            console.error(metadata, message, "Metadata and message indexes do not match.");
+            return false;
+        }
+
+        if (Math.abs(metadata.timestamp - message.timestamp)>120000) {
+            console.error(metadata, message, "Metadata and message timestamps do not match.");
+            return false;
+        }
+
+        if (previous && previous.secretConversationId !== message.secretConversationId) {
+            console.error(message, previous, "secretConversationId does not match");
+            return false;
+        }
+        return true;
+    }
+
     /**
      * Retrieve and organize original conversations.
      * Update locally stored conversations object for user.
@@ -314,14 +393,21 @@ Peerio.message = {};
         var decryptedCount = 0
         var addConversation = function (conversation) {
             conversation.original = conversation.messages[conversation.original]
-            Peerio.crypto.decryptMessage(conversation.original, function (decrypted) {
-                if (decrypted.sequence === 0) {
-                    conversation.original.decrypted = decrypted
+            if (!verifyMetadata(conversation.original)) {
+                decryptedCount++;
+                if (decryptedCount === keys.length) {
+                    if (typeof(callback) === 'function') {
+                        callback(conversations)
+                    }
                 }
-                else if (
-                    hasProp(conversation, 'original') &&
-                    conversation.original
-                ) {
+                else {
+                    addConversation(conversations[keys[decryptedCount]])
+                }
+            }
+            Peerio.crypto.decryptMessage(conversation.original, function (decrypted) {
+                if (verifyDecryptedMessage(conversation.original, decrypted)) {
+                    conversation.original.decrypted = decrypted
+                } else if (hasProp(conversation.original)) {
                     conversation.original.decrypted = false
                 }
                 if (hasProp(Peerio.user.conversations, conversation.id)) {
@@ -342,7 +428,7 @@ Peerio.message = {};
                     addConversation(conversations[keys[decryptedCount]])
                 }
             })
-        }
+        };
         if (conversations) {
             Peerio.network.getConversationIDs(function (IDs) {
                 if (hasProp(IDs, 'conversationID')) {
@@ -406,17 +492,6 @@ Peerio.message = {};
         }
     }
 
-    // this is a soft validation, only validates new conversations
-    // proper secretConversationId match validation is too hard/time consuming in this codebase, it's been taken care of in a new one
-    function secretConversationIdValid(message, decrypted) {
-        var c = Peerio.user.conversations[message.conversationID];
-        if (!c) return true;
-        if (typeof c.original !== 'object' || !c.original.decrypted) return true;
-        if (c.original.decrypted.secretConversationId) {
-            return c.original.decrypted.secretConversationId === decrypted.secretConversationId;
-        }
-        return true;
-    }
 
     /**
      * Retrieve messages by their IDs and decrypt them.
@@ -435,20 +510,15 @@ Peerio.message = {};
                 }
 
                 var message = data.messages[keys[count]];
-
+                if (!verifyMetadata(message, count > 0 ? data.messages[keys[count - 1]] : Peerio.user.conversations[message.conversationID].original)){
+                    delete data.messages[keys[count]];
+                    decryptNextMessage(count);
+                }
                 Peerio.crypto.decryptMessage(message, function (decrypted) {
                     count++;
                     // protocol validation
                     if (decrypted && (message.version === '1.1.0' || decrypted.version === '1.1.0')) {
-                        if (message.version !== decrypted.version
-                            || typeof(message.outerIndex) !== 'number'
-                            || typeof(decrypted.innerIndex) !== 'number'
-                            || message.outerIndex !== decrypted.innerIndex
-                            || Math.abs(message.timestamp - decrypted.timestamp) > 120000
-                            || decrypted.metadataVersion !== message.version // todo: we should allow message.version to be >= decrypted.metadataVersion
-                            || !decrypted.secretConversationId
-                            || !secretConversationIdValid(message, decrypted)) {
-
+                        if (verifyDecryptedMessage(message, decrypted, count > 1 ? data.messages[keys[count - 2]].decrypted : Peerio.user.conversations[message.conversationID].original.decrypted)) {
                             console.log('Failed to validate message: ', message);
                             delete data.messages[keys[count - 1]];
                             decryptNextMessage(count);
@@ -463,12 +533,6 @@ Peerio.message = {};
                         return;
                     }
 
-                    if (decrypted.hasOwnProperty('systemMessageType')) {
-                        console.log('Ignoring system message: ', message);
-                        delete data.messages[keys[count - 1]];
-                        decryptNextMessage(count);
-                        return;
-                    }
 
                     if (typeof(message) !== 'object') {
                         if (count === keys.length) {
