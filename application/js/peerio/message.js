@@ -336,16 +336,11 @@ Peerio.message = {};
             return false;
         }
 
-        if (previous) {
-            if (msg.outerIndex - previous.outerIndex > 1) {
-                console.error(msg, previous, 'Index mismatch');
-                return false;
-            }
-            if (Math.abs(msg.timestamp - previous.timestamp) > 120000) {
-                console.error(msg, previous, 'Timestamp mismatch');
-                return false;
-            }
+        if (previous && msg.outerIndex - previous.outerIndex > 1) {
+            console.error(msg, previous, 'Index mismatch');
+            return false;
         }
+
         return true;
     }
 
@@ -353,7 +348,7 @@ Peerio.message = {};
         if (message.version !== '1.1.0') {
             // old protocol messages could have been sent before protocolChangeDate
             var c = Peerio.user.conversations[message.conversationID];
-            if (c &&  c.timestamp > protocolChangeDate) {
+            if (c && c.timestamp > protocolChangeDate) {
                 console.error(msg, 'Wrong message metadata version.');
                 return false;
             }
@@ -370,7 +365,7 @@ Peerio.message = {};
             return false;
         }
 
-        if (Math.abs(metadata.timestamp - message.timestamp)>120000) {
+        if (Math.abs(metadata.timestamp - message.timestamp) > 120000) {
             console.error(metadata, message, "Metadata and message timestamps do not match.");
             return false;
         }
@@ -510,7 +505,7 @@ Peerio.message = {};
                 }
 
                 var message = data.messages[keys[count]];
-                if (!verifyMetadata(message, count > 0 ? data.messages[keys[count - 1]] : Peerio.user.conversations[message.conversationID].original)){
+                if (!verifyMetadata(message, count > 0 ? data.messages[keys[count - 1]] : Peerio.user.conversations[message.conversationID].original)) {
                     delete data.messages[keys[count]];
                     decryptNextMessage(count);
                 }
