@@ -336,11 +336,16 @@ Peerio.message = {};
             return false;
         }
 
-        if (previous && msg.outerIndex - previous.outerIndex > 1) {
-            console.error(msg, previous, 'Index mismatch');
-            return false;
+        if (previous) {
+            if (msg.outerIndex - previous.outerIndex > 1) {
+                console.error(msg, previous, 'Index mismatch');
+                return false;
+            }
+            if (msg.timestamp < previous.timestamp && (previous.timestamp - msg.timestamp) > 120000) {
+                console.error(msg, previous, 'Timestamp mismatch');
+                return false;
+            }
         }
-
         return true;
     }
 
