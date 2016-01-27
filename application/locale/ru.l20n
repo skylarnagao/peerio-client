@@ -258,10 +258,13 @@
     <pressEnterToSend "Нажмите Enter, чтобы отправить">
     <updateAvailable "Доступно обновление!">
     <updateAvailableText "Доступно новое обновление Peerio! Обновления превносят новую функциональность и повышают надежность и стабильность приложения. Обновиться сейчас?">
+    <updateAvailableLinuxText "A new update is available for Peerio! Updates bring cool new features, as well as reliability improvements. Please use your package manager to update, or click through for instructions.">
     <updateDownload "Скачать обновление">
+    <linuxPackageInfo "See package info">
     <later "Позже">
     <updateAvailableCritical "Доступно критическое обновление">
     <updateAvailableCriticalText "Доступно критическое обновление Peerio.  Для вашей безопасности, вход в Peerio невозможен до установки обновления.">
+    <updateAvailableCriticalLinuxText "A critical Peerio update is available. For your security, you may not proceed until you install the latest update. Please use your package manager to update, or click through for instructions.">
     <TOFUNotMatchError "Идентификаторы контактов сменились!">
     <TOFUNotMatchErrorText "Внимание! Некоторые ваши контакты сменили идентификаторы. Прежде чем общаться с ними, пожалуйста сверьте аватар Peerio в их профилях. Имена пользователей:">
     <importContactsGoogle "Имортировать ваши контакты из Google Contacts в Peerio">

@@ -176,7 +176,7 @@
     <accept "Přijmout">
     <decline "Odmítnout">
     <addContactInfo "Přidávání přátel jako kontaktů">
-    <addContactInfoText "Posílání zpráv přátelům a sdílení souborů s nimi začíná jejich přidáním mezi kontakty. Nejsou-li uživateli Peeria, bude na jejich adresu odeslána pozvánka. Uživatele můžete přidat zadáním jejich <strong>uživatelského jména</strong>, <strong>e-mailové adresy</strong> nebo <strong>čísla mobilního telefonu</strong>.">
+    <addContactInfoText "Posílání zpráv přátelům a sdílení souborů s nimi začíná jejich přidáním mezi kontakty. Nejsou-li uživateli Peeria, bude na jejich adresu odeslána pozvánka. Uživatele můžete přidat zadáním jejich <strong>uživatelského jména</strong>, <strong>e-mailové adresy</strong>, nebo <strong>čísla mobilního telefonu</strong>.">
     <addContactInfoAvatarText "Každý uživatel Peeria má speciální avatar, který ho identifikuje. Můžete ho chápat jako digitální otisk prstu. Jestliže se uživatelův avatar změní, mohl si tento změnit svou přístupovou frázi nebo byl jeho účet kompromitován.">
     <usernameEmailOrPhone "Uživatelské jméno, e-mail či mobilní číslo">
     <addContactRequestSent "Žádost o kontakt odeslána">
@@ -258,10 +258,13 @@
     <pressEnterToSend "Stiskněte Enter pro odeslání">
     <updateAvailable "Dostupná aktualizace!">
     <updateAvailableText "Pro Peerio je dostupná nová aktualizace. Aktualizace přinášejí skvělé nové funkce, stejně jako vylepšení spolehlivosti. Přejete si aktualizovat nyní?">
+    <updateAvailableLinuxText "A new update is available for Peerio! Updates bring cool new features, as well as reliability improvements. Please use your package manager to update, or click through for instructions.">
     <updateDownload "Stáhnout aktualizaci">
+    <linuxPackageInfo "See package info">
     <later "Později">
     <updateAvailableCritical "Kritická aktualizace dostupná">
     <updateAvailableCriticalText "Je dostupná kritická aktualizace Peeria. Z bezpečnostních důvodů nemůžete pokračovat, dokud poslední aktualizaci nenainstalujete.">
+    <updateAvailableCriticalLinuxText "A critical Peerio update is available. For your security, you may not proceed until you install the latest update. Please use your package manager to update, or click through for instructions.">
     <TOFUNotMatchError "Identity kontaktů se změnily!">
     <TOFUNotMatchErrorText "Pozor! Některé vaše kontakty změnily své identity. Než s nimi budete komunikovat, přesvědčte se prosím o autenticitě ikon avatarů v jejich profilu. Jejich uživatelská jména jsou:">
     <importContactsGoogle "Importujte do Peeria své Kontakty Google">

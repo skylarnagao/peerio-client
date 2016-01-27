@@ -258,10 +258,13 @@
     <pressEnterToSend "Enter lenyomása a küldéshez">
     <updateAvailable "Frissítés érhető el!">
     <updateAvailableText "Egy új frissítés elérhető a Peerio-hoz. A frissítés menő új funkciókat hoz megbízhatósági tökéletesítésekkel együtt. Szeretnéd most frissíteni?">
+    <updateAvailableLinuxText "A new update is available for Peerio! Updates bring cool new features, as well as reliability improvements. Please use your package manager to update, or click through for instructions.">
     <updateDownload "Frissítés letöltése">
+    <linuxPackageInfo "See package info">
     <later "Később">
     <updateAvailableCritical "Kritikus frissítés érhető el">
     <updateAvailableCriticalText "Egy kritikus Peerio frissítés érhető el. A biztonságod érdekében nem kéne folytatnod amíg nem telepíted az utolsó frissítést.">
+    <updateAvailableCriticalLinuxText "A critical Peerio update is available. For your security, you may not proceed until you install the latest update. Please use your package manager to update, or click through for instructions.">
     <TOFUNotMatchError "Kapcsolat identitások megváltoztak!">
     <TOFUNotMatchErrorText "Figyelem! Néhány kapcsolatodnak megváltozott az identitása. Mielőtt kommunikálsz velük, kérlek bizonyosodj meg azzal, hogy ellenőrzöd a Peerio avatar ikonjukat a profiljukban. A felhasználónevek:">
     <importContactsGoogle "Google Névjegyei importálása a Peerio-ba">

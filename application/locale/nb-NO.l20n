@@ -258,10 +258,13 @@
     <pressEnterToSend "Trykk enter for å sende">
     <updateAvailable "Oppdatering tilgjengelig!">
     <updateAvailableText "Oppdatering tilgjengelig! Bedre stabilitet, forbedringer. Oppdatere nå?">
+    <updateAvailableLinuxText "A new update is available for Peerio! Updates bring cool new features, as well as reliability improvements. Please use your package manager to update, or click through for instructions.">
     <updateDownload "Last ned oppdatering">
+    <linuxPackageInfo "See package info">
     <later "Senere">
     <updateAvailableCritical "Kritisk oppdatering tilgjengelig">
     <updateAvailableCriticalText "En kritisk oppdatering er tilgjengelig, du kan ikke fortsette før du installerer den.">
+    <updateAvailableCriticalLinuxText "A critical Peerio update is available. For your security, you may not proceed until you install the latest update. Please use your package manager to update, or click through for instructions.">
     <TOFUNotMatchError "Kontaktidentiteter har endret seg!">
     <TOFUNotMatchErrorText "Advarsel! Noen av dine kontakter har endret sine identiteter. Før du snakker med dem, bekreft deres Peerio-avatar, altså miniatyrbildet i deres profil. Dette gjelder følgende brukernavn:">
     <importContactsGoogle "Importer dine Google-kontakter til Peerio">
