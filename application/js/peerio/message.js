@@ -360,6 +360,11 @@ Peerio.message = {};
             return true;
         }
 
+        if (message.metadataVersion != metadata.version) {
+            console.error('Metadata versions mismatch for message id ' + metadata.id);
+            return false;
+        }
+
         if (!message.secretConversationId) {
             console.log(message, 'secretConversationId is missing.');
             return false;
