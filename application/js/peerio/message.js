@@ -55,7 +55,6 @@ Peerio.message = {};
 	 *  body: Message body (String),
 	 *  conversationID: Conversation ID of message, optional (String),
 	 *  fileIDs: Array of file IDs of attached files,
-	 *  sequence: Message sequence number in thread
 	 * }
      * @param {function} callback - Returns with object ready for Peerio.network.createMessage.
      */
@@ -71,8 +70,7 @@ Peerio.message = {};
                 participants: messageInfo.recipients,
                 innerIndex: messageInfo.innerIndex,
                 secretConversationId: messageInfo.secretConversationId,
-                timestamp: messageInfo.timestamp,
-                sequence: messageInfo.sequence
+                timestamp: messageInfo.timestamp
             };
 
             var encryptRecipients = messageInfo.recipients;

@@ -924,7 +924,6 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
                 body: body,
                 fileIDs: $scope.messagesSection.attachFileIDs,
                 conversationID: conversation.id,
-                sequence: securityParams.maxIndex + 1, //todo: deprecated, safe to remove in next releases
                 innerIndex: securityParams.maxIndex + 1,
                 timestamp: Date.now(),
                 secretConversationId: securityParams.secretConversationId
@@ -944,7 +943,6 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
                     fileIDs: $scope.messagesSection.attachFileIDs,
                     message: body,
                     receipt: '',
-                    sequence: 0,
                     innerIndex: msgInfo.innerIndex,
                     timestamp: msgInfo.timestamp,
                     secretConversationId: msgInfo.secretConversationId,
@@ -1093,19 +1091,6 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
                 message.decrypted = false
                 return true
             }
-            // Give a realistic leeway for out-of-order detection
-            // @todo kaepora: Stress-test some more
-            /*
-             var displaySequence = $('div.messagesSectionMessageViewSingle')
-             .index($('[data-messageid=m' + message.id + ']'))
-             if (
-             (message.decrypted.sequence < (parseInt(displaySequence) - 5)) ||
-             (message.decrypted.sequence > (parseInt(displaySequence) + 5))
-             ) {
-             message.decrypted = false
-             return true
-             }
-             */
             return false
         }
         $scope.messagesSection.truncateName = function (fileID) {

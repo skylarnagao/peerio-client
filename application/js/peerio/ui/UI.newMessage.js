@@ -119,7 +119,6 @@ Peerio.UI.controller('newMessage', function($scope) {
 			recipients: $scope.newMessage.recipients,
 			subject: $scope.newMessage.subject,
 			body: $scope.newMessage.body,
-			sequence: 0, //todo deprecated, safe remove in next releases
 			innerIndex: 0, // starting with 0
 			secretConversationId: nacl.util.encodeBase64(nacl.randomBytes(32)),
             timestamp: Date.now(),
