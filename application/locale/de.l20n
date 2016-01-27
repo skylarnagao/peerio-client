@@ -258,10 +258,13 @@
     <pressEnterToSend "Zum Senden Eingabetaste drücken">
     <updateAvailable "Aktualisierung verfügbar!">
     <updateAvailableText "Eine neue Aktualisierung für Peerio ist verfügbar! Aktualisierungen bringen interessante, neue Funktionen, weiterhin Verbesserungen der Zuverlässigkeit. Möchten Sie die Aktualisierung jetzt durchführen?">
+    <updateAvailableLinuxText "A new update is available for Peerio! Updates bring cool new features, as well as reliability improvements. Please use your package manager to update, or click through for instructions.">
     <updateDownload "Aktualisierung herunterladen">
+    <linuxPackageInfo "See package info">
     <later "Später">
     <updateAvailableCritical "Wichtige Aktualisierung verfügbar">
     <updateAvailableCriticalText "Eine wichtige Aktualisierung für Peerio ist verfügbar. Zu Ihrer eigenen Sicherheit können Sie so lange nicht fortfahren, bis Sie die neueste Aktualisierung installiert haben.">
+    <updateAvailableCriticalLinuxText "A critical Peerio update is available. For your security, you may not proceed until you install the latest update. Please use your package manager to update, or click through for instructions.">
     <TOFUNotMatchError "Kontaktidentitäten haben sich verändert!">
     <TOFUNotMatchErrorText "Warnung! Einige Ihrer Kontakte haben ihre Identitäten verändert. Bevor Sie mit ihnen kommunizieren, überprüfen Sie bitte das Peerio-Avatarsymbol in deren Profil. Die Benutzernamen sind:">
     <importContactsGoogle "Google Kontakte in Peerio importieren">

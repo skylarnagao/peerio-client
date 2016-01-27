@@ -258,10 +258,13 @@
     <pressEnterToSend "Göndermek için Enter'a basın">
     <updateAvailable "Güncelleme Mevcut!">
     <updateAvailableText "Peerio için yeni bir güncelleme mevcut! Güncellemeler güvenilirlik iyileştirmeleri ile birlikte yeni harika özellikler getiriyor. Şimdi güncelleştirmek ister misiniz?">
+    <updateAvailableLinuxText "A new update is available for Peerio! Updates bring cool new features, as well as reliability improvements. Please use your package manager to update, or click through for instructions.">
     <updateDownload "Güncelleme İndir">
+    <linuxPackageInfo "See package info">
     <later "Sonra">
     <updateAvailableCritical "Ciddi Güncelleme Mümkün">
     <updateAvailableCriticalText "Ciddi bir Peerio güncellemesi kullanılabilir. Güvenliğiniz için en son güncellemeyi yapıncaya kadar devam edemeyebilirsiniz.">
+    <updateAvailableCriticalLinuxText "A critical Peerio update is available. For your security, you may not proceed until you install the latest update. Please use your package manager to update, or click through for instructions.">
     <TOFUNotMatchError "Kişilerin kimlik bilgileri değiştirildi!">
     <TOFUNotMatchErrorText "Uyarı! Kişilerinizden bazıları kimliklerini değiştirdi. İletişim kurmadan önce profillerindeki Peerio avatar simgelerini doğruladığınızdan emin olun. Kullanıcı adları:">
     <importContactsGoogle "Google Kişilerini Peerio'a aktar">

@@ -258,10 +258,13 @@
     <pressEnterToSend "按 Enter 发送">
     <updateAvailable "有更新可用！">
     <updateAvailableText "Peerio 有新的更新可用！更新会带来更酷的新功能，以及可靠性改善。您要立即更新吗？">
+    <updateAvailableLinuxText "A new update is available for Peerio! Updates bring cool new features, as well as reliability improvements. Please use your package manager to update, or click through for instructions.">
     <updateDownload "下载更新">
+    <linuxPackageInfo "See package info">
     <later "稍后">
     <updateAvailableCritical "有关键更新可用">
     <updateAvailableCriticalText "有一个 Peerio 关键性更新可用。为了您的安全，在您安装最新的更新之前，您可能不能继续使用。">
+    <updateAvailableCriticalLinuxText "A critical Peerio update is available. For your security, you may not proceed until you install the latest update. Please use your package manager to update, or click through for instructions.">
     <TOFUNotMatchError "联系人身份已变化！">
     <TOFUNotMatchErrorText "警告！您的部分联系人已经更改了他们的身份。在与他们通信之前，请先验证他们的个人资料中的 Peerio 头像。他的用户名是：">
     <importContactsGoogle "导入您的 Google 联系人到 Peerio">
