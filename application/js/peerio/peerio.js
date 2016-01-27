@@ -43,7 +43,7 @@ if (typeof(require) === 'function') {
 				swal(
 					{
 						title: document.l10n.getEntitySync('updateAvailableCritical').value,
-						text: document.l10n.getEntitySync('updateAvailableCriticalText').value,
+						text: process.platform === 'linux' ? document.l10n.getEntitySync('updateAvailableCriticalLinuxText').value : document.l10n.getEntitySync('updateAvailableCriticalText').value,
 						type: 'warning',
 						confirmButtonText: document.l10n.getEntitySync('updateDownload').value,
 						showCancelButton: false,
@@ -53,9 +53,12 @@ if (typeof(require) === 'function') {
 						if (navigator.appVersion.indexOf('Win') >= 0) {
 							gui.Shell.openExternal(Peerio.config.updateWin)
 						}
-						else {
+						else if (navigator.appVersion.indexOf('Mac') >= 0) {
 							gui.Shell.openExternal(Peerio.config.updateMac)
+						} else {
+							gui.Shell.openExternal(Peerio.config.updateLin)	
 						}
+
 						setTimeout(function() {
 							gui.App.quit()
 						}, 1000)
@@ -66,7 +69,7 @@ if (typeof(require) === 'function') {
 				swal(
 					{
 						title: document.l10n.getEntitySync('updateAvailable').value,
-						text: document.l10n.getEntitySync('updateAvailableText').value,
+						text: process.platform === 'linux' ? document.l10n.getEntitySync('updateAvailableLinuxText').value : document.l10n.getEntitySync('updateAvailableText').value,
 						type: 'info',
 						confirmButtonText: document.l10n.getEntitySync('updateDownload').value,
 						showCancelButton: true,
@@ -77,8 +80,10 @@ if (typeof(require) === 'function') {
 						if (navigator.appVersion.indexOf('Win') >= 0) {
 							gui.Shell.openExternal(Peerio.config.updateWin)
 						}
-						else {
+						else if (navigator.appVersion.indexOf('Mac') >= 0) {
 							gui.Shell.openExternal(Peerio.config.updateMac)
+						} else {
+							gui.Shell.openExternal(Peerio.config.updateLin)	
 						}
 					}
 				)
