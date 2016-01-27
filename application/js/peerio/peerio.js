@@ -45,7 +45,7 @@ if (typeof(require) === 'function') {
 						title: document.l10n.getEntitySync('updateAvailableCritical').value,
 						text: process.platform === 'linux' ? document.l10n.getEntitySync('updateAvailableCriticalLinuxText').value : document.l10n.getEntitySync('updateAvailableCriticalText').value,
 						type: 'warning',
-						confirmButtonText: document.l10n.getEntitySync('updateDownload').value,
+						confirmButtonText: process.platform === 'linux' ? document.l10n.getEntitySync('linuxPackageInfo').value : document.l10n.getEntitySync('updateDownload').value,
 						showCancelButton: false,
 						confirmButtonColor: '#85c573'
 					},
@@ -71,7 +71,7 @@ if (typeof(require) === 'function') {
 						title: document.l10n.getEntitySync('updateAvailable').value,
 						text: process.platform === 'linux' ? document.l10n.getEntitySync('updateAvailableLinuxText').value : document.l10n.getEntitySync('updateAvailableText').value,
 						type: 'info',
-						confirmButtonText: document.l10n.getEntitySync('updateDownload').value,
+						confirmButtonText: process.platform === 'linux' ? document.l10n.getEntitySync('linuxPackageInfo').value : document.l10n.getEntitySync('updateDownload').value,
 						showCancelButton: true,
 						confirmButtonColor: '#85c573',
 						cancelButtonText: document.l10n.getEntitySync('later').value
