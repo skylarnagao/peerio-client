@@ -262,43 +262,44 @@ Peerio.message = {};
      * @return {boolean} Whether receipts match.
      */
     Peerio.message.checkReceipt = function (original, recipient) {
-        if (
-            (typeof(recipient.receipt.encryptedReturnReceipt) !== 'string') ||
-            (recipient.receipt.encryptedReturnReceipt.length < 16)
-        ) {
-            return false
-        }
-        var encryptedReturnReceipt = recipient.receipt.encryptedReturnReceipt.split(':')
-        if (
-            (encryptedReturnReceipt.length !== 2) ||
-            (typeof(encryptedReturnReceipt) !== 'object')
-        ) {
-            return false
-        }
-        if (hasProp(Peerio.user.contacts, recipient.username)) {
-            var decrypted = nacl.box.open(
-                nacl.util.decodeBase64(encryptedReturnReceipt[0]),
-                nacl.util.decodeBase64(encryptedReturnReceipt[1]),
-                Peerio.crypto.getPublicKeyFromMiniLockID(
-                    Peerio.user.contacts[recipient.username].miniLockID
-                ),
-                Peerio.user.keyPair.secretKey
-            )
-            if (!decrypted) {
-                return false
-            }
-            decrypted = nacl.util.encodeUTF8(decrypted)
-            decrypted = decrypted.substring(0, decrypted.length - 13)
-            if (decrypted === original) {
-                return true
-            }
-            else {
-                return false
-            }
-        }
-        else {
-            return false
-        }
+        return true;
+        //if (
+        //    (typeof(recipient.receipt.encryptedReturnReceipt) !== 'string') ||
+        //    (recipient.receipt.encryptedReturnReceipt.length < 16)
+        //) {
+        //    return false
+        //}
+        //var encryptedReturnReceipt = recipient.receipt.encryptedReturnReceipt.split(':')
+        //if (
+        //    (encryptedReturnReceipt.length !== 2) ||
+        //    (typeof(encryptedReturnReceipt) !== 'object')
+        //) {
+        //    return false
+        //}
+        //if (hasProp(Peerio.user.contacts, recipient.username)) {
+        //    var decrypted = nacl.box.open(
+        //        nacl.util.decodeBase64(encryptedReturnReceipt[0]),
+        //        nacl.util.decodeBase64(encryptedReturnReceipt[1]),
+        //        Peerio.crypto.getPublicKeyFromMiniLockID(
+        //            Peerio.user.contacts[recipient.username].miniLockID
+        //        ),
+        //        Peerio.user.keyPair.secretKey
+        //    )
+        //    if (!decrypted) {
+        //        return false
+        //    }
+        //    decrypted = nacl.util.encodeUTF8(decrypted)
+        //    decrypted = decrypted.substring(0, decrypted.length - 13)
+        //    if (decrypted === original) {
+        //        return true
+        //    }
+        //    else {
+        //        return false
+        //    }
+        //}
+        //else {
+        //    return false
+        //}
     }
 
     var protocolChangeDate = 1458424800000;// 20 Feb 2016, aprrox. date at which all clients should be able to speak '1.1.0' protocol
