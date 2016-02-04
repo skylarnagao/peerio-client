@@ -1005,7 +1005,7 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
                         $scope.messagesSection.attachFileIDs = []
                         $scope.$root.$broadcast('attachFileReset', null)
                         $scope.$apply(Peerio.UI.applyDynamicElements)
-                    })
+                    }, true)
                     $scope.$root.$broadcast('frontModalsClose', null)
                 })
                 if (failed.length) {

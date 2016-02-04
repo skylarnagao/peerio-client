@@ -302,7 +302,7 @@ Peerio.message = {};
     }
 
     var protocolChangeDate = 1458424800000;// 20 Feb 2016, aprrox. date at which all clients should be able to speak '1.1.0' protocol
-    function verifyMetadata(msg, previous) {
+    function verifyMetadata(msg, previous, skipOrder) {
         if (!msg.timestamp) {
             console.error(msg, 'Message has no timestamp');
             return false;
@@ -329,7 +329,7 @@ Peerio.message = {};
 
         }
         // no previous message means we are verifying the first message in conversation
-        if (!previous && msg.outerIndex !== 0) {
+        if (!previous && !skipOrder && msg.outerIndex !== 0) {
             console.error(msg, 'Original message should have outerIndex 0');
             return false;
         }
@@ -501,8 +501,9 @@ Peerio.message = {};
      * Also adds ephemeral keys to Peerio.user.ephemerals.
      * @param {array} ids
      * @param {function} callback
+     * @param {boolean} [modified] - true if call was made for modified messages, which are unordered, so we'll skip order verification
      */
-    Peerio.message.getMessages = function (ids, callback) {
+    Peerio.message.getMessages = function (ids, callback, modified) {
         Peerio.network.getMessages(ids, function (data) {
             var keys = Object.keys(data.messages);
 
@@ -513,7 +514,9 @@ Peerio.message = {};
                 }
 
                 var message = data.messages[keys[count]];
-                if (!verifyMetadata(message, count > 0 ? data.messages[keys[count - 1]] : Peerio.user.conversations[message.conversationID].original)) {
+                var prev = modified ? null : (count > 0 ? data.messages[keys[count - 1]] : Peerio.user.conversations[message.conversationID].original);
+
+                if (!verifyMetadata(message, prev, modified)) {
                     delete data.messages[keys[count]];
                     decryptNextMessage(count);
                 }
@@ -521,7 +524,18 @@ Peerio.message = {};
                     count++;
                     // protocol validation
                     if (decrypted && (message.version === '1.1.0' || decrypted.version === '1.1.0')) {
-                        if (verifyDecryptedMessage(message, decrypted, count > 1 ? data.messages[keys[count - 2]].decrypted : Peerio.user.conversations[message.conversationID].original.decrypted)) {
+                        var prevMsg = null;
+                        if (!modified) {
+                            if (count > 1) {
+                                prevMsg = data.messages[keys[count - 2]];
+                                prevMsg = prevMsg && prevMsg.decrypted || null;
+                            } else {
+                                prevMsg = Peerio.user.conversations[message.conversationID];
+                                prevMsg = prevMsg && prevMsg.original && prevMsg.decrypted || null;
+                            }
+                        }
+
+                        if ((!modified && !prevMsg) || !verifyDecryptedMessage(message, decrypted, prevMsg, modified)) {
                             console.log('Failed to validate message: ', message);
                             delete data.messages[keys[count - 1]];
                             decryptNextMessage(count);
@@ -620,7 +634,7 @@ Peerio.message = {};
                     }
                 }
                 callback(modified)
-            })
+            }, true);
         })
     }
 
