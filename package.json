@@ -18,7 +18,9 @@
     "gulp": "latest",
     "gulp-shell": "latest",
     "minimist": "latest",
-    "nw": "latest"
+    "node-slackr": "latest",
+    "nw": "latest",
+    "virustotal.js": "latest"
   },
   "devDependencies": {
     "del": "^1.2.0",
