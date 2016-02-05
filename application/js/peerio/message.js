@@ -274,7 +274,7 @@ Peerio.message = {};
      * @return {boolean} Whether receipts match.
      */
     Peerio.message.checkReceipt = function (original, recipient) {
-        return true;
+        return !!(recipient.receipt.encryptedReturnReceipt);
         //if (
         //    (typeof(recipient.receipt.encryptedReturnReceipt) !== 'string') ||
         //    (recipient.receipt.encryptedReturnReceipt.length < 16)
@@ -391,7 +391,7 @@ Peerio.message = {};
             return false;
         }
 
-        if (previous && previous.secretConversationId !== message.secretConversationId) {
+        if (previous && previous.version === '1.1.0' && previous.secretConversationId !== message.secretConversationId) {
             console.error(message, previous, "secretConversationId does not match");
             return false;
         }
