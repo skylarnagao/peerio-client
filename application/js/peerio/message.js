@@ -126,54 +126,66 @@ Peerio.message = {};
      * @param {function} onComplete
      */
     Peerio.message.getConversationPages = function (ids, getOnlyLastTenMessages, onComplete) {
-        var decryptedCount = 0
-        var keys = []
-        var page = getOnlyLastTenMessages ? 0 : 1
+        var decryptedCount = 0;
+        var keys = [];
+        var page = getOnlyLastTenMessages ? 0 : 1;
         var beginDecrypt = function (data, id) {
             if (Object.keys(data.messages).length === 0) {
                 if (typeof(onComplete) === 'function') {
-                    onComplete(Peerio.user.conversations[id])
+                    onComplete(Peerio.user.conversations[id]);
                 }
-                return false
+                return false;
             }
             for (var message in data.messages) {
                 if (hasProp(data.messages, message)) {
-                    Peerio.user.conversations[id].messages[message] = data.messages[message]
+                    Peerio.user.conversations[id].messages[message] = data.messages[message];
                 }
             }
-            Peerio.user.conversations[id].messageCount = data.messageCount
-            keys = keys.concat(data.pagination.messageOrder)
-            decryptMessage(data.messages[keys[decryptedCount]], id)
-        }
+            Peerio.user.conversations[id].messageCount = data.messageCount;
+            keys = keys.concat(data.pagination.messageOrder);
+            decryptMessage(data.messages[keys[decryptedCount]], id);
+        };
+        var prevMsg = null;
         var decryptMessage = function (message, id) {
+            var conv = Peerio.user.conversations[id];
+
             if (
                 (typeof(message) !== 'object')
             ) {
-                decryptedCount++
+                decryptedCount++;
                 if (decryptedCount === keys.length) {
                     if (typeof(onComplete) === 'function') {
-                        onComplete(Peerio.user.conversations[id])
+                        onComplete(conv);
                     }
                 }
                 else {
-                    decryptMessage(Peerio.user.conversations[id].messages[keys[decryptedCount]], id)
+                    decryptMessage(conv.messages[keys[decryptedCount]], id);
                 }
             }
             else {
+                if (!verifyMetadata(message, decryptedCount > 0 ? conv.messages[keys[decryptedCount - 1]] : null, true)) {
+                    decryptMessage(conv.messages[keys[decryptedCount]]);
+                    return;
+                }
                 Peerio.crypto.decryptMessage(message, function (decrypted) {
-                    Peerio.user.conversations[id].messages[message.id].decrypted = decrypted
-                    decryptedCount++
+                    if (!verifyDecryptedMessage(message, decrypted, prevMsg)) {
+                        decryptMessage(conv.messages[keys[decryptedCount]]);
+                        return;
+                    }
+                    prevMsg = decrypted;
+                    conv.messages[message.id].decrypted = decrypted;
+                    decryptedCount++;
                     if (decryptedCount === keys.length) {
                         if (typeof(onComplete) === 'function') {
-                            onComplete(Peerio.user.conversations[id])
+                            onComplete(conv);
                         }
                     }
                     else {
-                        decryptMessage(Peerio.user.conversations[id].messages[keys[decryptedCount]], id)
+                        decryptMessage(conv.messages[keys[decryptedCount]], id);
                     }
                 })
             }
-        }
+        };
         var requestArray = []
         ids.forEach(function (id) {
             requestArray.push({
