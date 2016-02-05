@@ -1,17 +1,17 @@
 var gulp = require('gulp'),
 	shell = require('gulp-shell'),
 	minimist = require('minimist'),
-  	fs = require('fs'),
+	fs = require('fs'),
 	replace = require('gulp-replace'),
 	rename = require('gulp-rename'),
-  	bump = require('gulp-bump'),
-  	zip = require('gulp-zip'),
-  	ignore = require('gulp-ignore'),
+	bump = require('gulp-bump'),
+	zip = require('gulp-zip'),
+	ignore = require('gulp-ignore'),
 	runSequence = require('run-sequence'),
 	_ = require('lodash'),
-  	del = require('del'), 
-  	NwBuilder = require('nw-builder');
-	
+	del = require('del'),
+	NwBuilder = require('nw-builder');
+
 
 // settings
 var tmpSources = 'tmp/tx/*.json';
@@ -112,7 +112,7 @@ gulp.task('bump-build' ,function() {
 });
 
 /**
- * Generate application config.js file from version and build numbers found in build.txt and package.json. 
+ * Generate application config.js file from version and build numbers found in build.txt and package.json.
  */
 gulp.task('bump-config', function(callback) {
 	var buildNumber = fs.readFileSync("application/build.txt", "utf8"),
@@ -139,7 +139,7 @@ gulp.task('bump-src', function(callback) {
  * Bump version in ./
  */
 gulp.task('bump-main', function(callback) {
-	var type = minimist(process.argv)['type'] || 'patch';	
+	var type = minimist(process.argv)['type'] || 'patch';
 	return gulp.src(['package.json'])
   			.pipe(bump({ type: type }))
   			.pipe(gulp.dest('./'));
@@ -156,7 +156,7 @@ gulp.task('bump', function(callback) {
 
 /**
  * Zip the src directory, excluding node_modules.
- */  
+ */
 gulp.task('build-chrome', function(callback) {
 	return gulp.src('application/**')
 			.pipe(ignore.exclude(/node_modules/))
@@ -180,7 +180,7 @@ gulp.task('finalize-mac-build', shell.task(['chmod -R 755 '+ buildDest +'Peerio/
 
 /**
  * Zip the src directory, excluding node_modules.
- */  
+ */
 gulp.task('finalize-win-build', function(callback) {
 	return gulp.src('application/img/notification.png')
 			.pipe(gulp.dest(buildDest +'Peerio/win32/')); // TODO finalize linux build with this as well
@@ -190,7 +190,7 @@ gulp.task('finalize-win-build', function(callback) {
 
 /**
  * Build the Mac, Windows, Linux & Chrome packages.
- */  
+ */
 gulp.task('build', function(callback) {
 
   var buildNumber = fs.readFileSync("application/build.txt", "utf8");
@@ -201,34 +201,34 @@ gulp.task('build', function(callback) {
   var nw = new NwBuilder({
 		files: 'application/**/**', // use the glob format
 		platforms: ['win32', 'osx32', 'linux32', 'linux64'],
-		buildDir: buildDest, 
+		buildDir: buildDest,
 		version: '0.12.2',
 		cacheDir: 'tmp/nw',
-		macIcns: 'application/img/nw.icns', 
+		macIcns: 'application/img/nw.icns',
 		zip: false,
 		macPlist: {
 		  'UTTypeReferenceURL': 'https://peerio.com',
 		  'CFBundleIdentifier': 'com.peerio.peeriomac',
 		  'DTSDKBuild': buildNumber
-		}, 
+		},
 		winIco: 'application/img/icon256.ico'				// comment this line if you don't have wine installed
 	});
 
-  	runSequence('update-dependendencies', 'clean-build', function() {
-  		nw.build()
-  			.then(function() {
-	  			runSequence('finalize-mac-build', 'build-chrome', 'finalize-win-build', callback)
+	runSequence('update-dependendencies', 'clean-build', function() {
+		nw.build()
+			.then(function() {
+				runSequence('finalize-mac-build', 'build-chrome', 'finalize-win-build', callback)
 			})
 			.catch(function (error) {
 				console.error(error);
 				callback();
 			});
-  	})
+	})
 });
 
 /**
- * Sign the Mac package. 
- */   	
+ * Sign the Mac package.
+ */
 gulp.task('sign', shell.task(codesignCommands))
 
 
@@ -246,4 +246,4 @@ scpClient.scp('local_folder', {
     }, cb)
 
 */
-	
+
