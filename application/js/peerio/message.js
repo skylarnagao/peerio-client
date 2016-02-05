@@ -142,7 +142,7 @@ Peerio.message = {};
                 }
             }
             Peerio.user.conversations[id].messageCount = data.messageCount;
-            keys = keys.concat(data.pagination.messageOrder);
+            keys = keys.concat(data.pagination.messageOrder.reverse());
             decryptMessage(data.messages[keys[decryptedCount]], id);
         };
         var prevMsg = null;
