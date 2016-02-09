@@ -58,6 +58,8 @@
     <accountBlacklisted "账户不可用">
     <accountBlacklistedText "此账户现被暂停。为了重新获得访问权，请通过 support@peerio.com 联系 Peerio 客服。">
     <searchMessagesFilesAndContacts "搜索消息、文件和联系人">
+    <computerTimeSync "Message Not Sent">
+    <computerTimeSyncText "An error occurred and your message was not sent. If you experience this problem repeatedly, please make sure that your computer's clock is set to the correct time.">
     <messages "消息">
     <files "文件">
     <contacts "联系人">

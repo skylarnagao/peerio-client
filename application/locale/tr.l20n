@@ -58,6 +58,8 @@
     <accountBlacklisted "Hesap Kullanılabilir Değil">
     <accountBlacklistedText "Bu hesap geçici olarak askıya alındı. Erişimi tekrar alabilmek için support@peerio.com adresi ile iletişime geçin.">
     <searchMessagesFilesAndContacts "Mesaj, dosya ve kişileri ara">
+    <computerTimeSync "Message Not Sent">
+    <computerTimeSyncText "An error occurred and your message was not sent. If you experience this problem repeatedly, please make sure that your computer's clock is set to the correct time.">
     <messages "Mesajlar">
     <files "Dosyalar">
     <contacts "Kişiler">

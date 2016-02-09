@@ -58,6 +58,8 @@
     <accountBlacklisted "Cuenta no disponible">
     <accountBlacklistedText "Esta cuenta está suspendida temporalmente. Para volver a ganar acceso, por favor, contacte con support@peerio.com">
     <searchMessagesFilesAndContacts "Buscar mensajes, archivos, y contactos">
+    <computerTimeSync "Message Not Sent">
+    <computerTimeSyncText "An error occurred and your message was not sent. If you experience this problem repeatedly, please make sure that your computer's clock is set to the correct time.">
     <messages "Mensajes">
     <files "Archivos">
     <contacts "Contactos">
@@ -258,13 +260,13 @@
     <pressEnterToSend "Pulse Intro para enviar">
     <updateAvailable "¡Actualización disponible!">
     <updateAvailableText "¡Hay una nueva actualización disponible para Peerio! Las actualizaciones traen nuevas características chulas, así como mejoras de fiabilidad. ¿Desea actualizar ahora?">
-    <updateAvailableLinuxText "A new update is available for Peerio! Updates bring cool new features, as well as reliability improvements. Please use your package manager to update, or click through for instructions.">
+    <updateAvailableLinuxText "¡Esta disponible una actualización para Peerio! Las actualizaciones traen nuevas características elegantes, así como mejoras de la fiabilidad. Por favor, use su administrador de paquetes para actualizar, o haga clic para recorrer las instrucciones.">
     <updateDownload "Descargar actualización">
-    <linuxPackageInfo "See package info">
+    <linuxPackageInfo "Vea la información del paquete">
     <later "Más tarde">
     <updateAvailableCritical "Actualización crítica disponible">
     <updateAvailableCriticalText "Está disponible una actualizacion crítica de Peerio. Por su seguridad, no podrá proceder hasta que instale la última actualización.">
-    <updateAvailableCriticalLinuxText "A critical Peerio update is available. For your security, you may not proceed until you install the latest update. Please use your package manager to update, or click through for instructions.">
+    <updateAvailableCriticalLinuxText "Está disponible una actualización crítica de Peerio. Para su seguridad, no puede continuar hasta que instale la última actualización. Por favor, use su administrador de paquetes para actualizar, o haga clic para recorrer las instrucciones.">
     <TOFUNotMatchError "¡Las identidades de contacto han cambiado!">
     <TOFUNotMatchErrorText "¡Advertencia! Algunos de sus contactos han cambiado sus identidades. Antes de comunicarse con ellos, por favor, asegúrese de verificar sus iconos de avatar de Peerio en sus perfiles. Los nombres de usuario son:">
     <importContactsGoogle "Importar sus contactos de Google a Peerio">

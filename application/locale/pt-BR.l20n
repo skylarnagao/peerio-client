@@ -58,6 +58,8 @@
     <accountBlacklisted "Conta Indisponível">
     <accountBlacklistedText "Esta conta está temporariamente indisponível. A fim de recuperar o acesso, por favor contacte support@peerio.com.">
     <searchMessagesFilesAndContacts "Procure por mensagens, arquivos e contactos">
+    <computerTimeSync "Message Not Sent">
+    <computerTimeSyncText "An error occurred and your message was not sent. If you experience this problem repeatedly, please make sure that your computer's clock is set to the correct time.">
     <messages "Mensagens">
     <files "Arquivos">
     <contacts "Contactos">

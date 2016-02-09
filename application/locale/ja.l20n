@@ -58,6 +58,8 @@
     <accountBlacklisted "アカウント使用不可">
     <accountBlacklistedText "このアカウントは一時的に停止しています。再びアクセスできるようにするにはsupport@peerio.com.までご連絡ください。">
     <searchMessagesFilesAndContacts "メッセージ、ファイル、連絡先の検索">
+    <computerTimeSync "Message Not Sent">
+    <computerTimeSyncText "An error occurred and your message was not sent. If you experience this problem repeatedly, please make sure that your computer's clock is set to the correct time.">
     <messages "メッセージ">
     <files "ファイル">
     <contacts "連絡先">

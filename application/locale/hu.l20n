@@ -58,6 +58,8 @@
     <accountBlacklisted "Fiók nem elérhető">
     <accountBlacklistedText "Ez a fiók átmenetileg fel van függesztve. A hozzáférés visszaszerzése érdekében kérlek vedd fel a kapcsolatot a support@peerio.com -mal.">
     <searchMessagesFilesAndContacts "Üzenetek, fájlok és kapcsolatok keresése">
+    <computerTimeSync "Message Not Sent">
+    <computerTimeSyncText "An error occurred and your message was not sent. If you experience this problem repeatedly, please make sure that your computer's clock is set to the correct time.">
     <messages "Üzenetek">
     <files "Fájlok">
     <contacts "Kapcsolatok">
