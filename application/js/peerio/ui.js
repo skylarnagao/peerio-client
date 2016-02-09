@@ -209,6 +209,15 @@ Peerio.UI = angular.module('PeerioUI', ['ngSanitize', 'cfp.hotkeys']);
     })
   }
 
+  Peerio.UI.showTimeSyncAlert = function () {
+    swal({
+      title: document.l10n.getEntitySync('computerTimeSync').value,
+      text: document.l10n.getEntitySync('computerTimeSyncText').value,
+      type: 'error',
+      confirmButtonText: document.l10n.getEntitySync('OK').value
+    })
+  }
+
   //
   // Load UI
   //

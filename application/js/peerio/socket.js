@@ -42,6 +42,9 @@ Peerio.socket = {};
 				else if (message.data.error === 426) {
 					Peerio.UI.showBlacklistedAlert()
 					return false
+				} else if (message.data.error === 442) {
+					Peerio.UI.showTimeSyncAlert()
+					return false
 				}
 			}
 			Peerio.socket.callbacks[message.callbackID](message.data)
