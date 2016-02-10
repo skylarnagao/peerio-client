@@ -58,8 +58,8 @@
     <accountBlacklisted "Cuenta no disponible">
     <accountBlacklistedText "Esta cuenta está suspendida temporalmente. Para volver a ganar acceso, por favor, contacte con support@peerio.com">
     <searchMessagesFilesAndContacts "Buscar mensajes, archivos, y contactos">
-    <computerTimeSync "Message Not Sent">
-    <computerTimeSyncText "An error occurred and your message was not sent. If you experience this problem repeatedly, please make sure that your computer's clock is set to the correct time.">
+    <computerTimeSync "Mensaje no enviado">
+    <computerTimeSyncText "Ocurrió un error y su mensaje no fue enviado. Si experimenta este problema repetidamente, por favor, asegúrese de que el reloj de su computadora tiene configurada la hora correcta.">
     <messages "Mensajes">
     <files "Archivos">
     <contacts "Contactos">
