@@ -3,7 +3,7 @@ zypper install make nodejs
 zypper install libasound2 libglib-2_0-0 libcairo2 dbus-1-glib fontconfig gconf2 libgdk_pixbuf-2_0-0 libgtk-3-0 libnotify4 libXcomposite1 libXcursor1 libXdamage1 libXfixes3 libXi6 libXrandr2 libXrender1 libXtst6 mozilla-nspr mozilla-nss libpango-1_0-0
 #sudo chown -R `id -u`:`id -g` /usr/src/packages
 #cd /usr/src/packages/
-#for i in rh-peerio-client-1.2.1.tar.gz 00-build.patch
+#for i in rh-peerio-client-1.3.0.tar.gz 00-build.patch
 #do wget https://linux.peerio.com/sources/$i -O SOURCES/$i; done
 #wget https://linux.peerio.com/opensuse13.2/peerio-client.spec -O SPECS/peerio-client.spec
 #rpmbuild -ba SPECS/peerio-client.spec

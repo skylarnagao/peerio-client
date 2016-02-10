@@ -1,6 +1,6 @@
 Summary: Peerio Client
 Name: peerio-client
-Version: 1.2.1
+Version: 1.3.0
 Release: 1%{?dist}
 License: GPL3
 Group: Applications/Internet
@@ -67,6 +67,9 @@ make clean PREFIX=%{buildroot}/usr/share BINPREFIX=%{buildroot}/usr
 %{_mandir}/man1/peerio-client.1.gz
 
 %changelog
+ * Thu Feb 11 2016 Samuel MARTIN MORO <samuel@peerio.com> 1.3.0-1
+ - Enforcei API v1.1.0 support
+ - various bugfixes
  * Mon Jan 11 2016 Samuel MARTIN MORO <samuel@peerio.com> 1.2.1-1
  - Add Peerio API v2 support
  * Mon Nov 19 2015 Samuel MARTIN MORO <samuel@peerio.com> 1.2.0-2
