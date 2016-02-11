@@ -58,6 +58,8 @@
     <accountBlacklisted "Account Unavailable">
     <accountBlacklistedText "This account is temporarily suspended. In order to regain access, please contact support@peerio.com.">
     <searchMessagesFilesAndContacts "Search messages, files, and contacts">
+    <computerTimeSync "Message Not Sent">
+    <computerTimeSyncText "An error occurred and your message was not sent. If you experience this problem repeatedly, please make sure that your computer's clock is set to the correct time.">
     <messages "Messages">
     <files "Files">
     <contacts "Contacts">

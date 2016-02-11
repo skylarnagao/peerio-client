@@ -58,6 +58,8 @@
     <accountBlacklisted "Účet nedostupný">
     <accountBlacklistedText "Tento účet je dočasně pozastaven. Pro opětovné získání přístupu prosím kontaktujte support@peerio.com.">
     <searchMessagesFilesAndContacts "Hledat zprávy, soubory a kontakty">
+    <computerTimeSync "Message Not Sent">
+    <computerTimeSyncText "An error occurred and your message was not sent. If you experience this problem repeatedly, please make sure that your computer's clock is set to the correct time.">
     <messages "Zprávy">
     <files "Soubory">
     <contacts "Kontakty">
@@ -258,13 +260,13 @@
     <pressEnterToSend "Stiskněte Enter pro odeslání">
     <updateAvailable "Dostupná aktualizace!">
     <updateAvailableText "Pro Peerio je dostupná nová aktualizace. Aktualizace přinášejí skvělé nové funkce, stejně jako vylepšení spolehlivosti. Přejete si aktualizovat nyní?">
-    <updateAvailableLinuxText "A new update is available for Peerio! Updates bring cool new features, as well as reliability improvements. Please use your package manager to update, or click through for instructions.">
+    <updateAvailableLinuxText "Pro Peerio je dostupná nová aktualizace. Aktualizace přinášejí skvělé nové funkce, stejně jako vylepšení spolehlivosti. K aktualizaci prosím použijte svého správce balíků nebo klikněte pro zobrazení instrukcí.">
     <updateDownload "Stáhnout aktualizaci">
-    <linuxPackageInfo "See package info">
+    <linuxPackageInfo "Zobrazit informace o balíku">
     <later "Později">
     <updateAvailableCritical "Kritická aktualizace dostupná">
     <updateAvailableCriticalText "Je dostupná kritická aktualizace Peeria. Z bezpečnostních důvodů nemůžete pokračovat, dokud poslední aktualizaci nenainstalujete.">
-    <updateAvailableCriticalLinuxText "A critical Peerio update is available. For your security, you may not proceed until you install the latest update. Please use your package manager to update, or click through for instructions.">
+    <updateAvailableCriticalLinuxText "Je dostupná kritická aktualizace Peeria. Z bezpečnostních důvodů nemůžete pokračovat, dokud poslední aktualizaci nenainstalujete. K aktualizaci prosím použijte svého správce balíků nebo klikněte pro zobrazení instrukcí.">
     <TOFUNotMatchError "Identity kontaktů se změnily!">
     <TOFUNotMatchErrorText "Pozor! Některé vaše kontakty změnily své identity. Než s nimi budete komunikovat, přesvědčte se prosím o autenticitě ikon avatarů v jejich profilu. Jejich uživatelská jména jsou:">
     <importContactsGoogle "Importujte do Peeria své Kontakty Google">
