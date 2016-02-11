@@ -87,7 +87,7 @@ createinitialarchive:
 	fi
 
 createdebsource: clean
-	debuild -S -sa
+	LANG=C debuild -S -sa
 
 createdebbin: clean
 	dpkg-buildpackage -us -uc
