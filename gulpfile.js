@@ -205,7 +205,6 @@ gulp.task('build', function(callback) {
 		version: '0.12.3',
 		cacheDir: 'tmp/nw',
 		macIcns: 'application/img/nw.icns',
-		zip: false,
 		macPlist: {
 		  'UTTypeReferenceURL': 'https://peerio.com',
 		  'CFBundleIdentifier': 'com.peerio.peeriomac',
