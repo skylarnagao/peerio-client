@@ -22,9 +22,6 @@
   }, {
     name: '汉语',
     value: 'zh-CN'
-  }, {
-    name: 'Čeština',
-    value: 'cs'
   },{
     name: 'Deutsch',
     value: 'de'
