@@ -7,7 +7,7 @@ Last-Update: 2016-02-11
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 --- a/gulpfile.js	2016-02-11 00:06:04.711270099 +0100
 +++ b/gulpfile.js	2016-02-11 00:08:42.108086746 +0100
-@@ -200,7 +200,7 @@
+@@ -200,24 +200,22 @@
     */
    var nw = new NwBuilder({
  		files: 'application/**/**', // use the glob format
@@ -16,7 +16,9 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  		buildDir: buildDest,
  		version: '0.12.3',
  		cacheDir: 'tmp/nw',
-@@ -210,14 +210,13 @@
+ 		macIcns: 'application/img/nw.icns',
+-		zip: false,
+ 		macPlist: {
  		  'UTTypeReferenceURL': 'https://peerio.com',
  		  'CFBundleIdentifier': 'com.peerio.peeriomac',
  		  'DTSDKBuild': buildNumber
