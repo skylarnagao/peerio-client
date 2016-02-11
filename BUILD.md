@@ -68,6 +68,8 @@ Assuming you have all build and runtime dependencies installed, this should prod
 
 The process is pretty similar than with CentOS/Fedora/Mageia
 
+Note that the last versions of libnss3 looks broken. The client will not be able to connect to our service. If you can, try downgrading your libnss to something like 3.19.
+
 Main differences are there is no `rpmdev-setuptree`. Instead, you will be working in `/usr/src/packages/`. Copy the specfile from `pkg/opensuse/peerio-client.spec` into `/usr/src/packages/SPECS/`, download the patches and sources as referrenced in your specfile, file them into `/usr/src/packages/SOURCES`,  then run `rpmbuild -ba /usr/src/packages/SPECS/peerio-client.spec`.
 
 #### PCLinuxOS
