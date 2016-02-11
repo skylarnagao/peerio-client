@@ -5,7 +5,7 @@ Release: 1%{?dist}
 License: GPL3
 Group: Applications/Internet
 Source: https://linux.peerio.com/sources/rh-%{name}-%{version}.tar.gz
-Patch0: https://linux.peerio.com/sources/00-build.patch
+Patch0: https://linux.peerio.com/sources/03-build.patch
 URL: https://peerio.com
 
 BuildRequires: make

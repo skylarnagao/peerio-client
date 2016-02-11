@@ -26,7 +26,7 @@ RUN npm install -g nw
 RUN git clone https://github.com/PeerioTechnologies/peerio-client /usr/src/peerio-client
 WORKDIR /usr/src/peerio-client
 RUN npm install
-RUN sed -i '/^[ \t]*winIco: /d' gulpfile.js
+RUN sed -i -e '/^[ \t]*zip: false/d' -e '/^[ \t]*winIco: /d' gulpfile.js
 RUN ./node_modules/.bin/gulp build
 RUN mkdir ../$PKG_NAME
 WORKDIR /usr/src/$PKG_NAME
