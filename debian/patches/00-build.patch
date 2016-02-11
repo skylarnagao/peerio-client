@@ -2,34 +2,34 @@ Description: remove windows and osx from the build process
 Author: Samuel MARTIN MORO <samuel@peerio.com>
 Origin: vendor
 Forwarded: not-needed
-Last-Update: 2015-11-10
+Last-Update: 2016-02-11
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
---- a/gulpfile.js	2015-11-09 18:18:16.755327461 +0000
-+++ b/gulpfile.js	2015-11-10 13:26:56.590456140 +0000
+--- a/gulpfile.js	2016-02-11 00:06:04.711270099 +0100
++++ b/gulpfile.js	2016-02-11 00:08:42.108086746 +0100
 @@ -200,7 +200,7 @@
     */
    var nw = new NwBuilder({
  		files: 'application/**/**', // use the glob format
 -		platforms: ['win32', 'osx32', 'linux32', 'linux64'],
 +		platforms: ['linux32', 'linux64'],
- 		buildDir: buildDest, 
+ 		buildDir: buildDest,
  		version: '0.12.3',
  		cacheDir: 'tmp/nw',
-@@ -209,14 +209,13 @@
+@@ -210,14 +210,13 @@
  		  'UTTypeReferenceURL': 'https://peerio.com',
  		  'CFBundleIdentifier': 'com.peerio.peeriomac',
  		  'DTSDKBuild': buildNumber
--		}, 
+-		},
 -		winIco: 'application/img/icon256.ico'				// comment this line if you don't have wine installed
 +		}
  	});
  
-   	runSequence('update-dependendencies', 'clean-build', function() {
-   		nw.build()
-   			.then(function() {
--	  			runSequence('finalize-mac-build', 'build-chrome', 'finalize-win-build', callback)
-+	  			runSequence('build-chrome', callback)
+ 	runSequence('update-dependendencies', 'clean-build', function() {
+ 		nw.build()
+ 			.then(function() {
+-				runSequence('finalize-mac-build', 'build-chrome', 'finalize-win-build', callback)
++				runSequence('build-chrome', callback)
  			})
  			.catch(function (error) {
  				console.error(error);
