@@ -164,12 +164,12 @@ Peerio.message = {};
             }
             else {
                 if (!verifyMetadata(message, decryptedCount > 0 ? conv.messages[keys[decryptedCount - 1]] : null, true)) {
-                    decryptMessage(conv.messages[keys[decryptedCount]]);
+                    decryptMessage(conv.messages[keys[decryptedCount]], id);
                     return;
                 }
                 Peerio.crypto.decryptMessage(message, function (decrypted) {
                     if (!verifyDecryptedMessage(message, decrypted, prevMsg)) {
-                        decryptMessage(conv.messages[keys[decryptedCount]]);
+                        decryptMessage(conv.messages[keys[decryptedCount]], id);
                         return;
                     }
                     prevMsg = decrypted;
