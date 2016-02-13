@@ -15,8 +15,12 @@ URL: https://peerio.com
 BuildRequires: pkgutils
 BuildRequires: sudo
 Requires: libalsa
-Requires: libglib1
+Requires: libglib2
+%ifarch x86_64
+Requires: lib64cairo2
+%else
 Requires: libcairo2
+%endif
 Requires: libdbus-glib
 Requires: libfontconfig
 Requires: GConf2
