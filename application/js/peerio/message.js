@@ -405,11 +405,11 @@ Peerio.message = {};
      * @param {object} conversations - Optionally, pass a pre-fetched conversations object to decrypt that instead.
      */
     Peerio.message.getAllConversations = function (callback, conversations) {
-        var keys = []
-        var decryptedCount = 0
+        var keys = [];
+        var decryptedCount = 0;
         var addConversation = function (conversation) {
-            conversation.original = conversation.messages[conversation.original]
-            if (!verifyMetadata(conversation.original)) {
+            conversation.original = conversation.messages[conversation.original];
+            if (!conversation.original || !verifyMetadata(conversation.original)) {
                 decryptedCount++;
                 if (decryptedCount === keys.length) {
                     if (typeof(callback) === 'function') {
