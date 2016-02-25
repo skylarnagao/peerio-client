@@ -48,7 +48,7 @@
     <finishingUp "Bitir">
     <peerioPIN "Peerio Kodu">
     <setAPeerioPIN "Bu aygıt için bir kod ayarlansın mı?">
-    <signupPeerioPIN "Her oturum açdığınızda sistem parolanızı girmek yerine, sadece bu aygıtta çalışacak daha kısa kodlar belirleyebilirsiniz. Kullanıcı seçimli kodlar, Peerio sistem parolalarından daha az güvenli olduğundan <strong>sadece güvendiğiniz ve düzenli olarak kullandığınız aygıtlarda kod ayarlamalısınız</strong>.">
+    <signupPeerioPIN "Her oturum açtığınızda sistem parolanızı girmek yerine, sadece bu aygıtta çalışacak daha kısa kodlar belirleyebilirsiniz. Kullanıcı seçimli kodlar, Peerio sistem parolalarından daha az güvenli olduğundan <strong>sadece güvendiğiniz ve düzenli olarak kullandığınız aygıtlarda kod ayarlamalısınız</strong>.">
     <PINNotStrong "kod güvenliliği: düşük">
     <PINStrong "kod güvenliliği: iyi!">
     <setPIN "Kodu Ayarla">
@@ -58,8 +58,8 @@
     <accountBlacklisted "Hesap Kullanılabilir Değil">
     <accountBlacklistedText "Bu hesap geçici olarak askıya alındı. Erişimi tekrar alabilmek için support@peerio.com adresi ile iletişime geçin.">
     <searchMessagesFilesAndContacts "Mesaj, dosya ve kişileri ara">
-    <computerTimeSync "Message Not Sent">
-    <computerTimeSyncText "An error occurred and your message was not sent. If you experience this problem repeatedly, please make sure that your computer's clock is set to the correct time.">
+    <computerTimeSync "Mesaj Gönderilmedi">
+    <computerTimeSyncText "Bir hata oluştu ve mesajınız gönderilmedi. Bu sorunu sıkça yaşıyorsanız, bilgisayarınızın saatinin doğru olduğundan emin olun.">
     <messages "Mesajlar">
     <files "Dosyalar">
     <contacts "Kişiler">
@@ -260,19 +260,19 @@
     <pressEnterToSend "Göndermek için Enter'a basın">
     <updateAvailable "Güncelleme Mevcut!">
     <updateAvailableText "Peerio için yeni bir güncelleme mevcut! Güncellemeler güvenilirlik iyileştirmeleri ile birlikte yeni harika özellikler getiriyor. Şimdi güncelleştirmek ister misiniz?">
-    <updateAvailableLinuxText "A new update is available for Peerio! Updates bring cool new features, as well as reliability improvements. Please use your package manager to update, or click through for instructions.">
+    <updateAvailableLinuxText "Peerio için yeni bir güncelleme mevcut! Güncellemeler yeni harika özelliklerle birlikte güvenilirlik iyileştirmeleri getirmektedir. Lütfen güncellemek için paket yöneticinizi kullanın veya talimatlar için tıklayın.">
     <updateDownload "Güncelleme İndir">
-    <linuxPackageInfo "See package info">
+    <linuxPackageInfo "Paket bilgisine bak">
     <later "Sonra">
     <updateAvailableCritical "Ciddi Güncelleme Mümkün">
     <updateAvailableCriticalText "Ciddi bir Peerio güncellemesi kullanılabilir. Güvenliğiniz için en son güncellemeyi yapıncaya kadar devam edemeyebilirsiniz.">
-    <updateAvailableCriticalLinuxText "A critical Peerio update is available. For your security, you may not proceed until you install the latest update. Please use your package manager to update, or click through for instructions.">
+    <updateAvailableCriticalLinuxText "Önemli bir Peerio güncellemesi mevcut. Güvenliğiniz için en son güncellemeyi yükleyene kadar devam edemeyebilirsiniz. Lütfen güncellemek için paket yöneticinizi kullanın veya talimatlar için tıklayın.">
     <TOFUNotMatchError "Kişilerin kimlik bilgileri değiştirildi!">
     <TOFUNotMatchErrorText "Uyarı! Kişilerinizden bazıları kimliklerini değiştirdi. İletişim kurmadan önce profillerindeki Peerio avatar simgelerini doğruladığınızdan emin olun. Kullanıcı adları:">
     <importContactsGoogle "Google Kişilerini Peerio'a aktar">
     <importContactsGoogleText "Peerio'ya Google kişilerinizi almak için, sadece Gmail hesabınıza oturum açın ve şu adımları takip edin:">
     <importContactsGoogleStep1 "Gmail sayfanızın sol üst köşesindeki <strong>Gmail</strong> yazısına tıklayın ve <strong>Kişiler</strong> seçin.">
-    <importContactsGoogleStep2 "<strong>Daha</strong> açıır menüsünden, <strong>Dışa aktar</strong> seçin...">
+    <importContactsGoogleStep2 "<strong>Daha</strong> açılır menüsünden, <strong>Dışa aktar</strong> seçin...">
     <importContactsGoogleStep3 "Tüm kişileri mi veya sadece bir grubu mu dışa aktaracağınızı seçin.">
     <importContactsGoogleStep4 "Dışa aktarma biçimi olarak <strong>Google CSV</strong> seçin.">
     <importContactsGoogleStep5 "Kişilerinizi CSV dosyasına aktardıktan sonra, Peerio'ya yüklemek üzere aşağıdaki düğmeye tıklayın.">
