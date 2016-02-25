@@ -1,7 +1,7 @@
 {
   "name": "peerio-client",
   "author": "Technologies Peerio Inc.",
-  "description": "Secure message and file sharing for everyone. Our worldwide cloud storage lets you work anywhere, while end-to-end encryption keeps your data safe everywhere.",
+  "description": "A simple and secure way to share private messages and files and store them in the cloud. End-to-end encrypted, open source, free.",
   "license": "GPLv3",
   "repository": {
     "type": "git",
