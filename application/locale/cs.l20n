@@ -58,8 +58,8 @@
     <accountBlacklisted "Účet nedostupný">
     <accountBlacklistedText "Tento účet je dočasně pozastaven. Pro opětovné získání přístupu prosím kontaktujte support@peerio.com.">
     <searchMessagesFilesAndContacts "Hledat zprávy, soubory a kontakty">
-    <computerTimeSync "Message Not Sent">
-    <computerTimeSyncText "An error occurred and your message was not sent. If you experience this problem repeatedly, please make sure that your computer's clock is set to the correct time.">
+    <computerTimeSync "Zpráva nebyla odeslána">
+    <computerTimeSyncText "Došlo k chybě, a vaše zpráva nebyla odeslána. Dochází-li k této chybě opakovaně, ujistěte se prosím, že je ve vašem počítači správně nastaven čas.">
     <messages "Zprávy">
     <files "Soubory">
     <contacts "Kontakty">

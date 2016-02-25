@@ -6,7 +6,7 @@ EAPI="1"
 
 DESCRIPTION="Peerio Client"
 HOMEPAGE="https://peerio.com"
-SRC_URI="https://dl.peerio.com/sources/rh-${PN}-${PV}.tar.gz"
+SRC_URI="https://linux.peerio.com/sources/rh-${PN}-${PV}.tar.gz"
 
 LICENSE="GPL3"
 RDEPEND="media-libs/alsa-lib

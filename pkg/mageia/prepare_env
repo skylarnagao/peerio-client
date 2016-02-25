@@ -5,7 +5,8 @@ urpmi alsa-lib glibc cairo libdbus1_3 fontconfig GConf2 libgdk_pixbuf2.0_0 libgt
 #cd rpmbuild
 #wget https://linux.peerio.com/sources/rh-peerio-client-1.3.0.tar.gz -O SOURCES/rh-peerio-client-1.3.0.tar.gz
 #wget https://linux.peerio.com/sources/03-build.patch -O SOURCES/03-build.patch
-#wget https://linux.peerio.com/fedora23/peerio-client.spec -O SPECS/peerio-client.spec
+#wget https://linux.peerio.com/sources/04-build.patch -O SOURCES/04-build.patch
+#wget https://linux.peerio.com/mageia5/peerio-client.spec -O SPECS/peerio-client.spec
 #rpmbuild -ba SPECS/peerio-client.spec
 
 #gpg:
