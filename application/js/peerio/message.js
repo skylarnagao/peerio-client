@@ -236,18 +236,18 @@ Peerio.message = {};
     Peerio.message.readMessages = function (read, callback) {
         var encryptedRead = []
         var pushEncryptedReceipt = function (message) {
-            var receipt = message.receipt.toString() + Date.now()
-            var nonce = miniLock.crypto.getNonce()
-            receipt = nacl.box(
-                nacl.util.decodeUTF8(receipt),
-                nonce,
-                Peerio.crypto.getPublicKeyFromMiniLockID(message.senderID),
-                Peerio.user.keyPair.secretKey
-            )
-            receipt = nacl.util.encodeBase64(receipt) + ':' + nacl.util.encodeBase64(nonce)
+            //var receipt = message.receipt.toString() + Date.now()
+            //var nonce = miniLock.crypto.getNonce()
+            //receipt = nacl.box(
+            //    nacl.util.decodeUTF8(receipt),
+            //    nonce,
+            //    Peerio.crypto.getPublicKeyFromMiniLockID(message.senderID),
+            //    Peerio.user.keyPair.secretKey
+            //)
+            //receipt = nacl.util.encodeBase64(receipt) + ':' + nacl.util.encodeBase64(nonce)
             encryptedRead.push({
                 id: message.id,
-                encryptedReturnReceipt: receipt
+                encryptedReturnReceipt: 'deprecated'//receipt
             })
             if (encryptedRead.length === read.length) {
                 Peerio.network.readMessages(encryptedRead, callback)
