@@ -32,6 +32,9 @@
 		"notifications",
 		"storage",
 		"fileBrowserHandler",
-		"https://peerio.blob.core.windows.net/*"
+		"https://peerio.blob.core.windows.net/*",
+		"https://blob.peerio.com/*",
+		"https://blobmonster.peerio.com/*",
+		"https://blobmonsterwilleatyou.peerio.com/*"
 	]
 }
