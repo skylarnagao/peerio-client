@@ -151,7 +151,7 @@ Peerio.message = {};
 
             if (typeof(message) !== 'object') {
                 decryptedCount++;
-                if (decryptedCount === keys.length) {
+                if (decryptedCount >= keys.length) {
                     if (typeof(onComplete) === 'function') {
                         onComplete(conv);
                     }
@@ -167,7 +167,7 @@ Peerio.message = {};
                 }
                 Peerio.crypto.decryptMessage(message, function (decrypted) {
                     if (!verifyDecryptedMessage(message, decrypted, prevMsg)) {
-                        decryptMessage(conv.messages[keys[decryptedCount]], id);
+                        decryptMessage(conv.messages[keys[++decryptedCount]], id);
                         return;
                     }
                     prevMsg = decrypted;
