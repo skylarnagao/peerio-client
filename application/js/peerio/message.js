@@ -149,9 +149,7 @@ Peerio.message = {};
         var decryptMessage = function (message, id) {
             var conv = Peerio.user.conversations[id];
 
-            if (
-                (typeof(message) !== 'object')
-            ) {
+            if (typeof(message) !== 'object') {
                 decryptedCount++;
                 if (decryptedCount === keys.length) {
                     if (typeof(onComplete) === 'function') {
@@ -164,7 +162,7 @@ Peerio.message = {};
             }
             else {
                 if (!verifyMetadata(message, decryptedCount > 0 ? conv.messages[keys[decryptedCount - 1]] : null, true)) {
-                    decryptMessage(conv.messages[keys[decryptedCount]], id);
+                    decryptMessage(conv.messages[keys[++decryptedCount]], id);
                     return;
                 }
                 Peerio.crypto.decryptMessage(message, function (decrypted) {
@@ -370,7 +368,9 @@ Peerio.message = {};
             }
             return true;
         }
-        if (message.secretConversationID)message.secretConversationId = message.secretConversationID;
+        if (message.secretConversationID) {
+            message.secretConversationId = message.secretConversationID;
+        }
 
         if (message.metadataVersion != metadata.version) {
             console.error('Metadata versions mismatch for message id ' + metadata.id);
