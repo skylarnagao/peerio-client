@@ -905,7 +905,7 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
                 if (typeof decrypted != 'object') continue;
 
                 max = Math.max(decrypted.innerIndex || 0, max);
-                if (!secretId) secretId = decrypted.secretConversationId;
+                if (!secretId) secretId = decrypted.secretConversationId || decrypted.secretConversationID;
             }
             return {maxIndex: max, secretConversationId: secretId || nacl.util.encodeBase64(nacl.randomBytes(32))};
         }

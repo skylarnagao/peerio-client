@@ -370,6 +370,7 @@ Peerio.message = {};
             }
             return true;
         }
+        if (message.secretConversationID)message.secretConversationId = message.secretConversationID;
 
         if (message.metadataVersion != metadata.version) {
             console.error('Metadata versions mismatch for message id ' + metadata.id);
