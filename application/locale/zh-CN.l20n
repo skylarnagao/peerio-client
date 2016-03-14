@@ -1,7 +1,7 @@
 
     <title "Peerio">
     <signupHeader "消息和文件。简单且安全。">
-    <signupIntro "Peerio 是一种简单且安全的发送消息、共享文件和在线存储文档的方式。一切东西发送到云端之前都会被加密，因此除了您和您曾经分享的人以外，没有人能看到您的数据内容。<br /><br /><strong>Peerio 目前处于测试版阶段。<a href='https://peerio.com/pages/beta.html' target='_blank'>了解这意味着什么</a>。">
+    <signupIntro "Peerio 是一种简单且安全的发送消息、共享文件和在线存储文档的方式。一切东西发送到云端之前都会被加密，因此除了您和您曾经分享的人以外，没有人能看到您的数据内容。<br /><br /><strong>Peerio 目前处于测试版阶段。">
     <username "用户名">
     <passphrase "密码">
     <passphraseOrPIN "密码短语或设备密码">

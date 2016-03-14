@@ -1,7 +1,7 @@
 
     <title "Peerio">
     <signupHeader "Messaggi e file. In semplicità e sicurezza.">
-    <signupIntro "Contatta persone e condividi file in modo sicuro e semplice con Peerio. Il nostro cloud ti permette di lavorare ovunque, inoltre i tuoi dati sono al sicuro dappertutto grazie alla cifratura end-to-end.<br /><br /><strong>Peerio è momentaneamente in fase Beta. <a href='https://peerio.com/pages/beta.html' target='_blank'>Scopri di cosa si tratta</a>.">
+    <signupIntro "Contatta persone e condividi file in modo sicuro e semplice con Peerio. Il nostro cloud ti permette di lavorare ovunque, inoltre i tuoi dati sono al sicuro dappertutto grazie alla cifratura end-to-end.">
     <username "Nome utente">
     <passphrase "Passphrase">
     <passphraseOrPIN "Passphrase o Passcode">

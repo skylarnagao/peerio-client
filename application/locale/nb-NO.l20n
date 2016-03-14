@@ -1,7 +1,7 @@
 
     <title "Peerio">
     <signupHeader "Meldinger og filer. Enkelt og sikkert.">
-    <signupIntro "Peerio er en enkel og sikker måte å sende meldinger, dele filer, samt å lagre dokumenter på nettet. Alt blir kryptert før det sendes til skyen, slik at bare du og dem du deler med har tilgang til din data.<br /><br /><strong>Peerio er foreløpig i beta-stadie.<a href='https://peerio.com/pages/beta.html' target='_blank'>Her kan du finne ut hva det betyr</a>.">
+    <signupIntro "Peerio er en enkel og sikker måte å sende meldinger, dele filer, samt å lagre dokumenter på nettet. Alt blir kryptert før det sendes til skyen, slik at bare du og dem du deler med har tilgang til din data.">
     <username "Brukernavn">
     <passphrase "Passordsekvens">
     <passphraseOrPIN "Passordsekvens eller enhetskode">

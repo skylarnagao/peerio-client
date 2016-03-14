@@ -1,7 +1,7 @@
 
     <title "Peerio">
     <signupHeader "Üzenetek és fájlok. Egyszerű és biztonságos.">
-    <signupIntro "A Peerio egy egyszerű és biztonságos módja üzenetek küldésének, fájlok megosztásának és dokumentumok tárolásának online. Minden titkosítást kap, mielőtt el lesz küldve a felhőbe, így senki sem fér hozzá az adataidhoz csak te és akikkel valaha megosztottad.<br /><br /><strong>A Peerio jelenleg Beta. <a href='https://peerio.com/pages/beta.html' target='_blank'>Nézd meg ez mit jelent</a>.">
+    <signupIntro "A Peerio egy egyszerű és biztonságos módja üzenetek küldésének, fájlok megosztásának és dokumentumok tárolásának online. Minden titkosítást kap, mielőtt el lesz küldve a felhőbe, így senki sem fér hozzá az adataidhoz csak te és akikkel valaha megosztottad.">
     <username "Felhasználónév">
     <passphrase "Jelmondat">
     <passphraseOrPIN "Jelmondat vagy számkód">
