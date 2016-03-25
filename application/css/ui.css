@@ -948,7 +948,7 @@ div.userMenu {
 	div.userMenu a:hover, div.userMenu a:hover * {
 		text-decoration: none !important;
 	}
-	
+
 	div.userMenuAvatar {
 		border: 1px solid #EAEAEA;
 		float: left;
@@ -2579,13 +2579,14 @@ div.accountSettingsAddress {
 		border: 3px solid #EEE;
 	}
 
-div.accountSettings div.deleteAccount {
+.accountSettings .deleteAccount {
 	width: 350px;
 	padding: 0 40px 0 0;
 	border-right: 1px solid #EAEAEA;
 	position: absolute;
 	bottom: 85px;
 	left: 30px;
+	top: 315px;
 }
 
 div.accountSettings div.twoFactorAuthSettings {
@@ -2714,4 +2715,33 @@ ul.filesSidebarTypeFilters li,ul.messagesSidebarTypeFilters li {
 }
 .filter-name{
 	color: #fff;
+}
+
+.loginForm .mobile-apps {
+	position: absolute;
+	bottom: 32px;
+	left: 30px;
+	margin-bottom: 16px;
+}
+
+.mobile-apps {
+	margin-top: 32px;
+}
+
+.mobile-apps p {
+	color: #fff;
+	/*text-align: center;*/
+	margin-top: 16px;
+}
+
+.mobile-app img {
+	width: 135px;
+	height: 40px;
+	margin: 4px 8px 4px 0;
+}
+
+.mobile-app:not(:first-of-type) img{
+	width: 135px;
+	height: 40px;
+	margin: 4px 0 4px 8px;
 }

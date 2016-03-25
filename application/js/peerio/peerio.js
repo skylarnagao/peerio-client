@@ -8,7 +8,7 @@ Peerio = window.Peerio || {}
 
 // if mobile app didn't set flag to true, considering it false
 Peerio.isMobile = Peerio.isMobile || false;
- 
+
 // Initialization code for some node-webkit features.
 if (typeof(require) === 'function') {
 	var gui = require('nw.gui')
@@ -56,7 +56,7 @@ if (typeof(require) === 'function') {
 						else if (navigator.appVersion.indexOf('Mac') >= 0) {
 							gui.Shell.openExternal(Peerio.config.updateMac)
 						} else {
-							gui.Shell.openExternal(Peerio.config.updateLin)	
+							gui.Shell.openExternal(Peerio.config.updateLin)
 						}
 
 						setTimeout(function() {
@@ -83,7 +83,7 @@ if (typeof(require) === 'function') {
 						else if (navigator.appVersion.indexOf('Mac') >= 0) {
 							gui.Shell.openExternal(Peerio.config.updateMac)
 						} else {
-							gui.Shell.openExternal(Peerio.config.updateLin)	
+							gui.Shell.openExternal(Peerio.config.updateLin)
 						}
 					}
 				)
