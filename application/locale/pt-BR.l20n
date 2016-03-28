@@ -1,7 +1,7 @@
 
     <title "Peerio">
     <signupHeader "Mensagens e arquivos. Simples e seguro.">
-    <signupIntro "Peerio é um modo seguro e simples para enviar mensagens, compartilhar arquivos e guardar documentos on-line. É tudo encriptado antes de ser enviado para a nuvem, e assim, ninguém a não ser você e aqueles que com quem você compartilha é que têm acesso aos seus dados.<br /><br /><strong>Peerio está atualmente na fase Beta. <a href='https://peerio.com/pages/beta.html' target='_blank'>Veja o que isto significa</a>.">
+    <signupIntro "Peerio é um modo seguro e simples para enviar mensagens, compartilhar arquivos e guardar documentos on-line. É tudo encriptado antes de ser enviado para a nuvem, e assim, ninguém a não ser você e aqueles que com quem você compartilha é que têm acesso aos seus dados.">
     <username "Nome de usuário">
     <passphrase "Senha">
     <passphraseOrPIN "Senha ou Código de Acesso">

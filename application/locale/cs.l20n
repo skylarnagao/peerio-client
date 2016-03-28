@@ -1,7 +1,7 @@
 
     <title "Peerio">
     <signupHeader "Zprávy a soubory. Snadno a bezpečně.">
-    <signupIntro "Peerio představuje snadný a bezpečný způsob posílání zpráv, sdílení souborů a uchovávání dokumentů online. Vše je zašifrováno ještě před odesláním do cloudu, takže nikdo, kromě vás a lidí se kterými je sdílíte, nebude mít přístup k vašim datům.<br /><br /><strong>Peerio je nyní v Betě. <a href='https://peerio.com/pages/beta.html' target='_blank'>Zjistěte, co to znamená</a>.">
+    <signupIntro "Peerio představuje snadný a bezpečný způsob posílání zpráv, sdílení souborů a uchovávání dokumentů online. Vše je zašifrováno ještě před odesláním do cloudu, takže nikdo, kromě vás a lidí se kterými je sdílíte, nebude mít přístup k vašim datům.">
     <username "Uživatelské jméno">
     <passphrase "Přístupová fráze">
     <passphraseOrPIN "Přístupová fráze či Přístupový kód">

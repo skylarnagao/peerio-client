@@ -1,7 +1,7 @@
 
     <title "Peerio">
     <signupHeader "Mesajlar ve dosyalar. Basit ve güvenli.">
-    <signupIntro "Peerio; çevrimiçi mesaj göndermek, dosya paylaşmak veya belgeleri depolamak için basit ve güvenli bir yoldur. Buluta gönderilmeden önce her şey şifrelendiğinden, siz ve paylaştığınız kişiler hariç hiç kimse verilerinize erişemez.<br /><br /><strong>Peerio şu anda Beta sürümündedir. <a href='https://peerio.com/pages/beta.html' target='_blank'>Ne demek olduğuna bakın</a>.">
+    <signupIntro "Peerio; çevrimiçi mesaj göndermek, dosya paylaşmak veya belgeleri depolamak için basit ve güvenli bir yoldur. Buluta gönderilmeden önce her şey şifrelendiğinden, siz ve paylaştığınız kişiler hariç hiç kimse verilerinize erişemez.">
     <username "Kullanıcı adı">
     <passphrase "Parola">
     <passphraseOrPIN "Sistem Parolası veya Kod">

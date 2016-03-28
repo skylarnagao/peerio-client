@@ -102,6 +102,16 @@
                 data-ng-options="option.value as option.name for option in languageOptions"
                 data-ng-change="changeLocale()"></select>
 
+        <div class="mobile-apps">
+          <p>Available now for Android and iOS.</p>
+          <a class="mobile-app" href="https://play.google.com/store/apps/details?id=com.peerio" target="_blank">
+            <img src="img/google-play-badge-white-edit.png" alt="play store badge">
+          </a>
+          <a class="mobile-app" href="https://itunes.apple.com/app/id985341583" target="_blank">
+            <img src="img/app-store-badge-135x40-white-edit.svg" alt="app store badge">
+          </a>
+        </div>
+
         <div class="loginFormFooter">
             <img src="img/peerioLogoWhite.png" alt=""/>
             <span class="loginFormVersion" data-ng-bind="login.version"></span>
@@ -395,6 +405,7 @@
                 <span data-l10n-id="importContacts"></span>
             </button>
         </div>
+
         <div class="userMenu" data-ng-controller="userMenu">
             <div class="userMenuAvatar">
                 <img data-ng-src="{{userMenu.avatarIcon1}}" alt=""/>
@@ -1245,6 +1256,16 @@
                 </div>
             </div>
             <div class="deleteAccount">
+              <!-- TODO localize text -->
+              <h2> Mobile Apps </h2>
+              <div class="mobile-apps">
+                <a class="mobile-app" href="https://itunes.apple.com/app/id985341583" target="_blank">
+                  <img src="img/app-store-badge-135x40.svg" alt="app store badge">
+                </a>
+                <a class="mobile-app" href="https://play.google.com/store/apps/details?id=com.peerio" target="_blank">
+                  <img src="img/google-play-badge.png" alt="play store badge">
+                </a>
+              </div>
                 <form>
                     <h2 data-l10n-id="deleteAccount"></h2>
                     <span data-l10n-id="deleteAccountText"></span>
@@ -1257,6 +1278,7 @@
                         <button data-l10n-id="changePassphrase" data-ng-click="accountSettings.changePassphrase()></button>
                     -->
                 </form>
+
             </div>
             <div class="twoFactorAuthSettings">
                 <h2 data-l10n-id="twoFactorAuth"></h2>
