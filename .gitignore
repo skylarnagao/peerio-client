@@ -19,3 +19,5 @@ npm-debug.log
 *.sln
 build/*
 cache/*
+.idea
+.DS_Store
