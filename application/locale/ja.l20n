@@ -1,7 +1,7 @@
 
     <title "Peerio">
     <signupHeader "メッセージとファイル。簡単で安全。">
-    <signupIntro "Peerioは簡単かつ安全にオンライン上のメッセージの送信、ファイルの共有、文書の保管ができます。クラウド送信される前に全てが暗号化され、あなたと共有者以外の誰もあなたのデータにアクセスすることができません。">
+    <signupIntro "Peerio is a simple and secure way to send messages, share files, and store documents online. Everything gets encrypted before being sent to the cloud, so nobody but you and those you share with ever have access to your data.">
     <username "ユーザー名">
     <passphrase "パスフレーズ">
     <passphraseOrPIN "パスフレーズまたはパスコード">
@@ -328,3 +328,5 @@
     <acknowledgedMessage "確認済みのメッセージ">
     <addAddressSuggestion "連絡先の情報をアップデートしますか？">
     <addAddressSuggestionText "連絡先の代替情報を追加すると、このようなことが可能になります<br><ul><li><strong>発見</strong>: 連絡先があなたを見つけやすくなります</li><li><strong>通知</strong>: 新しいメッセージと連絡先が通知されます</li><li><strong>サポート</strong>: ヘルプセンターからより多くのサポートサービスが受けられます</li></ul><br>連絡先をアップデートしますか？">
+    <availableNowMobile "Available now for Android and iOS.">
+    <mobileApps "Mobile Apps">

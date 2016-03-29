@@ -1,7 +1,7 @@
 
     <title "Peerio">
     <signupHeader "Des messages et des fichiers. Simple et sécurisé.">
-    <signupIntro "Peerio propose une façon simple et sécurisée d'envoyer des messages, de partager des fichiers et de stocker des documents en ligne. Tout est chiffré avant d'être envoyé vers le nuage afin que seuls vous et ceux avec qui vous partagez ne puissent accéder à vos données.">
+    <signupIntro "Peerio is a simple and secure way to send messages, share files, and store documents online. Everything gets encrypted before being sent to the cloud, so nobody but you and those you share with ever have access to your data.">
     <username "Nom d'utilisateur">
     <passphrase "Phrase de passe">
     <passphraseOrPIN "Phrase ou code de passe">
@@ -327,4 +327,6 @@
     <passphraseConfirmFailed "Votre phrase de passe n'a pas été saisie correctement. Veuillez stocker votre phrase de passe dans un endroit sécurisé avant de poursuivre.">
     <acknowledgedMessage "Message approuvé">
     <addAddressSuggestion "Mettre à jour les coordonnées ?">
-    <addAddressSuggestionText "Ajouter des coordonnées permet de :<br><ul><li><strong>Recherche</strong> : vos contacts vous retrouveront plus facilement</li><li><strong>Notifications</strong> : notifications de nouveaux messages/contacts </li><li><strong>Assistance technique</strong> : notre équipe d'assistance aura plus d'options pour vous aider.</li></ul><br>Voulez-vous mettre à jour vos coordonnées ?">
+    <addAddressSuggestionText "Ajouter des coordonnées permet :<br><ul><li><strong>Recherche</strong> : vos contacts vous retrouveront plus facilement</li><li><strong>Notifications</strong> : notifications de nouveaux messages, de nouveaux contacts </li><li><strong>Assistance</strong> : notre centre d'assistance vous proposera plus d'options de soutien.</li></ul><br>Voulez-vous mettre à jour vos coordonnées ?">
+    <availableNowMobile "Available now for Android and iOS.">
+    <mobileApps "Mobile Apps">

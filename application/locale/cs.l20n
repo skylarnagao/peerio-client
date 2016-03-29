@@ -328,3 +328,5 @@
     <acknowledgedMessage "Zpráva potvrzena">
     <addAddressSuggestion "Aktualizovat kontaktní údaje?">
     <addAddressSuggestionText "Přidání alternativních kontaktních údajů umožňuje: <br><ul><li><strong>Nalezení</strong>: Pomožte svým kontaktům Vás najít </li><li><strong>Oznámení</strong>: Oznámení nových zpráv a kontaktů </li><li><strong>Podporu</strong>: Více služeb poskytovaných naším Centrem podpory</li></ul><br>Přejete si aktualizovat své adresy?">
+    <availableNowMobile "Available now for Android and iOS.">
+    <mobileApps "Mobile Apps">

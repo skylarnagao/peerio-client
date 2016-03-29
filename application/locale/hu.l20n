@@ -1,7 +1,7 @@
 
     <title "Peerio">
     <signupHeader "Üzenetek és fájlok. Egyszerű és biztonságos.">
-    <signupIntro "A Peerio egy egyszerű és biztonságos módja üzenetek küldésének, fájlok megosztásának és dokumentumok tárolásának online. Minden titkosítást kap, mielőtt el lesz küldve a felhőbe, így senki sem fér hozzá az adataidhoz csak te és akikkel valaha megosztottad.">
+    <signupIntro "Peerio is a simple and secure way to send messages, share files, and store documents online. Everything gets encrypted before being sent to the cloud, so nobody but you and those you share with ever have access to your data.">
     <username "Felhasználónév">
     <passphrase "Jelmondat">
     <passphraseOrPIN "Jelmondat vagy számkód">
@@ -328,3 +328,5 @@
     <acknowledgedMessage "Nyugtázott üzenet">
     <addAddressSuggestion "Kapcsolat információ frissítése?">
     <addAddressSuggestionText "Alternatív kapcsolat információ hozzáadása engedélyezve van erre: <br><ul><li><strong>Felderítés</strong>: Egyszerűbbé teszi a kapcsolataidnak, hogy megtaláljanak </li><li><strong>Értesítések</strong>: Új üzenet és kapcsolat értesítések </li><li><strong>Támogatás</strong>: Kiterjesztett támogatási szolgáltatások a Támogatási Központunktól</li></ul><br>Szeretnéd frissíteni a címeid?">
+    <availableNowMobile "Available now for Android and iOS.">
+    <mobileApps "Mobile Apps">
