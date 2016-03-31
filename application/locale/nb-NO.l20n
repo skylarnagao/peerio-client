@@ -1,7 +1,7 @@
 
     <title "Peerio">
     <signupHeader "Meldinger og filer. Enkelt og sikkert.">
-    <signupIntro "Peerio er en enkel og sikker måte å sende meldinger, dele filer, samt å lagre dokumenter på nettet. Alt blir kryptert før det sendes til skyen, slik at bare du og dem du deler med har tilgang til din data.">
+    <signupIntro "Peerio is a simple and secure way to send messages, share files, and store documents online. Everything gets encrypted before being sent to the cloud, so nobody but you and those you share with ever have access to your data.">
     <username "Brukernavn">
     <passphrase "Passordsekvens">
     <passphraseOrPIN "Passordsekvens eller enhetskode">
@@ -328,3 +328,7 @@
     <acknowledgedMessage "Bekreftelsesmelding">
     <addAddressSuggestion "Oppdater kontakt-informasjon?">
     <addAddressSuggestionText "Tillegg av alternativ kontaktinformasjon tillater: <br><ul><li><strong>Oppdagelse</strong>: Gjør det enklere for dine kontakter å finne deg </li><li><strong>Merknader</strong>: Ny meldings- og kontakt-merknader </li><li><strong>Støtte</strong>: Ytterligere støttetjenester fra brukerstøtte</li></ul><br>Ønsker du å oppdatere adressene dine?">
+    <availableNowMobile "Available now for Android and iOS.">
+    <mobileApps "Mobile Apps">
+    <TOStitle "Terms Of Use">
+    <TOStext "By signing up for a Peerio account, you agree to our terms of use.">

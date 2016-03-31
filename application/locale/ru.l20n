@@ -1,7 +1,7 @@
 
     <title "Peerio">
     <signupHeader "Сообщения и файлы. Просто и безопасно.">
-    <signupIntro "Peerio это простой и безопасный метод обмена сообщениями и файлами и хранения файлов в облаке. Никто кроме вас и ваших адресатов не имеет доступа к данным, потому что вся информация зашифровывается перед передачей по сети.">
+    <signupIntro "Peerio is a simple and secure way to send messages, share files, and store documents online. Everything gets encrypted before being sent to the cloud, so nobody but you and those you share with ever have access to your data.">
     <username "Имя пользователя">
     <passphrase "Кодовая фраза">
     <passphraseOrPIN "Кодовая фраза или пароль устройства">
@@ -328,3 +328,7 @@
     <acknowledgedMessage "Сообщение принято">
     <addAddressSuggestion "Обновить информацию о контакте?">
     <addAddressSuggestionText "Добавление резервной контактной информации позволяет обеспечить: <br><ul><li><strong>Поиск</strong>: Ваши контакты смогут проще вас искать </li><li><strong>Уведомления</strong>: Новые уведомления о сообщениях и контактах </li><li><strong>Поддержку</strong>: Больше различных сервисов поддержки от нашего Центра Помощи</li></ul><br>Вы хотите обновить свою контактную информацию?">
+    <availableNowMobile "Available now for Android and iOS.">
+    <mobileApps "Mobile Apps">
+    <TOStitle "Terms Of Use">
+    <TOStext "By signing up for a Peerio account, you agree to our terms of use.">

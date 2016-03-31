@@ -1,7 +1,7 @@
 
     <title "Peerio">
     <signupHeader "Mesajlar ve dosyalar. Basit ve güvenli.">
-    <signupIntro "Peerio; çevrimiçi mesaj göndermek, dosya paylaşmak veya belgeleri depolamak için basit ve güvenli bir yoldur. Buluta gönderilmeden önce her şey şifrelendiğinden, siz ve paylaştığınız kişiler hariç hiç kimse verilerinize erişemez.">
+    <signupIntro "Peerio is a simple and secure way to send messages, share files, and store documents online. Everything gets encrypted before being sent to the cloud, so nobody but you and those you share with ever have access to your data.">
     <username "Kullanıcı adı">
     <passphrase "Parola">
     <passphraseOrPIN "Sistem Parolası veya Kod">
@@ -328,3 +328,7 @@
     <acknowledgedMessage "Doğrulanmış Mesaj">
     <addAddressSuggestion "İletişim bilgilerinizi güncelleştir?">
     <addAddressSuggestionText "Alternatif iletişim bilgilerinin eklenmesi ek özellikler sağlar: <br><ul><li><strong> Keşif</strong>: Sizin kişilerinizin sizi bulmasını kolaylaştırır </li><li><strong> Bildirimler </strong>: Yeni mesaj ve kişiler bildirimleri </li><li><strong> Destek </strong>: Yardım Merkezi'nden daha fazla destek hizmetleri</li></ul><br>İletişim bilgilerinizi güncelleştirmek ister misiniz?">
+    <availableNowMobile "Available now for Android and iOS.">
+    <mobileApps "Mobile Apps">
+    <TOStitle "Terms Of Use">
+    <TOStext "By signing up for a Peerio account, you agree to our terms of use.">

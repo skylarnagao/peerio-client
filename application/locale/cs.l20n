@@ -328,3 +328,7 @@
     <acknowledgedMessage "Zpráva potvrzena">
     <addAddressSuggestion "Aktualizovat kontaktní údaje?">
     <addAddressSuggestionText "Přidání alternativních kontaktních údajů umožňuje: <br><ul><li><strong>Nalezení</strong>: Pomožte svým kontaktům Vás najít </li><li><strong>Oznámení</strong>: Oznámení nových zpráv a kontaktů </li><li><strong>Podporu</strong>: Více služeb poskytovaných naším Centrem podpory</li></ul><br>Přejete si aktualizovat své adresy?">
+    <availableNowMobile "Nyní k dispozici pro Android a iOS.">
+    <mobileApps "Mobilní aplikace">
+    <TOStitle "Terms Of Use">
+    <TOStext "By signing up for a Peerio account, you agree to our terms of use.">

@@ -328,3 +328,7 @@
     <acknowledgedMessage "Acknowledged Message">
     <addAddressSuggestion "Update contact information?">
     <addAddressSuggestionText "Adding alternative contact information allows for: <br><ul><li><strong>Discovery</strong>: Make it easier for your contacts to find you </li><li><strong>Notifications</strong>: New message and contact notifications </li><li><strong>Support</strong>: More support services from our Help Center</li></ul><br>Would you like to update your addresses?">
+    <availableNowMobile "Available now for Android and iOS.">
+    <mobileApps "Mobile Apps">
+    <TOStitle "Terms Of Use">
+    <TOStext "By signing up for a Peerio account, you agree to our terms of use.">

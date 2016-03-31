@@ -1,7 +1,7 @@
 
     <title "Peerio">
     <signupHeader "Mensajes y archivos. Simple y seguro.">
-    <signupIntro "Peerio es una manera simple y segura de enviar mensajes, compartir ficheros, y almacenar documentos en línea. Todo se cifra antes de enviarse a la nube, así que nadie salvo usted y aquellos con los que comparta tendrán jamás acceso a sus datos.">
+    <signupIntro "Peerio es un forma simple y segura de enviar mensajes, compartir ficheros, y almacenar documentos en línea. Todo se cifra antes de ser enviado a la nube, así que en todo caso nadie salvo usted y aquellos con los comparta tendrá acceso a sus datos.">
     <username "Nombre de usuario">
     <passphrase "Frase de acceso">
     <passphraseOrPIN "Frase-contraseña o código de acceso">
@@ -328,3 +328,7 @@
     <acknowledgedMessage "Acuso de recibo">
     <addAddressSuggestion "¿Actualizar información de contacto?">
     <addAddressSuggestionText "Añadir datos de contacto alternativos permite: <br><ul><li><strong>Descubrimiento</strong>: Facilita que sus contactos le encuentren </li><li><strong>Notificaciones</strong>: Reciba notificaciones de recepción de mensajes y solicitudes de contacto </li><li><strong>Soporte técnico</strong>: Más servicios a través de nuestro Centro de soporte</li></ul><br>¿Desea añadir/actualizar direcciones?">
+    <availableNowMobile "Disponible ahora para Android e iOS">
+    <mobileApps "Aplicaciones móviles">
+    <TOStitle "Terms Of Use">
+    <TOStext "By signing up for a Peerio account, you agree to our terms of use.">
