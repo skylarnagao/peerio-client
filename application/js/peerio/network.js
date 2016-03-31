@@ -98,7 +98,7 @@ Peerio.network.getSettings = function (callback) {
 
         swal({
             title: document.l10n.getEntitySync('TOStitle').value,
-            text: document.l10n.getEntitySync('TOStext').value + '<br><a target="_blank" href="https://github.com/PeerioTechnologies/peerio-documentation/blob/master/Terms_of_Use.md">Peerio TOS</a>',
+            text: document.l10n.getEntitySync('TOStextUpdated').value + '<br><a target="_blank" href="https://github.com/PeerioTechnologies/peerio-documentation/blob/master/Terms_of_Use.md">Peerio TOS</a>',
             type: 'warning',
             showCancelButton: true,
             cancelButtonText: document.l10n.getEntitySync('decline').value,
