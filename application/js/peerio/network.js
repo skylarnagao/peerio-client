@@ -108,7 +108,7 @@ Peerio.network.getSettings = function (callback) {
             if (isConfirm) {
                 data.settings.acceptedLatestTOS = true;
                 Peerio.UI.twoFactorAuth(function () {
-                    Peerio.network.updateSettings(data, function () {
+                    Peerio.network.updateSettings(data.settings, function () {
                     });
                 });
                 callback(data);
