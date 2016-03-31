@@ -2584,9 +2584,8 @@ div.accountSettingsAddress {
 	padding: 0 40px 0 0;
 	border-right: 1px solid #EAEAEA;
 	position: absolute;
-	bottom: 85px;
 	left: 30px;
-	top: 315px;
+	bottom: 32px;
 }
 
 div.accountSettings div.twoFactorAuthSettings {
@@ -2725,9 +2724,8 @@ ul.filesSidebarTypeFilters li,ul.messagesSidebarTypeFilters li {
 }
 
 .mobile-apps {
-	margin-top: 32px;
+	margin-bottom: 16px;
 }
-
 .mobile-apps p {
 	color: #fff;
 	/*text-align: center;*/
