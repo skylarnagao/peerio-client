@@ -107,7 +107,7 @@ Peerio.network.getSettings = function (callback) {
         }, function (isConfirm) {
             if(isConfirm){
                 data.settings.acceptedLatestTOS = true;
-                Peerio.network.updateSettings(data, function(){});
+                Peerio.network.updateSettings(data.settings, function(){});
                 callback(data);
             } else {
                 window.close();
