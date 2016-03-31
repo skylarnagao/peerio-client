@@ -90,8 +90,31 @@ Peerio.network.getAuthTokens = function (callback) {
 Peerio.network.getSettings = function (callback) {
     Peerio.socket.emit('getSettings', {
         authToken: Peerio.user.popAuthToken()
-    }, callback)
-}
+    }, function(data){
+        if(data.settings.acceptedLatestTOS){
+            callback(data);
+            return;
+        }
+
+        swal({
+            title: document.l10n.getEntitySync('TOStitle').value,
+            text: document.l10n.getEntitySync('TOStext').value + '<br><a target="_blank" href="https://github.com/PeerioTechnologies/peerio-documentation/blob/master/Terms_of_Use.md">Peerio TOS</a>',
+            type: 'warning',
+            showCancelButton: true,
+            cancelButtonText: document.l10n.getEntitySync('decline').value,
+            confirmButtonColor: '#A5E593',
+            confirmButtonText: document.l10n.getEntitySync('accept').value
+        }, function (isConfirm) {
+            if(isConfirm){
+                data.settings.acceptedLatestTOS = true;
+                Peerio.network.updateSettings(data, function(){});
+                callback(data);
+            } else {
+                window.close();
+            }
+        });
+    });
+};
 
 /**
  * Change settings. Uses an authtoken.
