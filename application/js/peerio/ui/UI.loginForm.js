@@ -68,7 +68,8 @@ Peerio.UI.controller('loginForm', function($scope) {
 			showCancelButton: true,
 			cancelButtonText: document.l10n.getEntitySync('decline').value,
 			confirmButtonColor: '#A5E593',
-			confirmButtonText: document.l10n.getEntitySync('accept').value
+			confirmButtonText: document.l10n.getEntitySync('accept').value,
+			allowEscapeKey: false
 		}, function (isConfirm) {
 			if(isConfirm){
 				$scope.login.username   = ''

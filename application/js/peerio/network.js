@@ -90,8 +90,8 @@ Peerio.network.getAuthTokens = function (callback) {
 Peerio.network.getSettings = function (callback) {
     Peerio.socket.emit('getSettings', {
         authToken: Peerio.user.popAuthToken()
-    }, function(data){
-        if(data.settings.acceptedLatestTOS){
+    }, function (data) {
+        if (data.settings.acceptedLatestTOS) {
             callback(data);
             return;
         }
@@ -103,11 +103,15 @@ Peerio.network.getSettings = function (callback) {
             showCancelButton: true,
             cancelButtonText: document.l10n.getEntitySync('decline').value,
             confirmButtonColor: '#A5E593',
-            confirmButtonText: document.l10n.getEntitySync('accept').value
+            confirmButtonText: document.l10n.getEntitySync('accept').value,
+            allowEscapeKey: false
         }, function (isConfirm) {
-            if(isConfirm){
+            if (isConfirm) {
                 data.settings.acceptedLatestTOS = true;
-                Peerio.network.updateSettings(data.settings, function(){});
+                Peerio.UI.twoFactorAuth(function () {
+                    Peerio.network.updateSettings(data.settings, function () {
+                    });
+                });
                 callback(data);
             } else {
                 window.close();
