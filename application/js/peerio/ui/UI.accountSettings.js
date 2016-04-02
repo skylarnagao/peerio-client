@@ -98,10 +98,6 @@ Peerio.UI.controller('accountSettings', function ($scope) {
     }
     $scope.accountSettings.confirmAddress = function (event) {
         var thisAddress = $(event.target).prev('input').val()
-        if (event.target.value.length < 8) {
-            return false
-        }
-
         return actualConfirm(thisAddress, event.target.value);
     }
 
