@@ -23,6 +23,7 @@ Requires: GConf2
 Requires: gdk-pixbuf2
 Requires: gtk3
 Requires: libnotify
+Requires: libXScrnSaver
 Requires: libXcomposite
 Requires: libXcursor
 Requires: libXdamage
