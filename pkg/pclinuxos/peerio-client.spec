@@ -1,5 +1,5 @@
 %define name peerio-client
-%define version 1.3.0
+%define version 1.4.1
 %define release %mkrel 1
 Summary: Peerio Client
 Name: %{name}
@@ -8,7 +8,7 @@ Release: %{release}
 License: GPL3
 Group: Applications/Internet
 Source: https://linux.peerio.com/sources/rh-%{name}-%{version}.tar.gz
-Patch0: https://linux.peerio.com/sources/03-build.patch
+Patch0: https://linux.peerio.com/sources/05-build.patch
 URL: https://peerio.com
 
 #nodejs & npm, not packaged in provider repos, have to be installed
@@ -18,8 +18,10 @@ Requires: libalsa
 Requires: libglib2
 %ifarch x86_64
 Requires: lib64cairo2
+Requires: lib64xscrnsaver1
 %else
 Requires: libcairo2
+Requires: libxscrnsaver1
 %endif
 Requires: libdbus-glib
 Requires: libfontconfig
@@ -62,12 +64,17 @@ make clean PREFIX=%{buildroot}/usr/share BINPREFIX=%{buildroot}/usr
 %defattr(-,root,root)
 %doc README.md
 %dir %{_datadir}/peerio-client
+%dir %{_datadir}/peerio-client/lib
 %dir %{_datadir}/peerio-client/locales
 %{_datadir}/peerio-client/icudtl.dat
-%{_datadir}/peerio-client/libffmpegsumo.so
-%{_datadir}/peerio-client/nw.pak
-%{_datadir}/peerio-client/Peerio
+%{_datadir}/peerio-client/lib/*.so
 %{_datadir}/peerio-client/locales/*pak
+%{_datadir}/peerio-client/natives_blob.bin
+%{_datadir}/peerio-client/nw.pak
+%{_datadir}/peerio-client/nw_100_percent.pak
+%{_datadir}/peerio-client/Peerio
+%{_datadir}/peerio-client/resources.pak
+%{_datadir}/peerio-client/snapshot_blob.bin
 %{_bindir}/peerio-client
 %{_datadir}/applications/peerio-client.desktop
 %{_datadir}/icons/hicolor/*/apps/peerio-client.png
@@ -75,6 +82,13 @@ make clean PREFIX=%{buildroot}/usr/share BINPREFIX=%{buildroot}/usr
 %{_mandir}/man1/peerio-client.1.gz
 
 %changelog
+ * Mon Apr 4 2016 Samuel MARTIN MORO <samuel@peerio.com> 1.4.1-1
+ - Couple bugfixes
+ * Tue Mar 15 2016 Samuel MARTIN MORO <samuel@peerio.com> 1.4.0-1
+ - Removed "beta"
+ * Fri Feb 26 2016 Samuel MARTIN MORO <samuel@peerio.com> 1.3.1-1
+ - Disabled read receipt encryption
+ - New file manager domains
  * Thu Feb 11 2016 Samuel MARTIN MORO <samuel@peerio.com> 1.3.0-1
  - Enforcei API v1.1.0 support
  - various bugfixes
