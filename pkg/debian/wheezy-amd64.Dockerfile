@@ -19,7 +19,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN test "$apt_proxy" && echo 'Acquire::http { Proxy "$apt_proxy"; };' >/etc/apt/apt.conf.d/01proxy
 RUN apt-get update && apt-get install -y \
-    build-essential curl devscripts gcc-multilib git lsb-release make python-pip rsync sudo wget
+    build-essential curl devscripts gcc-multilib git lsb-release make python-pip rsync sudo wget libxss1
 
 WORKDIR /usr/src
 RUN wget https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION.tar.gz

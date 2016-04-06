@@ -18,7 +18,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN test "$apt_proxy" && echo 'Acquire::http { Proxy "$apt_proxy"; };' >/etc/apt/apt.conf.d/01proxy
 RUN apt-get update && apt-get install -y \
-    build-essential curl devscripts gcc-multilib git lsb-release make nodejs npm python-pip rsync sudo
+    build-essential curl devscripts gcc-multilib git lsb-release make nodejs npm python-pip rsync sudo libxss1
 
 RUN test -x $NODE_BIN_DIR/nodejs -a ! -x $NODE_BIN_DIR/node && ln -sf $NODE_BIN_DIR/nodejs $NODE_BIN_DIR/node || true
 RUN pip install transifex-client

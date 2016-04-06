@@ -44,13 +44,28 @@ confdeps:
 	    test -d application/node_modules || cd application && npm install; \
 	fi
 
-client: confdeps
+patchbuilder:
+	if ! test -s ./node_modules/nw-builder/package.json; then \
+	    npm install nw-builder; \
+	fi; \
+	if ! grep '0\.13\.0-' ./node_modules/nw-builder/lib/platforms.js >/dev/null; then \
+	    patch -p0 <./pkg/nwbuilder.patch; \
+	fi
+
+client: confdeps patchbuilder
 	if ! test -d build; then \
+	    sync; \
+	    ./node_modules/.bin/gulp build; \
+	fi; \
+	if test -s ./tmp/nw/0.13.3/linux32/nw_100_percent.pak; then \
+	    rm -fr build; \
+	    cp -p ./tmp/nw/0.13.3/linux32/nw_100_percent.pak ./tmp/nw/0.13.3/linux32/nw.pak; \
+	    cp -p ./tmp/nw/0.13.3/linux64/nw_100_percent.pak ./tmp/nw/0.13.3/linux64/nw.pak; \
 	    ./node_modules/.bin/gulp build; \
 	fi
 
 installdirs:
-	for d in $(APP_DIR)/locales $(DOC_DIR)/peerio-client $(BIN_DIR) $(MAN_DIR) $(ICON_DIR)/16x16/apps $(ICON_DIR)/32x32/apps $(ICON_DIR)/48x48/apps $(ICON_DIR)/64x64/apps $(ICON_DIR)/128x128/apps $(PIX_DIR) $(DSK_DIR); do \
+	for d in $(APP_DIR)/lib $(APP_DIR)/locales $(DOC_DIR)/peerio-client $(BIN_DIR) $(MAN_DIR) $(ICON_DIR)/16x16/apps $(ICON_DIR)/32x32/apps $(ICON_DIR)/48x48/apps $(ICON_DIR)/64x64/apps $(ICON_DIR)/128x128/apps $(PIX_DIR) $(DSK_DIR); do \
 	    test -d "$$d" || mkdir -p "$$d"; \
 	done
 
@@ -93,4 +108,5 @@ createdebbin: clean
 	dpkg-buildpackage -us -uc
 
 clean:
-	rm -fr build node_modules application/node_modules tmp npm-debug.log
+	rm -fr build node_modules application/node_modules tmp npm-debug.log application/npm-debug.log; \
+	npm cache clean
