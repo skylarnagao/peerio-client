@@ -26,6 +26,7 @@ Requires: libXfixes3
 Requires: libXi6
 Requires: libXrandr2
 Requires: libXrender1
+Requires: libXss1
 Requires: libXtst6
 Requires: mozilla-nspr
 Requires: mozilla-nss
