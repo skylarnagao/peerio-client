@@ -168,31 +168,30 @@ The Peerio Storage Service is some form of third-party infrastructure which is u
 Peerio's Storage Service has the sole responsibility of storing files and making them available for download.
 
 ##### Microsoft Azure Storage
-By default, Peerio will use Microsoft Azure Storage as the Peerio Storage Service.
+By default, Peerio will use Microsoft Azure Storage as the Peerio Storage Service. Ceph, RiakCS or most s3-capable implementations may be used as well.
 
-Some terminology is necessary for understanding Azure Storage:
+Some terminology:
 
-* **Blobs**: Blobs are file-like data structures. They are contained in containers.
-* **Containers**: Containers are folder-like data structures. They contain blobs.
+* **Blobs** or **Objects**: are file-like data structures. They are contained in containers or buckets respectively.
+* **Containers** or **Buckets**: are folder-like data structures. They contain blobs or objects respectively.
 
 For more information on how blobs and containers work together, see [this documentation](http://azure.microsoft.com/en-us/documentation/articles/storage-dotnet-how-to-use-blobs/#what-is) from Microsoft.
 
+For more informations about s3 implementations, see [this wikipedia page](https://en.wikipedia.org/wiki/Amazon_S3#S3_API_and_competing_services).
+
 As a rule, Peerio only gives the Peerio Storage Service access to encrypted blobs without any metadata. This means that:
 
-* Unique ontainers are not used. Instead, we use a single container for all files.
+* Unique containers are not used. Instead, we use a single container for all files.
 * Metadata tracking is done by the Peerio Server Application in conjunction with the Peerio Riak Network.
 
-This is what a URL for accessing a blob file looks like:
+Both blob and object's maximum name length is 1,024 characters. This namespace gives us the ability to store a maximum of approximately 2<sup>6000</sup> files.
+
+Containers or buckets are meant to be kept private, denying unauthenticated accesses. Requesting a file through your websocket, you will be served with an ephemeral URL, which would look like this:
 ```
-https://mystorageaccount.blob.core.windows.net/mycontainer/myblob
+https://blob.peerio.com/files/token
 ```
 
-In Peerio's example, the only variable is `myblob`:
-```
-https://peerio.blob.core.windows.net/files/myblob
-```
-
-A blob's maximum name length is 1,024 characters. This namespace gives us the ability to store a maximum of approximately 2<sup>6000</sup> files.
+Having downloaded your file, no further access would be allowed. Not having initiated your download in the next 10 seconds would also render this link invalid.
 
 ### 3. Interfaces and Functionality
 In this section we detail the general syntax of the REST API format used to communicate between the user and the Peerio Server Application, and also between the Peerio Server Application and other parts of the Peerio network.
