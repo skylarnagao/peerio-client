@@ -416,7 +416,7 @@ Almost all other requests to the server will requie an `authToken`. Whenever an 
 Client sends `getMiniLockID` message:
 ```javascript
 {
-	username: 'Username to fetch miniLock ID for (String),
+	username: 'Username to fetch miniLock ID for (String)',
 	authToken: 'Decrypted authToken (Base64 String)'
 }
 ```
