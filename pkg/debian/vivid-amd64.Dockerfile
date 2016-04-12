@@ -9,7 +9,7 @@ FROM ubuntu:vivid
 # Arch to output
 ENV ARCH 64
 ENV PKG_ARCH amd64
-ENV PKG_VERSION 1.3.0
+ENV PKG_VERSION 1.4.1
 ENV PKG_REL 1
 ENV PKG_NAME peerio-client_$PKG_VERSION-${PKG_REL}_$PKG_ARCH
 
@@ -18,7 +18,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 RUN test "$apt_proxy" && echo 'Acquire::http { Proxy "$apt_proxy"; };' >/etc/apt/apt.conf.d/01proxy
 RUN apt-get update && apt-get install -y \
-    build-essential curl devscripts gcc-multilib git lsb-release make nodejs npm python-pip rsync sudo
+    build-essential curl devscripts gcc-multilib git lsb-release make nodejs npm python-pip rsync sudo libxss1
 
 RUN test -x $NODE_BIN_DIR/nodejs -a ! -x $NODE_BIN_DIR/node && ln -sf $NODE_BIN_DIR/nodejs $NODE_BIN_DIR/node || true
 RUN pip install transifex-client

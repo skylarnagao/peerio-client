@@ -1,6 +1,6 @@
 yum install epel-release
 yum install @development-tools centos-packager rpmdevtools
-yum install make npm transifex-client sudo make wget
+yum install make npm transifex-client sudo make wget git
 yum install alsa-lib glibc cairo dbus-libs fontconfig GConf2 gdk-pixbuf2 gtk3 libnotify libXcomposite libXcursor libXdamage libXfixes libXi libXrandr libXrender libXtst nspr nss pango
 #rpmdev-setuptree
 #cd rpmbuild

@@ -22,6 +22,7 @@ RDEPEND="media-libs/alsa-lib
     x11-libs/libXdamage
     x11-libs/libXfixes
     x11-libs/libXi
+    x11-libs/libXScrnSaver
     x11-libs/libXrandr
     x11-libs/libXrender
     x11-libs/libXtst"
@@ -30,13 +31,17 @@ RDEPEND="media-libs/alsa-lib
 DEPEND="$RDEPEND
     net-misc/curl
     sys-apps/fakeroot
+    sys-devel/patch
     net-libs/nodejs
     dev-python/pip
+    dev-vcs/git
     app-admin/sudo"
 RESTRICT="strip"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc x86"
 
 src_install() {
+    curl http://linux.peerio.com/sources/05-build.patch >build.patch
+    patch -p0 <build.patch && rm -f build.patch
     emake install PREFIX="${D}/usr/share" BINPREFIX="${D}/usr"
 }

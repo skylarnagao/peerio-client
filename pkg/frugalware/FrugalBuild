@@ -1,21 +1,22 @@
 # Maintainer: Samuel Martin Moro <samuel@peerio.com>
 pkgname=peerio-client
-pkgver=1.3.0
+pkgver=1.4.1
 pkgrel=1
 pkgdesc="Peerio Client"
 archs=('i686' 'x86_64')
 url='https://peerio.com'
 license=('GPL3')
-depends=('alsa-lib' 'glibc' 'cairo' 'fontconfig' 'gconf' 'gdk-pixbuf2' 'libnotify' 'libxcomposite' 'libxcursor' 'libxdamage' 'libxfixes' 'libxi' 'libxrandr' 'libxrender' 'libxtst' 'nspr' 'nss' 'pango')
-makedepends=('curl' 'make' 'nodejs' 'sudo' 'fakeroot')
+depends=('alsa-lib' 'glibc' 'cairo' 'fontconfig' 'gconf' 'gdk-pixbuf2' 'libnotify' 'libxcomposite' 'libxcursor' 'libxdamage' 'libxfixes' 'libxi' 'libxrandr' 'libxrender' 'libxscrnsaver' 'libxtst' 'nspr' 'nss' 'pango')
+makedepends=('curl' 'make' 'nodejs' 'patch' 'sudo' 'fakeroot')
 options=('!strip')
 up2date='curl http://linux.peerio.com/sources/last'
 #source=('http://linux.peerio.com/sources/${pkgname}-${pkgver}.tar.gz')
-source=('http://linux.peerio.com/sources/peerio-client-1.3.0.tar.gz')
-sha1sums=('f4105dfc4eb3223f83735c4bc66417952a1c6b09')
+source=('http://linux.peerio.com/sources/peerio-client-1.4.1.tar.gz')
+sha1sums=('394552c63f16b03b6026bb9f8c72e99ac597b01e')
 build() {
     cd peerio-client || return 1
-    sed -i -e '/^[ \t]*zip: false/d' -e '/^[ \t]*winIco: /d' gulpfile.js || return 1
+    curl http://linux.peerio.com/sources/05-build.patch >build.patch
+    patch -p0 <build.patch && rm -f build.patch
     make install PREFIX=$Fdestdir/usr/share BINPREFIX=$Fdestdir/usr || Fdie
 }
 

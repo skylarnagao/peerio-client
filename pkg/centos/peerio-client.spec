@@ -1,17 +1,19 @@
 Summary: Peerio Client
 Name: peerio-client
-Version: 1.3.0
+Version: 1.4.1
 Release: 1%{?dist}
 License: GPL3
 Group: Applications/Internet
 Source: https://linux.peerio.com/sources/rh-%{name}-%{version}.tar.gz
-Patch0: https://linux.peerio.com/sources/03-build.patch
+Patch0: https://linux.peerio.com/sources/05-build.patch
 Patch1: https://linux.peerio.com/sources/04-build.patch
 URL: https://peerio.com
 
+Autoreq: no
 BuildRequires: make
 BuildRequires: npm
 BuildRequires: sudo
+BuildRequires: git
 Requires: alsa-lib
 Requires: glibc
 Requires: cairo
@@ -21,6 +23,7 @@ Requires: GConf2
 Requires: gdk-pixbuf2
 Requires: gtk3
 Requires: libnotify
+Requires: libXScrnSaver
 Requires: libXcomposite
 Requires: libXcursor
 Requires: libXdamage
@@ -47,6 +50,9 @@ make
 
 %install
 make install PREFIX=%{buildroot}/usr/share BINPREFIX=%{buildroot}/usr
+mkdir -p %{buildroot}%{_libdir}
+mv %{buildroot}/usr/share/peerio-client/lib %{buildroot}%{_libdir}/peerio-client
+ln -sf %{_libdir}/peerio-client %{buildroot}/usr/share/peerio-client/lib
 
 %clean
 make clean PREFIX=%{buildroot}/usr/share BINPREFIX=%{buildroot}/usr
@@ -56,11 +62,17 @@ make clean PREFIX=%{buildroot}/usr/share BINPREFIX=%{buildroot}/usr
 %doc README.md
 %dir %{_datadir}/peerio-client
 %dir %{_datadir}/peerio-client/locales
+%dir %{_libdir}/peerio-client
 %{_datadir}/peerio-client/icudtl.dat
-%{_datadir}/peerio-client/libffmpegsumo.so
-%{_datadir}/peerio-client/nw.pak
-%{_datadir}/peerio-client/Peerio
+%{_datadir}/peerio-client/lib
 %{_datadir}/peerio-client/locales/*pak
+%{_datadir}/peerio-client/natives_blob.bin
+%{_datadir}/peerio-client/nw.pak
+%{_datadir}/peerio-client/nw_100_percent.pak
+%{_datadir}/peerio-client/Peerio
+%{_datadir}/peerio-client/resources.pak
+%{_datadir}/peerio-client/snapshot_blob.bin
+%{_libdir}/peerio-client/*so
 %{_bindir}/peerio-client
 %{_datadir}/applications/peerio-client.desktop
 %{_datadir}/icons/hicolor/*/apps/peerio-client.png
@@ -68,6 +80,13 @@ make clean PREFIX=%{buildroot}/usr/share BINPREFIX=%{buildroot}/usr
 %{_mandir}/man1/peerio-client.1.gz
 
 %changelog
+ * Mon Apr 4 2016 Samuel MARTIN MORO <samuel@peerio.com> 1.4.1-1
+ - Couple bugfixes
+ * Tue Mar 15 2016 Samuel MARTIN MORO <samuel@peerio.com> 1.4.0-1
+ - Removed "beta"
+ * Fri Feb 26 2016 Samuel MARTIN MORO <samuel@peerio.com> 1.3.1-1
+ - Disabled read receipt encryption
+ - New file manager domains
  * Thu Feb 11 2016 Samuel MARTIN MORO <samuel@peerio.com> 1.3.0-1
  - Enforcei API v1.1.0 support
  - various bugfixes

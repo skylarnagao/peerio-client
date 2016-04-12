@@ -1,6 +1,6 @@
 zypper install rpm-build patterns-openSUSE-devel_rpm_build
 zypper install make nodejs
-zypper install libasound2 libglib-2_0-0 libcairo2 dbus-1-glib fontconfig gconf2 libgdk_pixbuf-2_0-0 libgtk-3-0 libnotify4 libXcomposite1 libXcursor1 libXdamage1 libXfixes3 libXi6 libXrandr2 libXrender1 libXtst6 mozilla-nspr mozilla-nss libpango-1_0-0
+zypper install libasound2 libglib-2_0-0 libcairo2 dbus-1-glib fontconfig gconf2 libgdk_pixbuf-2_0-0 libgtk-3-0 libnotify4 libXcomposite1 libXcursor1 libXdamage1 libXfixes3 libXi6 libXrandr2 libXrender1 libXss1 libXtst6 mozilla-nspr mozilla-nss libpango-1_0-0
 #sudo chown -R `id -u`:`id -g` /usr/src/packages
 #cd /usr/src/packages/
 #for i in rh-peerio-client-1.3.0.tar.gz 03-build.patch
