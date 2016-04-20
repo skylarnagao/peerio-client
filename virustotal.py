@@ -30,7 +30,7 @@ try:
     do_slack = True
     slack = slackweb.Slack('https://hooks.slack.com/services/' + os.environ['VIRUSTOTAL_SLACK_URL'])
 except Exception as e:
-    print 'will not report to virustotal'
+    print 'will not report to slack'
 
 if not os.path.exists(sys.argv[1]):
     sys.stderr.write("ERROR: File %s was not found!\n" % sys.argv[1])
