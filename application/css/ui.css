@@ -2743,3 +2743,14 @@ ul.filesSidebarTypeFilters li,ul.messagesSidebarTypeFilters li {
 	height: 40px;
 	margin: 4px 0 4px 8px;
 }
+
+.redeemCoupon{
+	margin-left: 40px;
+	float: right;
+	width: 300px;
+	position: absolute;
+	right: 30px;
+	bottom: 15px;
+	border-top: 1px solid #f0f0f0;
+	padding-top: 16px;
+}
