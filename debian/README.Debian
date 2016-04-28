@@ -3,4 +3,25 @@ peerio-client for Debian
 
 Debian & Ubuntu build of Peerio client, based on official git repository
 
+for the record, external sources inventory:
+ - https://github.com/angular/bower-angular
+ - https://github.com/angular/bower-angular-sanitize
+ - https://github.com/cryptocoinjs/bs58
+ - https://github.com/dchest/blake2s-js
+ - https://github.com/dchest/tweetnacl-js
+ - https://github.com/dchest/nacl-stream-js
+ - https://github.com/dchest/scrypt-async-js
+ - https://github.com/chieffancypants/angular-hotkeys
+ - https://github.com/stewartlord/identicon.js
+ - https://github.com/l20n/l20n.js
+ - https://github.com/mholt/PapaParse
+ - http://www.xarg.org/2010/03/generate-client-side-png-files-using-javascript
+ - https://github.com/pouchdb/pouchdb
+ - https://github.com/davidshimjs/qrcodejs
+ - https://github.com/socketio/socket.io-client
+ - https://github.com/t4t5/sweetalert
+ - https://github.com/symeapp/utip
+ - https://github.com/madrobby/zepto
+ - https://github.com/dropbox/zxcvbn
+
  -- Samuel MARTIN MORO <samuel@peerio.com>  Mon, 09 Nov 2015 19:21:47 +0200

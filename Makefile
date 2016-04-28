@@ -108,5 +108,5 @@ createdebbin: clean
 	dpkg-buildpackage -us -uc
 
 clean:
-	rm -fr build node_modules application/node_modules tmp npm-debug.log application/npm-debug.log; \
+	rm -fr build node_modules application/node_modules tmp npm-debug.log application/npm-debug.log debian/files; \
 	npm cache clean
