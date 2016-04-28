@@ -1299,6 +1299,10 @@
                 <a class="twoFactorAuthLearnMore" data-l10n-id="twoFactorAuthLearnMore" target="_blank"
                    href="https://peerio.zendesk.com/hc/en-us/articles/203665635-What-is-two-factor-authentication-"></a>
             </div>
+            <div class="redeemCoupon">
+                <input type="text" data-ng-model="accountSettings.coupon"/>
+                <button data-l10n-id="button_redeem" data-ng-click="accountSettings.redeemCoupon()"></button>
+            </div>
         </div>
         <div class="preferences frontModal" data-ng-controller="preferences">
             <h1 data-l10n-id="preferences"></h1>

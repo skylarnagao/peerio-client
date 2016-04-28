@@ -682,3 +682,10 @@ Peerio.network.getFileFolders = function (callback) {
         authToken: Peerio.user.popAuthToken()
     }, callback);
 };
+
+Peerio.network.redeemCoupon = function (code, callback) {
+    Peerio.socket.emit('redeemCouponCode', {
+        code: code,
+        authToken: Peerio.user.popAuthToken()
+    }, callback)
+};

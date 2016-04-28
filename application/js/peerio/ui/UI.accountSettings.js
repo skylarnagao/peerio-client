@@ -191,6 +191,30 @@ Peerio.UI.controller('accountSettings', function ($scope) {
     $scope.accountSettings.changePassphrase = function () {
         // @todo kaepora
     }
+
+    $scope.accountSettings.redeemCoupon = function () {
+        console.log("redeeming: "+$scope.accountSettings.coupon);
+        Peerio.network.redeemCoupon($scope.accountSettings.coupon,
+            function(response){
+                if(response.error){
+                    swal({
+                        title: '',
+                        text: document.l10n.getEntitySync('coupon_invalid').value,
+                        type: 'error',
+                        confirmButtonText: document.l10n.getEntitySync('OK').value
+                    })
+                } else {
+                    swal({
+                        title: '',
+                        text: document.l10n.getEntitySync('coupon_activated').value,
+                        type: 'success',
+                        confirmButtonText: document.l10n.getEntitySync('OK').value
+                    })
+                }
+
+        });
+    }
+
     $scope.accountSettings.isTwoFactorAuthEnabled = function () {
         return Peerio.user.settings.twoFactorAuth
     }
