@@ -10,20 +10,26 @@ DSK_DIR   = $(XPREFIX)/applications
 ICON_DIR  = $(XPREFIX)/icons/hicolor
 PIX_DIR   = $(XPREFIX)/pixmaps
 MAN_DIR   = $(PREFIX)/man/man1
-NODE_DIR  = /usr/bin
 OBJ       = build/Peerio/chrome
 
 ifeq ($(OS),Windows_NT)
     OBJ = build/Peerio/win32
+    EMBED_NODEJS = no
 else
     UNAME_M := $(shell uname -m)
     UNAME_S := $(shell uname -s)
     ifeq ($(UNAME_S),Linux)
+	EMBED_NODEJS = yes
+	NODE_VERSION = 4.4.1
 	ifeq ($(UNAME_M),x86_64)
+	    DARCH = x64
 	    OBJ = build/Peerio/linux64
 	else
+	    DARCH = x86
 	    OBJ = build/Peerio/linux32
 	endif
+    else
+	EMBED_NODEJS = no
     endif
     ifeq ($(UNAME_S),Darwin)
 	OBJ = build/Peerio/osx32
@@ -32,13 +38,55 @@ endif
 
 all: client
 
+ifeq ($(EMBED_NODEJS),yes)
+confdeps:
+	if ! test -d tmp/nodejs; then \
+	    mkdir -p tmp; \
+	    if wget https://nodejs.org/dist/v$(NODE_VERSION)/node-v$(NODE_VERSION)-linux-${DARCH}.tar.xz -O tmp/peerio-nodejs.tar.xz; then \
+		if tar -Ctmp -xJf tmp/peerio-nodejs.tar.xz; then \
+		    mv tmp/node-v$(NODE_VERSION)-linux-$(DARCH) tmp/nodejs; \
+		else \
+		    echo failed extracting nodejs >&2; \
+		    exit 1; \
+		fi; \
+		rm -f tmp/peerio-nodejs.tar.xz; \
+	    else \
+		echo failed fetching nodejs >&2; \
+		exit 1; \
+	    fi; \
+	fi; \
+	if ! test -d build; then \
+	    test -x node_modules/.bin/nw || PATH=`pwd`/tmp/nodejs/bin:$$PATH npm install; \
+	    test -d application/node_modules || ( cd application && PATH=`pwd`/../tmp/nodejs/bin:$$PATH npm install ) ; \
+	fi
+
+patchbuilder:
+	if ! test -s ./node_modules/nw-builder/package.json; then \
+	    PATH=`pwd`/tmp/nodejs/bin:$$PATH npm install nw-builder; \
+	fi; \
+	if ! grep '0\.13\.0-' ./node_modules/nw-builder/lib/platforms.js >/dev/null; then \
+	    patch -p0 <./pkg/nwbuilder.patch; \
+	fi
+
+client: confdeps patchbuilder
+	if ! test -d build; then \
+	    sync; \
+	    PATH=`pwd`/tmp/nodejs/bin:$$PATH ./node_modules/.bin/gulp build; \
+	fi; \
+	if test -s ./tmp/nw/0.13.3/linux32/nw_100_percent.pak; then \
+	    rm -fr build; \
+	    cp -p ./tmp/nw/0.13.3/linux32/nw_100_percent.pak ./tmp/nw/0.13.3/linux32/nw.pak; \
+	    cp -p ./tmp/nw/0.13.3/linux64/nw_100_percent.pak ./tmp/nw/0.13.3/linux64/nw.pak; \
+	    PATH=`pwd`/tmp/nodejs/bin:$$PATH ./node_modules/.bin/gulp build; \
+	fi
+else
 confdeps:
 	if test -x $(NODE_DIR)/nodejs -a ! -x $(NODE_DIR)/node; then \
 	    sudo ln -sf $(NODE_DIR)/nodejs $(NODE_DIR)/node; \
-	fi
+	fi; \
 	if ! test -x /usr/bin/npm -o -x /usr/local/bin/npm; then \
 	    curl -k -L https://npmjs.org/install.sh | sudo sh; \
-	fi
+	fi; \
 	if ! test -d build; then \
 	    test -x node_modules/.bin/nw || npm install; \
 	    test -d application/node_modules || cd application && npm install; \
@@ -53,7 +101,7 @@ patchbuilder:
 	fi
 
 client: confdeps patchbuilder
-	if ! test -d build; then \
+	if ! test -d build/Peerio; then \
 	    sync; \
 	    ./node_modules/.bin/gulp build; \
 	fi; \
@@ -63,6 +111,7 @@ client: confdeps patchbuilder
 	    cp -p ./tmp/nw/0.13.3/linux64/nw_100_percent.pak ./tmp/nw/0.13.3/linux64/nw.pak; \
 	    ./node_modules/.bin/gulp build; \
 	fi
+endif
 
 installdirs:
 	for d in $(APP_DIR)/lib $(APP_DIR)/locales $(DOC_DIR)/peerio-client $(BIN_DIR) $(MAN_DIR) $(ICON_DIR)/16x16/apps $(ICON_DIR)/32x32/apps $(ICON_DIR)/48x48/apps $(ICON_DIR)/64x64/apps $(ICON_DIR)/128x128/apps $(PIX_DIR) $(DSK_DIR); do \
@@ -97,8 +146,20 @@ deinstall:
 
 createinitialarchive:
 	if grep version application/package.json >/dev/null; then \
-		VERSION=`grep version application/package.json | awk '{print $$2}' | cut -d\" -f2`; \
-		( cd .. ; tar --exclude=.git --exclude=.gitignore --exclude=.gitattributes --exclude=pkg/archlinux --exclude=pkg/centos --exclude=pkg/debian --exclude=pkg/fedora --exclude=pkg/frugalware --exclude=pkg/gentoo --exclude=pkg/mageia --exclude=pkg/manjaro --exclude=pkg/opensuse --exclude=pkg/pclinuxos -czf peerio-client-$$VERSION.tar.gz peerio-client ; mv peerio-client peerio-client-$$VERSION ; tar --exclude=.git --exclude=.gitattributes --exclude=.gitignore --exclude=pkg/archlinux --exclude=pkg/centos --exclude=pkg/debian --exclude=pkg/fedora --exclude=pkg/frugalware --exclude=pkg/gentoo --exclude=pkg/mageia --exclude=pkg/manjaro --exclude=pkg/opensuse --exclude=pkg/pclinuxos -czf rh-peerio-client-$$VERSION.tar.gz peerio-client-$$VERSION ; mv peerio-client-$$VERSION peerio-client ); \
+	    VERSION=`grep version application/package.json | awk '{print $$2}' | cut -d\" -f2`; \
+	    if ! grep $$VERSION debian/changelog >/dev/null; then \
+		echo "this client version is not documented yet in debian's changelog" >&2; \
+		echo "please document it before creating your initial archive" >&2; \
+		exit 1; \
+	    fi; \
+	    ( \
+		cd .. ; \
+		tar --exclude=.git --exclude=.gitignore --exclude=.gitattributes --exclude=pkg/archlinux --exclude=pkg/centos --exclude=pkg/debian --exclude=pkg/fedora --exclude=pkg/frugalware --exclude=pkg/gentoo --exclude=pkg/mageia --exclude=pkg/manjaro --exclude=pkg/opensuse --exclude=pkg/pclinuxos -czf peerio-client-$$VERSION.tar.gz peerio-client ; \
+		mv peerio-client peerio-client-$$VERSION ; \
+		ln -sf peerio-client-$$VERSION.tar.gz peerio-client_$$VERSION.orig.tar.gz ; \
+		tar --exclude=.git --exclude=.gitattributes --exclude=.gitignore --exclude=pkg/archlinux --exclude=pkg/centos --exclude=pkg/debian --exclude=pkg/fedora --exclude=pkg/frugalware --exclude=pkg/gentoo --exclude=pkg/mageia --exclude=pkg/manjaro --exclude=pkg/opensuse --exclude=pkg/pclinuxos -czf rh-peerio-client-$$VERSION.tar.gz peerio-client-$$VERSION ; \
+		mv peerio-client-$$VERSION peerio-client \
+	    ); \
 	fi
 
 createdebsource: clean
@@ -107,6 +168,15 @@ createdebsource: clean
 createdebbin: clean
 	dpkg-buildpackage -us -uc
 
+ifeq ($(EMBED_NODEJS),yes)
 clean:
-	rm -fr build node_modules application/node_modules tmp npm-debug.log application/npm-debug.log debian/files; \
-	npm cache clean
+	if test -d ./tmp/nodejs/bin; then \
+	    PATH=./tmp/nodejs/bin:$$PATH npm cache clean; \
+	fi; \
+	rm -f /tmp/peerio-nodejs.tar.xz; \
+	rm -fr build node_modules application/node_modules tmp npm-debug.log application/npm-debug.log debian/files
+else
+clean:
+	npm cache clean; \
+	rm -fr build node_modules application/node_modules tmp npm-debug.log application/npm-debug.log debian/files
+endif

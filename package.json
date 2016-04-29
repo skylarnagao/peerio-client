@@ -33,6 +33,7 @@
     "gulp-ignore": "latest",
     "minimist": "latest",
     "run-sequence": "latest",
+    "uglify-js": "latest",
     "nw-builder": "nwjs/nw-builder#93cc055f31881f876d913a2c44e4fc8dc5b7cffa",
     "lodash": "latest"
   }
