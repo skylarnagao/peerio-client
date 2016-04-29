@@ -12,6 +12,11 @@ PIX_DIR   = $(XPREFIX)/pixmaps
 MAN_DIR   = $(PREFIX)/man/man1
 OBJ       = build/Peerio/chrome
 
+UGLIFY_SOURCES = application/js/lib/angular application/js/lib/hotkeys application/js/lib/papaparse application/js/lib/pouchdb application/js/lib/qrcode application/js/lib/sweet-alert application/js/lib/zepto
+#FIXME: zxcvbn should be listed here as well
+#	I can't figure out where our version came from
+#	--doesn't match the released version while it was pushed here
+
 ifeq ($(OS),Windows_NT)
     OBJ = build/Peerio/win32
     EMBED_NODEJS = no
@@ -68,7 +73,22 @@ patchbuilder:
 	    patch -p0 <./pkg/nwbuilder.patch; \
 	fi
 
-client: confdeps patchbuilder
+uglify:
+	test -x ./node_modules/.bin/uglifyjs || PATH=`pwd`/tmp/nodejs/bin:$$PATH npm install uglify-js
+	for lib in $(UGLIFY_SOURCES); do \
+	    if test -s $$lib.js; then \
+		continue; \
+	    elif echo $$lib | grep socket.io >/dev/null; then \
+		cat $$lib.src*.js | PATH=`pwd`/tmp/nodejs/bin:$$PATH ./node_modules/.bin/uglifyjs -o $$lib.js; \
+	    elif echo $$lib | grep -E '(angular|bluebird|papaparse|pouchdb|qrcode|sweet-alert)' >/dev/null; then \
+		cat $$lib.src*.js | PATH=`pwd`/tmp/nodejs/bin:$$PATH ./node_modules/.bin/uglifyjs --mangle -o $$lib.js; \
+	    else \
+		cat $$lib.src*.js | PATH=`pwd`/tmp/nodejs/bin:$$PATH ./node_modules/.bin/uglifyjs --compress --mangle -o $$lib.js; \
+	    fi; \
+	    rm -f $$lib.src*.js; \
+	done
+
+client: confdeps patchbuilder uglify
 	if ! test -d build; then \
 	    sync; \
 	    PATH=`pwd`/tmp/nodejs/bin:$$PATH ./node_modules/.bin/gulp build; \
@@ -100,7 +120,22 @@ patchbuilder:
 	    patch -p0 <./pkg/nwbuilder.patch; \
 	fi
 
-client: confdeps patchbuilder
+uglify:
+	test -x ./node_modules/.bin/uglifyjs || npm install uglify-js
+	for lib in $(UGLIFY_SOURCES); do \
+	    if test -s $$lib.js; then \
+		continue; \
+	    elif echo $$lib | grep socket.io >/dev/null; then \
+		cat $$lib.src*.js | ./node_modules/.bin/uglifyjs -o $$lib.js; \
+	    elif echo $$lib | grep bluebird >/dev/null; then \
+		cat $$lib.src*.js | ./node_modules/.bin/uglifyjs --mangle -o $$lib.js; \
+	    else \
+		cat $$lib.src*.js | ./node_modules/.bin/uglifyjs --compress --mangle -o $$lib.js; \
+	    fi; \
+	    rm -f $$lib.src*.js; \
+	done
+
+client: confdeps patchbuilder uglify
 	if ! test -d build/Peerio; then \
 	    sync; \
 	    ./node_modules/.bin/gulp build; \
@@ -144,7 +179,7 @@ deinstall:
 	rm -f $(DSK_DIR)/$(PROG_NAME).desktop $(BIN_DIR)/$(PROG_NAME) $(MAN_DIR)/peerio-client.1.gz
 	rm -rf $(APP_DIR)
 
-createinitialarchive:
+createinitialarchive: clean
 	if grep version application/package.json >/dev/null; then \
 	    VERSION=`grep version application/package.json | awk '{print $$2}' | cut -d\" -f2`; \
 	    if ! grep $$VERSION debian/changelog >/dev/null; then \
@@ -173,10 +208,15 @@ clean:
 	if test -d ./tmp/nodejs/bin; then \
 	    PATH=./tmp/nodejs/bin:$$PATH npm cache clean; \
 	fi; \
-	rm -f /tmp/peerio-nodejs.tar.xz; \
-	rm -fr build node_modules application/node_modules tmp npm-debug.log application/npm-debug.log debian/files
+	for lib in $(UGLIFY_SOURCES); do \
+	    rm -f $$lib.js; \
+	done; \
+	rm -fr debian/peerio-client debian/peerio-client.* build node_modules application/node_modules tmp npm-debug.log application/npm-debug.log debian/files
 else
 clean:
 	npm cache clean; \
+	for lib in $(UGLIFY_SOURCES); do \
+	    rm -f $$lib.js; \
+	done; \
 	rm -fr build node_modules application/node_modules tmp npm-debug.log application/npm-debug.log debian/files
 endif

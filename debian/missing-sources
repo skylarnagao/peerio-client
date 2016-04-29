@@ -1,12 +1,5 @@
 application/js/miniLock/phrase.js
 application/js/lib/zxcvbn.js
-application/js/lib/zepto.js
-application/js/lib/sweet-alert.js
-application/js/lib/qrcode.js
-application/js/lib/pouchdb.js
-application/js/lib/papaparse.js
-application/js/lib/hotkeys.js
-application/js/lib/angular.js
 tmp/nw/0.12.3/linux64/nwjc
 tmp/nw/0.12.3/linux64/nw
 tmp/nw/0.12.3/linux64/libffmpegsumo.so

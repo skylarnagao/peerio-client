@@ -7,7 +7,7 @@ Copyright: 2015 PeerioTechnologies
 License: GNU-GPLv3
  see /usr/share/doc/peerio-client/LICENSE.md
 
-Files: application/js/lib/angular.js
+Files: application/js/lib/angular.src.js
        application/js/lib/angular-sanitize.js
 Copyright: 2010-2014 Google, Inc.
 License: MIT-angularjs
@@ -34,7 +34,7 @@ Files: application/js/lib/crypto/scrypt.js
 Copyright: 2013-2014 Dmitry Chestnykh
 License: BSD-scrypt
 
-Files: application/js/lib/hotkeys.js
+Files: application/js/lib/hotkeys.src.js
 Copyright: 2014 Wes Cruver
 License: MIT-angular-hotkeys
 
@@ -50,7 +50,7 @@ Files: application/js/lib/l20n.js
 Copyright: Mozilla <l10n-drivers@mozilla.org>
 License: Apache-v2
 
-Files: application/js/lib/papaparse.js
+Files: application/js/lib/papaparse.src.js
 Copyright: 2013 Matt Holt
 License: MIT-papaparse
 
@@ -58,11 +58,11 @@ Files: application/js/lib/pnglib.js
 Copyright: 2010 Robert Eisele
 License: BSD-2-pnglib
 
-Files: application/js/lib/pouchdb.js
+Files: application/js/lib/pouchdb.src.js
 Copyright: 2012-2014 Dale Harvey and the PouchDB team
 License: Apache-v2
 
-Files: application/js/lib/qrcode.js
+Files: application/js/lib/qrcode.src.js
 Copyright: 2012 davidshimjs
 License: MIT-davidsmith
 
@@ -70,7 +70,7 @@ Files: application/js/lib/socket.js
 Copyright: 2014 Guillermo Rauch
 License: MIT-guillermo-rauch
 
-Files: application/js/lib/sweet-alert.js
+Files: application/js/lib/sweet-alert.src.js
 Copyright: 2014 Tristan Edwards
 License: MIT-tristan-edwards
 
@@ -78,7 +78,7 @@ Files: application/js/lib/utip.js
 Copyright: 2013 Syme
 License: MIT-syme
 
-Files: application/js/lib/zepto.js
+Files: application/js/lib/zepto.src.js
 Copyright: 2010-2016 Thomas Fuch
 License: MIT-thomas-fuch
 
