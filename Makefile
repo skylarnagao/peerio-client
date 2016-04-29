@@ -18,10 +18,12 @@ UGLIFY_SOURCES = application/js/lib/angular application/js/lib/hotkeys applicati
 #	--doesn't match the released version while it was pushed here
 
 ifeq ($(OS),Windows_NT)
-    OBJ = build/Peerio/win32
     EMBED_NODEJS = no
+    OBJ = build/Peerio/win32
+    UNAME_N = "windows"
 else
     UNAME_M := $(shell uname -m)
+    UNAME_N := $(shell uname -n)
     UNAME_S := $(shell uname -s)
     ifeq ($(UNAME_S),Linux)
 	EMBED_NODEJS = yes
@@ -197,8 +199,15 @@ createinitialarchive: clean
 	    ); \
 	fi
 
+ifeq ($(UNAME_N),ubuntu)
+createdebsource: clean
+	touch debian/files; \
+	LANG=C dpkg-genchanges -DDistribution=`awk '/CODENAME/' /etc/lsb-release | cut -d= -f2`; \
+	LANG=C debuild --changes-option=-DDistribution=`awk '/CODENAME/' /etc/lsb-release | cut -d= -f2` -S -sa
+else
 createdebsource: clean
 	LANG=C debuild -S -sa
+endif
 
 createdebbin: clean
 	dpkg-buildpackage -us -uc
