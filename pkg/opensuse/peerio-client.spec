@@ -9,7 +9,6 @@ Patch0: https://linux.peerio.com/sources/05-build.patch
 URL: https://peerio.com
 
 BuildRequires: make
-BuildRequires: nodejs
 Requires: libasound2
 Requires: libglib-2_0-0
 Requires: libcairo2

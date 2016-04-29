@@ -1,5 +1,4 @@
-dnf install @development-tools fedora-packager rpmdevtools
-dnf install make npm sudo
+dnf install @development-tools fedora-packager rpmdevtools make
 dnf install alsa-lib glibc cairo dbus-libs fontconfig GConf2 gdk-pixbuf2 gtk3 libnotify libXcomposite libXcursor libXdamage libXfixes libXi libXrandr libXrender libXtst nspr nss pango
 #rpmdev-setuptree
 #cd rpmbuild

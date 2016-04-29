@@ -10,8 +10,6 @@ URL: https://peerio.com
 
 BuildRequires: git
 BuildRequires: make
-BuildRequires: nodejs
-BuildRequires: sudo
 Requires: alsa-lib
 Requires: glibc
 Requires: cairo

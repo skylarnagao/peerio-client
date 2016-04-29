@@ -11,9 +11,7 @@ Source: https://linux.peerio.com/sources/rh-%{name}-%{version}.tar.gz
 Patch0: https://linux.peerio.com/sources/05-build.patch
 URL: https://peerio.com
 
-#nodejs & npm, not packaged in provider repos, have to be installed
 BuildRequires: pkgutils
-BuildRequires: sudo
 Requires: libalsa
 Requires: libglib2
 %ifarch x86_64

@@ -10,10 +10,9 @@ Patch1: https://linux.peerio.com/sources/04-build.patch
 URL: https://peerio.com
 
 Autoreq: no
-BuildRequires: make
-BuildRequires: npm
-BuildRequires: sudo
 BuildRequires: git
+BuildRequires: make
+BuildRequires: patch
 Requires: alsa-lib
 Requires: glibc
 Requires: cairo

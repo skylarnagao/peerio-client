@@ -32,10 +32,8 @@ DEPEND="$RDEPEND
     net-misc/curl
     sys-apps/fakeroot
     sys-devel/patch
-    net-libs/nodejs
     dev-python/pip
-    dev-vcs/git
-    app-admin/sudo"
+    dev-vcs/git"
 RESTRICT="strip"
 SLOT="0"
 KEYWORDS="~alpha amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~s390 ~sh ~sparc x86"

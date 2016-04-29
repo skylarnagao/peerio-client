@@ -1,5 +1,5 @@
 urpmi rpmdevtools
-urpmi make nodejs sudo make wget git
+urpmi make make wget git
 urpmi alsa-lib glibc cairo libdbus1_3 fontconfig GConf2 libgdk_pixbuf2.0_0 libgtk+3_0 libnotify libxcomposite1 libxcursor1 libxdamage1 libxfixes3 libxi6 libxrandr2 libxrender1 libxtst6 nspr nss pango libxscrnsaver1
 #rpmdev-setuptree
 #cd rpmbuild
