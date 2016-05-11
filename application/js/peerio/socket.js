@@ -54,8 +54,18 @@ Peerio.socket = {};
 		}
 
 		if (hasProp(message, 'received')) {
+			if (message.received === 'serverWarning'){
+				swal({
+					title: '',
+					text: message.data.msg,
+					type: 'warning',
+					confirmButtonText: document.l10n.getEntitySync('OK').value
+				}, function () {
+					Socket.emit('clearWarning', {token: message.data.token});
+				})
+			}
 			if (message.received === 'settingsUpdated'){
-				Peerio.user.quota = data.quota;
+				Peerio.user.quota = message.data.quota;
 				Peerio.UI.userMenuPopulate();
 			}
 			if (message.received === 'receivedContactRequestsAvailable') {

@@ -18,6 +18,20 @@ onmessage = function(message) {
 	})
 }
 
+mySocket.on('settingsUpdated', function(data) {
+	postMessage({
+		received: 'settingsUpdated',
+		data: data
+	})
+})
+
+mySocket.on('serverWarning', function(data) {
+	postMessage({
+		received: 'serverWarning',
+		data: data
+	})
+})
+
 mySocket.on('receivedContactRequestsAvailable', function() {
 	postMessage({
 		received: 'receivedContactRequestsAvailable'
