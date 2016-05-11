@@ -54,6 +54,10 @@ Peerio.socket = {};
 		}
 
 		if (hasProp(message, 'received')) {
+			if (message.received === 'settingsUpdated'){
+				Peerio.user.quota = data.quota;
+				Peerio.UI.userMenuPopulate();
+			}
 			if (message.received === 'receivedContactRequestsAvailable') {
 				console.log('receivedContactRequestsAvailable')
 				Peerio.UI.contactsSectionPopulate()
