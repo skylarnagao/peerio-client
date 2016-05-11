@@ -6,6 +6,7 @@ Peerio.UI.controller('userMenu', function($scope) {
 			Peerio.user.username,
 			Peerio.user.miniLockID
 		)
+		$scope.userMenu.getStorageText = document.l10n.getEntitySync('getStorage').value;
 		$scope.userMenu.avatarIcon1 = 'data:image/png;base64,' + new Identicon(
 			avatar[0].substring(0, 32), 30
 		).toString()
