@@ -65,8 +65,11 @@ Peerio.socket = {};
 				})
 			}
 			if (message.received === 'settingsUpdated'){
-				Peerio.user.quota = message.data.quota;
-				Peerio.UI.userMenuPopulate();
+				Peerio.network.getSettings(function(data) {
+					Peerio.user.quota = data.quota;
+					Peerio.UI.userMenuPopulate();
+				})
+
 			}
 			if (message.received === 'receivedContactRequestsAvailable') {
 				console.log('receivedContactRequestsAvailable')

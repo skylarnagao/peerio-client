@@ -18,10 +18,9 @@ onmessage = function(message) {
 	})
 }
 
-mySocket.on('settingsUpdated', function(data) {
+mySocket.on('settingsUpdated', function() {
 	postMessage({
-		received: 'settingsUpdated',
-		data: data
+		received: 'settingsUpdated'
 	})
 })
 
