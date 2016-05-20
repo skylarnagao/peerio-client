@@ -2239,6 +2239,7 @@ div.frontModalsWrapper {
 	}
 
 div.frontModals {
+	overflow:auto;
 	width: 85%;
 	height: 85%;
 	max-width: 800px;
@@ -2753,4 +2754,14 @@ ul.filesSidebarTypeFilters li,ul.messagesSidebarTypeFilters li {
 	bottom: 15px;
 	border-top: 1px solid #f0f0f0;
 	padding-top: 16px;
+}
+
+.plans{
+
+}
+.plans td {
+	padding: 4px;
+	border-top: 1px solid #DCD9D9;
+	border-bottom: 1px solid #DCD9D9;
+	padding-right: 10px;
 }
