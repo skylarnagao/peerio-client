@@ -13,7 +13,8 @@ Peerio.socket = {};
 	Peerio.socket.worker = new Worker('js/peerio/socketworker.js')
 
 	Peerio.socket.callbacks = {}
-
+    var warningQueue = [];
+	var warningActive = false;
 	Peerio.socket.worker.onmessage = function(message) {
 		message = message.data
 		if (
@@ -53,20 +54,37 @@ Peerio.socket = {};
 			}, 1000)
 		}
 
+		function showServerWarning(){
+			warningActive = true;
+			if(warningQueue.length===0){
+				warningActive = false;
+				return;
+			}
+			var data = warningQueue.shift();
+			swal({
+				title: '',
+				text: data && data.msg || '',
+				type: 'warning',
+				confirmButtonText: document.l10n.getEntitySync('OK').value
+			}, function () {
+				if(data && data.token) Peerio.socket.emit('clearWarning', {token: data.token, authToken: Peerio.user.popAuthToken()});
+				if(warningQueue.length>0) {
+					window.setTimeout(showServerWarning, 1000);
+				} else warningActive = false;
+			})
+		}
+
 		if (hasProp(message, 'received')) {
+
 			if (message.received === 'serverWarning'){
-				swal({
-					title: '',
-					text: message.data.msg,
-					type: 'warning',
-					confirmButtonText: document.l10n.getEntitySync('OK').value
-				}, function () {
-					Socket.emit('clearWarning', {token: message.data.token});
-				})
+				if(!message || !message.data || !message.data.msg) return;
+				warningQueue.push(message.data);
+				if(!warningActive) showServerWarning();
 			}
 			if (message.received === 'settingsUpdated'){
 				Peerio.network.getSettings(function(data) {
 					Peerio.user.quota = data.quota;
+					Peerio.user.subscriptions = data.subscriptions;
 					Peerio.UI.userMenuPopulate();
 				})
 
