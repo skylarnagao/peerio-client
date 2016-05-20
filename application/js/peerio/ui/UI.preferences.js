@@ -39,7 +39,7 @@ Peerio.UI.languageOptions = [{
 	 value: 'tr'
 }];
 
-Peerio.UI.controller('preferences', function($scope) {
+Peerio.UI.controller('preferences', function($scope, $window) {
 	'use strict';
 	$scope.preferences = {}
 	$scope.$on('preferencesOnLogin', function() {
@@ -194,4 +194,34 @@ Peerio.UI.controller('preferences', function($scope) {
 			})
 		})
 	}
+	$scope.preferences.getUserQuota = function() {
+		return Peerio.file.getReadableFileSize(Peerio.user.quota.user)
+	}
+	$scope.preferences.getTotalQuota = function() {
+		return Peerio.file.getReadableFileSize(Peerio.user.quota.total)
+	}
+	$scope.preferences.getQuotaPercentage = function() {
+		var p = (Peerio.user.quota.user * 100) / Peerio.user.quota.total
+		return Math.ceil(p) + '%'
+	}
+
+	$scope.preferences.getActiveSubscriptions = function () {
+		if(!Peerio.user || !Peerio.user.subscriptions) return [];
+		return Peerio.user.subscriptions.filter(function (item) {
+			return item.status === 'active';
+		}).map(function(s){
+			s.date = new Date(s.current_period_end).toDateString();
+			return s;
+		});
+	};
+	$scope.preferences.getCanceledSubscriptions = function () {
+		if(!Peerio.user || !Peerio.user.subscriptions) return [];
+		return Peerio.user.subscriptions.filter(function (item) {
+			return item.status === 'canceled';
+		}).map(function(s){
+			s.date = new Date(s.current_period_end).toDateString();
+			return s;
+		});
+	};
+	$scope.preferences.$window = $window;
 })

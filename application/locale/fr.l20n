@@ -27,7 +27,7 @@
     <signupYourGeneratedPassphrase "Votre phrase de passe générée :">
     <signupPassphraseRefresh "Changer la phrase de passe">
     <error "Erreur">
-    <errorText "Votre requête n'a pas pu être traitée.">
+    <errorText "Votre demande n'a pas pu être traitée.">
     <warning "Avertissement">
     <confirmPassphrase "Confirmer la phrase de passe">
     <showPassphrase "Montrer la phrase de passe">
@@ -44,7 +44,7 @@
     <code "Code">
     <confirmationCode "Code de confirmation">
     <confirmMyAccount "Confirmer mon compte">
-    <invalidConfirmationCode "veuillez revérifier ce code.">
+    <invalidConfirmationCode "Désolé, ce code est invalide ou erroné.">
     <finishingUp "Presque terminé">
     <peerioPIN "Code de passe Peerio">
     <setAPeerioPIN "Définir un code de passe pour cet appareil ?">
@@ -99,7 +99,7 @@
     <encrypted "chiffré">
     <addToFolder "Ajouter au dossier">
     <acknowledge "Approuver">
-    <remove "Retirer">
+    <remove "Supprimer">
     <download "Télécharger">
     <destroy "Détruire">
     <newMessages "Nouveaux messages">
@@ -191,7 +191,7 @@
     <removeContactText "Vous ne pourrez plus communiquer ensemble de façon sécurisée sur Peerio. Êtes-vous certain ?">
     <cancel "Annuler">
     <removeContactSuccess "Votre contact a été retiré.">
-    <removeContactError "Impossible de retirer ce contact. Veuillez ressayer.">
+    <removeContactError "Impossible de supprimer le contact. Veuillez ressayer.">
     <newContact "Nouveau contact !">
     <newContactText "Vous êtes maintenant en contact avec">
     <miniLockID "ID miniLock :">
@@ -331,5 +331,263 @@
     <availableNowMobile "Proposé maintenant pour Android et iOS.">
     <mobileApps "Applis mobiles">
     <TOStitle "Conditions générales d'utilisation">
-    <TOStext "En souscrivant à un compte Peerio, vous acceptez nos conditions générales d'utilisation.">
-    <TOStextUpdated "Veuillez lire et accepter les conditions générales mises à jour.">
+    <TOStext "En vous abonnant à un compte Peerio, vous acceptez nos conditions générales d'utilisation.">
+    <TOStextUpdated "Nous avons mis à jour nos conditions générales d'utilisation ! Veuillez les examiner et les accepter afin de poursuivre.">
+    <version "version">
+    <touchId "Touch ID">
+    <messageSubject "#subject">
+    <passcode "code de passe">
+    <publicKey "Clé publique">
+    <contactStatus "Statut du contact">
+    "n/a": "S.O.",
+    <outOfSync "désynchronisé">
+    <connecting "connexion...">
+    <signOut "Déconnexion">
+    <fileSize "Taille de fichier">
+    <fileType "Type de fichier">
+    <location "Emplacement">
+    <profile "Profil">
+    <getFreeStorage "Obtenir du stockage gratuit">
+    <copiedToClipboard "Copié vers le presse-papiers">
+    <notifications_whenNewMessage "Vous recevez un nouveau message">
+    <notifications_whenNewContactRequest "Vous recevez une demande de contact">
+    <notifications_whenInviteAccepted "Votre invitation est acceptée">
+    <notifications_note "Les notifications seront envoyées à votre adresse principale (courriel ou téléphone).">
+    <optIns "Options d'inclusion">
+    <optIns_dataCollection "Collecte de données">
+    <redeemCoupon "Utiliser un coupon">
+    <enterCouponCode "Saisir le code de coupon">
+    <participants "Participants">
+    <sharedFiles "Fichiers partagés">
+    <finishingIn "se termine dans time">
+    <yourPublicKey "Votre clé publique">
+    <address_phoneInvalid "Les numéros de téléphone doivent comporter un indicatif de pays">
+    <address_confirmCodePrompt "Veuillez saisir le code reçu">
+    <address_confirmCodePrompt2 "Veuillez saisir le code reçu par courriel ou sur votre téléphone">
+    <address_authorized "L'adresse est authorisée">
+    <address_conformCodeError "Le code de confirmation ne correspond pas. Voulez-vous ressayer ?">
+    <address_addingError "Erreur d'ajout d'adresse. Veuillez contacter l'assistance.">
+    <address_taken "Désolé, cette adresse est déjà utilisée">
+    <address_removeConfirm "Voulez-vous vraiment supprimer cette adresse ?">
+    <address_makePrimary "Toquer une adresse pour qu'elle devienne la principale.">
+    <account_deleteTitle "#deleteAccount">
+    <account_deleteConfirm "Voulez-vous vraiment supprimer votre compte ?">
+    <account_deleted "Le compte a été supprimé. Déconnexion.">
+    <button_accept "#accept">
+    <button_agree "J'accepte">
+    <button_cancel "#cancel">
+    <button_back "retour">
+    <button_continue "#continue">
+    <button_confirm "confirmer">
+    <button_enable "activer">
+    <button_exit "quitter">
+    <button_finish "terminer">
+    <button_delete "Supprimer">
+    <button_getStarted "Commencer">
+    <button_import "Importer">
+    <button_maybeLater "Peut-être plus tard">
+    <button_notRightNow "Pas pour l'instant">
+    <button_reject "refuser">
+    <button_search "#search">
+    <button_importWizard "Choisir et toquer ici">
+    <button_searchAgain "Chercher de nouveau">
+    <button_skip "#skip">
+    <button_yesIDo "Oui">
+    <button_addContact "Ajouter un contact">
+    <button_download "#download">
+    <button_uploadFile "Téléverser un fichier">
+    <button_attach "Joindre">
+    <button_open "Ouvrir">
+    <button_composeMessage "#newMessage">
+    <button_sendMessage "#sendMessage">
+    <button_importContacts "Importer et inviter des contacts">
+    <button_addSelectedContact "Ajouter le contact sélectionné">
+    <button_send "#send">
+    <button_ok "#ok">
+    <button_add "Ajouter">
+    <button_redeem "Utiliser">
+    <button_addAddress "Ajouter une adresse">
+    <button_IUnderstand "Je comprends">
+    <button_deleteAccount "supprimer votre compte">
+    <button_enableTouchId "Activer la clé par empreinte digitale">
+    <contact_invitePrompt "Invitez-les à rejoindre Peerio en cliquant sur le bouton ci-dessous :">
+    <contact_inviteSendButton "Envoyer une invitation par courriel">
+    <contact_import "Importation de contacts">
+    <contact_importFriends "Vos amis sur Peerio">
+    <contact_importInvite "Invitez vos contacts sur Peerio">
+    <contact_importTitle "Importer les contacts de votre téléphone.">
+    <contact_importWarning "Votre liste de contacts sera partagée avec Peerio. Ces informations ne seront utilisées que pour vous aider à trouver vos contacts sur Peerio et seront supprimées immédiatement après l'importation. Voulez-vous continuer ?">
+    <contact_emailSent "Nous avons envoyé une invitation par courriel à email">
+    <contact_permissionMissing "Veuillez autoriser Peerio à accéder aux contacts de votre appareil afin d'utiliser la fonction d'importation de contacts.">
+    <contact_searchPlaceholder "nom d'utilisateur, courriel ou téléphone">
+    <contact_searchTitle "#button_search">
+    <contact_search "Recherche de contacts">
+    <contact_searchInputPlaceholder "courriel/nom d'utilisateur/téléphone">
+    <contact_addressNotFound "Désolé, il semble que <emphasis>address</> n'est pas inscrit à Peerio.">
+    <contact_nothingFound "Désolé, aucun résultat ne correspond à votre recherche. Essayez une recherche de contacts par adresse courriel, nom d'utilisateur ou numéro de téléphone.">
+    <contact_acceptFail "Échec d'acceptation de la demande de contact.">
+    <contact_rejectFail "Échec de refus de la demande de contact.">
+    <contact_removeFail "Échec de suppression du contact.">
+    <contact_removeConfirmTitle "#removeContactQuestion">
+    <contact_removeConfirmText "Voulez-vous vraiment supprimer username de vos contacts ? Vous ne pourrez plus envoyer de messages ou partager de fichiers avec ce contact après suppression.">
+    <contact_acceptRequestButton "Accepter la demande de contact">
+    <contact_rejectRequestButton "Refuser la demande de contact">
+    <contact_removeButton "#removeContact">
+    <contact_status "Statut du contact :">
+    <contact_primaryAddress "Adresse principale">
+    <contact_statusEstablished "Contact établi.">
+    <contact_statusRequestSent "En attente : vous avez envoyé une demande">
+    <contact_statusRequestReceived "En attente : vous avez reçu une demande">
+    <contact_statusIsSelf "C'est vous">
+    <contact_youTag "#you">
+    <contact_invitedTag "invité">
+    <contact_requestsTag "autorisation des demandes">
+    <contact_listTitle "Contacts Peerio">
+    <contact_listEmpty "Vous n'avez pas encore de contacts ! Cliquer ci-dessous pour commencer.">
+    <contactSelect_prompt "Choisir les destinataires">
+    <contactSelect_updateRecipientsButton "Mettre à jour les destinataires">
+    <contactSelect_addRecipientsButton "Ajouter des destinataires">
+    <error_accountDeleted "Le compte a été supprimé.">
+    <error_badCredentials "Nom d'utilisateur ou phrase de passe erroné.">
+    <error_creatingAccount "Erreur de création du compte.">
+    <error_invite "Erreur d'envoi d'une invitation. Veuillez contacter l'assistance.">
+    <error_emptyUsername "Le nom d'utilisateur ne peut pas être vide.">
+    <error_invalidName "Nom d'utilisateur invalide">
+    <error_loginFailed "Échec de connexion.">
+    <error_passphraseNotMatching "Les phrases de passe ne correspondent pas.">
+    <error_fileDownload "Échec de téléchargement du fichier.">
+    <error_loadingConversation "Échec de chargement de la conversation.">
+    <error_messageDelivery "Échec de livraison du message aux destinataires suivants :">
+    <error_messageSend "Échec d'envoi du message.">
+    <error_addressFormat "Désolé. cela ne ressemble ni à une adresse courriel, ni à un numéro de téléphone valide.">
+    <input_required "Exigé">
+    <login_forgetUsername "Toquer pour changer d'utilisateur ou oublier le nom d'utilisateur.">
+    <login_loginButton "#login">
+    <login_passphraseOrPasscode "#passphrase #or #passcode">
+    <login_signUpButton "#signup">
+    <login_welcomeBack "Heureux de vous revoir,">
+    <login_changeUserButton "Changer d'utilisateur">
+    <setup_contactInfoDescription "Aidez vos contacts à vous retrouver sur Peerio, recevez des notifications et activez les services d'assistance en ajoutant votre adresse courriel ou votre numéro de téléphone">
+    <setup_contactInfoTitle "Infos de contact">
+    <setup_emailOrPhone "Adresse courriel / numéro de téléphone">
+    <setup_passcodeDescription "Cela vous permet de vous connecter <emphasis>à partir de cet appareil</> sans saisir votre phrase de passe.">
+    <setup_passcodeTitle "Définir le code de passe de l'appareil">
+    <setup_startDescription "Afin d'optimiser votre expérience, nous vous recommandons de terminer ce bref assistant de configuration en 3 étapes.">
+    <setup_startDescription2 "Chaque étape est facultative. Vous pouvez quitter l'assistant n'importe quand et ignorer les étapes qui ne vous concernent pas.">
+    <setup_startTitle "Bienvenue sur Peerio !">
+    <setup_touchDescription "Touch ID exige l'accès à votre trousseau Apple.">
+    <setup_touchTitle "Souhaitez-vous activer Touch ID ?">
+    <setup_touchWarning "Note sur l'application de la loi. En octobre 2014, une cour des États-Unis a statué qu'un officier de police peut vous ordonner de débloquer votre appareil avec une empreinte digitale, mais pas un code de passe alphanumérique. Des lois semblables pourraient exister dans d'autres pays, et devraient être prises en considération si votre modèle de menace inclut l'application de loi.">
+    <setup_importDescription "Découvrez qui dans vos contacts utilise déjà Peerio.">
+    <signup_TOSRequestText "Avant de vous inscrire à Peerio, nous vous demandons d'accepter nos <tosLink>conditions générales d'utilisation</>.">
+    <signup_TOSRequestTitle "#TOStitle">
+    <signup_acceptPassphrase "Je me souviendrai de ma phrase de passe">
+    <signup_confirmCreateButton "#createMyAccount">
+    <signup_desiredUsername "#desiredUsername">
+    <signup_enterPassphrase "Veuillez saisir votre phrase de passe">
+    <signup_nextPassphrase "Je n'aime pas cette phrase de passe">
+    <signup_optInDescription "En activant la collecte anonyme de données, nous recueillerons des informations non signalétiques qui seront partagées avec des chercheurs, et utilisées afin d'améliorer Peerio.">
+    <signup_optInDescription2 "Si vous acceptez, vous recevrez 25 Mo de stockage supplémentaire quotidiennement afin de vous remercier de votre contribution.">
+    <signup_optInHeadline "Souhaiteriez-vous participer à notre recherche sur la convivialité ?">
+    <signup_optInPolicy "<emphasis>Toquer ici</> pour savoir quelles données seront recueillies.">
+    <signup_passphraseDescription "Voici votre phrase de passe sécurisée, générée aléatoirement. Si vous l’égarez, vous perdrez <emphasis>définitivement</> l'accès à votre compte.">
+    <signup_showPassphrase "Laissez-moi consulter ma phrase de passe de nouveau">
+    <signup_wrongUsername "Veuillez choisir un autre nom d'utilisateur">
+    <tosUpdateRequestText "Nous avons mis à jour nos conditions générales d'utilisation ! Veuillez les consulter et les accepter afin de poursuivre l'utilisation de Peerio.">
+    <tosUpdateRequestTitle "Mise à jour des conditions générales d'utilisation">
+    <openLinkWarning "Attention ! Veuillez n'ouvrir que les liens provenant de contacts de confiance.">
+    <fileState_downloading "#downloading">
+    <fileState_decrypting "Déchiffrement">
+    <fileState_saving "Enregistrement">
+    <fileState_reading "Lecture">
+    <fileState_encrypting "Chiffrement">
+    <fileState_uploadingMetadata "Téléversement des métadonnées chiffrées">
+    <fileState_uploading "Téléversement">
+    <file_listEmptyTitle "Stockage de fichiers Peerio !">
+    <file_listEmptyText "Peerio vous permet de stocker des fichiers en toute sécurité dans le nuage. Essayez-le en téléversant un fichier.">
+    <file_removeConfirmTitle "Supprimer ce fichier ?">
+    <file_removeConfirmText "Ce fichier sera supprimé de votre appareil et de votre nuage, mais sera toujours accessible par les utilisateurs avec qui vous l'avez partagé.">
+    <file_removeLocalConfirmTitle "Supprimer le fichier de cet appareil ?">
+    <file_removeLocalConfirmText "Ce fichier sera supprimé de votre appareil, mais sera toujours accessible par les utilisateurs avec qui vous l'avez partagé.">
+    <file_nukeConfirmTitle "Complètement détruire ce fichier ?">
+    <file_nukeConfirmText "Ce fichier sera supprimé de votre appareil, de votre nuage, mais aussi du nuage des utilisateurs avec qui vous l'avez partagé.">
+    <file_sizeWarningTitle "Limites sur appareils mobiles">
+    <file_sizeWarningTextDownload "Le téléchargement de fichiers de plus de 100 Mo sur des appareils mobiles peut causer le plantage de Peerio. Nous nous efforçons de résoudre ce problème. Voulez-vous quand même télécharger ce fichier ?">
+    <file_sizeWarningTextUpload "Le téléversement de fichiers de plus de 100 Mo sur des appareils mobiles peut causer le plantage de Peerio. Nous nous efforçons de résoudre ce problème. Voulez-vous quand même téléverser ce fichier ?">
+    <file_sharedBy "Partagé par">
+    <file_uploadedAt "Téléversé à">
+    <file_pickFromLibrary "Choisir dans la galerie">
+    <file_takePicture "Prendre une nouvelle photo">
+    <file_removeLocalButton "Supprimer de votre appareil">
+    <file_removeCloudButton "Supprimer de votre nuage">
+    <file_removeLocalAndCloudButton "Supprimer de votre appareil et de votre nuage">
+    <file_nukeButton "Ne plus partager et supprimer de tous les nuages">
+    <file_locationLocal "Sur cet appareil (déchiffré) et dans le nuage (chiffré)">
+    <file_locationCloud "Dans le nuage (chiffré)">
+    <file_uploadComplete "Téléversement terminé.">
+    <file_uploadFailed "Échec de téléversement.">
+    <file_uploadStorageExceeded "Vous avez dépassé votre quota de stockage.">
+    <file_namePrompt "Saisir un nom de fichier :">
+    <fileSelect_title "Choisir vos fichiers">
+    <server_isDown "Peerio est-il hors service ?">
+    <server_isDown1 "toquer ici pour vérifier">
+    <appUpdate_available "Mise à jour de Peerio proposée">
+    <appUpdate_normal "Une mise à jour est proposée, souhaitez-vous obtenir la dernière version de Peerio ?">
+    <appUpdate_critical "Votre client Peerio est désuet et ne peut plus se connecter au serveur. Veuillez le mettre à jour pour vous connecter !">
+    <2fa "Validation en deux étapes">
+    <2fa_protectedOperation "L'opération que vous avez demandée est protégée par une validation en deux étapes. Veuillez saisir le code à six chiffres affiché par votre appli d'authentification.">
+    <2fa_invalid "Code erroné. Veuillez ressayer.">
+    <2fa_prompt "Saisir le code à six chiffres affiché par votre appli d'authentification">
+    <2fa_disable "Désactiver la validation en deux étapes">
+    <2fa_enable "Activer la validation en deux étapes">
+    <2fa_addressRequired "Aucune adresse de contact n'est enregistrée. Si vous perdez l'accès à la validation en deux étapes, Peerio ne pourra pas récupérer votre compte.">
+    <2fa_clipboard "La clé suivante a été copiée dans votre presse-papiers. Veuillez la coller dans l'appli de validation en deux étapes.">
+    <2fa_manualCopy "Copier et coller la clé secrète suivante dans votre appli de validation en deux étapes">
+    <passcode_remove "Supprimer le code de passe">
+    <passcode_set "#setPIN">
+    <conversation_noParticipants "Il ne reste plus de participant dans cette conversation">
+    <conversation_withSelf "Il n'y a personne d'autre dans cette conversation.">
+    <conversation_participantLeftAt "a quitté à">
+    <conversation_confirmDelete "Voulez-vous vraiment supprimer cette conversation ? Vous ne recevrez plus les messages ni les fichiers de cette conversation.">
+    <conversation_emptyList "Vous pouvez maintenant communiquer en toute sécurité ! Ajoutez un contact et essayez.">
+    <message_typePrompt "Saisissez votre message...">
+    <message_readByRecipient "Lu">
+    <message_readByAll "Lu par tous">
+    <message_readBy "Lu par placeholder">
+    <message_selectContacts "Veuillez sélectionner au moins un contact à qui envoyer votre message.">
+    <sync_starting "démarrage...">
+    <sync_contacts "synchronisation des contacts">
+    <sync_files "synchronisation des fichiers">
+    <sync_messages "téléchargement des données de messages">
+    <sync_description "Pour une expérience et des performances optimales, Peerio conserve certaines de vos données chiffrées sur votre appareil. Cela peut prendre un moment si vous avez beaucoup de messages.">
+    <coupon_activated "Votre coupon a été activé avec succès !">
+    <coupon_invalid "Désolé, le coupon ne semble pas être valide.">
+    <coupon_prompt "Si vous disposez d'un code promotionnel, veuillez le saisir ci-dessous.">
+    <passcode_removeTitle "#passcode_remove">
+    <passcode_removeConfirm "Voulez-vous vraiment supprimer votre code de passe ?">
+    <passcode_title "#peerioPINForThisDevice">
+    <passcode_tooSimple "le code de passe est trop simple, veuillez ressayer">
+    <passcode_notDistinct "veuillez saisir un code de passe unique">
+    <passcode_tooShort "encore number chiffre(s)">
+    <passcode_restriction "Le code de passe doit comporter 6 chiffres">
+    <passcode_inputPlaceholder "Saisir un code de passe pour l'appareil">
+    <passcode_ok "vous êtes prêt">
+    <settings_saveFailed "Échec d'enregistrement des paramètres.">
+    <settings_optIn "En activant la collecte anonyme de données, nous recueillerons des informations non signalétiques qui seront partagées avec des chercheurs, et utilisées afin d'améliorer Peerio. Si vous acceptez, vous recevrez 25 Mo de stockage supplémentaire quotidiennement afin de vous remercier de votre contribution.">
+    <shareText "J'aimerais partager des messages et des fichiers avec vous en toute sécurité sur Peerio !">
+    <inviteNote "Si l'un de vos contacts s'inscrit à Peerio avec l'adresse que vous avez invitée, il recevra automatiquement une demande de contact de votre part et vous, 500 Mo de stockage supplémentaire. Vous pouvez ainsi gagner jusqu'à 10 Go de stockage gratuit !">
+    <shareThisCode "Partager ce code">
+    <touch_keychain "L'activation de Touch ID exige l'accès à votre trousseau. Souhaitez-vous continuer ?">
+    <touch_notAvailable "Identification par empreinte digitale non disponible">
+    <supportFeedback "Assistance/commentaires">
+    <payments_title "Augmentez votre espace de stockage">
+    <payments_menu "Augmentez votre espace de stockage">
+    <payments_hasSubscription "Vous êtes déjà abonné">
+    <payments_buy "Acheter">
+    "payments_com.peerio.storage.50.yearly": "Paiement annuel",
+    "payments_com.peerio.storage.50.monthly": "Paiement mensuel",
+    <androidEncryptionStatusOff "Votre appareil prend en charge le chiffrement complet du disque, mais cette option n'est pas activée actuellement. Peerio recommande l'utilisation du chiffrement du disque. Souhaitez-vous en apprendre davantage ?">
+    <androidEncryptionStatusPartial "Le chiffrement est activé sur votre appareil, mais votre code de passe est encore défini à sa valeur par défaut. Nous vous recommandons de définir un code unique. Souhaitez-vous en apprendre davantage ?">
+    <androidEncryptionStatusUnsupported "Votre appareil ne prend pas en charge le chiffrement. Nous vous recommandons de passer à une version d'Android qui le fait. Souhaitez-vous en apprendre davantage ?">
+    <security "Sécurité">
+    <noMatchesFound "Aucune correspondance trouvée">

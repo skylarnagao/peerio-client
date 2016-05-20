@@ -1,7 +1,7 @@
 
     <title "Peerio">
     <signupHeader "消息和文件。简单且安全。">
-    <signupIntro "Peerio is a simple and secure way to send messages, share files, and store documents online. Everything gets encrypted before being sent to the cloud, so nobody but you and those you share with ever have access to your data.">
+    <signupIntro "Peerio 是一个简单且安全的发送消息、分享文件和在线存储文档的方式。所有数据在发送到云之前都被加密，因此除了您和您与其分享的人，没有其他人能访问您的数据。">
     <username "用户名">
     <passphrase "密码">
     <passphraseOrPIN "密码短语或设备密码">
@@ -44,7 +44,7 @@
     <code "代码">
     <confirmationCode "确认码">
     <confirmMyAccount "确认我的账户">
-    <invalidConfirmationCode "请仔细检查此代码。">
+    <invalidConfirmationCode "抱歉，此确认码无效或已过期。">
     <finishingUp "完成注册">
     <peerioPIN "Peerio 密码">
     <setAPeerioPIN "为此设备设置密码？">
@@ -58,8 +58,8 @@
     <accountBlacklisted "账户不可用">
     <accountBlacklistedText "此账户现被暂停。为了重新获得访问权，请通过 support@peerio.com 联系 Peerio 客服。">
     <searchMessagesFilesAndContacts "搜索消息、文件和联系人">
-    <computerTimeSync "Message Not Sent">
-    <computerTimeSyncText "An error occurred and your message was not sent. If you experience this problem repeatedly, please make sure that your computer's clock is set to the correct time.">
+    <computerTimeSync "消息未发送">
+    <computerTimeSyncText "发生一个错误，您的消息未发送。如果您反复遇到此问题，请确认您的计算机时钟的时间设置是否正确。">
     <messages "消息">
     <files "文件">
     <contacts "联系人">
@@ -114,7 +114,7 @@
     <removeConversationsText "警告：您将不再接收到此对话中共享的任何消息或文件。">
     <newMessageRecipientsError "消息没有收件人">
     <newMessageRecipientsErrorText "请输入至少一个接收人以发送您的消息。">
-    <typeYourReply "请输入您的回复...">
+    <typeYourReply "输入您的回复...">
     <noParticipantsLeft "没有参与者仍然在此对话中。">
     <allDocuments "所有文件">
     <photos "照片">
@@ -191,7 +191,7 @@
     <removeContactText "这将阻止您与他通过 Peerio 进行安全的通信。您确定吗？">
     <cancel "取消">
     <removeContactSuccess "您的联系人已成功移除。">
-    <removeContactError "我们现在未能移除此联系人。请重试。">
+    <removeContactError "Unable to remove contact. Please try again.">
     <newContact "新联系人！">
     <newContactText "您现在可以与他联系了：">
     <miniLockID "miniLock ID:">
@@ -260,13 +260,13 @@
     <pressEnterToSend "按 Enter 发送">
     <updateAvailable "有更新可用！">
     <updateAvailableText "Peerio 有新的更新可用！更新会带来更酷的新功能，以及可靠性改善。您要立即更新吗？">
-    <updateAvailableLinuxText "A new update is available for Peerio! Updates bring cool new features, as well as reliability improvements. Please use your package manager to update, or click through for instructions.">
+    <updateAvailableLinuxText "Peerio 有更新可用！更新会带来更酷的新功能，以及可靠性改善。请使用您的软件包管理器更新，或者点击查看说明。">
     <updateDownload "下载更新">
-    <linuxPackageInfo "See package info">
+    <linuxPackageInfo "查看软件包信息">
     <later "稍后">
     <updateAvailableCritical "有关键更新可用">
     <updateAvailableCriticalText "有一个 Peerio 关键性更新可用。为了您的安全，在您安装最新的更新之前，您可能不能继续使用。">
-    <updateAvailableCriticalLinuxText "A critical Peerio update is available. For your security, you may not proceed until you install the latest update. Please use your package manager to update, or click through for instructions.">
+    <updateAvailableCriticalLinuxText "Peerio 的一个关键性更新可用。为了您的安全，您可能不能继续使用，直到您安装最新的更新。请使用您的包管理器更新，或者点击查看说明。">
     <TOFUNotMatchError "联系人身份已变化！">
     <TOFUNotMatchErrorText "警告！您的部分联系人已经更改了他们的身份。在与他们通信之前，请先验证他们的个人资料中的 Peerio 头像。他的用户名是：">
     <importContactsGoogle "导入您的 Google 联系人到 Peerio">
@@ -326,10 +326,268 @@
     <typePassphraseToConfirm "请输入如上所示的此密码短语以接受并继续">
     <passphraseConfirmFailed "您的密码短语输入错误。请在某处安全的地方存储您的密码短语，然后再继续。">
     <acknowledgedMessage "已确认此项">
-    <addAddressSuggestion "Update contact information?">
-    <addAddressSuggestionText "Adding alternative contact information allows for: <br><ul><li><strong>Discovery</strong>: Make it easier for your contacts to find you </li><li><strong>Notifications</strong>: New message and contact notifications </li><li><strong>Support</strong>: More support services from our Help Center</li></ul><br>Would you like to update your addresses?">
-    <availableNowMobile "Available now for Android and iOS.">
-    <mobileApps "Mobile Apps">
-    <TOStitle "Terms Of Use">
-    <TOStext "By signing up for a Peerio account, you agree to our terms of use.">
-    <TOStextUpdated "Please read and accept updated terms of use.">
+    <addAddressSuggestion "更新联系人信息？">
+    <addAddressSuggestionText "添加其他联系信息可以：<br><ul><li><strong>发现</strong>：您的联系人更容易找到您</li><li><strong>通知</strong>：新消息和联系人通知</li><li><strong>支持</strong>：获得我们帮助中心的更多支持服务</li></ul><br>您要更新您的地址吗？">
+    <availableNowMobile "现在可在 Android 和 iOS 上使用。">
+    <mobileApps "移动应用">
+    <TOStitle "使用条款">
+    <TOStext "注册 Peerio 账号即代表您同意我们的使用条款。">
+    <TOStextUpdated "我们更新了我们的使用条款！请查阅并接受以继续。">
+    <version "版本">
+    <touchId "Touch ID">
+    <messageSubject "#subject">
+    <passcode "设备密码">
+    <publicKey "公钥">
+    <contactStatus "联系人状态">
+    "n/a": "不适用",
+    <outOfSync "非同步">
+    <connecting "正在连接...">
+    <signOut "退出">
+    <fileSize "文件大小">
+    <fileType "文件类型">
+    <location "位置">
+    <profile "个人资料">
+    <getFreeStorage "获取免费存储">
+    <copiedToClipboard "已复制到剪贴板">
+    <notifications_whenNewMessage "您收到了新消息">
+    <notifications_whenNewContactRequest "您收到了一个联系人请求">
+    <notifications_whenInviteAccepted "您的邀请已被接受">
+    <notifications_note "通知将发送到您的主要地址（电子邮件或手机）。">
+    <optIns "可选">
+    <optIns_dataCollection "数据收集">
+    <redeemCoupon "兑换优惠卷">
+    <enterCouponCode "Enter Coupon Code">
+    <participants "参与者">
+    <sharedFiles "已共享文件">
+    <finishingIn "将在 time 时完成">
+    <yourPublicKey "您的公钥">
+    <address_phoneInvalid "手机号需要国家代码">
+    <address_confirmCodePrompt "请输入您收到的代码">
+    <address_confirmCodePrompt2 "Please enter the code you received on your email or phone">
+    <address_authorized "地址已确认">
+    <address_conformCodeError "确认码不匹配。您是否要重试？">
+    <address_addingError "添加地址出错。请联系客服。">
+    <address_taken "抱歉，此地址已被使用">
+    <address_removeConfirm "您确定要移除此地址？">
+    <address_makePrimary "点击一个地址使其变为主要。">
+    <account_deleteTitle "#deleteAccount">
+    <account_deleteConfirm "您确定要删除您的账户吗？">
+    <account_deleted "账户已删除。正在退出登录。">
+    <button_accept "#accept">
+    <button_agree "我同意">
+    <button_cancel "#cancel">
+    <button_back "返回">
+    <button_continue "#continue">
+    <button_confirm "确认">
+    <button_enable "启用">
+    <button_exit "退出">
+    <button_finish "完成">
+    <button_delete "删除">
+    <button_getStarted "开始使用">
+    <button_import "导入">
+    <button_maybeLater "以后再说">
+    <button_notRightNow "暂时不要">
+    <button_reject "拒绝">
+    <button_search "#search">
+    <button_importWizard "Select and tap here">
+    <button_searchAgain "再次搜索">
+    <button_skip "#skip">
+    <button_yesIDo "是的，我同意">
+    <button_addContact "添加联系人">
+    <button_download "#download">
+    <button_uploadFile "上传文件">
+    <button_attach "附加">
+    <button_open "打开">
+    <button_composeMessage "#newMessage">
+    <button_sendMessage "#sendMessage">
+    <button_importContacts "导入和邀请联系人">
+    <button_addSelectedContact "添加选定联系人">
+    <button_send "#send">
+    <button_ok "#ok">
+    <button_add "添加">
+    <button_redeem "Redeem">
+    <button_addAddress "添加地址">
+    <button_IUnderstand "我理解">
+    <button_deleteAccount "删除您的账户">
+    <button_enableTouchId "启用指纹密钥">
+    <contact_invitePrompt "点击下面的按钮邀请他们加入 Peerio：">
+    <contact_inviteSendButton "发送邀请邮件">
+    <contact_import "导入联系人">
+    <contact_importFriends "Peerio 上您的好友">
+    <contact_importInvite "邀请您的联系人到 Peerio">
+    <contact_importTitle "从您的手机导入联系人。">
+    <contact_importWarning "Your contact list will be shared with Peerio. This information is only used to help you find your contacts on Peerio and will be wiped immediately after importing. Would you like to proceed?">
+    <contact_emailSent "我们已经发送邀请邮件到 email">
+    <contact_permissionMissing "请允许 Peerio 访问您的设备联系人以使用导入联系人功能。">
+    <contact_searchPlaceholder "用户名、电子邮件地址或手机号">
+    <contact_searchTitle "#button_search">
+    <contact_search "联系人搜索">
+    <contact_searchInputPlaceholder "电子邮件地址/用户名/手机号">
+    <contact_addressNotFound "很抱歉，看上去 <emphasis>address</> 并未注册 Peerio。">
+    <contact_nothingFound "很抱歉，您的搜索没有匹配的结果。请重新尝试用电子邮件地址、用户名或者手机号搜索联系人。">
+    <contact_acceptFail "接受联系人请求失败。">
+    <contact_rejectFail "拒绝联系人请求失败。">
+    <contact_removeFail "移除联系人失败。">
+    <contact_removeConfirmTitle "#removeContactQuestion">
+    <contact_removeConfirmText "是否确定移除联系人 username？移除后您将不能再与其互发消息和分享文件。">
+    <contact_acceptRequestButton "接受联系人请求">
+    <contact_rejectRequestButton "拒绝联系人请求">
+    <contact_removeButton "#removeContact">
+    <contact_status "联系人状态">
+    <contact_primaryAddress "主要地址">
+    <contact_statusEstablished "已建立联系。">
+    <contact_statusRequestSent "Pending: you sent a request">
+    <contact_statusRequestReceived "Pending: you received a request">
+    <contact_statusIsSelf "这是您">
+    <contact_youTag "#you">
+    <contact_invitedTag "已邀请">
+    <contact_requestsTag "请求授权">
+    <contact_listTitle "Peerio 联系人">
+    <contact_listEmpty "您还没有任何联系人！点击下面开始使用。">
+    <contactSelect_prompt "选择您的收件人">
+    <contactSelect_updateRecipientsButton "更新收件人">
+    <contactSelect_addRecipientsButton "添加收件人">
+    <error_accountDeleted "账户已删除。">
+    <error_badCredentials "用户名或密码短语不正确。">
+    <error_creatingAccount "创建账户出错。">
+    <error_invite "发送邀请时出错。请联系客服。">
+    <error_emptyUsername "用户名不能为空。">
+    <error_invalidName "无效名称">
+    <error_loginFailed "登录失败。">
+    <error_passphraseNotMatching "密码短语不正确。">
+    <error_fileDownload "下载文件失败。">
+    <error_loadingConversation "加载对话失败。">
+    <error_messageDelivery "传递消息到下列收件人失败：">
+    <error_messageSend "发送消息失败。">
+    <error_addressFormat "很抱歉，这看上去不是有效的电子邮件地址或手机号码。">
+    <input_required "必填">
+    <login_forgetUsername "点击切换用户或忘记用户名。">
+    <login_loginButton "#login">
+    <login_passphraseOrPasscode "#passphrase #or #passcode">
+    <login_signUpButton "#signup">
+    <login_welcomeBack "欢迎回来，">
+    <login_changeUserButton "更改用户">
+    <setup_contactInfoDescription "帮助您的联系人发送您在使用 Peerio，添加您的电子邮件地址或者手机号以接收通知和启用支持服务。">
+    <setup_contactInfoTitle "联系人信息">
+    <setup_emailOrPhone "Email / Phone Number">
+    <setup_passcodeDescription "这允许您<emphasis>从这台设备</>登录而无须输入您的密码短语。">
+    <setup_passcodeTitle "设置设备密码">
+    <setup_startDescription "为了优化您的使用体验，我们推荐您完成这个简短、仅需三步的安装向导。">
+    <setup_startDescription2 "所有步骤都是可选的。您可以在任何时间安全地退出此向导和跳过不适合您的步骤。">
+    <setup_startTitle "欢迎使用 Peerio！">
+    <setup_touchDescription "Touch ID 需要您使用苹果的钥匙链。">
+    <setup_touchTitle "您要启用 Touch ID 吗？">
+    <setup_touchWarning "注意执法问题。2014年10月，一个美国法院裁定，警察可以要求你使用指纹解锁你的设备，而密码则不能。类似的法律可能存在于其他国家或地区中。如果法律执行在你的威胁列表中，请仔细考虑。">
+    <setup_importDescription "Find out which of your contacts are already using Peerio.">
+    <signup_TOSRequestText "在注册一个 Peerio 账户前，我们需要您同意我们的<tosLink>使用条款</>。">
+    <signup_TOSRequestTitle "#TOStitle">
+    <signup_acceptPassphrase "我会记住我的密码短语">
+    <signup_confirmCreateButton "#createMyAccount">
+    <signup_desiredUsername "#desiredUsername">
+    <signup_enterPassphrase "请输入您的密码短语">
+    <signup_nextPassphrase "我不喜欢这个密码短语">
+    <signup_optInDescription "在启用匿名数据收集后，我们将收集不能确定身份并且无关内容的信息与研究人员分享，用以改进 Peerio。">
+    <signup_optInDescription2 "如果您加入，您会每天收到 25MB 存储空间的奖励以感谢您的贡献。">
+    <signup_optInHeadline "您希望帮助我们进行可用性研究吗？">
+    <signup_optInPolicy "<emphasis>点击这里</>了解我们收集的数据。">
+    <signup_passphraseDescription "这是为您安全生成的随机的密码短语。如果您遗失它，您将<emphasis>永远</>丢失访问您的账户的权利。">
+    <signup_showPassphrase "让我再看一次我的密码短语">
+    <signup_wrongUsername "请选择其他用户名">
+    <tosUpdateRequestText "我们更新了我们的服务条款！请查阅并接受以继续使用 Peerio。">
+    <tosUpdateRequestTitle "服务条款更新">
+    <openLinkWarning "警告：请仅打开您信任的联系人发来的链接。">
+    <fileState_downloading "#downloading">
+    <fileState_decrypting "正在解密">
+    <fileState_saving "正在保存">
+    <fileState_reading "正在读取">
+    <fileState_encrypting "正在加密">
+    <fileState_uploadingMetadata "正在上传加密的元数据">
+    <fileState_uploading "正在上传">
+    <file_listEmptyTitle "Peerio 文件存储！">
+    <file_listEmptyText "Peerio 允许您安全地在云中存储文件。上传一个文件来尝试。">
+    <file_removeConfirmTitle "移除此文件？">
+    <file_removeConfirmText "此文件将从您的设备和云上删除，但您与其共享的用户那里将仍然可用。">
+    <file_removeLocalConfirmTitle "从此设备移除文件？">
+    <file_removeLocalConfirmText "此文件将从您的设备上删除，但您与其共享的用户那里将仍然可用。">
+    <file_nukeConfirmTitle "完全销毁文件？">
+    <file_nukeConfirmText "此文件将从您的设备、云以及您已与其共享的用户那里删除。">
+    <file_sizeWarningTitle "Mobile Limits">
+    <file_sizeWarningTextDownload "Downloading files over 100MB on mobile devices may cause Peerio to crash. We are working to solve this issue. Would you still like to try downloading this file?">
+    <file_sizeWarningTextUpload "Uploading files over 100MB on mobile devices may cause Peerio to crash. We are working to solve this issue. Would you still like to try uploading this file?">
+    <file_sharedBy "共享者">
+    <file_uploadedAt "上传时间">
+    <file_pickFromLibrary "从相册选择">
+    <file_takePicture "拍摄新照片">
+    <file_removeLocalButton "从您的设备移除">
+    <file_removeCloudButton "从您的云移除">
+    <file_removeLocalAndCloudButton "从您的设备和云移除">
+    <file_nukeButton "取消共享并从所有云移除">
+    <file_locationLocal "在此设备（已解密）和此云（已加密）">
+    <file_locationCloud "在此云（已加密）">
+    <file_uploadComplete "上传完成。">
+    <file_uploadFailed "上传失败。">
+    <file_uploadStorageExceeded "Storage quota exceeded.">
+    <file_namePrompt "请输入文件名：">
+    <fileSelect_title "选择您的文件">
+    <server_isDown "Peerio 已下线？">
+    <server_isDown1 "点击检查">
+    <appUpdate_available "Peerio 有更新可用">
+    <appUpdate_normal "一个更新可用，您是否要获取 Peerio 的最新版本？">
+    <appUpdate_critical "您的 Peerio 已过时并且无法连接到服务器，请更新以连接！">
+    <2fa "双因素验证 (2FA)">
+    <2fa_protectedOperation "您要求的操作已被双因素验证保护。请输入您的身份验证器应用中出现的六位数字代码">
+    <2fa_invalid "代码不正确。请重试。">
+    <2fa_prompt "请输入您的身份验证器应用中出现的六位数字代码">
+    <2fa_disable "禁用双因素验证">
+    <2fa_enable "启用双因素验证">
+    <2fa_addressRequired "您没有已注册的联系人地址。如果您丢失了您的两步验证，Peerio 无法恢复您的账户。">
+    <2fa_clipboard "下列密钥已复制到您的剪贴板。请粘贴它到您的身份验证器应用。">
+    <2fa_manualCopy "复制并粘贴下列私钥到您的身份验证器应用">
+    <passcode_remove "移除设备代码">
+    <passcode_set "#setPIN">
+    <conversation_noParticipants "没有参与者仍然在此对话中">
+    <conversation_withSelf "此对话中目前只有您。">
+    <conversation_participantLeftAt "剩余">
+    <conversation_confirmDelete "您确定要删除此对话吗？您将不再接收到此对话中共享的消息或文件。">
+    <conversation_emptyList "现在您可以安全通信了！添加一个联系人并与他尝试吧。">
+    <message_typePrompt "输入您的消息...">
+    <message_readByRecipient "已读">
+    <message_readByAll "全部已读">
+    <message_readBy "placeholder 已读">
+    <message_selectContacts "请选择至少一个联系人以发送您的消息。">
+    <sync_starting "正在开始...">
+    <sync_contacts "正在同步联系人">
+    <sync_files "正在同步文件">
+    <sync_messages "正在下载消息数据">
+    <sync_description "为了最佳的使用体验和性能，Peerio 会在您的设备上存储一些您的已加密数据。如果您有很多消息，这可能需要一些时间。">
+    <coupon_activated "成功激活此优惠卷！">
+    <coupon_invalid "Sorry, the coupon doesn't seem to be valid.">
+    <coupon_prompt "如果您有一个促销代码，请在下面输入它。">
+    <passcode_removeTitle "#passcode_remove">
+    <passcode_removeConfirm "您确定要移除您的设备密码吗？">
+    <passcode_title "#peerioPINForThisDevice">
+    <passcode_tooSimple "设备密码太简单，请重试">
+    <passcode_notDistinct "请输入一个唯一性的设备密码">
+    <passcode_tooShort "number 更多的数字">
+    <passcode_restriction "设备密码至少6位数字">
+    <passcode_inputPlaceholder "请输入设备密码">
+    <passcode_ok "准备！">
+    <settings_saveFailed "设置保存失败。">
+    <settings_optIn "在启用匿名数据收集后，我们将收集不能确定身份并且无关内容的信息与研究人员分享，用以改进 Peerio。在您选择加入后，您会每天收到 25MB 存储空间的奖励以感谢您的贡献。">
+    <shareText "I'd like to securely share messages and files with you on Peerio!">
+    <inviteNote "When one of your contacts signs up for Peerio with the address you invited, they will automatically receive a contact request from you and you will receive 500MB of bonus storage. You can earn up to 10GB of free storage this way!">
+    <shareThisCode "分享此代码">
+    <touch_keychain "Enabling Touch ID requires using your keychain, would you like to proceed?">
+    <touch_notAvailable "指纹识别不可用">
+    <supportFeedback "Support/Feedback">
+    <payments_title "Upgrade your storage">
+    <payments_menu "Upgrade your storage">
+    <payments_hasSubscription "You already have a subscription">
+    <payments_buy "Buy">
+    "payments_com.peerio.storage.50.yearly": "Pay annually",
+    "payments_com.peerio.storage.50.monthly": "Pay monthly",
+    <androidEncryptionStatusOff "Your device supports full disk encryption, but it is not currently enabled. Peerio highly recommends the use of disk encryption. Would you like to learn more?">
+    <androidEncryptionStatusPartial "Your device has encryption turned on but your passcode is still set to the default. We recommend setting a unique passcode. Would you like to learn more?">
+    <androidEncryptionStatusUnsupported "Your device does not support encryption. We recommend upgrading to a version of Android which does. Would you like to learn more?">
+    <security "Security">
+    <noMatchesFound "No matches found">

@@ -44,7 +44,7 @@
     <code "Kód">
     <confirmationCode "Potvrzovací kód">
     <confirmMyAccount "Potvrdit můj účet">
-    <invalidConfirmationCode "překontrolujte prosím tento kód.">
+    <invalidConfirmationCode "Sorry, this is an invalid or expired code.">
     <finishingUp "Dokončování">
     <peerioPIN "Přístupový kód Peeria">
     <setAPeerioPIN "Přejete si pro toto zařízení nastavit přístupový kód?">
@@ -191,7 +191,7 @@
     <removeContactText "Již spolu nebudete moci na Peeriu bezpečně komunikovat. Jste si jistí?">
     <cancel "Zrušit">
     <removeContactSuccess "Váš kontakt byl odstraněn.">
-    <removeContactError "Nebylo možné odstranit kontakt. Zkuste to prosím znovu.">
+    <removeContactError "Unable to remove contact. Please try again.">
     <newContact "Nový kontakt!">
     <newContactText "Nyní jste kontaktem uživatele">
     <miniLockID "miniLock ID:">
@@ -331,5 +331,263 @@
     <availableNowMobile "Nyní k dispozici pro Android a iOS.">
     <mobileApps "Mobilní aplikace">
     <TOStitle "Terms Of Use">
-    <TOStext "By signing up for a Peerio account, you agree to our terms of use.">
-    <TOStextUpdated "Please read and accept updated terms of use.">
+    <TOStext "By signing up for a Peerio account you agree to our terms of use.">
+    <TOStextUpdated "We've updated our terms of use! Please review and accept to continue.">
+    <version "version">
+    <touchId "Touch ID">
+    <messageSubject "#subject">
+    <passcode "passcode">
+    <publicKey "Public Key">
+    <contactStatus "Contact Status">
+    "n/a": "'N/A'",
+    <outOfSync "out of sync">
+    <connecting "connecting...">
+    <signOut "Sign out">
+    <fileSize "File Size">
+    <fileType "File Type">
+    <location "Location">
+    <profile "Profile">
+    <getFreeStorage "Get free storage">
+    <copiedToClipboard "Copied to clipboard">
+    <notifications_whenNewMessage "You receive a new message">
+    <notifications_whenNewContactRequest "You receive a contact request">
+    <notifications_whenInviteAccepted "Your invite is accepted">
+    <notifications_note "Notifications will be sent to your primary address (email or phone).">
+    <optIns "Opt-ins">
+    <optIns_dataCollection "Data collection">
+    <redeemCoupon "Redeem Coupon">
+    <enterCouponCode "Enter Coupon Code">
+    <participants "Participants">
+    <sharedFiles "Shared Files">
+    <finishingIn "finishing in time">
+    <yourPublicKey "Your public key">
+    <address_phoneInvalid "Phone numbers require a country code">
+    <address_confirmCodePrompt "Please enter the code you received">
+    <address_confirmCodePrompt2 "Please enter the code you received on your email or phone">
+    <address_authorized "Address authorized">
+    <address_conformCodeError "Confirmation code does not match. Would you like to try again?">
+    <address_addingError "Error adding address. Please contact support.">
+    <address_taken "Sorry, that address is already taken">
+    <address_removeConfirm "Are you sure you want to remove this address?">
+    <address_makePrimary "Tap an address to make it your primary.">
+    <account_deleteTitle "#deleteAccount">
+    <account_deleteConfirm "Are you sure you want to delete your account?">
+    <account_deleted "Account deleted. Signing out.">
+    <button_accept "#accept">
+    <button_agree "I agree">
+    <button_cancel "#cancel">
+    <button_back "back">
+    <button_continue "#continue">
+    <button_confirm "confirm">
+    <button_enable "enable">
+    <button_exit "exit">
+    <button_finish "finish">
+    <button_delete "Delete">
+    <button_getStarted "Get started">
+    <button_import "Import">
+    <button_maybeLater "Maybe later">
+    <button_notRightNow "Not right now">
+    <button_reject "reject">
+    <button_search "#search">
+    <button_importWizard "Select and tap here">
+    <button_searchAgain "Search again">
+    <button_skip "#skip">
+    <button_yesIDo "Yes, I do">
+    <button_addContact "Add a contact">
+    <button_download "#download">
+    <button_uploadFile "Upload file">
+    <button_attach "Attach">
+    <button_open "Open">
+    <button_composeMessage "#newMessage">
+    <button_sendMessage "#sendMessage">
+    <button_importContacts "Import & Invite Contacts">
+    <button_addSelectedContact "Add Selected Contact">
+    <button_send "#send">
+    <button_ok "#ok">
+    <button_add "Add">
+    <button_redeem "Redeem">
+    <button_addAddress "Add address">
+    <button_IUnderstand "I understand">
+    <button_deleteAccount "delete your account">
+    <button_enableTouchId "Enable fingerprint key">
+    <contact_invitePrompt "Invite them to join Peerio by clicking the button below:">
+    <contact_inviteSendButton "Send email invite">
+    <contact_import "Contact Import">
+    <contact_importFriends "Your Friends on Peerio">
+    <contact_importInvite "Invite Your Contacts to Peerio">
+    <contact_importTitle "Import contacts from your phone.">
+    <contact_importWarning "Your contact list will be shared with Peerio. This information is only used to help you find your contacts on Peerio and will be wiped immediately after importing. Would you like to proceed?">
+    <contact_emailSent "We've sent an invite email to email">
+    <contact_permissionMissing "Please allow Peerio to access your device contacts to use the contact import feature.">
+    <contact_searchPlaceholder "username, email, or phone">
+    <contact_searchTitle "#button_search">
+    <contact_search "Contact search">
+    <contact_searchInputPlaceholder "email/username/phone">
+    <contact_addressNotFound "Sorry, it looks like <emphasis>address</> is not signed up for Peerio.">
+    <contact_nothingFound "Sorry, there were no results matching your search. Try searching for contacts again by their email, username, or phone number.">
+    <contact_acceptFail "Failed to accept contact request.">
+    <contact_rejectFail "Failed to reject contact request.">
+    <contact_removeFail "Failed to remove contact.">
+    <contact_removeConfirmTitle "#removeContactQuestion">
+    <contact_removeConfirmText "Are you sure you want to remove username from contacts? You will not be able to message and share files with this contact after removal.">
+    <contact_acceptRequestButton "Accept contact request">
+    <contact_rejectRequestButton "Reject contact request">
+    <contact_removeButton "#removeContact">
+    <contact_status "Contact status:">
+    <contact_primaryAddress "Primary Address">
+    <contact_statusEstablished "Established contact.">
+    <contact_statusRequestSent "Pending: you sent a request">
+    <contact_statusRequestReceived "Pending: you received a request">
+    <contact_statusIsSelf "This is you">
+    <contact_youTag "#you">
+    <contact_invitedTag "invited">
+    <contact_requestsTag "requests authorization">
+    <contact_listTitle "Peerio Contacts">
+    <contact_listEmpty "You don't have any contacts yet! Click below to get started.">
+    <contactSelect_prompt "Select your recipients">
+    <contactSelect_updateRecipientsButton "Update Recipients">
+    <contactSelect_addRecipientsButton "Add Recipients">
+    <error_accountDeleted "Account was deleted.">
+    <error_badCredentials "Incorrect username or passphrase.">
+    <error_creatingAccount "Error creating account.">
+    <error_invite "Error sending an invite. Please contact support.">
+    <error_emptyUsername "Username cannot be empty.">
+    <error_invalidName "Invalid name">
+    <error_loginFailed "Login failed.">
+    <error_passphraseNotMatching "Passphrases do not match.">
+    <error_fileDownload "Failed to download file.">
+    <error_loadingConversation "Failed to load conversation.">
+    <error_messageDelivery "Failed to deliver message to following recipients:">
+    <error_messageSend "Failed to send message.">
+    <error_addressFormat "Sorry, that doesn't look like a valid email or phone number.">
+    <input_required "Required">
+    <login_forgetUsername "Tap to switch users or forget username.">
+    <login_loginButton "#login">
+    <login_passphraseOrPasscode "#passphrase #or #passcode">
+    <login_signUpButton "#signup">
+    <login_welcomeBack "Welcome back,">
+    <login_changeUserButton "Change User">
+    <setup_contactInfoDescription "Help your contacts find you on Peerio, receive notifications, and enable support services by adding your email address or phone number">
+    <setup_contactInfoTitle "Contact Info">
+    <setup_emailOrPhone "Email / Phone Number">
+    <setup_passcodeDescription "This allows you to login <emphasis>from this device</> without entering your passphrase.">
+    <setup_passcodeTitle "Set device passcode">
+    <setup_startDescription "In order to optimize your experience, we recommend you complete this short, 3 step, setup wizard.">
+    <setup_startDescription2 "All steps are optional. You can safely exit the wizard at any point and skip steps that don't apply to you.">
+    <setup_startTitle "Vítejte v Peeriu!">
+    <setup_touchDescription "Touch ID requires using your Apple Keychain.">
+    <setup_touchTitle "Would you like to enable Touch ID?">
+    <setup_touchWarning "Note on law enforcement. In Oct. 2014, a USA court ruled that a police officer can demand you to unlock your device with a fingerprint but not an alphanumeric passcode. Similar laws may exist in other national or regional jurisdictions and should be considered if law enforcement is part of your threat model.">
+    <setup_importDescription "Find out which of your contacts are already using Peerio.">
+    <signup_TOSRequestText "Before signing up for a Peerio account, we ask that you agree to our <tosLink>terms of use</>.">
+    <signup_TOSRequestTitle "#TOStitle">
+    <signup_acceptPassphrase "I'll remember my passphrase">
+    <signup_confirmCreateButton "#createMyAccount">
+    <signup_desiredUsername "#desiredUsername">
+    <signup_enterPassphrase "Please enter your passphrase">
+    <signup_nextPassphrase "I don't like this passphrase">
+    <signup_optInDescription "By enabling anonymous data collection, we will collect non-identifying and non-content information to share with researchers and improve Peerio.">
+    <signup_optInDescription2 "If you opt-in, you will receive 25MB of bonus storage everyday as thanks for your contribution.">
+    <signup_optInHeadline "Would you like to help us with usability research?">
+    <signup_optInPolicy "<emphasis>Tap here</> to learn which data we collect.">
+    <signup_passphraseDescription "This is your secure randomly generated passphrase. If you lose it, you will <emphasis>permanently</> lose access to your account.">
+    <signup_showPassphrase "Let me see my passphrase again">
+    <signup_wrongUsername "Please pick a different username">
+    <tosUpdateRequestText "We've updated our terms of service! Please review and accept to continue using Peerio.">
+    <tosUpdateRequestTitle "Terms of Service Update">
+    <openLinkWarning "Warning! Please only open links from the contacts you trust.">
+    <fileState_downloading "#downloading">
+    <fileState_decrypting "Decrypting">
+    <fileState_saving "Saving">
+    <fileState_reading "Reading">
+    <fileState_encrypting "Encrypting">
+    <fileState_uploadingMetadata "Uploading encrypted metadata">
+    <fileState_uploading "Uploading">
+    <file_listEmptyTitle "Peerio File Storage!">
+    <file_listEmptyText "Peerio lets you store files in the cloud securely. Try it out by uploading a file.">
+    <file_removeConfirmTitle "Remove this file?">
+    <file_removeConfirmText "This file will be deleted from your device and cloud, but will still be available to users who you have shared it with.">
+    <file_removeLocalConfirmTitle "Remove file from this device?">
+    <file_removeLocalConfirmText "This file will be deleted from your device, but will still be available to users who you have shared it with.">
+    <file_nukeConfirmTitle "Destroy file completely?">
+    <file_nukeConfirmText "This file will be deleted from your device, cloud and from the clouds of other users who you have shared it with.">
+    <file_sizeWarningTitle "Mobile Limits">
+    <file_sizeWarningTextDownload "Downloading files over 100MB on mobile devices may cause Peerio to crash. We are working to solve this issue. Would you still like to try downloading this file?">
+    <file_sizeWarningTextUpload "Uploading files over 100MB on mobile devices may cause Peerio to crash. We are working to solve this issue. Would you still like to try uploading this file?">
+    <file_sharedBy "Shared by">
+    <file_uploadedAt "Uploaded at">
+    <file_pickFromLibrary "Pick from photo library">
+    <file_takePicture "Take a new picture">
+    <file_removeLocalButton "Remove from your device">
+    <file_removeCloudButton "Remove from your cloud">
+    <file_removeLocalAndCloudButton "Remove from your device & cloud">
+    <file_nukeButton "Unshare & remove from all clouds">
+    <file_locationLocal "On this device (decrypted) and in the cloud (encrypted)">
+    <file_locationCloud "In the cloud (encrypted)">
+    <file_uploadComplete "Upload complete.">
+    <file_uploadFailed "Upload failed.">
+    <file_uploadStorageExceeded "Storage quota exceeded.">
+    <file_namePrompt "Enter filename:">
+    <fileSelect_title "Select your files">
+    <server_isDown "Is Peerio down?">
+    <server_isDown1 "tap here to check">
+    <appUpdate_available "Peerio update available">
+    <appUpdate_normal "An update is available, would you like to get the latest version of Peerio?">
+    <appUpdate_critical "Your Peerio client is out-of-date and can’t connect to the server, please update to connect!">
+    <2fa "Two Factor Authentication (2FA)">
+    <2fa_protectedOperation "The operation you requested is protected by 2FA. Please enter the six digit code that appears in your authenticator app">
+    <2fa_invalid "Incorrect code. Please try again.">
+    <2fa_prompt "Enter the six digit code that appears in your authenticator app">
+    <2fa_disable "Disable two factor auth">
+    <2fa_enable "Enable two factor auth">
+    <2fa_addressRequired "You don't have a registered contact address. If you lose your 2FA, Peerio won't be able to recover your account.">
+    <2fa_clipboard "The following key has been copied to your clipboard. Please paste it in your authenticator app.">
+    <2fa_manualCopy "Copy and paste the following secret key into your authenticator app">
+    <passcode_remove "Remove passcode">
+    <passcode_set "#setPIN">
+    <conversation_noParticipants "There are no participants left in this conversation">
+    <conversation_withSelf "You are the only person in this conversation.">
+    <conversation_participantLeftAt "left at">
+    <conversation_confirmDelete "Are you sure you want do delete this conversation? You will no longer receive messages or files within this conversation.">
+    <conversation_emptyList "Now you can communicate securely! Add a contact and try it out.">
+    <message_typePrompt "Type your message...">
+    <message_readByRecipient "Read">
+    <message_readByAll "Read by all">
+    <message_readBy "Read by placeholder">
+    <message_selectContacts "Please select at least one contact to send your message to.">
+    <sync_starting "starting...">
+    <sync_contacts "synchronizing contacts">
+    <sync_files "synchronizing files">
+    <sync_messages "downloading message data">
+    <sync_description "For optimal experience and performance Peerio stores some of your encrypted data on your device. This may take a moment if you have a lot of messages.">
+    <coupon_activated "The coupon is successfully activated!">
+    <coupon_invalid "Sorry, the coupon doesn't seem to be valid.">
+    <coupon_prompt "If you have a promotional code, please enter it below.">
+    <passcode_removeTitle "#passcode_remove">
+    <passcode_removeConfirm "Are you sure you want to remove your passcode?">
+    <passcode_title "#peerioPINForThisDevice">
+    <passcode_tooSimple "passcode is too simple, try again">
+    <passcode_notDistinct "please enter a unique passcode">
+    <passcode_tooShort "number more digits to go">
+    <passcode_restriction "Passcode must be 6 digits">
+    <passcode_inputPlaceholder "Enter a device passcode">
+    <passcode_ok "you're good to go">
+    <settings_saveFailed "Settings save failed.">
+    <settings_optIn "By enabling anonymous data collection, we will collect non-identifying and non-content information to share with researchers and improve Peerio. When you opt in, we will add 25MB to your account everyday as thanks for your contribution.">
+    <shareText "I'd like to securely share messages and files with you on Peerio!">
+    <inviteNote "When one of your contacts signs up for Peerio with the address you invited, they will automatically receive a contact request from you and you will receive 500MB of bonus storage. You can earn up to 10GB of free storage this way!">
+    <shareThisCode "Share this code">
+    <touch_keychain "Enabling Touch ID requires using your keychain, would you like to proceed?">
+    <touch_notAvailable "Fingerprint identification unavailable">
+    <supportFeedback "Support/Feedback">
+    <payments_title "Upgrade your storage">
+    <payments_menu "Upgrade your storage">
+    <payments_hasSubscription "You already have a subscription">
+    <payments_buy "Buy">
+    "payments_com.peerio.storage.50.yearly": "Pay annually",
+    "payments_com.peerio.storage.50.monthly": "Pay monthly",
+    <androidEncryptionStatusOff "Your device supports full disk encryption, but it is not currently enabled. Peerio highly recommends the use of disk encryption. Would you like to learn more?">
+    <androidEncryptionStatusPartial "Your device has encryption turned on but your passcode is still set to the default. We recommend setting a unique passcode. Would you like to learn more?">
+    <androidEncryptionStatusUnsupported "Your device does not support encryption. We recommend upgrading to a version of Android which does. Would you like to learn more?">
+    <security "Security">
+    <noMatchesFound "No matches found">

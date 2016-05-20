@@ -6,7 +6,6 @@ Peerio.UI.controller('userMenu', function($scope) {
 			Peerio.user.username,
 			Peerio.user.miniLockID
 		)
-		$scope.userMenu.getStorageText = document.l10n.getEntitySync('payments_title').value;
 		$scope.userMenu.avatarIcon1 = 'data:image/png;base64,' + new Identicon(
 			avatar[0].substring(0, 32), 30
 		).toString()
@@ -42,6 +41,14 @@ Peerio.UI.controller('userMenu', function($scope) {
 		}
 		$('div.frontModalsWrapper').addClass('visible')
 		$('div.preferences').addClass('visible')
+		$('div.mainTopUserMenu').mouseleave()
+	}
+	$scope.userMenu.openSubscriptions = function() {
+		if ($('div.frontModalsWrapper').hasClass('visible')) {
+			return false
+		}
+		$('div.frontModalsWrapper').addClass('visible')
+		$('div.subscriptions').addClass('visible')
 		$('div.mainTopUserMenu').mouseleave()
 	}
 	$scope.userMenu.logout = function() {

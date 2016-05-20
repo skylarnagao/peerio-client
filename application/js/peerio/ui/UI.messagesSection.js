@@ -429,7 +429,8 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
                 if (modified.length) {
                     $('input.mainTopSearchSubmit').trigger('click')
                     Peerio.network.getSettings(function (data) {
-                        Peerio.user.quota = data.quota
+                        Peerio.user.quota = data.quota;
+                        Peerio.user.subscriptions = data.subscriptions;
                     })
                 }
             })

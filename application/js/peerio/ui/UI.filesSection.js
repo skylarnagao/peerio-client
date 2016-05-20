@@ -422,7 +422,8 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 			Peerio.file.removeFile(ids, function() {
 				$scope.filesSection.checkedIDs = []
 				Peerio.network.getSettings(function(data) {
-					Peerio.user.quota = data.quota
+					Peerio.user.quota = data.quota;
+					Peerio.user.subscriptions = data.subscriptions;
 					$scope.$apply()
 				})
 			})
@@ -461,7 +462,8 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 			Peerio.file.nukeFile(ids, function() {
 				$scope.filesSection.checkedIDs = []
 				Peerio.network.getSettings(function(data) {
-					Peerio.user.quota = data.quota
+					Peerio.user.quota = data.quota;
+					Peerio.user.subscriptions = data.subscriptions;
 					$scope.$apply()
 				})
 			})
@@ -554,7 +556,8 @@ Peerio.UI.controller('filesSection', function($scope, $element, $sce) {
 					}
 					$('form.fileUploadForm input[type=reset]').click()
 					Peerio.network.getSettings(function(data) {
-						Peerio.user.quota = data.quota
+						Peerio.user.quota = data.quota;
+						Peerio.user.subscriptions = data.subscriptions;
 						if (Peerio.file.autoCheck) {
 							// @todo kaepora
 							Peerio.file.autoCheck = false

@@ -29,7 +29,8 @@ Peerio.UI.controller('loginForm', function($scope) {
 						Peerio.user.settings.localeCode = currLocale;
 						Peerio.network.updateSettings({localeCode:currLocale}, function () {});
 					}
-					Peerio.user.quota = data.quota
+					Peerio.user.quota = data.quota;
+					Peerio.user.subscriptions = data.subscriptions;
 					$scope.$root.$broadcast('mainTopPopulate', null)
 					$scope.$root.$broadcast('preferencesOnLogin', null)
 					$scope.$root.$broadcast('contactsSectionPopulate', function() {
