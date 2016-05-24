@@ -1373,8 +1373,8 @@
                 </span> &nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="https://peerio.com/pricing.html" data-l10n-id="payments_title" target="_blank"></a>
             <br/><br/><br/>
-            <h1 data-l10n-id="subscriptions"></h1>
-            <h2 data-l10n-id="active"></h2>
+            <h1 data-l10n-id="payments_menu_view"></h1>
+            <h2 data-l10n-id="payments_activeSubscriptions"></h2>
              <table class="plans">
                  <tr data-ng-repeat="row in preferences.getActiveSubscriptions()">
                      <td>{{row.id}}<td>
@@ -1384,7 +1384,7 @@
                  </tr>
              </table>
             <br/><br/>
-            <h2 data-l10n-id="canceled"></h2>
+            <h2 data-l10n-id="payments_canceledSubscriptions"></h2>
             <table class="plans">
                 <tr data-ng-repeat="row in preferences.getCanceledSubscriptions()">
                     <td>{{row.id}}<td>
