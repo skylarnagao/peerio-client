@@ -23,18 +23,19 @@
     "virustotal.js": "latest"
   },
   "devDependencies": {
+    "babel-plugin-transform-react-jsx": "^6.8.0",
     "del": "^1.2.0",
     "gulp": "latest",
+    "gulp-bump": "latest",
+    "gulp-ignore": "latest",
     "gulp-rename": "latest",
     "gulp-replace": "latest",
     "gulp-shell": "latest",
-    "gulp-bump": "latest",
     "gulp-zip": "latest",
-    "gulp-ignore": "latest",
+    "lodash": "latest",
     "minimist": "latest",
-    "run-sequence": "latest",
-    "uglify-js": "latest",
     "nw-builder": "nwjs/nw-builder#93cc055f31881f876d913a2c44e4fc8dc5b7cffa",
-    "lodash": "latest"
+    "run-sequence": "latest",
+    "uglify-js": "latest"
   }
 }

@@ -247,3 +247,4 @@ scpClient.scp('local_folder', {
 
 */
 
+gulp.task('watch', shell.task('babel application/jsx --plugins transform-react-jsx --watch --out-dir application/js/peerio/ui'))

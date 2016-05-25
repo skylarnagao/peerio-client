@@ -1,5 +1,6 @@
 Peerio.UI.controller('mainTop', function($scope) {
 	'use strict';
+
 	$scope.mainTop = {}
 	$scope.mainTop.messagesNewCount = 0
 	$scope.mainTop.contactsNewCount = 0

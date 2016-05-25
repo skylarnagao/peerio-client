@@ -1,6 +1,6 @@
 Peerio.UI.controller('loginForm', function($scope) {
 	'use strict';
-	$scope.login = {}
+	$scope.login = {username: 'dolores', passphrase:'I am a demo Peerio account user.'}
 	$scope.login.version = Peerio.config.version
 	$scope.login.showLoading = false
 	$scope.login.login = function() {
