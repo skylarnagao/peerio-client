@@ -386,22 +386,24 @@
                     <span class="mainTopSectionTabNewCount" data-ng-bind="mainTop.getContactsNewCount()" data-ng-show="!!mainTop.contactsNewCount"></span>
                     <span class="mainTopSectionTabSearchCount" data-ng-bind="mainTop.contactsSearchCount" data-ng-show="!!mainTop.contactsSearchCount"></span>
                 </div>
-              <div class="submenu">
-                <div class="submenu-hook"><span class="fontAwesome">&#xf0c9;</span></div>
-                <div class="submenu-item" data-ng-mousedown="mainTop.clickTab('notes')" data-sectionlink="notes">
-                    <span data-l10n-id="notes"></span>
-                    <span class="mainTopSectionTabSearchCount" data-ng-bind="mainTop.notesSearchCount" data-ng-show="!!mainTop.notesSearchCount"></span>
-                </div>
-                <div class="submenu-item" data-ng-mousedown="mainTop.clickTab('todos')" data-sectionlink="todos">
-                    <span data-l10n-id="TODOs"></span>
-                    <span class="mainTopSectionTabSearchCount" data-ng-bind="mainTop.notesSearchCount" data-ng-show="!!mainTop.todosSearchCount"></span>
-                </div>
-                <div class="submenu-item" data-ng-mousedown="mainTop.clickTab('passwords')" data-sectionlink="passwords">
-                    <span data-l10n-id="passwords"></span>
-                    <span class="mainTopSectionTabSearchCount" data-ng-bind="mainTop.passwordsSearchCount" data-ng-show="!!mainTop.passwordsSearchCount"></span>
-                </div>
+                <div class="submenu">
+                    <div class="submenu-hook">
+                        <span class="fontAwesome">&#xf0c9;</span>
+                    </div>
+                    <div class="submenu-item" data-ng-mousedown="mainTop.clickTab('notes')" data-sectionlink="notes">
+                        <span data-l10n-id="notes"></span>
+                        <span class="mainTopSectionTabSearchCount" data-ng-bind="mainTop.notesSearchCount" data-ng-show="!!mainTop.notesSearchCount"></span>
+                    </div>
+                    <div class="submenu-item" data-ng-mousedown="mainTop.clickTab('todos')" data-sectionlink="todos">
+                        <span data-l10n-id="TODOs"></span>
+                        <span class="mainTopSectionTabSearchCount" data-ng-bind="mainTop.notesSearchCount" data-ng-show="!!mainTop.todosSearchCount"></span>
+                    </div>
+                    <div class="submenu-item" data-ng-mousedown="mainTop.clickTab('passwords')" data-sectionlink="passwords">
+                        <span data-l10n-id="passwords"></span>
+                        <span class="mainTopSectionTabSearchCount" data-ng-bind="mainTop.passwordsSearchCount" data-ng-show="!!mainTop.passwordsSearchCount"></span>
+                    </div>
 
-              </div>
+                </div>
             </div>
             <form class="mainSearch">
                 <input type="text" data-ng-model="mainTop.searchInput" data-ng-change="mainTop.doSearch(mainTop.searchInput)" data-l10n-id="searchMessagesFilesAndContacts" />
@@ -808,7 +810,7 @@
                 </div>
             </section>
             <section class="notesSection" data-ng-controller="notesSection" data-sectionLink="notes">
-               <div id="notesView"></div>
+                <div id="notesView"></div>
             </section>
         </div>
     </div>
@@ -1080,33 +1082,33 @@
                 <br/>
                 <br/>
                 <br/>
-                <h1 data-l10n-id="subscriptions"></h1>
-                <h2 data-l10n-id="active"></h2>
+                <h1 data-l10n-id="payments_menu_view"></h1>
+                <h2 data-l10n-id="payments_activeSubscriptions"></h2>
                 <table class="plans">
                     <tr data-ng-repeat="row in preferences.getActiveSubscriptions()">
                         <td>{{row.id}}
-                            <td>
-                                <td>{{row.plan_name}}
-                                    <td>
-                                        <td>{{row.bonus}}
-                                            <td>
-                                                <td>{{row.date}}
-                                                    <td>
+                        </td>
+                        <td>{{row.plan_name}}
+                        </td>
+                        <td>{{row.bonus}}
+                        </td>
+                        <td>{{row.date}}
+                        </td>
                     </tr>
                 </table>
                 <br/>
                 <br/>
-                <h2 data-l10n-id="canceled"></h2>
+                <h2 data-l10n-id="payments_canceledSubscriptions"></h2>
                 <table class="plans">
                     <tr data-ng-repeat="row in preferences.getCanceledSubscriptions()">
                         <td>{{row.id}}
-                            <td>
-                                <td>{{row.plan_name}}
-                                    <td>
-                                        <td>{{row.bonus}}
-                                            <td>
-                                                <td>{{row.date}}
-                                                    <td>
+                        </td>
+                        <td>{{row.plan_name}}
+                        </td>
+                        <td>{{row.bonus}}
+                        </td>
+                        <td>{{row.date}}
+                        </td>
                     </tr>
                 </table>
 
@@ -1153,18 +1155,62 @@
                             </td>
                         </tr>
                     </table>
+
                 </div>
-                <button class="clear" data-ng-click="importContacts.selectAll()" data-ng-show="importContacts.addresses.length">
-                    <span class="fontAwesome">&#xf00c;</span> &nbsp;
-                    <span data-l10n-id="importContactsSelectAll"></span>
-                </button>
-                <button data-ng-click="importContacts.importContacts()" data-ng-show="importContacts.addresses.length">
-                    <span class="fontAwesome">&#xf0c0;</span> &nbsp;
-                    <span data-l10n-id="importSelectedContacts"></span>
-                </button>
+                <div class="importContacts frontModal" data-ng-controller="importContacts">
+                    <h1 data-l10n-id="importContactsGoogle"></h1>
+
+                    <div data-ng-show="!importContacts.addresses.length">
+                        <p data-l10n-id="importContactsGoogleText"></p>
+
+                        <div class="importContactsInstructions">
+                            <ol>
+                                <li data-l10n-id="importContactsGoogleStep1"></li>
+                                <li data-l10n-id="importContactsGoogleStep2"></li>
+                                <li data-l10n-id="importContactsGoogleStep3"></li>
+                                <li data-l10n-id="importContactsGoogleStep4"></li>
+                                <li data-l10n-id="importContactsGoogleStep5"></li>
+                            </ol>
+                        </div>
+                    </div>
+                    <form class="importContactsUploadForm" data-ng-show="!importContacts.addresses.length">
+                        <h2 data-l10n-id="uploadCSV"></h2>
+                        <input type="file" name="file" class="importContactsFileSelectDialog" />
+                        <input type="reset" value="reset" class="hidden" />
+                    </form>
+                    <h2 data-l10n-id="importContactsSelectToInvite" data-ng-show="importContacts.addresses.length"></h2>
+
+                    <p data-l10n-id="importContactsSelectToInviteText" data-ng-show="importContacts.addresses.length"></p>
+
+                    <div class="importContactsSelectContactsWrapper" data-ng-show="importContacts.addresses.length">
+                        <table class="importContactsSelectContacts">
+                            <tr class="importContactsContact" data-ng-repeat="address in importContacts.addresses | orderBy:'name':false">
+                                <td class="importContactsSelectContactsCheckboxCell">
+                                    <input type="checkbox" class="blueCheckbox importContactsSelectContactsCheckbox" data-ng-attr-id="{{'importContactsAddress' + address.parsed.address.value}}" data-ng-click="importContacts.onCheck(address.parsed, $event)" />
+                                    <label data-ng-attr-for="{{'importContactsAddress' + address.parsed.address.value}}" class="blueCheckboxLabel">&nbsp;</label>
+                                </td>
+                                <td>
+                                    <strong>
+                                        <label data-ng-attr-for="{{'importContactsAddress' + address.parsed.address.value}}" data-ng-bind="address.name"></label>
+                                    </strong>
+                                </td>
+                                <td>
+                                    <label data-ng-attr-for="{{'importContactsAddress' + address.parsed.address.value}}" data-ng-bind="address.parsed.address.value"></label>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button class="clear" data-ng-click="importContacts.selectAll()" data-ng-show="importContacts.addresses.length">
+                        <span class="fontAwesome">&#xf00c;</span> &nbsp;
+                        <span data-l10n-id="importContactsSelectAll"></span>
+                    </button>
+                    <button data-ng-click="importContacts.importContacts()" data-ng-show="importContacts.addresses.length">
+                        <span class="fontAwesome">&#xf0c0;</span> &nbsp;
+                        <span data-l10n-id="importSelectedContacts"></span>
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
 </body>
 
 </html>
