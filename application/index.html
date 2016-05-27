@@ -20,7 +20,6 @@
     <script type="application/javascript" src="js/lib/angular-sanitize.js"></script>
     <script type="application/javascript" src="js/lib/hotkeys.js"></script>
     <script type="application/javascript" src="js/lib/base58.js"></script>
-    <script type="application/javascript" src="js/lib/react-with-addons.js"></script>
     <script type="application/javascript" src="js/lib/medium-editor.js"></script>
     <!--<script type="application/javascript" src="js/lib/jszip.js"></script>-->
     <script type="application/javascript" src="js/lib/pnglib.js"></script>
@@ -70,7 +69,6 @@
     <script type="application/javascript" src="js/peerio/ui/UI.signupForms.js"></script>
     <script type="application/javascript" src="js/peerio/ui/UI.twoFactorAuth.js"></script>
     <script type="application/javascript" src="js/peerio/ui/UI.importContacts.js"></script>
-    <script type="application/javascript" src="js/peerio/ui/UI.notesSection.js"></script>
 </head>
 
 <body>
@@ -326,9 +324,6 @@
                     <span data-l10n-id="importContacts"></span>
                 </button>
             </div>
-            <div class="notesSidebar sidebar" data-sectionlink="notes">
-                <button class="notesSidebarAddNote" data-l10n-id="addNote"></button>
-            </div>
 
             <div class="userMenu" data-ng-controller="userMenu">
                 <div class="userMenuAvatar">
@@ -388,24 +383,6 @@
                     <span data-l10n-id="contacts"></span>
                     <span class="mainTopSectionTabNewCount" data-ng-bind="mainTop.getContactsNewCount()" data-ng-show="!!mainTop.contactsNewCount"></span>
                     <span class="mainTopSectionTabSearchCount" data-ng-bind="mainTop.contactsSearchCount" data-ng-show="!!mainTop.contactsSearchCount"></span>
-                </div>
-                <div class="submenu">
-                    <div class="submenu-hook">
-                        <span class="fontAwesome">&#xf0c9;</span>
-                    </div>
-                    <div class="submenu-item" data-ng-mousedown="mainTop.clickTab('notes')" data-sectionlink="notes">
-                        <span data-l10n-id="notes"></span>
-                        <span class="mainTopSectionTabSearchCount" data-ng-bind="mainTop.notesSearchCount" data-ng-show="!!mainTop.notesSearchCount"></span>
-                    </div>
-                    <div class="submenu-item" data-ng-mousedown="mainTop.clickTab('todos')" data-sectionlink="todos">
-                        <span data-l10n-id="TODOs"></span>
-                        <span class="mainTopSectionTabSearchCount" data-ng-bind="mainTop.notesSearchCount" data-ng-show="!!mainTop.todosSearchCount"></span>
-                    </div>
-                    <div class="submenu-item" data-ng-mousedown="mainTop.clickTab('passwords')" data-sectionlink="passwords">
-                        <span data-l10n-id="passwords"></span>
-                        <span class="mainTopSectionTabSearchCount" data-ng-bind="mainTop.passwordsSearchCount" data-ng-show="!!mainTop.passwordsSearchCount"></span>
-                    </div>
-
                 </div>
             </div>
             <form class="mainSearch">
@@ -811,9 +788,6 @@
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="notesSection" data-ng-controller="notesSection" data-sectionLink="notes">
-                <div id="notesView"></div>
             </section>
         </div>
     </div>
