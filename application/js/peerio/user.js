@@ -23,7 +23,7 @@ Peerio.user = {};
 		contacts: {},
 		conversations: {},
 		files: {},
-		notes: {},
+		notes: [],
 		settings: {
 			localeCode: 'en',
 			receiveMessageNotifications: false,

@@ -1172,7 +1172,8 @@ div.messagesSidebar {
 
 button.messagesSidebarNewMessage,
 button.filesSidebarUploadFile,
-button.contactsSidebarAddContact {
+button.contactsSidebarAddContact,
+button.notesSidebarAddNote {
 	padding: 15px 10px;
 	font-weight: normal;
 	margin: 0 auto 50px auto;
@@ -2833,14 +2834,20 @@ ul.filesSidebarTypeFilters li,ul.messagesSidebarTypeFilters li {
 .note-list{
 	display: table-cell;
 	width:30%;
-
+  max-width: 320px;
 	vertical-align: top;
 }
 .note-list-item{
-	padding: 7px;
+  padding: 7px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.note-list-item:hover, .note-list-item.selected{
+.note-list-item:hover{
 	background-color: #fffefc;
+}
+.note-list-item.selected{
+  background-color: #2795D0;
+  color: #fff;
 }
 .text-editor{
 	width:100%;

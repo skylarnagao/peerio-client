@@ -20,7 +20,7 @@
     <script type="application/javascript" src="js/lib/angular-sanitize.js"></script>
     <script type="application/javascript" src="js/lib/hotkeys.js"></script>
     <script type="application/javascript" src="js/lib/base58.js"></script>
-    <script type="application/javascript" src="js/lib/react-with-addons.min.js"></script>
+    <script type="application/javascript" src="js/lib/react-with-addons.js"></script>
     <script type="application/javascript" src="js/lib/medium-editor.js"></script>
     <!--<script type="application/javascript" src="js/lib/jszip.js"></script>-->
     <script type="application/javascript" src="js/lib/pnglib.js"></script>
@@ -325,6 +325,9 @@
                     <span class="fontAwesome">&#xf007;</span> &nbsp;
                     <span data-l10n-id="importContacts"></span>
                 </button>
+            </div>
+            <div class="notesSidebar sidebar" data-sectionlink="notes">
+                <button class="notesSidebarAddNote" data-l10n-id="addNote"></button>
             </div>
 
             <div class="userMenu" data-ng-controller="userMenu">
@@ -1078,7 +1081,7 @@
                         &nbsp;{{preferences.getUserQuota()}} / {{preferences.getTotalQuota()}} ({{preferences.getQuotaPercentage()}})
                     </span>
                 </span> &nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="https://peerio.com/pricing.html" data-l10n-id="payments_title" target="_blank"></a>
+                <a ng-href="https://abracadabra.peerio.com/checkout.html?uid={{preferences.$window.Peerio.user.username}}" data-l10n-id="payments_title" target="_blank"></a>
                 <br/>
                 <br/>
                 <br/>
