@@ -1085,8 +1085,8 @@
                 <br/>
                 <br/>
                 <br/>
-                <h1 data-l10n-id="payments_menu_view"></h1>
-                <h2 data-l10n-id="payments_activeSubscriptions"></h2>
+
+                <h2 ng-if="preferences.getActiveSubscriptions().length" data-l10n-id="payments_activeSubscriptions"></h2>
                 <table class="plans">
                     <tr data-ng-repeat="row in preferences.getActiveSubscriptions()">
                         <td>{{row.id}}
@@ -1101,7 +1101,7 @@
                 </table>
                 <br/>
                 <br/>
-                <h2 data-l10n-id="payments_canceledSubscriptions"></h2>
+                <h2 ng-if="preferences.getCanceledSubscriptions().length" data-l10n-id="payments_canceledSubscriptions"></h2>
                 <table class="plans">
                     <tr data-ng-repeat="row in preferences.getCanceledSubscriptions()">
                         <td>{{row.id}}

@@ -24,6 +24,7 @@ Peerio.user = {};
 		conversations: {},
 		files: {},
 		notes: [],
+        notesDict: {},
 		settings: {
 			localeCode: 'en',
 			receiveMessageNotifications: false,

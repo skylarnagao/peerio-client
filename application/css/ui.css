@@ -2825,6 +2825,17 @@ ul.filesSidebarTypeFilters li,ul.messagesSidebarTypeFilters li {
 	vertical-align: top;
 
 }
+.note-not-selected{
+	background-color: white;
+	padding: 20px;
+	height: 98%;
+	padding-top: 25%;
+	margin: 5px;
+	text-align: center;
+}
+.note-not-selected h1,.note-not-selected p{
+	color: #666;
+}
 .note-name{
 	width: 100%;
 	padding: 7px 15px !important;
@@ -2836,6 +2847,9 @@ ul.filesSidebarTypeFilters li,ul.messagesSidebarTypeFilters li {
 	width:30%;
   max-width: 320px;
 	vertical-align: top;
+}
+.note-list-toolbar{
+    margin-left:5px;
 }
 .note-list-item{
   padding: 7px;
