@@ -5,9 +5,19 @@ Peerio.Notes = {};
     'use strict';
 
     console.log("Notes initializing..");
+
     var l = function (n) {
         return document.l10n.getEntitySync(n).value;
     };
+
+    function getNoteDTO(note) {
+        var ret = {};
+        ret.id = note.id;
+        ret.ver = note.ver;
+        ret.name = note.name;
+        ret.text = note.text;
+        return ret;
+    }
 
     var ev = new Event('NotesUpdated');
 
@@ -15,9 +25,11 @@ Peerio.Notes = {};
         document.dispatchEvent(ev);
     };
 
+    //----
     Peerio.Notes.create = function (name, text) {
         var note = {
             id: Date.now(),
+            ver: 0,
             name: name || 'new note',
             text: text || ''
         };
@@ -26,6 +38,21 @@ Peerio.Notes = {};
         Peerio.Notes.fireUpdated();
     };
 
+    Peerio.Notes.addOrUpdateBulk = function (notes) {};
+
+    Peerio.Notes.saveAll = function () {
+        if (!Peerio.user.notes) return;
+        Peerio.user.notes.each(saveNote);
+    };
+
+    function saveNote(note) {
+        if (!note.isDirty) return;
+        note.isDirty = false;
+        note.ver++;
+        note = getNoteDTO(note);
+    }
+
+    //---
     Peerio.Notes.remove = function (id) {
         var note = Peerio.user.notesDict[id];
         if (!note) return;
