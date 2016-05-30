@@ -37,20 +37,29 @@ Peerio.UI.controller('filesSection', function ($scope, $element, $sce) {
                     return;
                 }
                 Peerio.crypto.decryptFolders(data.folders, function (preFolders) {
-                    var folders=[];
+                    var folders = [];
                     var notes = [];
 
-                    preFolders.forEach(function(folder){
-                        if(typeof folder === 'string') {
-                            folders.push(folder);
+                    preFolders.forEach(function (folder) {
+                        if (folder.name.startsWith(Peerio.Notes.signature)) {
+                            folder.name = folder.name.substr(Peerio.Notes.signature.length);
+                            try {
+                                var obj = JSON.parse(folder.name);
+                                if (obj.isNote) {
+                                    obj.id = folder.id;
+                                    notes.push(obj);
+                                }
+                            }
+                            catch (err) {
+                                console.log(err);
+                            }
                             return;
                         }
-                        // lol, yeah, tough times
-                        if(folder.isNote){
-                            notes.push(folder);
-                        }
+
+                        folders.push(folder);
                     });
-                    if(notes.length){
+
+                    if (notes.length) {
                         Peerio.Notes.addOrUpdateBulk(notes);
                     }
 
@@ -72,6 +81,7 @@ Peerio.UI.controller('filesSection', function ($scope, $element, $sce) {
                 });
             });
         };
+
 
         f.addFolder = function () {
             swal({

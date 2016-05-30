@@ -2863,6 +2863,9 @@ ul.filesSidebarTypeFilters li,ul.messagesSidebarTypeFilters li {
   background-color: #2795D0;
   color: #fff;
 }
+.note-list-item.dirty{
+	font-weight: bold;
+}
 .text-editor{
 	width:100%;
 	height: 100%;

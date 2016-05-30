@@ -1,55 +1,99 @@
 // THIS FILE IS COMPILED WITH BABEL FROM application/jsx SOURCE, DON'T EDIT .js FILE
 
 Peerio.Notes = {};
+Peerio.Notes.signature = '<#Þêèrîõôßj#>';
 (function () {
     'use strict';
 
     console.log("Notes initializing..");
 
+    // just a shortcut for localisation function
     var l = function (n) {
         return document.l10n.getEntitySync(n).value;
     };
 
+    // takes state note object and generates an object ready to be sent to server (Data Transport Object)
     function getNoteDTO(note) {
         var ret = {};
         ret.id = note.id;
-        ret.ver = note.ver;
+        ret.createdAt = note.createdAt;
+        ret.updatedAt = note.updatedAt;
         ret.name = note.name;
         ret.text = note.text;
+        ret.isNote = true;
+
         return ret;
     }
 
+    // we'll fire this to make react update
     var ev = new Event('NotesUpdated');
-
     Peerio.Notes.fireUpdated = function () {
         document.dispatchEvent(ev);
     };
 
-    //----
-    Peerio.Notes.create = function (name, text) {
+    // creates a new note with all the side-effects required
+    Peerio.Notes.create = function () {
         var note = {
-            id: Date.now(),
-            ver: 0,
-            name: name || 'new note',
-            text: text || ''
+            isDirty: false,
+            createdAt: Date.now(),
+            updatedAt: Date.now(),
+            name: 'new note',
+            text: ''
         };
-        Peerio.user.notes.push(note);
-        Peerio.user.notesDict[note.id] = note;
+        var dto = Peerio.Notes.signature + JSON.stringify(getNoteDTO(note));
+        Peerio.crypto.encryptUserString(dto, encrypted => {
+            Peerio.network.createFileFolder(encrypted, res => {
+                if (res.error) {
+                    console.log(res);
+                    return;
+                }
+                note.id = res.id;
+                Peerio.user.notes.push(note);
+                Peerio.user.notesDict[note.id] = note;
+                Peerio.Notes.fireUpdated();
+            });
+        });
+    };
+
+    // adds/updates the state with a bunch of existing notes and saves the react update
+    // this is normally called once on initial load
+    Peerio.Notes.addOrUpdateBulk = function (notes) {
+        notes.forEach(note => {
+            var existing = Peerio.user.notesDict[note.id];
+            if (existing) {
+                if (existing.isDirty) return;
+                exitsing.name = note.name;
+                existing.text = note.text;
+                existing.updatedAt = note.updatedAt;
+            } else {
+                Peerio.user.notes.push(note);
+                Peerio.user.notesDict[note.id] = note;
+            }
+        });
         Peerio.Notes.fireUpdated();
     };
 
-    Peerio.Notes.addOrUpdateBulk = function (notes) {};
-
+    // checks for unsaved notes and saves them
     Peerio.Notes.saveAll = function () {
-        if (!Peerio.user.notes) return;
-        Peerio.user.notes.each(saveNote);
+        if (!Peerio.user || !Peerio.user.notes) return;
+        Peerio.user.notes.forEach(saveNote);
     };
 
+    // saves individual note
     function saveNote(note) {
         if (!note.isDirty) return;
         note.isDirty = false;
-        note.ver++;
-        note = getNoteDTO(note);
+        note.updatedAt = Date.now();
+        var dto = Peerio.Notes.signature + JSON.stringify(getNoteDTO(note));
+        Peerio.crypto.encryptUserString(dto, encrypted => {
+            Peerio.network.renameFileFolder(note.id, encrypted, res => {
+                if (res.error) {
+                    console.log(res);
+                    note.isDirty = true;
+                }
+                Peerio.Notes.fireUpdated();
+            });
+        });
     }
 
     //---
@@ -66,6 +110,7 @@ Peerio.Notes = {};
             animation: "slide-from-top"
         }, function (confirmed) {
             if (!confirmed) return;
+            Peerio.network.removeFileFolder(id);
             var ind = Peerio.user.notes.findIndex(el => el.id === id);
             if (ind >= 0) {
                 Peerio.user.notes.splice(ind, 1);
@@ -96,7 +141,10 @@ Peerio.Notes = {};
                 if (!note) return;
                 if (note.text !== text) {
                     note.text = text;
-                    note.dirty = true;
+                    if (!note.isDirty) {
+                        note.isDirty = true;
+                        Peerio.Notes.fireUpdated();
+                    }
                 }
             },
             handleNameChange: function (id, name) {
@@ -104,7 +152,7 @@ Peerio.Notes = {};
                 if (!note) return;
                 if (note.name !== name) {
                     note.name = name;
-                    note.dirty = true;
+                    note.isDirty = true;
                     Peerio.Notes.fireUpdated();
                 }
             },
@@ -185,6 +233,7 @@ Peerio.Notes = {};
                     ),
                     Peerio.user.notes.map(function (note) {
                         return React.createElement(NoteListItem, { key: note.id, id: note.id, name: note.name,
+                            isDirty: note.isDirty,
                             onSelected: this.props.onSelected,
                             selected: this.props.selectedId == note.id });
                     }, this)
@@ -197,7 +246,7 @@ Peerio.Notes = {};
                 this.props.onSelected(this.props.id);
             },
             render: function () {
-                var classes = "note-list-item" + (this.props.selected ? " selected" : "");
+                var classes = "note-list-item" + (this.props.selected ? " selected" : "") + (this.props.isDirty ? " dirty" : "");
                 return React.createElement(
                     'div',
                     { className: classes, onClick: this.handleSelected },
@@ -213,6 +262,8 @@ Peerio.Notes = {};
                 console.log("Starting notes render");
                 React.render(React.createElement(NotesView, null), document.getElementById('notesView'));
             });
+
+            window.setInterval(Peerio.Notes.saveAll, 10000);
         });
     });
 })();
