@@ -582,8 +582,18 @@
     <supportFeedback "Soporte/Comentarios">
     <payments_title "Actualice su almacenamiento">
     <payments_menu "Actualice su almacenamiento">
+    <payments_menu_view "Administrar suscripciones">
     <payments_hasSubscription "Usted ya tiene una suscripción">
+    <payments_hasCanceledSubscription "Ha cancelado las suscripciones">
     <payments_buy "Comprar">
+    <payments_viewSubscriptions "Ver suscripciones">
+    <payments_activeSubscriptions "Activa">
+    <payments_canceledSubscriptions "Cancelada">
+    <payments_bonus "Recargo">
+    <payments_endDate "Fecha de finalización">
+    <payments_planName "Tarifa">
+    <payments_quota "Cuota">
+    <payments_status "Estado">
     "payments_com.peerio.storage.50.yearly": "Pagar anualmente",
     "payments_com.peerio.storage.50.monthly": "Pagar mensualmente",
     <androidEncryptionStatusOff "Su dispositivio soporta cifrado de disco completo, pero no está habilitado actualmente. Peerio recomienda firmemente el uso de cifrado de disco. ¿Desea aprender más?">
@@ -591,3 +601,13 @@
     <androidEncryptionStatusUnsupported "Su dispositivo no soporta cifrado. Recomendamos que actualice a una versión de Android que lo soporte. ¿Desea aprender más?">
     <security "Seguridad">
     <noMatchesFound "No se encontraron coincidencias">
+    <serverWarning_WelcomeTitle "¡Bienvenido a Peerio Pro!">
+    <serverWarning_Welcome "Se ha registrado con éxito una tarifa Peerio Pro en su cuenta. Ahora debería tener disponibles 50 GB adicionales de almacenamiento. Puede gestionar su cuenta en cualquier momento en https://account.peerio.com/">
+    <serverWarning_CancelledTitle "Tarifa Peerio Pro cancelada">
+    <serverWarning_Cancelled "Su tarifa Peerio Pro ha sido cancelada. Su almacenamiento premium expirará en la fecha de finalización de su tarifa y su tarifa no será renovada.">
+    <serverWarning_ExpireTitle "Su tarifa Pro expirará pronto">
+    <serverWarning_Expire "Su tarifa Peerio Pro expirará en 7 días. Por favor, renueve su tarifa para asegurarse de que su servicio no se interrumpe. Si no lo renueva y tiene almacenados más datos de los que se ofrecen en el servicio gratuito de Peerio, puede experimentar una funcionalidad limitada hasta que su cuenta esté dentro del límite de almacenamiento.">
+    <serverWarning_PaymentErrorTitle "Error en el pago">
+    <serverWarning_PaymentError "Su tarifa Peerio Pro no se pudo renovar debido a un problema con su método de pago. Por favor, revise la información de su cuenta en https://account.peerio.com">
+    <serverWarning_QuotaExceededTitle "Límite de datos excedidos">
+    <serverWarning_QuotaExcceded "¡Está por encima de su límite de datos! Su cuenta tendrá una funcionalidad limitada hasta que adquiera almacenamiento adicional o elimine algunos ficheros de su cuenta.">
