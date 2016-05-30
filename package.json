@@ -34,7 +34,7 @@
     "gulp-zip": "latest",
     "lodash": "latest",
     "minimist": "latest",
-    "nw-builder": "nwjs/nw-builder#93cc055f31881f876d913a2c44e4fc8dc5b7cffa",
+    "nwjs-builder": "evshiron/nwjs-builder#656f3b825ecc4ad90d6128ccdbd93fc11c71c5ab",
     "run-sequence": "latest",
     "uglify-js": "latest"
   }
