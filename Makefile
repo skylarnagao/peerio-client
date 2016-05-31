@@ -189,10 +189,10 @@ createinitialarchive: clean
 	    fi; \
 	    ( \
 		cd .. ; \
-		tar --exclude=.git --exclude=.gitignore --exclude=.gitattributes --exclude=pkg/archlinux --exclude=pkg/centos --exclude=pkg/debian --exclude=pkg/fedora --exclude=pkg/frugalware --exclude=pkg/gentoo --exclude=pkg/mageia --exclude=pkg/manjaro --exclude=pkg/opensuse --exclude=pkg/pclinuxos -czf peerio-client-$$VERSION.tar.gz peerio-client ; \
+		tar --exclude=.git --exclude=.gitignore --exclude=.gitattributes --exclude=metascan.js --exclude=virustotal.js --exclude=virustotal.py --exclude=osx --exclude=pkg/archlinux --exclude=pkg/centos --exclude=pkg/debian --exclude=pkg/fedora --exclude=pkg/frugalware --exclude=pkg/gentoo --exclude=pkg/mageia --exclude=pkg/manjaro --exclude=pkg/opensuse --exclude=pkg/pclinuxos -czf peerio-client-$$VERSION.tar.gz peerio-client ; \
 		mv peerio-client peerio-client-$$VERSION ; \
 		ln -sf peerio-client-$$VERSION.tar.gz peerio-client_$$VERSION.orig.tar.gz ; \
-		tar --exclude=.git --exclude=.gitattributes --exclude=.gitignore --exclude=pkg/archlinux --exclude=pkg/centos --exclude=pkg/debian --exclude=pkg/fedora --exclude=pkg/frugalware --exclude=pkg/gentoo --exclude=pkg/mageia --exclude=pkg/manjaro --exclude=pkg/opensuse --exclude=pkg/pclinuxos -czf rh-peerio-client-$$VERSION.tar.gz peerio-client-$$VERSION ; \
+		tar --exclude=.git --exclude=.gitattributes --exclude=.gitignore --exclude=metascan.js --exclude=virustotal.js --exclude=virustotal.py --exclude=osx --exclude=pkg/archlinux --exclude=pkg/centos --exclude=pkg/debian --exclude=pkg/fedora --exclude=pkg/frugalware --exclude=pkg/gentoo --exclude=pkg/mageia --exclude=pkg/manjaro --exclude=pkg/opensuse --exclude=pkg/pclinuxos -czf rh-peerio-client-$$VERSION.tar.gz peerio-client-$$VERSION ; \
 		mv peerio-client-$$VERSION peerio-client \
 	    ); \
 	fi
