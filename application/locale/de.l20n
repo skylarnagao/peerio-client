@@ -589,7 +589,6 @@
     <payments_viewSubscriptions "View subscriptions">
     <payments_activeSubscriptions "Active">
     <payments_canceledSubscriptions "Canceled">
-    <payments_bonus "Bonus">
     <payments_endDate "End date">
     <payments_planName "Plan">
     <payments_quota "Quota">
@@ -609,5 +608,5 @@
     <serverWarning_Expire "Your Peerio Pro plan will expire in 7 days. Please renew your plan to ensure your service is uninterrupted. If you do not renew and have stored more data than what is offered in Peerio's free service, you may experience limited functionality until your account is within its storage limit.">
     <serverWarning_PaymentErrorTitle "Payment Error">
     <serverWarning_PaymentError "Your Peerio Pro plan could not be renewed due to a problem with your payment method. Please review your account information at https://account.peerio.com">
-    <serverWarning_QuotaExceededTitle "Data Limit Exceeded">
-    <serverWarning_QuotaExcceded "You're over your data limit! Your account will have limited functionality until you purchase additional storage or remove some files from your account.">
+    <serverWarning_QuotaExceededTitle "Storage Limit Exceeded">
+    <serverWarning_QuotaExcceded "You're over your storage limit! Your account will have limited functionality until you purchase additional storage or remove some files from your account.">

@@ -589,7 +589,6 @@
     <payments_viewSubscriptions "Ver suscripciones">
     <payments_activeSubscriptions "Activa">
     <payments_canceledSubscriptions "Cancelada">
-    <payments_bonus "Recargo">
     <payments_endDate "Fecha de finalización">
     <payments_planName "Tarifa">
     <payments_quota "Cuota">
@@ -609,5 +608,5 @@
     <serverWarning_Expire "Su tarifa Peerio Pro expirará en 7 días. Por favor, renueve su tarifa para asegurarse de que su servicio no se interrumpe. Si no lo renueva y tiene almacenados más datos de los que se ofrecen en el servicio gratuito de Peerio, puede experimentar una funcionalidad limitada hasta que su cuenta esté dentro del límite de almacenamiento.">
     <serverWarning_PaymentErrorTitle "Error en el pago">
     <serverWarning_PaymentError "Su tarifa Peerio Pro no se pudo renovar debido a un problema con su método de pago. Por favor, revise la información de su cuenta en https://account.peerio.com">
-    <serverWarning_QuotaExceededTitle "Límite de datos excedidos">
-    <serverWarning_QuotaExcceded "¡Está por encima de su límite de datos! Su cuenta tendrá una funcionalidad limitada hasta que adquiera almacenamiento adicional o elimine algunos ficheros de su cuenta.">
+    <serverWarning_QuotaExceededTitle "Storage Limit Exceeded">
+    <serverWarning_QuotaExcceded "You're over your storage limit! Your account will have limited functionality until you purchase additional storage or remove some files from your account.">
