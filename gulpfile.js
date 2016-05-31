@@ -19,13 +19,12 @@ var localeDest = 'application/locale';
 var usedLangs = 'en,de,es,it,fr,ru,zh_CN,nb_NO,hu,tr,pt_BR,ja,cs';
 var buildDest = 'build/';
 var codesignCommands = ['Contents/MacOS/nwjs', 							// all executables must be signed
-			  'Contents/Versions/50.0.2661.75/nwjs\\ Helper.app/',
-			  'Contents/Versions/50.0.2661.75/nwjs\\ Helper.app/Contents/MacOS/nwjs\\ Helper',
-			  // 'Contents/Versions/50.0.2661.75/nwjs\\ Framework.framework',
-			  'Contents/Versions/50.0.2661.75/nwjs\\ Framework.framework/Helpers/crashpad_handler',
-			  'Contents/Versions/50.0.2661.75/nwjs\\ Framework.framework/libffmpeg.dylib',
-			  'Contents/Versions/50.0.2661.75/nwjs\\ Framework.framework/libnode.dylib',
-			  'Contents/Versions/50.0.2661.75/nwjs\\ Framework.framework/nwjs\\ Framework',
+			  'Contents/Versions/50.0.2661.94/nwjs\\ Helper.app/',
+			  'Contents/Versions/50.0.2661.94/nwjs\\ Helper.app/Contents/MacOS/nwjs\\ Helper',
+			  'Contents/Versions/50.0.2661.94/nwjs\\ Framework.framework/Helpers/crashpad_handler',
+			  'Contents/Versions/50.0.2661.94/nwjs\\ Framework.framework/libffmpeg.dylib',
+			  'Contents/Versions/50.0.2661.94/nwjs\\ Framework.framework/libnode.dylib',
+			  'Contents/Versions/50.0.2661.94/nwjs\\ Framework.framework/nwjs\\ Framework',
 			  ''
 			  ];
 
@@ -225,7 +224,7 @@ gulp.task('build', function(callback) {
 		platforms: ['win32','osx64'],
 		buildDir: buildDest,
 		appName: 'Peerio',
-		version: '0.14.0',
+		version: '0.14.4',
 		cacheDir: 'tmp/nw',
 		macIcns: 'application/img/nw.icns',
 		zip: false,
