@@ -589,7 +589,6 @@
     <payments_viewSubscriptions "Voir les abonnements">
     <payments_activeSubscriptions "Actifs">
     <payments_canceledSubscriptions "Annulés">
-    <payments_bonus "Bonus">
     <payments_endDate "Date de fin">
     <payments_planName "Forfait">
     <payments_quota "Quota">
@@ -609,5 +608,5 @@
     <serverWarning_Expire "Votre forfait Peerio arrivera à échéance dans 7 jours. Veuillez le renouveler pour garantir que votre service ne sera pas interrompu. Si vous ne le renouvelez pas et que votre quantité de données stockées dépasse ce qui est offert par le service gratuit de Peerio, la fonctionnalité pourrait être limitée jusqu'à ce que votre compte respecte la limite de stockage.">
     <serverWarning_PaymentErrorTitle "Erreur de paiement">
     <serverWarning_PaymentError "Un problème de méthode de paiement a empêché le renouvellement de votre forfait Peerio. Veuillez vérifier vos informations de compte sur https://account.peerio.com">
-    <serverWarning_QuotaExceededTitle "Limite de stockage dépassée">
-    <serverWarning_QuotaExcceded "Vous avez dépassé votre limite de stockage ! La fonctionnalité de votre compte sera limitée tant que vous n'aurez pas acheté de l'espace de stockage supplémentaire ou que vous n'aurez pas supprimé des fichiers de votre compte.">
+    <serverWarning_QuotaExceededTitle "Storage Limit Exceeded">
+    <serverWarning_QuotaExcceded "You're over your storage limit! Your account will have limited functionality until you purchase additional storage or remove some files from your account.">
