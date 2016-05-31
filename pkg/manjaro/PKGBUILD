@@ -11,7 +11,7 @@ makedepends=('curl' 'fakeroot' 'git' 'make' 'patch')
 options=('!strip')
 #source=('http://linux.peerio.com/sources/${pkgname}-${pkgver}.tar.gz')
 source=('http://linux.peerio.com/sources/peerio-client-1.4.2.tar.gz')
-md5sums=('38e7563e1b5dda8f710f4e4682f2effc')
+md5sums=('03aa94dfb3429dff6de579f885625146')
 build() {
     cd "${srcdir}/${pkgname}"
     curl http://linux.peerio.com/sources/06-build.patch >build.patch

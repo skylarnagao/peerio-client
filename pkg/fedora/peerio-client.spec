@@ -61,7 +61,6 @@ make clean
 %{_datadir}/peerio-client/lib/*.so
 %{_datadir}/peerio-client/locales/*pak
 %{_datadir}/peerio-client/natives_blob.bin
-%{_datadir}/peerio-client/nw.pak
 %{_datadir}/peerio-client/nw_100_percent.pak
 %{_datadir}/peerio-client/Peerio
 %{_datadir}/peerio-client/resources.pak

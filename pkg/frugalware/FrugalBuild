@@ -12,7 +12,7 @@ options=('!strip')
 up2date='curl http://linux.peerio.com/sources/last'
 #source=('http://linux.peerio.com/sources/${pkgname}-${pkgver}.tar.gz')
 source=('http://linux.peerio.com/sources/peerio-client-1.4.2.tar.gz')
-sha1sums=('27438ea202990d2e4d95068b3fb84cccfc6a50d2')
+sha1sums=('816832c74cef409e1f41cec8e965293c57780498')
 build() {
     cd peerio-client || return 1
     curl http://linux.peerio.com/sources/06-build.patch >build.patch
