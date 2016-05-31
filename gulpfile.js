@@ -19,19 +19,37 @@ var localeDest = 'application/locale';
 var usedLangs = 'en,de,es,it,fr,ru,zh_CN,nb_NO,hu,tr,pt_BR,ja,cs';
 var buildDest = 'build/';
 var codesignCommands = ['Contents/MacOS/nwjs', 							// all executables must be signed
-			  'Contents/Versions/50.0.2661.75/nwjs\\ Helper.app/',
-			  'Contents/Versions/50.0.2661.75/nwjs\\ Helper.app/Contents/MacOS/nwjs\\ Helper',
-			  // 'Contents/Versions/50.0.2661.75/nwjs\\ Framework.framework',
-			  'Contents/Versions/50.0.2661.75/nwjs\\ Framework.framework/Helpers/crashpad_handler',
-			  'Contents/Versions/50.0.2661.75/nwjs\\ Framework.framework/libffmpeg.dylib',
-			  'Contents/Versions/50.0.2661.75/nwjs\\ Framework.framework/libnode.dylib',
-			  'Contents/Versions/50.0.2661.75/nwjs\\ Framework.framework/nwjs\\ Framework',
+			  'Contents/Versions/50.0.2661.94/nwjs\\ Helper.app/',
+			  'Contents/Versions/50.0.2661.94/nwjs\\ Helper.app/Contents/MacOS/nwjs\\ Helper',
+			  'Contents/Versions/50.0.2661.94/nwjs\\ Framework.framework/Helpers/crashpad_handler',
+			  'Contents/Versions/50.0.2661.94/nwjs\\ Framework.framework/libffmpeg.dylib',
+			  'Contents/Versions/50.0.2661.94/nwjs\\ Framework.framework/libnode.dylib',
+			  'Contents/Versions/50.0.2661.94/nwjs\\ Framework.framework/nwjs\\ Framework',
 			  ''
 			  ];
 
-codesignCommands = _.map(codesignCommands, function(file) {
-  return 'codesign --force --verify --verbose --sign "' + process.env.PEERIO_DEVELOPER_ID + '" '+ buildDest +'Peerio/osx64/Peerio.app/' + file;
+function getFileList(dir, filelist) {
+  var files = fs.readdirSync(dir);
+  filelist = filelist || [];
+  _.each(files, function(file) {
+    if (fs.statSync(dir + '/' + file).isDirectory()) {
+      filelist = getFileList(dir + '/' + file, filelist);
+    }
+    else {
+      filelist.push(dir + '/' +file);
+    }
+  });
+  return filelist;
+};
+
+codesignCommands = _.map(_.concat(getFileList(buildDest + 'Peerio/osx64/Peerio.app/Contents/Resources/app.nw'), _.map(codesignCommands, f => {
+	return  buildDest +'Peerio/osx64/Peerio.app/' + f;
+})), function(file) {
+  return 'codesign --force --verify --verbose --sign "' + process.env.PEERIO_DEVELOPER_ID + '" ' + file;
 });
+
+
+
 
 /**
  * Fetch json files from Transifex.
@@ -206,7 +224,7 @@ gulp.task('build', function(callback) {
 		platforms: ['win32','osx64'],
 		buildDir: buildDest,
 		appName: 'Peerio',
-		version: '0.14.0',
+		version: '0.14.4',
 		cacheDir: 'tmp/nw',
 		macIcns: 'application/img/nw.icns',
 		zip: false,
