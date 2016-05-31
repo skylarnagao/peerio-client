@@ -5,27 +5,32 @@ Forwarded: not-needed
 Last-Update: 2016-02-11
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
---- a/gulpfile.js	2016-02-11 00:06:04.711270099 +0100
-+++ b/gulpfile.js	2016-04-05 00:08:42.108086746 +0100
-@@ -200,24 +200,22 @@
+--- a/gulpfile.js	2016-05-31 04:08:20.833855055 +0200
++++ b/gulpfile.js	2016-05-31 04:25:52.417208101 +0200
+@@ -203,30 +203,17 @@
     */
    var nw = new NwBuilder({
  		files: 'application/**/**', // use the glob format
--		platforms: ['win32', 'osx32', 'linux32', 'linux64'],
-+		platforms: ['linux32', 'linux64'],
+-		platforms: ['win32','osx64'],
++		platforms: ['linux32','linux64'],
  		buildDir: buildDest,
--		version: '0.12.3',
-+		version: '0.13.3',
- 		cacheDir: 'tmp/nw',
- 		macIcns: 'application/img/nw.icns',
+ 		appName: 'Peerio',
+ 		version: '0.14.0',
+-		cacheDir: 'tmp/nw',
+-		macIcns: 'application/img/nw.icns',
 -		zip: false,
- 		macPlist: {
- 		  'UTTypeReferenceURL': 'https://peerio.com',
- 		  'CFBundleIdentifier': 'com.peerio.peeriomac',
- 		  'DTSDKBuild': buildNumber
+-		macPlist: {
+-		  'UTTypeReferenceURL': 'https://peerio.com',
+-		  'CFBundleIdentifier': 'com.peerio.peeriomac',
+-		  'DTSDKBuild': buildNumber,
+-		  	CFBundleDisplayName: "Peerio",
+-		  	CFBundleName:"Peerio"
+-		},
+-		macPlistStrings: {
+-			en: 'osx/plist_en.strings'
 -		},
 -		winIco: 'application/img/icon256.ico'				// comment this line if you don't have wine installed
-+		}
++		cacheDir: 'tmp/nw'
  	});
  
  	runSequence('update-dependendencies', 'clean-build', function() {
@@ -36,16 +41,3 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
  			})
  			.catch(function (error) {
  				console.error(error);
-@@ -235,7 +233,6 @@
- gulp.task('upload')
- 
- /*
--
- scpClient.scp('local_folder', {
-         "host": "remote_host",
-         "port": "remote_port",
-@@ -246,4 +243,3 @@
-     }, cb)
- 
- */
--
