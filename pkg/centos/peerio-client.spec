@@ -1,12 +1,11 @@
 Summary: Peerio Client
 Name: peerio-client
-Version: 1.4.1
+Version: 1.4.2
 Release: 1%{?dist}
 License: GPL3
 Group: Applications/Internet
 Source: https://linux.peerio.com/sources/rh-%{name}-%{version}.tar.gz
-Patch0: https://linux.peerio.com/sources/05-build.patch
-Patch1: https://linux.peerio.com/sources/04-build.patch
+Patch0: https://linux.peerio.com/sources/06-build.patch
 URL: https://peerio.com
 
 Autoreq: no
@@ -79,6 +78,8 @@ make clean PREFIX=%{buildroot}/usr/share BINPREFIX=%{buildroot}/usr
 %{_mandir}/man1/peerio-client.1.gz
 
 %changelog
+ * Tue May 31 2016 Samuel MARTIN MORO <samuel@peerio.com> 1.4.2-1
+ - Add paid plan support
  * Mon Apr 4 2016 Samuel MARTIN MORO <samuel@peerio.com> 1.4.1-1
  - Couple bugfixes
  * Tue Mar 15 2016 Samuel MARTIN MORO <samuel@peerio.com> 1.4.0-1

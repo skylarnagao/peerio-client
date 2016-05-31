@@ -10,7 +10,7 @@ FROM debian:wheezy
 ENV ARCH 64
 ENV NODE_VERSION 0.10.40
 ENV PKG_ARCH amd64
-ENV PKG_VERSION 1.4.1
+ENV PKG_VERSION 1.4.2
 ENV PKG_REL 1
 ENV PKG_NAME peerio-client_$PKG_VERSION-${PKG_REL}_$PKG_ARCH
 
@@ -33,7 +33,7 @@ RUN npm install -g nw
 RUN git clone https://github.com/PeerioTechnologies/peerio-client /usr/src/peerio-client
 WORKDIR /usr/src/peerio-client
 RUN npm install
-RUN sed -i -e '/^[ \t]*zip: false/d' -e '/^[ \t]*winIco: /d' gulpfile.js
+RUN patch -p0 <debian/patch/00-build.patch
 RUN ./node_modules/.bin/gulp build
 RUN mkdir ../$PKG_NAME
 WORKDIR /usr/src/$PKG_NAME
