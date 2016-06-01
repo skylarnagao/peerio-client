@@ -2,12 +2,12 @@ Description: remove windows and osx from the build process
 Author: Samuel MARTIN MORO <samuel@peerio.com>
 Origin: vendor
 Forwarded: not-needed
-Last-Update: 2016-02-11
+Last-Update: 2016-06-01
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
---- a/gulpfile.js	2016-05-31 04:08:20.833855055 +0200
-+++ b/gulpfile.js	2016-05-31 04:25:52.417208101 +0200
-@@ -203,30 +203,17 @@
+--- a/gulpfile.js	2016-06-01 20:31:38.833855055 +0200
++++ b/gulpfile.js	2016-06-01 03:42:48.417208101 +0200
+@@ -221,30 +221,17 @@
     */
    var nw = new NwBuilder({
  		files: 'application/**/**', // use the glob format
@@ -15,7 +15,7 @@ This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
 +		platforms: ['linux32','linux64'],
  		buildDir: buildDest,
  		appName: 'Peerio',
- 		version: '0.14.0',
+ 		version: '0.14.4',
 -		cacheDir: 'tmp/nw',
 -		macIcns: 'application/img/nw.icns',
 -		zip: false,

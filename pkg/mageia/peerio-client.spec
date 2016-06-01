@@ -70,7 +70,7 @@ make clean
 %{_mandir}/man1/peerio-client.1.gz
 
 %changelog
- * Tue May 31 2016 Samuel MARTIN MORO <samuel@peerio.com> 1.4.2-1
+ * Wed Jun 1 2016 Samuel MARTIN MORO <samuel@peerio.com> 1.4.2-1
  - Add paid plan support
  * Mon Apr 4 2016 Samuel MARTIN MORO <samuel@peerio.com> 1.4.1-1
  - Couple bugfixes
