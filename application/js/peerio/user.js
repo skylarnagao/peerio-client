@@ -25,6 +25,10 @@ Peerio.user = {};
 		files: {},
 		notes: [],
         notesDict: {},
+		todos: [],
+		todosDict: {},
+		passwords: [],
+		passwordsDict: {},
 		settings: {
 			localeCode: 'en',
 			receiveMessageNotifications: false,

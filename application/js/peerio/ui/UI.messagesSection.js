@@ -68,9 +68,6 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
 
         if (!$scope.$root.convFolders) {
             var f = $scope.$root.convFolders = {};
-            var l = function (n) {
-                return document.l10n.getEntitySync(n).value
-            };
             f.folders = [];
 
             f.loadFolders = function () {

@@ -25,9 +25,6 @@ Peerio.UI.controller('filesSection', function ($scope, $element, $sce) {
 
     if (!$scope.$root.fileFolders) {
         var f = $scope.$root.fileFolders = {};
-        var l = function (n) {
-            return document.l10n.getEntitySync(n).value
-        };
         f.folders = [];
 
         f.loadFolders = function () {
@@ -37,17 +34,27 @@ Peerio.UI.controller('filesSection', function ($scope, $element, $sce) {
                     return;
                 }
                 Peerio.crypto.decryptFolders(data.folders, function (preFolders) {
-                    var folders = [];
-                    var notes = [];
-
+                    var notes = [], todos = [], passwords=[];
+                    f.folders = [];
                     preFolders.forEach(function (folder) {
-                        if (folder.name.startsWith(Peerio.Notes.signature)) {
-                            folder.name = folder.name.substr(Peerio.Notes.signature.length);
+                        if (folder.name.startsWith(Peerio.objSignature)) {
+                            folder.name = folder.name.substr(Peerio.objSignature.length);
                             try {
                                 var obj = JSON.parse(folder.name);
                                 if (obj.isNote) {
                                     obj.id = folder.id;
                                     notes.push(obj);
+                                    return;
+                                }
+                                if(obj.isTODO){
+                                    obj.id = folder.id;
+                                    todos.push(obj);
+                                    return;
+                                }
+                                if(obj.isPassword){
+                                    obj.id = folder.id;
+                                    passwords.push(obj);
+                                    return;
                                 }
                             }
                             catch (err) {
@@ -56,32 +63,41 @@ Peerio.UI.controller('filesSection', function ($scope, $element, $sce) {
                             return;
                         }
 
-                        folders.push(folder);
+                        f.folders.push(folder);
                     });
 
                     if (notes.length) {
                         Peerio.Notes.addOrUpdateBulk(notes);
                     }
+                    if (todos.length) {
+                        Peerio.TODOs.addOrUpdateBulk(todos);
+                    }
+                    if (passwords.length) {
+                        Peerio.Passwords.addOrUpdateBulk(passwords);
+                    }
 
                     f.foldersMap = {};
-                    folders.forEach(function (folder) {
+                    f.folders.forEach(function (folder) {
                         f.foldersMap[folder.id] = folder;
                     });
-                    $scope.$root.$apply(function () {
-                        f.folders = folders.sort(function (a, b) {
-                            if (a.name > b.name) {
-                                return 1;
-                            }
-                            if (a.name < b.name) {
-                                return -1;
-                            }
-                            return 0;
-                        });
-                    });
+                    f.reSort();
                 });
             });
         };
 
+        f.reSort =function () {
+            $scope.$root.$apply(function () {
+                 f.folders.sort(function (a, b) {
+                    if (a.name > b.name) {
+                        return 1;
+                    }
+                    if (a.name < b.name) {
+                        return -1;
+                    }
+                    return 0;
+                });
+            });
+        };
 
         f.addFolder = function () {
             swal({
@@ -110,7 +126,10 @@ Peerio.UI.controller('filesSection', function ($scope, $element, $sce) {
                             console.log(response);
                             swal(l("error"), l('creatingFolderError'), "error");
                         } else {
-                            f.loadFolders();
+                            var folder = {id: response.id, items:[], name:inputValue};
+                            f.folders.push(folder);
+                            f.foldersMap[folder.id] = folder;
+                            f.reSort();
                             swal({title: l('success'), text: l('folderCreated'), type: "success"});
                         }
                     })
@@ -146,7 +165,8 @@ Peerio.UI.controller('filesSection', function ($scope, $element, $sce) {
                             console.log(response);
                             swal(l('error'), l('renamingFolderError'), "error");
                         } else {
-                            f.loadFolders();
+                            f.foldersMap[folder.id] = inputValue;
+                            f.reSort();
                             swal({title: l('success'), text: l('folderRenamed'), type: "success"});
                         }
                     });
@@ -170,7 +190,11 @@ Peerio.UI.controller('filesSection', function ($scope, $element, $sce) {
                         console.log(response);
                         swal(l('error'), l('removingFolderError'), "error");
                     } else {
-                        f.loadFolders();
+                        var ind = f.folders.findIndex(function(item){ return item.id === folder.id});
+                        if (ind>=0){
+                            f.folders.splice(ind,1);
+                        }
+                        delete f.foldersMap[folder.id];
                         Object.keys(Peerio.user.files).forEach(function (id) {
                             if (Peerio.user.files.hasOwnProperty(id)) {
                                 var file = Peerio.user.files[id];
@@ -270,9 +294,9 @@ Peerio.UI.controller('filesSection', function ($scope, $element, $sce) {
             });
         };
         f.getFolderName = function (id) {
-            for (var i = 0; i < f.folders.length; i++) {
-                if (f.folders[i].id === id) return f.folders[i].name;
-            }
+            if(f.foldersMap && f.foldersMap[id])
+                return f.foldersMap[id].name;
+
             return '[none]';
         };
     }

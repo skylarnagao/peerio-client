@@ -2806,14 +2806,14 @@ ul.filesSidebarTypeFilters li,ul.messagesSidebarTypeFilters li {
 .submenu-item:hover span{
 	color: #2C95CF !important;
 }
-.notesSection{
+.notesSection, .todosSection, .passwordsSection{
 	position: absolute;
 	top: 75px;
 	left: 220px;
 	right: 0;
 	bottom: 0;
 }
-#notesView{
+#notesView, #todosView, #passwordsView{
 	width:100%;
 	height: 100%;
 	display: table;
@@ -2852,9 +2852,10 @@ ul.filesSidebarTypeFilters li,ul.messagesSidebarTypeFilters li {
     margin-left:5px;
 }
 .note-list-item{
-  padding: 7px;
-  overflow: hidden;
-  text-overflow: ellipsis;
+	padding: 7px 3px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin: 5px 10px 5px 5px;
 }
 .note-list-item:hover{
 	background-color: #fffefc;
@@ -2885,4 +2886,59 @@ ul.filesSidebarTypeFilters li,ul.messagesSidebarTypeFilters li {
 	padding-left: 15px;
 	font-style: italic;
 	color: #555;
+}
+
+.todo-list-name{
+	width: 100%;
+}
+.new-todo-input{
+	border: none !important;
+	border-bottom: 3px solid #d2d2d2 !important;
+	width: 100%;
+}
+.todo-list-items{
+	overflow-y: scroll;
+}
+.todo-list-item{
+	position: relative;
+	overflow: visible;
+	padding-left: 18px;
+}
+.todo-list-item.complete .todo-check, .todo-list-item.complete .todo-editable{
+	color: #b9b9b9 !important;;
+}
+.new-todo-input-prompt{
+	margin-top: 20px;
+	color:#909090;
+}
+.todo-check{
+	font-size: 1.5em;
+	vertical-align: middle;
+	color: #b9b9b9;
+	cursor: pointer;
+}
+.todo-editable{
+	display: inline-block !important;
+	padding: 3px 0 3px 5px !important;
+	margin: 0 !important;
+	background: transparent;
+	text-overflow: ellipsis;
+	width: 95%;
+	border: 1px solid transparent !important;
+}
+.todo-editable:focus {
+	border-bottom: 1px solid #b9b9b9 !important;
+}
+
+.todo-remove{
+	display: none;
+	position: absolute;
+	top: 6px;
+	left: -1px;
+	font-size: 1.4em;
+	color: #ff6969;ition: absolute;
+	cursor: pointer;
+}
+.todo-list-item:hover .todo-remove{
+	display:block;
 }

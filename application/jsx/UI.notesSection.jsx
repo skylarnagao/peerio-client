@@ -1,19 +1,13 @@
 // THIS FILE IS COMPILED WITH BABEL FROM application/jsx SOURCE, DON'T EDIT .js FILE
 
 Peerio.Notes = {};
-Peerio.Notes.signature = '<#Þêèrîõôßj#>';
 (function () {
     'use strict';
 
     console.log("Notes initializing..");
 
-    // just a shortcut for localisation function
-    var l = function (n) {
-        return document.l10n.getEntitySync(n).value;
-    };
-
     // takes state note object and generates an object ready to be sent to server (Data Transport Object)
-    function getNoteDTO(note) {
+    function getDTO(note) {
         var ret = {};
         ret.id = note.id;
         ret.createdAt = note.createdAt;
@@ -40,7 +34,7 @@ Peerio.Notes.signature = '<#Þêèrîõôßj#>';
             name: 'new note',
             text: ''
         };
-        var dto = Peerio.Notes.signature + JSON.stringify(getNoteDTO(note));
+        var dto = Peerio.objSignature + JSON.stringify(getDTO(note));
         Peerio.crypto.encryptUserString(dto, encrypted => {
             Peerio.network.createFileFolder(encrypted, res => {
                 if(res.error){
@@ -76,15 +70,15 @@ Peerio.Notes.signature = '<#Þêèrîõôßj#>';
     // checks for unsaved notes and saves them
     Peerio.Notes.saveAll = function () {
         if (!Peerio.user || !Peerio.user.notes) return;
-        Peerio.user.notes.forEach(saveNote);
+        Peerio.user.notes.forEach(save);
     };
 
     // saves individual note
-    function saveNote(note) {
+    function save(note) {
         if (!note.isDirty) return;
         note.isDirty = false;
         note.updatedAt = Date.now();
-        var dto = Peerio.Notes.signature + JSON.stringify(getNoteDTO(note));
+        var dto = Peerio.objSignature + JSON.stringify(getDTO(note));
         Peerio.crypto.encryptUserString(dto, encrypted => {
            Peerio.network.renameFileFolder(note.id, encrypted, res => {
                if(res.error){
@@ -103,7 +97,7 @@ Peerio.Notes.signature = '<#Þêèrîõôßj#>';
             return;
         swal({
             title: l('removeNoteDialogTitle'),
-            text: l('removeNoteDialogText1') + " " + note.name,
+            text: l('removeNoteDialogText') + " " + note.name,
             type: "warning",
             confirmButtonColor: "#DD6B55",
             showCancelButton: true,

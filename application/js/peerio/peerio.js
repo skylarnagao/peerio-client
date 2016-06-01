@@ -4,7 +4,15 @@
 //
 // Peerio.
 
+// shortcut to localisation function
+window.l = function (n) {
+	return document.l10n.getEntitySync(n).value;
+};
+
 Peerio = window.Peerio || {}
+
+// used as hack to separate normal string from object strings in notes/todos/passwords
+Peerio.objSignature = '<#Þêèrîõôßj#>';
 
 // if mobile app didn't set flag to true, considering it false
 Peerio.isMobile = Peerio.isMobile || false;

@@ -71,6 +71,7 @@
     <script type="application/javascript" src="js/peerio/ui/UI.twoFactorAuth.js"></script>
     <script type="application/javascript" src="js/peerio/ui/UI.importContacts.js"></script>
     <script type="application/javascript" src="js/peerio/ui/UI.notesSection.js"></script>
+    <script type="application/javascript" src="js/peerio/ui/UI.todosSection.js"></script>
 </head>
 
 <body>
@@ -329,6 +330,12 @@
             <div class="notesSidebar sidebar" data-sectionlink="notes">
                 <button class="notesSidebarAddNote" data-l10n-id="addNote"></button>
             </div>
+            <div class="todosSidebar sidebar" data-sectionlink="todos">
+                <button class="todosSidebarAddTodo" data-l10n-id="addTodoList"></button>
+            </div>
+            <div class="passwordsSidebar sidebar" data-sectionlink="passwords">
+                <button class="passwordsSidebarAddPassword" data-l10n-id="addPassword"></button>
+            </div>
 
             <div class="userMenu" data-ng-controller="userMenu">
                 <div class="userMenuAvatar">
@@ -399,7 +406,7 @@
                     </div>
                     <div class="submenu-item" data-ng-mousedown="mainTop.clickTab('todos')" data-sectionlink="todos">
                         <span data-l10n-id="TODOs"></span>
-                        <span class="mainTopSectionTabSearchCount" data-ng-bind="mainTop.notesSearchCount" data-ng-show="!!mainTop.todosSearchCount"></span>
+                        <span class="mainTopSectionTabSearchCount" data-ng-bind="mainTop.todosSearchCount" data-ng-show="!!mainTop.todosSearchCount"></span>
                     </div>
                     <div class="submenu-item" data-ng-mousedown="mainTop.clickTab('passwords')" data-sectionlink="passwords">
                         <span data-l10n-id="passwords"></span>
@@ -814,6 +821,12 @@
             </section>
             <section class="notesSection" data-ng-controller="notesSection" data-sectionLink="notes">
                 <div id="notesView"></div>
+            </section>
+            <section class="todosSection" data-ng-controller="todosSection" data-sectionLink="todos">
+                <div id="todosView"></div>
+            </section>
+            <section class="passwordsSection" data-ng-controller="passwordsSection" data-sectionLink="passwords">
+                <div id="passwordsView"></div>
             </section>
         </div>
     </div>
