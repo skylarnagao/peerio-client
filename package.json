@@ -7,7 +7,7 @@
     "type": "git",
     "url": "git://github.com/PeerioTechnologies/peerio-client.git"
   },
-  "version": "1.4.1",
+  "version": "1.4.2",
   "keywords": [
     "peerio",
     "encrypted messages",
@@ -34,7 +34,7 @@
     "gulp-zip": "latest",
     "lodash": "latest",
     "minimist": "latest",
-    "nw-builder": "nwjs/nw-builder#93cc055f31881f876d913a2c44e4fc8dc5b7cffa",
+    "nw-builder": "flohdot/nw-builder#master",
     "run-sequence": "latest",
     "uglify-js": "latest"
   }

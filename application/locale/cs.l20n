@@ -333,17 +333,17 @@
     <TOStitle "Terms Of Use">
     <TOStext "By signing up for a Peerio account you agree to our terms of use.">
     <TOStextUpdated "We've updated our terms of use! Please review and accept to continue.">
-    <version "version">
+    <version "verze">
     <touchId "Touch ID">
     <messageSubject "#subject">
     <passcode "passcode">
-    <publicKey "Public Key">
+    <publicKey "Veřejný klíč">
     <contactStatus "Contact Status">
     "n/a": "'N/A'",
     <outOfSync "out of sync">
     <connecting "connecting...">
-    <signOut "Sign out">
-    <fileSize "File Size">
+    <signOut "Odhlásit se">
+    <fileSize "Velikost souboru">
     <fileType "File Type">
     <location "Location">
     <profile "Profile">
@@ -582,8 +582,17 @@
     <supportFeedback "Support/Feedback">
     <payments_title "Upgrade your storage">
     <payments_menu "Upgrade your storage">
+    <payments_menu_view "Manage Subscriptions">
     <payments_hasSubscription "You already have a subscription">
+    <payments_hasCanceledSubscription "You have canceled subscriptions">
     <payments_buy "Buy">
+    <payments_viewSubscriptions "View subscriptions">
+    <payments_activeSubscriptions "Active">
+    <payments_canceledSubscriptions "Canceled">
+    <payments_endDate "End date">
+    <payments_planName "Plan">
+    <payments_quota "Quota">
+    <payments_status "Status">
     "payments_com.peerio.storage.50.yearly": "Pay annually",
     "payments_com.peerio.storage.50.monthly": "Pay monthly",
     <androidEncryptionStatusOff "Your device supports full disk encryption, but it is not currently enabled. Peerio highly recommends the use of disk encryption. Would you like to learn more?">
@@ -591,3 +600,13 @@
     <androidEncryptionStatusUnsupported "Your device does not support encryption. We recommend upgrading to a version of Android which does. Would you like to learn more?">
     <security "Security">
     <noMatchesFound "No matches found">
+    <serverWarning_WelcomeTitle "Welcome to Peerio Pro!">
+    <serverWarning_Welcome "A Peerio Pro plan has been successfully registered to your account. You should now have an additional 50GB of storage available. You can manage your account anytime at https://account.peerio.com/">
+    <serverWarning_CancelledTitle "Peerio Pro Plan Cancelled">
+    <serverWarning_Cancelled "Your Peerio Pro plan has been cancelled. Your premium storage will expire on the end date of your plan and your plan will not be renewed.">
+    <serverWarning_ExpireTitle "Your Pro Plan Will Expire Soon">
+    <serverWarning_Expire "Your Peerio Pro plan will expire in 7 days. Please renew your plan to ensure your service is uninterrupted. If you do not renew and have stored more data than what is offered in Peerio's free service, you may experience limited functionality until your account is within its storage limit.">
+    <serverWarning_PaymentErrorTitle "Payment Error">
+    <serverWarning_PaymentError "Your Peerio Pro plan could not be renewed due to a problem with your payment method. Please review your account information at https://account.peerio.com">
+    <serverWarning_QuotaExceededTitle "Storage Limit Exceeded">
+    <serverWarning_QuotaExcceded "You're over your storage limit! Your account will have limited functionality until you purchase additional storage or remove some files from your account.">

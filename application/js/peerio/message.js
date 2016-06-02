@@ -334,22 +334,22 @@ Peerio.message = {};
             return true;
         }
 
-        if (!Number.isInteger(msg.outerIndex)) {
-            console.log(msg, 'OuterIndex is missing.');
-            return false;
-
-        }
+        // if (!Number.isInteger(msg.outerIndex)) {
+        //     console.log(msg, 'OuterIndex is missing.');
+        //     return false;
+        //
+        // }
         // no previous message means we are verifying the first message in conversation
-        if (!previous && !skipOrder && msg.outerIndex !== 0) {
-            console.error(msg, 'Original message should have outerIndex 0');
-            return false;
-        }
+        // if (!previous && !skipOrder && msg.outerIndex !== 0) {
+        //     console.error(msg, 'Original message should have outerIndex 0');
+        //     return false;
+        // }
 
         if (previous) {
-            if (msg.outerIndex - previous.outerIndex > 1) {
-                console.error(msg, previous, 'Index mismatch');
-                return false;
-            }
+            // if (msg.outerIndex - previous.outerIndex > 1) {
+            //     console.error(msg, previous, 'Index mismatch');
+            //     return false;
+            // }
             if (msg.timestamp < previous.timestamp && (previous.timestamp - msg.timestamp) > 120000) {
                 console.error(msg, previous, 'Timestamp mismatch');
                 return false;
@@ -382,10 +382,10 @@ Peerio.message = {};
             return false;
         }
 
-        if (metadata.outerIndex !== message.innerIndex) {
-            console.error(metadata, message, "Metadata and message indexes do not match.");
-            return false;
-        }
+        // if (metadata.outerIndex !== message.innerIndex) {
+        //     console.error(metadata, message, "Metadata and message indexes do not match.");
+        //     return false;
+        // }
 
         if (Math.abs(metadata.timestamp - message.timestamp) > 120000) {
             console.error(metadata, message, "Metadata and message timestamps do not match.");

@@ -582,8 +582,17 @@
     <supportFeedback "Assistance/commentaires">
     <payments_title "Augmentez votre espace de stockage">
     <payments_menu "Augmentez votre espace de stockage">
+    <payments_menu_view "Gérer les abonnements">
     <payments_hasSubscription "Vous êtes déjà abonné">
+    <payments_hasCanceledSubscription "Vous avez annulé des abonnements">
     <payments_buy "Acheter">
+    <payments_viewSubscriptions "Voir les abonnements">
+    <payments_activeSubscriptions "Actifs">
+    <payments_canceledSubscriptions "Annulés">
+    <payments_endDate "Date de fin">
+    <payments_planName "Forfait">
+    <payments_quota "Quota">
+    <payments_status "État">
     "payments_com.peerio.storage.50.yearly": "Paiement annuel",
     "payments_com.peerio.storage.50.monthly": "Paiement mensuel",
     <androidEncryptionStatusOff "Votre appareil prend en charge le chiffrement complet du disque, mais cette option n'est pas activée actuellement. Peerio recommande l'utilisation du chiffrement du disque. Souhaitez-vous en apprendre davantage ?">
@@ -591,3 +600,13 @@
     <androidEncryptionStatusUnsupported "Votre appareil ne prend pas en charge le chiffrement. Nous vous recommandons de passer à une version d'Android qui le fait. Souhaitez-vous en apprendre davantage ?">
     <security "Sécurité">
     <noMatchesFound "Aucune correspondance trouvée">
+    <serverWarning_WelcomeTitle "Bienvenue sur Peerio Pro !">
+    <serverWarning_Welcome "Un forfait Peerio Pro a été enregistré avec succès dans votre compte. Vous devriez maintenant avoir 50 Go de stockage supplémentaire. Vous pouvez gérer votre compte en tout temps sur https://account.peerio.com/">
+    <serverWarning_CancelledTitle "Forfait Peerio Pro annulé">
+    <serverWarning_Cancelled "Votre forfait Peerio Pro a été annulé. Votre stockage supplémentaire arrivera à expiration à la date de fin de votre forfait et votre forfait ne sera pas renouvelé.">
+    <serverWarning_ExpireTitle "Votre forfait Pro arrivera bientôt à échéance">
+    <serverWarning_Expire "Votre forfait Peerio arrivera à échéance dans 7 jours. Veuillez le renouveler pour garantir que votre service ne sera pas interrompu. Si vous ne le renouvelez pas et que votre quantité de données stockées dépasse ce qui est offert par le service gratuit de Peerio, la fonctionnalité pourrait être limitée jusqu'à ce que votre compte respecte la limite de stockage.">
+    <serverWarning_PaymentErrorTitle "Erreur de paiement">
+    <serverWarning_PaymentError "Un problème de méthode de paiement a empêché le renouvellement de votre forfait Peerio. Veuillez vérifier vos informations de compte sur https://account.peerio.com">
+    <serverWarning_QuotaExceededTitle "Storage Limit Exceeded">
+    <serverWarning_QuotaExcceded "You're over your storage limit! Your account will have limited functionality until you purchase additional storage or remove some files from your account.">

@@ -18,17 +18,38 @@ var tmpSources = 'tmp/tx/*.json';
 var localeDest = 'application/locale';
 var usedLangs = 'en,de,es,it,fr,ru,zh_CN,nb_NO,hu,tr,pt_BR,ja,cs';
 var buildDest = 'build/';
-var codesignCommands = ['Contents/Frameworks/crash_inspector', 							// all executables must be signed
-			  'Contents/Frameworks/nwjs\\ Framework.framework/nwjs\\ Framework',
-			  'Contents/Frameworks/nwjs\\ Helper\\ EH.app/',
-			  'Contents/Frameworks/nwjs\\ Helper\\ NP.app/',
-			  '/Contents/Frameworks/nwjs\\ Helper.app/Contents/MacOS/nwjs\\ Helper',
-			  'Contents/Frameworks/nwjs\\ Helper.app/',
-			  '']
+var codesignCommands = ['Contents/MacOS/nwjs', 							// all executables must be signed
+			  'Contents/Versions/50.0.2661.94/nwjs\\ Helper.app/',
+			  'Contents/Versions/50.0.2661.94/nwjs\\ Helper.app/Contents/MacOS/nwjs\\ Helper',
+			  'Contents/Versions/50.0.2661.94/nwjs\\ Framework.framework/Helpers/crashpad_handler',
+			  'Contents/Versions/50.0.2661.94/nwjs\\ Framework.framework/libffmpeg.dylib',
+			  'Contents/Versions/50.0.2661.94/nwjs\\ Framework.framework/libnode.dylib',
+			  'Contents/Versions/50.0.2661.94/nwjs\\ Framework.framework/nwjs\\ Framework',
+			  ''
+			  ];
 
-codesignCommands = _.map(codesignCommands, function(file) {
-  return 'codesign --force --verify --verbose --sign "' + process.env.PEERIO_DEVELOPER_ID + '" '+ buildDest +'Peerio/osx32/Peerio.app/' + file;
+function getFileList(dir, filelist) {
+  var files = fs.readdirSync(dir);
+  filelist = filelist || [];
+  _.each(files, function(file) {
+    if (fs.statSync(dir + '/' + file).isDirectory()) {
+      filelist = getFileList(dir + '/' + file, filelist);
+    }
+    else {
+      filelist.push(dir + '/' +file);
+    }
+  });
+  return filelist;
+};
+
+codesignCommands = _.map(_.concat(getFileList(buildDest + 'Peerio/osx64/Peerio.app/Contents/Resources/app.nw'), _.map(codesignCommands, f => {
+	return  buildDest +'Peerio/osx64/Peerio.app/' + f;
+})), function(file) {
+  return 'codesign --force --verify --verbose --sign "' + process.env.PEERIO_DEVELOPER_ID + '" ' + file;
 });
+
+
+
 
 /**
  * Fetch json files from Transifex.
@@ -175,7 +196,7 @@ gulp.task('clean-build', function(callback){
 /**
  * Set permissions for Mac
  */
-gulp.task('finalize-mac-build', shell.task(['chmod -R 755 '+ buildDest +'Peerio/osx32/Peerio.app/']))
+gulp.task('finalize-mac-build', shell.task(['chmod -R 755 '+ buildDest +'Peerio/osx64/Peerio.app/']))
 // TODO zip
 
 /**
@@ -200,16 +221,22 @@ gulp.task('build', function(callback) {
    */
   var nw = new NwBuilder({
 		files: 'application/**/**', // use the glob format
-		platforms: ['win32', 'osx32', 'linux32', 'linux64'],
+		platforms: ['win32','osx64'],
 		buildDir: buildDest,
-		version: '0.12.3',
+		appName: 'Peerio',
+		version: '0.14.4',
 		cacheDir: 'tmp/nw',
 		macIcns: 'application/img/nw.icns',
 		zip: false,
 		macPlist: {
 		  'UTTypeReferenceURL': 'https://peerio.com',
 		  'CFBundleIdentifier': 'com.peerio.peeriomac',
-		  'DTSDKBuild': buildNumber
+		  'DTSDKBuild': buildNumber,
+		  	CFBundleDisplayName: "Peerio",
+		  	CFBundleName:"Peerio"
+		},
+		macPlistStrings: {
+			en: 'osx/plist_en.strings'
 		},
 		winIco: 'application/img/icon256.ico'				// comment this line if you don't have wine installed
 	});
