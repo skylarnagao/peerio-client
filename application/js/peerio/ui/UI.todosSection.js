@@ -31,8 +31,8 @@ Peerio.TODOs = {};
     function sortList(p, n) {
         if (p.isDone && !n.isDone) return 1;
         if (!p.isDone && n.isDone) return -1;
-        if (p.createdAt > n.createdAt) return 1;
-        if (p.createdAt < n.createdAt) return -1;
+        if (p.createdAt > n.createdAt) return -1;
+        if (p.createdAt < n.createdAt) return 1;
         return 0;
     }
 

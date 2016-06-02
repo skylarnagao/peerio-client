@@ -72,6 +72,7 @@
     <script type="application/javascript" src="js/peerio/ui/UI.importContacts.js"></script>
     <script type="application/javascript" src="js/peerio/ui/UI.notesSection.js"></script>
     <script type="application/javascript" src="js/peerio/ui/UI.todosSection.js"></script>
+    <script type="application/javascript" src="js/peerio/ui/UI.passwordsSection.js"></script>
 </head>
 
 <body>
@@ -833,7 +834,7 @@
     <!-- Front Modals -->
     <div class="frontModalsWrapper">
         <div class="frontModals" data-ng-controller="frontModals">
-            <button class="frontModalsClose fontAwesome clear" data-ng-mousedown="frontModals.close()">&#xf00d;</button>
+            <button class="frontModalsClose fontAwesome clear" data-ng-click="frontModals.close()">&#xf00d;</button>
             <div class="newMessage frontModal" data-ng-controller="newMessage">
                 <form>
                     <div class="newMessageInfo">
@@ -1008,7 +1009,6 @@
                     </div>
                 </div>
                 <div class="deleteAccount">
-                    <!-- TODO localize text -->
                     <h2 data-l10n-id="mobileApps"> </h2>
                     <div class="mobile-apps">
                         <a class="mobile-app" href="https://itunes.apple.com/app/id985341583" target="_blank">
