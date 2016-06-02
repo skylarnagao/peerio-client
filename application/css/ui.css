@@ -2942,3 +2942,40 @@ ul.filesSidebarTypeFilters li,ul.messagesSidebarTypeFilters li {
 .todo-list-item:hover .todo-remove{
 	display:block;
 }
+
+.pwd-title{
+	margin-top: 16px;
+	color: #666;
+}
+.pwd-username, .pwd-username:focus {
+	border: 0 !important;
+	width: 100%;
+}
+.pwd-secret-container{
+	display: table;
+	width:100%;
+}
+.pwd-toggle{
+	display: table-cell !important;
+	text-align: center;
+	background-color: white;
+	width: 45px;
+	vertical-align: middle;
+}
+.pwd-toggle:hover{
+	color:#888;
+}
+.pwd-secret, .pwd-secret:focus{
+	border: 0 !important;;
+	display: table-cell;
+	width:100%;
+	margin-bottom: 0px !important;
+}
+.pwd-note{
+	width: 100%;
+	height: 200px;
+	resize: none;
+	border: none;
+	font-size: 1em;
+	padding: 10px;
+}
