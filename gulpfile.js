@@ -221,7 +221,7 @@ gulp.task('build', function(callback) {
    */
   var nw = new NwBuilder({
 		files: 'application/**/**', // use the glob format
-		platforms: ['win32','osx64'],
+		platforms: ['win32','osx64', 'linux64'],
 		buildDir: buildDest,
 		appName: 'Peerio',
 		version: '0.14.4',
