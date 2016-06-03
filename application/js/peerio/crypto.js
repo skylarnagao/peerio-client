@@ -493,7 +493,7 @@ Peerio.crypto = {};
             Peerio.crypto.decryptUserString(folder.name, function (name) {
                 folder.name = name;
                 count--;
-                if (length === 0) callback(folders);
+                if (count === 0) callback(folders);
             });
         });
 
