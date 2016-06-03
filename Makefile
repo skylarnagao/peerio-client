@@ -65,14 +65,6 @@ confdeps:
 	    test -d application/node_modules || ( cd application && PATH=`pwd`/../tmp/nodejs/bin:$$PATH npm install ) ; \
 	fi
 
-patchbuilder:
-	if ! test -s ./node_modules/nw-builder/package.json; then \
-	    PATH=`pwd`/tmp/nodejs/bin:$$PATH npm install nw-builder; \
-	fi; \
-	if ! grep '0\.13\.0-' ./node_modules/nw-builder/lib/platforms.js >/dev/null; then \
-	    patch -p0 <./pkg/nwbuilder.patch; \
-	fi
-
 uglify:
 	test -x ./node_modules/.bin/uglifyjs || PATH=`pwd`/tmp/nodejs/bin:$$PATH npm install uglify-js
 	for lib in $(UGLIFY_SOURCES); do \
@@ -88,15 +80,9 @@ uglify:
 	    rm -f $$lib.src*.js; \
 	done
 
-client: confdeps patchbuilder uglify
+client: confdeps uglify
 	if ! test -d build; then \
 	    sync; \
-	    PATH=`pwd`/tmp/nodejs/bin:$$PATH ./node_modules/.bin/gulp build; \
-	fi; \
-	if test -s ./tmp/nw/0.13.3/linux32/nw_100_percent.pak; then \
-	    rm -fr build; \
-	    cp -p ./tmp/nw/0.13.3/linux32/nw_100_percent.pak ./tmp/nw/0.13.3/linux32/nw.pak; \
-	    cp -p ./tmp/nw/0.13.3/linux64/nw_100_percent.pak ./tmp/nw/0.13.3/linux64/nw.pak; \
 	    PATH=`pwd`/tmp/nodejs/bin:$$PATH ./node_modules/.bin/gulp build; \
 	fi
 else
@@ -110,14 +96,6 @@ confdeps:
 	if ! test -d build; then \
 	    test -x node_modules/.bin/nw || npm install; \
 	    test -d application/node_modules || cd application && npm install; \
-	fi
-
-patchbuilder:
-	if ! test -s ./node_modules/nw-builder/package.json; then \
-	    npm install nw-builder; \
-	fi; \
-	if ! grep '0\.13\.0-' ./node_modules/nw-builder/lib/platforms.js >/dev/null; then \
-	    patch -p0 <./pkg/nwbuilder.patch; \
 	fi
 
 uglify:
@@ -135,15 +113,9 @@ uglify:
 	    rm -f $$lib.src*.js; \
 	done
 
-client: confdeps patchbuilder uglify
+client: confdeps uglify
 	if ! test -d build/Peerio; then \
 	    sync; \
-	    ./node_modules/.bin/gulp build; \
-	fi; \
-	if test -s ./tmp/nw/0.13.3/linux32/nw_100_percent.pak; then \
-	    rm -fr build; \
-	    cp -p ./tmp/nw/0.13.3/linux32/nw_100_percent.pak ./tmp/nw/0.13.3/linux32/nw.pak; \
-	    cp -p ./tmp/nw/0.13.3/linux64/nw_100_percent.pak ./tmp/nw/0.13.3/linux64/nw.pak; \
 	    ./node_modules/.bin/gulp build; \
 	fi
 endif
