@@ -34,7 +34,7 @@ Peerio.UI.controller('filesSection', function ($scope, $element, $sce) {
                     return;
                 }
                 Peerio.crypto.decryptFolders(data.folders, function (preFolders) {
-                    var notes = [], todos = [], passwords=[];
+                    var notes = [], todos = [], passwords = [];
                     f.folders = [];
                     preFolders.forEach(function (folder) {
                         if (folder.name.startsWith(Peerio.objSignature)) {
@@ -46,12 +46,12 @@ Peerio.UI.controller('filesSection', function ($scope, $element, $sce) {
                                     notes.push(obj);
                                     return;
                                 }
-                                if(obj.isTODO){
+                                if (obj.isTODO) {
                                     obj.id = folder.id;
                                     todos.push(obj);
                                     return;
                                 }
-                                if(obj.isPassword){
+                                if (obj.isPassword) {
                                     obj.id = folder.id;
                                     passwords.push(obj);
                                     return;
@@ -85,9 +85,9 @@ Peerio.UI.controller('filesSection', function ($scope, $element, $sce) {
             });
         };
 
-        f.reSort =function () {
+        f.reSort = function () {
             $scope.$root.$apply(function () {
-                 f.folders.sort(function (a, b) {
+                f.folders.sort(function (a, b) {
                     if (a.name > b.name) {
                         return 1;
                     }
@@ -126,7 +126,7 @@ Peerio.UI.controller('filesSection', function ($scope, $element, $sce) {
                             console.log(response);
                             swal(l("error"), l('creatingFolderError'), "error");
                         } else {
-                            var folder = {id: response.id, items:[], name:inputValue};
+                            var folder = {id: response.id, items: [], name: inputValue};
                             f.folders.push(folder);
                             f.foldersMap[folder.id] = folder;
                             f.reSort();
@@ -190,9 +190,11 @@ Peerio.UI.controller('filesSection', function ($scope, $element, $sce) {
                         console.log(response);
                         swal(l('error'), l('removingFolderError'), "error");
                     } else {
-                        var ind = f.folders.findIndex(function(item){ return item.id === folder.id});
-                        if (ind>=0){
-                            f.folders.splice(ind,1);
+                        var ind = f.folders.findIndex(function (item) {
+                            return item.id === folder.id
+                        });
+                        if (ind >= 0) {
+                            f.folders.splice(ind, 1);
                         }
                         delete f.foldersMap[folder.id];
                         Object.keys(Peerio.user.files).forEach(function (id) {
@@ -294,7 +296,7 @@ Peerio.UI.controller('filesSection', function ($scope, $element, $sce) {
             });
         };
         f.getFolderName = function (id) {
-            if(f.foldersMap && f.foldersMap[id])
+            if (f.foldersMap && f.foldersMap[id])
                 return f.foldersMap[id].name;
 
             return '[none]';
@@ -306,11 +308,15 @@ Peerio.UI.controller('filesSection', function ($scope, $element, $sce) {
     Peerio.UI.filesSectionPopulate = function () {
         $scope.$root.$broadcast('filesSectionPopulate', null)
     }
+    var foldersLoaded = false
     $scope.$on('filesSectionPopulate', function (event, callback) {
         if (/Sidebar/.test($element[0].className)) {
             return false
         }
-        $scope.$root.fileFolders.loadFolders();
+        if(!foldersLoaded){
+            $scope.$root.fileFolders.loadFolders();
+            foldersLoaded = true;
+        }
         Peerio.file.getFiles(function () {
             $scope.filesSection.files = Peerio.user.files
             $scope.$apply()
@@ -557,86 +563,114 @@ Peerio.UI.controller('filesSection', function ($scope, $element, $sce) {
             $('div.fileListingActions').removeClass('expand')
         }
     }
+
     $scope.filesSection.fileObjectHandler = function (file) {
-        if (file.size >= Peerio.config.fileUploadSizeLimit) {
-            swal({
-                title: document.l10n.getEntitySync('sizeError').value,
-                text: document.l10n.getEntitySync('sizeErrorText').value,
-                type: 'error',
-                confirmButtonText: document.l10n.getEntitySync('OK').value
-            })
-        }
-        else if (file.size >= (Peerio.user.quota.total - Peerio.user.quota.user)) {
-            swal({
-                title: document.l10n.getEntitySync('quotaError').value,
-                text: document.l10n.getEntitySync('quotaErrorText').value,
-                type: 'error',
-                confirmButtonText: document.l10n.getEntitySync('OK').value
-            })
-        }
-        else {
-            Peerio.file.upload(file, [Peerio.user.username],
-                function (data, id) {
-                    if (hasProp(data, 'error')) {
-                        swal({
-                            title: document.l10n.getEntitySync('fileUploadError').value,
-                            text: document.l10n.getEntitySync('fileUploadErrorText').value,
-                            type: 'error',
-                            confirmButtonText: document.l10n.getEntitySync('OK').value
-                        })
-                        $('form.fileUploadForm input[type=reset]').click()
-                        delete Peerio.user.files[id]
-                    }
-                    $scope.$apply()
-                },
-                function (data, id) {
-                    if (hasProp(data, 'error')) {
-                        swal({
-                            title: document.l10n.getEntitySync('fileUploadError').value,
-                            text: document.l10n.getEntitySync('fileUploadErrorText').value,
-                            type: 'error',
-                            confirmButtonText: document.l10n.getEntitySync('OK').value
-                        })
-                        $('form.fileUploadForm input[type=reset]').click()
-                        delete Peerio.user.files[id]
-                    }
-                    $scope.$apply()
-                },
-                function (data, id) {
-                    if (hasProp(data, 'error')) {
-                        swal({
-                            title: document.l10n.getEntitySync('fileUploadError').value,
-                            text: document.l10n.getEntitySync('fileUploadErrorText').value,
-                            type: 'error',
-                            confirmButtonText: document.l10n.getEntitySync('OK').value
-                        })
-                        $('form.fileUploadForm input[type=reset]').click()
-                        delete Peerio.user.files[id]
-                    }
-                    $('form.fileUploadForm input[type=reset]').click()
-                    Peerio.network.getSettings(function (data) {
-                        Peerio.user.quota = data.quota;
-                        Peerio.user.subscriptions = data.subscriptions;
-                        if (Peerio.file.autoCheck) {
-                            // @todo kaepora
-                            Peerio.file.autoCheck = false
+        return new Promise(function (resolve, reject) {
+            if (file.size >= Peerio.config.fileUploadSizeLimit) {
+                swal({
+                    title: document.l10n.getEntitySync('sizeError').value,
+                    text: document.l10n.getEntitySync('sizeErrorText').value,
+                    type: 'error',
+                    confirmButtonText: document.l10n.getEntitySync('OK').value
+                }, function () {
+                    resolve();
+                });
+            }
+            else if (file.size >= (Peerio.user.quota.total - Peerio.user.quota.user)) {
+                swal({
+                    title: document.l10n.getEntitySync('quotaError').value,
+                    text: document.l10n.getEntitySync('quotaErrorText').value,
+                    type: 'error',
+                    confirmButtonText: document.l10n.getEntitySync('OK').value
+                }, function () {
+                    reject();
+                });
+            }
+            else {
+                Peerio.file.upload(file, [Peerio.user.username],
+                    function (data, id) {
+                        if (hasProp(data, 'error')) {
+                            swal({
+                                title: document.l10n.getEntitySync('fileUploadError').value,
+                                text: document.l10n.getEntitySync('fileUploadErrorText').value,
+                                type: 'error',
+                                confirmButtonText: document.l10n.getEntitySync('OK').value
+                            }, function () {
+                                delete Peerio.user.files[id];
+                                resolve();
+                            });
                         }
-                        $scope.$apply()
-                    })
-                }
-            )
+                        $scope.$apply();
+                    },
+                    function (data, id) {
+                        if (hasProp(data, 'error')) {
+                            swal({
+                                title: document.l10n.getEntitySync('fileUploadError').value,
+                                text: document.l10n.getEntitySync('fileUploadErrorText').value,
+                                type: 'error',
+                                confirmButtonText: document.l10n.getEntitySync('OK').value
+                            }, function () {
+                                delete Peerio.user.files[id];
+                                resolve();
+                            });
+                        }
+                        $scope.$apply();
+                    },
+                    function (data, id) {
+                        if (hasProp(data, 'error')) {
+                            swal({
+                                title: document.l10n.getEntitySync('fileUploadError').value,
+                                text: document.l10n.getEntitySync('fileUploadErrorText').value,
+                                type: 'error',
+                                confirmButtonText: document.l10n.getEntitySync('OK').value
+                            }, function () {
+                                delete Peerio.user.files[id];
+                                resolve();
+                            });
+                            return;
+                        }
+                        Peerio.network.getSettings(function (data) {
+                            Peerio.user.quota = data.quota;
+                            Peerio.user.subscriptions = data.subscriptions;
+                            if (Peerio.file.autoCheck) {
+                                // @todo kaepora
+                                Peerio.file.autoCheck = false
+                            }
+                            $scope.$apply();
+                            resolve();
+                        })
+                    }
+                )
+            }
+        });
+    };
+
+    function uploadQueue(files) {
+        if (!files || files.length === 0) {
+            return false;
         }
+        var i = 0;
+        console.log('FILES: uploading '+ files.length+" files");
+        function uploadOne() {
+            console.log('FILES: uploading file: '+i);
+            $scope.filesSection.fileObjectHandler(files[i])
+                .then(function () {
+                    console.log("FILES: success uploading "+ i);
+                    if (++i < files.length) window.setTimeout(uploadOne, 300);
+                    else  $('form.fileUploadForm input[type=reset]').click();
+                }, function (err) {
+                    console.log("FILES: filed uploading. stopping. " +err);
+                    $('form.fileUploadForm input[type=reset]').click();
+                });
+        }
+        uploadOne();
     }
+
     $('input.fileSelectDialog').unbind().on('change', function (event) {
-        event.preventDefault()
-        if (!this.files) {
-            return false
-        }
-        for (var i = 0; i < this.files.length; i++) {
-            $scope.filesSection.fileObjectHandler(this.files[i])
-        }
+        event.preventDefault();
+        uploadQueue(this.files);
         return false
-    })
+    });
     var dragCounter = 0
     $(document).unbind()
     function isFileDrag(e) {
@@ -683,9 +717,10 @@ Peerio.UI.controller('filesSection', function ($scope, $element, $sce) {
         else {
             $('div.mainTopSectionSelect [data-sectionLink=files]').trigger('mousedown')
         }
-        for (var i = 0; i < e.dataTransfer.files.length; i++) {
-            $scope.filesSection.fileObjectHandler(e.dataTransfer.files[i])
-        }
+       // for (var i = 0; i < e.dataTransfer.files.length; i++) {
+        //    $scope.filesSection.fileObjectHandler(e.dataTransfer.files[i])
+       // }
+        uploadQueue(e.dataTransfer.files);
         return false
     })
 })
