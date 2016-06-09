@@ -32,4 +32,4 @@ urpmi alsa-lib glibc cairo libdbus1_3 fontconfig GConf2 libgdk_pixbuf2.0_0 libgt
 #SRPMS/your.rpm
 
 #then build corresponding metadata:
-#for arch in i585 x86_64 SRPMS; do genhdlist2 --xml-info --allow-empty-media $arch; done
+#for arch in i586 x86_64 SRPMS; do genhdlist2 --xml-info --allow-empty-media $arch; done
