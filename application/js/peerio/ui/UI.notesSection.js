@@ -163,7 +163,7 @@ Peerio.Notes = {};
 
                 return React.createElement(
                     'div',
-                    { style: { display: 'table-row' } },
+                    { style: { display: 'flex', flex: '1 0 auto' } },
                     React.createElement(NoteList, { selectedId: this.state.selectedId, onSelected: this.handleSelected,
                         onRemove: this.handleRemove }),
                     React.createElement(Note, { selectedId: this.state.selectedId, onChange: this.handleChange,

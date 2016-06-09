@@ -170,7 +170,7 @@ Peerio.Passwords = {};
 
                 return React.createElement(
                     'div',
-                    { style: { display: 'table-row' } },
+                    { style: { display: 'flex', flex: '1 0 auto' } },
                     React.createElement(PasswordList, { selectedId: this.state.selectedId, onSelected: this.handleSelected,
                         onRemove: this.handleRemove }),
                     React.createElement(Password, { selectedId: this.state.selectedId, onChange: this.handleChange,

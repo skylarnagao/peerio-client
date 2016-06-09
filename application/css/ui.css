@@ -2813,40 +2813,47 @@ ul.filesSidebarTypeFilters li,ul.messagesSidebarTypeFilters li {
 	right: 0;
 	bottom: 0;
 }
-#notesView, #todosView, #passwordsView{
+#notesView, #todosView, #passwordsView {
 	width:100%;
 	height: 100%;
-	display: table;
+	display: flex;
+	flex-direction: row;
 }
-.note{
-	width:70%;
-	height: 100%;
-	display: table-cell;
-	vertical-align: top;
 
+.note {
+	flex-grow: 1;
+	margin: 16px;
+	flex-direction: column;
+	display: flex;
+	box-sizing: border-box;
 }
+
+.note input,
+.note textarea {
+	box-sizing: border-box;
+	flex-shrink: 0;
+}
+
+
 .note-not-selected{
-	background-color: white;
-	padding: 20px;
-	height: 98%;
-	padding-top: 25%;
-	margin: 5px;
-	text-align: center;
+	background-color: rgb(255, 255, 255);
+  height: 100vh;
+  width: 100vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 .note-not-selected h1,.note-not-selected p{
 	color: #666;
 }
 .note-name{
 	width: 100%;
-	padding: 7px 15px !important;
-	margin: 10px 0 2px 0 !important;
+	padding: 8px 16px !important;
 	border: 0 !important;
 }
 .note-list{
-	display: table-cell;
-	width:30%;
-  max-width: 320px;
-	vertical-align: top;
+	flex: 0 1 30%;
 }
 .note-list-toolbar{
     margin-left:5px;
@@ -2868,10 +2875,11 @@ ul.filesSidebarTypeFilters li,ul.messagesSidebarTypeFilters li {
 	font-weight: bold;
 }
 .text-editor{
-	width:100%;
-	height: 100%;
-	padding:15px;
+	padding:16px;
 	background-color: white;
+	overflow-x: hidden;
+	overflow-y: auto;
+	flex: 1 1 auto;
 }
 .text-editor b{
 	font-weight: bold;
@@ -2897,13 +2905,27 @@ ul.filesSidebarTypeFilters li,ul.messagesSidebarTypeFilters li {
 	width: 100%;
 }
 .todo-list-items{
+	flex: 1 0 auto;
 	overflow-y: scroll;
+	background: rgb(255, 255, 255);
 }
-.todo-list-item{
+
+.todo-list-item {
 	position: relative;
-	overflow: visible;
-	padding-left: 18px;
+  overflow: visible;
+  padding: 0 16px;
+  height: 48px;
+  line-height: 48px;
+  border-bottom: 1px solid rgba(0,0,0,.12);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
+
+.todo-list-item:last-of-type {
+	border-width: 0;
+}
+
 .todo-list-item.complete .todo-check, .todo-list-item.complete .todo-editable{
 	color: #b9b9b9 !important;;
 }
@@ -2912,9 +2934,9 @@ ul.filesSidebarTypeFilters li,ul.messagesSidebarTypeFilters li {
 	color:#909090;
 }
 .todo-check{
-	font-size: 1.5em;
-	vertical-align: middle;
-	color: #b9b9b9;
+	font-size: 20px;
+	width: 48px;
+	color: rgba(0, 0, 0, .54);
 	cursor: pointer;
 }
 .todo-editable{
@@ -2923,24 +2945,26 @@ ul.filesSidebarTypeFilters li,ul.messagesSidebarTypeFilters li {
 	margin: 0 !important;
 	background: transparent;
 	text-overflow: ellipsis;
-	width: 95%;
+	flex: 1 1 auto;
 	border: 1px solid transparent !important;
 }
 .todo-editable:focus {
-	border-bottom: 1px solid #b9b9b9 !important;
+	border-bottom: 1px solid rgba(0, 0, 0, .12) !important;
 }
 
 .todo-remove{
-	display: none;
-	position: absolute;
-	top: 6px;
-	left: -1px;
-	font-size: 1.4em;
-	color: #ff6969;ition: absolute;
-	cursor: pointer;
+	opacity: 0;
+  height: 48px;
+  width: 24px;
+  text-align: center;
+  font-size: 20px;
+  color: rgb(255, 105, 105);
+  cursor: pointer;
+  line-height: 48px;
+	transition: 200ms;
 }
 .todo-list-item:hover .todo-remove{
-	display:block;
+	opacity: 1;
 }
 
 .pwd-title{
@@ -2966,7 +2990,7 @@ ul.filesSidebarTypeFilters li,ul.messagesSidebarTypeFilters li {
 	color:#888;
 }
 .pwd-secret, .pwd-secret:focus{
-	border: 0 !important;;
+	border: 0 !important;
 	display: table-cell;
 	width:100%;
 	margin-bottom: 0px !important;
@@ -2977,5 +3001,6 @@ ul.filesSidebarTypeFilters li,ul.messagesSidebarTypeFilters li {
 	resize: none;
 	border: none;
 	font-size: 1em;
-	padding: 10px;
+	padding: 16px 16px 20px;
+	flex: 1 0 auto;
 }

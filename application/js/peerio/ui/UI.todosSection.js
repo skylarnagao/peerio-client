@@ -204,7 +204,7 @@ Peerio.TODOs = {};
 
                 return React.createElement(
                     'div',
-                    { style: { display: 'table-row' } },
+                    { style: { display: 'flex', flex: '1 0 auto' } },
                     React.createElement(TodoListList, { selectedId: this.state.selectedId, onSelected: this.handleSelected,
                         onRemove: this.handleRemove }),
                     React.createElement(TodoList, { selectedId: this.state.selectedId, onChange: this.handleChange,
@@ -328,17 +328,17 @@ Peerio.TODOs = {};
                     { className: "todo-list-item" + (i.isDone ? ' complete' : '') },
                     React.createElement(
                         'span',
-                        { className: 'fontAwesome todo-remove', onClick: this.remove },
-                        ''
-                    ),
-                    React.createElement(
-                        'span',
                         { className: 'fontAwesome todo-check',
                             onClick: this.onToggle },
                         i.isDone ? '\uf14a' : '\uf096'
                     ),
                     React.createElement('input', { type: 'text', ref: 'editor', className: 'todo-editable', value: i.name,
-                        onKeyDown: this.keyDown, onChange: this.change, onFocus: this.focus, onBlur: this.blur })
+                        onKeyDown: this.keyDown, onChange: this.change, onFocus: this.focus, onBlur: this.blur }),
+                    React.createElement(
+                        'span',
+                        { className: 'fontAwesome todo-remove', onClick: this.remove },
+                        ''
+                    )
                 );
             }
         });

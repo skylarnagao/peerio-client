@@ -174,7 +174,7 @@ Peerio.Passwords = {};
                 if (!Peerio.user || !Peerio.user.passwords)
                     return;
 
-                return <div style={{display: 'table-row'}}>
+                return <div style={{display: 'flex', flex: '1 0 auto'}}>
                     <PasswordList selectedId={this.state.selectedId} onSelected={this.handleSelected}
                                   onRemove={this.handleRemove}/>
                     <Password selectedId={this.state.selectedId} onChange={this.handleChange}

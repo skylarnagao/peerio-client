@@ -167,7 +167,7 @@ Peerio.Notes = {};
                 if (!Peerio.user || !Peerio.user.notes)
                     return;
 
-                return <div style={{display: 'table-row'}}>
+                return <div style={{display: 'flex', flex: '1 0 auto'}}>
                     <NoteList selectedId={this.state.selectedId} onSelected={this.handleSelected}
                               onRemove={this.handleRemove}/>
                     <Note selectedId={this.state.selectedId} onChange={this.handleChange}

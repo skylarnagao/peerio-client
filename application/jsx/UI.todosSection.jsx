@@ -207,7 +207,7 @@ Peerio.TODOs = {};
                 if (!Peerio.user || !Peerio.user.todos)
                     return;
 
-                return <div style={{display: 'table-row'}}>
+                return <div style={{display: 'flex', flex: '1 0 auto'}}>
                     <TodoListList selectedId={this.state.selectedId} onSelected={this.handleSelected}
                                   onRemove={this.handleRemove}/>
                     <TodoList selectedId={this.state.selectedId} onChange={this.handleChange}
@@ -306,11 +306,11 @@ Peerio.TODOs = {};
             render: function () {
                 var i = this.props.item;
                 return <div className={"todo-list-item"+(i.isDone?' complete':'')}>
-                    <span className="fontAwesome todo-remove" onClick={this.remove}>&#xf00d;</span>
                     <span className="fontAwesome todo-check"
                           onClick={this.onToggle}>{i.isDone ? '\uf14a' : '\uf096'}</span>
                     <input type="text" ref="editor" className="todo-editable" value={i.name}
                            onKeyDown={this.keyDown} onChange={this.change} onFocus={this.focus} onBlur={this.blur}/>
+                    <span className="fontAwesome todo-remove" onClick={this.remove}>&#xf00d;</span>
                 </div>
             }
         });
