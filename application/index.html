@@ -664,11 +664,19 @@
                                         </span>
                                     </span>
                             </div>
+                            <div data-ng-if="message.isGhost" style="background-color: #f0f0f0; padding:5px">
+                                This is a ghost message you've sent to: {{message.decrypted.recipient}}
+                                <br>
+                                Passphrase: <strong>{{message.decrypted.passphrase}}</strong>
+                                <ul>
+                                    <li data-ng-repeat="fileName in message.decrypted.files">
+                                        <span class="fontAwesome">&#xf016;</span> {{fileName}}
+                                    </li>
+                                </ul>
+                            </div>
                             <pre data-ng-bind-html="message.decrypted.message | linky:'_blank'"
-                                 data-ng-show="!!message.decrypted&&!message.decrypted.isPhoto"></pre>
+                                 data-ng-show="!!message.decrypted"></pre>
                             <pre data-l10n-id="messageDecryptedError" data-ng-show="!message.decrypted"></pre>
-                            <img data-data-ng-src="{{message.decrypted.message}}" data-ng-if="message.decrypted.isPhoto"
-                                 alt=""/>
                         </div>
                         <div class="messagesSectionMessageViewReadReceipts"
                              data-ng-show="messagesSection.checkedReceipts[message.decrypted.receipt].length">
@@ -687,12 +695,12 @@
                              data-ng-if="messagesSection.isExpandConversationVisible(message.id, messagesSection.conversation)"
                              data-ng-click="messagesSection.expandConversation(messagesSection.conversation, true)">
                             <span data-l10n-id="expandConversation"></span> (
-                            <span data-ng-bind="{{messagesSection.conversation.messageCount}}"></span>
+                            <span data-ng-bind="messagesSection.conversation.messageCount"></span>
                             <span data-l10n-id="messages"></span>)
                         </div>
                     </div>
                 </div>
-                <div data-ng-show="messagesSection.conversation" class="messagesSectionMessageViewTabs">
+                <div data-ng-show="messagesSection.conversation && !messagesSection.conversation.original.isGhost" class="messagesSectionMessageViewTabs">
                     <span class="messagesSectionMessageViewReplyTab active" data-l10n-id="reply"
                           data-ng-mousedown="messagesSection.messageViewReplyTabClick()"></span>
                     <span class="messagesSectionMessageViewFilesTab" data-l10n-id="files"
@@ -1095,10 +1103,12 @@
                            data-ng-disabled="newGhost.sending" data-ng-click="newGhost.send(false)"/>
                 </form>
             </div>
-            <div data-ng-if="newGhost.sending" style="display: table-cell; text-align: center; vertical-align: middle;width:700px;height:400px;">
+            <div data-ng-if="newGhost.sending"
+                 style="display: table-cell; text-align: center; vertical-align: middle;width:700px;height:400px;">
+                <img src="../img/loading.gif" style="width:50px;height:50px;"/>
                 <h2>Sending a ghost to {{newGhost.recipient}}</h2>
                 <div data-ng-if="newGhost.selectedFiles.length && newGhost.uploadState">
-                    Uploading file {{newGhost.uploadState.file}}: {{newGhost.uploadState.progress}}.<br>
+                    Uploading file {{newGhost.uploadState.file}}: {{newGhost.uploadState.progress}}%<br>
                     {{newGhost.uploadState.filesLeft}} more files left.
                 </div>
 

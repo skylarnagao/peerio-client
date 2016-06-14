@@ -314,6 +314,7 @@ Peerio.message = {};
 
     var protocolChangeDate = 1458424800000;// 20 Feb 2016, aprrox. date at which all clients should be able to speak '1.1.0' protocol
     function verifyMetadata(msg, previous, skipOrder) {
+        if(msg.isGhost) return true;
         if (!msg.timestamp) {
             console.error(msg, 'Message has no timestamp');
             return false;
@@ -359,6 +360,7 @@ Peerio.message = {};
     }
 
     function verifyDecryptedMessage(metadata, message, previous) {
+        if(metadata.isGhost) return true;
         if (message.version !== '1.1.0') {
             // old protocol messages could have been sent before protocolChangeDate
             var c = Peerio.user.conversations[message.conversationID];

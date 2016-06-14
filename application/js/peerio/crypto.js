@@ -314,21 +314,7 @@ Peerio.crypto = {};
                         catch (e) {
                             throw new Error('Peerio.crypto.decryptMessage: Invalid plaintext.');
                         }
-                        if (hasProp(message, 'message') && hasProp(message, 'receipt')) {
-                            if (
-                                (typeof(message.message) === 'string') &&
-                                (message.message.substring(0, 23) === 'data:image/jpeg;base64,') &&
-                                /^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/.test(
-                                    message.message.substring(23)
-                                )
-                            ) {
-                                message.isPhoto = true
-                            }
-                            callback(message)
-                        }
-                        else {
-                            callback(false)
-                        }
+                        callback(message)
 
                     }
                 }

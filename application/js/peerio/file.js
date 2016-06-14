@@ -39,7 +39,7 @@ Peerio.file = {};
                     },
                     function (data) {
                         uploadFileComplete = true;
-                        onProgress(data, id);
+                        onProgress(data, 0);
                     }
                 )
             },

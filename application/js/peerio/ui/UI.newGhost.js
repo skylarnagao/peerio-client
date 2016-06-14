@@ -95,7 +95,6 @@ Peerio.UI.controller('newGhost', function ($scope) {
                     // on progress
                     function (data, progress) {
                         if (hasProp(data, 'error')) {
-                            showUploadErr();
                             reject();
                             return;
                         }
@@ -105,7 +104,6 @@ Peerio.UI.controller('newGhost', function ($scope) {
                     // on finish
                     function (data) {
                         if (hasProp(data, 'error')) {
-                            showUploadErr();
                             reject();
                             return;
                         }
@@ -158,6 +156,7 @@ Peerio.UI.controller('newGhost', function ($scope) {
                         return sendGhost(ghostID, publicKey, ids);
                     },
                     function () {
+                        showUploadErr();
                         g.sending = false;
                         g.uploadState = null;
                         $scope.$apply();
@@ -165,9 +164,16 @@ Peerio.UI.controller('newGhost', function ($scope) {
                 .then(function () {
                     g.sending = false;
                     g.uploadState = null;
+                    $scope.$root.$broadcast('frontModalsClose', null);
+                    $scope.$root.$broadcast('newMessageReset', null);
                     $scope.$apply();
                 }, function () {
-                    // todo swal error
+                    swal({
+                        title: document.l10n.getEntitySync('newGhostSendError').value,
+                        text: document.l10n.getEntitySync('newGhostSendErrorText').value,
+                        type: 'error',
+                        confirmButtonText: document.l10n.getEntitySync('OK').value
+                    });
                     g.sending = false;
                     g.uploadState = null;
                     $scope.$apply();
@@ -177,19 +183,19 @@ Peerio.UI.controller('newGhost', function ($scope) {
 
     function sendGhost(id, pk, ids) {
         return new Promise(function (resolve, reject) {
-            var names=[];
-            for(var i=0;i<g.selectedFiles.length;i++)
+            var names = [];
+            for (var i = 0; i < g.selectedFiles.length; i++)
                 names.push(g.selectedFiles[i].name);
 
             var ghostMsg = {
                 recipient: g.recipient,
                 subject: g.subject,
-                body: g.body,
+                message: g.body,
                 files: names,
                 timestamp: Date.now(),
                 passphrase: g.passphrase
             };
-            
+
             Peerio.crypto.encryptMessage(ghostMsg, pk,
                 function (header, body) {
                     if (!header || !body) {
@@ -199,14 +205,15 @@ Peerio.UI.controller('newGhost', function ($scope) {
                     var ghost = {
                         ghostID: id,
                         publicKey: pk,
+                        //lifeSpanInSeconds: 60*60*24,
                         recipients: [g.recipient],
                         version: '1.0.0',
-                        fileIDs: ids,
+                        files: ids,
                         header: header,
                         body: body
                     };
-                    Peerio.network.sendGhost(ghost, function(res){
-                        if(res && res.error){
+                    Peerio.network.sendGhost(ghost, function (res) {
+                        if (res && res.error) {
                             reject(res);
                         } else resolve();
                     });

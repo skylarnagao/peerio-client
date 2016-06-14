@@ -62,7 +62,11 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
                 $('input.newGhostTo')[0].focus()
             }, 100)
         };
-        $scope.messagesSection = {};
+        $scope.messagesSection = {
+            log: function(item){
+                console.log(item);
+            }
+        };
         $scope.messagesSection.replyBuffers = {};
         $scope.messagesSection.readOnUnfocusedBuffer = [];
         $scope.messagesSection.attachFileIDs = [];
@@ -665,6 +669,9 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
             return Peerio.util.getFullName(username)
         }
         $scope.messagesSection.getListingName = function (original) {
+            if(original.isGhost){
+                return original.decrypted.recipient;
+            }
             if (
                 (typeof(original) !== 'object') || !hasProp(original, 'sender')
             ) {
