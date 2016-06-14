@@ -689,3 +689,8 @@ Peerio.network.redeemCoupon = function (code, callback) {
         authToken: Peerio.user.popAuthToken()
     }, callback)
 };
+
+Peerio.network.sendGhost = function(ghost, callback){
+    ghost.authToken = Peerio.user.popAuthToken();
+    Peerio.socket.emit('createGhostMessage', ghost, callback);
+};

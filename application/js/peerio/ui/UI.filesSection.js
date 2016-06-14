@@ -632,10 +632,6 @@ Peerio.UI.controller('filesSection', function ($scope, $element, $sce) {
                         Peerio.network.getSettings(function (data) {
                             Peerio.user.quota = data.quota;
                             Peerio.user.subscriptions = data.subscriptions;
-                            if (Peerio.file.autoCheck) {
-                                // @todo kaepora
-                                Peerio.file.autoCheck = false
-                            }
                             $scope.$apply();
                             resolve();
                         })
@@ -712,7 +708,6 @@ Peerio.UI.controller('filesSection', function ($scope, $element, $sce) {
         dragCounter = 0
         $('div.dragAndDropUpload').removeClass('visible')
         if ($('div.attachFile.visible').length) {
-            Peerio.file.autoCheck = true
         }
         else {
             $('div.mainTopSectionSelect [data-sectionLink=files]').trigger('mousedown')

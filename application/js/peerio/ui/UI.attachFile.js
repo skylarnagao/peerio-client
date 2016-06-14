@@ -68,7 +68,6 @@ Peerio.UI.controller('attachFile', function($scope, $sce) {
 	}
 	$scope.attachFile.uploadNew = function() {
 		$('input.fileSelectDialog').click()
-		Peerio.file.autoCheck = true
 	}
 	$scope.attachFile.getFullName = function(username) {
 		return Peerio.util.getFullName(username)

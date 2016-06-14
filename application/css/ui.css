@@ -1170,6 +1170,17 @@ div.mainSidebar {
 div.messagesSidebar {
 }
 
+.messagesSidebarNewGhost {
+	padding: 7px 10px;
+	font-weight: normal;
+	margin: -30px auto 50px auto;
+	display: block;
+	width: 180px;
+	background: #41566b;
+}
+.messagesSidebarNewGhost:hover {
+	background: #4b637a;
+}
 button.messagesSidebarNewMessage,
 button.filesSidebarUploadFile,
 button.contactsSidebarAddContact,
@@ -2291,6 +2302,11 @@ div.newMessage {
 	margin: 5px auto 0 auto;
 }
 
+div.newGhost {
+	width: 80%;
+	margin: 0 auto 0 auto;
+}
+
 div.newMessageInfo {
 }
 
@@ -2309,6 +2325,7 @@ div.newMessageToWrapper {
 		left: 8px;
 		top: 3px;
 	}
+
 
 div.newMessageRecipients {
 	display: inline;
@@ -2340,6 +2357,22 @@ input.newMessageTo {
 	input.newMessageTo:focus {
 		border: none !important;
 	}
+
+span.ghostFileItem {
+	background: #dedede;
+	margin: 2px 2px;
+	padding: 5px 5px;
+	display: inline-block;
+	border-radius: 4px;
+	font-family: "Open Sans", sans-serif;
+	font-size: .8em;
+}
+.newGhostTo{
+	width:100%;
+}
+.newGhostTo.ng-invalid {
+	border-color: red !important;
+}
 
 div.newMessageToAutocomplete {
 	border: 3px solid #efeeec;
@@ -2395,10 +2428,14 @@ textarea.newMessageBody {
 	padding: 10px;
 	display: block;
 	margin-bottom: 5px;
-	max-height: 300px;
+	max-height: 280px;
 	font-family: sans-serif;
 	font-size: 1em;
 	line-height: 1.7em;
+}
+
+.newGhostBody{
+	max-height: 150px !important;
 }
 
 input.newMessageSend {

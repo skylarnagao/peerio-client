@@ -55,16 +55,23 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
                 $('input.newMessageTo')[0].focus()
             }, 100)
         }
-        $scope.messagesSection = {}
-        $scope.messagesSection.replyBuffers = {}
-        $scope.messagesSection.readOnUnfocusedBuffer = []
-        $scope.messagesSection.attachFileIDs = []
-        $scope.messagesSection.fetchedConversations = []
-        $scope.messagesSection.searchFilter = ''
-        $scope.messagesSection.typeFilter = 'inbox'
-        $scope.messagesSection.checkedIDs = []
-        $scope.messagesSection.checkedReceipts = {}
-        $scope.messagesSection.messageNewCount = 0
+        $scope.messagesSidebar.newGhost = function () {
+            $('div.frontModalsWrapper').addClass('visible');
+            $('div.newGhost').addClass('visible');
+            setTimeout(function () {
+                $('input.newGhostTo')[0].focus()
+            }, 100)
+        };
+        $scope.messagesSection = {};
+        $scope.messagesSection.replyBuffers = {};
+        $scope.messagesSection.readOnUnfocusedBuffer = [];
+        $scope.messagesSection.attachFileIDs = [];
+        $scope.messagesSection.fetchedConversations = [];
+        $scope.messagesSection.searchFilter = '';
+        $scope.messagesSection.typeFilter = 'inbox';
+        $scope.messagesSection.checkedIDs = [];
+        $scope.messagesSection.checkedReceipts = {};
+        $scope.messagesSection.messageNewCount = 0;
 
         if (!$scope.$root.convFolders) {
             var f = $scope.$root.convFolders = {};

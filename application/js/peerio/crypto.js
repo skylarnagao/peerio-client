@@ -195,16 +195,20 @@ Peerio.crypto = {};
             );
         };
 
-        recipients.forEach(function (recipient) {
-            if (hasProp(Peerio.user.contacts, recipient) &&
-                hasProp(Peerio.user.contacts[recipient], 'miniLockID') &&
-                miniLockIDs.indexOf(Peerio.user.contacts[recipient].miniLockID) < 0) {
-                miniLockIDs.push(Peerio.user.contacts[recipient].miniLockID);
-            }
-            else if (recipient !== Peerio.user.username) {
-                failed.push(recipient);
-            }
-        });
+        if(Array.isArray(recipients)) {
+            recipients.forEach(function (recipient) {
+                if (hasProp(Peerio.user.contacts, recipient) &&
+                    hasProp(Peerio.user.contacts[recipient], 'miniLockID') &&
+                    miniLockIDs.indexOf(Peerio.user.contacts[recipient].miniLockID) < 0) {
+                    miniLockIDs.push(Peerio.user.contacts[recipient].miniLockID);
+                }
+                else if (recipient !== Peerio.user.username) {
+                    failed.push(recipient);
+                }
+            });
+        } else {
+            miniLockIDs.push(recipients);
+        }
 
         sendMessage();
     };
@@ -247,20 +251,22 @@ Peerio.crypto = {};
                 }
             )
         }
-        recipients.forEach(function (recipient) {
-            if (
-                hasProp(Peerio.user.contacts, recipient) &&
-                hasProp(Peerio.user.contacts[recipient], 'miniLockID') &&
-                (miniLockIDs.indexOf(Peerio.user.contacts[recipient].miniLockID) < 0)
-            ) {
-                miniLockIDs.push(Peerio.user.contacts[recipient].miniLockID)
-            }
-            else if (recipient !== Peerio.user.username) {
-                failed.push(recipient)
-            }
-        })
-        sendFile()
-    }
+        if (Array.isArray(recipients)) {
+            recipients.forEach(function (recipient) {
+                if (
+                    hasProp(Peerio.user.contacts, recipient) &&
+                    hasProp(Peerio.user.contacts[recipient], 'miniLockID') &&
+                    (miniLockIDs.indexOf(Peerio.user.contacts[recipient].miniLockID) < 0)
+                ) {
+                    miniLockIDs.push(Peerio.user.contacts[recipient].miniLockID)
+                }
+                else if (recipient !== Peerio.user.username) {
+                    failed.push(recipient)
+                }
+            });
+        } else miniLockIDs.push(recipients.ghost);
+        sendFile();
+    };
 
     /**
      * Decrypt a message.
