@@ -87,7 +87,7 @@ Peerio.UI.controller('newGhost', function ($scope) {
             function uploadOne() {
                 var file = g.selectedFiles[i];
                 g.uploadState.file = file.name;
-                g.uploadState.filesLeft = g.selectedFiles.length - i + 1;
+                g.uploadState.filesLeft = g.selectedFiles.length - i - 1;
                 g.uploadState.progress = 0;
                 $scope.$apply();
 
