@@ -670,7 +670,7 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
         }
         $scope.messagesSection.getListingName = function (original) {
             if(original.isGhost){
-                return original.decrypted.recipient;
+                return "👻 " + original.decrypted.recipient;
             }
             if (
                 (typeof(original) !== 'object') || !hasProp(original, 'sender')
