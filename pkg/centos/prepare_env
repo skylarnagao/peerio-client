@@ -4,8 +4,8 @@ yum install make transifex-client make wget git
 yum install alsa-lib glibc cairo dbus-libs fontconfig GConf2 gdk-pixbuf2 gtk3 libnotify libXcomposite libXcursor libXdamage libXfixes libXi libXrandr libXrender libXtst nspr nss pango
 #rpmdev-setuptree
 #cd rpmbuild
-#wget https://linux.peerio.com/sources/rh-peerio-client-1.3.0.tar.gz -O SOURCES/rh-peerio-client-1.3.0.tar.gz
-#wget https://linux.peerio.com/sources/03-build.patch -O SOURCES/03-build.patch
+#wget https://linux.peerio.com/sources/rh-peerio-client-1.4.2.tar.gz -O SOURCES/rh-peerio-client-1.4.2.tar.gz
+#wget https://linux.peerio.com/sources/06-build.patch -O SOURCES/06-build.patch
 #wget https://linux.peerio.com/centos7/peerio-client.spec -O SPECS/peerio-client.spec
 #rpmbuild -ba SPECS/peerio-client.spec
 
