@@ -11,7 +11,7 @@
     <loginFailedText "Si vous utilisez le code de passe de cet appareil, veuillez plutôt essayer d'utiliser la phrase de passe de votre compte.">
     <ok "OK">
     <submit "Envoyer">
-    <signup "Inscription">
+    <signup "S'abonner">
     <signupProgress "progression de l'inscription">
     <basicInformation "Informations de base">
     <desiredUsername "Nom d'utilisateur souhaité">
@@ -40,7 +40,7 @@
     <signupAccountConfirmationPhone "Nous avons envoyé un code de confirmation par message texte au numéro de cellulaire que vous avez fourni. <strong>Veuillez vous assurer que votre numéro de cellulaire contient votre code de pays ainsi qu'un code régional.</strong>">
     <signupConfirmationCodeTimeText "Nombre de secondes avant expiration de votre code :">
     <signupConfirmationCodeExpired "Code de confirmation expiré">
-    <signupConfirmationCodeExpiredText "Votre code de confirmation est expiré. Veuillez redémarrer Peerio et essayer de vous inscrire à nouveau.">
+    <signupConfirmationCodeExpiredText "Votre code de confirmation est expiré. Veuillez redémarrer Peerio et essayer de vous abonner à nouveau.">
     <code "Code">
     <confirmationCode "Code de confirmation">
     <confirmMyAccount "Confirmer mon compte">
@@ -423,7 +423,7 @@
     <contact_searchTitle "#button_search">
     <contact_search "Recherche de contacts">
     <contact_searchInputPlaceholder "courriel/nom d'utilisateur/téléphone">
-    <contact_addressNotFound "Désolé, il semble que <emphasis>address</> n'est pas inscrit à Peerio.">
+    <contact_addressNotFound "Désolé, il semble que <emphasis>address</> n'est pas abonné à Peerio.">
     <contact_nothingFound "Désolé, aucun résultat ne correspond à votre recherche. Essayez une recherche de contacts par adresse courriel, nom d'utilisateur ou numéro de téléphone.">
     <contact_acceptFail "Échec d'acceptation de la demande de contact.">
     <contact_rejectFail "Échec de refus de la demande de contact.">
@@ -479,7 +479,7 @@
     <setup_touchTitle "Souhaitez-vous activer Touch ID ?">
     <setup_touchWarning "Note sur l'application de la loi. En octobre 2014, une cour des États-Unis a statué qu'un officier de police peut vous ordonner de débloquer votre appareil avec une empreinte digitale, mais pas un code de passe alphanumérique. Des lois semblables pourraient exister dans d'autres pays, et devraient être prises en considération si votre modèle de menace inclut l'application de loi.">
     <setup_importDescription "Découvrez qui dans vos contacts utilise déjà Peerio.">
-    <signup_TOSRequestText "Avant de vous inscrire à Peerio, nous vous demandons d'accepter nos <tosLink>conditions générales d'utilisation</>.">
+    <signup_TOSRequestText "Avant de vous abonner à Peerio, nous vous demandons d'accepter nos <tosLink>conditions générales d'utilisation</>.">
     <signup_TOSRequestTitle "#TOStitle">
     <signup_acceptPassphrase "Je me souviendrai de ma phrase de passe">
     <signup_confirmCreateButton "#createMyAccount">
@@ -575,7 +575,7 @@
     <settings_saveFailed "Échec d'enregistrement des paramètres.">
     <settings_optIn "En activant la collecte anonyme de données, nous recueillerons des informations non signalétiques qui seront partagées avec des chercheurs, et utilisées afin d'améliorer Peerio. Si vous acceptez, vous recevrez 25 Mo de stockage supplémentaire quotidiennement afin de vous remercier de votre contribution.">
     <shareText "J'aimerais partager des messages et des fichiers avec vous en toute sécurité sur Peerio !">
-    <inviteNote "Si l'un de vos contacts s'inscrit à Peerio avec l'adresse que vous avez invitée, il recevra automatiquement une demande de contact de votre part et vous, 500 Mo de stockage supplémentaire. Vous pouvez ainsi gagner jusqu'à 10 Go de stockage gratuit !">
+    <inviteNote "Si l'un de vos contacts s'abonne à Peerio avec l'adresse que vous avez invitée, il recevra automatiquement une demande de contact de votre part et vous, 500 Mo de stockage supplémentaire. Vous pouvez ainsi gagner jusqu'à 10 Go de stockage gratuit !">
     <shareThisCode "Partager ce code">
     <touch_keychain "L'activation de Touch ID exige l'accès à votre trousseau. Souhaitez-vous continuer ?">
     <touch_notAvailable "Identification par empreinte digitale non disponible">
@@ -608,5 +608,5 @@
     <serverWarning_Expire "Votre forfait Peerio arrivera à échéance dans 7 jours. Veuillez le renouveler pour garantir que votre service ne sera pas interrompu. Si vous ne le renouvelez pas et que votre quantité de données stockées dépasse ce qui est offert par le service gratuit de Peerio, la fonctionnalité pourrait être limitée jusqu'à ce que votre compte respecte la limite de stockage.">
     <serverWarning_PaymentErrorTitle "Erreur de paiement">
     <serverWarning_PaymentError "Un problème de méthode de paiement a empêché le renouvellement de votre forfait Peerio. Veuillez vérifier vos informations de compte sur https://account.peerio.com">
-    <serverWarning_QuotaExceededTitle "Storage Limit Exceeded">
-    <serverWarning_QuotaExcceded "You're over your storage limit! Your account will have limited functionality until you purchase additional storage or remove some files from your account.">
+    <serverWarning_QuotaExceededTitle "Vous avez dépassé votre limite de stockage.">
+    <serverWarning_QuotaExcceded "Vous avez dépassé votre limite de stockage ! La fonctionnalité de votre compte sera limitée tant que vous n'aurez pas acheté de l'espace de stockage supplémentaire ou que vous n'aurez pas supprimé des fichiers de votre compte.">
