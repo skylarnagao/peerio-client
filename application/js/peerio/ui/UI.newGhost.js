@@ -109,7 +109,7 @@ Peerio.UI.controller('newGhost', function ($scope) {
                         }
                         ids.push(data.id);
                         i++;
-                        if (i >= g.selectedFiles.length - 1) {
+                        if (i === g.selectedFiles.length) {
                             resolve(ids);
                         } else {
                             uploadOne();
@@ -183,15 +183,17 @@ Peerio.UI.controller('newGhost', function ($scope) {
 
     function sendGhost(id, pk, ids) {
         return new Promise(function (resolve, reject) {
-            var names = [];
-            for (var i = 0; i < g.selectedFiles.length; i++)
-                names.push(g.selectedFiles[i].name);
+            var files = [];
+            for (var i = 0; i < g.selectedFiles.length; i++) {
+                var info = g.selectedFiles[i];
+                files.push({id: ids[i], name: info.name, size: info.size, type: info.type});
+            }
 
             var ghostMsg = {
                 recipient: g.recipient,
                 subject: g.subject,
                 message: g.body,
-                files: names,
+                files: files,
                 timestamp: Date.now(),
                 passphrase: g.passphrase
             };
