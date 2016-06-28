@@ -2,7 +2,7 @@
   "name": "peerio-client",
   "author": "Technologies Peerio Inc.",
   "description": "A simple and secure way to share private messages and files and store them in the cloud. End-to-end encrypted, open source, free.",
-  "license": "GPLv3",
+  "license": "GPL-3.0",
   "repository": {
     "type": "git",
     "url": "git://github.com/PeerioTechnologies/peerio-client.git"
