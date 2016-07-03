@@ -190,6 +190,7 @@ Peerio.UI.controller('newGhost', function ($scope) {
             }
 
             var ghostMsg = {
+                id: id,
                 recipient: g.recipient,
                 subject: g.subject,
                 message: g.body,

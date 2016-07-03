@@ -667,10 +667,12 @@
                             <div data-ng-if="message.isGhost" style="background-color: #f0f0f0; padding:5px">
                                 This is a ghost message you've sent to: {{message.decrypted.recipient}}
                                 <br>
+                                Ghost ID: {{message.decrypted.ghostID}}
+                                <br>
                                 Passphrase: <strong>{{message.decrypted.passphrase}}</strong>
                                 <ul>
-                                    <li data-ng-repeat="fileName in message.decrypted.files">
-                                        <span class="fontAwesome">&#xf016;</span> {{fileName}}
+                                    <li data-ng-repeat="file in message.decrypted.files">
+                                        <span class="fontAwesome">&#xf016;</span> {{file.name}}
                                     </li>
                                 </ul>
                             </div>
