@@ -664,12 +664,16 @@
                                         </span>
                                     </span>
                             </div>
-                            <div data-ng-if="message.isGhost" style="background-color: #f0f0f0; padding:5px">
-                                This is a ghost message you've sent to: {{message.decrypted.recipient}}
+                            <div data-ng-if="message.isGhost" style="background-color: #f0f0f0; padding:5px; user-select: initial;-webkit-user-select: initial;">
+                                {{message.decrypted.recipient}}
                                 <br>
-                                Ghost ID: {{message.decrypted.ghostID}}
+                                <a href="https://ghost.peerio.com?{{message.decrypted.id}}" target="_blank">https://ghost.peerio.com?{{message.decrypted.id}}</a>
                                 <br>
-                                Passphrase: <strong>{{message.decrypted.passphrase}}</strong>
+                                <span style="color:red" data-l10n-id="ghost_expired" data-ng-if="messagesSection.expired(message.timestamp, message.decrypted.lifeSpanInSeconds)"></span>
+                                <span data-l10n-id="ghost_expires"  data-ng-if="!messagesSection.expired(message.timestamp, message.decrypted.lifeSpanInSeconds)"></span>
+                                {{messagesSection.getExpirationDate(message)}}
+                                <br>
+                                <span data-l10n-id="passphrase"></span> <strong style="user-select: initial;-webkit-user-select: initial;">{{message.decrypted.passphrase}}</strong>
                                 <ul>
                                     <li data-ng-repeat="file in message.decrypted.files">
                                         <span class="fontAwesome">&#xf016;</span> {{file.name}}
@@ -1122,10 +1126,11 @@
             <div data-ng-if="newGhost.sending"
                  style="display: table-cell; text-align: center; vertical-align: middle;width:700px;height:400px;">
                 <img src="../img/loading.gif" style="width:50px;height:50px;"/>
-                <h2>Sending a ghost to {{newGhost.recipient}}</h2>
+                <h2><span data-l10n-id="ghost_sending"></span> {{newGhost.recipient}}</h2>
                 <div data-ng-if="newGhost.selectedFiles.length && newGhost.uploadState">
-                    Uploading file {{newGhost.uploadState.file}}: {{newGhost.uploadState.progress}}%<br>
-                    {{newGhost.uploadState.filesLeft}} more files left.
+                    <span data-l10n-id="fileState_uploading"></span>&nbsp;
+                    {{newGhost.uploadState.file}}: {{newGhost.uploadState.progress}}%&nbsp;
+                    ({{newGhost.uploadState.currentFileNum}}/{{newGhost.uploadState.totalFiles}})<br>
                 </div>
 
             </div>

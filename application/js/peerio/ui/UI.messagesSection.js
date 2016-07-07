@@ -622,6 +622,14 @@ Peerio.UI.controller('messagesSection', function ($scope, $element, $sce, $filte
             }
             return Peerio.util.getDateFromTimestamp(timestamp)
         }
+    $scope.messagesSection.getExpirationDate = function (msg) {
+
+        return new Date(msg.timestamp+(msg.decrypted.lifetime||0)*1000).toString();
+    }
+    $scope.messagesSection.expired = function (timestamp, lifetime) {
+
+        return (timestamp+(lifetime||0)*1000)<=Date.now();
+    }
         $scope.messagesSection.isExpandConversationVisible = function (id, conversation) {
             if (
                 (id === conversation.original.id) &&

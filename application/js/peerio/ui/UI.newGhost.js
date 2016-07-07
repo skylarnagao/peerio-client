@@ -88,7 +88,8 @@ Peerio.UI.controller('newGhost', function ($scope) {
             function uploadOne() {
                 var file = g.selectedFiles[i];
                 g.uploadState.file = file.name;
-                g.uploadState.filesLeft = g.selectedFiles.length - i - 1;
+                g.uploadState.totalFiles = g.selectedFiles.length;
+                g.uploadState.currentFileNum = i + 1;
                 g.uploadState.progress = 0;
                 $scope.$apply();
 
@@ -197,7 +198,8 @@ Peerio.UI.controller('newGhost', function ($scope) {
                 message: g.body,
                 files: files,
                 timestamp: Date.now(),
-                passphrase: g.passphrase
+                passphrase: g.passphrase,
+                lifeSpanInSeconds: (+g.expiration) * 60*60*24
             };
 
             Peerio.crypto.encryptMessage(ghostMsg, pk,
@@ -209,7 +211,7 @@ Peerio.UI.controller('newGhost', function ($scope) {
                     var ghost = {
                         ghostID: id,
                         publicKey: pk,
-                        lifeSpanInSeconds: (+g.expiration) * 60*60*24,
+                        lifeSpanInSeconds: ghostMsg.lifeSpanInSeconds,
                         recipients: [g.recipient],
                         version: '1.0.0',
                         files: ids,
