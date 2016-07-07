@@ -702,7 +702,8 @@
                         </div>
                     </div>
                 </div>
-                <div data-ng-show="messagesSection.conversation && !messagesSection.conversation.original.isGhost" class="messagesSectionMessageViewTabs">
+                <div data-ng-show="messagesSection.conversation && !messagesSection.conversation.original.isGhost"
+                     class="messagesSectionMessageViewTabs">
                     <span class="messagesSectionMessageViewReplyTab active" data-l10n-id="reply"
                           data-ng-mousedown="messagesSection.messageViewReplyTabClick()"></span>
                     <span class="messagesSectionMessageViewFilesTab" data-l10n-id="files"
@@ -1092,6 +1093,19 @@
                            required/>
                     <input type="text" class="newMessageSubject" data-l10n-id="subject" data-ng-model="newGhost.subject"
                            maxlength="64" required/>
+                    <div style="padding: 20px 4px 0px;">
+                        <label data-l10n-id="ghost_destroyAfter"></label>&nbsp;
+                        <select data-ng-model="newGhost.expiration" style="font-size: 16px;">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                        </select>&nbsp;
+                        <span data-l10n-id="ghost_days"></span>
+                    </div>
                     <div class="newMessageToolbar">
                         <button class="fontAwesome clear" style="text-align: left" data-utip-l10n="attachFile"
                                 data-utip-gravity="s" data-ng-mousedown="newGhost.attachFile()">

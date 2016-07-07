@@ -9,6 +9,7 @@ Peerio.UI.controller('newGhost', function ($scope) {
 
     g.selectedLocale = null;
     g.languages = Peerio.PhraseGenerator.languages;
+    g.expiration =1;
     $scope.$on('newMessageReset', function () {
         if (g.sending) return;
         g.recipient = '';
@@ -208,7 +209,7 @@ Peerio.UI.controller('newGhost', function ($scope) {
                     var ghost = {
                         ghostID: id,
                         publicKey: pk,
-                        //lifeSpanInSeconds: 60*60*24,
+                        lifeSpanInSeconds: (+g.expiration) * 60*60*24,
                         recipients: [g.recipient],
                         version: '1.0.0',
                         files: ids,
