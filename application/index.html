@@ -1390,8 +1390,12 @@
                         &nbsp;{{preferences.getUserQuota()}} / {{preferences.getTotalQuota()}} ({{preferences.getQuotaPercentage()}})
                     </span>
                 </span> &nbsp;&nbsp;&nbsp;&nbsp;
-            <a ng-href="https://peerio.com/checkout.html?uid={{preferences.$window.Peerio.user.username}}"
+            <a ng-if="!preferences.getActiveSubscriptions().length"
+               ng-href="https://peerio.com/checkout.html?uid={{preferences.$window.Peerio.user.username}}"
                data-l10n-id="payments_title" target="_blank"></a>
+            <a ng-if="preferences.getActiveSubscriptions().length"
+               ng-href="https://peerio.com/checkout.html?uid={{preferences.$window.Peerio.user.username}}"
+               data-l10n-id="payments_existingTitle" target="_blank"></a>
             <br/>
             <br/>
             <br/>
