@@ -61,9 +61,17 @@ Peerio.socket = {};
 				return;
 			}
 			var data = warningQueue.shift();
+			var msg = document.l10n.getEntitySync(data.msg).value;
+			if(msg === data.msg){
+				if(data && data.token) Peerio.socket.emit('clearWarning', {token: data.token, authToken: Peerio.user.popAuthToken()});
+				if(warningQueue.length>0) {
+					window.setTimeout(showServerWarning, 1000);
+				} else warningActive = false;
+				return;
+			}
 			swal({
 				title: '',
-				text: data && data.msg || '',
+				text: msg,
 				type: 'warning',
 				confirmButtonText: document.l10n.getEntitySync('OK').value
 			}, function () {
